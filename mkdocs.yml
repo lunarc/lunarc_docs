@@ -1,4 +1,5 @@
 site_name: Lunarc Documentation
 pages:
-- [aurora_modules.md, Using modules on Aurora]
-
+- Home: index.md
+- Aurora Software: aurora_modules.md
+theme: readthedocs

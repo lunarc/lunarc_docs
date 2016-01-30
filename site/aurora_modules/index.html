@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Aurora Modules - Lunarc Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Aurora Modules";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Lunarc Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Aurora Modules</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#using-supported-software-on-lunarcs-aurora-service">Using supported software on Lunarc's Aurora service</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#hierachical-module-naming-scheme">Hierachical module naming scheme</a></li>
+                
+                    <li><a class="toctree-l4" href="#hierachical-naming-scheme-concept">Hierachical naming scheme concept</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#using-modules">Using Modules</a></li>
+                
+                    <li><a class="toctree-l4" href="#loading-packages">Loading packages</a></li>
+                
+                    <li><a class="toctree-l4" href="#purging-the-loaded-modules">Purging the loaded modules</a></li>
+                
+                    <li><a class="toctree-l4" href="#seaching-for-all-software-packages">Seaching for all software packages</a></li>
+                
+                    <li><a class="toctree-l4" href="#searching-for-a-specific-package">Searching for a specific package</a></li>
+                
+                    <li><a class="toctree-l4" href="#lmod-cache">Lmod cache</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#toolchains">Toolchains</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Lunarc Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Aurora Modules</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="using-supported-software-on-lunarcs-aurora-service">Using supported software on Lunarc's Aurora service</h1>
+<p>Author: Joachim Hein (Lunarc)</p>
+<h1 id="hierachical-module-naming-scheme">Hierachical module naming scheme</h1>
+<p>With the start of the Aurora service Lunarc is using an hierachical module naming scheme.  Hierachical modules ensure that the correct shared libraries are available when running an application, while keeping screen output of standard module commands such as <code>module avail</code> managable.</p>
+<h2 id="hierachical-naming-scheme-concept">Hierachical naming scheme concept</h2>
+<p>When loging into the system, you only get access to those modules that do not require any special dynamic libraries.  After <em>loading a compiler module</em> you obtaing access to those packages that have been build with that specific compiler and depend on its shared libraries.  For many compilers this will include one or more matching MPI libraries.  After loading an MPI library additional software packages, depending on this pair (compiler &amp; MPI library), will become available.  Users should take note that in many cases loading an MPI library is required for software that doesn't really depend on it.</p>
+<h1 id="using-modules">Using Modules</h1>
+<p>The module system on Aurora is utilising the Lua based <a href="https://www.tacc.utexas.edu/research-development/tacc-projects/lmod">Lmod</a> software.</p>
+<h2 id="loading-packages">Loading packages</h2>
+<p>The command</p>
+<pre><code>module avail
+</code></pre>
+
+<p>shows the modules that can currently be accessed.  The output will look similar to</p>
+<pre><code>--------------------------------- /sw/Modules/modulefiles/Core ---------------------------------
+   matlab/8.5
+
+-------------------------------- /sw/easybuild/modules/all/Core --------------------------------
+   Bison/3.0.4                    gompi/2015b
+   EasyBuild/2.5.0                gompi/2016a                        (D)
+   EasyBuild/2.6.0         (D)    icc/2015.3.187-GNU-4.9.3-2.25
+   GCC/4.9.3-binutils-2.25        icc/2016.1.150-GCC-4.9.3-2.25      (D)
+   GCC/4.9.3-2.25                 iccifort/2015.3.187-GNU-4.9.3-2.25
+   GCC/5.3.0               (D)    iccifort/2016.1.150-GCC-4.9.3-2.25 (D)
+   GCCcore/4.9.3                  ifort/2015.3.187-GNU-4.9.3-2.25
+   GNU/4.9.3-2.25                 ifort/2016.1.150-GCC-4.9.3-2.25    (D)
+   Java/1.8.0_72                  iimpi/7.3.5-GNU-4.9.3-2.25
+   M4/1.4.17                      iimpi/2016.01-GCC-4.9.3-2.25       (D)
+   binutils/2.25                  intel/2015b
+   flex/2.5.39                    intel/2016a
+   foss/2015b                     intel/2016.01                      (D)
+   foss/2016a              (D)    zlib/1.2.8
+
+-------------------------------- /sw/lmod/lmod/modulefiles/Core --------------------------------
+   lmod/6.0.24    settarg/6.0.24
+</code></pre>
+
+<p>In this example you can see modules and versions located in 3 directories.  Any of these modules can be accessed directly.  To obtain access to the software inside e.g. the toolchain module <code>foss/2016a</code> one loads the module by issueing</p>
+<pre><code>module load foss/2016a
+</code></pre>
+
+<p>Many modules will load a number of modules, which they depend on.
+Since in the above output from <code>module avail</code> version 2016a is marked
+as the default version, the command</p>
+<pre><code>module load foss
+</code></pre>
+
+<p>would have the same effect unless the default changes, which it may
+do, if</p>
+<ul>
+<li>You load a module</li>
+<li>The lunarc team installs another version of the software</li>
+</ul>
+<p>So if you require a specific version, the Lunarc team strongly
+recommends to not rely on defaults, but explicitly specify the version
+you are after.</p>
+<p>To see what modules you have currently loaded use</p>
+<pre><code>module list
+</code></pre>
+
+<p>In a hierachical module naming scheme the command <code>module avail</code> is
+not as useful as it is in a flat module naming scheme which Lunarc
+deployed on earlier services.   In many situations <code>module avail</code>
+resulted in the desired action, one has to use the <code>module spider</code>
+command which is descripted in the text below.</p>
+<h2 id="purging-the-loaded-modules">Purging the loaded modules</h2>
+<p>Many modules will load a number extra of modules, which they depend on.
+When unloading a  module, these dependencies will typically not be unloaded.  For
+that reason we currently recommend using</p>
+<pre><code>module purge
+</code></pre>
+
+<p>when loaded modules are no longer needed.   You would then start
+loading the modules required for the next task you need to accomplish
+from scratch.</p>
+<h2 id="seaching-for-all-software-packages">Seaching for all software packages</h2>
+<p>In practical use, the command <code>module spider</code> is key to search for packages in an Lmod based hierachical module naming scheme.  To get an overview on the software installed on Aurora, simply type</p>
+<pre><code>module spider
+</code></pre>
+
+<p>at the command prompt.  This will create an output similar to:</p>
+<pre><code>---------------------------------------------------------------------
+The following is a list of the modules currently available:
+---------------------------------------------------------------------
+  Autoconf: Autoconf/2.69
+
+  Automake: Automake/1.15
+
+  Autotools: Autotools/20150215
+
+  Bison: Bison/3.0.4
+
+  Boost: Boost/1.58.0-Python-2.7.9
+
+  CMake: CMake/3.2.2, CMake/3.3.2
+
+  Cube: Cube/4.3
+
+  EasyBuild: EasyBuild/2.5.0, EasyBuild/2.6.0
+
+  FFTW: FFTW/3.3.4
+
+  GCC: GCC/4.9.3-binutils-2.25, GCC/4.9.3-2.25, GCC/5.3.0
+
+  GCCcore: GCCcore/4.9.3
+
+  GLib: GLib/2.42.1, GLib/2.46.0
+
+  GNU: GNU/4.9.3-2.25
+
+  GROMACS: GROMACS/5.0.4-mt, GROMACS/5.0.5-hybrid
+
+  ...
+</code></pre>
+
+<p>This is a full list of the packages and versions available on the service.  </p>
+<h2 id="searching-for-a-specific-package">Searching for a specific package</h2>
+<p>If you are looking for a specific package and have an idea on what its name might be, you can give this as an argument to <code>module spider</code>.   This argument is case insensitive.  </p>
+<h3 id="example-accessing-a-gromacs-version">Example: Accessing a Gromacs version</h3>
+<p>For example, when looking to run Gromacs:</p>
+<pre><code>module spider gromacs
+</code></pre>
+
+<p>You obtain output simlar to:</p>
+<pre><code>---------------------------------------------------------------------------------
+  GROMACS:
+---------------------------------------------------------------------------------
+     Versions:
+        GROMACS/5.0.4-mt
+        GROMACS/5.0.5-hybrid
+
+---------------------------------------------------------------------------------
+  To find detailed information about GROMACS please enter the full name.
+  For example:
+
+     $ module spider GROMACS/5.0.5-hybrid
+---------------------------------------------------------------------------------
+</code></pre>
+
+<p>This tells you that the multi threaded version 5.0.4 and the hybrid version 5.0.5 are installed.  If you want to use the version 5.0.5 issue the command:</p>
+<pre><code>module spider GROMACS/5.0.5-hybrid
+</code></pre>
+
+<p>You get the folling output</p>
+<pre><code>---------------------------------------------------------------------------------
+  GROMACS: GROMACS/5.0.5-hybrid
+---------------------------------------------------------------------------------
+
+    This module can only be loaded through the following modules:
+
+      icc/2016.1.150-GCC-4.9.3-2.25  impi/5.1.2.150
+      ifort/2016.1.150-GCC-4.9.3-2.25  impi/5.1.2.150
+
+... 
+</code></pre>
+
+<p>This lists the modules you have to load before accessing Gromacs.  In this case you have two options, we choose the first option.  We load</p>
+<pre><code>module load icc/2016.1.150-GCC-4.9.3-2.25
+module load impi/5.1.2.150
+</code></pre>
+
+<p>After which we can load the gromacs installation:</p>
+<pre><code>module load GROMACS/5.0.5-hybrid
+</code></pre>
+
+<p>Loading this module will load a number of additional module require for Gromacs to work.</p>
+<h3 id="example-accessing-r">Example accessing R</h3>
+<p>This is another example on how to access a specific software package.  This time we want to run the statistical software package R.</p>
+<pre><code>module spider R
+</code></pre>
+
+<p>One gets:</p>
+<pre><code>------------------------------------------------------------------
+  R:
+------------------------------------------------------------------
+     Versions:
+        R/3.2.1-bare
+        R/3.2.1
+        R/3.2.3
+
+     Other possible modules matches:
+        GCCcore  GROMACS  SuiteSparse  cURL  fixesproto  fontsproto  ...
+
+------------------------------------------------------------------
+  To find other possible module matches do:
+      module -r spider '.*R.*'
+
+------------------------------------------------------------------
+  To find detailed information about R please enter the full name.
+  For example:
+
+     $ module spider R/3.2.1-bare
+------------------------------------------------------------------
+</code></pre>
+
+<p>If we are interested in version 3.2.3, we do a</p>
+<pre><code>module spider R/3.2.3
+</code></pre>
+
+<p>next and get the following info:</p>
+<pre><code>------------------------------------------------------------------
+  R: R/3.2.3
+------------------------------------------------------------------
+
+     Other possible modules matches:
+        GCCcore, GROMACS, SuiteSparse, cURL, fixesproto, ...
+
+    This module can only be loaded through the following modules:
+
+      GCC/4.9.3-binutils-2.25  OpenMPI/1.8.8
+
+...
+</code></pre>
+
+<p>The output states the two modules that need loading to get access to this R version.  We issue</p>
+<pre><code>module load GCC/4.9.3-binutils-2.25
+module load OpenMPI/1.8.8
+module load R/3.2.3
+</code></pre>
+
+<p>and have acces to R.</p>
+<h2 id="lmod-cache">Lmod cache</h2>
+<p>To improve the performance of the <code>module spider</code> command, lmod caches
+the entire module structure of the system.  This cache is currently
+configured to be updated once in 24 hours.</p>
+<p>This can have the effect that you see an outdated version of the
+module tree, when using commands such as <code>module avail</code>or <code>module
+spider</code>.   The cache file is stored in the directory
+<code>$HOME/.lmod.d/.cache/</code> remove the cache file and lmod will recreate
+it for you.</p>
+<h1 id="toolchains">Toolchains</h1>
+<p>A signficant portion of the Aurora software is build <a href="http://hpcugent.github.io/easybuild/">EasyBuild</a> software framework.  This frame work provides so called <em>Toolchains</em> which are utilised to build software.  Lunarc recommends using these toolchains even when building software outside the EasyBuild framework.</p>
+<p>Lunarc actively maintains the following toolchains
++ <strong>foss</strong>: BLACS, FFTW, GCC, OpenBLAS, OpenMPI, ScaLAPACK
++ <strong>gompi</strong>: GCC, OpenMPI
++ <strong>intel</strong>: icc, ifort, MKL, Intel MPI
++ <strong>iimpi</strong>: icc, ifort, Intel MPI</p>
+<p>If you require additional toolchains, contact <a href="http://www.lunarc.lu.se/support/support-form/">Lunarc support</a> to discuss your requirements.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+
+</body>
+</html>
