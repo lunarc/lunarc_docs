@@ -6,7 +6,7 @@ A maui scheduler is used to start jobs, organise the order in the batch queue an
 
 To be eligible to run, a job may not have a walltime that exceeds 168 hours (7 days). If a job is submitted with a longer walltime, it will be blocked and labelled BatchHold, which means that it will never start by itself. Furthermore, the sum of the walltime (multiplied by the number of processors for parallel jobs) remaining for the running jobs of the user and the walltime of the submitted job should not be larger than the value of MAXPS (see the table below). If it is, the submitted job will be blocked and labelled Idle. When the running jobs have spent enough walltime to lower the sum to MAXPS, the job will be put in the queue and started when its turn comes. In the same way, there are also limits to the number of allocated processors, MAXPROC (or the memory corresponding to a processor). These parameters have two levels, a higher "hard" value when there is no queue and a lower "soft" value when there are jobs waiting (blocked jobs do not count as waiting). There are also limits on the eligible jobs in the queue: MAXIPS, MAXIJOB, and MAXIPROC.
 
-| MAXPS hard/soft | MAXPROC hard/soft | MAXIPS | MAXIJOB | MAXIPROC |  |
+| | MAXPS hard/soft | MAXPROC hard/soft | MAXIPS | MAXIJOB | MAXIPROC | 
 |-----------------|-------------------|-------------|---------|----------|-----|
 | Platon | 30240 h/15120 h | 512/64-256* | 30240 h | 24 | 256 |
  
