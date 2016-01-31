@@ -1,4 +1,4 @@
-**Using the job submission system on Alarik and Erik**
+# Using the job submission system on Alarik and Erik #
 
 Joachim Hein, Jonas Lindemann, Anders Sjöström, Magnus Ullner
 
@@ -36,12 +36,10 @@ description file is also know as a *job script*.
 
 A very simple job script, looks as follows:
     
-```bash
-#!/bin/sh
-#SBATCH -t 00:05:00
+    #!/bin/sh
+    #SBATCH -t 00:05:00
 
-echo "hello"
-```
+    echo "hello"
 
 Write this into a file. In the following we assume the file is named
 echo_script.sh, but in principle any name will do. You can now send the
@@ -322,90 +320,57 @@ job submission.
 There is a a lot of structure within modern HPC equipment. For the
 purposes of this user guide we will stick to the following terminology:
 
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Term**    **Explanation**                                                                                                                                                                                                                                                             **Number on Alarik**          **Number on Erik**
-  ----------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ----------------------------- -----------------------------
-  Node        A physical computer                                                                                                                                                                                                                                                         **Standard**:                 **Standard**:
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                          200                           16
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                          **Extra**:                    **Fat**:
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                          4                             7
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                                        **Extra**:
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                                        1
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                                        **Mic:**
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                                        1
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                                        **New:**
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                                        1
-                                                                                                                                                                                                                                                                                                                        
-
-  Processor   This denotes a the multi-core processor, housing many processing elements                                                                                                                                                                                                   **Standard**:                 2 per node
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                          2 per node                    
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                          **Extra**:                    
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                          4 per node                    
-                                                                                                                                                                                                                                                                                                                        
-
-  GPU         This denotes a nvidia co-processor                                                                                                                                                                                                                                          0                             **Standard**:
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                                        2 per node
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                                        **Fat**:
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                                        4 per node
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                                        **Extra**:
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                                        8 per node
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                                        **Mic:**
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                                        0 per node
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                                        **New:**
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                                        2 cards per node
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                                        2 logical per card
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                                                        4 logical per node
-                                                                                                                                                                                                                                                                                                                        
-
-  Socket      This is the “plug” the processor gets plugged into. Used as a synonym for the processor                                                                                                                                                                                     **Standard**:                 2 per node
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                          2 per node                    
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                          **Extra**:                    
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                          4 per node                    
-                                                                                                                                                                                                                                                                                                                        
-
-  Core        Individual processing element                                                                                                                                                                                                                                               **Standard**:                 16 per node
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                          16 per node                   8 per processor
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                          8 per processor               
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                          **Extra**:                    
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                          48 per node                   
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                          12 per processor              
-                                                                                                                                                                                                                                                                                                                        
-
-  Task        This is a software concept. It denotes a process, which is an instance of a running program. It has its own data and instruction stream(s). It can fork multiple threads to increase the computational speed. Serial programs and pure MPI programs do not spawn threads.   User controls in job script   User controls in job script
-
-  Thread      This is also a software concept. A thread is a stream of instructions executed on the hardware. It is part of a task and shares resources such as data with other threads within the same task.                                                                             User controls in job script   User controls in job script
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Term | Explanation | Number on Alarik | Number  on Erik |
+|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|-----------------------------|
+| Node | A physical computer | Standard: | Standard: |
+|  |  | 200 | 16 |
+|  |  |  |  |
+|  |  | Extra: | Fat: |
+|  |  | 4 | 7 |
+|  |  |  |  |
+|  |  |  | Extra: |
+|  |  |  | 1 |
+|  |  |  |  |
+|  |  |  | Mic: |
+|  |  |  | 1 |
+|  |  |  |  |
+|  |  |  | New: |
+|  |  |  | 1 |
+| Processor | This denotes a the multi-core processor, housing many processing elements | Standard: | 2 per node |
+|  |  | 2 per node |  |
+|  |  |  |  |
+|  |  | Extra: |  |
+|  |  | 4 per node |  |
+| GPU | This denotes a nvidia co-processor | 0 | Standard: |
+|  |  |  | 2 per node |
+|  |  |  |  |
+|  |  |  | Fat: |
+|  |  |  | 4 per node |
+|  |  |  |  |
+|  |  |  | Extra: |
+|  |  |  | 8 per node |
+|  |  |  |  |
+|  |  |  | Mic: |
+|  |  |  | 0 per node |
+|  |  |  |  |
+|  |  |  | New: |
+|  |  |  | 2 cards per node |
+|  |  |  | 2 logical per card |
+|  |  |  | 4 logical per node |
+| Socket | This is the “plug” the processor gets plugged into.  Used as a synonym for the processor | Standard: | 2 per node |
+|  |  | 2 per node |  |
+|  |  |  |  |
+|  |  | Extra: |  |
+|  |  | 4 per node |  |
+| Core | Individual processing element | Standard: | 16 per node |
+|  |  | 16 per node | 8 per processor |
+|  |  | 8 per processor |  |
+|  |  |  |  |
+|  |  | Extra: |  |
+|  |  | 48 per node |  |
+|  |  | 12 per processor |  |
+| Task | This is a software concept.  It denotes a process, which is an instance of a running program.  It has its own data and instruction stream(s).  It can fork multiple threads to increase the computational speed.  Serial programs and pure MPI programs do not spawn threads. | User controls in job script | User controls in job script |
+| Thread | This is also a software concept.  A thread is a stream of instructions executed on the hardware.  It is part of a task and shares resources such as  data with other threads within the same task. | User controls in job script | User controls in job script |
 
 ### Outline: Resource requests for multiprocessor jobs
 
@@ -580,52 +545,28 @@ The SNIC meta-centres have agreed on a set of environment variables
 which should improve the portability of (parts of) job-scripts between
 SNIC sites. On Alarik the following variables are set by the system:
 
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Environment variable**   **Explanation**                                                                               **Value on Alarik**   **Value on Erik**
-  -------------------------- --------------------------------------------------------------------------------------------- --------------------- -------------------
-  SNIC_SITE                 Identifying the SNIC site you are using                                                       lunarc                lunarc
-
-  SNIC_RESOURCE             Identifying the compute resource you are using                                                alarik                erik
-
-  SNIC_BACKUP               User directory which is:                                                                      /home/<user>        /home/<user>
-                                                                                                                                                 
-                             > Regularly backed up against accidental deletion                                                                   
-                                                                                                                                                 
-                             > Typically extremely limited space                                                                                 
-                                                                                                                                                 
-                             > Use for e.g. precious source code                                                                                 
-                                                                                                                                                 
-
-  SNIC_NOBACKUP             User directory which is:                                                                      /lunarc               /lunarc
-                                                                                                                                                 
-                             > Accessible on all Lunarc systems                                                            /nobackup             /nobackup
-                                                                                                                                                 
-                             > Outliving individual systems                                                                /users/<user>       /users/<user>
-                                                                                                                                                 
-                             > For storing larger amounts of data                                                                                
-                                                                                                                                                 
-                             > Not backed up against accidental deletion                                                                         
-                                                                                                                                                 
-                             > Protected against disk failure (RAID configuration)                                                               
-                                                                                                                                                 
-                             > On Alarik: the primary root directory for job management (job scripts, input/output data)                         
-                                                                                                                                                 
-
-  SNIC_TMP                  Directory for best performance during a job                                                   *jobid dependent*     *jobid dependent*
-                                                                                                                                                 
-                             At Lunarc:                                                                                                          
-                                                                                                                                                 
-                             > Local disk on nodes                                                                                               
-                                                                                                                                                 
-                             > Storing temporary data during job execution                                                                       
-                                                                                                                                                 
-                             > High bandwidth                                                                                                    
-                                                                                                                                                 
-                             > Automatically deleted                                                                                             
-                                                                                                                                                 
-                             > Transfer data with long-term value to SNIC_NOBACKUP before job has finished                                      
-                                                                                                                                                 
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Environment variable | Explanation | Value on Alarik | Value on Erik |
+|----------------------|-------------------------------------------------------------------------------------------|-----------------|-----------------|
+| SNIC_SITE | Identifying the SNIC site you are using | lunarc | lunarc |
+| SNIC_RESOURCE | Identifying the compute resource you are using | alarik | erik |
+| SNIC_BACKUP | User directory which is: | /home/<user> | /home/<user> |
+|  | Regularly backed up against accidental deletion |  |  |
+|  | Typically extremely limited space |  |  |
+|  | Use for e.g. precious source code |  |  |
+| SNIC_NOBACKUP | User directory which is: | /lunarc | /lunarc |
+|  | Accessible on all Lunarc systems | /nobackup | /nobackup |
+|  | Outliving individual systems | /users/<user> | /users/<user> |
+|  | For storing larger amounts of data |  |  |
+|  | Not backed up against accidental deletion |  |  |
+|  | Protected against disk failure (RAID configuration) |  |  |
+|  | On Alarik: the primary root directory for job management (job scripts, input/output data) |  |  |
+| SNIC_TMP | Directory for best performance during a job | jobid dependent | jobid dependent |
+|  | At Lunarc: |  |  |
+|  | Local disk on nodes |  |  |
+|  | Storing temporary data during job execution |  |  |
+|  | High bandwidth |  |  |
+|  | Automatically deleted |  |  |
+|  | Transfer data with long-term value to SNIC_NOBACKUP before job has finished |  |  |
 
 ## Using the node local disks to improve I/O performance
 
@@ -660,24 +601,14 @@ variables. Example scripts using this technique are provided in the
 example section of this document. Contact the help desk if you have
 specific requirements and require consultation.
 
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Variable**         **Addressed Volume**
-  -------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  SNIC_TMP            node local disk
-                       
-                       copy your input data here and start your program from here
-                       
-
-  TMPDIR               node local disk
-                       
-                       Many applications use this environment variable to locate a disk volume for temporary scratch space. If your application follows that convention nothing needs to be done.
-                       
-
-  SLURM_SUBMIT_DIR   submission directory
-                       
-                       where you ran sbatch
-                       
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Variable | Addressed Volume |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| SNIC_TMP | node local disk |
+|  | copy your input data here and start your program from here |
+| TMPDIR | node local disk |
+|  | Many applications use this environment variable to locate a disk volume for temporary scratch space.  If your application follows that convention nothing needs to be done. |
+| SLURM_SUBMIT_DIR | submission directory |
+|  | where you ran sbatch |
 
 ## Launching MPI jobs in OpenMPI
 
@@ -736,16 +667,11 @@ The first column gives the jobid, the third the job names, followed by
 the userid. The column labeled “ST” gives the job state. The most
 important states are:
 
-  ------------------------------------------
-  **Symbol**   **Meaning**
-  ------------ -----------------------------
-  > R          running
-               
-
-  PD           pending, awaiting resources
-
-  CG           completing
-  ------------------------------------------
+| Symbol | Meaning |
+|--------|-----------------------------|
+| R | running |
+| PD | pending, awaiting resources |
+| CG | completing |
 
 The state column is followed by the time used by the job and number of
 nodes utilised by the job. For running jobs the last column gives the
