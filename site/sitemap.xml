@@ -4,7 +4,31 @@
     
     <url>
      <loc>None/</loc>
-     <lastmod>2016-01-30</lastmod>
+     <lastmod>2016-01-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/login_howto/</loc>
+     <lastmod>2016-01-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/quick_reference/</loc>
+     <lastmod>2016-01-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/batch_system/</loc>
+     <lastmod>2016-01-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,7 +36,7 @@
     
     <url>
      <loc>None/aurora_modules/</loc>
-     <lastmod>2016-01-30</lastmod>
+     <lastmod>2016-01-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
