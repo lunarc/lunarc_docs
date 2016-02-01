@@ -263,10 +263,11 @@ it for you.
 A signficant portion of the Aurora software is build [EasyBuild](http://hpcugent.github.io/easybuild/) software framework.  This frame work provides so called *Toolchains* which are utilised to build software.  Lunarc recommends using these toolchains even when building software outside the EasyBuild framework.
 
 Lunarc actively maintains the following toolchains
-+ **foss**: BLACS, FFTW, GCC, OpenBLAS, OpenMPI, ScaLAPACK
-+ **gompi**: GCC, OpenMPI
-+ **intel**: icc, ifort, MKL, Intel MPI
-+ **iimpi**: icc, ifort, Intel MPI
+
+ * **foss**: BLACS, FFTW, GCC, OpenBLAS, OpenMPI, ScaLAPACK
+ * **gompi**: GCC, OpenMPI
+ * **intel**: icc, ifort, MKL, Intel MPI
+ * **iimpi**: icc, ifort, Intel MPI
 
 If you require additional toolchains, contact [Lunarc support](http://www.lunarc.lu.se/support/support-form/) to discuss your requirements.
 
