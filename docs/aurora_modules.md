@@ -258,12 +258,11 @@ spider`.   The cache file is stored in the directory
 `$HOME/.lmod.d/.cache/` remove the cache file and lmod will recreate
 it for you.
 
-# Toolchains
+# Compiling code and using toolchains
 
-A signficant portion of the Aurora software is build [EasyBuild](http://hpcugent.github.io/easybuild/) software framework.  This frame work provides so called *Toolchains* which are utilised to build software.  Lunarc recommends using these toolchains even when building software outside the EasyBuild framework.
+A signficant portion of the Aurora software is build using the [EasyBuild](http://hpcugent.github.io/easybuild/) software framework.  This framework provides so called *Toolchains* which are utilised to build software.  Lunarc recommends to use toolchains when building software.  This includes compiling your own software outside the EasyBuild framework.
 
-Lunarc actively maintains the following toolchains
-
+Lunarc actively maintains the following toolchains:
  * **foss**: GCC, OpenBLAS, FFTW, OpenMPI, BLACS, ScaLAPACK
  * **gompi**: GCC, OpenMPI
  * **intel**: icc, ifort, MKL, Intel MPI
