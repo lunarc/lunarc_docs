@@ -264,10 +264,12 @@ A signficant portion of the Aurora software is build [EasyBuild](http://hpcugent
 
 Lunarc actively maintains the following toolchains
 
- * **foss**: BLACS, FFTW, GCC, OpenBLAS, OpenMPI, ScaLAPACK
+ * **foss**: GCC, OpenBLAS, FFTW, OpenMPI, BLACS, ScaLAPACK
  * **gompi**: GCC, OpenMPI
  * **intel**: icc, ifort, MKL, Intel MPI
  * **iimpi**: icc, ifort, Intel MPI
+ * **iomkl**: icc, ifort, MKL, OpenMPI
+ * **iompi**: icc, ifort, OpenMPI
 
 If you require additional toolchains, contact [Lunarc support](http://www.lunarc.lu.se/support/support-form/) to discuss your requirements.
 
