@@ -180,8 +180,7 @@ You get the folling output
 ```
 This lists the modules you have to load before accessing Gromacs.  In this case you have two options, we choose the first option.  We load
 ```
-module load icc/2016.1.150-GCC-4.9.3-2.25
-module load impi/5.1.2.150
+module load icc/2016.1.150-GCC-4.9.3-2.25 impi/5.1.2.150
 ```
 After which we can load the gromacs installation:
 ```
@@ -244,7 +243,7 @@ module load GCC/4.9.3-binutils-2.25
 module load OpenMPI/1.8.8
 module load R/3.2.3
 ```
-and have acces to R.
+and have access to R.
 
 ## Lmod cache
 
