@@ -249,13 +249,19 @@ and have access to R.
 
 To improve the performance of the `module spider` command, lmod caches
 the entire module structure of the system.  This cache is currently
-configured to be updated once in 24 hours.
+configured to be **updated once per day**.
 
-This can have the effect that you see an outdated version of the
+This can have the effect that you see a slightly outdated version of the
 module tree, when using commands such as `module avail`or `module
-spider`.   The cache file is stored in the directory
-`$HOME/.lmod.d/.cache/` remove the cache file and lmod will recreate
-it for you.
+spider`.  This should only be an issue with 
+additions to the module tree made in the last hours.  The command
+```
+module --ignore-cache spider
+```
+will force an update of the cache files in your account. 
+
+The cache files private to your account are stored in the directory
+`$HOME/.lmod.d/.cache/`.
 
 # Compiling code and using toolchains
 
