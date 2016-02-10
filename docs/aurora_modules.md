@@ -269,7 +269,7 @@ A signficant portion of the Aurora software is build using the [EasyBuild](http:
 
 Lunarc currently provides the following toolchains on Aurora:
 
-## Toolchains based on GCC compiler suite
+### Toolchains based on GCC compiler suite
 
  * **GCC**: GCC
  * **foss**: GCC, OpenMPI, OpenBLAS, FFTW, BLACS, ScaLAPACK
@@ -277,7 +277,7 @@ Lunarc currently provides the following toolchains on Aurora:
  * **gimpi**: GCC, Intel MPI
  * **gimkl**: GCC, Intel MPI, MKL
 
-## Toolchains based on the Intel compiler suite
+### Toolchains based on the Intel compiler suite
 
  * **iccifort**: icc, ifort
  * **intel**: icc, ifort, Intel MPI, MKL
