@@ -255,9 +255,11 @@ This can have the effect that you see a slightly outdated version of the
 module tree, when using commands such as `module avail`or `module
 spider`.  This should only be an issue with 
 additions to the module tree made in the last hours.  The command
+
 ```
 module --ignore-cache spider
 ```
+
 will force an update of the cache files in your account. 
 
 The cache files private to your account are stored in the directory
