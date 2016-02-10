@@ -266,7 +266,7 @@ A signficant portion of the Aurora software is build using the [EasyBuild](http:
 
 ## Currently provided toolchains
 
-** Toolchains based on GCC compiler suite**
+**Toolchains based on GCC compiler suite**
 
  * **GCC**: GCC
  * **foss**: GCC, OpenMPI, OpenBLAS, FFTW, BLACS, ScaLAPACK
@@ -274,7 +274,7 @@ A signficant portion of the Aurora software is build using the [EasyBuild](http:
  * **gimpi**: GCC, Intel MPI
  * **gimkl**: GCC, Intel MPI, MKL
 
-** Toolchains based on the Intel compiler suite**
+**Toolchains based on the Intel compiler suite**
 
  * **iccifort**: icc, ifort
  * **intel**: icc, ifort, Intel MPI, MKL
