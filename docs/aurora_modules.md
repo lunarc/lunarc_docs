@@ -252,8 +252,8 @@ the entire module structure of the system.  This cache is currently
 configured to be **updated once per day**.
 
 This can have the effect that you see a slightly outdated version of the
-module tree, when using commands such as `module avail`or `module
-spider`.  This should only be an issue with 
+module tree, when using commands such as `module avail`or `module spider`.  
+This should only be an issue with 
 additions to the module tree made in the last hours. The command
 ```
 module --ignore-cache spider
@@ -267,7 +267,7 @@ The cache files private to your account are stored in the directory
 
 A signficant portion of the Aurora software is build using the [EasyBuild](http://hpcugent.github.io/easybuild/) software framework.  This framework provides so called *Toolchains* which are utilised to build software.  Lunarc recommends to use toolchains when building software.  This includes compiling your own software outside the EasyBuild framework.
 
-Lunarc currently provides the following toolchains on Aurora:
+##Currently provided toolchains
 
 ### Toolchains based on GCC compiler suite
 
