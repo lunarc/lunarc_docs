@@ -311,4 +311,10 @@ This shows you that three versions of the foss toolchain are available, with ver
 ```
 module load foss/2016a
 ```
-It will pull in a number of modules for you.  This allows you to check which compiler and library versions you are getting.
+It will load a number of modules for you, incl. compiler, libraries and utilities.  The command 
+```
+module list
+```
+will show you which compiler and library versions it will be using.
+
+Selecting a version of the intel toolchain is very similar, just replace foss with intel in the above examples.
