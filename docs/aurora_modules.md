@@ -285,10 +285,10 @@ A signficant portion of the Aurora software is build using the [EasyBuild](http:
 If you require additional toolchains, contact [Lunarc support](http://www.lunarc.lu.se/support/support-form/) to discuss your requirements.
 
 ## Selecting a toolchain
-The above choices of toolchains is a bit overwhealming, in particular for new users.  We recommend to first make a choice of toolchain and then select a version.  Good general choice toolchains, unless you need anything specific, are:
+The above choices of toolchains is a bit overwhealming, in particular for new users.  We recommend to first make a choice of toolchain and then select a version.  Good choices for general use are the toolchains:
 
-* **foss** if you want to use the GCC compiler suite
-* **intel** if you want to use the Intel compiler suite
+* **foss**, if you like to use the GCC compiler suite
+* **intel**, if you like to use the Intel compiler suite
 
 To check the foss versions available you
 ```
@@ -315,6 +315,6 @@ It will load a number of modules for you, incl. compiler, libraries and utilitie
 ```
 module list
 ```
-will show you which compiler and library versions it will be using.
+will show you which compiler and library versions it will be using.  Please note that after loading a toolchain a number of modules become available, that rely on components inside this specific toolchain.  Also the defaults of many modules change to a version build with the components inside the selected foss module.
 
-Selecting a version of the intel toolchain is very similar, just replace foss with intel in the above examples.
+Selecting a version of the intel toolchain is very similar to selecting a foss module, just replace foss with intel in the above examples.
