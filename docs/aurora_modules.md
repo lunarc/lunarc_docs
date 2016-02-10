@@ -254,7 +254,7 @@ configured to be **updated once per day**.
 This can have the effect that you see a slightly outdated version of the
 module tree, when using commands such as `module avail`or `module
 spider`.  This should only be an issue with 
-additions to the module tree made in the last hours.  The command
+additions to the module tree made in the last hours. The command
 ```
 module --ignore-cache spider
 ```
