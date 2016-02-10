@@ -264,9 +264,9 @@ The cache files private to your account are stored in the directory
 
 A signficant portion of the Aurora software is build using the [EasyBuild](http://hpcugent.github.io/easybuild/) software framework.  This framework provides so called *Toolchains* which are utilised to build software.  Lunarc recommends to use toolchains when building software.  This includes compiling your own software outside the EasyBuild framework.
 
-##Currently provided toolchains
+## Currently provided toolchains
 
-### Toolchains based on GCC compiler suite
+** Toolchains based on GCC compiler suite**
 
  * **GCC**: GCC
  * **foss**: GCC, OpenMPI, OpenBLAS, FFTW, BLACS, ScaLAPACK
@@ -274,7 +274,7 @@ A signficant portion of the Aurora software is build using the [EasyBuild](http:
  * **gimpi**: GCC, Intel MPI
  * **gimkl**: GCC, Intel MPI, MKL
 
-### Toolchains based on the Intel compiler suite
+** Toolchains based on the Intel compiler suite**
 
  * **iccifort**: icc, ifort
  * **intel**: icc, ifort, Intel MPI, MKL
@@ -284,4 +284,31 @@ A signficant portion of the Aurora software is build using the [EasyBuild](http:
 
 If you require additional toolchains, contact [Lunarc support](http://www.lunarc.lu.se/support/support-form/) to discuss your requirements.
 
+## Selecting a toolchain
+The above choices of toolchains is a bit overwhealming, in particular for new users.  We recommend to first make a choice of toolchain and then select a version.  Good general choice toolchains, unless you need anything specific, are:
 
+* **foss** if you want to use the GCC compiler suite
+* **intel** if you want to use the Intel compiler suite
+
+To check the foss versions available you
+```
+  module avail foss
+```
+and you get an output similar to
+```
+
+------------------ /sw/easybuild/modules/all/Core ------------------
+   foss/2015a    foss/2015b    foss/2016a (D)
+
+  Where:
+   D:  Default Module
+
+Use "module spider" to find all possible modules.
+Use "module keyword key1 key2 ..." to search for all possible
+modules matching any of the "keys".
+```
+This shows you that three versions of the foss toolchain are available, with version 2016a being the default.  The version numbering at the time of writing is a *time stamp*.  Version 2015a was released in the begining of 2015, 2015b in the middle of 2015 and 2016a in the beginning of 2016.  If you load e.g. the `foss/2016a` module
+```
+module load foss/2016a
+```
+It will pull in a number of modules for you.  This allows you to check which compiler and library versions you are getting.
