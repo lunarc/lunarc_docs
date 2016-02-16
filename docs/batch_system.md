@@ -10,7 +10,7 @@ A more in-depth guide to the job submission system.
 
 On a modern HPC system efficient management of the compute resources is
 absolutely crucial for the system to perform. Lunarc deploys 
-SLURM (**S**imple **L**inux **U**tility
+[SLURM](http://slurm.schedmd.com/) (**S**imple **L**inux **U**tility
 for **R**esource **M**anagement) as resource manager. For your program
 to be executed you have to describe to SLURM the resources required by
 your program, the name of your program and the command line arguments
