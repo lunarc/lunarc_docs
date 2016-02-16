@@ -337,22 +337,13 @@ job submission.
 There is a a lot of structure within modern HPC equipment. For the
 purposes of this user guide we will stick to the following terminology:
 
-| Term | Explanation | Number on Alarik | Number  on Erik |
-|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|-----------------------------|
-| Node | A physical computer | Standard: | Standard: |
-|  |  | 200 | 16 |
-|  |  |  |  |
-|  |  | Extra: | Fat: |
-|  |  | 4 | 7 |
-|  |  |  |  |
-|  |  |  | Extra: |
-|  |  |  | 1 |
-|  |  |  |  |
-|  |  |  | Mic: |
-|  |  |  | 1 |
-|  |  |  |  |
-|  |  |  | New: |
-|  |  |  | 1 |
+| Term | Explanation | Number on Aurora | Number  on Erik |
+|-----------|---------------------------------|-----------------------------|-----------------------------|
+| Node | A physical computer | Standard: 180 for SNIC use | Standard: 16 |
+|  |  | | Fat: 7 |
+|  |  |  | Extra: 2 |
+|  |  |  | Mic: 1 |
+|  |  |  | New: 1 |
 | Processor | This denotes a the multi-core processor, housing many processing elements | Standard: | 2 per node |
 |  |  | 2 per node |  |
 |  |  |  |  |
