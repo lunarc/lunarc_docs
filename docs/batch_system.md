@@ -575,12 +575,9 @@ specific requirements and require consultation.
 
 | Variable | Addressed Volume |
 |------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| SNIC_TMP | node local disk |
-|  | copy your input data here and start your program from here |
-| TMPDIR | node local disk |
-|  | Many applications use this environment variable to locate a disk volume for temporary scratch space.  If your application follows that convention nothing needs to be done. |
-| SLURM_SUBMIT_DIR | submission directory |
-|  | where you ran sbatch |
+| SNIC_TMP | node local disk, copy your input data here and start your program from here |
+| TMPDIR | node local disk, many applications use this environment variable to locate a disk volume for temporary scratch space.  If your application follows that convention nothing needs to be done.  |
+| SLURM_SUBMIT_DIR | submission directory where you ran `sbatch` |
 
 ## Launching MPI jobs in OpenMPI
 
