@@ -535,24 +535,10 @@ SNIC sites. On Alarik the following variables are set by the system:
 |----------------------|-------------|-----------------|-----------------|
 | SNIC_SITE | Identifying the SNIC site you are using | lunarc | lunarc |
 | SNIC_RESOURCE | Identifying the compute resource you are using | aurora | erik |
-| SNIC_BACKUP | User directory which is: | `/home/<user>` | `/home/<user>` |
-|  | Regularly backed up against accidental deletion |  |  |
-|  | Typically extremely limited space |  |  |
-|  | Use for e.g. precious source code |  |  |
-| SNIC_NOBACKUP | User directory which is: | /lunarc | /lunarc |
-|  | Accessible on all Lunarc systems | /nobackup | /nobackup |
-|  | Outliving individual systems | /users/<user> | /users/<user> |
-|  | For storing larger amounts of data |  |  |
-|  | Not backed up against accidental deletion |  |  |
-|  | Protected against disk failure (RAID configuration) |  |  |
-|  | On Alarik: the primary root directory for job management (job scripts, input/output data) |  |  |
-| SNIC_TMP | Directory for best performance during a job | jobid dependent | jobid dependent |
-|  | At Lunarc: |  |  |
-|  | Local disk on nodes |  |  |
-|  | Storing temporary data during job execution |  |  |
-|  | High bandwidth |  |  |
-|  | Automatically deleted |  |  |
-|  | Transfer data with long-term value to SNIC_NOBACKUP before job has finished |  |  |
+| SNIC_BACKUP | User directory which is: Regularly backed up against accidental deletion, typically extremely limited space, used for e.g. precious source code | `/home/<user>` | `/home/<user>` |
+| SNIC_NOBACKUP | User directory which is: Accessible on all Lunarc systems, acessible on all Lunarc systems, for storing larger amounts of data, not backed up against accidental deletion   | `/lunarc/nobackup/users/<user>` | `/lunarc/nobackup/users/<user>` |
+| SNIC_TMP | Directory for best performance during a job.  At Lunarc: Local disk on nodes for storing temporary data during job execution. Transfer data with long-term value to SNIC_NOBACKUP before job has finished |  jobid dependent | jobid dependent |
+
 
 ## Using the node local disks to improve I/O performance
 
