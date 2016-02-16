@@ -344,39 +344,14 @@ purposes of this user guide we will stick to the following terminology:
 |  |  |  | Extra: 2 |
 |  |  |  | Mic: 1 |
 |  |  |  | New: 1 |
-| Processor | This denotes a the multi-core processor, housing many processing elements | Standard: | 2 per node |
-|  |  | 2 per node |  |
-|  |  |  |  |
-|  |  | Extra: |  |
-|  |  | 4 per node |  |
-| GPU | This denotes a nvidia co-processor | 0 | Standard: |
-|  |  |  | 2 per node |
-|  |  |  |  |
-|  |  |  | Fat: |
-|  |  |  | 4 per node |
-|  |  |  |  |
-|  |  |  | Extra: |
-|  |  |  | 8 per node |
-|  |  |  |  |
-|  |  |  | Mic: |
-|  |  |  | 0 per node |
-|  |  |  |  |
-|  |  |  | New: |
-|  |  |  | 2 cards per node |
-|  |  |  | 2 logical per card |
-|  |  |  | 4 logical per node |
-| Socket | This is the “plug” the processor gets plugged into.  Used as a synonym for the processor | Standard: | 2 per node |
-|  |  | 2 per node |  |
-|  |  |  |  |
-|  |  | Extra: |  |
-|  |  | 4 per node |  |
-| Core | Individual processing element | Standard: | 16 per node |
-|  |  | 16 per node | 8 per processor |
-|  |  | 8 per processor |  |
-|  |  |  |  |
-|  |  | Extra: |  |
-|  |  | 48 per node |  |
-|  |  | 12 per processor |  |
+| Processor | This denotes a the multi-core processor, housing many processing elements | 2 per node | 2 per node |
+| GPU | This denotes a nvidia co-processor | 0 | Standard: 2 per node |
+|  |  |  | Fat: 4 per node|
+|  |  |  | Extra: 8 per node|
+|  |  |  | Mic:  0 per node|
+|  |  |  | New: 2 cards per node, 4 logical per node |
+| Socket | This is the “plug” the processor gets plugged into.  Used as a synonym for the processor | 2 per node | 2 per node |
+| Core | Individual processing element | 20 per node | 16 per node |
 | Task | This is a software concept.  It denotes a process, which is an instance of a running program.  It has its own data and instruction stream(s).  It can fork multiple threads to increase the computational speed.  Serial programs and pure MPI programs do not spawn threads. | User controls in job script | User controls in job script |
 | Thread | This is also a software concept.  A thread is a stream of instructions executed on the hardware.  It is part of a task and shares resources such as  data with other threads within the same task. | User controls in job script | User controls in job script |
 
