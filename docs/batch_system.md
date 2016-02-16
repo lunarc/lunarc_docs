@@ -588,13 +588,11 @@ To execute message passing parallel jobs these should be built against
 one of the MPI libraries provided by the support team as a module. To
 execute an MPI job, your job script should do the following
 
- -   Load MPI module relevant for the compiler you are using
- -   Start the program with mpirun
- -   On Alarik the correct binding is crucial to achieve good
-    > performance. When using 16 task per node, we recommend using
-    > the -bind-to-core option of mpirun. When using fewer than 16 tasks
-    > we recommend experimenting whether not using binding helps or
-    > hinders performance.
+*   Load MPI module relevant for the compiler you are using
+*   Start the program with mpirun
+*   Using the correct binding can help code performance. 
+     *   When using 20 task per node on Aurora, we recommend using the `-bind-to core` option of mpirun 
+     *   When using fewer than 16 tasks we recommend experimenting whether not using binding helps or hinders performance.
 
 ## Submitting, monitoring and manipulating jobs in SLURM
 
