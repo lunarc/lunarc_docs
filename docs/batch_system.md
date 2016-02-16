@@ -1,16 +1,16 @@
-# Using the job submission system on Alarik and Erik #
+# Using the job submission system at Lunarc #
 
-Joachim Hein, Jonas Lindemann, Anders Sjöström, Magnus Ullner
+Authors: Joachim Hein, Jonas Lindemann, Anders Sjöström, Magnus Ullner
 
 *Document under active development - Check back frequently!*
 
-A more in-depth guide to the job submission system on Alarik and Erik.
+A more in-depth guide to the job submission system.
 
-# SLURM - the batch system on Alarik and Erik
+# SLURM - the batch system on Aurora and Erik
 
 On a modern HPC system efficient management of the compute resources is
-absolutely crucial for the system to perform. Alarik and Erik are the
-first Lunarc systems to deploy SLURM (**S**imple **L**inux **U**tility
+absolutely crucial for the system to perform. Lunarc deploys 
+SLURM (**S**imple **L**inux **U**tility
 for **R**esource **M**anagement) as resource manager. For your program
 to be executed you have to describe to SLURM the resources required by
 your program, the name of your program and the command line arguments
