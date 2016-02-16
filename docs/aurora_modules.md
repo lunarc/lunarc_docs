@@ -348,6 +348,12 @@ When using a toolchain utilising **OpenMPI** (e.g. foss, iomkl) use:
 * **mpicxx** or **mpic++*: MPI compiler for C++ code
 * **mpifort**: MPI compiler for Fortran code
  
+Inside your slurm job-script, executables build with OpenMPI need to get started using the `mpirun` command.  For MPI jobs not using threads we recommend using task binding.  A simple job script for standard MPI jobs (no threads, e.g. OpenMP) is available on Aurora
+```
+/sw/pkg/submissionsScripts/script_openmpi.sh
+```
+If you use this, you will need to modify it for your own needs.  A [more detailed guide](http://lunarc-documentation.readthedocs.org/en/latest/batch_system/) on the submission system is available.
+ 
 **Remark:** In the latest OpenMPI releases the commands `mpif77` and `mpif90` have been depreciated.  Fortran users should switch to using `mpifort`.
 
 ### Toolchains using the Intel compiler and Intel MPI library
@@ -356,6 +362,13 @@ When using a toolchain utilising the **Intel MPI library** and the **Intel compi
 * **mpiicc**: MPI compiler for C code
 * **mpiicpc**: MPI compiler for C++ code
 * **mpiifort**: MPI compiler for Fortran code
+ 
+Inside your slurm job-script, executables build with the Intel MPI library need to get started using the `srun` command.  Task binding is still under investigation and not yet available.  for A simple job script for standard MPI jobs is available on Aurora:
+```
+/sw/pkg/submissionsScripts/script_intelmpi.sh
+```
+If you use this, you will need to modify it for your own needs.  A [more detailed guide](http://lunarc-documentation.readthedocs.org/en/latest/batch_system/) on the submission system is available.
+
 
 ### Toolchains using the GCC compiler and Intel MPI library
 When using a toolchain utilising the **Intel MPI library** and the **GCC compiler** (e.g. gimkl) use:
@@ -363,3 +376,5 @@ When using a toolchain utilising the **Intel MPI library** and the **GCC compile
 * **mpigcc**: MPI compiler for C code
 * **mpigxx**: MPI compiler for C++ code
 * **mpif90**: MPI compiler for Fortran 95 code
+
+Executable build using this setup are also started with the `srun` command from inside a job-script as described [above](#toolchains-using-the-intel-compiler-and-intel-mpi-library).
