@@ -148,6 +148,27 @@ system.
 
 ### Specifying memory requirements
 
+#### Aurora
+The Aurora system has 64 GB of memory installed on a compute node.  Since each 
+node has 20 cores, the defaul memory request per core is 3200 MB of memory.  
+If more than 3200 MB per core is needed it has to be 
+requested explicitly using the `--mem-per-cpu` option.  For example if you require 
+5000 MB per core add the line
+
+    #SBATCH --mem-per-cpu=5000
+
+When requesting more then 3200 MB per processing core on Aurora, your 
+jobs will be
+charged at a higher rate. In this case some processing cores have to
+remain idle since you are using more than your fair share of memory.
+
+#### Erik
+Erik has 64 GB of memory on the standard nodes. Each node has two CPUs
+with eight cores each. The default memory request per core is therefore
+4000 MB of memory. As in the case of Aurora, if more than 4000MB of
+memory per core is needed it has to be described as above.
+
+#### Alarik
 Alarik has 32 GB of memory installed on the small memory nodes and 64 GB
 of memory on the large memory nodes. The default memory request per core
 on the system is 2000 MB (a sixteenth of 32GB). If more then 2000 MB per
@@ -155,7 +176,7 @@ core is needed it has to be requested explictly with the
 **--mem-per-cpu** option of sbatch. In this case you also have to
 request allocation on a large memory node using the **-C mem64GB**
 option of sbatch. The following show an example how to request 4000 MB
-or main memory per compute core used:
+of main memory per compute core used:
 
     #SBATCH -C mem64GB
     #SBATCH --mem-per-cpu=4000
@@ -167,10 +188,6 @@ requesting more then 4000 MB per processing core, your jobs will be
 charged at a higher rate. In this case some processing cores have to
 remain idle since you are using more than your fair share of memory.
 
-Erik has 64 Gb of memory on the standard nodes. Each node has two CPUs
-with eight cores each. The default memory request per core is therefore
-4000 MB of memory. As in the case of Alarik, if more than 4000MB of
-memory per core is needed it has to be described as above.
 
 ### Controlling job output
 
