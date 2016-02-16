@@ -406,21 +406,21 @@ per node, so four in total, which is most likely not what you want.
 
 Use the --tasks-per-node of sbatch to specify the number of tasks you
 require per node. Most multinode job will set this equal to the number
-of cores availble per node. The following example asks for 16 task per
+of cores availble per node. The following example asks for 20 task per
 node:
 
-    #SBATCH --tasks-per-node=16
+    #SBATCH --tasks-per-node=20
 
 This should be used together with the -N option, specifying the number
 of nodes to be used. The default value for the number of tasks per node
-is 1. For example to specify the requirements for an MPI job with 64
-tasks or multiprocessor job using 64 processors to process a larger
+is 1. For example to specify the requirements for an MPI job with 80
+tasks or multiprocessor job using 80 processors to process a larger
 number of serial jobs one would specify
 
     #SBATCH -N 4
-    #SBATCH --tasks-per-node=16
+    #SBATCH --tasks-per-node=20
 
-When using fewer than 16 tasks per node and you want to prevent other
+When using fewer than 20 tasks per node and you want to prevent other
 user’s jobs sharing your node, you need to consider using
 the --exclusive option. If --exclusive is not specified, SLURM might
 place other tasks onto your node.
@@ -435,11 +435,11 @@ option of sbatch.
 For a standard shared-memory program, which doesn’t also use distributed
 memory programming models such as MPI, one is restricted to a single
 node. On that node, one can request as many threads as there are cores
-on the node. On the standard Alarik compute nodes one can efficiently
-use up to 16 threads. Use the following resource statement:
+on the node. On the standard Aurora compute nodes one can efficiently
+use up to 20 threads. Use the following resource statement:
 
     #SBATCH -N 1
-    #SBATCH --tasks-per-node=16
+    #SBATCH --tasks-per-node=20
 
 If your program is only efficient at a lower thread count, you may want
 to use e.g.:
@@ -459,13 +459,13 @@ cores allow for very wide shared-memory jobs:
 
 So-called hybrid programs, using both distributed and shared-memory
 techniques have recently become popular. For example: for a program
-using 32 MPI tasks, each task spawning 2 OpenMP threads one would
+using 40 MPI tasks, each task spawning 2 OpenMP threads one would
 require 4 nodes and place eight tasks on each node. The number of
 threads per task is given by --cpus-per-task. The resource statement
 would look as follows:
 
     #SBATCH -N 4
-    #SBATCH --tasks-per-node=8
+    #SBATCH --tasks-per-node=10
     #SBATCH --cpus-per-task=2
 
 ### Specifying the number of cores to be required by the job
@@ -474,16 +474,16 @@ In special cases, such as using very unusal numbers of tasks, the **-n**
 option of sbatch to specify the number of cores might become useful.
 When running a pure MPI program this option corresponds to the **number
 of tasks** required for your program. The following statement in a job
-script would reserve 63 cores for your job
+script would reserve 78 cores for your job
 
     #SBATCH -N 4
-    #SBATCH --tasks-per-node=16
-    #SBATCH -n 63
+    #SBATCH --tasks-per-node=20
+    #SBATCH -n 78
 
 Please consider using the --exclusive option of sbatch to avoid SLURM
 spreading your job on more nodes than necessary and placing other user’s
-jobs on nodes utilising fewer than 16 cores for your job. Other user’s
-jobs could via shared node resources (memory bus, cache, FPU, …)
+jobs on nodes utilising fewer than 20 cores for your job. Other user’s
+jobs could via shared node resources (memory bus, cache, …)
 interfere with your job and introduce undue operational noise. Such
 noise is something parallel program execution can be extremely sensitive
 to.
@@ -493,13 +493,16 @@ to.
 ### Job execution environment
 
 When submitting your job to SLURM using sbatch, your entire environment
-including the currently loaded modules gets copied. This behaviour is
-different from earlier Lunarc machines, including Platon. On Alarik,
+including the currently loaded modules gets copied.  On Aurora,
 when hitting sbatch:
 
  * Make sure that the loaded modules and any environment variable you may have set will not be in conflict with the environment expected by the job script
 
 ### Compiler modules
+
+On **Aurora** software modules are arranged in a **hierarchical module naming scheme**.  Accessing software on Aurora very different from 
+earlier Lunarc systems and a [separate guide](http://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/) is available.  
+When compiling code using a [toolchain](http://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/#compiling-code-and-using-toolchains) module is recommended.
 
 On Alarik we automatically load a modern version of the GCC compiler,
 which supports the deployed AMD Opteron processors. At the time of
@@ -528,11 +531,11 @@ The SNIC meta-centres have agreed on a set of environment variables
 which should improve the portability of (parts of) job-scripts between
 SNIC sites. On Alarik the following variables are set by the system:
 
-| Environment variable | Explanation | Value on Alarik | Value on Erik |
-|----------------------|-------------------------------------------------------------------------------------------|-----------------|-----------------|
+| Environment variable | Explanation | Value on Aurora | Value on Erik |
+|----------------------|-------------|-----------------|-----------------|
 | SNIC_SITE | Identifying the SNIC site you are using | lunarc | lunarc |
-| SNIC_RESOURCE | Identifying the compute resource you are using | alarik | erik |
-| SNIC_BACKUP | User directory which is: | /home/<user> | /home/<user> |
+| SNIC_RESOURCE | Identifying the compute resource you are using | aurora | erik |
+| SNIC_BACKUP | User directory which is: | `/home/<user>` | `/home/<user>` |
 |  | Regularly backed up against accidental deletion |  |  |
 |  | Typically extremely limited space |  |  |
 |  | Use for e.g. precious source code |  |  |
