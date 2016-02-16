@@ -19,7 +19,7 @@ of the progress of your programs execution.
 
 This document contains two key parts. The [*first
 part*](#id.asft9ff8nuhu) describes in-depth the job submission system
-and its options. The [*second part*](#id.6w4ezxvvga34) gives example
+and its options. The [*second part*](# Job submission) gives example
 scripts for the most common use cases. They hopefully serve as a good
 starting point when creating submission scripts fitting your needs and
 requirements.
