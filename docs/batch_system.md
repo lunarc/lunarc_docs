@@ -700,7 +700,7 @@ for modest I/O requirements and regular, in particular streaming data
 access.  If you program is demanding with respect to its I/O
 requirements and is accessing data in an irregular fashion you should be
 utilising the node local disc as
-[described below](#basicrun-script-for-i/o-intensive-jobs).
+[described below](#basicrun-script-for-io-intensive-jobs).
 
 This example executes a single serial program.  If you need to process
 a large number of serial
