@@ -2,7 +2,7 @@
 
 Authors: Joachim Hein, Jonas Lindemann, Anders Sjöström, Magnus Ullner
 
-*Document under active development - Check back frequently!*
+*Document is currently updated for Aurora - Check back frequently!*
 
 A more in-depth guide to the job submission system.
 
