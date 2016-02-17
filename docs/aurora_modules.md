@@ -364,7 +364,7 @@ When using a toolchain utilising the **Intel MPI library** and the **Intel compi
 * **mpiifort**: MPI compiler for Fortran code
  
 Inside your slurm job-script, executables build with the Intel MPI library need to get started using the `srun` command.  Task binding is still under investigation and not yet available.  for A simple job script for standard MPI jobs is available on Aurora:
-```
+```bash
 /sw/pkg/submissionsScripts/script_intelmpi.sh
 ```
 If you use this, you will need to modify it for your own needs.  A [more detailed guide](http://lunarc-documentation.readthedocs.org/en/latest/batch_system/) on the submission system is available.
