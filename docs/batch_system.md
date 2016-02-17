@@ -1072,7 +1072,7 @@ mpirun -bind-to-core simula_mpi
 # you need to initiate a copy on each node via srun
 
 cp -p result.dat $SLURM_SUBMIT_DIR
-```bash
+```
 
 This script assumes you are using up to 2000 MB of memory per task. If
 you need more, adding the two lines
