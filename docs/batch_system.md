@@ -769,6 +769,9 @@ more than 3200 MB of main memory on Aurora.
 # write this script to stdout-file - useful for scripting errors
 cat $0
 
+# load the modules required for you program - customise for your program
+module load foss/2016a
+
 # copy the input data and program to node local disk
 # customise for your input file(s) and program name
 cp -p input.dat processor $SNIC_TMP
@@ -787,10 +790,14 @@ cp -p result.dat $SLURM_SUBMIT_DIR
 
 We recommend to be selective about the files you copy between the
 submission directory and the local node disk. If you have multiple input
-and result files you need to modify the copy statements accordingly. The
-above example assumes your program has been compiled with the GCC
-compiler loaded by default. If it has been compiled with a different
-compiler you need to load the compiler module by adding a line similar
+and result files you need to modify the copy statements accordingly.
+
+### Module loading
+The
+above examples assumes your program has been compiled with the
+foss/2016a tool-chain module.
+If it has been compiled with a different
+compiler or tool-chain you need to load the compiler module by adding a line similar
 to
 
     module add intel/12.1
@@ -801,7 +808,10 @@ GPU with the line
     module add cuda
 
 prior to the line ./processor. You need to consult with the person who
-build the executable for you. Lunarc provided modules typically complain
+build the executable for you.  Lunarc provided modules on Aurora are only
+visible once the required compiler or combination of compiler and MPI library is loaded.
+
+On other services the modules typically complain
 if the wrong compiler is loaded and are hence self-documenting.
 
 ## Running multiple serial jobs within a single job submission
