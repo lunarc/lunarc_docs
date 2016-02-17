@@ -162,7 +162,7 @@ You obtain output simlar to:
 ---------------------------------------------------------------------------------
 ```
 This tells you that the multi threaded version 5.0.4 and the hybrid version 5.0.5 are installed.  If you want to use the version 5.0.5 issue the command:
-```
+```bash
 module spider GROMACS/5.0.5-hybrid
 ``` 
 You get the folling output
@@ -252,7 +252,7 @@ the entire module structure of the system.  This cache is currently
 configured to be **updated once per day**.
 
 This can have the effect that you see a slightly outdated version of the module tree, when using commands such as `module avail`or `module spider`. This should only be an issue with additions to the module tree made in the last hours. The command
-```
+```bash
 module --ignore-cache spider
 ```
 will force an update of the cache files in your account. 
@@ -378,3 +378,5 @@ When using a toolchain utilising the **Intel MPI library** and the **GCC compile
 * **mpif90**: MPI compiler for Fortran 95 code
 
 Executable build using this setup are also started with the `srun` command from inside a job-script as described [above](#toolchains-using-the-intel-compiler-and-intel-mpi-library).
+
+
