@@ -690,17 +690,20 @@ In this section we provide sample scripts for typical use cases.
 ## Job scripts for serial jobs
 
 ### Basic run script
-The following is an an example for a simple script running the program
-named `processor`, whose executable is located in the submision
-directory.  This example does not use the node local disc, which is ok
+The following is an example for a simple script running the program
+named `processor`, whose executable is located in the submission
+directory.  If you are using a Lunarc provided executable, load the
+required module(s) and omit the dot before the program name. 
+
+This example does not use the node local disc, which is ok
 for modest I/O requirements and regular, in particular streaming data
 access.  If you program is demanding with respect to its I/O
-requirements and is accessing data in an irregualar fashion consider
-using the node local disc as
+requirements and is accessing data in an irregular fashion you should be
+utilising the node local disc as
 [described below](#basicrun-script-for-i/o-intensive-jobs).
 
-This example executes a single serial program and is suitable for the
-occasional serial job. If you need to process a large number of serial
+This example executes a single serial program.  If you need to process
+a large number of serial
 jobs, your might want to bundle them into a single submission. Refer to the
 section [Running multiple serial jobs within a single job submission](#running-multiple-serial-jobs-within-a-single-job-submission) for a scripting example.
 
@@ -723,6 +726,9 @@ subdirectory of your
 # write this script to stdout-file - useful for scripting errors
 cat $0
 
+# load the modules required for you program - customise for your program
+module load foss/2016a
+
 # run the program
 # customise for your program name and add arguments if required
 ./processor
@@ -743,8 +749,7 @@ directory for safe keeping. The individual steps are highlighted by
 comments starting with a “#”. These comment lines can be kept in the
 file.
 
-This is the Lunarc standard example and represents **recommended
-practise** for a basic serial job. You need to customise the file to
+You need to customise the file to
 suit your specific needs. The script is suitable for jobs consuming no
 more than 3200 MB of main memory on Aurora.
 
