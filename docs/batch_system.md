@@ -1285,14 +1285,6 @@ you will be charged for the full node, whether or not you use all cores.
 all threads to core 0. You will see extremely poor performance in this
 case.
 
-#### Thread binding with the open64 compiler
-
-OpenMP code compiled with the **open64** compiler will use thread
-binding on Alarik. In standard use cases this will actually boost
-performance. However in special situation, e.g. when using fewer threads
-than the size of your partition, you might see a performance boost by
-not using thread binding. To do so you need to set the environment
-variable “O64_OMP_SET_AFFINITY=false”
 
 #### Thread binding with the Intel compiler
 
