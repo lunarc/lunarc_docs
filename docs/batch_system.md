@@ -687,20 +687,54 @@ scancel 7103
 
 In this section we provide sample scripts for typical use cases.
 
-## Job scripts using the node local disk
+## Job scripts for serial jobs
 
 ### Basic run script
-
-As discussed the node local disk provides better I/O-bandwidth than the
-other file systems available on Alarik. The following script assumes the
-program processor reads the file **input.dat** and produces a file
-**result.dat**.
+The following is an an example for a simple script running the program
+named `processor`, whose executable is located in the submision
+directory.  This example does not use the node local disc, which is ok
+for modest I/O requirements and regular, in particular streaming data
+access.  If you program is demanding with respect to its I/O
+requirements and is accessing data in an irregualar fashion consider
+using the node local disc as
+[described below](#basicrun-script-for-i/o-intensive-jobs).
 
 This example executes a single serial program and is suitable for the
 occasional serial job. If you need to process a large number of serial
-jobs, we request you bundle them into a single submission. Refer to the
-section “[*R*](#id.bdphbddpef0)[*unning multiple serial jobs within a
-single job submission*](#id.bdphbddpef0)” for a scripting example.
+jobs, your might want to bundle them into a single submission. Refer to the
+section [Running multiple serial jobs within a single job submission](#running-multiple-serial-jobs-within-a-single-job-submission) for a scripting example.
+
+Unless you have project disc, jobs should be started from a
+subdirectory of your
+`/lunarc/nobackup/users/<user>` disc space.
+```bash
+#!/bin/bash
+#
+# job time, change for what your job requires
+#SBATCH -t 00:10:00
+#
+# job name
+#SBATCH -J data_process
+#
+# filenames stdout and stderr - customise, include %j
+#SBATCH -o process_%j.out
+#SBATCH -e process_%j.err
+
+# write this script to stdout-file - useful for scripting errors
+cat $0
+
+# run the program
+# customise for your program name and add arguments if required
+./processor
+
+```
+
+### Basicrun script for I/O intensive jobs
+As discussed the node local disk provides better I/O-bandwidth and I/O
+access times than the
+other file systems available. The following script assumes the
+program processor reads the file **input.dat** and produces a file
+**result.dat**.
 
 The script copies the input data and the program executable from the
 submission directory to the node local disk, executes the program on the
@@ -712,7 +746,7 @@ file.
 This is the Lunarc standard example and represents **recommended
 practise** for a basic serial job. You need to customise the file to
 suit your specific needs. The script is suitable for jobs consuming no
-more than 2000 MB of main memory.
+more than 3200 MB of main memory on Aurora.
 
 ```bash
 #!/bin/bash
@@ -764,52 +798,6 @@ GPU with the line
 prior to the line ./processor. You need to consult with the person who
 build the executable for you. Lunarc provided modules typically complain
 if the wrong compiler is loaded and are hence self-documenting.
-
-### Version for codes requiring more memory than 2000 MB
-
-If your program requires more memory than 2000 MB, use the following
-script. This example is set up to use 4000 MB. If you need even more you
-can request this, but your runs will be charged to your project at a
-higher rate, since other cores have to remain idle. The comments on the
-previous example also apply here
-
-```bash
-#!/bin/bash
-#
-# job time, change for what your job requires
-#SBATCH -t 00:10:00
-#
-# job name
-#SBATCH -J data_process
-#
-# filenames stdout and stderr - customise, include %j
-#SBATCH -o process_%j.out
-#SBATCH -e process_%j.err
-#
-# requesting a large memory node and 4000 MB or main memory
-#SBATCH -C mem64GB
-#SBATCH --mem-per-cpu=4000
-# write this script to stdout-file - useful for scripting errors
-cat $0
-
-# copy the input data and program to node local disk
-# customise for your input file(s) and program name
-cp -p input.dat processor $SNIC_TMP
-
-# change to the execution directory
-cd $SNIC_TMP
-
-# run the program
-# customise for your program name and add arguments if required
-./processor
-
-# rescue the results to the submission directory
-# customise for your result file(s)
-cp -p result.dat $SLURM_SUBMIT_DIR
-```
-
-Since fewer nodes are equipped with 64 GB of memory, you have to allow
-for longer queueing times until resource become available.
 
 ## Running multiple serial jobs within a single job submission
 
