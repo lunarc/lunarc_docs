@@ -857,7 +857,7 @@ processed should be all that is required.
 #!/bin/sh
 # requesting the number of cores needed
 #SBATCH -N 1
-#SBATCH --tasks-per-node=16
+#SBATCH --tasks-per-node=20
 #SBATCH --exclusive
 #
 # job time, change for what your job farm requires
@@ -892,7 +892,8 @@ directory to be accessed as a command line argument. Please note the
 “sleep 1” command inside the do loop. In our testing this greatly
 enhances the stability by submitting the actual jobs over a longer
 period of time. With this statement included the script was able to
-successfully handle up to about 800 outstanding jobs on 16 and 32 cores.
+successfully handle up to about 800 outstanding jobs on 16 and 32
+Alarik cores.
 For reasons of job reliability, we therefore recommend not to process
 more than 800 jobs in a single script. However it is possible to process
 significantly larger job numbers than 800 by carefully tuning sleep-time
@@ -1018,45 +1019,44 @@ job-steps the script is presently processing
     8070.194 small_ex snic fred 0:13 an073
     8070.195 small_ex snic fred 0:13 an074
 
-## MPI job using 16 tasks per node
+## MPI job using 20 tasks per node
 
-Most MPI jobs achieve best cost efficiency when deploying 16 tasks per
-node, that is one task per core. Benchmarking by the Lunarc team showed
-that these jobs typically require binding to achieve good performance.
-The binding offered by the OpenMPI library works satisfactory.
+Most MPI jobs achieve best cost efficiency when deploying 20 tasks per
+node, that is one task per core.  The sample uses core binding as
+offered by the OpenMPI library.
 
 The resource request is very easy in this case. Ask for a number of
 cores equivalent to the number of tasks you want to run. We recommend
 using the --exclusive option to avoid getting unrelated jobs placed on
 the last node in case the number of cores requested doesn’t divide by
 the number of cores per node. The following is an example submission
-script to run the MPI application simula_mpi with 64 tasks on 4 nodes.
+script to run the MPI application simula_mpi with 80 tasks on 4 nodes.
 Notice you do not need to specify the node count.
 
 ```bash
 #!/bin/sh
 # requesting the number of cores needed on exclusive nodes
 #SBATCH -N 4
-#SBATCH --tasks-per-node=16
+#SBATCH --tasks-per-node=20
 #SBATCH --exclusive
 #
 # job time, change for what your job requires
 #SBATCH -t 0:30:0
 #
 # job name
-#SBATCH -J simula_n64
+#SBATCH -J simula_n80
 #
 # filenames stdout and stderr - customise, include %j
-#SBATCH -o simula_n64_%j.out
-#SBATCH -e simula_n64_%j.out
+#SBATCH -o simula_n80_%j.out
+#SBATCH -e simula_n80_%j.out
 
 # write this script to stdout-file - useful for scripting errors
 cat $0
 
 # Example assumes we need the intel runtime and OpenMPI library
 # customise for the libraries your executable needs
-module add intel/13.0
-module add openmpi/1.6.2/intel/13.0
+module load iomkl/2015.1
+
 
 # Copying the executable onto the local disks of the nodes
 srun -n $SLURM_NNODES -N $SLURM_NNODES cp -p simula_mpi $SNIC_TMP
@@ -1068,7 +1068,7 @@ cp -p input.dat $SNIC_TMP
 
 # change to local disk and start the mpi executable
 cd $SNIC_TMP
-mpirun -bind-to-core simula_mpi
+mpirun -bind-to core simula_mpi
 
 # Copy result files back - example assumes only task zero writes
 # if in your application result files are written on all nodes
