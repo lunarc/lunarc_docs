@@ -682,6 +682,9 @@ scancel 7103
 
 # Example job scripts
 
+***The examples are still in the process of being updated for Aurora***
+
+
 In this section we provide sample scripts for typical use cases.
 
 ## Job scripts using the node local disk
