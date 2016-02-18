@@ -3,6 +3,7 @@ pages:
 - Home: index.md
 - How to login: login_howto.md
 - Quick reference: quick_reference.md
+- Aurora FAQ: aurora_faq.md
 - Using the Job submission system: batch_system.md
 - Using the Lunarc HPC Desktop: using_hpc_desktop.md
 - Aurora Software: aurora_modules.md
