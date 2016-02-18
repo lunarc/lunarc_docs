@@ -593,13 +593,17 @@ your job script should do the following:
      *   When using 20 task per node on Aurora, we recommend using the `-bind-to core` option of mpirun 
      *   When using fewer than 16 tasks we recommend experimenting whether not using binding helps or hinders performance.
 
-## Launching MPI jobs when using the Intel MPI library
+## Launching MPI jobs compiled with the Intel MPI library
 
 When the Intel MPI library was used to build your executable, your jobsscript should do as follows:
 
 * Load the compiler module you have been using
 * Load the Intel MPI module relevant for your compiler
 * Start your program with `srun`
+
+When using Lunarc provided software, and you are loading an
+`impi` module to see your package, you need to use `srun` to start MPI
+executables of this package.
 
 **Remark**: Task binding for the Intel MPI library is still under investigation
 
@@ -735,7 +739,7 @@ module load foss/2016a
 
 ```
 
-### Basicrun script for I/O intensive jobs
+### Basic run script for I/O intensive jobs
 As discussed the node local disk provides better I/O-bandwidth and I/O
 access times than the
 other file systems available. The following script assumes the
@@ -907,7 +911,7 @@ help desk if your require further consultancy.
 ### The worker script
 
 This outlines the worker script. Compared to the script describing a
-[*single serial job*](#id.oyajyndi4e55), a few modifications are
+[*single serial job for I/O intensive jobs*](#basic-run-script-for-io-intensive-jobs), a few modifications are
 required:
 
 -   To avoid access conflicts between the individual jobs, each job
@@ -1025,13 +1029,61 @@ Most MPI jobs achieve best cost efficiency when deploying 20 tasks per
 node, that is one task per core.  The sample uses core binding as
 offered by the OpenMPI library.
 
-The resource request is very easy in this case. Ask for a number of
-cores equivalent to the number of tasks you want to run. We recommend
-using the --exclusive option to avoid getting unrelated jobs placed on
-the last node in case the number of cores requested doesn’t divide by
-the number of cores per node. The following is an example submission
+The resource request is straight forward in this case.  Ask for a number of
+nodes and place 20 tasks on each node.  The product should match
+the number of tasks you want to run. We recommend
+using the `--exclusive` option.  The following is an example submission
 script to run the MPI application simula_mpi with 80 tasks on 4 nodes.
 Notice you do not need to specify the node count.
+
+```bash
+#!/bin/sh
+# requesting the number of cores needed on exclusive nodes
+#SBATCH -N 4
+#SBATCH --tasks-per-node=20
+#SBATCH --exclusive
+#
+# job time, change for what your job requires
+#SBATCH -t 0:30:0
+#
+# job name
+#SBATCH -J simula_n80
+#
+# filenames stdout and stderr - customise, include %j
+#SBATCH -o simula_n80_%j.out
+#SBATCH -e simula_n80_%j.out
+
+# write this script to stdout-file - useful for scripting errors
+cat $0
+
+# Example assumes we need the intel runtime and OpenMPI library
+# customise for the libraries your executable needs
+module load iomkl/2015.03
+
+
+
+# start the mpi executable - use mpirun in case of OpenMPI
+mpirun -bind-to core simula_mpi
+```
+
+In case the executable was compiled with the **Intel MPI library** (using
+a module named `impi`) the last line should read
+```bash
+# start the mpi executable 
+srun simula_mpi
+```
+
+## MPI job using the node local discs
+
+In many cases you can use the node local discs also for your MPI
+jobs.  This can be beneficial if your job is very demanding with
+respect to disc I/O and spends a lot of time doing it.
+
+You need to transfer your executable onto the node local discs of all
+nodes.  Depending on the architecture of your application it is often
+sufficient to have the input files on the head node only.  Many MPI
+applications write result files only from the head node.  In these
+cases the below script should work.
 
 ```bash
 #!/bin/sh
@@ -1076,16 +1128,8 @@ mpirun -bind-to core simula_mpi
 
 cp -p result.dat $SLURM_SUBMIT_DIR
 ```
-
-This script assumes you are using up to 2000 MB of memory per task. If
-you need more, adding the two lines
-
-    #SBATCH -C mem64GB
-    #SBATCH --mem-per-cpu=4000
-
-to the script will allow for using up to 4000 MB. Since fewer nodes are
-equipped with 64 GB of memory, you have to allow for longer queueing
-times until resource become available.
+Again, applications using the Intel MPI library need starting with
+`srun`, see above.
 
 ### Modifications required for file I/O on all nodes
 
@@ -1204,7 +1248,7 @@ engage the node local disk.
 #
 # Specify the number of threads - request all on 1 node
 #SBATCH -N 1
-#SBATCH --tasks-per-node=16
+#SBATCH --tasks-per-node=20
 #
 # job time, change for what your job requires
 #SBATCH -t 00:10:00
@@ -1219,29 +1263,17 @@ engage the node local disk.
 # write this script to stdout-file - useful for scripting errors
 cat $0
 
-# copy the input data and program to node local disk
-# customise for your input file(s) and program name
-cp -p input.dat processor_omp $SNIC_TMP
-
-# change to the execution directory
-cd $SNIC_TMP
-
 # run the program
 # customise for your program name and add arguments if required
 ./processor_omp
-
-# rescue the results to the submission directory
-# customise for your result file(s)
-cp -p result.dat $SLURM_SUBMIT_DIR
 ```
 
-This script allows to use 2000 MB of main memory per requested core. If
-you need more memory, this can be requested by:
+This script allows to use 3200 MB of main memory per requested core.
+When asking for 20 cores on Aurora you can use all the memory
+available on the node.
 
-    #SBATCH -C mem64GB
-    #SBATCH --mem-per-cpu=4000
-
-This will increase you memory request to 4000 MB per requested core.
+The modification required to utilise the node local discs are exactly
+the same as require [for serial jobs](#basicrun-script-for-io-intensive-jobs).
 
 ### Thread binding for OpenMP codes
 
@@ -1305,6 +1337,9 @@ the environment variable KMP_AFFINITY. The value
 might be a good starting point for your experimentation.
 
 ## Hybrid-jobs using threads within an MPI framework
+
+*This needs to be revisited for Aurora - we keep the Alarik
+ documentation for the time being*
 
 A cluster with multicore nodes such as Alarik is a natural environment
 to execute parallel codes deploying both MPI and OpenMP threads. When
