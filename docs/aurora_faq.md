@@ -2,7 +2,7 @@
 Author: Joachim Hein (Lunarc)
 
 ## I can not access Aurora using the Lunarc HPC desktop
-The Lunarc HPC desktop for Aurora is still work in progress.  We currently expect it to be available in a few weeks time.
+The Lunarc HPC Desktop is not yet operational on Aurora. We currently expect availability in a few weeks.
 
 ## I can not find my software package in the module system
 While the Lunarc support team did not manage to install all the software that was available on Alarik, most of the packages that were available and a few that weren't are already available.  However on Aurora a hierarchical module naming scheme is deployed.  This is explained in a special [software quide](http://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/).  Please contact Lunarc support if you can't find your package with the `module spider`command.
