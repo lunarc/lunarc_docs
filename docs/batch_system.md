@@ -854,14 +854,22 @@ inside the do loop the setup can be used to processes 800 jobs.
 
 The master script describes the resources required and registers, once
 running the worker tasks with SLURM. In most cases modifying the number
-of cores needed, the total job time and the number of jobs to be
-processed should be all that is required.
+of Nodes needed, the total job time and the number of jobs to be
+processed should be all that is required.  
+
+With this script you only specify the number of Nodes you require
+using the `-N`option and specify the `--exclusive`.  The task farm
+will use all the cores available on the nodes, which is 20 in case of
+Aurora.   You **must not** specify `--tasks-per-node`.  If you did only one
+core per node would be used on Aurora.
+
+The following example will be
+using 40 cores on 2 nodes to process 200 jobs.
 
 ```bash
 #!/bin/sh
-# requesting the number of cores needed
-#SBATCH -N 1
-#SBATCH --tasks-per-node=20
+# requesting the number of Nodes needed
+#SBATCH -N 2
 #SBATCH --exclusive
 #
 # job time, change for what your job farm requires
