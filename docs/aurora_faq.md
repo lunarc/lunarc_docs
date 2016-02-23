@@ -1,6 +1,9 @@
 # Frequently asked questions about Aurora
 Author: Joachim Hein (Lunarc)
 
+## What is the maximum job time on Aurora
+This has not been changed.  We still allow batch jobs to ask for up to 168 hours, which is 7 days.
+
 ## I can not access Aurora using the Lunarc HPC desktop
 The Lunarc HPC Desktop is not yet operational on Aurora. We currently expect availability in a few weeks.
 
