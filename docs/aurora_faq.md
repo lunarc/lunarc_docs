@@ -10,7 +10,7 @@ Most users have two different types of storage.  They will be treated differentl
 ## Will Alarik executables work on Aurora?
 The processors deployed on Alarik and Aurora have different instructions sets.  In particular highly optimised executables are likely to fail with an *illegal instruction error*.  Further more different shared libraries are deployed on both systems.  Lunarc recommends to rebuild everything from the source code.
 
-## What is the maximum job time on Aurora
+## What is the maximum job time on Aurora?
 This has not been changed.  We still allow batch jobs to ask for up to 168 hours, which is 7 days.
 
 ## I can not access Aurora using the Lunarc HPC desktop
