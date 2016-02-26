@@ -7,6 +7,8 @@ Most users have two different types of storage.  They will be treated differentl
 * **home space**, which is where you are located after login.  This is separate on Aurora and Alarik.  You need to **copy everything you want to keep** from your Alarik home space as soon as possible.  We plan to keep the Alarik home space available until **15 April 2016**. 
 * **nobackup** or **workspace**, which is where most users hold the bulk of their data and start their jobs.  This storage area is accessed as `/lunarc/nobackup/users/<username>`.  The nobackup storage has been mounted on Aurora and is currently accessible from Alarik and Aurora.  No action by the users is required.  If you have programs and executables in your nobackup space, please read the entry on [executables](#will-alarik-executables-work-on-aurora).
 
+In addition to these, some project have designated project space.  Project storage has been mounted on Aurora. No further action should be required.
+
 ## Will Alarik executables work on Aurora?
 The processors deployed on Alarik and Aurora have different instructions sets.  In particular highly optimised executables are likely to fail with an *illegal instruction error*.  Further more different shared libraries are deployed on both systems.  Lunarc recommends to rebuild everything from the source code.
 
