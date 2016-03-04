@@ -820,8 +820,8 @@ if the wrong compiler is loaded and are hence self-documenting.
 
 ## Running multiple serial jobs within a single job submission
 
-When you need to run many serial jobs, similar to the ones [*described
-above*](#basic-run-script), these should be bundled together and
+When you need to run many serial jobs, similar to the ones [described
+above](#basic-run-script), these should be bundled together and
 submitted to the job queue in a small number of submissions or even a
 single submission. With SLURM is perfectly reasonable to run several
 hundred individual jobs in a single submission. To speed up the
@@ -834,7 +834,7 @@ two nodes. The scripting use two scripts, the master script and the
 worker script. The master script requests the resources (number of
 cores, job time, ...) and then registers 200 copies of the worker script
 with SLURM using the command srun. The worker script is a modification
-of the [basic script for I/O intensive jobs](#basic-script-for-io-intensive-jobs) described above.
+of the [basic script for I/O intensive jobs](#basic-run-script-for-io-intensive-jobs) described above.
 
 In our example this will then start sixteen jobs on the sixteen cores
 you requested. Once a job has finished, it will take an unprocessed job
@@ -919,28 +919,26 @@ help desk if your require further consultancy.
 ### The worker script
 
 This outlines the worker script. Compared to the script describing a
-[*single serial job for I/O intensive jobs*](#basic-run-script-for-io-intensive-jobs), a few modifications are
+[basic script for I/O intensive jobs](#basic-run-script-for-io-intensive-jobs), a few modifications are
 required:
 
--   To avoid access conflicts between the individual jobs, each job
-    > creates a job private sub-directory on the node local disk.
+-   To avoid access conflicts between the individual jobs, each job creates a job private sub-directory on the node local disk.
 
 -   The input file(s) are expected in the sub_directories job_0,
-    > job_1, job_2, … of the submission directory. The result file(s)
-    > will also be placed in these directories.
+    job_1, job_2, … of the submission directory. The result file(s) will also be placed in these directories.
 
 -   The example assumes a single input file and single result file. If
-    > you have multiple input and/or result files modifications are
-    > needed, as are modifications for that actual names of your file
+     you have multiple input and/or result files modifications are
+     needed, as are modifications for that actual names of your file
 
 -   The present set up allows for different executables for each
-    > job-stop. The script assumes to find an executable named
-    > “processor” in the same location as the input file(s). If you all
-    > job steps use the same executable the scripts can be simplified.
+     job-stop. The script assumes to find an executable named
+     “processor” in the same location as the input file(s). If you all
+     job steps use the same executable the scripts can be simplified.
 
 -   Once a job-step has finished and the result file has been copied
-    > back, the job private sub-directory on the node local disk is
-    > removed to prevent the disc from overflow.
+     back, the job private sub-directory on the node local disk is
+     removed to prevent the disc from overflow.
 
 If you are using the above master script, the script should be named
 “workScript.sh”.
