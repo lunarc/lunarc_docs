@@ -836,9 +836,9 @@ cores, job time, ...) and then registers 200 copies of the worker script
 with SLURM using the command srun. The worker script is a modification
 of the [basic script for I/O intensive jobs](#basic-run-script-for-io-intensive-jobs) described above.
 
-In our example this will then start sixteen jobs on the sixteen cores
+In our example this will then start fourty jobs on the fourty cores
 you requested. Once a job has finished, it will take an unprocessed job
-and place it on the idle core for processing. This will continue until
+and place it on the now idle core for processing. This will continue until
 all jobs are processed. The ordering of the jobs can not be relied on.
 
 For our example the entire setup assumes the submission directory has
