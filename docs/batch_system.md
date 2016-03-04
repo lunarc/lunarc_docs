@@ -821,7 +821,7 @@ if the wrong compiler is loaded and are hence self-documenting.
 ## Running multiple serial jobs within a single job submission
 
 When you need to run many serial jobs, similar to the ones [*described
-above*](#id.81n49hdgiv29), these should be bundled together and
+above*](#basic-run-script), these should be bundled together and
 submitted to the job queue in a small number of submissions or even a
 single submission. With SLURM is perfectly reasonable to run several
 hundred individual jobs in a single submission. To speed up the
@@ -829,12 +829,12 @@ processing of your jobs, you can ask for the cores from a number of
 nodes. The concept is known as a **task-farm**. The individual job are
 known as **job-steps**.
 
-The following is an example processing 200 such jobs using 16 cores from
-a single node. The scripting use two scripts, the master script and the
-worker script. The Master script requests the resources (number of
+The following is an example processing 200 such jobs using 40 cores from
+two nodes. The scripting use two scripts, the master script and the
+worker script. The master script requests the resources (number of
 cores, job time, ...) and then registers 200 copies of the worker script
 with SLURM using the command srun. The worker script is a modification
-of the [*basic script*](#id.oyajyndi4e55) described above.
+of the [basic script for I/O intensive jobs](#basic-script-for-io-intensive-jobs) described above.
 
 In our example this will then start sixteen jobs on the sixteen cores
 you requested. Once a job has finished, it will take an unprocessed job
@@ -854,10 +854,10 @@ inside the do loop the setup can be used to processes 800 jobs.
 
 The master script describes the resources required and registers, once
 running the worker tasks with SLURM. In most cases modifying the number
-of Nodes needed, the total job time and the number of jobs to be
-processed should be all that is required.  
+of nodes needed, the total job time and the number of jobs to be
+processed should be all that is required.
 
-With this script you only specify the number of Nodes you require
+With this script you only specify the number of nodes you require
 using the `-N`option and specify the `--exclusive`.  The task farm
 will use all the cores available on the nodes, which is 20 in case of
 Aurora.   You **must not** specify `--tasks-per-node`.  If you did only one
@@ -868,7 +868,7 @@ using 40 cores on 2 nodes to process 200 jobs.
 
 ```bash
 #!/bin/sh
-# requesting the number of Nodes needed
+# requesting the number of nodes needed
 #SBATCH -N 2
 #SBATCH --exclusive
 #
