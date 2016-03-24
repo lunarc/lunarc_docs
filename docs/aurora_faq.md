@@ -18,7 +18,7 @@ This has not been changed.  We still allow batch jobs to ask for up to 168 hours
 ## I can not access Aurora using the Lunarc HPC desktop
 The Lunarc HPC Desktop is not yet operational on Aurora. We currently expect availability in a few weeks.
 
-## I can not find a package you used to have available on Alarik
+## Could you please install software for me
 Many packages that were installed in standard locations have now been moved to the module system.  Please search for the package using `module spider` before contacting the helpdesk.
 
 ## I can not find my software package in the module system
@@ -29,6 +29,12 @@ Using an optimised BLAS library is important for achieving good performance.  Th
 
 ## I need an ACML module
 ACML is a highly optimised library which offers BLAS functionality among other things.  It is provided by AMD to work with the AMD processors, like the once deployed on Alarik.  Since Aurora utilises INTEL processors using ACML is no longer an option.  On Aurora we offer OpenBLAS and MKL instead of ACML.  Please refer to the question: [*I need LAPACK and BLAS*](#i-need-lapack-and-blas) for more details.
+
+## My MPI code using OpenBLAS does not perform
+OpenBLAS as installed in the foss [toolchains](http://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/#compiling-code-and-using-toolchains) is compiled with thread support.  When OpenBLAS is used on Aurora, it will typically figure how many cores you are allocated on that node and spawn as many threads.  If this is not desirable (e.g. pure MPI code) you need to control the number of threads spawned by setting the `OMP_NUM_THREADS` variable.  For example for an MPI code running as many tasks as cores requested this is typically be set to:
+```bash
+export OMP_NUM_THREADS=1
+```
 
 ## My MPI application doesn't launch
 On Aurora we support two MPI libraries: [OpenMPI](https://www.open-mpi.org/) and [Intel MPI](https://software.intel.com/en-us/intel-mpi-library).  Depending on the [toolchain](http://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/#compiling-code-and-using-toolchains) utilised to compile your application different job launchers are required.  Executables build with OpenMPI need to be launched with `mpirun`, while applications build with Intel MPI need to be started with `srun`.  
