@@ -69,7 +69,7 @@ requires
 In our example each part consists of a single line. The first line of
 our example contains the shell specification, in most cases the sh-shell
 as used here is just fine. The second line starting with #SBATCH
-specifies the resources needed. In our case it asks for 10 minutes of
+specifies the resources needed. In our case it asks for 5 minutes of
 computer time. If the jobs hasn’t finished after that time, SLURM will
 terminate it. Job scripts typically contain more than one of these
 statements, specifying e.g. more than one processor or more memory. The
@@ -1475,3 +1475,5 @@ might need to re-run that script.
 ## Known issues with the interactive command
 
 None at the time of writing.
+
+
