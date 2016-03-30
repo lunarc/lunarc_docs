@@ -133,7 +133,7 @@ This will name your job “parameterTest”.
 ### Specifying a project for users with multiple projects 
 
 Most users are members of only one project. These users do not need to
-specify a project in their in their submission script. The Lunarc set-up
+specify a project in their submission script. The Lunarc set-up
 will automatically use that project for accounting.
 
 A few users are members of more than project. In this case the system
