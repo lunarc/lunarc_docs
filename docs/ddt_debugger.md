@@ -60,7 +60,7 @@ for an executable named *program_g*.  In case of the Intel MPI-library the code 
 ```
 Once your code starts running, you get a request in the DDT GUI
 
-![Reverse connect request](images/ddtreverseConnectRequest.png "reverse connect request")     
+![Reverse connect request](images/ddtReverseConnectRequest.png "reverse connect request")     
 
 Accept this to get to the next window.
 
