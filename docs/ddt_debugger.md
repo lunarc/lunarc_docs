@@ -62,6 +62,8 @@ Once your code starts running, you get a request in the DDT GUI
 
 ![Reverse connect request](images/ddtReverseConnectRequest.png "reverse connect request")     
 
+Accept this to get to the next window.
+
 <!-- # Debugging MPI code on Alarik #
 
 If you now select the "Run and Debug a Program" option you get to the following screen:
