@@ -1,36 +1,49 @@
 
 # Starting the DDT debugger on Alarik and Erik #
 
-A basic description on how to start a debugging session with DDT on the Alarik and Erik system.  Job will be submitted through the Slurm batch system to the back-end nodes.
+A basic description on how to start a debugging session with DDT, part of [Allinea Forge](http://www.allinea.com/products/develop-allinea-forge), on the Aurora and Erik systems.  Job will be submitted through the Slurm batch system to the back-end nodes.
 
 # About this document #
 
-This document gives basic instruction on how to start a debugging session using the DDT debugger on the Alarik and Erik system at Lunarc.  This document is based on DDT version 5.0.1.  The current license allows for debug up to 88 processes.  These are shared between the users of all systems at Lunarc.  So please be considerate to your fellow Lunarc users.
+This document gives basic instruction on how to start a debugging session using the DDT debugger on the Aurora and Erik system at Lunarc.  This document is based on DDT version 6.0.2 currently installed on Aurora.  There is currently a centralised SNIC license hosted by NSC.  The licenses are shared between the users of all the SNIC systems.  So please be considerate to other users fellow regarding for how many licenses your use (time and number of cores).
     
-DDT is a powerful debugger for serial and parallel programs.  The tool is developed and maintained by Allinea Software.  It is part of the Allineas Forge suite.  A number of parallel programming models are supported.  This includes MPI, OpenMP and a number of GPU languages.  This document is not a DDT userguide, we refer our users to the documentation available from the Allinea website, in particular their user guide.
+DDT is a powerful debugger for serial and parallel programs.  The tool is developed and maintained by Allinea Software.  It is part of the Allineas Forge suite.  A number of parallel programming models are supported.  This includes MPI, OpenMP and a number of GPU languages.  This document is not a DDT userguide, we refer our users to the documentation available from the [Allinea website](http://www.allinea.com/product-documentation), in particular their [user guide](http://content.allinea.com/downloads/userguide-forge.pdf).
 
-# Getting started with DDT on Alarik and Erik # 
+# Getting started with DDT on Aurora and Erik # 
 
-## Connecting to Alarik and Erik using the Lunarc HPC desktop ##
+## Connecting to Aurora and Erik
 
-To use DDT on Alarik and Erik we recommend to connect to the system using the Lunarc HPC desktop. 
-Starting DDT on Alarik and Erik
+To use DDT you need to be able to access its graphical user interface (GUI).  
+The recommended way to connect to the system is therefore the Lunarc HPC desktop.  However this is not yet available for Aurora.  On Aurora you have to use x-forwarding until the desktop is available.
+### Using x-forwarding under Linux or on a Mac
+Linux systems are typically setup to display an x-window.  On the latest releases of Mac OSX you have to install [XQuartz](http://www.xquartz.org/) to display x-windows.  Once this is available connect to Aurora:
 
-Before starting DDT, make sure you have the modules for your code loaded.  This includes the compilers and libraries, in particular the MPI library if your are debugging MPI code.  When compiling your application, you should add the -g option to the compiler flags.  This will enable DDT to display source lines while executing your program.  Please note that optimisation often breaks the link between an instruction and a source line.  Disabling optimisation is in many cases a good idea.
+    ssh -X aurora.lunarc.lu.se -l <username>
+    
+You will be prompted for password and one-time-password as usual.
 
-It is now time to start DDT, for this you need to load the relevant DDT module, e.g.:
+### Connecting from a windows system
+To connect using x-forwarding from a windows it is recommended to install [Cygwin](https://www.cygwin.com/). 
+
+## Starting the DDT GUI on Aurora and Erik
+
+Lunarc currently recommends using *reverse connect* to start DDT.  Load the relevant module.  On Aurora the module name is *allinea_forge*.  Load it: 
+
+    module load allinea_forge
+    
+On Erik the relevant module is named *ddt*.  Load this module
 
     module load ddt
-
-Now you can start DDT:
+    
+You can now start the GUI by typing
 
     ddt &
+    
+at the command prompt.  This will bring up the following GUI window
 
-which should get you the following window:
+![Start window](../images/allineaForgeStartwindow.png "Start window")    
 
-Start window in DDT version 5.0.1
-
-# Debugging MPI code on Alarik #
+<!-- # Debugging MPI code on Alarik #
 
 If you now select the "Run and Debug a Program" option you get to the following screen:
 
@@ -61,7 +74,7 @@ DDT_working_window_5.0.1 **PLEASE FIX***
 You can now start your debugging session.  The DDT User Guide describes the options for running and debugging the program. 
 
 Once your debugging session is finished you will find an output file in your directory.  This is named: ddt_jobid.out with jobid denoting the job-id number.  This file contains the output of your program to stdout and stderr.  You might want to clean your directory after the debugging has finished.
-Debugging of GPU code on Erik
+# Debugging of GPU code on Erik
 
 Here we describe the changes needed from the above to debug code on the GPU.  To facilitate GPU debugging for CUDA code one has to add the flags
 
@@ -84,3 +97,6 @@ To improve the workflow and reduce time spent in the job queue waiting for proce
 Resetting DDT
 
 DDT remembers settings from your previous debugging sessions and also failed attempts.  Removing all DDT history can be achieved by deleting the directories .ddt and/or .allinea in your home space. 
+
+-->
+
