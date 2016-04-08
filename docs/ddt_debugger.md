@@ -28,20 +28,39 @@ To connect using x-forwarding from a windows it is recommended to install [Cygwi
 ## Starting the DDT GUI on Aurora and Erik
 
 Lunarc currently recommends using *reverse connect* to start DDT.  Load the relevant module.  On Aurora the module name is *allinea_forge*.  Load it: 
-
+```bash
     module load allinea_forge
-    
+```    
 On Erik the relevant module is named *ddt*.  Load this module
-
+```bash
     module load ddt
-    
+```    
 You can now start the GUI by typing
-
+```bash
     ddt &
-    
+```    
 at the command prompt.  This will bring up the following GUI window
 
 ![Start window](images/allineaForgeStartWindow.png "Start window")    
+
+In the bottom left hand corner you get confirmation whether you managed to reach the license server at NSC.
+
+#Preparing and running your executable
+You need to prepare your executable for debugging.  Please recompile and relink everything with debugging support and without optimisation.  To do so, for most compilers you need to add the flags
+```bash
+   -g -O0
+```
+You can execute that executable either using a batch script or using an interactive session.  Before starting the executable make sure the *allinea_forge* or *ddt* module is loaded.  Prefix the execution statement with *ddt --connect*.  For example for an MPI code compiled against an OpenMPI-library start the code execution as follows
+```bash
+   ddt --connect mpirun bind-to core program_g
+```
+for an executable named *program_g*.  In case of the Intel MPI-library the code gets started using *srun*
+```bash
+   ddt --connect srun program_g
+```
+Once your code starts running, you get a request in the DDT GUI
+
+![Reverse connect request](images/ddtReverseConnectRequest.png "reverse connect request")     
 
 <!-- # Debugging MPI code on Alarik #
 
