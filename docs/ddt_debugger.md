@@ -1,15 +1,15 @@
 
-# Starting the DDT debugger on Alarik and Erik #
+# Starting the DDT debugger on Alarik and Erik
 
 A basic description on how to start a debugging session with DDT, part of [Allinea Forge](http://www.allinea.com/products/develop-allinea-forge), on the Aurora and Erik systems.  Job will be submitted through the Slurm batch system to the back-end nodes.
 
-# About this document #
+# About this document
 
 This document gives basic instruction on how to start a debugging session using the DDT debugger on the Aurora and Erik system at Lunarc.  This document is based on DDT version 6.0.2 currently installed on Aurora.  There is currently a centralised SNIC license hosted by NSC.  The licenses are shared between the users of all the SNIC systems.  So please be considerate to other users fellow regarding for how many licenses your use (time and number of cores).
     
 DDT is a powerful debugger for serial and parallel programs.  The tool is developed and maintained by Allinea Software.  It is part of the Allineas Forge suite.  A number of parallel programming models are supported.  This includes MPI, OpenMP and a number of GPU languages.  This document is not a DDT userguide, we refer our users to the documentation available from the [Allinea website](http://www.allinea.com/product-documentation), in particular their [user guide](http://content.allinea.com/downloads/userguide-forge.pdf).
 
-# Getting started with DDT on Aurora and Erik # 
+# Getting started with DDT on Aurora and Erik
 
 ## Connecting to Aurora and Erik
 
@@ -41,7 +41,7 @@ You can now start the GUI by typing
     
 at the command prompt.  This will bring up the following GUI window
 
-![Start window](../images/allineaForgeStartwindow.png "Start window")    
+![Start window](images/allineaForgeStartWindow.png "Start window")    
 
 <!-- # Debugging MPI code on Alarik #
 
