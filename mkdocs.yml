@@ -11,5 +11,6 @@ pages:
 - Starting the DDT debugger on Alarik and Erik: ddt_debugger.md
 - Batch system rules: batch_system_rules.md
 - Linux Basics: linux_basics.md
+- MATLAB on the cluster: MATLAB.md
 theme: readthedocs
 #markdown_extensions: [codehilite]
