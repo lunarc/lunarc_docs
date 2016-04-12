@@ -1,5 +1,5 @@
 # MATLAB 
-SNIC provides a nationwide set of licenses for the **parallel computing toolbox** (PCT) there are 500 licenses in total available from the six SNIC centra. Each user of MATLAB will be using their home university base-license for MATLAB and any toolboxes therein. 
+SNIC provides a nationwide set of licenses for the **parallel computing toolbox** (PCT) enabling the use of the MATLAB Distributed Computing Engine (MDCE). There are 500 licenses in total available from the six SNIC centra. Each user of MATLAB will be using their home university base-license for MATLAB and any toolboxes therein. 
 
 The MATLAB versions available at lunarc are:
 
@@ -11,9 +11,9 @@ The MATLAB versions available at lunarc are:
     R2015b         matlab/8.6
     R2016a         matlab/8.7  (available on Aurora only)
     
-At Lunarc the MATLAB installation R2014a is the **only** version providing access to the PCT (also known as 8.3). If any of the newer versions is used, submission to the batch queue from within MATLAB is impossible .
+At Lunarc the MATLAB installation R2014a (also known as 8.3) is the **only** version available for use with MDCE. If any of the newer versions is used, submission to the batch queue from within MATLAB is not possible .
 
-Versions newer than R2014a can be used at Lunarc but ONLY within a single node and ONLY by writing a batch script where MATLAB is run with a MATLAB script. Note that MATLAB will be able to use the parallel computing toolbox on the cores of this single node using the "local" profile.
+Versions newer than R2014a can use PCT at Lunarc but ONLY within a single node and ONLY by writing a batch script where MATLAB is run with a MATLAB script. Note that MATLAB will be able to use the parallel computing toolbox on the cores of this single node using the "local" profile.
 
 ## Non-PCT running
 
@@ -33,7 +33,11 @@ Using MATLAB with versions newer than R2014a requires the user to write a batch 
     # filenames stdout and stderr - customise, include %j
     #SBATCH -o process_%j.out
     #SBATCH -e process_%j.err
-
+    # Can only use one node
+    #SBATCH -N 1
+    # Make sure that you are the only one using the node (not strictly necessary with the -N 1 option)
+    #SBATCH --exclusive
+    
     # write this script to stdout-file - useful for scripting errors
     cat $0
 
