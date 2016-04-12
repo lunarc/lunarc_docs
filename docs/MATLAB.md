@@ -17,7 +17,7 @@ Versions newer than R2014a can use PCT at Lunarc but ONLY within a single node a
 
 ## Non-PCT running
 
-Using MATLAB with versions newer than R2014a requires the user to write a batch script and a MATLAB script. An example script to start MATLAB using the batch system follow below. 
+Using MATLAB with versions newer than R2014a requires the user to write a batch script and a MATLAB script. An example SBATCH-script to start MATLAB using the batch system follow below. 
 
     #!/bin/bash
     #
