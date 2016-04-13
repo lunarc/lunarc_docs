@@ -58,12 +58,23 @@ for an executable named *program_g*.  In case of the Intel MPI-library the code 
 ```bash
    ddt --connect srun program_g
 ```
-Once your code starts running, you get a request in the DDT GUI
+Once your job starts running, you get a request to allow your job connecting to the DDT GUI
 
 ![Reverse connect request](images/ddtReverseConnectRequest.png "reverse connect request")     
 
 Accept this to get to the next window.
 
+![Code feature window](images/ddtcodeFeatureWindow.png "code feature window")
+
+In this window you can select the features of ddt which you require.  We would like to point out the **Memory Debugging**, which can be extremely useful when trying to resolve segmentation faults and memory leaks.  Please consult Allinea's user guide for more details and side effects (e.g. increased memory consumption) of using this feature.
+
+Hit the *run* button to start the debugger window
+
+![DDT gui](images/ddtGui.png "DDT gui")
+
+
+
+ 
 <!-- # Debugging MPI code on Alarik #
 
 If you now select the "Run and Debug a Program" option you get to the following screen:
