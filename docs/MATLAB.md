@@ -1,7 +1,7 @@
 # MATLAB 
-SNIC provides a nationwide set of licenses for the **parallel computing toolbox** (PCT) enabling the use of the MATLAB Distributed Computing Engine (MDCE). There are 500 licenses in total available from the six SNIC centra. Each user of MATLAB will be using their home university base-license for MATLAB and any toolboxes therein. 
+SNIC provides a nationwide set of licenses for the MATLAB Distributed Computing Server (MDCS). There are 500 licenses in total available from the six SNIC centra. Each user of MATLAB will be using their home university base-license for MATLAB and any toolboxes therein, specifically the parallel computing toolbox (PCT). 
 
-The MATLAB versions available at lunarc are:
+The MATLAB versions available at Lunarc are:
 
     Version        Module name
     
@@ -11,11 +11,11 @@ The MATLAB versions available at lunarc are:
     R2015b         matlab/8.6
     R2016a         matlab/8.7  (available on Aurora only)
     
-At Lunarc the MATLAB installation R2014a (also known as 8.3) is the **only** version available for use with MDCE. If any of the newer versions is used, submission to the batch queue from within MATLAB is not possible .
+At Lunarc the MATLAB installation R2014a (also known as 8.3) is the **only** version available for use with MDCS. If any of the newer versions are used, submission to the batch queue from within MATLAB is not possible .
 
-Versions newer than R2014a can use PCT at Lunarc but ONLY within a single node and ONLY by writing a batch script where MATLAB is run with a MATLAB script. Note that MATLAB will be able to use the parallel computing toolbox on the cores of this single node using the "local" profile.
+Versions newer than R2014a can use PCT at Lunarc but ONLY within a single node and ONLY by writing a batch script where MATLAB is run with a MATLAB script. Note that MATLAB will be able to use the PCT on the cores of this single node using the "local" profile.
 
-## Non-PCT running
+## Non-MDCS submissions
 
 Using MATLAB with versions newer than R2014a requires the user to write a batch script and a MATLAB script. An example SBATCH-script to start MATLAB using the batch system follow below. 
 
@@ -54,7 +54,7 @@ Using MATLAB with versions newer than R2014a requires the user to write a batch 
 
     # run the program
     # customise for your program name and add arguments if required
-    matlab -nodesktop -r program.m,quit
+    matlab -r program.m
 
     # rescue the results to the submission directory
     # customise for your result file(s)
@@ -69,7 +69,7 @@ In R2014a of MATLAB the queueing system is accessible from within MATLAB. To set
 
     configCluster
 
-This will prepare the users profile for use of the MATLAB distributed computing engine (MDCE). This ONLY needs to be done once per user and MDCE-installation. 
+This will prepare the users profile for use of the MATLAB MDCS. This ONLY needs to be done once per user and MATLAB version. 
 Having prepared the profile the user then as a minimum need to give information on the name of the users project and requested walltime for the users programs to run.
 
     ClusterInfo.setProjectName('SNIC2016-X-Y')
@@ -103,11 +103,11 @@ The ClusterInfo command have a number of parameters that can be set
     UserNameOnCluster
     WallTime
 
-Most of the parameters do not need to be set but can be needed in some instances depending on the type of problem investigated or resource needed e.g. if a GPU or larger menory is needed.
+Most of the parameters do not need to be set but can be needed in some instances depending on the type of problem investigated or resource needed e.g. if a GPU or larger memory is needed.
 
 A short example of using the scheduler from within MATLAB is given below:
 
-Given the matlab function createMatrix.m
+Given the function createMatrix.m
 
     function retval=createMatrix(x,y)
         parfor i=1:5
