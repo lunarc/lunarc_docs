@@ -35,7 +35,7 @@ Using MATLAB with versions newer than R2014a requires the user to write a batch 
     #SBATCH -e process_%j.err
     # Can only use one node
     #SBATCH -N 1
-    # Make sure that you are the only one using the node (not strictly necessary with the -N 1 option)
+    # Make sure that you are the only one using the node. If not used MATLAB will only see 1 core 
     #SBATCH --exclusive
     
     # write this script to stdout-file - useful for scripting errors
