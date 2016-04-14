@@ -54,7 +54,7 @@ Using MATLAB with versions newer than R2014a requires the user to write a batch 
 
     # run the program
     # customise for your program name and add arguments if required
-    matlab -r program.m
+    matlab < program.m
 
     # rescue the results to the submission directory
     # customise for your result file(s)
