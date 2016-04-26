@@ -8,7 +8,7 @@ pages:
 - Using the Lunarc HPC Desktop: using_hpc_desktop.md
 - Aurora Software: aurora_modules.md
 - Compiler options: compiler_options.md
-- Starting the DDT debugger on Alarik and Erik: ddt_debugger.md
+- Starting the DDT debugger on Aurora and Erik: ddt_debugger.md
 - Batch system rules: batch_system_rules.md
 - Linux Basics: linux_basics.md
 - MATLAB on the cluster: MATLAB.md
