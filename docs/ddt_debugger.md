@@ -82,7 +82,7 @@ In particular when using DDT from a batch script, using this option will keep yo
   
 If you want to start over for e.g. changing the level of memory debugging, we recommend using the *End Session* option from the File pull down menue:
 
-![DDT end pull down menue](images/ddtstartOverPulldown.png "DDT end pull down menue")
+![DDT end pull down menue](images/ddtstartEndSessionPulldown.png "DDT end pull down menue")
 
 Using this option will terminate the ddt execution, but keep the GUI alive, which is often advantageous when using *ssh -X* to connect to the cluster.  If working from a batch script, its execution will then continue to the next line(s) which typically leads to the script finishing and requires you to re-queue.  An interactive session will keep running, if the time limit has not been reached.
 
