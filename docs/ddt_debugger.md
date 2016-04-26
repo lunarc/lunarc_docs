@@ -76,13 +76,13 @@ In the GUI you can run your code (parallel or serial), set breakpoints, examine 
 
 During a debugging job it is often required to restart the program execution from the beginning.  We recommend not to choose the *Restart Session* option from the *File* pull down menu to restart the programs execution from the beginning:
 
-![DDT restart pull down](images/ddtstartRestartPulldown "DDT restart pull down menue") 
+![DDT restart pull down](images/ddtstartRestartPulldown.png "DDT restart pull down menue") 
 
 In particular when using DDT from a batch script, using this option will keep your script active and **you do not need to re-queue**.
   
 If you want to start over for e.g. changing the level of memory debugging, we recommend using the *End Session* option from the File pull down menue:
 
-![DDT end pull down menue](images/ddtstartOverPulldown "DDT end pull down menue")
+![DDT end pull down menue](images/ddtstartOverPulldown.png "DDT end pull down menue")
 
 Using this option will terminate the ddt execution, but keep the GUI alive, which is often advantageous when using *ssh -X* to connect to the cluster.  If working from a batch script, its execution will then continue to the next line(s) which typically leads to the script finishing and requires you to re-queue.  An interactive session will keep running, if the time limit has not been reached.
 
