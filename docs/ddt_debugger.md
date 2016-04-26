@@ -1,5 +1,5 @@
 
-# Starting the DDT debugger on Alarik and Erik
+# Starting the DDT debugger on Aurora and Erik
 
 A basic description on how to start a debugging session with DDT, part of [Allinea Forge](http://www.allinea.com/products/develop-allinea-forge), on the Aurora and Erik systems.  Job will be submitted through the Slurm batch system to the back-end nodes.
 
@@ -46,13 +46,13 @@ at the command prompt.  This will bring up the following GUI window
 In the bottom left hand corner you get confirmation whether you managed to reach the license server at NSC.
 
 #Preparing and running your executable
-You need to prepare your executable for debugging.  Please recompile and relink everything with debugging support and without optimisation.  To do so, for most compilers you need to add the flags
+You need to prepare your executable for debugging.  Please **recompile** and **relink** everything with debugging support and without optimisation.  To do so, for most compilers you need to add the flags
 ```bash
    -g -O0
 ```
 You can execute that executable either using a batch script or using an interactive session.  Before starting the executable make sure the *allinea_forge* or *ddt* module is loaded.  Prefix the execution statement with *ddt --connect*.  For example for an MPI code compiled against an OpenMPI-library start the code execution as follows
 ```bash
-   ddt --connect mpirun bind-to core program_g
+   ddt --connect mpirun program_g
 ```
 for an executable named *program_g*.  In case of the Intel MPI-library the code gets started using *srun*
 ```bash
@@ -72,7 +72,19 @@ Hit the *run* button to start the debugger window
 
 ![DDT gui](images/ddtGui.png "DDT gui")
 
+In the GUI you can run your code (parallel or serial), set breakpoints, examine values of variables and data structures.  
 
+During a debugging job it is often required to restart the program execution from the beginning.  We recommend not to choose the *Restart Session* option from the *File* pull down menu to restart the programs execution from the beginning:
+
+![DDT restart pull down](images/ddtstartRestartPulldown "DDT restart pull down menue") 
+
+In particular when using DDT from a batch script, using this option will keep your script active and **you do not need to re-queue**.
+  
+If you want to start over for e.g. changing the level of memory debugging, we recommend using the *End Session* option from the File pull down menue:
+
+![DDT end pull down menue](images/ddtstartOverPulldown "DDT end pull down menue")
+
+Using this option will terminate the ddt execution, but keep the GUI alive, which is often advantageous when using *ssh -X* to connect to the cluster.  If working from a batch script, its execution will then continue to the next line(s) which typically leads to the script finishing and requires you to re-queue.  An interactive session will keep running, if the time limit has not been reached.
 
  
 <!-- # Debugging MPI code on Alarik #
