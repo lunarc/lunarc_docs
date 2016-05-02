@@ -11,15 +11,14 @@ DDT is a powerful debugger for serial and parallel programs.  The tool is develo
 
 # Getting started with DDT on Aurora and Erik
 
-## Connecting to Aurora and Erik
+## Connect to Aurora and Erik via the Lunarc HPC desktop
 
 To use DDT you need to be able to access its graphical user interface (GUI).  
-The recommended way to connect to the system is therefore the [Lunarc HPC desktop](using_hpc_desktop).  
+The recommended way to connect to the system is via the [Lunarc HPC desktop](using_hpc_desktop).  
 
-
-However this is not yet available for Aurora.  On Aurora you have to use x-forwarding until the desktop is available.
+<!--
 ### Using x-forwarding under Linux or on a Mac
-Linux systems are typically setup to display an x-window.  On the latest releases of Mac OSX you have to install [XQuartz](http://www.xquartz.org/) to display x-windows.  Once this is available connect to Aurora:
+Linux systems are typically setup to support x-windows.  On the latest releases of Mac OSX you have to install [XQuartz](http://www.xquartz.org/) to display x-windows.  Once this is available connect to Aurora:
 
     ssh -X aurora.lunarc.lu.se -l <username>
     
@@ -27,6 +26,7 @@ You will be prompted for password and one-time-password as usual.
 
 ### Connecting from a windows system
 To connect using x-forwarding from a windows it is recommended to install [Cygwin](https://www.cygwin.com/). 
+-->
 
 ## Starting the DDT GUI on Aurora and Erik
 
@@ -53,7 +53,9 @@ You need to prepare your executable for debugging.  Please **recompile** and **r
 ```bash
    -g -O0
 ```
-You can execute that executable either using a batch script or using an interactive session.  Before starting the executable make sure the *allinea_forge* or *ddt* module is loaded.  Prefix the execution statement with *ddt --connect*.  For example for an MPI code compiled against an OpenMPI-library start the code execution as follows
+Once your created an executable with debugging support, run it using either a batch script or an interactive session.  Inside the batch script or on the prompt of the interactive session
+* Make sure the *allinea_forge* (on Aurora) or *ddt* module (on Erik) is loaded in addition to the modules normally required to execute your code  
+* Prefix the execution statement with *ddt --connect*.  For example for an MPI code compiled against an OpenMPI-library start the code execution as follows
 ```bash
    ddt --connect mpirun program_g
 ```
@@ -61,7 +63,7 @@ for an executable named *program_g*.  In case of the Intel MPI-library the code 
 ```bash
    ddt --connect srun program_g
 ```
-Once your job starts running, you get a request to allow your job connecting to the DDT GUI
+* Once your job starts running, you get a request to allow your job connecting to the DDT GUI
 
 ![Reverse connect request](images/ddtReverseConnectRequest.png "reverse connect request")     
 
