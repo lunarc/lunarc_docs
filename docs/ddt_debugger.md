@@ -53,9 +53,10 @@ You need to prepare your executable for debugging.  Please **recompile** and **r
 ```bash
    -g -O0
 ```
-Once your created an executable with debugging support, run it using either a batch script or an interactive session.  Inside the batch script or on the prompt of the interactive session
-* Make sure the *allinea_forge* (on Aurora) or *ddt* module (on Erik) is loaded in addition to the modules normally required to execute your code  
-* Prefix the execution statement with *ddt --connect*.  For example for an MPI code compiled against an OpenMPI-library start the code execution as follows
+Once your created an executable with debugging support, run it using either a batch script or an interactive session.  
+Make sure the *allinea_forge* (on Aurora) or *ddt* module (on Erik) is loaded nside the batch script or on the prompt of the interactive session.  This is in addition to the modules normally required to execute your code.
+
+Prefix the execution statement with *ddt --connect*.  For example for an MPI code compiled against an OpenMPI-library start the code execution as follows
 ```bash
    ddt --connect mpirun program_g
 ```
@@ -63,7 +64,7 @@ for an executable named *program_g*.  In case of the Intel MPI-library the code 
 ```bash
    ddt --connect srun program_g
 ```
-* Once your job starts running, you get a request to allow your job connecting to the DDT GUI
+Once your job starts running, you get a request to allow your job connecting to the DDT GUI
 
 ![Reverse connect request](images/ddtReverseConnectRequest.png "reverse connect request")     
 
