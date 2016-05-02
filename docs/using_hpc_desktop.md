@@ -1,6 +1,5 @@
 # Using the Lunarc HPC Desktop #
-
-*Providing users with a solution for hardware accelerated remote visualization*
+##Providing users with a solution for hardware accelerated remote visualization
 
 The Lunarc HPC Desktop provides Lunarc and SNIC users with a solution for hardware accelerated remote visualization that will provide a new scalable approach to HPC and scientific data visualization. The desktop introduces a convenient way to work with our clusters using not only multiple terminal windows but also file browsers, editors, graphical tools such as queue status and debuggers, 2D and 3D applications, etc.
 
@@ -25,16 +24,21 @@ The following applications are installed and accessible from the drop down menus
  * Firefox 
 -->
 
-Brief instructions:
+## Installing and starting the HPC desktop
 
  1. [Download](https://www.cendio.com/thinlinc/download "Download") the client for either Windows, Mac or Linux 
  1. Install it on your workstation or laptop
  1. Launch the client
- 1. Enter "aurora.lunarc.lu.se" or "erik.lunarc.lu.se" in the server field.
+ 1. Enter **aurora.lunarc.lu.se** or **erik.lunarc.lu.se** in the server field ![login window](images/desktopLogin.png "Desktop login window")
  1. Enter your login credentials and click [Connect]
  1. Enter the one time password received on your mobile phone
- 1. Done! 
+ 1. Done!
 
-Tips: Pressing F8 on the keyboard will bring up a menu where you, among other things, can toggle full screen mode on or off (on Mac it's F8). Depending on your system it might be convenient to *not run* in full screen mode. Play around and see what suits you best.
+ ![sample screen](images/desktopSampleScreen.png "Desktop sample screen")
 
-Mac OSX 10.9 (Mavericks): You need to press and hold the <ctrl>-key while opening the client for the first time to get past the "unindentified developer" notification.
+## Tips
+Pressing F8 on the keyboard will bring up a menu where you, among other things, can toggle full screen mode on or off (on Mac it's F8). Depending on your system it might be convenient to *not run* in full screen mode. Play around and see what suits you best.
+
+Mac OSX 10.9 (Mavericks) and later: You need to press and hold the <ctrl>-key while opening the client for the first time to get past the "unindentified developer" notification.
+
+
