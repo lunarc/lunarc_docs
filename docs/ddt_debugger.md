@@ -14,7 +14,10 @@ DDT is a powerful debugger for serial and parallel programs.  The tool is develo
 ## Connecting to Aurora and Erik
 
 To use DDT you need to be able to access its graphical user interface (GUI).  
-The recommended way to connect to the system is therefore the Lunarc HPC desktop.  However this is not yet available for Aurora.  On Aurora you have to use x-forwarding until the desktop is available.
+The recommended way to connect to the system is therefore the [Lunarc HPC desktop](using_hpc_desktop).  
+
+
+However this is not yet available for Aurora.  On Aurora you have to use x-forwarding until the desktop is available.
 ### Using x-forwarding under Linux or on a Mac
 Linux systems are typically setup to display an x-window.  On the latest releases of Mac OSX you have to install [XQuartz](http://www.xquartz.org/) to display x-windows.  Once this is available connect to Aurora:
 
