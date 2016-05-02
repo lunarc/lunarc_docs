@@ -8,12 +8,13 @@ The same 2-factor authentication as for a normal ssh session is used and the des
 
 The 2D desktop (currently Gnome) runs on a scalable desktop infrastructure that supports multiple desktop agents and load balancing features to ensure a smooth experience. 3D OpenGL applications are executed on dedicated visualization nodes with hardware graphics and seamlessly displayed into the 2D desktop.
 
-**The system is currently available only for Alarik and Erik users and is currently in BETA and we ask you kindly to report any issues you might experience and also send us your requests for improvement.**
+> 3D support on Aurora will be available shortly.
 
+<!--
 The following applications are installed and accessible from the drop down menus (more will come):
 
  * Abacus CAE
- * Paraview
+ * Paraview 
  * Allinea DDT debugger
  * Queue status
  * ARC storage tools (for accessing the national storage)
@@ -22,13 +23,14 @@ The following applications are installed and accessible from the drop down menus
  * Misc graphics applications
  * Terminal
  * Firefox 
+-->
 
 Brief instructions:
 
- 1. Download the client for either Windows, Mac or Linux
+ 1. [Download](https://www.cendio.com/thinlinc/download "Download") the client for either Windows, Mac or Linux 
  1. Install it on your workstation or laptop
  1. Launch the client
- 1. Enter "alarik.lunarc.lu.se" in the server field.
+ 1. Enter "aurora.lunarc.lu.se" or "erik.lunarc.lu.se" in the server field.
  1. Enter your login credentials and click [Connect]
  1. Enter the one time password received on your mobile phone
  1. Done! 
