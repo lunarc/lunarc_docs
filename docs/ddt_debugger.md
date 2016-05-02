@@ -54,7 +54,8 @@ You need to prepare your executable for debugging.  Please **recompile** and **r
    -g -O0
 ```
 Once your created an executable with debugging support, run it using either a batch script or an interactive session.  
-Make sure the *allinea_forge* (on Aurora) or *ddt* module (on Erik) is loaded nside the batch script or on the prompt of the interactive session.  This is in addition to the modules normally required to execute your code.
+
+Make sure the *allinea_forge* (on Aurora) or *ddt* module (on Erik) is loaded inside the batch script or on the prompt of the interactive session.  This is in addition to the modules normally required to execute your code.
 
 Prefix the execution statement with *ddt --connect*.  For example for an MPI code compiled against an OpenMPI-library start the code execution as follows
 ```bash
