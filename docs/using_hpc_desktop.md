@@ -37,12 +37,14 @@ The following applications are installed and accessible from the drop down menus
  ![sample screen](images/desktopSampleScreen.png "Desktop sample screen")
 
 ## Tips
+### Resizing the desktop window and full screen mode
 Pressing F8 on the keyboard will bring up a menu where you, among other things, can toggle full screen mode on or off (on Mac it's F8). Depending on your system it might be convenient to *not run* in full screen mode. Play around and see what suits you best.
 
+### Starting the client on a Mac
 Mac OSX 10.9 (Mavericks) and later: You need to
 
 1. locate the client in finder
-2. hold the <ctrl\>-key while clicking on it
+2. hold the [ctrl]-key while clicking on it
 3. choose the "open" option from the menu  
 
 when opening the client for the first time to get past the "unindentified developer" notification.
