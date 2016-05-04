@@ -888,7 +888,7 @@ export NB_of_jobs=200
 
 for ((i=0; i<$NB_of_jobs; i++))
 do
-    srun -Q --exclusive -n 1 -N 1 \\
+    srun -Q --exclusive -n 1 -N 1 \
         workScript.sh $i &> worker_${SLURM_JOB_ID}_${i} &
     sleep 1
 done
