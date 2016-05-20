@@ -1,16 +1,16 @@
-Using supported software on Lunarc's Aurora service
+Using installed software on Lunarc's Aurora service
 ================
 
 Author: Joachim Hein (Lunarc)
 
 ![Node icon](images/node_icon.jpg "Node icon")
 
-# Hierachical module naming scheme
-With the start of the Aurora service Lunarc is using an hierachical module naming scheme.  Hierachical modules ensure that the correct shared libraries are available when running an application, while keeping screen output of standard module commands such as `module avail` managable.
+# Hierarchical module naming scheme
+With the start of the Aurora service Lunarc is using an hierarchical module naming scheme.  Hierarchical modules ensure that the correct shared libraries are available when running an application, while keeping screen output of standard module commands such as `module avail` manageable.
 
 ## Hierachical naming scheme concept
 
-When loging into the system, you only get access to those modules that do not require any special dynamic libraries.  After *loading a compiler module* you obtaing access to those packages that have been build with that specific compiler and depend on its shared libraries.  For many compilers this will include one or more matching MPI libraries.  After loading an MPI library additional software packages, depending on this pair (compiler & MPI library), will become available.  Users should take note that in many cases loading an MPI library is required for software that doesn't really depend on it.
+When logging into the system, you only get access to those modules that do not require any special dynamic libraries.  After *loading a compiler module* you obtaining access to those packages that have been build with that specific compiler and depend on its shared libraries.  For many compilers this will include one or more matching MPI libraries.  After loading an MPI library additional software packages, depending on this pair (compiler & MPI library), will become available.  Users should take note that in many cases loading an MPI library is required for software that doesn't really depend on it.
 
 # Using Modules
 
@@ -78,11 +78,11 @@ To see what modules you have currently loaded use
 module list
 ```
 
-In a hierachical module naming scheme the command `module avail` is
+In a hierarchical module naming scheme the command `module avail` is
 not as useful as it is in a flat module naming scheme which Lunarc
 deployed on earlier services.   In many situations `module avail`
 resulted in the desired action, one has to use the `module spider`
-command which is descripted in the text below.
+command which is described in the text below.
 
 ## Purging the loaded modules
 
@@ -98,9 +98,9 @@ when loaded modules are no longer needed.   You would then start
 loading the modules required for the next task you need to accomplish
 from scratch.
 
-##Seaching for all software packages
+##Searching for all software packages
 
-In practical use, the command `module spider` is key to search for packages in an Lmod based hierachical module naming scheme.  To get an overview on the software installed on Aurora, simply type
+In practical use, the command `module spider` is key to search for packages in an Lmod based hierarchical module naming scheme.  To get an overview on the software installed on Aurora, simply type
 ```
 module spider
 ```
@@ -147,7 +147,7 @@ For example, when looking to run Gromacs:
 ```
 module spider gromacs
 ```
-You obtain output simlar to:
+You obtain output similar to:
 ```
 ---------------------------------------------------------------------------------
   GROMACS:
@@ -167,7 +167,7 @@ This tells you that the multi threaded version 5.0.4 and the hybrid version 5.0.
 ```bash
 module spider GROMACS/5.0.5-hybrid
 ``` 
-You get the folling output
+You get the following output
 ```
 ---------------------------------------------------------------------------------
   GROMACS: GROMACS/5.0.5-hybrid
@@ -264,7 +264,7 @@ The cache files private to your account are stored in the directory
 
 # Compiling code and using toolchains
 
-A signficant portion of the Aurora software is build using the [EasyBuild](http://hpcugent.github.io/easybuild/) software framework.  This framework provides so called *Toolchains* which are utilised to build software.  Lunarc recommends to use toolchains when building software.  This includes compiling your own software outside the EasyBuild framework.
+A significant portion of the Aurora software is build using the [EasyBuild](http://hpcugent.github.io/easybuild/) software framework.  This framework provides so called *Toolchains* which are utilised to build software.  Lunarc recommends to use toolchains when building software.  This includes compiling your own software outside the EasyBuild framework.
 
 ## Currently provided toolchains
 
@@ -287,7 +287,7 @@ A signficant portion of the Aurora software is build using the [EasyBuild](http:
 If you require additional toolchains, contact [Lunarc support](http://www.lunarc.lu.se/support/support-form/) to discuss your requirements.
 
 ## Selecting a toolchain
-The above choices of toolchains is a bit overwhealming, in particular for new users.  We recommend to first make a choice of toolchain and then select a version.  Good choices for general use are the toolchains:
+The above choices of toolchains is a bit overwhelming, in particular for new users.  We recommend to first make a choice of toolchain and then select a version.  Good choices for general use are the toolchains:
 
 * **foss**, if you like to use the GCC compiler suite
 * **intel**, if you like to use the Intel compiler suite
@@ -309,7 +309,7 @@ Use "module spider" to find all possible modules.
 Use "module keyword key1 key2 ..." to search for all possible
 modules matching any of the "keys".
 ```
-This shows you that three versions of the foss toolchain are available, with version 2016a being the default.  The version numbering at the time of writing is a *time stamp*.  Version 2015a was released in the begining of 2015, 2015b in the middle of 2015 and 2016a in the beginning of 2016.  If you load e.g. the `foss/2016a` module
+This shows you that three versions of the foss toolchain are available, with version 2016a being the default.  The version numbering at the time of writing is a *time stamp*.  Version 2015a was released in the beginning of 2015, 2015b in the middle of 2015 and 2016a in the beginning of 2016.  If you load e.g. the `foss/2016a` module
 ```
 module load foss/2016a
 ```
@@ -325,8 +325,8 @@ will now show you which compiler and library versions it will be using.  Please 
 Selecting a version of the intel toolchain is very similar to selecting a foss module, just replace foss with intel in the above examples.
 
 ## Compiling serial code using a toolchain
-Once a toolchain module is selcted, there are no differences from earlier Lunarc services when it comes to compiling serial code.
-If you have loaded a toolchain building ontop of a GCC compiler use the following commands to compile.
+Once a toolchain module is selected, there are no differences from earlier Lunarc services when it comes to compiling serial code.
+If you have loaded a toolchain building on top of a GCC compiler use the following commands to compile.
 
 * **gcc**: C compiler
 * **g++**: C++ compiler
