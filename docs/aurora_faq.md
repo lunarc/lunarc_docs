@@ -17,9 +17,6 @@ The processors deployed on Alarik and Aurora have different instructions sets.  
 ## What is the maximum job time on Aurora?
 This has not been changed.  We still allow batch jobs to ask for up to 168 hours, which is 7 days.
 
-## I can not access Aurora using the Lunarc HPC desktop
-The Lunarc HPC Desktop is not yet operational on Aurora. We currently expect availability in a few weeks.
-
 ## Could you please install software for me
 Many packages that were installed in standard locations have now been moved to the module system.  Please search for the package using `module spider` before contacting the helpdesk.
 
