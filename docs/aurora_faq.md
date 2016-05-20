@@ -1,7 +1,7 @@
 # Frequently asked questions about Aurora
 Author: Joachim Hein (Lunarc)
 
-![Node icon](images/node_square.jpg "Node icon")
+![Node icon](images/node_icon.jpg "Node icon")
 
 ## Do I need to copy my data from Alarik to Aurora?
 Most users have two different types of storage.  They will be treated differently.
