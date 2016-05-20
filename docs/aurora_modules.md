@@ -3,6 +3,8 @@ Using supported software on Lunarc's Aurora service
 
 Author: Joachim Hein (Lunarc)
 
+![Node icon](images/node_icon.jpg "Node icon")
+
 # Hierachical module naming scheme
 With the start of the Aurora service Lunarc is using an hierachical module naming scheme.  Hierachical modules ensure that the correct shared libraries are available when running an application, while keeping screen output of standard module commands such as `module avail` managable.
 
