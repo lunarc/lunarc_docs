@@ -1448,8 +1448,8 @@ cores lasting 60 minutes
 
     interactive -n 32 -t 60
 
-On Alarik and Eric this will be allocated on multiple nodes, since the
-nodes have only 16 cores available. The interactive session will last
+On Aurora and Erik this will be allocated on multiple nodes, since the
+nodes have only 20 and 16 cores available, respectively. The interactive session will last
 until either the requested time, 60 minutes in the above example, has
 expired or you manually exit the interactive shell. Your account gets
 charged with the wall time duration of your interactive session,
