@@ -114,7 +114,7 @@ To specify your walltime requirements write a statement like
 
 into your job script.
 
-The maximum walltime for any job on Alarik is 168h, which is the same as
+The maximum walltime for any job on Aurora is 168h, which is the same as
 7 days. On Erik the maximum walltime for any job is 48h.
 
 ### Job naming
@@ -529,7 +529,7 @@ as supplied.
 
 The SNIC meta-centres have agreed on a set of environment variables
 which should improve the portability of (parts of) job-scripts between
-SNIC sites. On Alarik the following variables are set by the system:
+SNIC sites. On Aurora and Erik the following variables are set by the system:
 
 | Environment variable | Explanation | Value on Aurora | Value on Erik |
 |----------------------|-------------|-----------------|-----------------|
@@ -542,7 +542,7 @@ SNIC sites. On Alarik the following variables are set by the system:
 
 ## Using the node local disks to improve I/O performance
 
-On Alarik and Erik, all nodes have a local disk. This disk offers
+On Aurora and Erik, all nodes have a local disk. This disk offers
 superior bandwidth when compared to accessing your home space or the
 /lunarc/nobackup centre storage. In particular when files are read or
 written repeatedly during execution it is advisable to copy the input
@@ -551,7 +551,7 @@ files back to the submission directory once your program has finished.
 During its execution, your program would then read and write to local
 disk.
 
-In case of Alarik and Erik, the submission directory typically resides
+In case of Aurora and Erik, the submission directory typically resides
 on the /lunarc/nobackup centre storage. All data left on the node local
 disks **will be deleted** when your job has finished. You need to copy
 everything of interest to a more permanent storage space such as
@@ -1239,7 +1239,7 @@ cp -p result.dat $SLURM_SUBMIT_DIR
 OpenMP jobs using shared memory
 -------------------------------
 
-To run a shared memory code using OpenMP on Alarik, you specify the
+To run a shared memory code using OpenMP on Aurora, you specify the
 number of cores you require using --tasks-per-node option of sbatch. In
 this case you have to request placement on a single node with the “-N 1”
 option. In this example we call the executable “processor_omp” to
