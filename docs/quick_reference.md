@@ -1,10 +1,14 @@
 Useful hints and short information on issues that may vary between the different systems
 
-# Installed softwared software
+# Installed software software
 
 To see the installed software available through the modules system, issue the command
 
-    module avail
+    module spider
+
+To enquire about pre-requisites required for a specific package
+
+    module spider <module_name/version>
 
 To see the currently loaded modules
 
@@ -27,10 +31,12 @@ The number of cores for a job is specified in the batch script in the format
     #SBATCH -N <number_of_nodes>
     #SBATCH --tasks-per-node=<number_of_cores_per_node>
 
-Alarik has 16 cores per node. On this system, 64 cores would be allocated through
-
-    # 64 cores on Alarik
-    #SBATCH -N 4 #SBACTH --tasks-per-node=16
+Aurora has 20 cores per node. On this system, 80 cores would be allocated through
+```
+    # 80 cores on Aurora
+    #SBATCH -N 4 
+    #SBACTH --tasks-per-node=20
+```
 
 ## Memory per core
 
@@ -90,3 +96,4 @@ On Erik there is one two-GPU node reserved for tests (maximum 1 h) in a partitio
     #SBATCH -p test
 
 It is not allowed to submit long series of jobs to a test queue. 
+
