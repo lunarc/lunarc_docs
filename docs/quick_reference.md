@@ -32,11 +32,10 @@ The number of cores for a job is specified in the batch script in the format
     #SBATCH --tasks-per-node=<number_of_cores_per_node>
 
 Aurora has 20 cores per node. On this system, 80 cores would be allocated through
-```
+
     # 80 cores on Aurora
     #SBATCH -N 4 
     #SBACTH --tasks-per-node=20
-```
 
 ## Memory per core
 
@@ -44,10 +43,7 @@ The amount of memory per core is specified in the format
 
     #SBATCH --mem-per-cpu=<amount_of_memory_per_core_in_MB>
 
-Alarik has nodes with 32 GB and 64 GB memory. The default allocation per core is therefore 2000 MB to match the smaller memory. To fully utilise the memory on the 64 GB nodes, the nodes have to requested specifically with **-C mem64GB** and the memory per core should be set to 4000 MB .
-
-    # Twice the default amount of memory per core on Alarik nodes with 64 GB memory 
-    #SBATCH -C mem64GB #SBATCH --mem-per-cpu=4000
+Aurora has nodes with 64 GB of memory. The default allocation per core is therefore 3000 MB, allowing some memory for the operating system.  Please note that if you increase your memory request beyond 3000 MB per core, some cores on the system will be idle due to the lack of memory.  Your account gets charged for these cores as well.
 
 # File systems
 
