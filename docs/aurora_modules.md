@@ -284,13 +284,21 @@ A significant portion of the Aurora software is build using the [EasyBuild](http
  * **iomkl**: icc, ifort, OpenMPI, MKL
  * **iompi**: icc, ifort, OpenMPI
 
+ **Toolchains based on the PGI compiler suite**
+ 
+ * **PGI**: PGI
+ * **pompi**: PGI, OpenMPI
+ * **pomkl**: PGI, OpneMPI, MKL
+
 If you require additional toolchains, contact [Lunarc support](http://www.lunarc.lu.se/support/support-form/) to discuss your requirements.
 
 ## Selecting a toolchain
 The above choices of toolchains is a bit overwhelming, in particular for new users.  We recommend to first make a choice of toolchain and then select a version.  Good choices for general use are the toolchains:
 
 * **foss**, if you like to use the GCC compiler suite
+* **gimkl**, if you like to use the GCC compiler suite with Intel's MKL performance library
 * **intel**, if you like to use the Intel compiler suite
+* **pomkl**, if you like to use the PGI compiler suite
 
 **Example:** To check the foss versions available you
 ```
@@ -319,32 +327,39 @@ module list
 ```
 will now show you which compiler and library versions it will be using.  Please note that after loading a toolchain
 
-*A number of modules become available, that rely on components inside this specific toolchain 
+*A number of modules become available, which rely on components inside this specific toolchain 
 *The defaults of many modules change to a version that was build with the components inside the selected foss module
 
-Selecting a version of the intel toolchain is very similar to selecting a foss module, just replace foss with intel in the above examples.
+Selecting a version of the intel or the pomkl toolchain is very similar to selecting a foss module, just replace foss with intel or pomkl in the above examples.
 
 ## Compiling serial code using a toolchain
 Once a toolchain module is selected, there are no differences from earlier Lunarc services when it comes to compiling serial code.
-If you have loaded a toolchain building on top of a GCC compiler use the following commands to compile.
+If you have loaded a toolchain build on top of a GCC compiler use the following commands to compile.
 
 * **gcc**: C compiler
 * **g++**: C++ compiler
 * **gfortran**: Fortran compiler
 
-If you have loaded a toolchain building ontop of the Intel compiler use the following command to compile. 
+If you have loaded a toolchain build on top of the Intel compiler use the following command to compile. 
 
 * **icc**: C compiler
 * **icpc**: C++ compiler
 * **ifort**: Fortran compiler
+
+If you have loaded a toolchain build on top of the PGI compiler, use the following command to compile:
+
+* **pgcc**: C compiler
+* **pgc++**: C++ compiler
+* **pgf90**: Fortran compiler
+* **pgf77**: Fortran77 compiler
  
-In both cases please do not forget about compiler options, in particular optimisation flags.  You should have the toolchain used for compiling loaded when executing the code.
+In all cases please do not forget about compiler options, in particular optimisation flags.  You should have the toolchain used for compiling loaded when executing the code.
 
 ## Compiling MPI code using a toolchain
 The commands you use to compile MPI code depend on the MPI library and the compiler you intend to use.  
 
 ### Toolchains using OpenMPI
-When using a toolchain utilising **OpenMPI** (e.g. foss, iomkl) use: 
+When using a toolchain utilising **OpenMPI** (e.g. foss, iomkl, pomkl) use: 
 
 * **mpicc**: MPI compiler for C code
 * **mpicxx** or **mpic++*: MPI compiler for C++ code
