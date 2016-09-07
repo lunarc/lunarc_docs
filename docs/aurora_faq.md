@@ -43,7 +43,7 @@ export OMP_NUM_THREADS=1
 
 ## I like to run VASP on Aurora but it doesn't work
 
-Lunarc has a VASP handling license and VASP is currently installed on Aurora (v 5.4.1 with patch level 2 as of 7 September 2016).  VASP is licensed software and we have to confirm the validity of your license with the VASP group in Vienna.  Our license does not allow us to grant access based on the information in the SUPR.
+Lunarc has a VASP handling license and VASP is currently installed on Aurora (v 5.4.1 with patch level 2 as of 7 September 2016).  To use VASP your Lunarc account has to be enabled to access the executables.  VASP is licensed software and we have to confirm the validity of your license with the VASP group in Vienna before we can grant access.  Our license does not allow us to grant access based on the information in the SUPR.
 
 If you like to use VASP on Aurora, please contact the [Lunarc helpdesk](http://www.lunarc.lu.se/support/support_form) and provide the following information:
 
@@ -53,9 +53,9 @@ If you like to use VASP on Aurora, please contact the [Lunarc helpdesk](http://w
 * Your name as stated on the license
 * Whether you require VASP 4 or VASP 5 access
 
-In order to be able to continue the provision of VASP to our ligitimate VASP users, we will not make any exception to this.  Unauthorised users can load the VASP module, but the software will not work.
-
-The VASP executables on Aurora have been compiled using Intel MPI.  They need to be started with **srun**, refer to e.g. the sample section of our batch [system guide](http://lunarc-documentation.readthedocs.io/en/latest/batch_system/#mpi-job-using-20-tasks-per-node) for a more comprehensive discussion.
+In order to be able to continue the provision of VASP to our ligitimate VASP users, we will not make any exception. 
+ 
+The VASP executables on Aurora are compiled using Intel MPI.  They need to be started with `srun`, refer to the sample section of our batch [system guide](http://lunarc-documentation.readthedocs.io/en/latest/batch_system/#mpi-job-using-20-tasks-per-node) for a more comprehensive discussion.
 
 
 ## My MPI application doesn't launch
