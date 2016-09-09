@@ -288,7 +288,7 @@ A significant portion of the Aurora software is build using the [EasyBuild](http
  
  * **PGI**: PGI
  * **pompi**: PGI, OpenMPI
- * **pomkl**: PGI, OpneMPI, MKL
+ * **pomkl**: PGI, OpenMPI, MKL
 
 If you require additional toolchains, contact [Lunarc support](http://www.lunarc.lu.se/support/support-form/) to discuss your requirements.
 
