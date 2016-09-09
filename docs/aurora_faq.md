@@ -34,12 +34,16 @@ Using an optimised BLAS library is important for achieving good performance.  Th
 When using OpenBLAS, please be aware that you might [need to control the number of threads](#my-mpi-code-using-openblas-does-not-perform) spawned.
 
 
+## How do I link my code against the MKL installation provided on Aurora ## 
+The Aurora modules providing MKL are set the environment variable `MKLROOT` to assist the compiler in locating the library on the system.  To link your application we suggest consultating the [Intel® Math Kernel Library Link Line Advisor](https://software.intel.com/en-us/articles/intel-mkl-link-line-advisor) for the arguments needed. 
+
 
 ## My MPI code using OpenBLAS does not perform
 OpenBLAS as installed in the foss [toolchains](http://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/#compiling-code-and-using-toolchains) is compiled with thread support.  When OpenBLAS is used on Aurora, it will typically figure how many cores you are allocated on that node and spawn as many threads.  If this is not desirable (e.g. pure MPI code) you need to control the number of threads spawned by setting the `OMP_NUM_THREADS` variable.  For example for an MPI code running as many tasks as cores requested this is typically be set to:
 ```bash
 export OMP_NUM_THREADS=1
 ```
+
 
 ## I like to run VASP on Aurora but it doesn't work
 
