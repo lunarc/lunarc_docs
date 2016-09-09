@@ -34,7 +34,7 @@ Using an optimised BLAS library is important for achieving good performance.  Th
 When using OpenBLAS, please be aware that you might [need to control the number of threads](#my-mpi-code-using-openblas-does-not-perform) spawned.
 
 
-## How do I link my code against the MKL installation provided on Aurora ## 
+## How do I link my code against the MKL installation provided on Aurora
 The Aurora modules providing MKL are set the environment variable `MKLROOT` to assist the compiler in locating the library on the system.  To link your application we suggest consultating the [Intel® Math Kernel Library Link Line Advisor](https://software.intel.com/en-us/articles/intel-mkl-link-line-advisor) for the arguments needed. 
 
 
