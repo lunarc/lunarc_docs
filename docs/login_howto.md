@@ -2,11 +2,11 @@
 
 The main way of accessing the Lunarc systems are using a terminal and command line tools. To get access to a terminal the user has to login in to Lunarc using a Secure Shell (SSH) terminal client, for example:
 
-    ssh alarik.lunarc.lu.se -l username
+    ssh aurora.lunarc.lu.se -l username
 
 or
 
-    ssh username@alarik.lunarc.lu.se
+    ssh username@aurora.lunarc.lu.se
 
 On Linux this client is built-in to the system and no installation is neccesary. Windows does not have a standard SSH terminal so an external application is needed such as PuTTY (http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) is needed.
 
@@ -31,7 +31,7 @@ If the otp and password are correct you will be logged in to the system.
 
 To be prompted for the OTP password the ssh client must be configured for so called "keyboard-interactive" login. These settings can be modified in either /etc/ssh/ssh_config (Redhat systems) or in the home-directory ~/.ssh/config. An example configuration is shown below:
 
-    Host alarik.lunarc.lu.se 
+    Host aurora.lunarc.lu.se 
     PreferredAuthentications keyboard-interactive 
 
     Host * 
@@ -41,7 +41,7 @@ In the above example Platon is configured for keyboard-interactive login, but al
 
 To reduce the number of logins to the system the ServerAlive option can also be added:
 
-    Host alarik.lunarc.lu.se 
+    Host aurora.lunarc.lu.se 
     PreferredAuthentications keyboard-interactive 
     ServerAliveInterval 10 
 
@@ -54,7 +54,7 @@ Mac OS X is already configured to handle the login to Platon with one time passw
 
 To reduce the number of logins to the system the ServerAlive option can also be added:
 
-    Host alarik.lunarc.lu.se 
+    Host aurora.lunarc.lu.se 
     PreferredAuthentications keyboard-interactive 
     ServerAliceInterval 10 
 
