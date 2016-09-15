@@ -278,28 +278,7 @@ its own, which is specified with
 
 Like on Alarik, the maximum walltime is 1 h.
 
-### Extra fat nodes on Alarik
-
-Alarik has four nodes with 48 cores and 128 GB memory. To access them,
-the partition extra has to be specified
-
-    #SBATCH -p extra
-
-Furthermore, the amount of memory per requested core also needs to be
-given.
-
-    #SBATCH --mem-per-cpu=<memory in MB>
-
-Otherwise, the default value of 2 000 MB will be set at and if more is
-used, slurm can kill the job. For example, to run on the 48 cores of a
-single node and use a total of 128 000 MB of memory (for more on
-multiprocessor statements, see the next section):
-
-    #SBATCH -N 1
-    #SBATCH --tasks-per-node=48
-    #SBATCH --mem-per-cpu=3000
-    #SBATCH -p extra
-
+	
 ### Fat, extra fat and MIC nodes on Erik
 
 Erik has 7 nodes with 4 GPUs (and 96 GB of memory). To access them, the
@@ -323,6 +302,16 @@ There is also one node with two Nvidia K80 cards in the partition new
 
 If no -p option is specified, normal nodes with two Nvidia K20 cards
 will be allocated to the job.
+
+### Controlling requeueing/restarting of jobs
+
+By default the scheduler will requeue (aka. restart) jobs that
+suffered from node failure.  This is not always desirable.  Adding a line
+```bash
+#SBATCH --no-requeue
+```
+to the header portion of your job script prevents this behaviour.
+
 
 ## Resource statements for multiprocessor
 
@@ -447,13 +436,7 @@ to use e.g.:
     #SBATCH -N 1
     #SBATCH --tasks-per-node=4
 
-if you only want to use four threads. The Alarik extra nodes with 48
-cores allow for very wide shared-memory jobs:
-
-    #SBATCH -N 1
-    #SBATCH --tasks-per-node=48
-    #SBATCH --mem-per-cpu=3000
-    #SBATCH -p extra
+if you only want to use four threads. 
 
 ### Resource statements for hybrid programs using distributed and shared memory 
 
