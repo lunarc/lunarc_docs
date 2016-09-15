@@ -307,9 +307,9 @@ will be allocated to the job.
 
 By default the scheduler will requeue (aka. restart) jobs that
 suffered from node failure.  This is not always desirable.  Adding a line
-```bash
-#SBATCH --no-requeue
-```
+
+    #SBATCH --no-requeue
+
 to the header portion of your job script prevents this behaviour.
 
 
