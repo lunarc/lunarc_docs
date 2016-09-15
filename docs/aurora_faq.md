@@ -27,6 +27,14 @@ You have the follwing options to resolve the issues:
 
 * If this does not work or does not work satisfactory, contact the [Lunarc helpdesk](http://www.lunarc.lu.se/support/support_form) and discuss your situation.
 
+## Can I prevent my job from restarting in case of a node failure
+
+By default the SLURM job scheduler restarts jobs in case of e.g. a failing node.  This is not always desirable.  Adding a line
+```bash
+#SBATCH --no-requeue
+```
+to the header portion of your job script prevents this behaviour.
+
 
 ## I need LAPACK and BLAS - they used to be in /usr/lib64
 Using an optimised BLAS library is important for achieving good performance.  The libraries in `/usr/lib64` are typically not highly optimised.  We currently support [OpenBLAS](http://www.openblas.net/) within the foss [toolchain](http://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/#compiling-code-and-using-toolchains) and [MKL](https://software.intel.com/en-us/intel-mkl) in the intel, iomkl and gimkl toolchains.  Both libraries show excellent performance when e.g. used to build HPL (high performance linpack).
