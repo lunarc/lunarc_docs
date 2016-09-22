@@ -55,9 +55,10 @@ export OMP_NUM_THREADS=1
 
 ## I like to run VASP on Aurora but it doesn't work
 
-Lunarc has a VASP handling license and VASP is currently installed on Aurora (v 5.4.1 with patch level 2 as of 7 September 2016).  To use VASP your Lunarc account has to be enabled to access the executables.  VASP is licensed software and we have to confirm the validity of your license with the VASP group in Vienna before we can grant access.  That will take a few days or even weeks.  We can not grant access based on the information in the SUPR.
+Lunarc has a VASP handling license and VASP.  To use VASP you have to be registered on a VASP license with the VASP devlopers in Vienna.  Lunarc have to confirm the validity of your license with the VASP before we can grant access.  That will take normally take a few days but we had cases where that took weeks.  That you are named in a VASP group in SUPR does not mean you are actually entitled to use VASP.
 
-If you like to use VASP on Aurora, please contact the [Lunarc helpdesk](http://www.lunarc.lu.se/support/support_form) and provide the following information:
+If you like to use VASP on Aurora, please ensure that you are registed on a license with the VASP developers in Vienna.  Once your are registered,
+contact the [Lunarc helpdesk](http://www.lunarc.lu.se/support/support_form) and provide the following information:
 
 * Your Lunarc userid
 * Name and Department of the license holder (typically your supervisor/research group leader)
