@@ -58,11 +58,13 @@ export OMP_NUM_THREADS=1
 If you like to use VASP on Aurora, please ensure that you are registed on a license with the VASP developers in Vienna. To comply with the terms of our handling license, we have to confirm the validity of your license with the VASP developers before granting access. That will take normally take a few days but can take weeks under bad circumstances. Being named in a SUPR VASP group does not imply you are entitled to use VASP.
 
 Once your are registered with the VASP team, contact the [Lunarc helpdesk](http://www.lunarc.lu.se/support/support_form) and provide the following information:
+
 * Your Lunarc userid
 * Name and Department of the license holder (typically your supervisor/research group leader)
 * The number of the license
 * Your name as stated on the license
 * Whether you require VASP 4 or VASP 5 access
+
 In order to be able to continue the provision of VASP to our ligitimate VASP users, we will not make any exception. 
  
 The VASP executables on Aurora are compiled using Intel MPI.  They need to be started with `srun`, refer to the sample section of our batch [system guide](http://lunarc-documentation.readthedocs.io/en/latest/batch_system/#mpi-job-using-20-tasks-per-node) for a more comprehensive discussion.
