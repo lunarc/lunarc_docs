@@ -57,7 +57,7 @@ export OMP_NUM_THREADS=1
 
 If you like to use VASP on Aurora, please ensure that you are registed on a license with the VASP developers in Vienna. To comply with the terms of our handling license, we have to confirm the validity of your license with the VASP developers before granting access. That will take normally take a few days but can take weeks under bad circumstances. Being named in a SUPR VASP group does not imply you are entitled to use VASP.
 
-Once your are registered with the VASP team, contact the [Lunarc helpdesk](http://www.lunarc.lu.se/support/support_form) and provide the following information:
+After registerering with the VASP team, contact the [Lunarc helpdesk](http://www.lunarc.lu.se/support/support_form) and provide the following information:
 
 * Your Lunarc userid
 * Name and Department of the license holder (typically your supervisor/research group leader)
