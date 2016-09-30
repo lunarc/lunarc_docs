@@ -122,7 +122,8 @@ Run the following in the matlab command window
     j.State                                 # check the state of the job
     j.fetchOutputs                          # get the results when finished
     ans{1}                                  # show the results
-    --->
+--->
+
 # Getting Started with Serial and Parallel MATLAB on Aurora
 ###LOAD THE MODULE.
 The MATLAB module is loaded with
