@@ -250,6 +250,7 @@ Once we have a handle to the cluster, we’ll call the findJob method to search 
 The job now runs in 4.73 seconds using 8 workers.  Run the code with different number of workers to determine the ideal number to use.
 Alternatively, to retrieve job results via a graphical user interface, use the Job Monitor (Parallel > Monitor Jobs).
 
+![Code example](images/Parallel_interface.png "Start window") 
 
 ##DEBUGGING
 If a serial job produces an error, we can call the getDebugLog method to view the error log file.
