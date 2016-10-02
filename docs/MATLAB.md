@@ -1,6 +1,6 @@
 # MATLAB 
-SNIC provides a nationwide set of licenses for the MATLAB Distributed Computing Server (MDCS). There are 500 licenses in total available from the six SNIC centra. Each user of MATLAB will be using their home university base-license for MATLAB and any toolboxes therein, specifically the parallel computing toolbox (PCT). 
-
+SNIC provides a nationwide set of licenses for MATLAB and the MATLAB Distributed Computing Server (MDCS). There are 500 licenses in total available from the six SNIC centra.
+ 
 The MATLAB versions available at Lunarc are:
 
     Version        Module name
@@ -201,6 +201,9 @@ fetchOutputs is used to retrieve function output arguments; if calling batch wit
 
 ##PARALLEL JOBS
 Users can also submit parallel workflows with batch.  Let’s use the following example for our parallel job.
+
+<img src="Code_example.png">
+
 We’ll use the batch command again, but since we’re running a parallel job, we’ll also specify a MATLAB Pool.     
 
     % Get a handle to the cluster
