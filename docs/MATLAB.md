@@ -202,7 +202,7 @@ fetchOutputs is used to retrieve function output arguments; if calling batch wit
 ##PARALLEL JOBS
 Users can also submit parallel workflows with batch.  Let’s use the following example for our parallel job.
 
-<img src="Code_example.png">
+![Code example](images/Code_example.png "Start window")    
 
 We’ll use the batch command again, but since we’re running a parallel job, we’ll also specify a MATLAB Pool.     
 
