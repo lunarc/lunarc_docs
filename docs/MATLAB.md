@@ -1,5 +1,5 @@
 # MATLAB 
-SNIC provides a nationwide set of licenses for MATLAB and the MATLAB Distributed Computing Server (MDCS). There are 500 licenses in total available from the six SNIC centra.
+SNIC provides a nationwide set of licenses for the MATLAB Distributed Computing Server (MDCS). There are 500 MDCS licenses in total available for the six SNIC centra. At each respective SNIC centra the hosting university MATLAB licenses and toolboxes are available for use. 
  
 The MATLAB versions available at Lunarc are:
 
