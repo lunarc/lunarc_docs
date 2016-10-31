@@ -66,7 +66,8 @@ After registerering with the VASP team, contact the [Lunarc helpdesk](http://www
 * Whether you require VASP 4 or VASP 5 access
 
 In order to be able to continue the provision of VASP to our ligitimate VASP users, we will not make any exception. 
- 
+
+
 The VASP executables on Aurora are compiled using Intel MPI.  They need to be started with `srun`, refer to the sample section of our batch [system guide](http://lunarc-documentation.readthedocs.io/en/latest/batch_system/#mpi-job-using-20-tasks-per-node) for a more comprehensive discussion.
 
 
