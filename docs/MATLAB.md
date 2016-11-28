@@ -274,7 +274,7 @@ To learn more about the MATLAB Parallel Computing Toolbox, check out these resou
 
 *	[Parallel Computing Coding Examples](http://www.mathworks.com/products/parallel-computing/code-examples.html)
 *	[Parallel Computing Documentation](http://www.mathworks.com/help/distcomp/index.html)
-*	[Parallel Computing Overview](http://www.mathworks.com/products/parallel-computing/index.htmlhttp:/www.mathworks.com/products/parallel-computing/index.html)
+*	[Parallel Computing Overview](http://www.mathworks.com/products/parallel-computing/index.html)
 *	[Parallel Computing Tutorials](http://www.mathworks.com/products/parallel-computing/tutorials.html)
 *	[Parallel Computing Videos](http://www.mathworks.com/products/parallel-computing/videos.html)
 *	[Parallel Computing Webinars](http://www.mathworks.com/products/parallel-computing/webinars.html)
