@@ -130,21 +130,33 @@ option:
 
 This will name your job “parameterTest”.
 
-### Specifying a project for users with multiple projects 
+### Specifying a project and partition for users with LU projects multiple projects 
 
-Most users are members of only one project. These users do not need to
+Most users are members of a single SNIC project. These users do not need to
 specify a project in their submission script. The Lunarc set-up
 will automatically use that project for accounting.
 
-A few users are members of more than project. In this case the system
-would not know which project to charge for the run, so you need to
+Users with membership in more than project and/or in an Lund
+University (LU) project have to let the system know which project to
+charge for the run. To do so, you need to
 specify the project using the -A option:
 
-    #SBATCH -A snic2015-x-xxx
+    #SBATCH -A snic2016-x-xxx
 
-Replace the “snic2015-x-xxx” with the string naming your project. You
-can inquire the correct string using the projinfo command or the SUPR
-system.
+Replace the “snic2016-x-xxx” with the string naming your project.
+Alternively use:
+
+    #SBATCH -A lu2016-x-x
+
+In case of an LU project.  You
+can inquire the correct string using the **projinfo** or **projinfo -p
+lu** command as well as the SUPR
+system.  When using an LU-project on also needs to specify the
+partition:
+
+	#SBATCH -p lu
+
+in the batch script.
 
 ### Specifying memory requirements
 
