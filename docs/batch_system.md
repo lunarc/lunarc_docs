@@ -130,7 +130,7 @@ option:
 
 This will name your job “parameterTest”.
 
-### Specifying a project and partition for users with LU projects multiple projects 
+### Specifying a project and partition for users with LU projects or multiple projects 
 
 Most users are members of a single SNIC project. These users do not need to
 specify a project in their submission script. The Lunarc set-up
