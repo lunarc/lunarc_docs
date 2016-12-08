@@ -143,20 +143,23 @@ specify the project using the -A option:
 
     #SBATCH -A snic2016-x-xxx
 
-Replace the “snic2016-x-xxx” with the string naming your project.
-Alternively use:
+for a SNIC project or
 
-    #SBATCH -A lu2016-x-x
+	#SBATCH -A lu2016-x-xx
 
-In case of an LU project.  You
-can inquire the correct string using the **projinfo** or **projinfo -p
-lu** command as well as the SUPR
-system.  When using an LU-project on also needs to specify the
+for an LU project. Replace the **snic2016-x-xxx** or **lu2016-x-xx** with the string naming your project.
+The correct name can be obtained by using the **projinfo** or **projinfo -p**
+lu command, respectively. The information is also available in the
+SUPR system, but notice the difference in the formatting of the names.
+
+When using an LU-project on also needs to specify the
 partition:
 
 	#SBATCH -p lu
 
-in the batch script.
+in the batch script.  In addition, those who access private nodes (financed by a research project) through an LU project, the corresponding reservation has to be stated:
+
+    #SBATCH --reservation=lu2016-x-xx
 
 ### Specifying memory requirements
 
