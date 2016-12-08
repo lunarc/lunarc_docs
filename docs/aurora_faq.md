@@ -21,11 +21,15 @@ Many software modules on Aurora have complex pre-requisites. If you load multipl
 
 You have the follwing options to resolve the issues:
 
-* Have a look, whether there are different versions of the modules installed that have common pre-requisites.  Acutally in many cases we have the same version of the software installed with different pre-requisites to help this issue.  
+* Have a look, whether there are different versions of the modules installed that have common pre-requisites.  Acutally in many cases we have the same version of the software installed with different pre-requisites to help this issue.
 
 * Have a terminal dedicated to each of the modules.  This should work if the modules do not really interact with each other, but e.g. one module creates files which the other module reads.  Consider using the [Lunarc HPC desktop](http://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop/) which easily allows having multiple terminals within a single session
 
 * If this does not work or does not work satisfactory, contact the [Lunarc helpdesk](http://www.lunarc.lu.se/support/support_form) and discuss your situation.
+
+## How do I specify utilising a Lund University project in a batch script
+
+When using a Lund University project (LU project), you have to specify the project name, the partition and in some cases a reservation.  This is explained in our [batch system guide](http://lunarc-documentation.readthedocs.io/en/latest/batch_system/#specifying-a-project-and-partition-for-users-with-lu-projects-or-multiple-projects).
 
 ## Can I prevent my job from restarting in case of a node failure
 
