@@ -296,9 +296,16 @@ A significant portion of the Aurora software is build using the [EasyBuild](http
 
 **Toolchains based on the GCC compiler suite**
 
-* **gcccuda**  GCC, CUDA
-* **gompic** GCC, CUDA, OpenMPI
-* **goolfc** GCC, CUDA, OpenMPI, OpenBLAS, FFTW, BLACS, ScaLAPACK
+* **gcccuda**:  GCC, CUDA
+* **gompic**: GCC, CUDA, OpenMPI
+* **goolfc**: GCC, CUDA, OpenMPI, OpenBLAS, FFTW, BLACS, ScaLAPACK
+
+**Toolchains based on the Intel compiler suite**
+
+* **iccifortcuda**: icc, ifort, CUDA
+* **iimpic**: icc, ifort, CUDA, Intel MPI
+* **intelcuda**: icc, ifort, CUDA, Intel MPI, MKL
+
 
 If you require additional toolchains, contact [Lunarc support](http://www.lunarc.lu.se/support/support-form/) to discuss your requirements.
 
