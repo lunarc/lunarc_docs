@@ -27,7 +27,7 @@ You have the follwing options to resolve the issues:
 
 * If this does not work or does not work satisfactory, contact the [Lunarc helpdesk](http://www.lunarc.lu.se/support/support_form) and discuss your situation.
 
-## How do I specify utilising a Lund University project in a batch script
+## How do I use a Lund University project
 
 When using a Lund University project (LU project), you have to specify the project name, the partition and in some cases a reservation.  This is explained in our [batch system guide](http://lunarc-documentation.readthedocs.io/en/latest/batch_system/#specifying-a-project-and-partition-for-users-with-lu-projects-or-multiple-projects).
 
