@@ -37,7 +37,7 @@ To be prompted for the OTP password the ssh client must be configured for so cal
     Host * 
     PreferredAuthentications hostbased,publickey,keyboard-interactive,password
 
-In the above example Platon is configured for keyboard-interactive login, but all other hosts are configured with default login options.
+In the above example Aurora is configured for keyboard-interactive login, but all other hosts are configured with default login options.
 
 To reduce the number of logins to the system the ServerAlive option can also be added:
 
@@ -94,3 +94,5 @@ To reduce the number of logins to the system the "Keepalive" options can be set 
 Please note:
 
 that the "Advanced options" checkbox must be checked to access these settings
+
+
