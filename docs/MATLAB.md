@@ -15,7 +15,7 @@ The MATLAB versions available at Lunarc are:
 # Running MATLAB on login-node 
 MATLAB can be used on the login-nodes (either using LunarcDesktop i.e. ThinLinc. Or using SSH) Please note that as these are shared resources excessive use of MATLAB on the login-nodes will prevent other users from using the resources. 
 As MATLAB by default will use as many threads (cores) it possibly can, any user who is to use MATLAB on the login-nodes MUST start matlab with the option "-singleCompThread" thus preventing MATLAB from using more that one thread.
-This will NOT prevent matlab from utilizing the MATLAB Distributed Computing Server (MDCS) with wich any number of cores can be used for computations.
+This will NOT prevent matlab from utilizing the MATLAB Distributed Computing Server (MDCS) with which any number of cores can be used for computations.
 
 To start MATLAB on a login node use: 
 
