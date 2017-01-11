@@ -11,6 +11,17 @@ The MATLAB versions available at Lunarc are:
     R2015b         matlab/8.6
     R2016a         matlab/8.7  (available on Aurora only)
     
+
+# Running MATLAB on login-node 
+MATLAB can be used on the login-nodes (either using LunarcDesktop i.e. ThinLinc. Or using SSH) Please note that as these are shared resources excessive use of MATLAB on the login-nodes will prevent other users from using the resources. 
+As MATLAB by default will use as many threads (cores) it possibly can, any user who is to use MATLAB on the login-nodes MUST start matlab with the option "-singleCompThread" thus preventing MATLAB from using more that one thread.
+This will NOT prevent matlab from utilizing the MATLAB Distributed Computing Server (MDCS) with wich any number of cores can be used for computations.
+
+To start MATLAB on a login node use: 
+
+    matlab -singleCompThread
+
+
 <!--- At Lunarc the MATLAB installation R2014a (also known as 8.3) is the **only** version available for use with MDCS. If any of the newer versions are used, submission to the batch queue from within MATLAB is not possible .
 
 Versions newer than R2014a can use PCT at Lunarc but ONLY within a single node and ONLY by writing a batch script where MATLAB is run with a MATLAB script. Note that MATLAB will be able to use the PCT on the cores of this single node using the "local" profile.
