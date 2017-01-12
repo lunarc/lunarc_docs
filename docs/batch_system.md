@@ -1430,12 +1430,14 @@ described in the OpenMP sample section.
 
 # Interactive access to compute nodes
 
-Sometimes it is desirable to have an interactive login to the compute
-nodes of the cluster. Extensive code testing is a typical use case.
+Sometimes it is desirable to have an interactive connection to the compute
+nodes of the cluster. Extensive code testing and debugging is a typical use case.
+Regular production runs, in particular calculations requiring multiple days, are expected to
+access the compute nodes via the **sbatch** command.
 
 ## Starting an interactive session
 
-To start an interactive session you need to use the “interactive”
+To start an interactive session you need to use the **interactive**
 command. This will request the required resources from the resource pool
 for you and start the interactive session once the resources are
 available.
@@ -1455,7 +1457,7 @@ if your session lasts until it expires after 60 min, you get charged for
 32 cpu hours. If you terminate your session after 1/2 hour, you would
 get charged 16 cpu hours.
 
-The interactive command supports most command line options of the sbatch
+The interactive command supports most command line options of the **sbatch**
 command. Please refer to the man pages of sbatch.
 
 ## Modules and environment variables
@@ -1464,7 +1466,7 @@ Loaded modules and environment variables are not always exported properly to you
 interactive session. Once placed in the interactive session, we
 recommend users
 
-* To remove all currently loaded modules by using **module purge** command
+* To remove all currently loaded modules by using the **module purge** command
 * To reload **all** the modules they require
 
 That is despite the **modules list** command claiming they are still loaded.
@@ -1476,5 +1478,3 @@ might need to re-run that script.
 ## Known issues with the interactive command
 
 None at the time of writing.
-
-
