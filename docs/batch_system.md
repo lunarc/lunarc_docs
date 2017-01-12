@@ -160,14 +160,15 @@ In addition, those who access private nodes (financed by a research project) thr
 
     #SBATCH --reservation=lu2016-x-xx
 
-#### Accessing GPUs in the LU partition
+#### Accessing GPUs in the Aurora LU partition
 
 A number of compute nodes in the Lund University partition are equiped
 with GPUs.  These nodes are equiped with 2 Nvidia K80 cards that have
 been configured as four K40 cards.
 
-To access the GPU nodes you need to be a member in an LU project.  In
-your job script you need to specify the GPU-partition (instead of the
+To access the GPU nodes you need to be a member in an LU project,
+which you need to specify with the **-A** option as explained above.
+In addition your job script needs to specify the GPU-partition (instead of the
 LU-partition):
 
     #SBATCH -p gpu
@@ -184,7 +185,8 @@ line:
 
     #SBATCH --mem-per-cpu=3000
 
-to standard job submission scripts.
+to standard job submission scripts, allowing all GPUs being accessible
+for program execution.
 
 ### Specifying memory requirements
 
