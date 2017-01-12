@@ -173,7 +173,7 @@ LU-partition):
 
     #SBATCH -p gpu
 
-and the number of GPUs required as a *generic consumable resource*.
+and the number of GPUs required is requested as a *generic consumable resource*.
 The line:
 
     #SBATCH --gres=gpu:2
