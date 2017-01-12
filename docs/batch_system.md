@@ -185,8 +185,7 @@ line:
 
     #SBATCH --mem-per-cpu=3000
 
-to standard job submission scripts, allowing all GPUs being accessible
-for program execution.
+to standard job submission scripts, allowing the GPU nodes to be fully accessible
 
 ### Specifying memory requirements
 
@@ -1446,20 +1445,19 @@ command. This will request the required resources from the resource pool
 for you and start the interactive session once the resources are
 available.
 
-Use the following command to start an interactive session asking for 32
-cores lasting 60 minutes
+Use the following command to start an interactive session asking for 4
+cores on 1 node lasting 60 minutes
 
-    interactive -n 32 -t 60
+    interactive -N 1 --tasks-per-node=4 -t 60
 
-On Aurora and Erik this will be allocated on multiple nodes, since the
-nodes have only 20 and 16 cores available, respectively. The interactive session will last
+The interactive session will last
 until either the requested time, 60 minutes in the above example, has
 expired or you manually exit the interactive shell. Your account gets
 charged with the wall time duration of your interactive session,
 independent of the amount of computation you do. In the above example,
 if your session lasts until it expires after 60 min, you get charged for
-32 cpu hours. If you terminate your session after 1/2 hour, you would
-get charged 16 cpu hours.
+4 cpu hours. If you terminate your session after 1/2 hour, you would
+get charged 2 cpu hours.
 
 The interactive command supports most command line options of the **sbatch**
 command. Please refer to the man pages of sbatch.
