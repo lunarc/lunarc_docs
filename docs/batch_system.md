@@ -50,7 +50,7 @@ script for execution using the sbatch command. This will execute the
 
 This should deliver a screen output similar to
 
-    [fred@alarik Serial]$ sbatch echo_script.sh
+    [fred@aurora Serial]$ sbatch echo_script.sh
     Submitted batch job 7185
 
 Where 7185 is the job number assigned by SLURM. Once your job has
@@ -160,6 +160,32 @@ In addition, those who access private nodes (financed by a research project) thr
 
     #SBATCH --reservation=lu2016-x-xx
 
+#### Accessing GPUs in the LU partition
+
+A number of compute nodes in the Lund University partition are equiped
+with GPUs.  These nodes are equiped with 2 Nvidia K80 cards that have
+been configured as four K40 cards.
+
+To access the GPU nodes you need to be a member in an LU project.  In
+your job script you need to specify the GPU-partition (instead of the
+LU-partition):
+
+    #SBATCH -p gpu
+
+and the number of GPUs required as a *generic consumable resource*.
+The line:
+
+    #SBATCH --gres=gpu:2
+
+will request two K40 cards for you.  We recommend specifying no more
+than five cores per requested GPU.  A number of GPU nodes have less
+memory per node available for the users.  We would like to ask users to add a
+line: 
+
+    #SBATCH --mem-per-cpu=3000
+
+to standard job submission scripts.
+
 ### Specifying memory requirements
 
 #### Aurora
@@ -181,26 +207,6 @@ Erik has 64 GB of memory on the standard nodes. Each node has two CPUs
 with eight cores each. The default memory request per core is therefore
 4000 MB of memory. As in the case of Aurora, if more than 4000MB of
 memory per core is needed it has to be described as above.
-
-#### Alarik
-Alarik has 32 GB of memory installed on the small memory nodes and 64 GB
-of memory on the large memory nodes. The default memory request per core
-on the system is 2000 MB (a sixteenth of 32GB). If more then 2000 MB per
-core is needed it has to be requested explictly with the
-**--mem-per-cpu** option of sbatch. In this case you also have to
-request allocation on a large memory node using the **-C mem64GB**
-option of sbatch. The following show an example how to request 4000 MB
-of main memory per compute core used:
-
-    #SBATCH -C mem64GB
-    #SBATCH --mem-per-cpu=4000
-
-When requesting more than 2000 MB of memory, your jobs may spend a
-longer time in the queue, waiting for execution, since it needs to wait
-for run-slot(s) on the large memory nodes to become available. When
-requesting more then 4000 MB per processing core, your jobs will be
-charged at a higher rate. In this case some processing cores have to
-remain idle since you are using more than your fair share of memory.
 
 
 ### Controlling job output
@@ -255,14 +261,14 @@ job to create a mesh for your simulation. Once this has finished, you
 want to start a parallel job, which uses the mesh. You first submit the
 mesh creation job using sbatch
 
-    [fred@alarik Simcode]$ sbatch run_mesh.sh
+    [fred@aurora Simcode]$ sbatch run_mesh.sh
     Submitted batch job 8042
 
 As discussed, sbatch returns you a jobid, 8042 in this example. You use
 this to declare your dependency when submitting the simulation job to
 the queue
 
-    [fred@alarik Simcode]$ sbatch -d afterok:8042 run_sim.sh
+    [fred@aurora Simcode]$ sbatch -d afterok:8042 run_sim.sh
     Submitted batch job 8043
 
 When using squeue to monitor job 8043, this should now be in status
@@ -373,9 +379,8 @@ while for a threaded job, using e.g. OpenMP or Java, one will typically
 only specify items 1 and 3.
 
 It is typically not advisable to have the product of items 2 and 3
-exceeding the number of cores per node, which is 16 for standard Alarik
-and Erik compute nodes. On the Alarik extra compute nodes this number is
-48. In most cases users requesting multiple nodes will want the product
+exceeding the number of cores per node, which is 16 Erik compute nodes
+and 20 for Aurora compute nodes. In most cases users requesting multiple nodes will want the product
 to equal the number of cores per node. The syntax how to control nodes,
 tasks per node and threads per task is explaned below.
 
@@ -391,8 +396,8 @@ codes on the nodes. Adding
 
 to your job script will ensure that SLURM will allocate dedicated nodes
 to your job. Obviously your project gets charged for the full costs of
-the nodes you are using, that is in case of Alarik and Erik 16 cores per
-node.
+the nodes you are using, that is 20 cores per node in case of Aurora nodes and
+16 cores per node in case of Erik.
 
 ### Specifying the number of nodes required for the job
 
@@ -501,9 +506,8 @@ On **Aurora** software modules are arranged in a **hierarchical module naming sc
 earlier Lunarc systems and a [separate guide](http://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/) is available.  
 When compiling code using a [toolchain](http://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/#compiling-code-and-using-toolchains) module is recommended.
 
-On Alarik we automatically load a modern version of the GCC compiler,
-which supports the deployed AMD Opteron processors. At the time of
-writing this is version 4.6.2 of GCC. If you prefer using a different
+On Erik we automatically load a modern version of the GCC compiler,
+which supports the deployed AMD Opteron processors. If you prefer using a different
 compiler, you can add the desired module, e.g., version 12.1 of the
 Intel compiler
 
@@ -514,9 +518,6 @@ those of the module added last will be picked. Generally this is not a
 problem, but the compiler wrappers in the openmpi modules have the same
 names and it safest to only have one loaded at a time.
 
-On Erik the same compilers as on Alarik are present. Note that the
-processors on Erik are of the Intel Xeon type and thus utilize the mkl
-as supplied.
 
 ### SLURM variables
 
@@ -613,7 +614,7 @@ for execution. SLURM will reply with the jobid number. The job will then
 be held in the queue until the requested resources become available. A
 typical use case looks as follows:
 
-    [fred@alarik MPItest]$ sbatch runjob.sh
+    [fred@aurora MPItest]$ sbatch runjob.sh
     Submitted batch job 7197
 
 User fred submitted the script runjob.sh to the job queue and got the
@@ -902,7 +903,9 @@ directory to be accessed as a command line argument. Please note the
 enhances the stability by submitting the actual jobs over a longer
 period of time. With this statement included the script was able to
 successfully handle up to about 800 outstanding jobs on 16 and 32
-Alarik cores.
+cores of
+our earlier
+Alarik system.
 For reasons of job reliability, we therefore recommend not to process
 more than 800 jobs in a single script. However it is possible to process
 significantly larger job numbers than 800 by carefully tuning sleep-time
@@ -991,7 +994,7 @@ The below is an output from squeue when running a script processing 500
 jobs on 32 cores. The jobid of the job is 8070. The output shows the
 job-steps the script is presently processing
 
-    [fred@alarik MultiSerialTest]$ squeue -j 8070 -s
+    [fred@aurora MultiSerialTest]$ squeue -j 8070 -s
     STEPID NAME PARTITION USER TIME NODELIST
     8070.130 small_ex snic fred 2:09 an074
     8070.133 small_ex snic fred 2:02 an073
@@ -1280,14 +1283,15 @@ the same as require [for serial jobs](#basicrun-script-for-io-intensive-jobs).
 
 ### Thread binding for OpenMP codes
 
-The Alarik nodes deploy a cache-coherent non-uniform-memory access
+The Aurora nodes deploy a cache-coherent non-uniform-memory access
 architecture (cc-numa). Many scientific simulation codes gain
 significant performance benefits on a cc-numa architecture when the user
 binds the threads to physical cores of the hardware. This inhibits
-thread migration and improves memory locality. Unfortunately invoking
-thread binding is not standartised. Depending on the OpenMP runtime
-library the user needs to modify different environment variables to bind
-his threads.
+thread migration and improves memory locality. In the latest OpenMP
+standards thread binding has been standartised.
+
+In addition many compilers offer their own binding syntax.
+
 
 #### Thread binding with the GNU compilers
 
@@ -1296,23 +1300,23 @@ to cores. To engage thread binding, you need to set the environment
 variable GOMP_CPU_AFFINITY and provide this with a binding list. When
 setting
 
-    export GOMP_CPU_AFFINITY=”0-15”
+    export GOMP_CPU_AFFINITY=”0-19”
 
 in your submission script, prior to starting your OpenMP application,
-this will bind the threads to the 16 cores in the node. The above will
+this will bind the threads to the 20 cores in the node. The above will
 bind thread 0 to core 0, thread 1 to core 1 and so on.
 
-**More advanced remark:** If you want to utilise only 8 cores from a
+**More advanced remark:** If you want to utilise only 10 cores from a
 node and asking for exclusive node access (#SBATCH --exclusive), it
 might be a good idea to place threads on every second core only. This
 will give you more memory bandwidth and make sure you are utilising all
 FPUs of the Interlagos architecture. This can be achieved by setting:
 
-    export GOMP_CPU_AFFINITY=”0-14:2”
+    export GOMP_CPU_AFFINITY=”0-19:2”
 
 or
 
-    export GOMP_CPU_AFFINITY=”0 2 4 6 8 10 12 14”
+    export GOMP_CPU_AFFINITY=”0 2 4 6 8 10 12 14 16 18”
 
 It depend on details of your application, whether or not this helps
 performance. Also note, when asking for a exclusive access to a note,
@@ -1325,11 +1329,9 @@ case.
 
 #### Thread binding with the Intel compiler
 
-Versions 12.1 and 13.0 of the **Intel** compiler do not support thread
-binding when used on the AMD processors deployed on Alarik. Starting
-from version 13.1 the Intel compile does support thread binding on the
-AMD processors deployed on Alarik. Obviously all versions of the Intel
+Obviously all versions of the Intel
 compiler support thread binding on the Intel processors deployed on
+Aurora and 
 Erik.
 
 For version 13.1 of the Intel compiler thread is controlled by setting
