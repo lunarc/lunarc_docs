@@ -281,7 +281,7 @@ being split into a number of submissions.
 ### Test queue
 
 To run short tests, it is possible to request extra high priority on
-Alarik with the help of
+Aurora with the help of
 
     #SBATCH --qos=test
 
@@ -298,7 +298,7 @@ its own, which is specified with
 
     #SBATCH -p test
 
-Like on Alarik, the maximum walltime is 1 h.
+Like on Aurora, the maximum walltime is 1 h.
 
 	
 ### Fat, extra fat and MIC nodes on Erik
