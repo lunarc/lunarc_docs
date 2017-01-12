@@ -1460,10 +1460,14 @@ command. Please refer to the man pages of sbatch.
 
 ## Modules and environment variables
 
-Loaded modules and environment are not always exported properly to your
+Loaded modules and environment variables are not always exported properly to your
 interactive session. Once placed in the interactive session, we
-recommend users to reload **all** the modules they require. That is
-despite the “modules list” command claiming they are still loaded.
+recommend users
+
+* To remove all currently loaded modules by using **module purge** command
+* To reload **all** the modules they require
+
+That is despite the **modules list** command claiming they are still loaded.
 
 You also need to check whether environment variables still have the
 required values. If the software you are using has a set-up script, you
