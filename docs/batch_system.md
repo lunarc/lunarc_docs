@@ -191,7 +191,7 @@ to standard job submission scripts, allowing the GPU nodes to be fully accessibl
 
 #### Aurora
 The Aurora system has 64 GB of memory installed on a compute node.  To
-allow memory for the operating system, to the the default memory request per core is 3100 MB of memory.  
+allow memory for the operating system, the default memory request per core is 3100 MB of memory.  
 If more than 3100 MB per core is needed it has to be 
 requested explicitly using the `--mem-per-cpu` option.  For example if you require 
 5000 MB per core add the line
@@ -200,7 +200,7 @@ requested explicitly using the `--mem-per-cpu` option.  For example if you requi
 
 When requesting more then 3100 MB per processing core on Aurora, your 
 jobs will be
-charged at a higher rate. In this case some processing cores have to
+charged at a higher rate. If you do this, some processing cores have to
 remain idle since you are using more than your fair share of memory.
 
 #### Erik
