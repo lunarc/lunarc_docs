@@ -190,15 +190,15 @@ to standard job submission scripts, allowing the GPU nodes to be fully accessibl
 ### Specifying memory requirements
 
 #### Aurora
-The Aurora system has 64 GB of memory installed on a compute node.  Since each 
-node has 20 cores, the defaul memory request per core is 3200 MB of memory.  
-If more than 3200 MB per core is needed it has to be 
+The Aurora system has 64 GB of memory installed on a compute node.  To
+allow memory for the operating system, to the the default memory request per core is 3100 MB of memory.  
+If more than 3100 MB per core is needed it has to be 
 requested explicitly using the `--mem-per-cpu` option.  For example if you require 
 5000 MB per core add the line
 
     #SBATCH --mem-per-cpu=5000
 
-When requesting more then 3200 MB per processing core on Aurora, your 
+When requesting more then 3100 MB per processing core on Aurora, your 
 jobs will be
 charged at a higher rate. In this case some processing cores have to
 remain idle since you are using more than your fair share of memory.
@@ -754,7 +754,7 @@ file.
 
 You need to customise the file to
 suit your specific needs. The script is suitable for jobs consuming no
-more than 3200 MB of main memory on Aurora.
+more than 3100 MB of main memory on Aurora.
 
 ```bash
 #!/bin/bash
@@ -1198,7 +1198,7 @@ your own application.
 # requesting the number of nodes and cores needed, exclusive nodes
 #SBATCH -N 4
 #SBATCH --tasks-per-node=10
-#SBATCH --mem-per-cpu=6400
+#SBATCH --mem-per-cpu=6200
 #SBATCH --exclusive
 #
 # job time, change for what your job requires
@@ -1275,9 +1275,9 @@ cat $0
 ./processor_omp
 ```
 
-This script allows to use 3200 MB of main memory per requested core.
+This script allows to use 3100 MB of main memory per requested core.
 When asking for 20 cores on Aurora you can use all the memory
-available on the node.
+available to users on the node.
 
 The modification required to utilise the node local discs are exactly
 the same as require [for serial jobs](#basicrun-script-for-io-intensive-jobs).
