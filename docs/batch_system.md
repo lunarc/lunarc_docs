@@ -183,7 +183,7 @@ than five cores per requested GPU.  A number of GPU nodes have less
 memory per node available for the users.  We would like to ask users to add a
 line: 
 
-    #SBATCH --mem-per-cpu=3000
+    #SBATCH --mem-per-cpu=3100
 
 to standard job submission scripts, allowing the GPU nodes to be fully accessible
 
