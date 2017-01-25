@@ -21,6 +21,8 @@ To start MATLAB on a login node use:
 
     matlab -singleCompThread
 
+On the Lunarc Desktop (Thinlinc) MATLAB R2016a is available via the Applications menu. Starting MATLAB from the menue automatically will set the -singleCompThread flag. This is now the recommended way to start MATLAB on the Lunarc Desktop.
+
 
 <!--- At Lunarc the MATLAB installation R2014a (also known as 8.3) is the **only** version available for use with MDCS. If any of the newer versions are used, submission to the batch queue from within MATLAB is not possible .
 
