@@ -2,7 +2,7 @@
 
 COMSOL is installed on the cluster. It can either be used non-interactively for running a .mph file by sending it through the queue system from any login node or interactively from the lunarc desktop. If run interactively, care has to be taken so that the program does not consume large amounts of resources on the frontend.
 
-# Non-interactive used
+# Non-interactive use
 
 Given a .mph file comsol is started and run on the backend using a sbatch-script.
 an example script is given below:
@@ -61,7 +61,7 @@ It is now time to start the GUI. As seen in the figure, Comsol is available thro
 
 This will bring up the comsol GUI. In the GUI you must now attach to the server as shown in the following images
 
-![Connect to server](images/connect_to_server.png "Connect to COMSOL server")  
+![Connect to server](images/conect_to_server.png "Connect to COMSOL server")  
 
 This will bring up a window where you need to supply which node the server is started on as shown below.
 
