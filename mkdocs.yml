@@ -12,5 +12,6 @@ pages:
 - Batch system rules: batch_system_rules.md
 - Linux Basics: linux_basics.md
 - MATLAB on the cluster: MATLAB.md
+- COMSOL on the cluster: COMSOL.md
 theme: readthedocs
 #markdown_extensions: [codehilite]
