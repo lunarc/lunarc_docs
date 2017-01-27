@@ -41,7 +41,7 @@ The following applications are installed and accessible from the drop down menus
 
 There are two ways to avoid the desktop window occupying the entire screen. 
 
-1. Before connecting to our system (step 4 of the above list), click on *Options* or *Inställningar* (depending on whether you got an English or Swedish interface).  In the menu system that appears you can select a window size and deactivate full screen.  
+1. Before connecting to our system (step 4 of the above list), click on *Options* or *Inställningar* (depending on whether you got an English or Swedish interface).  In the menu system that appears you can deactivate full screen and select a window size.  
 2. While being connected to our system, pressing **F8** on the keyboard (on Mac it is: **fn F8**) will bring up a menu where you, among other things, can toggle full screen mode on or off . 
 
 Depending on your system it might be convenient to *not run* in full screen mode. Play around and see what suits you best.
