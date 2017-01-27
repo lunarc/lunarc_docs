@@ -36,11 +36,17 @@ The following applications are installed and accessible from the drop down menus
 
  ![sample screen](images/desktopSampleScreen.png "Desktop sample screen")
 
-## Tips
-### Resizing the desktop window and full screen mode
-Pressing **F8** on the keyboard will bring up a menu where you, among other things, can toggle full screen mode on or off (on Mac it is: **fn F8**). Depending on your system it might be convenient to *not run* in full screen mode. Play around and see what suits you best.
 
-### Starting the client on a Mac
+## Resizing the desktop window and full screen mode
+
+There are two ways to avoid the desktop window occupying the entire screen. 
+
+1. Before connecting to our system (step 4 of the above list), click on *Options* or *Inställningar* (depending on whether you got an English or Swedish interface).  In the menu system that appears you can select a window size and deactivate full screen.  
+2. While being connected to our system, pressing **F8** on the keyboard (on Mac it is: **fn F8**) will bring up a menu where you, among other things, can toggle full screen mode on or off . 
+
+Depending on your system it might be convenient to *not run* in full screen mode. Play around and see what suits you best.
+
+## Starting the client on a Mac
 Mac OSX 10.9 (Mavericks) and later: You need to
 
 1. locate the client in finder
