@@ -203,7 +203,7 @@ jobs will be
 charged at a higher rate. If you do this, some processing cores have to
 remain idle since you are using more than your fair share of memory.
 
-Users of [LU projects](#specifying-a-project-and-partition-for-users-with-LU-projects-or-multiple-projects) can utilise up to 12800 MB per processing core when requesting placement on a large memory node via the `-C` option.  The following example will request 11000 MB per processing core on a large memory node
+Users of [LU projects](#specifying-a-project-and-partition-for-users-with-lu-projects-or-multiple-projects) can utilise up to 12800 MB per processing core when requesting placement on a large memory node via the `-C` option.  The following example will request 11000 MB per processing core on a large memory node
  
     #SBATCH --mem-per-cpu=11000
     #SBATCH -C mem256GB
