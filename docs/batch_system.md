@@ -198,10 +198,15 @@ requested explicitly using the `--mem-per-cpu` option.  For example if you requi
 
     #SBATCH --mem-per-cpu=5000
 
-When requesting more then 3100 MB per processing core on Aurora, your 
+When requesting more then 3100 MB per processing core on Aurora when utilising a SNIC project, your 
 jobs will be
 charged at a higher rate. If you do this, some processing cores have to
 remain idle since you are using more than your fair share of memory.
+
+Users of [LU projects](#specifying-a-project-and-partition-for-users-with-LU-projects-or-multiple-projects) can utilise up to 12800 MB per processing core when requesting placement on a large memory node via the `-C` option.  The following example will request 11000 MB per processing core on a large memory node
+ 
+    #SBATCH --mem-per-cpu=11000
+    #SBATCH -C mem256GB
 
 #### Erik
 Erik has 64 GB of memory on the standard nodes. Each node has two CPUs
