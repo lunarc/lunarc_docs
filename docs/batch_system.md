@@ -193,7 +193,7 @@ to standard job submission scripts, allowing the GPU nodes to be fully accessibl
 The Aurora system has 64 GB of memory installed on a compute node.  To
 allow memory for the operating system, the default memory request per core is 3100 MB of memory.  
 If more than 3100 MB per core is needed it has to be 
-requested explicitly using the `--mem-per-cpu` option.  For example if you require 
+requested explicitly using the **--mem-per-cpu** option.  For example if you require 
 5000 MB per core add the line
 
     #SBATCH --mem-per-cpu=5000
@@ -203,7 +203,7 @@ jobs will be
 charged at a higher rate. If you do this, some processing cores have to
 remain idle since you are using more than your fair share of memory.
 
-Users of [LU projects](#specifying-a-project-and-partition-for-users-with-lu-projects-or-multiple-projects) can utilise up to 12800 MB per processing core when requesting placement on a large memory node via the `-C` option.  The following example will request 11000 MB per processing core on a large memory node
+Users of [LU projects](#specifying-a-project-and-partition-for-users-with-lu-projects-or-multiple-projects) can utilise up to 12800 MB per processing core without any cores ideling, by requesting placement on a large memory node via the **-C** option.  The following example will request 11000 MB per processing core on a large memory node
  
     #SBATCH --mem-per-cpu=11000
     #SBATCH -C mem256GB
