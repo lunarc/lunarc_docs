@@ -178,8 +178,7 @@ The line:
 
     #SBATCH --gres=gpu:2
 
-will request two K40 cards for you.  We recommend specifying no more
-than five cores per requested GPU.  A number of GPU nodes have less
+will request two K40 cards for you.  Each GPU is bundled with five specific cores and it is therefore recommend to specify five cores per requested GPU and not more than that, in order not to block other GPUs.  A number of GPU nodes have less
 memory per node available for the users.  We would like to ask users to add a
 line: 
 
