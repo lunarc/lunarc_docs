@@ -47,7 +47,7 @@ There are two ways to avoid the desktop window occupying the entire screen.
 Depending on your system it might be convenient to *not run* in full screen mode. Play around and see what suits you best.
 
 
-## Resolving issues wehn connectiong
+## Resolving issues when connectiong
 
 After encountering issues in a desktop session (e.g. crashed application) it can happen that the saved desktop state, the system tries to load when connecting, is corrupt.  In this case it is often advantageous to start a fresh session and discard the old session.  This is achieved by selecting the box: **End existing session** on the login window before connecting to Lunarc services.
 ![login window](images/desktopLogin.png "Desktop login window")
