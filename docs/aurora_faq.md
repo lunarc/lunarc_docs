@@ -4,7 +4,7 @@ Author: Joachim Hein (Lunarc)
 ![Node icon](images/node_icon.jpg "Node icon")
 
 ## I have forgotten my login password for Aurora
-To receive a new password, please phone Lunarc support on 0462224454 (+46462224454 outside Sweden) from the mobile phone you have registered in [SUPR](https://supr.snic.se/person/).
+To receive a new password, please phone Lunarc support on 0462224454 (+46462224454 outside Sweden) from the mobile phone you have registered in [SUPR](https://supr.snic.se/person/).  We will ask additional questions to verify your identity.  
 
 ## What is the maximum job time on Aurora?
 This has not been changed.  We still allow batch jobs to ask for up to 168 hours, which is 7 days.
