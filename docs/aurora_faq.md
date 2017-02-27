@@ -31,6 +31,10 @@ You have the follwing options to resolve the issues:
 
 When using a Lund University project (LU project), you have to specify the project name, the partition and in some cases a reservation.  This is explained in our [batch system guide](http://lunarc-documentation.readthedocs.io/en/latest/batch_system/#specifying-a-project-and-partition-for-users-with-lu-projects-or-multiple-projects).
 
+## I want to use the Aurora GPU nodes
+To access the Aurora GPU nodes, you need to be a member of an [LU local project](https://supr.snic.se/round/2017locallu/). Please review our [batch system guide](http://lunarc-documentation.readthedocs.io/en/latest/batch_system/#accessing-gpus-in-the-aurora-lu-partition) for the required modification to your submission script.  The [software guide](http://lunarc-documentation.readthedocs.io/en/latest/aurora_modules/#cuda-based-toolchains-for-gpu-nodes) provides an overview on Compiler, Cuda and MPI support for the GPU nodes. 
+
+
 ## Can I prevent my job from restarting in case of a node failure
 
 By default the Slurm job scheduler restarts jobs in case of e.g. a failing node.  This is not always desirable.  Adding a line
@@ -47,7 +51,7 @@ When using OpenBLAS, please be aware that you might [need to control the number 
 
 
 ## How do I link my code against the MKL installation provided on Aurora
-The Aurora modules providing MKL are set the environment variable `MKLROOT` to assist the compiler in locating the library on the system.  To link your application we suggest consultating the [Intel® Math Kernel Library Link Line Advisor](https://software.intel.com/en-us/articles/intel-mkl-link-line-advisor) for the arguments needed. 
+The Aurora modules providing MKL are set the environment variable `MKLROOT` to assist the compiler in locating the library on the system.  To link your application we suggest consulting the [Intel® Math Kernel Library Link Line Advisor](https://software.intel.com/en-us/articles/intel-mkl-link-line-advisor) for the arguments needed. 
 
 
 ## My MPI code using OpenBLAS does not perform
@@ -86,16 +90,4 @@ module load intel/2016b
 module load scipy/0.17.0-Python-2.7.11
 ```
 
-## Do I need to copy my data from Alarik to Aurora?
-Most users have two different types of storage.  They will be treated differently.
 
-* **home space**, which is where you are located after login.  This is separate on Aurora and Alarik.  You need to **copy everything you want to keep** from your Alarik home space as soon as possible.  We plan to keep the Alarik home space available until **15 April 2016**. 
-* **nobackup** or **workspace**, which is where most users hold the bulk of their data and start their jobs.  This storage area is accessed as `/lunarc/nobackup/users/<username>`.  The nobackup storage has been mounted on Aurora and is currently accessible from Alarik and Aurora.  No action by the users is required.  If you have programs and executables in your nobackup space, please read the entry on [executables](#will-alarik-executables-work-on-aurora).
-
-In addition to these, some project have designated project space.  Project storage has been mounted on Aurora. No further action should be required.
-
-## Will Alarik executables work on Aurora?
-The processors deployed on Alarik and Aurora have different instructions sets.  In particular highly optimised executables are likely to fail with an *illegal instruction error*.  Further more different shared libraries are deployed on both systems.  Lunarc recommends to rebuild everything from the source code.
-
-## I need an ACML module
-ACML is a highly optimised library which offers BLAS functionality among other things.  It is provided by AMD to work with the AMD processors, like the once deployed on Alarik.  Since Aurora utilises INTEL processors using ACML is no longer an option.  On Aurora we offer OpenBLAS and MKL instead of ACML.  Please refer to the question: ["I need LAPACK and BLAS"](#i-need-lapack-and-blas) for more details.
