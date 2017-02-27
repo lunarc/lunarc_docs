@@ -3,7 +3,7 @@ Author: Joachim Hein (Lunarc)
 
 ![Node icon](images/node_icon.jpg "Node icon")
 
-## I have forgotten my password
+## I have forgotten my login password for Aurora
 To receive a new password, please phone Lunarc support on 0462224454 (+46462224454 outside Sweden) from the mobile phone you have registered in [SUPR](https://supr.snic.se/person/).
 
 ## What is the maximum job time on Aurora?
