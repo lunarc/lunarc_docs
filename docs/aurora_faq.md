@@ -10,10 +10,10 @@ To receive a new password, please phone Lunarc support on 0462224454 (+464622244
 This has not been changed.  We still allow batch jobs to ask for up to 168 hours, which is 7 days.
 
 ## Could you please install software for me
-Many packages that were installed in standard locations have now been moved to the module system.  Please search for the package using `module spider` before contacting the helpdesk.
+Many packages that were installed in standard locations have now been moved to the module system.  Please search for the package using **module spider** before contacting the helpdesk.
 
 ## I can not find my software package in the module system
-While the Lunarc support team did not manage to install all the software that was available on Alarik, most of the packages that were available and a few that weren't are already available.  However on Aurora a hierarchical module naming scheme is deployed.  This is explained in a special [software guide](http://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/).  Please contact Lunarc support if you can't find your package with the `module spider` command.
+On Aurora a hierarchical module naming scheme is deployed.  This is explained in a special [software guide](http://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/).  Please contact Lunarc support if you cannot locate your package with the **module spider** command.
 
 
 ## Loading a module unloads pre-requisites from a previously loaded module
