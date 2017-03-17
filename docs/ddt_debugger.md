@@ -1,17 +1,17 @@
 
-# Starting the DDT debugger on Aurora and Erik
+# Starting the DDT debugger on Aurora
 
-A basic description on how to start a debugging session with DDT, part of [Allinea Forge](http://www.allinea.com/products/develop-allinea-forge), on the Aurora and Erik systems.  Job will be submitted through the Slurm batch system to the back-end nodes.
+A basic description on how to start a debugging session with DDT, part of [Allinea Forge](http://www.allinea.com/products/develop-allinea-forge), on the Aurora systems.  Job will be submitted through the Slurm batch system to the back-end nodes.
 
 # About this document
 
-This document gives basic instruction on how to start a debugging session using the DDT debugger on the Aurora and Erik system at Lunarc.  This document is based on DDT version 6.0.2 currently installed on Aurora.  There is currently a centralised SNIC license hosted by NSC.  The licenses are shared between the users of all the SNIC systems.  So please be considerate to other users fellow regarding for how many licenses your use (time and number of cores).
+This document gives basic instruction on how to start a debugging session using the DDT debugger on the Aurora system at Lunarc.  This document is based on DDT version 6.0.2 currently installed on Aurora.  There is currently a centralised SNIC license hosted by NSC.  The licenses are shared between the users of all the SNIC systems.  So please be considerate to other users fellow regarding for how many licenses your use (time and number of cores).
     
-DDT is a powerful debugger for serial and parallel programs.  The tool is developed and maintained by Allinea Software.  It is part of the Allineas Forge suite.  A number of parallel programming models are supported.  This includes MPI, OpenMP and a number of GPU languages.  This document is not a DDT userguide, we refer our users to the documentation available from the [Allinea website](http://www.allinea.com/product-documentation), in particular their [user guide](http://content.allinea.com/downloads/userguide-forge.pdf).
+DDT is a powerful debugger for serial and parallel programs.  The tool is developed and maintained by Allinea Software.  It is part of the Allinea's Forge suite.  A number of parallel programming models are supported.  This includes MPI, OpenMP and a number of GPU languages.  This document is not a DDT userguide, we refer our users to the documentation available from the [Allinea website](http://www.allinea.com/product-documentation), in particular their [user guide](http://content.allinea.com/downloads/userguide-forge.pdf).
 
-# Getting started with DDT on Aurora and Erik
+# Getting started with DDT on Aurora
 
-## Connect to Aurora and Erik via the Lunarc HPC desktop
+## Connect to Aurora via the Lunarc HPC desktop
 
 To use DDT you need to be able to access its graphical user interface (GUI).  
 The recommended way to connect to the system is via the [Lunarc HPC desktop](using_hpc_desktop).  
@@ -28,15 +28,11 @@ You will be prompted for password and one-time-password as usual.
 To connect using x-forwarding from a windows it is recommended to install [Cygwin](https://www.cygwin.com/). 
 -->
 
-## Starting the DDT GUI on Aurora and Erik
+## Starting the DDT GUI on Aurora
 
 Lunarc currently recommends using *reverse connect* to start DDT.  Load the relevant module.  On Aurora the module name is *allinea_forge*.  Load it: 
 ```bash
     module load allinea_forge
-```    
-On Erik the relevant module is named *ddt*.  Load this module
-```bash
-    module load ddt
 ```    
 You can now start the GUI by typing
 ```bash
@@ -49,13 +45,15 @@ at the command prompt.  This will bring up the following GUI window
 In the bottom left hand corner you get confirmation whether you managed to reach the license server at NSC.
 
 #Preparing and running your executable
+We have seen issues when sources and/or executables are placed on the /lunarc file system (nobackup space).  Copying sources and executables into your home space typically solves the issues.
+
 You need to prepare your executable for debugging.  Please **recompile** and **relink** everything with debugging support and without optimisation.  To do so, for most compilers you need to add the flags
 ```bash
    -g -O0
 ```
 Once your created an executable with debugging support, run it using either a batch script or an interactive session.  
 
-Make sure the *allinea_forge* (on Aurora) or *ddt* module (on Erik) is loaded before starting the executable.  This is in addition to the modules normally required to execute your code.
+Make sure the *allinea_forge* (on Aurora) is loaded before starting the executable.  This is in addition to the modules normally required to execute your code.
 
 To start your program, prefix the execution statement with *ddt --connect*.  For example an MPI code compiled against an OpenMPI-library should be started as follows
 ```bash
