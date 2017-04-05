@@ -304,29 +304,7 @@ its own, which is specified with
 Like on Aurora, the maximum walltime is 1 h.
 
 	
-### Fat, extra fat and MIC nodes on Erik
 
-Erik has 7 nodes with 4 GPUs (and 96 GB of memory). To access them, the
-partition fat has to be specified
-
-    #SBATCH -p fat
-
-One node is equipped with 8 GPUs (and 96 GB of memory), which is in
-partition extra
-
-    #SBATCH -p extra
-
-There is also one node with two Xeon Phi (MIC) cards in the partition
-mic
-
-    #SBATCH -p mic
-
-There is also one node with two Nvidia K80 cards in the partition new
-
-    #SBATCH -p new
-
-If no -p option is specified, normal nodes with two Nvidia K20 cards
-will be allocated to the job.
 
 ### Controlling requeueing/restarting of jobs
 
