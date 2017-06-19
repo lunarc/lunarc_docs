@@ -59,7 +59,7 @@ As a rule, the home directory should not be used for job submission. It is inten
 
 ## Global working directory
 
-For job submission, there is a centre file system common to all Lunarc systems:
+For job submission, we recommend using the centre file system, which is currently only available from Aurora:
 
     /lunarc/nobackup/users/xxxx
 
