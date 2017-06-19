@@ -114,8 +114,7 @@ To specify your walltime requirements write a statement like
 
 into your job script.
 
-The maximum walltime for any job on Aurora is 168h, which is the same as
-7 days. On Erik the maximum walltime for any job is 48h.
+The maximum walltime for any job on Aurora is 168h (7 days).
 
 ### Job naming
 
@@ -295,15 +294,6 @@ nodes every second hour between 8.00 and 20.00 to reduce the queue time
 for test jobs. The way it works also means that the shorter the test
 job, the more likely it is to start sooner rather than later. It is not
 allowed to use qos=test for series of production runs.
-
-On Erik there is one two-GPU node reserved for tests in a partition of
-its own, which is specified with
-
-    #SBATCH -p test
-
-Like on Aurora, the maximum walltime is 1 h.
-
-	
 
 
 ### Controlling requeueing/restarting of jobs
