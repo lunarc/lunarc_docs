@@ -20,6 +20,7 @@ Below an example SBATCH-script to run an Abaqus-job called sample.inp is shown, 
     #
     # Number of nodes used. for most Abaqus jobs one node is sufficient
     #SBATCH -N 1
+    #SBATCH --exclusive
     #
     # How many cores do you need to use? Remember that a large number here WILL consume 
     # a lot of tokens i.e. limit the number left for other abaqus users: Max per node is 20
@@ -70,7 +71,7 @@ Below an example SBATCH-script to run an Abaqus-job called sample.inp is shown, 
 
 In your SBATCH-script you adjust the parts unique for your job using a text-editor and save it in the directory where your .inp file is. then in the terminal, send the job desription (the SBATCH-script) to the queue using the following command:
 
-        sbatch my_SBATCH_script.inp 
+        sbatch my_SBATCH_script.sub
 
 This sends the job to the queue and the job manager will start the simulation when a slot on the cluster fitting the description in the script is available.
 
