@@ -13,5 +13,6 @@ pages:
 - Linux Basics: linux_basics.md
 - MATLAB on the cluster: MATLAB.md
 - COMSOL on the cluster: COMSOL.md
+- Abaqus on the cluster: Abaqus.md
 theme: readthedocs
 #markdown_extensions: [codehilite]
