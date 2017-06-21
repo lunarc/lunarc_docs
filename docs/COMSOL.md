@@ -44,15 +44,16 @@ This means that the FIRST tome you start the server you MUST do it interactively
 
 To start an interactive session, start a terminal and type:
 
-    interactive -A <your_project_name> -t 01:00:00
+    interactive -N1 --exclusive -A <your_project_name> -t 01:00:00
 
 This will give you a new prompt on a node on the cluster for 1h.
 To start the server type:
 
     comsol -np 16 server
 
-This will start a server using 16 processors. You can adjust the number of processor to any number up to 20 which is the number of processors on a node.
-The program will ask you for a username and a password as described above. this username and password wiill be saved in your .comsol directory in your home directory.
+This will start a server using 16 processing cores. You can adjust the number of cores to any number up to 20 which is the number of cores on a node.  You should select the number of cores giving you the fastes time to solution, which typically requires some experimentation.
+
+The program will ask you for a username and a password as described above. This username and password will be saved in your .comsol directory in your home directory.
 Make a note of which node you are running on (it will be stated in the console as auxxx)
 
 It is now time to start the GUI. As seen in the figure, Comsol is available through the Applications menu on the Lunarc desktop.
