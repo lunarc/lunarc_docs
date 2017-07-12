@@ -175,7 +175,7 @@ Additional parameters that can be supplied are:
 * Reservation
 * UseGpu
 
-Please note that as of version 2017a the suntax for setting the ClusterInfo parameters have changed. These are now properties of a parcluster object instead of methods in the ClusterInfo object.
+Please note that as of version 2017a the syntax for setting the ClusterInfo parameters have changed. These are now properties of a parcluster object instead of methods in the ClusterInfo object.
 
 
         configCluster
