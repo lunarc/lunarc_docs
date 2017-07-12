@@ -10,7 +10,7 @@ The MATLAB versions available at Lunarc are:
     R2015a         matlab/8.5
     R2015b         matlab/8.6
     R2016a         matlab/8.7  (available on Aurora only)
-    
+    R2017a         matlab/2017a
 
 # Running MATLAB on login-node 
 MATLAB can be used on the login-nodes (either using LunarcDesktop i.e. ThinLinc. Or using SSH) Please note that as these are shared resources excessive use of MATLAB on the login-nodes will prevent other users from using the resources. 
@@ -21,7 +21,7 @@ To start MATLAB on a login node use:
 
     matlab -singleCompThread
 
-On the Lunarc Desktop (Thinlinc) MATLAB R2016a is available via the Applications menu. Starting MATLAB from the menue automatically will set the -singleCompThread flag. This is now the recommended way to start MATLAB on the Lunarc Desktop.
+On the Lunarc Desktop (Thinlinc) MATLAB R2016a as well as MATLAB R2017a are available via the Applications menu. Starting MATLAB from the menue automatically will set the -singleCompThread flag. This is now the recommended way to start MATLAB on the Lunarc Desktop.
 
 
 <!--- At Lunarc the MATLAB installation R2014a (also known as 8.3) is the **only** version available for use with MDCS. If any of the newer versions are used, submission to the batch queue from within MATLAB is not possible .
@@ -141,7 +141,7 @@ Run the following in the matlab command window
 ###LOAD THE MODULE.
 The MATLAB module is loaded with
 
-    $module load matlab/8.7
+    $module load matlab/<version>
 
 ## CONFIGURATION
 Start MATLAB.  
@@ -174,6 +174,19 @@ Additional parameters that can be supplied are:
 * RequireExclusiveNodes
 * Reservation
 * UseGpu
+
+Please note that as of version 2017a the suntax for setting the ClusterInfo parameters have changed. These are now properties of a parcluster object instead of methods in the ClusterInfo object.
+
+
+        configCluster
+
+		% Set ProjectName and WallTime before submitting jobs to AURORA
+		c = parcluster;
+		c.AdditionalProperties.ProjectName = 'project-name';
+		c.AdditionalProperties.WallTime = '01:00:00';
+		c.saveProfile
+
+In the above example c is a parcluster object to which all properties are set accordingly.
 
 To see the values of the current configuration options, call the state method.  To clear a value, assign the property an empty value (‘’, [], or false), or call the clear method to clear all values.
 
