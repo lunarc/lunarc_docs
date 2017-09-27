@@ -17,7 +17,7 @@ Depending on the needs of the user, the recommended versions differ.
 
 For regular users with **no special requirements**, the recommended distribution is the Anaconda python. Anaconda is provided for both Python versions 2 and 3. This is also the recommended distribution for users who whish to use the interactive environment **spyder** 
 
-Users who are planning to do **larger scale calculations** potentially using MPI4PY or OpenMP the recommended version is the Python distribution. Please note that this is the version requiring the foss-toolchain. i.e. do:
+Users who are planning to do **larger scale calculations** potentially using MPI4PY the recommended version is the Python distribution. Please note that this is the version requiring the foss-toolchain. i.e. do:
         
          module load foss/2017a
          module load Python
@@ -25,7 +25,7 @@ Users who are planning to do **larger scale calculations** potentially using MPI
 to get the default version of Python (typically 3.x). 
 Please note that there are several versions of the foss and intel toolchains each with multiple versions of Python, please choose the one appropriate for you. Note that after having chosen your toolchain use **module avail Python** to see versions available.
 
-For more information on available toolchains see: http://lunarc-documentation.readthedocs.io/en/latest/aurora_modules/#compiling-code-and-using-toolchains
+For more information on available toolchains see [compiling-code-and-using-toolchains](http://lunarc-documentation.readthedocs.io/en/latest/aurora_modules/#compiling-code-and-using-toolchains)
 
 For users working in **bioinformatics** the Biopython package is most likely the desired one.
 
@@ -51,7 +51,7 @@ Lunarc staff will install packages in the various distributions (mainly in the n
 
 Users are also able to install their own packages by creating their own local repository.
 
-In **Ananconda** the users are free to create their own environment. The user cen either use the pre-installed environment or create an empty environment and populate it with packages that the user chooses using *conda create* and *conda install* Please see: https://conda.io/docs/user-guide/tasks/manage-environments.html for information on how to use environments in conda. *please note* The .conda directory where the installed-files are located may become large which may become a problem as the default location for this directory is in ***/home/< username >***. If space is a problem, users should consider using ***/lunarc/nobackup*** instead.
+In **Ananconda** the users are free to create their own environment. The user cen either use the pre-installed environment or create an empty environment and populate it with packages that the user chooses using *conda create* and *conda install* Please see [Manage environments](https://conda.io/docs/user-guide/tasks/manage-environments.html) for information on how to use environments in conda. *please note* The .conda directory where the installed-files are located may become large which may become a problem as the default location for this directory is in ***/home/< username >***. If space is a problem, users should consider using ***/lunarc/nobackup*** instead.
 
 In all other installations users can install their own packages using *pip*
 
