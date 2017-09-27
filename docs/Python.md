@@ -47,7 +47,7 @@ All other installations are using the *pip* framework:
 
 Lunarc staff will install packages in the various distributions (mainly in the non-anaconda based ones). If you have a packages that may be of use for other users, or if you are having trouble installing a package, please send a support request for the installation of the package and Lunarc staff will consider it for inclusion in the distribution. 
 
- ### User installed packages
+ ## User installed packages
 
 Users are also able to install their own packages by creating their own local repository.
 
