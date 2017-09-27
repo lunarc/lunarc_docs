@@ -51,7 +51,7 @@ Lunarc staff will install packages in the various distributions (mainly in the n
 
 Users are also able to install their own packages by creating their own local repository.
 
-In **Ananconda** the users are free to create their own environment. The user cen either use the pre-installed environment or create an empty environment and populate it with packages that the user chooses using *conda create* and *conda install* Please see [Manage environments](https://conda.io/docs/user-guide/tasks/manage-environments.html) for information on how to use environments in conda. *please note* The .conda directory where the installed-files are located may become large which may become a problem as the default location for this directory is in ***/home/< username >***. If space is a problem, users should consider using ***/lunarc/nobackup*** instead.
+In **Ananconda** the users are free to create their own environment. The user cen either use the pre-installed environment or create an empty environment and populate it with packages that the user chooses using *conda create* and *conda install* Please see <a target="_blank" href="https://conda.io/docs/user-guide/tasks/manage-environments.html">Manage environments (new window)</a> for information on how to use environments in conda. *please note* The .conda directory where the installed-files are located may become large which may become a problem as the default location for this directory is in ***/home/< username >***. If space is a problem, users should consider using ***/lunarc/nobackup*** instead.
 
 In all other installations users can install their own packages using *pip*
 
