@@ -2,12 +2,10 @@
 
 Python is available on the cluster. Depending on the users experience and needs, different versions are available. Below is an non-exhaustive list of installed versions:
 
-        anaconda2 
-        anaconda3
+        Anaconda2 
+        Anaconda3
         Python
-        ScientificPython
         Biopython
-        IPython
         
 Information on these versions can be had using **module spider version**
 
@@ -19,12 +17,13 @@ Depending on the needs of the user, the recommended versions differ.
 
 For regular users with **no special requirements**, the recommended distribution is the Anaconda python. Anaconda is provided for both Python versions 2 and 3. This is also the recommended distribution for users who whish to use the interactive environment **spyder** 
 
-Users who are planning to do **larger scale calculations** potentially using MPI or OpenMP the recommended version is the Python distribution. Please note that this is the version requiring the foss-toolchain. i.e. do:
+Users who are planning to do **larger scale calculations** potentially using MPI4PY or OpenMP the recommended version is the Python distribution. Please note that this is the version requiring the foss-toolchain. i.e. do:
         
          module load foss/2017a
-         module load python
+         module load Python
 
-to get this version of python. Also note that there are several versions of the foss toolchain and also of the python installation, please choose the one appropriate for you.
+to get the default version of Python (typically 3.x). 
+Please note that there are several versions of the foss and intel toolchains each with multiple versions of Python, please choose the one appropriate for you. Note that after having chosen your toolchain use **module avail Python** to see versions available.
 
 For more information on available toolchains see: http://lunarc-documentation.readthedocs.io/en/latest/aurora_modules/#compiling-code-and-using-toolchains
 

@@ -11,8 +11,9 @@ pages:
 - Starting the DDT debugger on Aurora: ddt_debugger.md
 - Batch system rules: batch_system_rules.md
 - Linux Basics: linux_basics.md
-- MATLAB on the cluster: MATLAB.md
-- COMSOL on the cluster: COMSOL.md
 - ABAQUS on the cluster: Abaqus.md
+- COMSOL on the cluster: COMSOL.md
+- MATLAB on the cluster: MATLAB.md
+- PYTHON on the cluster: Python.md
 theme: readthedocs
 #markdown_extensions: [codehilite]
