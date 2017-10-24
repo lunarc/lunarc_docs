@@ -29,7 +29,7 @@ The following applications are installed and accessible from the drop down menus
  1. [Download](https://www.cendio.com/thinlinc/download "Download") the client for either Windows, Mac or Linux 
  1. Install it on your workstation or laptop
  1. Launch the client
- 1. Enter **aurora.lunarc.lu.se** or **erik.lunarc.lu.se** in the server field ![login window](images/desktopLogin.png "Desktop login window")
+ 1. Enter **aurora.lunarc.lu.se** in the server field ![login window](images/desktopLogin.png "Desktop login window")
  1. Enter your login credentials (Username, Password) and click [**Connect**]
  1. Enter the one time password received on your mobile phone ![otp input screen](images/desktopOTP.png "OTP input screen")
  1. Done!
