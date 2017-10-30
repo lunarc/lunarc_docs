@@ -189,7 +189,7 @@ to standard job submission scripts, allowing the GPU nodes to be fully accessibl
 
 #### Aurora
 The Aurora system has 64 GB of memory installed on a compute node.  To
-allow memory for the operating system, the default memory request per core is 3100 MB of memory.  
+allow memory for the operating system, only 62000 MB are available for jobs and the default memory request per core is 3100 MB of memory (20 cores per node).  
 If more than 3100 MB per core is needed it has to be 
 requested explicitly using the **--mem-per-cpu** option.  For example if you require 
 5000 MB per core add the line
@@ -831,8 +831,7 @@ processed should be all that is required.
 With this script you only specify the number of nodes you require
 using the `-N`option and specify the `--exclusive`.  The task farm
 will use all the cores available on the nodes, which is 20 in case of
-Aurora.   You **must not** specify `--tasks-per-node`.  If you did only one
-core per node would be used on Aurora.
+Aurora.   
 
 The following example will be
 using 40 cores on 2 nodes to process 200 jobs.
@@ -888,6 +887,8 @@ and core count in relation to the average job-time.
 differently compared to using srun within a different environment.
 Consult the man-page of srun for documentation and contact the Lunarc
 help desk if your require further consultancy.
+
+If you need more than the default 3100 MB memory per core, you have to specify both `--tasks-per-node` and `--mem-per-cpu`and **not** use `--exclusive`, because the latter gives you all cores on the node, which are too many with a higher memory requirement. Please match the core count and the memory per core so as to best utilise the resources of a node, which has a total of 62000 MB memory available for jobs.
 
 ### The worker script
 
