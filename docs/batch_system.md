@@ -338,8 +338,9 @@ while for a threaded job, using e.g. OpenMP or Java, one will typically
 only specify items 1 and 3.
 
 It is typically not advisable to have the product of items 2 and 3
-exceeding the number of cores per node, which is 16 Erik compute nodes
-and 20 for Aurora compute nodes. In most cases users requesting multiple nodes will want the product
+exceeding the number of cores per node, which is 20 for Aurora compute
+nodes.
+In most cases users requesting multiple nodes will want the product
 to equal the number of cores per node. The syntax how to control nodes,
 tasks per node and threads per task is explaned below.
 
@@ -355,8 +356,7 @@ codes on the nodes. Adding
 
 to your job script will ensure that SLURM will allocate dedicated nodes
 to your job. Obviously your project gets charged for the full costs of
-the nodes you are using, that is 20 cores per node in case of Aurora nodes and
-16 cores per node in case of Erik.
+the nodes you are using, that is 20 cores per node in case of Aurora nodes.
 
 ### Specifying the number of nodes required for the job
 
@@ -465,18 +465,6 @@ On **Aurora** software modules are arranged in a **hierarchical module naming sc
 earlier Lunarc systems and a [separate guide](http://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/) is available.  
 When compiling code using a [toolchain](http://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/#compiling-code-and-using-toolchains) module is recommended.
 
-On Erik we automatically load a modern version of the GCC compiler,
-which supports the deployed AMD Opteron processors. If you prefer using a different
-compiler, you can add the desired module, e.g., version 12.1 of the
-Intel compiler
-
-    module add intel/12.1
-
-If different modules have files with the same names in the search path,
-those of the module added last will be picked. Generally this is not a
-problem, but the compiler wrappers in the openmpi modules have the same
-names and it safest to only have one loaded at a time.
-
 
 ### SLURM variables
 
@@ -488,18 +476,18 @@ The SNIC meta-centres have agreed on a set of environment variables
 which should improve the portability of (parts of) job-scripts between
 SNIC sites. On Aurora and Erik the following variables are set by the system:
 
-| Environment variable | Explanation | Value on Aurora | Value on Erik |
-|----------------------|-------------|-----------------|-----------------|
-| SNIC_SITE | Identifying the SNIC site you are using | lunarc | lunarc |
-| SNIC_RESOURCE | Identifying the compute resource you are using | aurora | erik |
-| SNIC_BACKUP | User directory which is: Regularly backed up against accidental deletion, typically extremely limited space, used for e.g. precious source code | `/home/<user>` | `/home/<user>` |
-| SNIC_NOBACKUP | User directory which is: Accessible on all Lunarc systems, acessible on all Lunarc systems, for storing larger amounts of data, not backed up against accidental deletion   | `/lunarc/nobackup/users/<user>` | `/lunarc/nobackup/users/<user>` |
-| SNIC_TMP | Directory for best performance during a job.  At Lunarc: Local disk on nodes for storing temporary data during job execution. Transfer data with long-term value to SNIC_NOBACKUP before job has finished |  jobid dependent | jobid dependent |
+| Environment variable | Explanation | Value on Aurora |
+|----------------------|-------------|-----------------|
+| SNIC_SITE | Identifying the SNIC site you are using | lunarc |
+| SNIC_RESOURCE | Identifying the compute resource you are using | aurora |
+| SNIC_BACKUP | User directory which is: Regularly backed up against accidental deletion, typically extremely limited space, used for e.g. precious source code | `/home/<user>` |
+| SNIC_NOBACKUP | User directory which is: Accessible on all Lunarc systems, acessible on all Lunarc systems, for storing larger amounts of data, not backed up against accidental deletion   | `/lunarc/nobackup/users/<user>` |
+| SNIC_TMP | Directory for best performance during a job.  At Lunarc: Local disk on nodes for storing temporary data during job execution. Transfer data with long-term value to SNIC_NOBACKUP before job has finished |  jobid dependent |
 
 
 ## Using the node local disks to improve I/O performance
 
-On Aurora and Erik, all nodes have a local disk. This disk offers
+On Aurora all nodes have a local disk. This disk offers
 superior bandwidth when compared to accessing your home space or the
 /lunarc/nobackup centre storage. In particular when files are read or
 written repeatedly during execution it is advisable to copy the input
