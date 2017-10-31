@@ -6,7 +6,7 @@ Authors: Joachim Hein, Jonas Lindemann, Anders Sjöström, Magnus Ullner
 
 A more in-depth guide to the job submission system.
 
-# SLURM - the batch system on Aurora and Erik
+# SLURM - the batch system at Lunarc
 
 On a modern HPC system efficient management of the compute resources is
 absolutely crucial for the system to perform. Lunarc deploys 
@@ -206,12 +206,6 @@ Users of [LU projects](#specifying-a-project-and-partition-for-users-with-lu-pro
     #SBATCH --mem-per-cpu=11000
     #SBATCH -C mem256GB
 
-#### Erik
-Erik has 64 GB of memory on the standard nodes. Each node has two CPUs
-with eight cores each. The default memory request per core is therefore
-4000 MB of memory. As in the case of Aurora, if more than 4000MB of
-memory per core is needed it has to be described as above.
-
 
 ### Controlling job output
 
@@ -319,23 +313,15 @@ job submission.
 There is a a lot of structure within modern HPC equipment. For the
 purposes of this user guide we will stick to the following terminology:
 
-| Term | Explanation | Number on Aurora | Number  on Erik |
-|-----------|---------------------------------|-----------------------------|-----------------------------|
-| Node | A physical computer | Standard: 180 for SNIC use | Standard: 16 |
-|  |  | | Fat: 7 |
-|  |  |  | Extra: 2 |
-|  |  |  | Mic: 1 |
-|  |  |  | New: 1 |
-| Processor | This denotes a the multi-core processor, housing many processing elements | 2 per node | 2 per node |
-| GPU | This denotes a nvidia co-processor | 0 | Standard: 2 per node |
-|  |  |  | Fat: 4 per node|
-|  |  |  | Extra: 8 per node|
-|  |  |  | Mic:  0 per node|
-|  |  |  | New: 2 cards per node, 4 logical per node |
-| Socket | This is the “plug” the processor gets plugged into.  Used as a synonym for the processor | 2 per node | 2 per node |
-| Core | Individual processing element | 20 per node | 16 per node |
-| Task | This is a software concept.  It denotes a process, which is an instance of a running program.  It has its own data and instruction stream(s).  It can fork multiple threads to increase the computational speed.  Serial programs and pure MPI programs do not spawn threads. | User controls in job script | User controls in job script |
-| Thread | This is also a software concept.  A thread is a stream of instructions executed on the hardware.  It is part of a task and shares resources such as  data with other threads within the same task. | User controls in job script | User controls in job script |
+| Term | Explanation | Number on Aurora |
+|-----------|---------------------------------|-----------------------------|
+| Node | A physical computer | Standard: 180 for SNIC use |
+| Processor | This denotes a the multi-core processor, housing many processing elements | 2 per node |
+| GPU | This denotes a nvidia co-processor | 0 for SNIC use | 
+| Socket | This is the “plug” the processor gets plugged into.  Used as a synonym for the processor | 2 per node |
+| Core | Individual processing element | 20 per node |
+| Task | This is a software concept.  It denotes a process, which is an instance of a running program.  It has its own data and instruction stream(s).  It can fork multiple threads to increase the computational speed.  Serial programs and pure MPI programs do not spawn threads. | User controls in job script |
+| Thread | This is also a software concept.  A thread is a stream of instructions executed on the hardware.  It is part of a task and shares resources such as  data with other threads within the same task. | User controls in job script |
 
 ### Outline: Resource requests for multiprocessor jobs
 
