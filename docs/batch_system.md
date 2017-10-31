@@ -474,7 +474,7 @@ When compiling code using a [toolchain](http://lunarc-documentation.readthedocs.
 
 The SNIC meta-centres have agreed on a set of environment variables
 which should improve the portability of (parts of) job-scripts between
-SNIC sites. On Aurora and Erik the following variables are set by the system:
+SNIC sites. On Aurora the following variables are set by the system:
 
 | Environment variable | Explanation | Value on Aurora |
 |----------------------|-------------|-----------------|
@@ -496,7 +496,7 @@ files back to the submission directory once your program has finished.
 During its execution, your program would then read and write to local
 disk.
 
-In case of Aurora and Erik, the submission directory typically resides
+In case of Aurora, the submission directory typically resides
 on the /lunarc/nobackup centre storage. All data left on the node local
 disks **will be deleted** when your job has finished. You need to copy
 everything of interest to a more permanent storage space such as
@@ -751,14 +751,10 @@ to
 
     module add intel/12.1
 
-If you are running on Erik, it is necessary to add the support for the
-GPU with the line
-
-    module add cuda
-
-prior to the line ./processor. You need to consult with the person who
-build the executable for you.  Lunarc provided modules on Aurora are only
+Lunarc provided modules on Aurora are only
 visible once the required compiler or combination of compiler and MPI library is loaded.
+If you are using software another person has compiled for you need to
+consult with that person on the required modules to load. 
 
 On other services the modules typically complain
 if the wrong compiler is loaded and are hence self-documenting.
@@ -1279,8 +1275,7 @@ case.
 
 Obviously all versions of the Intel
 compiler support thread binding on the Intel processors deployed on
-Aurora and 
-Erik.
+Aurora.
 
 For version 13.1 of the Intel compiler thread is controlled by setting
 the environment variable KMP_AFFINITY. The value
