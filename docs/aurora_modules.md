@@ -193,10 +193,13 @@ Loading this module will load a number of additional module require for Gromacs 
 ### Example accessing R
 
 This is another example on how to access a specific software package.  This time we want to run the statistical software package R.
+
 ```
 module spider R
 ```
+
 One gets:
+
 ```
 ------------------------------------------------------------------
   R:
@@ -220,11 +223,15 @@ One gets:
      $ module spider R/3.2.1-bare
 ------------------------------------------------------------------
 ```
+
 If we are interested in version 3.2.3, we do a
+
 ```
 module spider R/3.2.3
 ```
+
 next and get the following info:
+
 ```
 ------------------------------------------------------------------
   R: R/3.2.3
@@ -239,28 +246,55 @@ next and get the following info:
  
 ...
 ```
+
 The output states the two modules that need loading to get access to this R version.  We issue
+
 ```
 module load GCC/4.9.3-binutils-2.25
 module load OpenMPI/1.8.8
 module load R/3.2.3
 ```
+
 and have access to R.
+
+## Working with a standard set of modules
+Many users of the Lunarc systems conduct similar tasks for many days, e.g. using the same pieces of software on different sets of data.  In this case users should consider creating **user collections** of modules.  Working with user collections are a better alternative to e.g. adding **module load** statements to e.g. your **.bashrc** file.
+
+
+To create a user collection, you need to load the modules required for the task at hand.  With the command
+
+```
+module save
+```
+stores the currently loaded modules as a default collection.  Alternatively you can create a named collection
+
+```
+module save collection-name
+```
+
+Where you can choose any name you like as **collection-name**.  When you restore a collection, this has two effects:
+
+1. Unloading all currently loaded modules
+2. Loading all modules included in the collection
+
+To restore you default collection
+
+```
+module restore
+```
+for a named collection the resorte is down via the command
+
+```
+module restore collection-name
+```
+
+
 
 ## Lmod cache
 
 To improve the performance of the `module spider` command, lmod caches
-the entire module structure of the system.  This cache is currently
-configured to be **updated once per day**.
+the entire module structure of the system.  The system cache, holding info about the modules installed by the Lunarc team, is updated, every time the Lunarc team installs new software. 
 
-This can have the effect that you see a slightly outdated version of the module tree, when using commands such as `module avail`or `module spider`. This should only be an issue with additions to the module tree made in the last hours. The command
-```bash
-module --ignore-cache spider
-```
-will force an update of the cache files in your account. 
-
-The cache files private to your account are stored in the directory
-`$HOME/.lmod.d/.cache/`.
 
 # Compiling code and using toolchains
 
