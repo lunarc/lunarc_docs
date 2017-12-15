@@ -260,21 +260,23 @@ and have access to R.
 ## Working with a standard set of modules
 Many users of the Lunarc systems conduct similar tasks for many days, e.g. using the same pieces of software on different sets of data.  In this case users should consider creating **user collections** of modules.  Working with user collections are a better alternative to e.g. adding **module load** statements to e.g. your **.bashrc** file.
 
-
-To create a user collection, you need to load the modules required for the task at hand.  With the command
+### Creating and restoring user collections
+To create a user collection load the modules required for the task at hand.  The command 
 
 ```
 module save
 ```
-stores the currently loaded modules as a default collection.  Alternatively you can create a named collection
+would then store the currently loaded modules as a default collection.  Alternatively you can create a named collection
 
 ```
 module save collection-name
 ```
 
-Where you can choose any name you like as **collection-name**.  When you restore a collection, this has two effects:
+Where you can choose any name you like as **collection-name**.  **Important:** the module system will remember whether a module was loaded as default (no version specified) or whether you loaded a specific version.  If you include default modules, the contents of your collection will change when ever the default changes.
 
-1. Unloading all currently loaded modules
+When one restores a collection, this has two effects:
+
+1. Unloading/purging all currently loaded modules
 2. Loading all modules included in the collection
 
 To restore your default collection
