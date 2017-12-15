@@ -277,18 +277,36 @@ Where you can choose any name you like as **collection-name**.  When you restore
 1. Unloading all currently loaded modules
 2. Loading all modules included in the collection
 
-To restore you default collection
+To restore your default collection
 
 ```
 module restore
 ```
-for a named collection the resorte is down via the command
+for a named collection the restore is done as follows
 
 ```
 module restore collection-name
 ```
 
+### Enquiring about user collections
+To get a list of all user collections you have created use the sub-command `savelist`:
 
+```
+module savelist
+```
+
+The sub-command `describe` shows you the modules included in the collection
+
+```
+module describe collection-name
+```
+
+If you want to remove a collection from your list:
+
+```
+module disable collection-name
+```
+which actually re-names the collection in a way that it would no longer show with `module savelist`, but recovery of the collection is possible.
 
 ## Lmod cache
 
