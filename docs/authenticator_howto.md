@@ -30,7 +30,48 @@ Enter your normal LUNARC credentials. Make sure to select the **I am a human** c
 
 ![sample screen](images/selfservice_otp.png "Desktop sample screen")
 
-The next screen will display a general tab with user information and a token tab. Click on the token tab.
+The next screen will display a general tab with user information and a token tab. Click on the token tab. This will display a button **Activate PhenixID Pocket Pass**. 
+
+![sample screen](images/add_token1.png "Desktop sample screen")
+
+Click on the button to begin the process of adding a authenticator token. In the shown dialog enter a descriptive name for your token that will be displayed in your device.
+
+![sample screen](images/add_token2.png "Desktop sample screen")
+
+Click next to continue. This will display a QR-code that will be scanned by your app to add the token to your device.
+
+![sample screen](images/add_token3.png "Desktop sample screen")
+
+Open your Pocket Pass app and click **Install key**
+
+![sample screen](images/pp_ss2.png "Desktop sample screen")
+
+Click on the **Scan barcode**
+
+![sample screen](images/pp_ss3.png "Desktop sample screen")
+
+Point your camera on the QR-code shown on the screen. The app should detect the code and install the key automatically. In the next step the app asks you for a pin-code to protect your key. Enter your pin-code. 
+
+![sample screen](images/pp_ss4.png "Desktop sample screen")
+
+When this is done the following screen should be shown:
+
+![sample screen](images/pp_ss5.png "Desktop sample screen")
+
+Click continue to display the current valid otp-code.
+
+![sample screen](images/pp_ss6.png "Desktop sample screen")
+
+You can now login to the Aurora services using the authenticator app instead of with SMS. 
+
+
+
+
+
+
+
+
+
 
 
 
