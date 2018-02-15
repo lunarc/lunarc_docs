@@ -11,15 +11,13 @@ Download and install the Pocket Pass app on your smartphone:
 
 <a href="https://play.google.com/store/apps/details?id=com.phenixidentity.pocketpass" target="_blank"><img src="https://www.phenixid.se/wp-content/themes/phenixid/images/google-play.png" width=160></a>
 
-## Login into the LUNARC HPC desktop
+## Login to the LUNARC HPC desktop
 
-Activation of the Pocket Pass app must be done inside the LUNARC HPC Desktop on your desktop/laptop computer.  It can not be done in a web browser running directly on a computer or smartphone. Please see the following guide on how to login to the desktop:
-
-[Using the LUNARC HPC Desktop](http://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop "Using the LUNARC HPC Desktop")
+Activation of the Pocket Pass app must be done inside the LUNARC HPC Desktop on your desktop/laptop computer.  It can not be done in a web browser running directly on a computer or smartphone. Please see refer to our [Desktop guide](http://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop) on how to login to the desktop:
 
 ## Starting the Self-service portal
 
-After logging into the LUNARC HPC Desktop, click on the **Applications** menu on the top left on the desktop. Select **Lunarc Tools/Security/Register OTP Authenticator**. If the menu item is not available you need to start a new desktop session, see the section ["Resolving issues when connecting"] (http://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop/#resolving-issues-when-connectiong) of the Desktop guide for details.
+After logging into the LUNARC HPC Desktop, click on the **Applications** menu on the top left on the desktop. Select **Lunarc Tools/Security/Register OTP Authenticator**. If the menu item is not available you need to start a new desktop session, see the section ["Resolving issues when connecting"] (http://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop/#resolving-issues-when-connecting) of the Desktop guide for details.
 
 ![sample screen](images/authenticator_menu.png "Desktop sample screen")
 
@@ -39,7 +37,7 @@ Click on the button to begin the process of adding a authenticator token. In the
 
 ![sample screen](images/add_token2.png "Desktop sample screen")
 
-Click next to continue. This will display a QR-code, which you need to scan with the Pocket Pass app on your smartphone in the next step.  **Make sure no-one can scan your QR-code and compromise you security**
+Click next to continue. This will display a QR-code, which you have to scan with the Pocket Pass app on your smartphone in the next step.  **Make sure no-one can scan your QR-code and compromise you security**
 
 ![sample screen](images/add_token3.png "Desktop sample screen")
 
@@ -52,7 +50,7 @@ Click on the **Scan barcode**
 
 ![sample screen](images/pp_ss3.png "Desktop sample screen")
 
-Point your camera on the QR-code shown on the screen. The app should detect the code and install the key automatically. 
+Point your camera on the QR-code shown inside the HPC desktop on your desktop/laptop computer. The app should detect the code and install the key automatically. 
 
 In the next step the app asks you for a pin-code to protect your key. Enter your pin-code. 
 
@@ -66,4 +64,4 @@ Click continue to display the current valid otp-code.
 
 ![sample screen](images/pp_ss6.png "Desktop sample screen")
 
-You can now login to the Aurora services using the Pocket Pass app. Your telephone will no longer receive SMS when you login in to a Lunarc system.
+You can now login to the Lunarc systems using the Pocket Pass app. Your telephone will no longer receive SMS when connecting to a Lunarc system.
