@@ -37,7 +37,7 @@ Click on the button to begin the process of adding a authenticator token. In the
 
 ![sample screen](images/add_token2.png "Desktop sample screen")
 
-Click next to continue. This will display a QR-code, which you have to scan with the Pocket Pass app on your smartphone in the next step.  **Make sure no-one can scan your QR-code and compromise you security**
+Click next to continue. This will display a QR-code, which you have to scan with the Pocket Pass app on your smartphone in the next step.  **Make sure no-one can scan your QR-code and compromise your security**
 
 ![sample screen](images/add_token3.png "Desktop sample screen")
 
