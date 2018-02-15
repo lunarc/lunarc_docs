@@ -19,7 +19,7 @@ Activation of the Pocket Pass app must be done inside the LUNARC HPC Desktop on 
 
 ## Starting the Self-service portal
 
-After logging into the LUNARC HPC Desktop, click on the **Applications** menu on the top left on the desktop. Select **Lunarc Tools/Security/Register OTP Authenticator**. If the menu item is not available you need to start a new desktop session, see the "[Resolving issues when connectiong] (http://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop/#resolving-issues-when-connectiong)"-section of the Desktop guide for details.
+After logging into the LUNARC HPC Desktop, click on the **Applications** menu on the top left on the desktop. Select **Lunarc Tools/Security/Register OTP Authenticator**. If the menu item is not available you need to start a new desktop session, see the section ["Resolving issues when connecting"] (http://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop/#resolving-issues-when-connectiong) of the Desktop guide for details.
 
 ![sample screen](images/authenticator_menu.png "Desktop sample screen")
 
