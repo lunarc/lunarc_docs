@@ -61,7 +61,7 @@ In all other installations (default or loadable module) users can install their 
 
         pip install --install-option="--prefix=$HOME/local" package_name
 
-This will install the package *package_name* in the users home-directory. If the package is large, consider using ***/lunarc/nobackup*** instead.
+This will install the package *package_name* in the users home-directory. If the package is large, consider using ***/lunarc/nobackup*** instead.  Make sure the installation location of your packages gets added to your **PYTHONPATH** environment variable (e.g. private module file, sourceing a script, ...)
 
 Again, *please* check using *pip list* or *conda list* if the package is already installed in the selected distribution. 
 
