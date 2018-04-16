@@ -13,12 +13,12 @@ Download and install the Pocket Pass app on your smartphone:
 
 ## Login to the LUNARC HPC desktop
 
-Activation of the Pocket Pass app must be done inside the Lund University network, It can be done done in a web browser running directly on a computer or smartphone. We recommend that you use a computer for the activation. The link to the activation portal is [https://phenix3.lunarc.lu.se/selfservice/](https://phenix3.lunarc.lu.se/selfservice/)
+Activation of the Pocket Pass app is done via a web-based activation portal. Activation can be done done in a web browser from a computer or smartphone. We recommend that you use a computer for the activation. The link to the activation portal is [https://phenix3.lunarc.lu.se/selfservice/](https://phenix3.lunarc.lu.se/selfservice/).
 
 ## Starting the Self-service portal
 
 
-If you are using the Lunarc HPC desktop you, after you log in click on the **Applications** menu on the top left on the desktop. Select **Lunarc Tools/Security/Register OTP Authenticator**. If the menu item is not available you need to start a new desktop session, see the section ["Resolving issues when connecting"](http://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop/#resolving-issues-when-connecting) of the Desktop guide for details.
+If you are using the Lunarc HPC desktop, after having logged in click on the **Applications** menu on the top left on the desktop. Select **Lunarc Tools/Security/Register OTP Authenticator**. If the menu item is not available you need to start a new desktop session, see the section ["Resolving issues when connecting"](http://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop/#resolving-issues-when-connecting) of the Desktop guide for details.
 
 ![sample screen](images/authenticator_menu.png "Desktop sample screen")
 
