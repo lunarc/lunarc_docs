@@ -13,7 +13,7 @@ Download and install the Pocket Pass app on your smartphone:
 
 ## Login to the LUNARC HPC desktop
 
-Activation of the Pocket Pass app must be done inside the Lund University network, It can be done done in a web browser running directly on a computer or smartphone. We recommend that you use a computer for the activation. The link to the activation portal is https://phenix3.lunarc.lu.se/selfservice/
+Activation of the Pocket Pass app must be done inside the Lund University network, It can be done done in a web browser running directly on a computer or smartphone. We recommend that you use a computer for the activation. The link to the activation portal is [https://phenix3.lunarc.lu.se/selfservice/](https://phenix3.lunarc.lu.se/selfservice/)
 
 ## Starting the Self-service portal
 
