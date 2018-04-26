@@ -11,18 +11,20 @@ Download and install the Pocket Pass app on your smartphone:
 
 <a href="https://play.google.com/store/apps/details?id=com.phenixidentity.pocketpass" target="_blank"><img src="https://www.phenixid.se/wp-content/themes/phenixid/images/google-play.png" width=160></a>
 
-## Login to the LUNARC HPC desktop
+## Accessing the self-service portal
 
-Activation of the Pocket Pass app is done via a web-based activation portal. Activation can be done in a web browser from a computer or smartphone. We recommend that you use a computer for the activation. The link to the activation portal is [https://phenix3.lunarc.lu.se/selfservice/](https://phenix3.lunarc.lu.se/selfservice/).
+### From a web browser
 
-## Starting the Self-service portal
+Activation of the Pocket Pass app is done via a web-based activation portal. Activation can be done in a web browser from any computer or smartphone.  However we recommend that you use a computer for the activation. The link to the activation portal is [https://phenix3.lunarc.lu.se/selfservice/](https://phenix3.lunarc.lu.se/selfservice/).
 
+### Inside the Lunarc HPC desktop
 
-If you are using the Lunarc HPC desktop, after having logged in click on the **Applications** menu on the top left on the desktop. Select **Lunarc Tools/Security/Register OTP Authenticator**. If the menu item is not available you need to start a new desktop session, see the section ["Resolving issues when connecting"](http://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop/#resolving-issues-when-connecting) of the Desktop guide for details.
+If you are using the Lunarc HPC desktop, you can access the self-service portal from the desktop menue. Click on the **Applications** menu on the top left on the desktop. Select **Lunarc Tools/Security/Register OTP Authenticator**. If the menu item is not available you need to start a new desktop session, see the section ["Resolving issues when connecting"](http://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop/#resolving-issues-when-connecting) of the Desktop guide for details.
 
 ![sample screen](images/authenticator_menu.png "Desktop sample screen")
 
-This will show the login screen to the self-service portal:
+### Token activation
+The self service portal (web browser or Lunarc HPC desktop) will show the following login screen:
 
 ![sample screen](images/selfservice_login.png "Desktop sample screen")
 
