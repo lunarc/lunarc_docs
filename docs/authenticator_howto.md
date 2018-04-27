@@ -13,17 +13,36 @@ Download and install the Pocket Pass app on your smartphone:
 
 ## Accessing the self-service portal
 
-### From a web browser
+### From a web browser in the Lund University network
 
-Activation of the Pocket Pass app is done via a web-based activation portal. Activation can be done in a web browser from any computer or smartphone.  However we recommend that you use a computer for the activation. The link to the activation portal is [https://phenix3.lunarc.lu.se/selfservice/](https://phenix3.lunarc.lu.se/selfservice/).
+Activation of the Pocket Pass app is done via a web-based activation portal. Activation can be done in a web browser from any computer inside the Lund University network.  However we recommend that you use a computer for the activation. The link to the activation portal is [https://phenix3.lunarc.lu.se/selfservice/](https://phenix3.lunarc.lu.se/selfservice/).
 
 ### Inside the Lunarc HPC desktop
 
-If you are using the Lunarc HPC desktop, you can access the self-service portal from the desktop menue. Click on the **Applications** menu on the top left on the desktop. Select **Lunarc Tools/Security/Register OTP Authenticator**. If the menu item is not available you need to start a new desktop session, see the section ["Resolving issues when connecting"](http://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop/#resolving-issues-when-connecting) of the Desktop guide for details.
+If you are using the Lunarc HPC desktop, you can access the self-service portal from the desktop menue.  If you are not yet using the desktop, please review our [step-by-step guide](http://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop/) on how to install and use the desktop.  It works on Windows, Linux and macOS.  You might find it benefical for all your work on our services.
+
+Once logged in via the desktop, click on the **Applications** menu on the top left of the desktop. Select **Lunarc Tools/Security/Register OTP Authenticator**. If the menu item is not available you need to start a new desktop session, see the section ["Resolving issues when connecting"](http://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop/#resolving-issues-when-connecting) of the Desktop guide for details.
 
 ![sample screen](images/authenticator_menu.png "Desktop sample screen")
 
-### Token activation
+### Connecting with X11-forwarding to aurora
+A third option is to use X11-forwarding, though we recommend the HPC desktop over this approach.
+
+#### Linux or macOS
+Inside a terminal window connect to aurora via
+
+```
+ssh -XY aurora.lunarc.lu.se -l username
+```
+
+where you replace "username" with your user-id.  You can then start a firefox window at the command prompt.  
+
+Please note, when using macOS, X11 is not included by default.  You need to install it from [https://www.xquartz.org/](https://www.xquartz.org/)
+
+#### Windows
+On windows you need to install an X11-server before this is going to work.  Instructions are available on [http://www.geo.mtu.edu/geoschem/docs/putty_install.html](http://www.geo.mtu.edu/geoschem/docs/putty_install.html).
+
+## Token activation
 The self service portal (web browser or Lunarc HPC desktop) will show the following login screen:
 
 ![sample screen](images/selfservice_login.png "Desktop sample screen")
