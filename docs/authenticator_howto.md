@@ -25,6 +25,8 @@ Once logged in via the desktop, click on the **Applications** menu on the top le
 
 ![sample screen](images/authenticator_menu.png "Desktop sample screen")
 
+Alternatively to using the menu, you can start a firefox window inside the Lunarc HPC desktop and cut-n-paste the link `https://phenix3.lunarc.lu.se/selfservice/` into it.  
+
 ### Connecting with X11-forwarding to aurora
 A third option is to use X11-forwarding, though we recommend the HPC desktop over this approach.
 
