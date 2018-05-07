@@ -20,7 +20,7 @@ The self service portal will show the following login screen:
 
 ![sample screen](images/selfservice_login.png "Desktop sample screen")
 
-Enter your normal LUNARC credentials. Make sure to select the **I am a human** checkbox. If all is OK you will receive a SMS with a OTP token and the next screen will display:
+Enter your normal LUNARC credentials. Make sure to select the **I am a human** checkbox. If all is OK you will receive a SMS with a OTP token to the phone number registered in our system.  The next screen will display:
 
 ![sample screen](images/selfservice_otp.png "Desktop sample screen")
 
