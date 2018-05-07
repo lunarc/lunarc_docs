@@ -59,6 +59,10 @@ Click continue to display the current valid otp-code.
 
 ![sample screen](images/pp_ss6.png "Desktop sample screen")
 
+## Important last step: Activate your token
+
 Go back to the self-service portal and click "next". You will then be prompted for an otp to finalize the activation. This OTP you will get from the pocket-pass application i.e. NOT via an text-message.
+
+## Try to connect
 
 You can now login to the Lunarc systems using the Pocket Pass app. Your telephone will no longer receive SMS when connecting to a Lunarc system.
