@@ -5,9 +5,7 @@ The Lunarc HPC Desktop provides Lunarc and SNIC users with a solution for hardwa
 
 The same 2-factor authentication as for a normal ssh session is used and the desktop session can easily be disconnected for later reconnect. The whole desktop state (including the latest mouse position) is saved and the system works both from the campus network and from home or when traveling.
 
-The 2D desktop (currently Gnome) runs on a scalable desktop infrastructure that supports multiple desktop agents and load balancing features to ensure a smooth experience. 3D OpenGL applications are executed on dedicated visualization nodes with hardware graphics and seamlessly displayed into the 2D desktop.
-
-> 3D support on Aurora will be available shortly.
+The 2D desktop (currently Mate) runs on a scalable desktop infrastructure that supports multiple desktop agents and load balancing features to ensure a smooth experience. 3D OpenGL applications are executed on dedicated visualization nodes with hardware graphics and seamlessly displayed into the 2D desktop.
 
 <!--
 The following applications are installed and accessible from the drop down menus (more will come):
