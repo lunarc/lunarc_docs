@@ -61,7 +61,7 @@ Click continue to display the current valid otp-code.
 
 ## Important last step: Activate your token
 
-Go back to the self-service portal and click "next". You will then be prompted for an otp to finalize the activation. You will get this one-time-password from the pocket-pass application i.e. NOT via an text-message.
+Go back to the self-service portal and click "next". You will then be prompted for an otp to finalize the activation. You will get this otp from the pocket-pass application i.e. NOT via an text-message.
 
 ## Try to connect
 
