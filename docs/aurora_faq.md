@@ -6,7 +6,11 @@ Author: Joachim Hein (Lunarc)
 ## I have forgotten my login password for Aurora
 To receive a new password, please phone Lunarc support on 0462224454 (+46462224454 outside Sweden) from the mobile phone you have registered in [SUPR](https://supr.snic.se/person/).  Additional questions will be asked to verify your identity.  
 
-## Could your send my *one time password* to my new mobile phone number?
+## I can not login after migrating to pocket pass
+Many users have issues because of missing the [activation step](http://lunarc-documentation.readthedocs.io/en/latest/authenticator_howto/#important-last-step-activate-your-token).  
+Connect to the [self-service portal](http://lunarc-documentation.readthedocs.io/en/latest/authenticator_howto/#accessing-the-self-service-portal), go into "tokens", choose "activate" and follow the instructions.
+
+## Could your send my *one time password* for pocket pass activation to my new mobile phone number?
 Please enter the new phone number into [SUPR](https://supr.snic.se/person/) and raise a [support request](http://www.lunarc.lu.se/support/support_form) to update our internal database for this change.
 
 ## What is the maximum job time on Aurora?
