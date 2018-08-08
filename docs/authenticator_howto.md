@@ -67,4 +67,4 @@ Go back to the self-service portal and click "next". You will then be prompted f
 
 ## Completed.
 
-You can now login to the Lunarc systems using the Pocket Pass app. Your telephone will no longer receive SMS when connecting to a Lunarc system. Having entered your password you will be prompted to enter your Pocket Pass OTP when logging in.
+You can now login to the Lunarc systems using the Pocket Pass app. Your telephone will not receive an SMS when connecting to a Lunarc system. Having entered your password you will be prompted to enter your Pocket Pass OTP when logging in.
