@@ -1,6 +1,8 @@
-# Using the Pocket Pass authenticator
+# Installing, setting up  and using the Pocket Pass authenticator
 
-## Download and install Pocket Pass
+The process to install and set up the Pocket Pass authenticator is in five (5) steps, it is important that ALL steps are performed correctly so PLEASE read the instructions carefully.
+
+## <span style="color:red">STEP 1:</span>  Download and install Pocket Pass
 Download and install the Pocket Pass app on your smartphone:
 
 ### Download for Apple iOS
@@ -11,11 +13,11 @@ Download and install the Pocket Pass app on your smartphone:
 
 <a href="https://play.google.com/store/apps/details?id=com.phenixidentity.pocketpass" target="_blank"><img src="https://www.phenixid.se/wp-content/themes/phenixid/images/google-play.png" width=160></a>
 
-## Accessing the self-service portal
+## <span style="color:red">STEP 2:</span>  Accessing the self-service portal
 
 Activation of the Pocket Pass app is done via a web-based activation portal.  Activation can be done in any web browser from any computer.  The link to the activation portal is [https://phenix3.lunarc.lu.se/selfservice/](https://phenix3.lunarc.lu.se/selfservice/). 
 
-## Token activation
+## <span style="color:red">STEP 3:</span>  Token activation
 The self service portal will show the following login screen:
 
 ![sample screen](images/selfservice_login.png "Desktop sample screen")
@@ -36,7 +38,7 @@ Click next to continue. This will display a QR-code, which you have to scan with
 
 ![sample screen](images/add_token3.png "Desktop sample screen")
 
-## Install the token on your smart phone
+## <span style="color:red">STEP 4:</span>  Install the token on your smart phone
 Make sure the Pocket Pass app can access the camera of your smart phone.   Open the Pocket Pass app and click **Install key**
 
 ![sample screen](images/pp_ss2.png "Desktop sample screen")
@@ -59,10 +61,10 @@ Click continue to display the current valid otp-code.
 
 ![sample screen](images/pp_ss6.png "Desktop sample screen")
 
-## Important last step: Activate your token
+## <span style="color:red">STEP 5:</span>  Important last step: Activate your token
 
 Go back to the self-service portal and click "next". You will then be prompted for an otp to finalize the activation. You will get this otp from the pocket-pass application i.e. NOT via an text-message.
 
-## Try to connect
+## Completed.
 
-You can now login to the Lunarc systems using the Pocket Pass app. Your telephone will no longer receive SMS when connecting to a Lunarc system.
+You can now login to the Lunarc systems using the Pocket Pass app. Your telephone will no longer receive SMS when connecting to a Lunarc system. Having entered your password you will be prompted to enter your Pocket Pass OTP when logging in.
