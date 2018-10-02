@@ -1,15 +1,15 @@
-# Using the job submission system at Lunarc #
+# Using the job submission system at LUNARC #
 
 Authors: Joachim Hein, Jonas Lindemann, Anders Sjöström, Magnus Ullner
 
-*Document is currently updated for Aurora - Check back frequently!*
+*Document is frequently updated for Aurora*
 
 A more in-depth guide to the job submission system.
 
-# SLURM - the batch system at Lunarc
+# SLURM - the batch system at LUNARC
 
 On a modern HPC system efficient management of the compute resources is
-absolutely crucial for the system to perform. Lunarc deploys 
+absolutely crucial for the system to perform. LUNARC deploys 
 [SLURM](http://slurm.schedmd.com/) (**S**imple **L**inux **U**tility
 for **R**esource **M**anagement) as resource manager. For your program
 to be executed you have to describe to SLURM the resources required by
@@ -73,7 +73,7 @@ specifies the resources needed. In our case it asks for 5 minutes of
 computer time. If the jobs hasn’t finished after that time, SLURM will
 terminate it. Job scripts typically contain more than one of these
 statements, specifying e.g. more than one processor or more memory. The
-most commonly used resource statements at Lunarc will be explained
+most commonly used resource statements at LUNARC will be explained
 below. The resource statements are followed by a list of programs and
 UNIX commands to be executed on the system. This is actually a normal
 UNIX script and everything you can do in a UNIX script can be done here
@@ -132,7 +132,7 @@ This will name your job “parameterTest”.
 ### Specifying a project and partition for users with LU projects or multiple projects 
 
 Most users are members of a single SNIC project. These users do not need to
-specify a project in their submission script. The Lunarc set-up
+specify a project in their submission script. The LUNARC set-up
 will automatically use that project for accounting.
 
 Users with membership in more than project and/or in an Lund
@@ -325,7 +325,7 @@ purposes of this user guide we will stick to the following terminology:
 
 ### Outline: Resource requests for multiprocessor jobs
 
-When running multi processor jobs on the Lunarc clusters, one should
+When running multi processor jobs on the LUNARC clusters, one should
 specify:
 
  1.  The number of nodes required by the jobs
@@ -462,7 +462,7 @@ when hitting sbatch:
 ### Compiler modules
 
 On **Aurora** software modules are arranged in a **hierarchical module naming scheme**.  Accessing software on Aurora very different from 
-earlier Lunarc systems and a [separate guide](http://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/) is available.  
+earlier LUNARC systems and a [separate guide](http://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/) is available.  
 When compiling code using a [toolchain](http://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/#compiling-code-and-using-toolchains) module is recommended.
 
 
@@ -481,8 +481,8 @@ SNIC sites. On Aurora the following variables are set by the system:
 | SNIC_SITE | Identifying the SNIC site you are using | lunarc |
 | SNIC_RESOURCE | Identifying the compute resource you are using | aurora |
 | SNIC_BACKUP | User directory which is: Regularly backed up against accidental deletion, typically extremely limited space, used for e.g. precious source code | `/home/<user>` |
-| SNIC_NOBACKUP | User directory which is: Accessible on all Lunarc systems, acessible on all Lunarc systems, for storing larger amounts of data, not backed up against accidental deletion   | `/lunarc/nobackup/users/<user>` |
-| SNIC_TMP | Directory for best performance during a job.  At Lunarc: Local disk on nodes for storing temporary data during job execution. Transfer data with long-term value to SNIC_NOBACKUP before job has finished |  jobid dependent |
+| SNIC_NOBACKUP | User directory which is: Accessible on all LUNARC systems, for storing larger amounts of data, not backed up against accidental deletion   | `/lunarc/nobackup/users/<user>` |
+| SNIC_TMP | Directory for best performance during a job.  At LUNARC: Local disk on nodes for storing temporary data during job execution. Transfer data with long-term value to SNIC_NOBACKUP before job has finished |  jobid dependent |
 
 
 ## Using the node local disks to improve I/O performance
@@ -511,7 +511,7 @@ lines. Wildcards are allowed. These files will be copied from the local
 disk where $SNIC_TMP/slurm_save_files exists to the submission
 directory regardless whether the job ends as planned or is deleted,
 unless there is a problem with the disk or node itself. Note that the
-slurm_save_files feature is unique to Lunarc.
+slurm_save_files feature is unique to LUNARC.
 
 For the required UNIX scripting you should use the following environment
 variables. Example scripts using this technique are provided in the
@@ -546,7 +546,7 @@ When the Intel MPI library was used to build your executable, your jobsscript sh
 * Load the Intel MPI module relevant for your compiler
 * Start your program with `srun`
 
-When using Lunarc provided software, and you are loading an
+When using LUNARC provided software, and you are loading an
 `impi` module to see your package, you need to use `srun` to start MPI
 executables of this package.
 
@@ -641,7 +641,7 @@ In this section we provide sample scripts for typical use cases.
 ### Basic run script
 The following is an example for a simple script running the program
 named `processor`, whose executable is located in the submission
-directory.  If you are using a Lunarc provided executable, load the
+directory.  If you are using a LUNARC provided executable, load the
 required module(s) and omit the dot before the program name. 
 
 This example does not use the node local disc, which is ok
@@ -751,7 +751,7 @@ to
 
     module add intel/12.1
 
-Lunarc provided modules on Aurora are only
+LUNARC provided modules on Aurora are only
 visible once the required compiler or combination of compiler and MPI library is loaded.
 If you are using software another person has compiled for you need to
 consult with that person on the required modules to load. 
@@ -788,7 +788,7 @@ the directories contains the input data and the program executable to be
 run.
 
 Keep the number of jobs-steps at a reasonable level. Recent testing by
-the Lunarc support team has shown that, when including a sleep statement
+the LUNARC support team has shown that, when including a sleep statement
 inside the do loop the setup can be used to processes 800 jobs.
 
 ### The master script
@@ -854,7 +854,7 @@ and core count in relation to the average job-time.
 
 **Remarks:** When using srun inside a batch script many srun-options act
 differently compared to using srun within a different environment.
-Consult the man-page of srun for documentation and contact the Lunarc
+Consult the man-page of srun for documentation and contact the LUNARC
 help desk if your require further consultancy.
 
 If you need more than the default 3100 MB memory per core, you have to specify both `--tasks-per-node` and `--mem-per-cpu`and **not** use `--exclusive`, because the latter gives you all cores on the node, which are too many with a higher memory requirement. Please match the core count and the memory per core so as to best utilise the resources of a node, which has a total of 62000 MB memory available for jobs.

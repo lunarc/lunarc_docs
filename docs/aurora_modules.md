@@ -1,12 +1,12 @@
-Using installed software on Lunarc's Aurora service
+Using installed software on LUNARC's Aurora service
 ================
 
-Author: Joachim Hein (Lunarc)
+Author: Joachim Hein (LUNARC)
 
 ![Node icon](images/node_icon.jpg "Node icon")
 
 # Hierarchical module naming scheme
-With the start of the Aurora service Lunarc is using an hierarchical module naming scheme.  Hierarchical modules ensure that the correct shared libraries are available when running an application, while keeping screen output of standard module commands such as `module avail` manageable.
+With the start of the Aurora service LUNARC is using an hierarchical module naming scheme.  Hierarchical modules ensure that the correct shared libraries are available when running an application, while keeping screen output of standard module commands such as `module avail` manageable.
 
 ## Hierachical naming scheme concept
 
@@ -66,9 +66,9 @@ would have the same effect unless the default changes, which it may
 do, if
 
  * You load a module
- * The lunarc team installs another version of the software
+ * The LUNARC team installs another version of the software
 
-So if you require a specific version, the Lunarc team strongly
+So if you require a specific version, the LUNARC team strongly
 recommends to not rely on defaults, but explicitly specify the version
 you are after.
 
@@ -79,7 +79,7 @@ module list
 ```
 
 In a hierarchical module naming scheme the command `module avail` is
-not as useful as it is in a flat module naming scheme which Lunarc
+not as useful as it is in a flat module naming scheme which LUNARC
 deployed on earlier services.   In many situations `module avail`
 resulted in the desired action, one has to use the `module spider`
 command which is described in the text below.
@@ -258,7 +258,7 @@ module load R/3.2.3
 and have access to R.
 
 ## Working with a standard set of modules
-Many users of the Lunarc systems conduct similar tasks for many days, e.g. using the same pieces of software on different sets of data.  In this case users should consider creating **user collections** of modules.  Working with user collections are a better alternative to e.g. adding **module load** statements to e.g. your **.bashrc** file.
+Many users of the LUNARC systems conduct similar tasks for many days, e.g. using the same pieces of software on different sets of data.  In this case users should consider creating **user collections** of modules.  Working with user collections are a better alternative to e.g. adding **module load** statements to e.g. your **.bashrc** file.
 
 ### Creating and restoring user collections
 To create a user collection load the modules required for the task at hand.  The command 
@@ -313,12 +313,12 @@ which actually re-names the collection in a way that it would no longer show wit
 ## Lmod cache
 
 To improve the performance of the `module spider` command, lmod caches
-the entire module structure of the system.  The system cache, holding info about the modules installed by the Lunarc team, is updated, every time the Lunarc team installs new software. 
+the entire module structure of the system.  The system cache, holding info about the modules installed by the LUNARC team, is updated, every time the LUNARC team installs new software. 
 
 
 # Compiling code and using toolchains
 
-A significant portion of the Aurora software is build using the [EasyBuild](http://hpcugent.github.io/easybuild/) software framework.  This framework provides so called *Toolchains* which are utilised to build software.  Lunarc recommends to use toolchains when building software.  This includes compiling your own software outside the EasyBuild framework.
+A significant portion of the Aurora software is build using the [EasyBuild](http://hpcugent.github.io/easybuild/) software framework.  This framework provides so called *Toolchains* which are utilised to build software.  LUNARC recommends to use toolchains when building software.  This includes compiling your own software outside the EasyBuild framework.
 
 ## Currently provided toolchains
 
@@ -361,7 +361,7 @@ A significant portion of the Aurora software is build using the [EasyBuild](http
 * **intelcuda**: icc, ifort, CUDA, Intel MPI, MKL
 
 
-If you require additional toolchains, contact [Lunarc support](http://www.lunarc.lu.se/support/support-form/) to discuss your requirements.
+If you require additional toolchains, contact [LUNARC support](http://www.lunarc.lu.se/support/support-form/) to discuss your requirements.
 
 ## Selecting a toolchain
 The above choices of toolchains is a bit overwhelming, in particular for new users.  We recommend to first make a choice of toolchain and then select a version.  Good choices for general use are the toolchains:
@@ -404,7 +404,7 @@ will now show you which compiler and library versions it will be using.  Please 
 Selecting a version of the intel or the pomkl toolchain is very similar to selecting a foss module, just replace foss with intel or pomkl in the above examples.
 
 ## Compiling serial code using a toolchain
-Once a toolchain module is selected, there are no differences from earlier Lunarc services when it comes to compiling serial code.
+Once a toolchain module is selected, there are no differences from earlier LUNARC services when it comes to compiling serial code.
 If you have loaded a toolchain build on top of a GCC compiler use the following commands to compile.
 
 * **gcc**: C compiler

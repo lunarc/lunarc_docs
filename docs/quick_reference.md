@@ -49,7 +49,7 @@ Aurora has nodes with 64 GB of memory. The default allocation per core is theref
 
 ## Home directory
 
-Currently all Lunarc systems have a home directory that is different for each system, i.e., the login directory for user xxxx is
+Currently all LUNARC systems have a home directory that is different for each system, i.e., the login directory for user xxxx is
 
     /home/xxxx
 

@@ -1,10 +1,10 @@
 # Frequently asked questions about Aurora
-Author: Joachim Hein (Lunarc)
+Author: Joachim Hein (LUNARC)
 
 ![Node icon](images/node_icon.jpg "Node icon")
 
 ## I have forgotten my login password for Aurora
-To receive a new password, please phone Lunarc support on 0462224454 (+46462224454 outside Sweden) from the mobile phone you have registered in [SUPR](https://supr.snic.se/person/).  Additional questions will be asked to verify your identity.  
+To receive a new password, please phone LUNARC support on 0462224454 (+46462224454 outside Sweden) from the mobile phone you have registered in [SUPR](https://supr.snic.se/person/).  Additional questions will be asked to verify your identity.  
 
 ## I can not login after migrating to pocket pass
 Many users have issues because of missing the [activation step](http://lunarc-documentation.readthedocs.io/en/latest/authenticator_howto/#important-last-step-activate-your-token).  To activate your token, connect to the [self-service portal](http://lunarc-documentation.readthedocs.io/en/latest/authenticator_howto/#accessing-the-self-service-portal), go into "tokens", choose "activate" and follow the instructions.
@@ -19,7 +19,7 @@ This has not been changed.  We still allow batch jobs to ask for up to 168 hours
 Many packages that were installed in standard locations have now been moved to the module system.  Please search for the package using **module spider** before contacting the helpdesk.
 
 ## I can not find my software package in the module system
-On Aurora a hierarchical module naming scheme is deployed.  This is explained in a special [software guide](http://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/).  Please contact Lunarc support if you cannot locate your package with the **module spider** command.
+On Aurora a hierarchical module naming scheme is deployed.  This is explained in a special [software guide](http://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/).  Please contact LUNARC support if you cannot locate your package with the **module spider** command.
 
 
 ## Loading a module unloads pre-requisites from a previously loaded module
@@ -32,7 +32,7 @@ You have the follwing options to resolve the issues:
 
 * Have a terminal dedicated to each of the modules.  This should work if the modules do not really interact with each other, but e.g. one module creates files which the other module reads.  Consider using the [Lunarc HPC desktop](http://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop/) which easily allows having multiple terminals within a single session
 
-* If this does not work or does not work satisfactory, contact the [Lunarc helpdesk](http://www.lunarc.lu.se/support/support_form) and discuss your situation.
+* If this does not work or does not work satisfactory, contact the [LUNARC helpdesk](http://www.lunarc.lu.se/support/support_form) and discuss your situation.
 
 ## How do I use a Lund University project
 
@@ -72,9 +72,9 @@ export OMP_NUM_THREADS=1
 
 If you like to use VASP on Aurora, please ensure that you are registed on a license with the VASP developers in Vienna. To comply with the terms of our handling license, we have to confirm the validity of your license with the VASP developers before granting access. That will take normally take a few days but can take weeks under bad circumstances. Being named in a SUPR VASP group does not imply you are entitled to use VASP.
 
-After registerering with the VASP team, contact the [Lunarc helpdesk](http://www.lunarc.lu.se/support/support_form) and provide the following information:
+After registerering with the VASP team, contact the [LUNARC helpdesk](http://www.lunarc.lu.se/support/support_form) and provide the following information:
 
-* Your Lunarc userid
+* Your LUNARC userid
 * Name and Department of the license holder (typically your supervisor/research group leader)
 * The number of the license
 * Your name as stated on the license
