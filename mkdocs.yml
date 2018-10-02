@@ -1,9 +1,9 @@
-site_name: Lunarc Documentation
+site_name: LUNARC Documentation
 pages:
 - Home: index.md
 - How to login: login_howto.md
 - Activating Pocket Pass authenticator: authenticator_howto.md
-- Using the Lunarc HPC Desktop: using_hpc_desktop.md
+- Using the LUNARC HPC Desktop: using_hpc_desktop.md
 - Quick reference: quick_reference.md
 - Using installed software on Aurora: aurora_modules.md
 - Using the Job submission system: batch_system.md

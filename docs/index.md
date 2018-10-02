@@ -1,4 +1,4 @@
-# Welcome to the Lunarc Documentation pages
+# Welcome to the LUNARC Documentation pages
 
-Here you will find all of the documentation for the Lunarc resources in a easy to find place.
+Here you will find all of the documentation for the LUNARC resources in a easy to find place.
 
