@@ -1,7 +1,7 @@
 # MATLAB 
 SNIC provides a nationwide set of licenses for the MATLAB Distributed Computing Server (MDCS). There are 500 MDCS licenses in total available for the six SNIC centra. At each respective SNIC centra the hosting university MATLAB licenses and toolboxes are available for use. 
  
-The MATLAB versions available at Lunarc are:
+The MATLAB versions available at LUNARC are:
 
     Version        Module name
     
@@ -13,7 +13,7 @@ The MATLAB versions available at Lunarc are:
     R2017a         matlab/2017a
 
 # Running MATLAB on login-node 
-MATLAB can be used on the login-nodes (either using LunarcDesktop i.e. ThinLinc. Or using SSH) Please note that as these are shared resources excessive use of MATLAB on the login-nodes will prevent other users from using the resources. 
+MATLAB can be used on the login-nodes (either using LUNARC HPC Desktop i.e. ThinLinc. Or using SSH) Please note that as these are shared resources excessive use of MATLAB on the login-nodes will prevent other users from using the resources. 
 As MATLAB by default will use as many threads (cores) it possibly can, any user who is to use MATLAB on the login-nodes MUST start matlab with the option "-singleCompThread" thus preventing MATLAB from using more that one thread.
 This will NOT prevent matlab from utilizing the MATLAB Distributed Computing Server (MDCS) with which any number of cores can be used for computations.
 
@@ -21,12 +21,12 @@ To start MATLAB on a login node use:
 
     matlab -singleCompThread
 
-On the Lunarc Desktop (Thinlinc) MATLAB R2016a as well as MATLAB R2017a are available via the Applications menu. Starting MATLAB from the menue automatically will set the -singleCompThread flag. This is now the recommended way to start MATLAB on the Lunarc Desktop.
+On the LUNARC HPC Desktop (Thinlinc) MATLAB R2016a as well as MATLAB R2017a are available via the Applications menu. Starting MATLAB from the menue automatically will set the -singleCompThread flag. This is now the recommended way to start MATLAB on the LUNARC HPC Desktop.
 
 
-<!--- At Lunarc the MATLAB installation R2014a (also known as 8.3) is the **only** version available for use with MDCS. If any of the newer versions are used, submission to the batch queue from within MATLAB is not possible .
+<!--- At LUNARC the MATLAB installation R2014a (also known as 8.3) is the **only** version available for use with MDCS. If any of the newer versions are used, submission to the batch queue from within MATLAB is not possible .
 
-Versions newer than R2014a can use PCT at Lunarc but ONLY within a single node and ONLY by writing a batch script where MATLAB is run with a MATLAB script. Note that MATLAB will be able to use the PCT on the cores of this single node using the "local" profile.
+Versions newer than R2014a can use PCT at LUNARC but ONLY within a single node and ONLY by writing a batch script where MATLAB is run with a MATLAB script. Note that MATLAB will be able to use the PCT on the cores of this single node using the "local" profile.
 
 ## Non-MDCS submissions
 

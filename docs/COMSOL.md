@@ -1,6 +1,6 @@
 # COMSOL
 
-COMSOL is installed on the cluster. It can either be used non-interactively for running a .mph file by sending it through the queue system from any login node or interactively from the lunarc desktop. If run interactively, care has to be taken so that the program does not consume large amounts of resources on the frontend.
+COMSOL is installed on the cluster. It can either be used non-interactively for running a .mph file by sending it through the queue system from any login node or interactively from the LUNARC desktop. If run interactively, care has to be taken so that the program does not consume large amounts of resources on the frontend.
 
 # Non-interactive use
 
@@ -37,9 +37,9 @@ This will run the job input.mph on the cluster and save the output to output.mph
 
 # Interactive use
 
-To run interactively the Lunarc Desktop (thinlinc) MUST be used. 
+To run interactively the LUNARC Desktop (thinlinc) MUST be used. 
 The setup is based on having a comsol server process running on the backend which the GUI (which is running on the frontend) connects to.
-The first time the comsol server process is started you will be prompted to give a username and a password. NOTE! Do NOT use your Lunarc username and password! invent your own.
+The first time the comsol server process is started you will be prompted to give a username and a password. NOTE! Do NOT use your LUNARC username and password! invent your own.
 This means that the FIRST tome you start the server you MUST do it interactively.
 
 To start an interactive session, start a terminal and type:
@@ -56,7 +56,7 @@ This will start a server using 16 processing cores. You can adjust the number of
 The program will ask you for a username and a password as described above. This username and password will be saved in your .comsol directory in your home directory.
 Make a note of which node you are running on (it will be stated in the console as auxxx)
 
-It is now time to start the GUI. As seen in the figure, Comsol is available through the Applications menu on the Lunarc desktop.
+It is now time to start the GUI. As seen in the figure, Comsol is available through the Applications menu on the LUNARC desktop.
 
 ![Start Comsol](images/start_comsol.png "Start COMSOL")  
 

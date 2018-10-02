@@ -1,20 +1,20 @@
 
 # Starting the DDT debugger on Aurora
 
-A basic description on how to start a debugging session with DDT, part of [Allinea Forge](http://www.allinea.com/products/develop-allinea-forge), on the Aurora systems.  Job will be submitted through the Slurm batch system to the back-end nodes.
+A basic description on how to start a debugging session with DDT, part of [ARM Forge](http://www.allinea.com/products/develop-allinea-forge), on the Aurora systems.  Job will be submitted through the Slurm batch system to the back-end nodes.
 
 # About this document
 
-This document gives basic instruction on how to start a debugging session using the DDT debugger on the Aurora system at Lunarc.  This document is based on DDT version 6.0.2 currently installed on Aurora.  There is currently a centralised SNIC license hosted by NSC.  The licenses are shared between the users of all the SNIC systems.  So please be considerate to other users fellow regarding for how many licenses your use (time and number of cores).
+This document gives basic instruction on how to start a debugging session using the DDT debugger on the Aurora system at LUNARC.  This document is based on DDT version 6.0.2 currently installed on Aurora.  There is currently a centralised SNIC license hosted by NSC.  The licenses are shared between the users of all the SNIC systems.  So please be considerate to other users fellow regarding for how many licenses your use (time and number of cores).
     
-DDT is a powerful debugger for serial and parallel programs.  The tool is developed and maintained by Allinea Software.  It is part of the Allinea's Forge suite.  A number of parallel programming models are supported.  This includes MPI, OpenMP and a number of GPU languages.  This document is not a DDT userguide, we refer our users to the documentation available from the [Allinea website](http://www.allinea.com/product-documentation), in particular their [user guide](http://content.allinea.com/downloads/userguide-forge.pdf).
+DDT is a powerful debugger for serial and parallel programs.  The tool is developed and maintained by Allinea Software.  It is part of the Allinea's Forge suite.  A number of parallel programming models are supported.  This includes MPI, OpenMP and a number of GPU languages.  This document is not a DDT userguide, we refer our users to the documentation available from the [ARM website](http://www.allinea.com/product-documentation), in particular their [user guide](http://content.allinea.com/downloads/userguide-forge.pdf).
 
 # Getting started with DDT on Aurora
 
-## Connect to Aurora via the Lunarc HPC desktop
+## Connect to Aurora via the LUNARC HPC desktop
 
 To use DDT you need to be able to access its graphical user interface (GUI).  
-The recommended way to connect to the system is via the [Lunarc HPC desktop](using_hpc_desktop).  
+The recommended way to connect to the system is via the [LUNARC HPC desktop](using_hpc_desktop).  
 
 <!--
 ### Using x-forwarding under Linux or on a Mac
@@ -30,7 +30,7 @@ To connect using x-forwarding from a windows it is recommended to install [Cygwi
 
 ## Starting the DDT GUI on Aurora
 
-Lunarc currently recommends using *reverse connect* to start DDT.  Load the relevant module.  On Aurora the module name is *allinea_forge*.  Load it: 
+LUNARC currently recommends using *reverse connect* to start DDT.  Load the relevant module.  On Aurora the module name is *allinea_forge*.  Load it: 
 ```bash
     module load allinea_forge
 ```    
