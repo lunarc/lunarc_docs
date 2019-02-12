@@ -58,7 +58,7 @@ When using OpenBLAS, please be aware that you might [need to control the number 
 
 
 ## How do I link my code against the MKL installation provided on Aurora
-The Aurora modules providing MKL are set the environment variable `MKLROOT` to assist the compiler in locating the library on the system.  To link your application we suggest consulting the [Intel® Math Kernel Library Link Line Advisor](https://software.intel.com/en-us/articles/intel-mkl-link-line-advisor) for the arguments needed. 
+The Aurora modules providing MKL set the environment variable `MKLROOT` to assist the compiler in locating the library on the system.  To link your application we suggest consulting the [Intel® Math Kernel Library Link Line Advisor](https://software.intel.com/en-us/articles/intel-mkl-link-line-advisor) for the arguments needed. 
 
 
 ## My MPI code using OpenBLAS does not perform
