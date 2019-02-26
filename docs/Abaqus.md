@@ -75,3 +75,84 @@ In your SBATCH-script you adjust the parts unique for your job using a text-edit
 
 This sends the job to the queue and the job manager will start the simulation when a slot on the cluster fitting the description in the script is available.
 
+# Running multiple Abaqus jobs in a farm
+
+This script assumes that you have all of your .inp files in a separate directory called *jobs*. It will start one subtask per .inp file. Be aware that running multiple abaqus jobs at once require a lot of license tokens.
+
+You will need two scripts (run.sh and work.sh). One master script detailing how many nodes/cores you want to use, the walltime, project name, and such. The slave script will set up each individual run and start abaqus on the .inp file at hand. 
+The script **run.sh** is your normal SBATCH script which is started by issuing *sbatch run.sh*
+The script **work.sh** is a normal bash script so it MUST be set as executable by issuing chmod +x work.sh
+
+# run.sh
+
+    #!/bin/sh
+    # requesting the number of nodes needed
+    #SBATCH -N 1
+    #SBATCH -n 20
+    #SBATCH -A lu2018-2-10
+    #SBATCH -p lu
+    # job time, change for what your job farm requires
+    #SBATCH -t 50:00:00
+    #
+    # job name and output file names
+    #SBATCH -J jobFarm
+    #SBATCH -o res_jobFarm_%j.out
+    #SBATCH -e res_jobFarm_%j.out
+    cat $0
+
+
+    # Loop over the number of files
+
+
+    for filename in $(find jobs/*.inp | awk -F "/" '{print      $2}' 2> /dev/null); do
+            srun -Q --exclusive -n 1 -N 1 --cpus-per-task=4 work.sh $filename &> worker_${SLURM_JOB_ID}_${filename} &
+        sleep 1
+    done
+
+    # keep the wait statement, it is important!
+
+    wait
+
+
+# work.sh
+
+    #!/bin/sh
+    # document this script to stdout (assumes redirection from caller)
+    echo $0
+    # The next line is good for debugging so you know which file is processed.
+    echo $1
+
+    # receive my worker number
+    export WRK_NB=$1
+
+    # create worker-private subdirectory in $SNIC_TMP
+    export WRK_DIR=$SNIC_TMP/WRK_${WRK_NB}
+    mkdir $WRK_DIR
+
+    # create a variable to address the "job directory"
+    export JOB_DIR=${SLURM_SUBMIT_DIR}/jobs
+
+    # now copy the input data and program from there
+    cd $JOB_DIR
+
+    #This copies the file in the loop to the worker dir.
+    cp -p $WRK_NB $WRK_DIR
+
+    # change to the execution directory
+    cd $WRK_DIR
+
+
+    # run the program, 
+    # Be sure to add the module for your version of abaqus. 
+    # The memory should be the product of cpu and 3000MB
+    module add abaqus/V6R2017x
+    abaqus job=${WRK_NB} memory=12000MB cpus=4 scratch=. interactive
+
+
+    # rescue the results back to job directory
+    cp -p *.odb ${JOB_DIR}
+
+    # clean up the local disk and remove the worker-private directory
+
+    cd $SNIC_TMP
+    rm -rf WRK_${WRK_NB}
