@@ -83,7 +83,7 @@ You will need two scripts (run.sh and work.sh). One master script detailing how 
 The script **run.sh** is your normal SBATCH script which is started by issuing *sbatch run.sh*
 The script **work.sh** is a normal bash script so it MUST be set as executable by issuing chmod +x work.sh
 
-# run.sh
+## run.sh
 
     #!/bin/sh
     # requesting the number of nodes needed
@@ -114,7 +114,7 @@ The script **work.sh** is a normal bash script so it MUST be set as executable b
     wait
 
 
-# work.sh
+## work.sh
 
     #!/bin/sh
     # document this script to stdout (assumes redirection from caller)
