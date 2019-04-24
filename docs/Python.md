@@ -1,39 +1,58 @@
-# Python
+# Python @ LUNARC
 
-Python is available on the cluster. Depending on the users experience and needs, different versions are available. Below is an non-exhaustive list of installed versions:
+## Overview
+
+Python is available on the cluster. Depending on the users experience and needs, different distributions are available. Below is an non-exhaustive list of installed distributions:
 
         Anaconda2 
         Anaconda3
         Python
         Biopython
         
-Information on these versions can be had using **module spider version**
+Information, such as available versions, on these distributions can be had using the command 
+
+        module spider <distribution-name>
+
+where one has to replace the `distribution-name` with the name of the distribution on is interested in.  For example, when being interested in a specific version of the Python distribution.
+
+        module spider Python
+        
+will list all the Python versions of the Python distribution we have installed.  To activate the version, one needs to enquire about the details of a specific version, load the prerequisites (e.g. compiler, MPI library, etc.) and the Python distribution.  E.g. when being interested in Python version 3.6.6 the command
+
+        module spider Python/3.6.6
+        
+will provide information for which combination of compiler, CUDA and/or MPI library that version of Python is available.  Please note to utilise a distribution that requires CUDA, you need to have access to an LU Local or LVIS ([HPC Desktop On-Demand](http://www.lunarc.lu.se/resources/services/lunarc-hpc-desktop-on-demand/)) project.  For more information on how to use the module system consult our separate [guide on using the installed software](https://lunarc-documentation.readthedocs.io/en/latest/aurora_modules/).
 
 
 
 ## Recommended use
 
-Depending on the needs of the user, the recommended versions differ.
+Depending on the needs of the user, we recommend different distributions.
 
-For regular users with **no special requirements**, the recommended distribution is the Anaconda python. Anaconda is provided for both Python versions 2 and 3. This is also the recommended distribution for users who whish to use the interactive environment **spyder** 
+### Anaconda distributions
+For users **without special requirements**, the recommended distribution is the Anaconda. Anaconda is provided for Python versions 2 and 3.  The modules are named **Anaconda2** resp. **Anaconda3**.  These are also the recommended distribution for users who whish to use the interactive environment **spyder**, though spyder is also provided for a few selected versions of the Python distribution. 
 
-Users who are planning to do **larger scale calculations** potentially using MPI4PY the recommended version is the Python distribution. Please note that this is the version requiring the foss-toolchain. i.e. do:
-        
-         module load foss/2017a
-         module load Python
+### Python distributions
 
-to get the default version of Python (typically 3.x). 
-Please note that there are several versions of the foss and intel toolchains each with multiple versions of Python, please choose the one appropriate for you. Note that after having chosen your toolchain use **module avail Python** to see versions available.
+Users who are planning to do **larger scale calculations** potentially using MPI4PY or requiring specific compilers and libraries, the recommended distribution is named **Python**. Please note that this these require loading of pre-requisites, such as compilers, MPI and/or CUDA libraries, as detailed in the [Overview section](#Overview). 
+ 
+Please note that there are several versions of the toolchains such as the foss or intel toolchain.  Each with multiple versions of Python.  Please choose the one appropriate for you. Note that after having chosen your toolchain use **module avail Python** to see versions available.
 
 For more information on available toolchains see [compiling-code-and-using-toolchains](http://lunarc-documentation.readthedocs.io/en/latest/aurora_modules/#compiling-code-and-using-toolchains)
 
-For users working in **bioinformatics** the Biopython package is most likely the desired one.
+#### Python distributions requiring a GCCcore module
+Starting in 2019, the pre-requisites and site-package contents of the distributions named *Python* have changed significantly.  The modules can be loaded after loading a **GCCcore** compiler, which is show in the output of the `module spider` command.  These *Python* distributions do not contain site-packages depending on an MPI or BLAS library, such as MPI4PY, numpy or scipy.  To access such MPI and/or BLAS dependent packages loading a **SciPy-bundle**-module is required, which require a compiler and an MPI module.  Use `module spider SciPy-bundle` to see what is available.
 
-Please note that there are several versions of the installed Python environments and that depending on your needs different versions may be suitable. 
+By default the SciPy-bundle will load a Python 3 module.  If you require a Python 2 module, load that prior to loading SciPy-bundle.
 
-## Packages
 
-The installations have large set of packages installed. Users are encouraged to list the set of installed packages to verify that all needed packages are in place.
+### Biopython
+For users working in **bioinformatics** on of the Biopython packages is most likely the desired one.
+ 
+
+## Python site-packages (aka. Python packages)
+
+The distribuitons provided by LUNARC have large number of site-packages (aka. Python packages) installed. Users are encouraged to list the set of installed packages to verify that all needed packages are in place.
 
 Anaconda users can check the installed packages with:
 
@@ -43,11 +62,11 @@ All other installations are using the *pip* framework:
 
         pip list
 
-## LUNARC installed packages
+### LUNARC installed packages
 
 LUNARC staff will install packages in the various distributions (mainly in the non-anaconda based ones). If you have a packages that may be of use for other users, or if you are having trouble installing a package, please send a support request for the installation of the package and LUNARC staff will consider it for inclusion in the distribution. 
 
-## User installed packages
+### User installed packages
 
 Users are also able to install their own packages by creating their own local repository.
 
