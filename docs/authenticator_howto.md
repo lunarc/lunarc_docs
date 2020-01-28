@@ -3,7 +3,7 @@
 The process to install and set up the Pocket Pass authenticator is in five (5) steps, it is important that ALL steps are performed correctly so PLEASE read the instructions carefully.
 
 ## <span style="color:red">STEP 1:</span>  Download and install Pocket Pass
-Download and install the Pocket Pass app on your smartphone:
+Download and install the **PhenixID Pocket Pass** app on your smartphone.  The correct app is free of charge.
 
 ### Download for Apple iOS
 
