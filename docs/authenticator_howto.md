@@ -77,8 +77,8 @@ Your token will expire in a year's time and you will have to create a new one.
 #Checking the validity of your token
 You can check the validity, in particular the expiration state, of your pocket pass token inside the self-service portal.  Use
 
-* your Aurora password. Do not your SUPR password
-* the one-time-password (OTP) that will arrive by **text message** to your mobile.  Don't use an OTP from the Pocket Pass app. 
+* your Aurora password (Do not use your SUPR password)
+* the one-time-password (OTP) that will arrive by **text message** to your mobile (Do not use an OTP from the Pocket Pass app) 
 
 when following steps 2 and 3 from above to access the self-service portal.  
 
