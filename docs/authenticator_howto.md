@@ -63,11 +63,16 @@ Click continue to display the current valid otp-code.
 
 ## <span style="color:red">STEP 5:</span>  Important last step: Activate your token
 
-Go back to the self-service portal and click "next". You will then be prompted for an otp to finalize the activation. You will get this otp from the pocket-pass application i.e. NOT via an text-message.
+Go back to the self-service portal and click "next". You will then be prompted for an otp to finalize the activation. You will get this otp from the pocket-pass application and will **NOT** be sent a text-message.
 
-## Completed.
+Your token will expire in a year's time.
 
-You can now login to the LUNARC systems using the Pocket Pass app. Your telephone will not receive a SMS when connecting to a Lunarc system. Having entered your password you will be prompted to enter your Pocket Pass OTP when logging in.
+## Completed
+
+You can now login to the LUNARC systems using the Pocket Pass app. Your telephone will not receive an SMS when connecting to a Lunarc system. Having entered your password you will be prompted to enter your Pocket Pass OTP when logging in.
+
+Your token will expire in a year's time and you will have to create a new one.
+
 
 #Checking the validity of your token
 You can check the validity, in particular the expiration state, of your pocket pass token inside the self-service portal.  Please follow steps 2 and 3 from above to access the self-service portal.  
