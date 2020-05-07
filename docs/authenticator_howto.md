@@ -71,7 +71,7 @@ Your token will expire in a year's time.
 
 You can now login to the LUNARC systems using the Pocket Pass app. Your telephone will not receive an SMS when connecting to a Lunarc system. Having entered your password you will be prompted to enter your Pocket Pass OTP when logging in.
 
-Your token will expire in a year's time and you will have to create a new one.
+Your token will expire in two year's time and you will have to create a new one.
 
 
 #Checking the validity of your token
@@ -86,4 +86,4 @@ Inside the self-service portal, go to the **TOKENS** tab.  You will see your tok
 
 ![sample screen](images/pp_token_status.png "Token dates")
 
-If your token has expired, please go through [steps 3](#step-3-token-activation) to 5 to create a new token.  Please do not **forget step 5**.  Newly created tokens will expire after a year.
+If your token has expired, please go through [steps 3](#step-3-token-activation) to 5 to create a new token.  Please do not **forget step 5**.  Newly created tokens will expire after two years.
