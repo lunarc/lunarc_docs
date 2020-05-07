@@ -76,4 +76,4 @@ Inside the self-service portal, go to the **TOKENS** tab.  You will see your tok
 
 ![sample screen](images/pp_token_status.png "Token dates")
 
-If your token has expired, please go through [step 3](#step-3-token-activation) to step 5 to create a new token.  Newly created tokens will expire after a year.
+If your token has expired, please go through [steps 3](#step-3-token-activation) to 5 to create a new token.  Please do not **forget step 5**.  Newly created tokens will expire after a year.
