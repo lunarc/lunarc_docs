@@ -13,7 +13,7 @@ Many users have issues because of missing the [activation step](https://lunarc-d
 If you have persistent problems with connecting to LUNARC service after being prompted for my password and pocket pass password, it my be that your pocket pass token has expired.  Please check the [expiration status](https://lunarc-documentation.readthedocs.io/en/latest/authenticator_howto/#checking-the-validity-of-your-token) of your pocket pass token and create a new token if the old token has expired.
 
 ## Could your send my *one time password* for pocket pass activation to my new mobile phone number?
-Please enter the new phone number into [SUPR](https://supr.snic.se/person/) and raise a [support request](https://www.lunarc.lu.se/support/support_form) to update our internal database for this change.
+Please enter the new phone number into [SUPR](https://supr.snic.se/person/) and raise a [support request](http://www.lunarc.lu.se/support/support_form) to update our internal database for this change.
 
 ## What is the maximum job time on Aurora?
 We allow batch jobs to ask for up to 168 hours, which is 7 days.
@@ -35,7 +35,7 @@ You have the follwing options to resolve the issues:
 
 * Have a terminal dedicated to each of the modules.  This should work if the modules do not really interact with each other, but e.g. one module creates files which the other module reads.  Consider using the [Lunarc HPC desktop](https://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop/) which easily allows having multiple terminals within a single session
 
-* If this does not work or does not work satisfactory, contact the [LUNARC helpdesk](https://www.lunarc.lu.se/support/support_form) and discuss your situation.
+* If this does not work or does not work satisfactory, contact the [LUNARC helpdesk](http://www.lunarc.lu.se/support/support_form) and discuss your situation.
 
 ## How do I use a Lund University project
 
@@ -75,7 +75,7 @@ export OMP_NUM_THREADS=1
 
 If you like to use VASP on Aurora, please ensure that you are registed on a license with the VASP developers in Vienna. To comply with the terms of our handling license, we have to confirm the validity of your license with the VASP developers before granting access. That will take normally take a few days but can take weeks under bad circumstances. Being named in a SUPR VASP group does not imply you are entitled to use VASP.
 
-After registerering with the VASP team, contact the [LUNARC helpdesk](https://www.lunarc.lu.se/support/support_form) and provide the following information:
+After registerering with the VASP team, contact the [LUNARC helpdesk](http://www.lunarc.lu.se/support/support_form) and provide the following information:
 
 * Your LUNARC userid
 * Name and Department of the license holder (typically your supervisor/research group leader)
