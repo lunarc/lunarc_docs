@@ -68,3 +68,12 @@ Go back to the self-service portal and click "next". You will then be prompted f
 ## Completed.
 
 You can now login to the LUNARC systems using the Pocket Pass app. Your telephone will not receive a SMS when connecting to a Lunarc system. Having entered your password you will be prompted to enter your Pocket Pass OTP when logging in.
+
+#Checking validity of your token
+You can check the validity, in particular the expiration state, of your pocket pass token inside the self-service portal.  Please follow steps 2 and 3 from above to access the self-service portal.  
+
+Inside the self-service portal, go to the **TOKENS** tab.  You will see your tokens.  Klicking on **More** will reveal the relevant dates for your token:
+
+![sample screen](images/pp_token_status.png "Token dates")
+
+If your token has expired, please go through [steps 3](## STEP 3: Token activation) to step 5 to create a new token.  Newly created tokens will expire after a year.
