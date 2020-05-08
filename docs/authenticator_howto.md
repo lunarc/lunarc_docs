@@ -80,7 +80,7 @@ You can check the validity, in particular the expiration state, of your pocket p
 * your Aurora password (Not your SUPR password)
 * the one-time-password sent by **text message** to your mobile (Not from the Pocket Pass app) 
 
-when following [steps 2](#step-2-accessing-the-self-service-portal) and 3 mentioned above to access the self-service portal.  
+when following [steps 2](#step-2-accessing-the-self-service-portal) and 3 mentioned above to access the self-service portal.  Please check the [Aurora FAQ](https://lunarc-documentation.readthedocs.io/en/latest/aurora_faq/#could-your-send-my-one-time-password-for-pocket-pass-activation-to-my-new-mobile-phone-number) if you need to update your mobile phone number.
 
 Inside the self-service portal, go to the **TOKENS** tab.  You will see your tokens.  Klicking on **More** will reveal the relevant dates for your token:
 
