@@ -20,11 +20,11 @@ Activation of the Pocket Pass app is done via a web-based activation portal.  Ac
 ## <span style="color:red">STEP 3:</span>  Token activation
 The self service portal will show the following login screen:
 
-![sample screen](images/selfservice_login.png "Desktop sample screen")
+![sample screen](images/selfservice_login_rev1.png "Desktop sample screen")
 
 Enter your normal LUNARC credentials. Make sure to select the **I am a human** checkbox. If all is OK you will receive a SMS with a OTP token to the phone number registered in our system.  The next screen will display:
 
-![sample screen](images/selfservice_otp.png "Desktop sample screen")
+![sample screen](images/selfservice_otp_rev1.png "Desktop sample screen")
 
 The next screen will display a GENERAL tab with user information and a TOKENS tab. Click on the TOKENS tab. This will display a button **Activate PhenixID Pocket Pass**. 
 
