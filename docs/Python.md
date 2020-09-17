@@ -80,9 +80,11 @@ In **Anaconda** (available as a loadable module) the users are free to create th
 ###Python installations
 In all other installations (default or loadable module) users can install their own packages using *pip*
 
+```
         pip install --prefix=$HOME/local package_name
+```
 
 This will install the package *package_name* in the users home-directory.   Make sure the installation location of your packages gets added to your **PYTHONPATH** environment variable (e.g. private module file, sourceing a script, ...).  For this to work you need a Python package with a recent version of `pip`.  The use of the `--install-option` to redirect the installation location is no longer recommended.
 
-Again, *please* check using *pip list* or *conda list* if the package is already installed in the selected distribution. 
+Again, *please* check using `pip list` or `conda list if the package is already installed in the selected distribution. 
 
