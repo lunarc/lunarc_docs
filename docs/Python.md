@@ -21,7 +21,9 @@ will list all the Python versions of the Python distribution we have installed. 
 
         module spider Python/3.6.6
         
-will provide information for which combination of compiler, CUDA and/or MPI library that version of Python is available.  Please note to utilise a distribution that requires CUDA, you need to have access to an LU Local or LVIS ([HPC Desktop On-Demand](http://www.lunarc.lu.se/resources/services/lunarc-hpc-desktop-on-demand/)) project.  For more information on how to use the module system consult our separate [guide on using the installed software](https://lunarc-documentation.readthedocs.io/en/latest/aurora_modules/).
+will provide information for which combination of compiler, CUDA and/or MPI library that version of Python is available.  Note that the latest `Python`modules lack packages such as MPI4PY, numpy and scipy.  For this you need to load a `SciPy-bundle`.  See below [for details](#python-distributions-requiring-a-gcccore-module).
+
+Please note to utilise a distribution that requires CUDA, you need to have access to an LU Local or LVIS ([HPC Desktop On-Demand](http://www.lunarc.lu.se/resources/services/lunarc-hpc-desktop-on-demand/)) project.  For more information on how to use the module system consult our separate [guide on using the installed software](https://lunarc-documentation.readthedocs.io/en/latest/aurora_modules/).
 
 
 
@@ -78,9 +80,9 @@ In **Anaconda** (available as a loadable module) the users are free to create th
 ###Python installations
 In all other installations (default or loadable module) users can install their own packages using *pip*
 
-        pip install --install-option="--prefix=$HOME/local" package_name
+        pip install --prefix=$HOME/local package_name
 
-This will install the package *package_name* in the users home-directory. If the package is large, consider using ***/lunarc/nobackup*** instead.  Make sure the installation location of your packages gets added to your **PYTHONPATH** environment variable (e.g. private module file, sourceing a script, ...)
+This will install the package *package_name* in the users home-directory.   Make sure the installation location of your packages gets added to your **PYTHONPATH** environment variable (e.g. private module file, sourceing a script, ...).  For this to work you need a Python package with a recent version of `pip`.  The use of the `--install-option` to redirect the installation location is no longer recommended.
 
 Again, *please* check using *pip list* or *conda list* if the package is already installed in the selected distribution. 
 
