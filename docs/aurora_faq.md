@@ -15,6 +15,15 @@ If you have persistent problems with connecting to LUNARC service after being pr
 ## Could your send my *one time password* for pocket pass activation to my new mobile phone number?
 Please enter the new phone number into [SUPR](https://supr.snic.se/person/) and raise a [support request](http://www.lunarc.lu.se/support/support_form) to update our internal database for this change.
 
+## I accidentally deleted or modified a file
+For the home space on Aurora, we have **snapshots** enabled.  If you type `ls .snapshots` at the commandline in the current directory you get to see a number of diretories named like `@-2020.12.11-00.00.35`, which stands for the date and time of the snapshot.  Simply 
+
+```
+cd .snapshots/@-2020.12.11-00.00.35
+```
+of the relevant time and you get presented with the state of the directory and it's sub-directories at that time.  You can then copy the required contents out of the snapshot into your current directory without engaging LUNARC support.
+
+
 ## What is the maximum job time on Aurora?
 We allow batch jobs to ask for up to 168 hours, which is 7 days.
 
