@@ -798,11 +798,6 @@ running the worker tasks with SLURM. In most cases modifying the number
 of nodes needed, the total job time and the number of jobs to be
 processed should be all that is required.
 
-With this script you only specify the number of nodes you require
-using the `-N`option and specify the `--exclusive`.  The task farm
-will use all the cores available on the nodes, which is 20 in case of
-Aurora.   
-
 The following example will be
 using 20 cores on 1 node to process 200 jobs.
 
