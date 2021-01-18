@@ -770,8 +770,8 @@ processing of your jobs, you can ask for the cores from a number of
 nodes. The concept is known as a **task-farm**. The individual job are
 known as **job-steps**.
 
-The following is an example processing 200 such jobs using 40 cores from
-two nodes. The scripting use two scripts, the master script and the
+The following is an example processing 200 such jobs using 20 cores from
+one node. The scripting use two scripts, the master script and the
 worker script. The master script requests the resources (number of
 cores, job time, ...) and then registers 200 copies of the worker script
 with SLURM using the command srun. The worker script is a modification
@@ -804,13 +804,13 @@ will use all the cores available on the nodes, which is 20 in case of
 Aurora.   
 
 The following example will be
-using 40 cores on 2 nodes to process 200 jobs.
+using 20 cores on 1 node to process 200 jobs.
 
 ```bash
 #!/bin/sh
 # requesting the number of nodes needed
-#SBATCH -N 2
-#SBATCH --exclusive
+#SBATCH -N 1
+#SBATCH --tasks-per-node=20
 #
 # job time, change for what your job farm requires
 #SBATCH -t 20:00:00
