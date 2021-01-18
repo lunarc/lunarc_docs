@@ -852,7 +852,7 @@ differently compared to using srun within a different environment.
 Consult the man-page of srun for documentation and contact the LUNARC
 help desk if your require further consultancy.
 
-If you need more than the default 3100 MB memory per core, you have to specify both `--tasks-per-node` and `--mem-per-cpu`and **not** use `--exclusive`, because the latter gives you all cores on the node, which are too many with a higher memory requirement. Please match the core count and the memory per core so as to best utilise the resources of a node, which has a total of 62000 MB memory available for jobs.
+If you need more than the default 3100 MB memory per core, you have to specify both `--tasks-per-node` and `--mem-per-cpu`. Please match the core count and the memory per core so as to best utilise the resources of a node, which has a total of 62000 MB memory available for jobs.
 
 ### The worker script
 
