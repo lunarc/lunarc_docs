@@ -823,7 +823,7 @@ export NB_of_jobs=200
 
 for ((i=0; i<$NB_of_jobs; i++))
 do
-    srun -Q --exclusive -n 1 -N 1 workScript.sh $i &> worker_${SLURM_JOB_ID}_${i} &
+    srun -Q --exclusive --overlap -n 1 -N 1 workScript.sh $i &> worker_${SLURM_JOB_ID}_${i} &
     sleep 1
 done
 
@@ -849,6 +849,7 @@ and core count in relation to the average job-time.
 
 **Remarks:** When using srun inside a batch script many srun-options act
 differently compared to using srun within a different environment.
+Note also that the order of the options `--exclusive` and `--overlap` is crucial for the correct behaviour.
 Consult the man-page of srun for documentation and contact the LUNARC
 help desk if your require further consultancy.
 
