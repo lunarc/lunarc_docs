@@ -34,6 +34,56 @@ Depending on the needs of the user, we recommend different distributions.
 ### Anaconda distributions
 For users **without special requirements**, the recommended distribution is the Anaconda. Anaconda is provided for Python versions 2 and 3.  The modules are named **Anaconda2** resp. **Anaconda3**.  These are also the recommended distribution for users who whish to use the interactive environment **spyder**, though spyder is also provided for a few selected versions of the Python distribution. 
 
+To get the full functionality of the Anaconda environment should use the following commands:
+
+        module load Anaconda3
+        source conda_config.sh
+
+This enables the full functionality of the **conda** command. 
+
+### Creating conda environments
+
+To be able to create reproducable and custom environments with specific versions of Python, Numpy or any other packages. It is encouraged to create a specific conda environment for this. To create a new conda environment make sure that you have activated the conda command with
+
+        source conda_config.sh
+        
+Now you can create a new environment with the following command:
+
+        conda create -n myenv
+        
+This will start the process of creating a new environment:
+
+        Collecting package metadata (current_repodata.json): done
+        Solving environment: done
+
+        ## Package Plan ##
+
+          environment location: /home/bmjl/.conda/envs/myenv
+
+        Proceed ([y]/n)?
+        
+Press **y** to start the process. When the environment has been created the following is shown:
+
+        Preparing transaction: done
+        Verifying transaction: done
+        Executing transaction: done
+        #
+        # To activate this environment, use
+        #
+        #     $ conda activate myenv
+        #
+        # To deactivate an active environment, use
+        #
+        #     $ conda deactivate
+
+Activate the new environment using 
+
+        conda activate myenv
+        
+When activated all package installations, both conda and pip, goes into this environment and will not interfere with the base conda environment.
+
+
+
 ### Python distributions
 
 Users who are planning to do **larger scale calculations** potentially using MPI4PY or requiring specific compilers and libraries, the recommended distribution is named **Python**. Please note that this these require loading of pre-requisites, such as compilers, MPI and/or CUDA libraries, as detailed in the [Overview section](#Overview). 
