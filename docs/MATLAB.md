@@ -1,5 +1,7 @@
 # MATLAB 
-SNIC provides a nationwide set of licenses for the MATLAB Distributed Computing Server (MDCS). There are 500 MDCS licenses in total available for the six SNIC centra. At each respective SNIC centra the hosting university MATLAB licenses and toolboxes are available for use. 
+
+
+SNIC provides a nationwide set resources with the MATLAB Distributed Computing Server (MDCS) installed. At each respective SNIC centra the hosting university MATLAB licenses and toolboxes are available for use. 
  
 The MATLAB versions available at LUNARC are:
 
@@ -11,6 +13,8 @@ The MATLAB versions available at LUNARC are:
     R2015b         matlab/8.6
     R2016a         matlab/8.7  (available on Aurora only)
     R2017a         matlab/2017a
+    R2020a        matlab/2020a
+    R2020b        matlab/2020b
 
 # Running MATLAB on login-node 
 MATLAB can be used on the login-nodes (either using LUNARC HPC Desktop i.e. ThinLinc. Or using SSH) Please note that as these are shared resources excessive use of MATLAB on the login-nodes will prevent other users from using the resources. 
