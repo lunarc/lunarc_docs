@@ -1,5 +1,6 @@
 # Using the LUNARC HPC Desktop #
-##Providing users with a solution for hardware accelerated remote visualization
+
+## Providing users with a solution for hardware accelerated remote visualization
 
 The LUNARC HPC Desktop provides LUNARC and SNIC users with a solution for hardware accelerated remote visualization that will provide a new scalable approach to HPC and scientific data visualization. The desktop introduces a convenient way to work with our clusters using not only multiple terminal windows but also file browsers, editors, graphical tools such as queue status and debuggers, 2D and 3D applications, etc.
 
