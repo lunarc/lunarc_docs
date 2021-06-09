@@ -4,16 +4,16 @@ pages:
 - How to login: login_howto.md
 - Activating Pocket Pass authenticator: authenticator_howto.md
 - Using the LUNARC HPC Desktop: using_hpc_desktop.md
-- Quick reference: quick_reference.md
 - Using installed software on Aurora: aurora_modules.md
 - Using the Job submission system: batch_system.md
+- Quick reference: quick_reference.md
 - Aurora FAQ: aurora_faq.md
 - Linux Basics: linux_basics.md
-- Compiler options: compiler_options.md
-- DDT debugger on Aurora: ddt_debugger.md
+- PYTHON on the cluster: Python.md
+- MATLAB on the cluster: MATLAB.md
 - ABAQUS on the cluster: Abaqus.md
 - COMSOL on the cluster: COMSOL.md
-- MATLAB on the cluster: MATLAB.md
-- PYTHON on the cluster: Python.md
+- Compiler options: compiler_options.md
+- DDT debugger on Aurora: ddt_debugger.md
 theme: readthedocs
 #markdown_extensions: [codehilite]
