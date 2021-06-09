@@ -140,7 +140,7 @@ The following is a list of the modules currently available:
   ...
 ```
 This is a full list of the packages and versions available on the service.  
-##Searching for a specific package
+## Searching for a specific package
 If you are looking for a specific package and have an idea on what its name might be, you can give this as an argument to `module spider`.   This argument is case insensitive.  
 ### Example: Accessing a Gromacs version
 For example, when looking to run Gromacs:
@@ -315,6 +315,13 @@ which actually re-names the collection in a way that it would no longer show wit
 To improve the performance of the `module spider` command, lmod caches
 the entire module structure of the system.  The system cache, holding info about the modules installed by the LUNARC team, is updated, every time the LUNARC team installs new software. 
 
+## Searching for modules graphically
+
+It is also possible to browse the module tree and select module using a graphical user interface. This interface can be launched from the the command with the **ml-browse**:
+
+```
+ml-browse
+```
 
 # Compiling code and using toolchains
 
