@@ -4,28 +4,32 @@
 
 Python is available on the cluster. Depending on the users experience and needs, different distributions are available. Below is an non-exhaustive list of installed distributions:
 
-        Anaconda2 
-        Anaconda3
-        Python
-        Biopython
+* Anaconda2 
+* Anaconda3
+* Python
+* Biopython
         
 Information, such as available versions, on these distributions can be had using the command 
 
-        module spider <distribution-name>
+```bash
+module spider <distribution-name>
+```
 
 where one has to replace the `distribution-name` with the name of the distribution on is interested in.  For example, when being interested in a specific version of the Python distribution.
 
-        module spider Python
+```bash
+module spider Python
+```
         
 will list all the Python versions of the Python distribution we have installed.  To activate the version, one needs to enquire about the details of a specific version, load the prerequisites (e.g. compiler, MPI library, etc.) and the Python distribution.  E.g. when being interested in Python version 3.6.6 the command
 
-        module spider Python/3.6.6
+```bash
+module spider Python/3.6.6
+```
         
 will provide information for which combination of compiler, CUDA and/or MPI library that version of Python is available.  Note that the latest `Python`modules lack packages such as MPI4PY, numpy and scipy.  For this you need to load a `SciPy-bundle`.  See below [for details](#python-distributions-requiring-a-gcccore-module).
 
 Please note to utilise a distribution that requires CUDA, you need to have access to an LU Local or LVIS ([HPC Desktop On-Demand](http://www.lunarc.lu.se/resources/services/lunarc-hpc-desktop-on-demand/)) project.  For more information on how to use the module system consult our separate [guide on using the installed software](https://lunarc-documentation.readthedocs.io/en/latest/aurora_modules/).
-
-
 
 ## Recommended use
 
@@ -36,8 +40,10 @@ For users **without special requirements**, the recommended distribution is the 
 
 To get the full functionality of the Anaconda environment should use the following commands:
 
-        module load Anaconda3
-        source config_conda.sh
+```bash
+module load Anaconda3
+source config_conda.sh
+```
 
 This enables the full functionality of the **conda** command. 
 
@@ -45,44 +51,52 @@ This enables the full functionality of the **conda** command.
 
 To be able to create reproducable and custom environments with specific versions of Python, Numpy or any other packages. It is encouraged to create a specific conda environment for this. To create a new conda environment make sure that you have activated the conda command with
 
-        source conda_config.sh
-        
+```bash
+source conda_config.sh
+```
+
 Now you can create a new environment with the following command:
 
-        conda create -n myenv
+```bash
+conda create -n myenv
+```
         
 This will start the process of creating a new environment:
 
-        Collecting package metadata (current_repodata.json): done
-        Solving environment: done
+```bash
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
 
-        ## Package Plan ##
+## Package Plan ##
 
-          environment location: /home/bmjl/.conda/envs/myenv
+  environment location: /home/bmjl/.conda/envs/myenv
 
-        Proceed ([y]/n)?
+Proceed ([y]/n)?
+```
         
 Press **y** to start the process. When the environment has been created the following is shown:
 
-        Preparing transaction: done
-        Verifying transaction: done
-        Executing transaction: done
-        #
-        # To activate this environment, use
-        #
-        #     $ conda activate myenv
-        #
-        # To deactivate an active environment, use
-        #
-        #     $ conda deactivate
+```bash
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate myenv
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+```
 
 Activate the new environment using 
 
-        conda activate myenv
+```bash
+conda activate myenv
+```
         
 When activated all package installations, both conda and pip, goes into this environment and will not interfere with the base conda environment.
-
-
 
 ### Python distributions
 
@@ -97,8 +111,8 @@ Starting in 2019, the pre-requisites and site-package contents of the distributi
 
 By default the SciPy-bundle will load a Python 3 module.  If you require a Python 2 module, load that prior to loading SciPy-bundle.
 
-
 ### Biopython
+
 For users working in **bioinformatics** on of the Biopython packages is most likely the desired one.
  
 
@@ -108,11 +122,15 @@ The distribuitons provided by LUNARC have large number of site-packages (aka. Py
 
 Anaconda users can check the installed packages with:
 
-        conda list
+```bash
+conda list
+```
 
 All other installations are using the *pip* framework:
 
-        pip list
+```bash
+pip list
+```
 
 ### LUNARC installed packages
 
@@ -122,16 +140,18 @@ LUNARC staff will install packages in the various distributions (mainly in the n
 
 Users are also able to install their own packages by creating their own local repository.
 
-###Anaconda Python distributions
+### Anaconda Python distributions
+
 In **Anaconda** (available as a loadable module) the users are free to create their own environment. The user cen either use the pre-installed environment or create an empty environment and populate it with packages that the user chooses using *conda create* and *conda install*. Please review: <a target="_blank" href="https://conda.io/docs/user-guide/tasks/manage-environments.html"> Manage environments (new window)</a> for information on how to use environments in conda. 
 
 **Please note:** The .conda directory where the installed-files are located may become large which may become a problem as the default location for this directory is in ***/home/< username >***. If space is a problem, users should consider using ***/lunarc/nobackup*** instead.
 
-###Python installations
+### Python installations
+
 In all other installations (default or loadable module) users can install their own packages using *pip*
 
 ```
-        pip install --prefix=$HOME/local package_name
+pip install --prefix=$HOME/local package_name
 ```
 
 This will install the package *package_name* in the users home-directory.   Make sure the installation location of your packages gets added to your **PYTHONPATH** environment variable (e.g. private module file, sourceing a script, ...).  For this to work you need a Python package with a recent version of `pip`.  The use of the `--install-option` to redirect the installation location is no longer recommended.
