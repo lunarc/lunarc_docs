@@ -37,7 +37,7 @@ For users **without special requirements**, the recommended distribution is the 
 To get the full functionality of the Anaconda environment should use the following commands:
 
         module load Anaconda3
-        config_conda.sh
+        source config_conda.sh
 
 This enables the full functionality of the **conda** command. 
 
