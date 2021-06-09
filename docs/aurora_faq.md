@@ -108,4 +108,12 @@ module load intel/2016b
 module load scipy/0.17.0-Python-2.7.11
 ```
 
+## Visual Studio Code (code) doesn't work anymore
+
+Microsofts code editor Visual Studio Code in its latest version uses a runtime library that is no longer suppoerted by CentOS 7. To fix this load the foss module before running Visual Studio Code
+
+```bash
+module load foss
+code
+```
 
