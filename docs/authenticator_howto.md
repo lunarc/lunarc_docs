@@ -4,6 +4,7 @@ The process to install and set up the Pocket Pass authenticator is in five (5) s
 
 ## <span style="color:red">STEP 1:</span>  Download and install Pocket Pass
 Download and install the **PhenixID Pocket Pass** app on your smartphone.  The correct app is free of charge.
+Although not discussed here, you may use other apps commonly used for two-factor authentication using one-time passwords (OTP).
 
 ### Download for Apple iOS
 
