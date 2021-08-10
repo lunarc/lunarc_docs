@@ -55,16 +55,11 @@ Currently all LUNARC systems have a home directory that is different for each sy
 
 This directory can be referenced as **$HOME**.
 
-As a rule, the home directory should not be used for job submission. It is intended for storing important files, such as the source code of user programs, and, of course, environment files, such as .bashrc.
-
 ## Global working directory
 
-For job submission, we recommend using the centre file system:
+For job submission, we recommend using your home directory as the old /lunarc/nobackup/users directory is now decommisioned.
 
-    /lunarc/nobackup/users/xxxx
-
-Here the xxxx has to be replaced with your userid.  The centre files system is currently mounted on Aurora only.
-
+    
 ## Local working directory
 
 When a job is running, it has access to a temporary directory on the local disk of each allocated node. The directory can be referenced as **$SNIC_TMP** (or **$TMPDIR**). It will be deleted when the job finishes.
