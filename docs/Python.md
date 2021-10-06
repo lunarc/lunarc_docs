@@ -186,7 +186,7 @@ After a few seconds, Jupyter lab outputs logs on the terminal such as the exampl
 
 Notice the line `http://au001:8888/?token=a59a11155605a8038b5d61cdab7fde987d56d244b9284fbe` **must** appear in output.
 The hostname (here `au001`) depends on the compute node allocated for the interactive session and the token (`a59a11155605a8038b5d61cdab7fde987d56d244b9284fbe`) is unique to the jupyter-lab sessions being run.
-Note that you **cannot** use the link with hostname ´127.0.0.1´ or ´localhost´.
+Note that you **cannot** use the link with hostname `127.0.0.1` or `localhost`.
 You can open the jupyter lab web interface by copying the whole line and pasting in a browser running in the <a href="/using_hpc_desktop">LUNARC HPC Desktop</a>.
 Note that you can share the session with any other LUNARC user logged in the <a href="/using_hpc_desktop">LUNARC HPC Desktop</a> by sharing the link with them.
 ***Any user with whom you share this link can read and write all files in any subdirectory from where the jupyter lab was started. Share the link with caution.***
@@ -195,8 +195,8 @@ Note that you can share the session with any other LUNARC user logged in the <a 
 
 If the python software environment in jupyter lab lacks additional software of python packages, a customized jupyter lab python kernel can be a solution.
 
-#### Build and install custom Jupyter Lab Kernel
-To build a customized kernel, <a href="#creating-conda-environments">create a new virtual Anaconda environment</a> and install anaconda packages `ypykernel` and `ipython_genutils` as well as other anaconda or pip packages required by your application. Finally, activate the Anaconda virtual environment and register the new kernel to Jupyter Lab:
+#### Building and installing a custom Jupyter Lab kernel
+To build a customized kernel, <a href="#creating-conda-environments">create a new virtual Anaconda environment</a> and install anaconda packages `ipykernel` and `ipython_genutils` as well as other anaconda or pip packages required by your application. Finally, activate the Anaconda virtual environment and register the new kernel to Jupyter Lab:
 ```
 python -m ipykernel install --user --name "$KERNEL_NAME" --display-name "$KERNEL_DISPLAY_NAME"
 ```
@@ -209,12 +209,13 @@ Once installed, the new custom kernel can be selected either on Jupyter lab web 
 via main menu `Kernel/Change Kernel...` or on jupyter lab startup:
 ![Jupyter lab kernel selection dialog](images/jupyter-lab_select_kernel_dialog.png)
 
-In any case, the kernel under used at any given time is shown on the upper-right corner:
+In any case, the kernel under use at any given time is shown on the upper-right corner:
 ![Kernel in use](images/jupyter-lab_current_kernel.png)
 
-#### Remove custom kernel
+#### Removing a custom kernel
 To remove a custom kernel, activate the corresponding conda environment, and run the command
 ```
 jupyter kernelspec uninstall $KERNEL_NAME
 ```
+where `$KERNEL_NAME` is the name of the kernel to remove.
 
