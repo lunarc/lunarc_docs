@@ -757,7 +757,7 @@ consult with that person on the required modules to load.
 On other services the modules typically complain
 if the wrong compiler is loaded and are hence self-documenting.
 
-### Simple example for running a serial R job
+### Example script for running a serial R job
 The following is a basic example to run a serial R job on the cluster.  If you have many jobs to run, this can be combined with the techniques decribed below to run multiple serial jobs in a single submission.
 
 ```bash
