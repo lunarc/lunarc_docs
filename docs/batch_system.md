@@ -656,9 +656,7 @@ a large number of serial
 jobs, your might want to bundle them into a single submission. Refer to the
 section [Running multiple serial jobs within a single job submission](#running-multiple-serial-jobs-within-a-single-job-submission) for a scripting example.
 
-Unless you have project disc, jobs should be started from a
-subdirectory of your
-`/lunarc/nobackup/users/<user>` disc space.
+
 ```bash
 #!/bin/bash
 #
@@ -758,6 +756,36 @@ consult with that person on the required modules to load.
 
 On other services the modules typically complain
 if the wrong compiler is loaded and are hence self-documenting.
+
+### Simple example for running a serial R job
+The following is a basic example to run a serial R job on the cluster.  If you have many jobs to run, this can be combined with the techniques decribed below to run multiple serial jobs in a single submission.
+
+```bash
+#!/bin/bash
+#
+# job time, change for what your job requires
+#SBATCH -t 00:10:00
+#
+# job name
+#SBATCH -J R_data_process
+#
+# filenames stdout and stderr - customise, include %j
+#SBATCH -o result_R_%j.out
+#SBATCH -e result_R_%j.err
+
+# write this script to stdout-file - useful for scripting errors
+cat $0
+
+# load the modules required for running R 
+#    - customise for your program
+#    - check for newer versions
+module load foss/2021a
+module load R/4.1.0
+
+# run your R-script
+# customise for your program name and add arguments if required
+Rscript my_r_script.R
+```
 
 ## Running multiple serial jobs within a single job submission
 
