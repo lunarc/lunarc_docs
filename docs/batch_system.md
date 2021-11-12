@@ -1,6 +1,6 @@
 # Using the job submission system at LUNARC #
 
-Authors: Joachim Hein, Jonas Lindemann, Anders Sjöström, Magnus Ullner
+Authors: Joachim Hein, Jonas Lindemann, Anders Sjöström, Magnus Ullner, Nicolas Melot
 
 *Document is frequently updated for Aurora*
 
@@ -815,9 +815,12 @@ For our example the entire setup assumes the submission directory has
 the directories contains the input data and the program executable to be
 run.
 
-Keep the number of jobs-steps at a reasonable level. Recent testing by
+**Remarks:**
+* Keep the number of jobs-steps at a reasonable level. Recent testing by
 the LUNARC support team has shown that, when including a sleep statement
 inside the do loop the setup can be used to processes 800 jobs.
+* Make sure to spawn worker tasks from a unique master script running within a unique `sbatch` job submission.
+Please refrain from using `sbatch` or `sbatch --array` to spawn each worker tasks as an individual job.
 
 ### The master script
 
