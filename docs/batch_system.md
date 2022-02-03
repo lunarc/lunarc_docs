@@ -36,7 +36,7 @@ description file is also know as a *job script*.
 
 A very simple job script, looks as follows:
     
-    #!/bin/sh
+    #!/bin/bash
     #SBATCH -t 00:05:00
 
     echo "hello"
@@ -135,29 +135,19 @@ Most users are members of a single SNIC project. These users do not need to
 specify a project in their submission script. The LUNARC set-up
 will automatically use that project for accounting.
 
-Users with membership in more than project and/or in an Lund
-University (LU) project have to let the system know which project to
+Users with membership in more than project have to let the system know which project to
 charge for the run. To do so, you need to
 specify the project using the -A option:
 
-    #SBATCH -A snic2016-x-xxx
+    #SBATCH -A lu2022-x-xxx
 
-for a SNIC project or
-
-	#SBATCH -A lu2016-x-xx
-
-for an LU project. Replace the **snic2016-x-xxx** or **lu2016-x-xx** with the string naming your project.
-The correct name can be obtained by using the **projinfo** or
-**projinfo -p lu** command, respectively. The information is also available in the
+Replace the **lu2022-x-xx** with the string naming your project.
+The correct name can be obtained by using the **projinfo** command. The information is also available in the
 SUPR system, but notice the difference in the formatting of the names.
-
-For LU-projects the partition also needs to be specified in the batch script:
-
-	#SBATCH -p lu
 
 In addition, those who access private nodes (financed by a research project) through an LU project, the corresponding reservation has to be stated:
 
-    #SBATCH --reservation=lu2016-x-xx
+    #SBATCH --reservation=lu2022-x-xx
 
 #### Accessing GPUs in the Aurora LU partition
 
@@ -188,7 +178,7 @@ to standard job submission scripts, allowing the GPU nodes to be fully accessibl
 ### Specifying memory requirements
 
 #### Aurora
-The Aurora system has 64 GB of memory installed on a compute node.  To
+The Aurora system has 64 GB of memory installed on a normal compute node.  To
 allow memory for the operating system, only 62000 MB are available for jobs and the default memory request per core is 3100 MB of memory (20 cores per node).  
 If more than 3100 MB per core is needed it has to be 
 requested explicitly using the **--mem-per-cpu** option.  For example if you require 
@@ -196,12 +186,11 @@ requested explicitly using the **--mem-per-cpu** option.  For example if you req
 
     #SBATCH --mem-per-cpu=5000
 
-When requesting more then 3100 MB per processing core on Aurora when utilising a SNIC project, your 
-jobs will be
-charged at a higher rate. If you do this, some processing cores have to
+When requesting more then 3100 MB per processing core on a normal Aurora node, your 
+jobs will be charged at a higher rate. If you do this, some processing cores have to
 remain idle since you are using more than your fair share of memory.
 
-Users of [LU projects](#specifying-a-project-and-partition-for-users-with-lu-projects-or-multiple-projects) can utilise up to 12800 MB per processing core without any cores ideling, by requesting placement on a large memory node via the **-C** option.  The following example will request 11000 MB per processing core on a large memory node
+There are a few nodes, however, where jobs can utilise up to 12800 MB per processing core without any cores ideling, by requesting placement on a large memory node via the **-C** option.  The following example will request 11000 MB per processing core on a large memory node
  
     #SBATCH --mem-per-cpu=11000
     #SBATCH -C mem256GB
@@ -269,7 +258,7 @@ the queue
     [fred@aurora Simcode]$ sbatch -d afterok:8042 run_sim.sh
     Submitted batch job 8043
 
-When using squeue to monitor job 8043, this should now be in status
+When using jobinfo or squeue to monitor job 8043, this should now be in status
 pending (PD) with the reason of dependency. Another common use case for
 this functionality is a simulation requiring many days of computer times
 being split into a number of submissions.
@@ -343,20 +332,6 @@ nodes.
 In most cases users requesting multiple nodes will want the product
 to equal the number of cores per node. The syntax how to control nodes,
 tasks per node and threads per task is explaned below.
-
-### Exclusive node access
-
-For parallel codes using MPI or OpenMP it is typically best to keep
-interference on the nodes at a minimum, that is to have exclusive access
-to the nodes you are using. This also applies to specialist and
-experimental work, which would interfere very badly with other user’s
-codes on the nodes. Adding
-
-    #SBATCH --exclusive
-
-to your job script will ensure that SLURM will allocate dedicated nodes
-to your job. Obviously your project gets charged for the full costs of
-the nodes you are using, that is 20 cores per node in case of Aurora nodes.
 
 ### Specifying the number of nodes required for the job
 
@@ -575,10 +550,18 @@ jobs within a single submission to the batch system. A use case of srun
 to start many serial jobs in a single multicore submission scipt is
 discussed in the [*example section*](#id.bdphbddpef0).
 
-### Monitoring with squeue
+### Monitoring jobs
 
-The command squeue will show you the current state of the job queue. The
-standard output, created by calling squeue without any options looks as
+The best overview of queue is obtained with the command jobinfo. It sorts jobs in the
+queue into running and waiting jobs. It also shows additional information, such as
+how long running jobs have left and in some cases when waiting jobs are
+expected to start. It can take some of the options available to command squeue to
+filter the output, such as -u myid to only jobs of user myid, -A lu2022-x-xx to only
+see jobs belonging to project lu2022-x-xx, and -p gpu to only see jobs using or waiting for
+nodes in the gpu partition.
+
+Jobinfo is a script that uses the command squeue, which can, of course, also be used directly to show you the current state of the job queue.
+It is less convenient, but more configurable. The standard output, created by calling squeue without any options looks as
 follows:
 
     JOBID PARTITION NAME USER ST TIME NODES NODELIST(REASON)
@@ -606,17 +589,12 @@ nodes utilised by the job. For running jobs the last column gives the
 names of the nodes utilised or if the job is waiting a reason why it is
 not executing.
 
-The squeue command is highly configurable. Useful options include -u
+The squeue command is highly configurable, as mentioned above. Useful options include -u
 myid, which lists all jobs of the user myid and also the --start option.
 The latter gives the current estimate of when SLURM expects the job to
 start. Note, that this can shift in either direction, depending on e.g.
 jobs finishing earlier than specified or jobs with higher priority
 getting added to the job queue.
-
-The command jobinfo is a script that sorts the output of squeue into
-running and waiting jobs. It also shows additional information, such as
-how long running jobs have left and in some cases when waiting jobs are
-expected to start.
 
 ### Terminating jobs with scancel
 
@@ -624,7 +602,7 @@ It is frequently required to remove jobs from the queue. This might be
 that you discover a problem in your job specification or intermediate
 results of running job indicating that something went wrong. Use scancel
 to remove a job from the job queue. To do so you need the jobid, which
-is best queried with the squeue command. To remove the job with the
+can be queried with the jobinfo or squeue command. To remove the job with the
 jobid 7103 from the job queue type
 
 scancel 7103
@@ -880,7 +858,7 @@ and core count in relation to the average job-time.
 
 **Remarks:** When using srun inside a batch script many srun-options act
 differently compared to using srun within a different environment.
-Note also that the order of the options `--exclusive` and `--overlap` is crucial for the correct behaviour.
+Note also that even the order of the options `--exclusive` and `--overlap` is crucial for the correct behaviour.
 Consult the man-page of srun for documentation and contact the LUNARC
 help desk if your require further consultancy.
 
@@ -914,7 +892,7 @@ If you are using the above master script, the script should be named
 “workScript.sh”.
 
 ```bash
-#!/bin/sh
+#!/bin/bash
 # document this script to stdout (assumes redirection from caller)
 cat $0
 
@@ -1013,11 +991,10 @@ script to run the MPI application simula_mpi with 80 tasks on 4 nodes.
 Notice you do not need to specify the node count.
 
 ```bash
-#!/bin/sh
+#!/bin/bash
 # requesting the number of cores needed on exclusive nodes
 #SBATCH -N 4
 #SBATCH --tasks-per-node=20
-#SBATCH --exclusive
 #
 # job time, change for what your job requires
 #SBATCH -t 0:30:0
@@ -1062,11 +1039,10 @@ applications write result files only from the head node.  In these
 cases the below script should work.
 
 ```bash
-#!/bin/sh
+#!/bin/bash
 # requesting the number of cores needed on exclusive nodes
 #SBATCH -N 4
 #SBATCH --tasks-per-node=20
-#SBATCH --exclusive
 #
 # job time, change for what your job requires
 #SBATCH -t 0:30:0
@@ -1163,12 +1139,11 @@ your own application.
   allocation will be charged for all 80 cores.
 
 ```bash
-#!/bin/sh
+#!/bin/bash
 # requesting the number of nodes and cores needed, exclusive nodes
 #SBATCH -N 4
 #SBATCH --tasks-per-node=10
 #SBATCH --mem-per-cpu=6200
-#SBATCH --exclusive
 #
 # job time, change for what your job requires
 #SBATCH -t 0:30:0
@@ -1328,19 +1303,18 @@ For the below syntax you have to use **version 1.8.3 or newer** of the
 OpenMPI library.
 
 In the following we give a simple example script to run a MPI-OpenMP
-hybrid named simul_hyb on 2 nodes using 8 tasks and 4 threads per task.
+hybrid named simul_hyb on 2 nodes using 10 tasks and 4 threads per task.
 The tasks and their threads will be bound to the *numa-islands*,
 minimising cc-numa effects.
 
 ```bash
-#!/bin/sh
+#!/bin/bash
 # requesting number of nodes (-N option)
 # number of mpi-tasks per node
 # and number of threads per task exclusive nodes
 #SBATCH -N 2
-#SBATCH --tasks-per-node=4
+#SBATCH --tasks-per-node=5
 #SBATCH --cpus-per-task=4
-#SBATCH --exclusive
 # time required
 #SBATCH -t 01:00:00
 #SBATCH -J hybrid_run
@@ -1385,19 +1359,6 @@ As discussed, the above binds the tasks and their threads to the
 numa-islands of the Alarik architecture. Alariks numa-islands have four
 cores, therefore the script is best used with 2 or four threads per MPI
 task. This results in one or two MPI tasks per numa islands.
-
-### Things to try for MPI-OpenMP hybrids with 16 threads per task
-
-While using more than 4 threads per MPI task on the Alarik system can
-result in reduced performance due to cc-numa effects, there are
-situations when using 16 threads per task can be required (e.g. special
-algorithms or extreme memory requirements per MPI task).
-
-When running 16 threads per MPI task, that is a single MPI task per
-Alarik node, you might want to experiment with starting your job without
-specifying binding on mpiexec, that is remove the -bind-to-core, but
-utilise the [*OpenMP thread binding*](#id.zfbd8w955ujk) techniques
-described in the OpenMP sample section.
 
 # Interactive access to compute nodes
 
@@ -1444,7 +1405,3 @@ That is despite the **modules list** command claiming they are still loaded.
 You also need to check whether environment variables still have the
 required values. If the software you are using has a set-up script, you
 might need to re-run that script.
-
-## Known issues with the interactive command
-
-None at the time of writing.
