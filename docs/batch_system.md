@@ -552,12 +552,12 @@ discussed in the [*example section*](#id.bdphbddpef0).
 
 ### Monitoring jobs
 
-The best overview of queue is obtained with the command jobinfo. It sorts jobs in the
+The best overview of the queue is obtained with the command jobinfo. It sorts jobs in the
 queue into running and waiting jobs. It also shows additional information, such as
 how long running jobs have left and in some cases when waiting jobs are
-expected to start. It can take some of the options available to command squeue to
-filter the output, such as -u myid to only jobs of user myid, -A lu2022-x-xx to only
-see jobs belonging to project lu2022-x-xx, and -p gpu to only see jobs using or waiting for
+expected to start. It can take some of the options available to the command squeue to
+filter the output, such as -u myid to only show jobs of user myid, -A lu2022-x-xx to only
+show jobs belonging to project lu2022-x-xx, and -p gpu to only show jobs using or waiting for
 nodes in the gpu partition.
 
 Jobinfo is a script that uses the command squeue, which can, of course, also be used directly to show you the current state of the job queue.
