@@ -52,7 +52,7 @@ This enables the full functionality of the **conda** command.
 To be able to create reproducable and custom environments with specific versions of Python, Numpy or any other packages. It is encouraged to create a specific conda environment for this. To create a new conda environment make sure that you have activated the conda command with
 
 ```bash
-source conda_config.sh
+source config_conda.sh
 ```
 
 Now you can create a new environment with the following command:
