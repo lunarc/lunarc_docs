@@ -7,7 +7,7 @@ A basic description on how to start a debugging session with DDT, part of [ARM F
 
 This document gives basic instruction on how to start a debugging session using the DDT debugger on the Aurora system at LUNARC.  This document is based on DDT version 6.0.2 currently installed on Aurora.  There is currently a centralised SNIC license hosted by NSC.  The licenses are shared between the users of all the SNIC systems.  So please be considerate to other users fellow regarding for how many licenses your use (time and number of cores).
     
-DDT is a powerful debugger for serial and parallel programs.  The tool is developed and maintained by Allinea Software.  It is part of the Allinea's Forge suite.  A number of parallel programming models are supported.  This includes MPI, OpenMP and a number of GPU languages.  This document is not a DDT userguide, we refer our users to the documentation available from the [ARM website](http://www.allinea.com/product-documentation), in particular their [user guide](http://content.allinea.com/downloads/userguide-forge.pdf).
+DDT is a powerful debugger for serial and parallel programs.  The tool is developed and maintained by ARM.  It is part of the ARM's Forge suite.  A number of parallel programming models are supported.  This includes MPI, OpenMP and a number of GPU languages.  This document is not a DDT userguide, we refer our users to the documentation available from the [ARM website](https://www.arm.com/products/development-tools/server-and-hpc/forge), in particular their [user guide](https://developer.arm.com/documentation/101136/2113/?lang=en).
 
 # Getting started with DDT on Aurora
 
@@ -30,14 +30,18 @@ To connect using x-forwarding from a windows it is recommended to install [Cygwi
 
 ## Starting the DDT GUI on Aurora
 
-LUNARC currently recommends using *reverse connect* to start DDT.  Load the relevant module.  On Aurora the module name is *allinea_forge*.  Load it: 
-```bash
-    module load allinea_forge
-```    
+LUNARC currently recommends using *reverse connect* to start DDT.  Load the relevant module.  On Aurora the module name is *arm_forge*.  Load it: 
+
+```
+    module load arm_forge
+``` 
+   
 You can now start the GUI by typing
-```bash
+
+```
     ddt &
 ```    
+
 at the command prompt.  This will bring up the following GUI window
 
 ![Start window](images/allineaForgeStartWindow.png "Start window")    
@@ -48,21 +52,27 @@ In the bottom left hand corner you get confirmation whether you managed to reach
 We have seen issues when sources and/or executables are placed on the /lunarc file system (nobackup space).  Copying sources and executables into your home space typically solves the issues.
 
 You need to prepare your executable for debugging.  Please **recompile** and **relink** everything with debugging support and without optimisation.  To do so, for most compilers you need to add the flags
-```bash
+
+```
    -g -O0
 ```
+
 Once your created an executable with debugging support, run it using either a batch script or an interactive session.  
 
-Make sure the *allinea_forge* (on Aurora) is loaded before starting the executable.  This is in addition to the modules normally required to execute your code.
+Make sure the `arm_forge` module is loaded by your script or manually inside your session, before starting the executable.  This is in addition to the modules normally required to execute your code.
 
-To start your program, prefix the execution statement with *ddt --connect*.  For example an MPI code compiled against an OpenMPI-library should be started as follows
-```bash
+To start your program, prefix the execution statement with `ddt --connect`.  For example an MPI code compiled against an OpenMPI-library should be started as follows
+
+```
    ddt --connect mpirun program_g
 ```
+
 with the executable being named *program_g*.  In case of the Intel MPI-library the code gets started using *srun*
-```bash
+
+```
    ddt --connect srun program_g
 ```
+
 Once your job starts running, you get a request to allow your job connecting to the DDT GUI
 
 ![Reverse connect request](images/ddtReverseConnectRequest.png "reverse connect request")     
