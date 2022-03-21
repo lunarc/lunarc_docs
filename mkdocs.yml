@@ -11,7 +11,7 @@ pages:
   - Using installed software on Aurora: aurora_modules.md
   - Using the Job submission system: batch_system.md
   - Quick reference: quick_reference.md
-  - Using the lu32-partition: caskadelake_user.md
+  - Using the lu32-partition: cascadelake_user.md
   - Linux Basics: linux_basics.md
 - Aurora FAQ: aurora_faq.md
 - Specific topics:
