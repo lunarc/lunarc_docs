@@ -94,7 +94,7 @@ After registerering with the VASP team, contact the [LUNARC helpdesk](http://www
 In order to be able to continue the provision of VASP to our ligitimate VASP users, we will not make any exception. 
 
 
-The VASP executables on Aurora are compiled using Intel MPI.  They need to be started with `srun`, refer to the sample section of our batch [system guide](https://lunarc-documentation.readthedocs.io/en/latest/batch_system/#mpi-job-using-20-tasks-per-node) for a more comprehensive discussion.
+The VASP5 executables on Aurora are compiled using Intel MPI.  They need to be started with `srun`.  The VASP6 executable is build with OpenMPI.   These executables need to be started with `mpirun`.  Refer to the sample section of our batch [system guide](https://lunarc-documentation.readthedocs.io/en/latest/batch_system/#mpi-job-using-20-tasks-per-node) for a more comprehensive discussion.
 
 
 ## My MPI application doesn't launch
