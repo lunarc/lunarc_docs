@@ -4,9 +4,9 @@ Author: Joachim Hein (LUNARC)
 ![Node icon](images/node_icon.jpg "Node icon")
 
 ## I have forgotten my login password for Aurora
-To receive a new password, please phone LUNARC support on 0462224454 (+46462224454 outside Sweden) from the mobile phone you have registered in [SUPR](https://supr.snic.se/person/).  Additional questions will be asked to verify your identity.  
+To receive a new password, please visit the [password self service portal](https://phenix3.lunarc.lu.se/pss); identify yourself with your email address and the mobile phone you have registered you have registered in [SUPR](https://supr.snic.se/person/). If this fails, phone LUNARC support on 0462224454 (+46462224454 outside Sweden) from your registered mobile phone. Additional questions will be asked to verify your identity.  
 
-## I can not login after installing a pocket pass tocken
+## I can not login after installing a pocket pass token
 Many users have issues because of missing the [activation step](https://lunarc-documentation.readthedocs.io/en/latest/authenticator_howto/#step-5-important-last-step-activate-your-token).  To activate your token, connect to the [self-service portal](https://lunarc-documentation.readthedocs.io/en/latest/authenticator_howto/#accessing-the-self-service-portal), go into "tokens", choose "activate" and follow the instructions.
 
 ## I have persistent problems connecting after beging prompted for my OTP
