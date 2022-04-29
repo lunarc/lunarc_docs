@@ -1,6 +1,4 @@
-# Compiler Options #
-
-# Introduction #
+# Compiler Options
 
 Several compilers are available to Lunarc users. Here we list the command names and options that often produce good performance for the most used compilers. More may be found by looking through the list of available modules obtained by the command
 
@@ -14,9 +12,9 @@ The compiler options given here are only suggestions of useful combinations, but
 
 In terms of optimized performance, the Intel compilers usually give good results (fast programs) for both Intel (Sigrid) and AMD processors (Docenten, Sweet16). PathScale and Portland Group compilers are in some cases superior on AMD. The GNU compilers generally work, but are usually outperformed by other compilers.
 
-# Intel # 
+## Intel 
 
-## Commands ##
+### Commands 
 
 Adding the intel module:
 
@@ -34,7 +32,7 @@ C++ compiler:
 
     icpc 
 
-## Compiler Options ##
+### Compiler Options
 
 Checking for mistakes
 
@@ -48,7 +46,7 @@ Optimization flags:
 
     -fast 
 
-## Problem solving ##
+### Problem solving
 
 By default, the Intel compiler puts arrays on the stack and if they are too large, the program may crash with segmentation fault. A solution is to instruct the compiler to put the arrays on the heap instead.
 
@@ -58,9 +56,9 @@ This may reduce performance and it is therefore possible to specify a minimum si
 
     -heap-arrays <size in kilobytes> 
 
-# PathScale #
+## PathScale
 
-## Commands ##
+### Commands 
 
 Adding the pathscale module:
 
@@ -78,7 +76,7 @@ C++ compiler
 
     pathCC 
 
-## Compiler Options ##
+### Compiler Options
 
 Checking for mistakes
 
@@ -88,9 +86,9 @@ Optimization flags:
 
     -O3 
 
-# Portland Group #
+## Portland Group
 
-## Commands ##
+### Commands 
 
 Adding the portland compiler module:
 
@@ -112,7 +110,7 @@ C++ compiler:
 
     pgCC 
 
-## Compiler Options ##
+### Compiler Options
 
 Checking for mistakes:
 
@@ -122,15 +120,15 @@ Optimization flags:
 
     -O3 -fastsse -Mvect 
 
-## Problem solving: ##
+### Problem solving:
 
 By default, objects, such as arrays, are limited to 2 GB. The option to allow larger objects is
 
     -mcmodel=medium 
 
-# GNU #
+## GNU
 
-## Commands ##
+### Commands 
 
 Adding the gnu compiler module:
 
@@ -148,7 +146,7 @@ C++ compiler:
 
     g++ 
 
-## Compiler Options ##
+### Compiler Options
 
 Checking for mistakes:
 

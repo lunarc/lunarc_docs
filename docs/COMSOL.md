@@ -2,7 +2,7 @@
 
 COMSOL is installed on the cluster. It can either be used non-interactively for running a .mph file by sending it through the queue system from any login node or interactively from the LUNARC desktop. If run interactively, care has to be taken so that the program does not consume large amounts of resources on the frontend.
 
-# Non-interactive use
+## Non-interactive use
 
 Given a .mph file comsol is started and run on the backend using a sbatch-script.
 an example script is given below:
@@ -35,7 +35,7 @@ an example script is given below:
 
 This will run the job input.mph on the cluster and save the output to output.mph
 
-# Interactive use
+## Interactive use
 
 To run interactively the LUNARC Desktop (thinlinc) MUST be used. 
 The setup is based on having a comsol server process running on the backend which the GUI (which is running on the frontend) connects to.

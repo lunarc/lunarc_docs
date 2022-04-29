@@ -6,7 +6,7 @@ Authors: Joachim Hein, Jonas Lindemann, Anders Sjöström, Magnus Ullner, Nicola
 
 A more in-depth guide to the job submission system.
 
-# SLURM - the batch system at LUNARC
+## SLURM - the batch system at LUNARC
 
 On a modern HPC system efficient management of the compute resources is
 absolutely crucial for the system to perform. LUNARC deploys 
@@ -24,11 +24,11 @@ scripts for the most common use cases. They hopefully serve as a good
 starting point when creating submission scripts fitting your needs and
 requirements.
 
-# Job submission
+## Job submission
 
-## First example for a job submission
+### First example for a job submission
 
-### The job script and sbatch
+#### The job script and sbatch
 
 You register your program with SLURM for execution using the **sbatch**
 command. This is done easiest by using a *job description file*. The job
@@ -57,7 +57,7 @@ Where 7185 is the job number assigned by SLURM. Once your job has
 executed you will find a file slurm-7185.out in your directory which
 contains the output and error messages from your program.
 
-### The three parts of a job script
+#### The three parts of a job script
 
 The example echo_script.sh shows the three parts every job script
 requires
@@ -80,13 +80,13 @@ UNIX script and everything you can do in a UNIX script can be done here
 as well. In our example the script consists out of the UNIX echo
 command.
 
-## Resource statements for all jobs
+### Resource statements for all jobs
 
 We now describe a number of statements which are most commonly used to
 specify resource requirements for all kind of jobs. Refer to “man
 sbatch” for more information.
 
-### Walltime
+#### Walltime
 
 The walltime attribute specifies the time requested for completing the
 job. The time is *not* cpu-time but the total time, as measured by a
@@ -116,7 +116,7 @@ into your job script.
 
 The maximum walltime for any job on Aurora is 168h (7 days).
 
-### Job naming
+#### Job naming
 
 All jobs are given both a job identifier and a name, for easier
 identification in the batch-system. The default name given to a job is
@@ -129,7 +129,7 @@ option:
 
 This will name your job “parameterTest”.
 
-### Specifying a project and partition for users with LU projects or multiple projects 
+#### Specifying a project and partition for users with LU projects or multiple projects 
 
 Most users are members of a single SNIC project. These users do not need to
 specify a project in their submission script. The LUNARC set-up
@@ -149,7 +149,7 @@ In addition, those who access private nodes (financed by a research project) thr
 
     #SBATCH --reservation=lu2022-x-xx
 
-#### Accessing GPUs in the Aurora LU partition
+##### Accessing GPUs in the Aurora LU partition
 
 A number of compute nodes in the Lund University partition are equiped
 with GPUs.  These nodes are equiped with 2 Nvidia K80 cards that have
@@ -175,9 +175,9 @@ line:
 
 to standard job submission scripts, allowing the GPU nodes to be fully accessible
 
-### Specifying memory requirements
+#### Specifying memory requirements
 
-#### Aurora
+##### Aurora
 The Aurora system has 64 GB of memory installed on a normal compute node.  To
 allow memory for the operating system, only 62000 MB are available for jobs and the default memory request per core is 3100 MB of memory (20 cores per node).  
 If more than 3100 MB per core is needed it has to be 
@@ -196,7 +196,7 @@ There are a few nodes, however, where jobs can utilise up to 12800 MB per proces
     #SBATCH -C mem256GB
 
 
-### Controlling job output
+#### Controlling job output
 
 By default, the output which your job writes to stdout and stderr is
 written to a file named
@@ -223,7 +223,7 @@ following gives an example:
 You can give the same filename for both options to get stdout and stderr
 written to the same file.
 
-### Notification
+#### Notification
 
 SLURM on the systems can send you email if the status of your job
 changes as it progresses through the job queue. To use this feature you
@@ -238,7 +238,7 @@ Will send an email to the address fred@institute.se once the job has
 ended. Valid type values, selecting the event you can get notified
 about, are BEGIN, END, FAIL, REQUEUE, and ALL (any state change).
 
-### Job dependencies
+#### Job dependencies
 
 To describe job dependencies, use the -d option of sbatch. This is
 particularly useful for job dependencies, in workflows.
@@ -263,7 +263,7 @@ pending (PD) with the reason of dependency. Another common use case for
 this functionality is a simulation requiring many days of computer times
 being split into a number of submissions.
 
-### Test queue
+#### Test queue
 
 To run short tests, it is possible to request extra high priority on
 Aurora with the help of
@@ -279,7 +279,7 @@ job, the more likely it is to start sooner rather than later. It is not
 allowed to use qos=test for series of production runs.
 
 
-### Controlling requeueing/restarting of jobs
+#### Controlling requeueing/restarting of jobs
 
 By default the scheduler will requeue (aka. restart) jobs that
 suffered from node failure.  This is not always desirable.  Adding a line
@@ -289,7 +289,7 @@ suffered from node failure.  This is not always desirable.  Adding a line
 to the header portion of your job script prevents this behaviour.
 
 
-## Resource statements for multiprocessor
+### Resource statements for multiprocessor
 
 In HPC it is very common to have many processing elements working on a
 job. The extra processing power can be utilised to process large
@@ -297,7 +297,7 @@ problems beyond the capabilities of a single processing element. It can
 also be used to swiftly perform a number of calculations within a single
 job submission.
 
-### Terminology around nodes, processors, cores, tasks
+#### Terminology around nodes, processors, cores, tasks
 
 There is a a lot of structure within modern HPC equipment. For the
 purposes of this user guide we will stick to the following terminology:
@@ -312,7 +312,7 @@ purposes of this user guide we will stick to the following terminology:
 | Task | This is a software concept.  It denotes a process, which is an instance of a running program.  It has its own data and instruction stream(s).  It can fork multiple threads to increase the computational speed.  Serial programs and pure MPI programs do not spawn threads. | User controls in job script |
 | Thread | This is also a software concept.  A thread is a stream of instructions executed on the hardware.  It is part of a task and shares resources such as  data with other threads within the same task. | User controls in job script |
 
-### Outline: Resource requests for multiprocessor jobs
+#### Outline: Resource requests for multiprocessor jobs
 
 When running multi processor jobs on the LUNARC clusters, one should
 specify:
@@ -333,7 +333,7 @@ In most cases users requesting multiple nodes will want the product
 to equal the number of cores per node. The syntax how to control nodes,
 tasks per node and threads per task is explaned below.
 
-### Specifying the number of nodes required for the job
+#### Specifying the number of nodes required for the job
 
 In SLURM one requests the number of nodes for a job with the **-N**
 option. The following statement requests four nodes for your job:
@@ -344,7 +344,7 @@ option. The following statement requests four nodes for your job:
 the --cpus-per-task options of sbatch, this will reserve a single core
 per node, so four in total, which is most likely not what you want.
 
-### Specifying the number of tasks per node
+#### Specifying the number of tasks per node
 
 Use the --tasks-per-node of sbatch to specify the number of tasks you
 require per node. Most multinode job will set this equal to the number
@@ -367,7 +367,7 @@ user’s jobs sharing your node, you need to consider using
 the --exclusive option. If --exclusive is not specified, SLURM might
 place other tasks onto your node.
 
-### Specifying the number of threads for a shared-memory job
+#### Specifying the number of threads for a shared-memory job
 
 If you want to run shared-memory applications using threads, e.g. OpenMP
 parallised code or Java applications, you need to specify the number of
@@ -391,7 +391,7 @@ to use e.g.:
 
 if you only want to use four threads. 
 
-### Resource statements for hybrid programs using distributed and shared memory 
+#### Resource statements for hybrid programs using distributed and shared memory 
 
 So-called hybrid programs, using both distributed and shared-memory
 techniques have recently become popular. For example: for a program
@@ -404,7 +404,7 @@ would look as follows:
     #SBATCH --tasks-per-node=10
     #SBATCH --cpus-per-task=2
 
-### Specifying the number of cores to be required by the job
+#### Specifying the number of cores to be required by the job
 
 In special cases, such as using very unusal numbers of tasks, the **-n**
 option of sbatch to specify the number of cores might become useful.
@@ -424,9 +424,9 @@ interfere with your job and introduce undue operational noise. Such
 noise is something parallel program execution can be extremely sensitive
 to.
 
-## Program execution environment
+### Program execution environment
 
-### Job execution environment
+#### Job execution environment
 
 When submitting your job to SLURM using sbatch, your entire environment
 including the currently loaded modules gets copied.  On Aurora,
@@ -434,18 +434,18 @@ when hitting sbatch:
 
  * Make sure that the loaded modules and any environment variable you may have set will not be in conflict with the environment expected by the job script
 
-### Compiler modules
+#### Compiler modules
 
 On **Aurora** software modules are arranged in a **hierarchical module naming scheme**.  Accessing software on Aurora very different from 
 earlier LUNARC systems and a [separate guide](http://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/) is available.  
 When compiling code using a [toolchain](http://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/#compiling-code-and-using-toolchains) module is recommended.
 
 
-### SLURM variables
+#### SLURM variables
 
 *To come*
 
-### SNIC variables
+#### SNIC variables
 
 The SNIC meta-centres have agreed on a set of environment variables
 which should improve the portability of (parts of) job-scripts between
@@ -460,7 +460,7 @@ SNIC sites. On Aurora the following variables are set by the system:
 | SNIC_TMP | Directory for best performance during a job.  At LUNARC: Local disk on nodes for storing temporary data during job execution. Transfer data with long-term value to SNIC_NOBACKUP before job has finished |  jobid dependent |
 
 
-## Using the node local disks to improve I/O performance
+### Using the node local disks to improve I/O performance
 
 On Aurora all nodes have a local disk. This disk offers
 superior bandwidth when compared to accessing your home space or the
@@ -499,7 +499,7 @@ specific requirements and require consultation.
 | TMPDIR | node local disk, many applications use this environment variable to locate a disk volume for temporary scratch space.  If your application follows that convention nothing needs to be done.  |
 | SLURM_SUBMIT_DIR | submission directory where you ran `sbatch` |
 
-## Launching MPI jobs in OpenMPI
+### Launching MPI jobs in OpenMPI
 
 To execute message passing parallel jobs these should be built against
 one of the MPI libraries provided by the support team as a module. To
@@ -513,7 +513,7 @@ your job script should do the following:
      *   When using 20 task per node on Aurora, we recommend using the `-bind-to core` option of mpirun 
      *   When using fewer than 16 tasks we recommend experimenting whether not using binding helps or hinders performance.
 
-## Launching MPI jobs compiled with the Intel MPI library
+### Launching MPI jobs compiled with the Intel MPI library
 
 When the Intel MPI library was used to build your executable, your jobsscript should do as follows:
 
@@ -527,9 +527,9 @@ executables of this package.
 
 **Remark**: Task binding for the Intel MPI library is still under investigation
 
-## Submitting, monitoring and manipulating jobs in SLURM
+### Submitting, monitoring and manipulating jobs in SLURM
 
-### Submitting with sbatch
+#### Submitting with sbatch
 
 One uses the command sbatch to submit a job script to the batch system
 for execution. SLURM will reply with the jobid number. The job will then
@@ -542,7 +542,7 @@ typical use case looks as follows:
 User fred submitted the script runjob.sh to the job queue and got the
 jobid 7197 assigned to it.
 
-### Starting executables within SLURM with srun
+#### Starting executables within SLURM with srun
 
 The command srun allows to start executables in a way managed by SLURM.
 This is particularly effective if you want to process a large number of
@@ -550,7 +550,7 @@ jobs within a single submission to the batch system. A use case of srun
 to start many serial jobs in a single multicore submission scipt is
 discussed in the [*example section*](#id.bdphbddpef0).
 
-### Monitoring jobs
+#### Monitoring jobs
 
 The best overview of the queue is obtained with the command jobinfo. It sorts jobs in the
 queue into running and waiting jobs. It also shows additional information, such as
@@ -596,7 +596,7 @@ start. Note, that this can shift in either direction, depending on e.g.
 jobs finishing earlier than specified or jobs with higher priority
 getting added to the job queue.
 
-### Terminating jobs with scancel
+#### Terminating jobs with scancel
 
 It is frequently required to remove jobs from the queue. This might be
 that you discover a problem in your job specification or intermediate
@@ -607,16 +607,16 @@ jobid 7103 from the job queue type
 
 scancel 7103
 
-# Example job scripts
+## Example job scripts
 
 ***The examples are still in the process of being updated for Aurora***
 
 
 In this section we provide sample scripts for typical use cases.
 
-## Job scripts for serial jobs
+### Job scripts for serial jobs
 
-### Basic run script
+#### Basic run script
 The following is an example for a simple script running the program
 named `processor`, whose executable is located in the submission
 directory.  If you are using a LUNARC provided executable, load the
@@ -660,7 +660,7 @@ module load foss/2016a
 
 ```
 
-### Basic run script for I/O intensive jobs
+#### Basic run script for I/O intensive jobs
 As discussed the node local disk provides better I/O-bandwidth and I/O
 access times than the
 other file systems available. The following script assumes the
@@ -717,7 +717,7 @@ We recommend to be selective about the files you copy between the
 submission directory and the local node disk. If you have multiple input
 and result files you need to modify the copy statements accordingly.
 
-### Module loading
+#### Module loading
 The
 above examples assumes your program has been compiled with the
 foss/2016a tool-chain module.
@@ -735,7 +735,7 @@ consult with that person on the required modules to load.
 On other services the modules typically complain
 if the wrong compiler is loaded and are hence self-documenting.
 
-### Example script for running a serial R job
+#### Example script for running a serial R job
 The following is a basic example to run a serial R job on the cluster.  If you have many jobs to run, this can be combined with the techniques decribed below to run multiple serial jobs in a single submission.
 
 ```bash
@@ -765,7 +765,7 @@ module load R/4.1.0
 Rscript my_r_script.R
 ```
 
-## Running multiple serial jobs within a single job submission
+### Running multiple serial jobs within a single job submission
 
 When you need to run many serial jobs, similar to the ones [described
 above](#basic-run-script), these should be bundled together and
@@ -800,7 +800,7 @@ inside the do loop the setup can be used to processes 800 jobs.
 * Make sure to spawn worker tasks from a unique master script running within a unique `sbatch` job submission.
 Please refrain from using `sbatch` or `sbatch --array` to spawn each worker tasks as an individual job.
 
-### The master script
+#### The master script
 
 The master script describes the resources required and registers, once
 running the worker tasks with SLURM. In most cases modifying the number
@@ -864,7 +864,7 @@ help desk if your require further consultancy.
 
 If you need more than the default 3100 MB memory per core, you have to specify both `--tasks-per-node` and `--mem-per-cpu`. Please match the core count and the memory per core so as to best utilise the resources of a node, which has a total of 62000 MB memory available for jobs.
 
-### The worker script
+#### The worker script
 
 This outlines the worker script. Compared to the script describing a
 [basic script for I/O intensive jobs](#basic-run-script-for-io-intensive-jobs), a few modifications are
@@ -931,7 +931,7 @@ cd $SNIC_TMP
 rm -rf WRK_${WRK_NB}
 ```
 
-### Monitoring the progress of your multi-job submission
+#### Monitoring the progress of your multi-job submission
 
 Using the -s option of sbatch you can monitor the progression of the
 individual job-steps of your multi-job submission. Please keep in mind,
@@ -977,7 +977,7 @@ job-steps the script is presently processing
     8070.194 small_ex snic fred 0:13 an073
     8070.195 small_ex snic fred 0:13 an074
 
-## MPI job using 20 tasks per node
+### MPI job using 20 tasks per node
 
 Most MPI jobs achieve best cost efficiency when deploying 20 tasks per
 node, that is one task per core.  The sample uses core binding as
@@ -1026,7 +1026,7 @@ a module named `impi`) the last line should read
 srun simula_mpi
 ```
 
-## MPI job using the node local discs
+### MPI job using the node local discs
 
 In many cases you can use the node local discs also for your MPI
 jobs.  This can be beneficial if your job is very demanding with
@@ -1083,7 +1083,7 @@ cp -p result.dat $SLURM_SUBMIT_DIR
 Again, applications using the Intel MPI library need starting with
 `srun`, see above.
 
-### Modifications required for file I/O on all nodes
+#### Modifications required for file I/O on all nodes
 
 As discussed in the comments of the sample script, the script assumes
 that only MPI-task 0 on the head node reads the input file and writes to
@@ -1124,7 +1124,7 @@ with the line
 
     srun -n $SLURM_NNODES -N $SLURM_NNODES copyfile.sh
 
-## MPI jobs using fewer than 20 tasks per node
+### MPI jobs using fewer than 20 tasks per node
 
 If you want to use fewer than 20 task per nodes to e.g. give more
 resources to the individual task, you can use the -N and --task-per-node
@@ -1181,8 +1181,7 @@ mpirun simula_mpi
 cp -p result.dat $SLURM_SUBMIT_DIR
 ```
 
-OpenMP jobs using shared memory
--------------------------------
+### OpenMP jobs using shared memory
 
 To run a shared memory code using OpenMP on Aurora, you specify the
 number of cores you require using --tasks-per-node option of sbatch. In
@@ -1226,7 +1225,7 @@ available to users on the node.
 The modification required to utilise the node local discs are exactly
 the same as require [for serial jobs](#basicrun-script-for-io-intensive-jobs).
 
-### Thread binding for OpenMP codes
+#### Thread binding for OpenMP codes
 
 The Aurora nodes deploy a cache-coherent non-uniform-memory access
 architecture (cc-numa). Many scientific simulation codes gain
@@ -1238,7 +1237,7 @@ standards thread binding has been standartised.
 In addition many compilers offer their own binding syntax.
 
 
-#### Thread binding with the GNU compilers
+##### Thread binding with the GNU compilers
 
 By default the GNU compiler suite (gcc/gfortran) does not bind threads
 to cores. To engage thread binding, you need to set the environment
@@ -1272,7 +1271,7 @@ all threads to core 0. You will see extremely poor performance in this
 case.
 
 
-#### Thread binding with the Intel compiler
+##### Thread binding with the Intel compiler
 
 Obviously all versions of the Intel
 compiler support thread binding on the Intel processors deployed on
@@ -1285,7 +1284,7 @@ the environment variable KMP_AFFINITY. The value
 
 might be a good starting point for your experimentation.
 
-## Hybrid-jobs using threads within an MPI framework
+### Hybrid-jobs using threads within an MPI framework
 
 *This needs to be revisited for Aurora - we keep the Alarik
  documentation for the time being*
@@ -1360,14 +1359,14 @@ numa-islands of the Alarik architecture. Alariks numa-islands have four
 cores, therefore the script is best used with 2 or four threads per MPI
 task. This results in one or two MPI tasks per numa islands.
 
-# Interactive access to compute nodes
+## Interactive access to compute nodes
 
 Sometimes it is desirable to have an interactive connection to the compute
 nodes of the cluster. Extensive code testing and debugging is a typical use case.
 Regular production runs, in particular calculations requiring multiple days, are expected to
 access the compute nodes via the **sbatch** command.
 
-## Starting an interactive session
+### Starting an interactive session
 
 To start an interactive session you need to use the **interactive**
 command. This will request the required resources from the resource pool
@@ -1391,7 +1390,7 @@ get charged 2 cpu hours.
 The interactive command supports most command line options of the **sbatch**
 command. Please refer to the man pages of sbatch.
 
-## Modules and environment variables
+### Modules and environment variables
 
 Loaded modules and environment variables are not always exported properly to your
 interactive session. Once placed in the interactive session, we

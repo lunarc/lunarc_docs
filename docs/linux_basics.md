@@ -3,7 +3,7 @@
 
 An introduction to Linux shells and commands
 
-# Shells
+## Shells
 
 Before discussing Linux commands, it is important to understand the general Linux environment. A LUNARC user who has just logged into one of the LUNARC systems gets a terminal window with a prompt. At the prompt, a text-based command can be given. The user has actually entered a shell that interprets the commands given. Each command starts a subshell where the command is executed. If the command is a script that contains other commands, they will be executed in a subshell to the subshell. After execution, the prompt returns and represents the level of the original shell.
 
@@ -11,9 +11,9 @@ Normally, the user does not have to consider the levels of shells, but it is goo
 
 There are different kinds of shells with some differences in commands and features. The default shell obtained by a LUNARC user is known as Bourne-Again shell (bash), combining features of Bourne shell (sh, a very early shell and the origin of the pun intended by the bash name), Korn shell (ksh), and C shell (csh). In the following, bash will be assumed, since users who have asked for ksh or csh are supposed to be familiar with their shell of choice.
 
-# Files
+## Files
 
-## Organisation
+### Organisation
 
 Files and directories are organised in a tree structure, with the top directory, known as the root directory, simply represented by /, which is also the separator for different directory levels. For example, the home directory of user xxxx is /home/xxxx, where home is a directory under / and xxxx a directory under home. A file in the home directory would be represented as /home/xxxx/xfile. This representation is known as a path and if it starts from the root directory, it is a full path.
 
@@ -21,13 +21,13 @@ If the user is in the home directory, the file can simply be specified as xfile,
 
 Another path symbol is ~, which succeeded by a / denotes the home directory of the user. Thus, ~/xfile points to the file in the example in the same way as if the full path /home/xxxx/xfile had been given.
 
-## Shortcuts
+### Shortcuts
 
 Instead of typeing a long file name, it is possible to write the first few characters and then press the tab key. If the rest of the file name is unique, it will be completed. If more than one file have the same beginning, the name will be completed up to the first point of difference. A second pressing of the tab key will give the possible alternatives. This works for files and directories in the current directory as well as for commands.
 
 Typeing can also be reduced by the use of the wildcard *. It matches anything in the current directory, which means that the wildcard on its own gives a list of all files and directories in the current directory. If it is combined with characters, names that contain those characters in the corresponding place will be matched. For example, *file will match file, xfile, and morefile, but not xfile2. The latter will be matched by *file*, *fi*2, and x*2.
 
-## Permissions
+### Permissions
 
 Using the command ls -l to list files in adirectory can give something like
 
@@ -41,7 +41,7 @@ The very first character of each line indicate if the file is of a special kind,
 
 To run a shell script or a program, it must be executable, at least for the user. script1 can be run by anyone. Similarly, to enter a directory it has to be executable. Only the user xxxx may enter the directory subdir1 in the example.
 
-# Shell Parameters
+## Shell Parameters
 
 It is possible to assign values to parameters within a shell. Certain parameters, environment  or shell variables, have to be defined for the proper function of the shell and are usually set automatically. Some shell variables are modified when modules are loaded (see the User's Guide). The user can also define his/her own parameters.
 
@@ -94,9 +94,9 @@ Note that it is necessary to separate the elements of the expression by spaces. 
 
 No spaces necessary. In both cases, echo $Sum gives 5.
 
-# Special Command Symbols
+## Special Command Symbols
 
-## Redirection
+### Redirection
 
     < file 
     
@@ -123,7 +123,7 @@ Example:
     myprog <inputfile >outfile 2>errfile
 
 The program `myprog` will read from the file `inputfile` and write its standard output to `outfile` and write error message to `errorfile`.
-## Command execution
+### Command execution
 
 ; Separates multiple commands on the command line; i.e., the semi-colon corresponds to pressing ENTER between commands.
 
@@ -152,7 +152,7 @@ repeats a previous command line that starts `string`.
 
 The last line corresponds to executing echo $PATH again.
 
-## Quotation
+### Quotation
 
 ' ' (Single quotes) Quotes the enclosed string exactly.
 
@@ -172,17 +172,17 @@ gives ${Program}_job$JobNr.out as output.
 
 gives myprog_job1.out as output
 
-# Useful Linux Commands
+## Useful Linux Commands
 
-## About Commands
+### About Commands
 
-### man
+#### man
 
 To get more information about a command type
 
     man command
 
-### which
+#### which
 
 Check where the command that will be used resides
 
@@ -190,21 +190,21 @@ Check where the command that will be used resides
 
 This gives the path of the first occurence of command in the directories listed in the envrionment variable PATH. Note that a few commands are picked up directly by the shell, for example, the time command, and the program in the search path will not be executed. If a command behaves differently than expected from the man page, a solution may be to give the full path of the command found by which.
 
-## Manage Shell Variables and Parameters
+### Manage Shell Variables and Parameters
 
-### echo
+#### echo
 
 Give the value of a parameter
 
     echo $PATH
 
-### set
+#### set
 
 List the values of all defined environment variables alphabetically
 
     set
 
-### export
+#### export
 
 Export a parameter to all future subshells
 
@@ -214,9 +214,9 @@ The value can be set and exported at the same time, for example,
 
     export MyParameter=myvalue
 
-## Manage Files and Directories
+### Manage Files and Directories
 
-### mkdir
+#### mkdir
 
 Make a directory
 
@@ -226,13 +226,13 @@ Make a directory
 
     mkdir -p parentdir1/parentdir2/dirname
 
-### rmdir
+#### rmdir
 
 Remove an empty directory
 
     rmdir dirname
 
-### cd
+#### cd
 
 Change the current directory
 
@@ -252,7 +252,7 @@ returns the user to the previous directory.
 
 moves up one level in the file tree.
 
-### rm
+#### rm
 
 Remove a file
 
@@ -266,13 +266,13 @@ Remove a file
 
     rm -ir dirname
 
-### mv
+#### mv
 
 Change the name of a file or directory
 
     mv oldname newname
 
-### cp
+#### cp
 
 Copy a file to a new file
 
@@ -298,7 +298,7 @@ Copy all files in the current directory to another directory
 
     cp -u * newlocation
 
-### ls
+#### ls
 
 List files in the current directory
 
@@ -324,7 +324,7 @@ List files in long format with most recent file last
 
     ls -ltr
 
-### find
+#### find
 
 Find a file/directory with a given name and print its path, starting from a given directory
 
@@ -356,7 +356,7 @@ find is a powerful command with many options as a look at the man page will reve
 
     man find
 
-### du
+#### du
 
 Print the disk usage of the current and all subdirectories
 
@@ -390,7 +390,7 @@ Print the disk usage for the current directory and its immediate subdirectories 
 
     du -h --max-depth=1
 
-### chmod
+#### chmod
 
 Set the file permission.
 
@@ -406,8 +406,8 @@ To be more precise it is possible to specify the changeas a string in the format
 
     chmod -R g+w dirname
 
-## Text Handling
-### cat
+### Text Handling
+#### cat
 
 List the contents of a file
 
@@ -421,7 +421,7 @@ Append a file to another file
 
     cat file1 >> file2
 
-### more
+#### more
 
 List the contents of a file without scrolling through everything at once
 
@@ -433,11 +433,11 @@ Display the output of a command without scrolling through everything at once
 
 Pressing return gives a new line. Pressing the space bar gives a new page. b gives the previous page if possible (not for the output stream of a command). /string searches for a string. q exists more.
 
-### less
+#### less
 
 less is similar to more. One of the more important differences is that it also works backwards. For example, pressing b gives the previous page (works also for more on files - first more example, but not pipes - second more example) and ?string searches backwards for a string.
 
-### grep
+#### grep
 
 Print lines that contain a specified string in a file
 
@@ -461,7 +461,7 @@ Print the lines in the output of a command containing a specified string
 
     command | grep -v string 
 
-### diff
+#### diff
 
 Compare the contents of two files and print differences
 

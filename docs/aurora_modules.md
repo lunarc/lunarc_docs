@@ -1,22 +1,21 @@
-Using installed software on LUNARC's Aurora service
-================
+# Using installed software on LUNARC's Aurora service
 
 Author: Joachim Hein (LUNARC)
 
 ![Node icon](images/node_icon.jpg "Node icon")
 
-# Hierarchical module naming scheme
+## Hierarchical module naming scheme
 With the start of the Aurora service LUNARC is using an hierarchical module naming scheme.  Hierarchical modules ensure that the correct shared libraries are available when running an application, while keeping screen output of standard module commands such as `module avail` manageable.
 
-## Hierachical naming scheme concept
+### Hierachical naming scheme concept
 
 When logging into the system, you only get access to those modules that do not require any special dynamic libraries.  After *loading a compiler module* you obtaining access to those packages that have been build with that specific compiler and depend on its shared libraries.  For many compilers this will include one or more matching MPI libraries.  After loading an MPI library additional software packages, depending on this pair (compiler & MPI library), will become available.  Users should take note that in many cases loading an MPI library is required for software that doesn't really depend on it.
 
-# Using Modules
+## Using Modules
 
 The module system on Aurora is utilising the Lua based [Lmod](https://www.tacc.utexas.edu/research-development/tacc-projects/lmod) software.
 
-## Loading packages
+### Loading packages
 
 The command
 
@@ -84,7 +83,7 @@ deployed on earlier services.   In many situations `module avail`
 resulted in the desired action, one has to use the `module spider`
 command which is described in the text below.
 
-## Purging the loaded modules
+### Purging the loaded modules
 
 Many modules will load a number extra of modules, which they depend on.
 When unloading a  module, these dependencies will typically not be unloaded.  For
@@ -140,9 +139,9 @@ The following is a list of the modules currently available:
   ...
 ```
 This is a full list of the packages and versions available on the service.  
-## Searching for a specific package
+### Searching for a specific package
 If you are looking for a specific package and have an idea on what its name might be, you can give this as an argument to `module spider`.   This argument is case insensitive.  
-### Example: Accessing a Gromacs version
+#### Example: Accessing a Gromacs version
 For example, when looking to run Gromacs:
 ```
 module spider gromacs
@@ -190,7 +189,7 @@ module load GROMACS/5.0.5-hybrid
 ```
 Loading this module will load a number of additional module require for Gromacs to work.
 
-### Example accessing R
+#### Example accessing R
 
 This is another example on how to access a specific software package.  This time we want to run the statistical software package R.
 
@@ -257,10 +256,10 @@ module load R/3.2.3
 
 and have access to R.
 
-## Working with a standard set of modules
+### Working with a standard set of modules
 Many users of the LUNARC systems conduct similar tasks for many days, e.g. using the same pieces of software on different sets of data.  In this case users should consider creating **user collections** of modules.  Working with user collections are a better alternative to e.g. adding **module load** statements to e.g. your **.bashrc** file.
 
-### Creating and restoring user collections
+#### Creating and restoring user collections
 To create a user collection load the modules required for the task at hand.  The command 
 
 ```
@@ -290,7 +289,7 @@ for a named collection the restore is done as follows
 module restore collection-name
 ```
 
-### Enquiring about user collections
+#### Enquiring about user collections
 To get a list of all user collections you have created use the sub-command `savelist`:
 
 ```
@@ -310,12 +309,12 @@ module disable collection-name
 ```
 which actually re-names the collection in a way that it would no longer show with `module savelist`, but recovery of the collection is possible.
 
-## Lmod cache
+### Lmod cache
 
 To improve the performance of the `module spider` command, lmod caches
 the entire module structure of the system.  The system cache, holding info about the modules installed by the LUNARC team, is updated, every time the LUNARC team installs new software. 
 
-## Searching for modules graphically
+### Searching for modules graphically
 
 It is also possible to browse the module tree and select module using a graphical user interface. This interface can be launched from the the command with the **ml-browse**:
 
@@ -323,13 +322,13 @@ It is also possible to browse the module tree and select module using a graphica
 ml-browse
 ```
 
-# Compiling code and using toolchains
+## Compiling code and using toolchains
 
 A significant portion of the Aurora software is build using the [EasyBuild](http://hpcugent.github.io/easybuild/) software framework.  This framework provides so called *Toolchains* which are utilised to build software.  LUNARC recommends to use toolchains when building software.  This includes compiling your own software outside the EasyBuild framework.
 
-## Currently provided toolchains
+### Currently provided toolchains
 
-### Toolchains for CPU nodes
+#### Toolchains for CPU nodes
 
 **Toolchains based on the GCC compiler suite**
 
@@ -370,7 +369,7 @@ A significant portion of the Aurora software is build using the [EasyBuild](http
 
 If you require additional toolchains, contact [LUNARC support](http://www.lunarc.lu.se/support/support-form/) to discuss your requirements.
 
-## Selecting a toolchain
+### Selecting a toolchain
 The above choices of toolchains is a bit overwhelming, in particular for new users.  We recommend to first make a choice of toolchain and then select a version.  Good choices for general use are the toolchains:
 
 * **foss**, if you like to use the GCC compiler suite
@@ -410,7 +409,8 @@ will now show you which compiler and library versions it will be using.  Please 
 
 Selecting a version of the intel or the pomkl toolchain is very similar to selecting a foss module, just replace foss with intel or pomkl in the above examples.
 
-## Compiling serial code using a toolchain
+### Compiling serial code using a toolchain
+
 Once a toolchain module is selected, there are no differences from earlier LUNARC services when it comes to compiling serial code.
 If you have loaded a toolchain build on top of a GCC compiler use the following commands to compile.
 
@@ -433,10 +433,10 @@ If you have loaded a toolchain build on top of the PGI compiler, use the followi
  
 In all cases please do not forget about compiler options, in particular optimisation flags.  You should have the toolchain used for compiling loaded when executing the code.
 
-## Compiling MPI code using a toolchain
+### Compiling MPI code using a toolchain
 The commands you use to compile MPI code depend on the MPI library and the compiler you intend to use.  
 
-### Toolchains using OpenMPI
+#### Toolchains using OpenMPI
 When using a toolchain utilising **OpenMPI** (e.g. foss, iomkl, pomkl) use: 
 
 * **mpicc**: MPI compiler for C code
@@ -451,7 +451,7 @@ If you use this, you will need to modify it for your own needs.  A [more detaile
  
 **Remark:** In the latest OpenMPI releases the commands `mpif77` and `mpif90` have been depreciated.  Fortran users should switch to using `mpifort`.
 
-### Toolchains using the Intel compiler and Intel MPI library
+#### Toolchains using the Intel compiler and Intel MPI library
 When using a toolchain utilising the **Intel MPI library** and the **Intel compiler** (e.g. intel, iimpi) use:
 
 * **mpiicc**: MPI compiler for C code
@@ -465,7 +465,7 @@ Inside your slurm job-script, executables build with the Intel MPI library need 
 If you use this, you will need to modify it for your own needs.  A [more detailed guide](http://lunarc-documentation.readthedocs.org/en/latest/batch_system/) on the submission system is available.
 
 
-### Toolchains using the GCC compiler and Intel MPI library
+#### Toolchains using the GCC compiler and Intel MPI library
 When using a toolchain utilising the **Intel MPI library** and the **GCC compiler** (e.g. gimkl) use:
 
 * **mpigcc**: MPI compiler for C code

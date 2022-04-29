@@ -24,7 +24,7 @@ When you apply for an account your mobile number is registered in our user datab
   
 The login process is described in the following sections.
 
-# Logging in using One Time Passwords (OTP)
+## Logging in using One Time Passwords (OTP)
 
 Logging in to the LUNARC system with OTP passwords is not very different from a normal SSH login, except for the additional extra password prompt. A typical session is shown in the following example:
 
@@ -34,7 +34,7 @@ Logging in to the LUNARC system with OTP passwords is not very different from a 
 
 If the otp and password are correct you will be logged in to the system.
 
-# Linux
+## Linux
 
 To be prompted for the OTP password the ssh client must be configured for so called "keyboard-interactive" login. These settings can be modified in either /etc/ssh/ssh_config (Redhat systems) or in the home-directory ~/.ssh/config. An example configuration is shown below:
 
@@ -55,7 +55,7 @@ To reduce the number of logins to the system the ServerAlive option can also be 
     Host * 
     PreferredAuthentications hostbased,publickey,keyboard-interactive,password
 
-# Mac OS X
+## Mac OS X
 
 Mac OS X is already configured to handle the login to Platon with one time passwords (keyboard-interactive). 
 
@@ -68,7 +68,7 @@ To reduce the number of logins to the system the ServerAlive option can also be 
     Host * 
         PreferredAuthentications hostbased,publickey,keyboard-interactive,password
 
-## Mac OS X 10.7 Lion and 10.8 Mountain Lion
+### Mac OS X 10.7 Lion and 10.8 Mountain Lion
 
 To login to a LUNARC system from a Mac system running Mac OS X 10.7 and 10.8, you need to unset the box "Set locale environment variables on startup" in the settings window of the terminal application, press "cmd ," to get there. 
 
@@ -82,17 +82,17 @@ Setting locale in lion (english)
 
 Note: This works on a per-theme basis.  In the above examples you will need to choose the theme "Homebrew" to connect to the LUNARC servers.
 
-# Windows
+## Windows
 
 To be prompted for the OTP password the PuTTY client must be configured for so called "keyboard-interactive" login. Open PuTTY from the start-menu. Load the session options for Platon. Open the Connection/SSH/Auth item in the tree-view. Make sure the "Attempt "keyboard-interactive" auth (SSH-2) is checked in the settings, see the following image:
 
 To reduce the number of logins to the system the "Seconds between keepalives" can be changed to a value greater than 0. See the following figure:
 
-# File transfers
+## File transfers
 
 To reduce the number of otp passwords needed when transferring files the SFTP protocoll should be used instead of SCP, as each SCP connection will require a new OTP password.
 
-# File transfers with WinSCP
+### File transfers with WinSCP
 
 The default filetransfer method in WinSCP is SFTP, so no special settings is needed for this. Just make sure that the "File protocol" setting is set to SFTP as shown in the following figure:
 

@@ -1,6 +1,5 @@
 # MATLAB 
 
-
 SNIC provides a nationwide set resources with the MATLAB Distributed Computing Server (MDCS) installed. At each respective SNIC centra the hosting university MATLAB licenses and toolboxes are available for use. 
  
 The MATLAB versions available at LUNARC are:
@@ -16,7 +15,7 @@ The MATLAB versions available at LUNARC are:
     R2020a        matlab/2020a
     R2020b        matlab/2020b
 
-# Running MATLAB on login-node 
+## Running MATLAB on login-node 
 MATLAB can be used on the login-nodes (either using LUNARC HPC Desktop i.e. ThinLinc. Or using SSH) Please note that as these are shared resources excessive use of MATLAB on the login-nodes will prevent other users from using the resources. 
 As MATLAB by default will use as many threads (cores) it possibly can, any user who is to use MATLAB on the login-nodes MUST start matlab with the option "-singleCompThread" thus preventing MATLAB from using more that one thread.
 This will NOT prevent matlab from utilizing the MATLAB Distributed Computing Server (MDCS) with which any number of cores can be used for computations.
@@ -141,13 +140,15 @@ Run the following in the matlab command window
     ans{1}                                  # show the results
 --->
 
-# Getting Started with Serial and Parallel MATLAB on Aurora
-###LOAD THE MODULE.
+## Getting Started with Serial and Parallel MATLAB on Aurora
+
+### Load the module
 The MATLAB module is loaded with
 
     $module load matlab/<version>
 
-## CONFIGURATION
+### Configuration
+
 Start MATLAB.  
 Configure MATLAB to run parallel jobs on your cluster by calling configCluster.  
 For each cluster, configCluster only needs to be called once per version of MATLAB.
@@ -157,7 +158,8 @@ For each cluster, configCluster only needs to be called once per version of MATL
 Jobs will now default to the cluster rather than submit to the local machine.
 Before submitting a job, you must specify the name of the charge account and the walltime, via ClusterInfo, which will be explained in more detail below.
 
-##CONFIGURING JOBS
+### Configuring jobs
+
 Prior to submitting the job, we can specify various parameters to pass to our jobs, such as queue, e-mail, etc.  
 Specification is done with ClusterInfo.  The ClusterInfo class supports tab completion to ease recollection of method names.
 NOTE:  Any parameters set with ClusterInfo will be persistent between MATLAB sessions.
@@ -201,7 +203,8 @@ To see the values of the current configuration options, call the state method.  
     % To clear all configurations
     ClusterInfo.clear
 
-##SERIAL JOBS
+#### Serial jobs
+
 Use the batch command to submit asynchronous jobs to the cluster.  The batch command will return a job object which is used to access the output of the submitted job.  See the MATLAB documentation for more help on batch.
 
 	% Get a handle to the cluster
@@ -229,7 +232,8 @@ Once we’ve identified the job we want, we can retrieve the results as we’ve 
 
 fetchOutputs is used to retrieve function output arguments; if calling batch with a script, use load instead.   Data that has been written to files on the cluster needs be retrieved directly from the file system.
 
-##PARALLEL JOBS
+#### Parallel jobs
+
 Users can also submit parallel workflows with batch.  Let’s use the following example for our parallel job.
 
 ![Code example](images/Code_example.png "Start window")    
@@ -282,7 +286,8 @@ Alternatively, to retrieve job results via a graphical user interface, use the J
 
 ![Code example](images/Parallel_interface.png "Start window") 
 
-##DEBUGGING
+### Debugging
+
 If a serial job produces an error, we can call the getDebugLog method to view the error log file.
 
 	j.Parent.getDebugLog(j.Tasks(1))
@@ -299,7 +304,7 @@ The scheduler ID can be derived by calling schedID
 
 This is how the scheduler identifies the job.
 
-##TO LEARN MORE
+## To learn more
 To learn more about the MATLAB Parallel Computing Toolbox, check out these resources:
 
 *	[Parallel Computing Coding Examples](http://www.mathworks.com/products/parallel-computing/code-examples.html)

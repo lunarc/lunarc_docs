@@ -7,7 +7,6 @@ To create models, set up simulation jobs and view results Abaqus CAE is used. Th
 
 ![Start Abaqus](images/start_abaqus.png "Start ABAQUS") 
 
-
 To run the simulation as defined in the .inp file produced by the Abaqus CAE, a sbatch script detailing the resources needed for the simulation is required. The sbatch script is the description telling the queueing system which project is to be used, what resources are needed and for how long and also what program is to be run. The queueing system used at LUNARC is SLURM and a good tutorial on how to use it is found here: [SLURM tutorial](http://lunarc-documentation.readthedocs.io/en/latest/batch_system/)
 
 Below an example SBATCH-script to run an Abaqus-job called sample.inp is shown, adjust as needed.
@@ -75,7 +74,7 @@ In your SBATCH-script you adjust the parts unique for your job using a text-edit
 
 This sends the job to the queue and the job manager will start the simulation when a slot on the cluster fitting the description in the script is available.
 
-# Running multiple Abaqus jobs in a farm
+## Running multiple Abaqus jobs in a farm
 
 This script assumes that you have all of your .inp files in a separate directory called *jobs*. It will start one subtask per .inp file. Be aware that running multiple abaqus jobs at once require a lot of license tokens.
 
@@ -83,7 +82,7 @@ You will need two scripts (run.sh and work.sh). One master script detailing how 
 The script **run.sh** is your normal SBATCH script which is started by issuing *sbatch run.sh*
 The script **work.sh** is a normal bash script so it MUST be set as executable by issuing chmod +x work.sh
 
-## run.sh
+### run.sh
 
     #!/bin/sh
     # requesting the number of nodes needed
@@ -114,7 +113,7 @@ The script **work.sh** is a normal bash script so it MUST be set as executable b
     wait
 
 
-## work.sh
+### work.sh
 
     #!/bin/sh
     # document this script to stdout (assumes redirection from caller)

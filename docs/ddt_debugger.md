@@ -1,17 +1,16 @@
-
-# Starting the DDT debugger on Aurora
+# DDT debugger on Aurora
 
 A basic description on how to start a debugging session with DDT, part of [ARM Forge](http://www.allinea.com/products/develop-allinea-forge), on the Aurora systems.  Job will be submitted through the Slurm batch system to the back-end nodes.
 
-# About this document
+## About this document
 
 This document gives basic instruction on how to start a debugging session using the DDT debugger on the Aurora system at LUNARC.  This document is based on DDT version 6.0.2 currently installed on Aurora.  There is currently a centralised SNIC license hosted by NSC.  The licenses are shared between the users of all the SNIC systems.  So please be considerate to other users fellow regarding for how many licenses your use (time and number of cores).
     
 DDT is a powerful debugger for serial and parallel programs.  The tool is developed and maintained by ARM.  It is part of the ARM's Forge suite.  A number of parallel programming models are supported.  This includes MPI, OpenMP and a number of GPU languages.  This document is not a DDT userguide, we refer our users to the documentation available from the [ARM website](https://www.arm.com/products/development-tools/server-and-hpc/forge), in particular their [user guide](https://developer.arm.com/documentation/101136/2113/?lang=en).
 
-# Getting started with DDT on Aurora
+## Getting started with DDT on Aurora
 
-## Connect to Aurora via the LUNARC HPC desktop
+### Connect to Aurora via the LUNARC HPC desktop
 
 To use DDT you need to be able to access its graphical user interface (GUI).  
 The recommended way to connect to the system is via the [LUNARC HPC desktop](using_hpc_desktop).  
@@ -28,7 +27,7 @@ You will be prompted for password and one-time-password as usual.
 To connect using x-forwarding from a windows it is recommended to install [Cygwin](https://www.cygwin.com/). 
 -->
 
-## Starting the DDT GUI on Aurora
+### Starting the DDT GUI on Aurora
 
 LUNARC currently recommends using *reverse connect* to start DDT.  Load the relevant module.  On Aurora the module name is *arm_forge*.  Load it: 
 
