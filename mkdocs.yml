@@ -22,5 +22,5 @@ nav:
   - Compiler options: compiler_options.md
   - DDT debugger on Aurora: ddt_debugger.md
 theme: 
-  name: material
+  name: readthedocs
 #markdown_extensions: [codehilite]
