@@ -1,5 +1,5 @@
 site_name: LUNARC Documentation
-pages:
+nav:
 - Home: index.md
 - Logging in:
   - How to login: login_howto.md
@@ -21,5 +21,6 @@ pages:
   - COMSOL on the cluster: COMSOL.md
   - Compiler options: compiler_options.md
   - DDT debugger on Aurora: ddt_debugger.md
-theme: readthedocs
+theme: 
+  name: material
 #markdown_extensions: [codehilite]
