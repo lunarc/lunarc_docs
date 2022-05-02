@@ -1,37 +1,8 @@
-# Frequently asked questions
+# Frequently asked questions - Software
 
 Author: Joachim Hein (LUNARC)
 
 ![Node icon](images/node_icon.jpg "Node icon")
-
-## I have forgotten my login password for Aurora
-
-To receive a new password, please visit the [password self service portal](https://phenix3.lunarc.lu.se/pss); identify yourself with your email address and the mobile phone you have registered you have registered in [SUPR](https://supr.snic.se/person/). If this fails, phone LUNARC support on 0462224454 (+46462224454 outside Sweden) from your registered mobile phone. Additional questions will be asked to verify your identity.  
-
-## I can not login after installing a pocket pass token
-
-Many users have issues because of missing the [activation step](https://lunarc-documentation.readthedocs.io/en/latest/authenticator_howto/#step-5-important-last-step-activate-your-token).  To activate your token, connect to the [self-service portal](https://lunarc-documentation.readthedocs.io/en/latest/authenticator_howto/#accessing-the-self-service-portal), go into "tokens", choose "activate" and follow the instructions.
-
-## I have persistent problems connecting after beging prompted for my OTP
-
-If you have persistent problems with connecting to LUNARC service after being prompted for my password and pocket pass password, it my be that your pocket pass token has expired.  Please check the [expiration status](https://lunarc-documentation.readthedocs.io/en/latest/authenticator_howto/#checking-the-validity-of-your-token) of your pocket pass token and create a new token if the old token has expired.
-
-## Could your send my *one time password* for pocket pass activation to my new mobile phone number?
-
-Please enter the new phone number into [SUPR](https://supr.snic.se/person/) and raise a [support request](http://www.lunarc.lu.se/support/support_form) to update our internal database for this change.
-
-## I accidentally deleted or modified a file
-
-For the home space on Aurora, we have **snapshots** enabled.  If you type `ls .snapshots` at the commandline in the current directory you get to see a number of diretories named like `@-2020.12.11-00.00.35`, which stands for the date and time of the snapshot.  Change into the directory specifying a point of time before the accident, e.g.:
-
-```
-cd .snapshots/@-2020.12.11-00.00.35
-```
-and you get presented with the state of the directory and it's sub-directories at that time-stamp.  You can copy the required contents out of the snapshot directory into your current directory.
-
-## What is the maximum job time on Aurora?
-
-We allow batch jobs to ask for up to 168 hours, which is 7 days.
 
 ## Could you please install software for me
 
@@ -52,23 +23,6 @@ You have the follwing options to resolve the issues:
 * Have a terminal dedicated to each of the modules.  This should work if the modules do not really interact with each other, but e.g. one module creates files which the other module reads.  Consider using the [Lunarc HPC desktop](https://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop/) which easily allows having multiple terminals within a single session
 
 * If this does not work or does not work satisfactory, contact the [LUNARC helpdesk](http://www.lunarc.lu.se/support/support_form) and discuss your situation.
-
-## How do I use a Lund University project
-
-When using a Lund University project (LU project), you have to specify the project name, the partition and in some cases a reservation.  This is explained in our [batch system guide](https://lunarc-documentation.readthedocs.io/en/latest/batch_system/#specifying-a-project-and-partition-for-users-with-lu-projects-or-multiple-projects).
-
-## I want to use the Aurora GPU nodes
-
-To access the Aurora GPU nodes, you need to be a member of an [LU local project](https://supr.snic.se/round/2020locallu/). Please review our [batch system guide](https://lunarc-documentation.readthedocs.io/en/latest/batch_system/#accessing-gpus-in-the-aurora-lu-partition) for the required modification to your submission script.  The [software guide](https://lunarc-documentation.readthedocs.io/en/latest/aurora_modules/#cuda-based-toolchains-for-gpu-nodes) provides an overview on Compiler, Cuda and MPI support for the GPU nodes. 
-
-
-## Can I prevent my job from restarting in case of a node failure
-
-By default the Slurm job scheduler restarts jobs in case of e.g. a failing node.  This is not always desirable.  Adding a line
-```bash
-#SBATCH --no-requeue
-```
-to the header portion of your job script prevents this behaviour.
 
 ## I need LAPACK and BLAS - they used to be in /usr/lib64
 

@@ -1,0 +1,9 @@
+[data-md-color-scheme="youtube"] {
+    --md-primary-fg-color:        #875e29;
+
+    --md-primary-bg-color:        #FFFFFF;
+    --md-primary-bg-color--light: #FFFFFF;
+  
+    --md-accent-fg-color:                #4d4c44;
+    --md-accent-bg-color:                #875e29;
+  }
