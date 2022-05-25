@@ -2,8 +2,8 @@ site_name: LUNARC Documentation
 nav:
 - Home: index.md
 - Getting started:
-  - How to login: login_howto.md
   - Activating Pocket Pass authenticator: authenticator_howto.md
+  - How to login: login_howto.md
   - The LUNARC HPC Desktop: using_hpc_desktop.md
   - On-demand applications: gfxlauncher.md
 - FAQ: 
