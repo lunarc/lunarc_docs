@@ -1,5 +1,7 @@
 # Welcome to the LUNARC Documentation pages
 
+Authors: Joachim Hein, Jonas Lindemann, Anders Sjöström, Magnus Ullner, Nicolas Melot
+
 Here you will find all of the documentation for the LUNARC resources in a easy to find place.
 
 You can also find more information at:

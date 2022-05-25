@@ -6,21 +6,43 @@ nav:
   - Activating Pocket Pass authenticator: authenticator_howto.md
   - The LUNARC HPC Desktop: using_hpc_desktop.md
   - On-demand applications: gfxlauncher.md
-- User's guide:
-  - Using installed software: aurora_modules.md
-  - Using the Job submission system: batch_system.md
-  - Using the lu32-partition: cascadelake_user.md
-  - Quick reference: quick_reference.md
 - FAQ: 
   - Login: faq_login.md
   - Files: faq_files.md
   - Jobs: faq_jobs.md
   - Software: faq_software.md 
-- Specific topics:
-  - Linux Basics: linux_basics.md
+- User's guide:
+  - Submitting jobs:
+    - SLURM resource manager: batch_system_intro.md
+    - A basic job: batch_system_small_job.md
+    - Job options for all jobs: batch_system_resource_all.md
+    - Job options for multiprocessor jobs: batch_system_resource_multiproc.md
+    - Job execution environment: batch_system_env.md
+    - Using local disk to improve I/O performance: batch_system_local_disk.md
+    - Running MPI jobs: batch_system_mpi_jobs.md
+    - Controlling and monitoring jobs: batch_system_job_control.md
+  - Interactive node access: batch_system_interactive.md
+  - Using installed software: using_modules.md
+  - Example jobs scripts:
+    - Basic serial jobs: batch_system_example_basic_1.md
+    - Multiple serial jobs: batch_system_example_multi_serial_1.md
+    - MPI job using 20 tasks per node: batch_system_example_mpi_1.md
+    - MPI job using the node local discs: batch_system_example_mpi_2.md
+    - MPI jobs using fewer than 20 tasks per node: batch_system_example_mpi_3.md
+    - OpenMP jobs using shared memory: batch_system_example_openmp_1.md
+    - Hybrid-jobs using threads within an MPI framework: batch_system_example_openmp_2.md
+  - Quick reference: quick_reference.md
+- Guides:
+  - Linux Basics: 
+    - Introduction to Linux: linux_basics_intro.md
+    - An introduction to Linux shells and commands: linux_basics_shell_params.md
+    - Files and directories in Linux: linux_basics_files.md
+    - Special Command Symbols: linux_basics_special_symbols.md
+    - Useful Linux commands: linux_basics_misc.md
   - Compiler options: compiler_options.md
   - DDT debugger on Aurora: ddt_debugger.md
-- Applications:
+  - Using the 32-core nodes: cascadelake_user.md
+- Applications guides:
   - Python: Python.md
   - MATLAB: MATLAB.md
   - Abaqus FEA: Abaqus.md
