@@ -1,5 +1,3 @@
-# Introduction
-
 There are two main ways of accessing the LUNARC systems:
 
 1. The LUNARC HPC desktop, described in a separate [guide](http://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop/)
