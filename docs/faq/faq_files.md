@@ -2,7 +2,7 @@
 
 Author: Joachim Hein (LUNARC)
 
-![Node icon](images/node_icon.jpg "Node icon")
+![Node icon](../images/node_icon.jpg "Node icon")
 
 ## I accidentally deleted or modified a file
 

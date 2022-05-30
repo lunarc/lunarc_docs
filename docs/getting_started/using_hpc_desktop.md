@@ -24,12 +24,12 @@ The following applications are installed and accessible from the drop down menus
  1. [Download](https://www.cendio.com/thinlinc/download "Download") the client for either Windows, Mac or Linux 
  1. Install it on your workstation or laptop
  1. Launch the client
- 1. Enter **aurora.lunarc.lu.se** in the server field ![login window](images/desktopLogin.png "Desktop login window")
+ 1. Enter **aurora.lunarc.lu.se** in the server field ![login window](../images/desktopLogin.png "Desktop login window")
  1. Enter your login credentials (Username, Password) and click [**Connect**]
- 1. Enter the one time password from the [Pocket Pass app]((http://lunarc-documentation.readthedocs.io/en/latest/authenticator_howto/)) on your smartphone ![otp input screen](images/desktopOTP.png "OTP input screen")
+ 1. Enter the one time password from the [Pocket Pass app]((http://lunarc-documentation.readthedocs.io/en/latest/authenticator_howto/)) on your smartphone ![otp input screen](../images/desktopOTP.png "OTP input screen")
  1. Done!
 
- ![sample screen](images/desktopSampleScreen.png "Desktop sample screen")
+ ![sample screen](../images/desktopSampleScreen.png "Desktop sample screen")
 
 
 ## Resizing the desktop window and full screen mode
@@ -45,7 +45,7 @@ Depending on your system it might be convenient to *not run* in full screen mode
 
 After encountering issues in a desktop session (e.g. crashed application) it can happen that the desktop state saved from a previous session is corrupt. If this happens to you, you may not be able to reconnect.  
 In this case it is often required to start a fresh session and discard the old session.  This is achieved by selecting the box: **End existing session** on the login window before connecting to LUNARC services.
-![login window](images/desktopLogin.png "Desktop login window")
+![login window](../images/desktopLogin.png "Desktop login window")
 
 Please try before contacting [Lunarc support](http://www.lunarc.lu.se/support/support_form "LUNARC support form")
 

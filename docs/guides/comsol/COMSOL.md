@@ -58,15 +58,15 @@ Make a note of which node you are running on (it will be stated in the console a
 
 It is now time to start the GUI. As seen in the figure, Comsol is available through the Applications menu on the LUNARC desktop.
 
-![Start Comsol](images/start_comsol.png "Start COMSOL")  
+![Start Comsol](../../images/start_comsol.png "Start COMSOL")  
 
 This will bring up the comsol GUI. In the GUI you must now attach to the server as shown in the following images
 
-![Connect to server](images/connect_to_server.png "Connect to COMSOL server")  
+![Connect to server](../../images/connect_to_server.png "Connect to COMSOL server")  
 
 This will bring up a window where you need to supply which node the server is started on as shown below.
 
-![Which node](images/which_node.png "Select node")  
+![Which node](../../images/which_node.png "Select node")  
 
 Make sure that the server is the one you have started the server on. The username and password are the ones that you selected above, they should be filled in already but if not you have to supply them.
 You are now set up to run Comsol using the backend node for calculations. Please note that the comsol process WILL use your core-hours regardless of wheter you are doing calculations or not. So it is a good idea to shut down the server if it is not needed.

@@ -16,6 +16,7 @@ The MATLAB versions available at LUNARC are:
     R2020b        matlab/2020b
 
 ## Running MATLAB on login-node 
+
 MATLAB can be used on the login-nodes (either using LUNARC HPC Desktop i.e. ThinLinc. Or using SSH) Please note that as these are shared resources excessive use of MATLAB on the login-nodes will prevent other users from using the resources. 
 As MATLAB by default will use as many threads (cores) it possibly can, any user who is to use MATLAB on the login-nodes MUST start matlab with the option "-singleCompThread" thus preventing MATLAB from using more that one thread.
 This will NOT prevent matlab from utilizing the MATLAB Distributed Computing Server (MDCS) with which any number of cores can be used for computations.
@@ -236,7 +237,7 @@ fetchOutputs is used to retrieve function output arguments; if calling batch wit
 
 Users can also submit parallel workflows with batch.  Let’s use the following example for our parallel job.
 
-![Code example](images/Code_example.png "Start window")    
+![Code example](../../images/Code_example.png "Start window")    
 
 We’ll use the batch command again, but since we’re running a parallel job, we’ll also specify a MATLAB Pool.     
 
@@ -284,7 +285,7 @@ Once we have a handle to the cluster, we’ll call the findJob method to search 
 The job now runs in 4.73 seconds using 8 workers.  Run the code with different number of workers to determine the ideal number to use.
 Alternatively, to retrieve job results via a graphical user interface, use the Job Monitor (Parallel > Monitor Jobs).
 
-![Code example](images/Parallel_interface.png "Start window") 
+![Code example](../../images/Parallel_interface.png "Start window") 
 
 ### Debugging
 

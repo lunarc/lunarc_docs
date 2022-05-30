@@ -2,7 +2,7 @@
 
 Author: Joachim Hein (LUNARC)
 
-![Node icon](images/node_icon.jpg "Node icon")
+![Node icon](../images/node_icon.jpg "Node icon")
 
 ## Could you please install software for me
 

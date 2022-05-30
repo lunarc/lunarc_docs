@@ -43,7 +43,7 @@ You can now start the GUI by typing
 
 at the command prompt.  This will bring up the following GUI window
 
-![Start window](images/allineaForgeStartWindow.png "Start window")    
+![Start window](../../images/allineaForgeStartWindow.png "Start window")    
 
 In the bottom left hand corner you get confirmation whether you managed to reach the license server at NSC.
 
@@ -74,29 +74,29 @@ with the executable being named *program_g*.  In case of the Intel MPI-library t
 
 Once your job starts running, you get a request to allow your job connecting to the DDT GUI
 
-![Reverse connect request](images/ddtReverseConnectRequest.png "reverse connect request")     
+![Reverse connect request](../../images/ddtReverseConnectRequest.png "reverse connect request")     
 
 Accept this to get to the next window.
 
-![Code feature window](images/ddtcodeFeatureWindow.png "code feature window")
+![Code feature window](../../images/ddtcodeFeatureWindow.png "code feature window")
 
 In this window you can select the features of ddt which you require.  We would like to point out the **Memory Debugging**, which can be extremely useful when trying to resolve segmentation faults and memory leaks.  Please consult Allinea's user guide for more details and side effects (e.g. increased memory consumption) of using this feature.
 
 Hit the *run* button to start the debugger window
 
-![DDT gui](images/ddtGui.png "DDT gui")
+![DDT gui](../../images/ddtGui.png "DDT gui")
 
 In the GUI you can run your code (parallel or serial), set breakpoints, examine values of variables and data structures.  
 
 During a debugging job it is often required to restart the program execution from the beginning.  We recommend not to choose the *Restart Session* option from the *File* pull down menu to restart the programs execution from the beginning:
 
-![DDT restart pull down](images/ddtstartRestartPulldown.png "DDT restart pull down menue") 
+![DDT restart pull down](../../images/ddtstartRestartPulldown.png "DDT restart pull down menue") 
 
 In particular when using DDT from a batch script, using this option will keep your script active and **you do not need to re-queue**.
   
 If you want to start over for e.g. changing the level of memory debugging, we recommend using the *End Session* option from the File pull down menue:
 
-![DDT end pull down menue](images/ddtstartEndSessionPulldown.png "DDT end pull down menue")
+![DDT end pull down menue](../../images/ddtstartEndSessionPulldown.png "DDT end pull down menue")
 
 Using this option will terminate the ddt execution, but keep the GUI alive, which is often advantageous when using *ssh -X* to connect to the cluster.  If working from a batch script, its execution will then continue to the next line(s) which typically leads to the script finishing and requires you to re-queue.  An interactive session will keep running, if the time limit has not been reached.
 

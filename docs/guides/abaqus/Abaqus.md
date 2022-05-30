@@ -5,7 +5,7 @@ Using Abaqus is divided into separate tasks.
    
 To create models, set up simulation jobs and view results Abaqus CAE is used. This is started trough the menue on the LUNARC HPC Desktop as shown below.
 
-![Start Abaqus](images/start_abaqus.png "Start ABAQUS") 
+![Start Abaqus](../../images/start_abaqus.png "Start ABAQUS") 
 
 To run the simulation as defined in the .inp file produced by the Abaqus CAE, a sbatch script detailing the resources needed for the simulation is required. The sbatch script is the description telling the queueing system which project is to be used, what resources are needed and for how long and also what program is to be run. The queueing system used at LUNARC is SLURM and a good tutorial on how to use it is found here: [SLURM tutorial](http://lunarc-documentation.readthedocs.io/en/latest/batch_system/)
 

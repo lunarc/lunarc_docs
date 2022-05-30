@@ -4,7 +4,7 @@ The graphical application launcher (GfxLauncher) is a software for launching gra
 
 GfxLauncher has a very minimal user interface for the user to specify the requested time the application is needed, any specific resources required (GPU, CPU) and the project charged when running the application. The main user interface is described in the following figure:
 
-![sample screen](images/gfxlauncher_main.png "GfxLauncher main user interface")
+![sample screen](../images/gfxlauncher_main.png "GfxLauncher main user interface")
 
 ## Resources
 

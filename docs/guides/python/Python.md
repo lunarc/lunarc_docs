@@ -36,6 +36,7 @@ Please note to utilise a distribution that requires CUDA, you need to have acces
 Depending on the needs of the user, we recommend different distributions.
 
 ### Anaconda distributions
+
 For users **without special requirements**, the recommended distribution is the Anaconda. Anaconda is provided for Python versions 2 and 3.  The modules are named **Anaconda2** resp. **Anaconda3**.  These are also the recommended distribution for users who whish to use the interactive environment **spyder**, though spyder is also provided for a few selected versions of the Python distribution. 
 
 To get the full functionality of the Anaconda environment should use the following commands:
@@ -204,13 +205,13 @@ where `$KERNEL_NAME` is the name you choose for the environment (e.g. "tensorflo
 The new Jupyter Lab kernel is now ready to use. Proceed with starting jupyter lab as described <a href="#jupyter-lab">above</a>, but make sure to activate the conda virtual environment after the interactive session started and before starting jupyter lab.
 
 Once installed, the new custom kernel can be selected either on Jupyter lab web page startup:
-![Kernel selection via launcher page](images/jupyter-lab_select_kernel_launcher.png)
+![Kernel selection via launcher page](../../images/jupyter-lab_select_kernel_launcher.png)
 
 via main menu `Kernel/Change Kernel...` or on jupyter lab startup:
-![Jupyter lab kernel selection dialog](images/jupyter-lab_select_kernel_dialog.png)
+![Jupyter lab kernel selection dialog](../../images/jupyter-lab_select_kernel_dialog.png)
 
 In any case, the kernel under used at any given time is shown on the upper-right corner:
-![Kernel in use](images/jupyter-lab_current_kernel.png)
+![Kernel in use](../../images/jupyter-lab_current_kernel.png)
 
 #### Remove custom kernel
 To remove a custom kernel, activate the corresponding conda environment, and run the command
