@@ -45,7 +45,9 @@ tasks per node and threads per task is explaned below.
 In SLURM one requests the number of nodes for a job with the **-N**
 option. The following statement requests four nodes for your job:
 
-    #SBATCH -N 4
+```bash
+#SBATCH -N 4
+```
 
 **Important:** without using either the --tasks-per-node or
 the --cpus-per-task options of sbatch, this will reserve a single core
@@ -58,7 +60,9 @@ require per node. Most multinode job will set this equal to the number
 of cores availble per node. The following example asks for 20 task per
 node:
 
-    #SBATCH --tasks-per-node=20
+```bash
+#SBATCH --tasks-per-node=20
+```
 
 This should be used together with the -N option, specifying the number
 of nodes to be used. The default value for the number of tasks per node
@@ -66,8 +70,10 @@ is 1. For example to specify the requirements for an MPI job with 80
 tasks or multiprocessor job using 80 processors to process a larger
 number of serial jobs one would specify
 
-    #SBATCH -N 4
-    #SBATCH --tasks-per-node=20
+```bash
+#SBATCH -N 4
+#SBATCH --tasks-per-node=20
+```
 
 When using fewer than 20 tasks per node and you want to prevent other
 user’s jobs sharing your node, you need to consider using
@@ -87,14 +93,18 @@ node. On that node, one can request as many threads as there are cores
 on the node. On the standard Aurora compute nodes one can efficiently
 use up to 20 threads. Use the following resource statement:
 
-    #SBATCH -N 1
-    #SBATCH --tasks-per-node=20
+```bash
+#SBATCH -N 1
+#SBATCH --tasks-per-node=20
+```
 
 If your program is only efficient at a lower thread count, you may want
 to use e.g.:
 
-    #SBATCH -N 1
-    #SBATCH --tasks-per-node=4
+```bash
+#SBATCH -N 1
+#SBATCH --tasks-per-node=4
+```
 
 if you only want to use four threads. 
 
@@ -107,9 +117,11 @@ require 4 nodes and place eight tasks on each node. The number of
 threads per task is given by --cpus-per-task. The resource statement
 would look as follows:
 
-    #SBATCH -N 4
-    #SBATCH --tasks-per-node=10
-    #SBATCH --cpus-per-task=2
+```bash
+#SBATCH -N 4
+#SBATCH --tasks-per-node=10
+#SBATCH --cpus-per-task=2
+```
 
 ## Specifying the number of cores to be required by the job
 
@@ -119,9 +131,11 @@ When running a pure MPI program this option corresponds to the **number
 of tasks** required for your program. The following statement in a job
 script would reserve 78 cores for your job
 
-    #SBATCH -N 4
-    #SBATCH --tasks-per-node=20
-    #SBATCH -n 78
+```bash
+#SBATCH -N 4
+#SBATCH --tasks-per-node=20
+#SBATCH -n 78
+```
 
 Please consider using the --exclusive option of sbatch to avoid SLURM
 spreading your job on more nodes than necessary and placing other user’s

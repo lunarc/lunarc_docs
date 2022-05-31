@@ -16,14 +16,15 @@ nav:
   - Submitting jobs:
     - SLURM resource manager: users_guide/users_guide_intro.md
     - A basic job: users_guide/users_guide_small_job.md
-    - Job options for all jobs: users_guide/users_guide_resource_all.md
-    - Job options for multiprocessor jobs: users_guide/users_guide_resource_multiproc.md
+    - Specifying job requirements: users_guide/users_guide_resource_all.md
+    - Job requirements for multiprocessor jobs: users_guide/users_guide_resource_multiproc.md
     - Job execution environment: users_guide/users_guide_env.md
     - Using local disk to improve I/O performance: users_guide/users_guide_local_disk.md
     - Running MPI jobs: users_guide/users_guide_mpi_jobs.md
     - Controlling and monitoring jobs: users_guide/users_guide_job_control.md
   - Interactive node access: users_guide/users_guide_interactive.md
-  - Using installed software: using_modules.md
+  - Using installed software: users_guide/users_guide_modules.md
+  - Compiling code and using toolchains: users_guide/users_guide_modules_toolchains.md
   - Example jobs scripts:
     - Basic serial jobs: users_guide/users_guide_example_basic_1.md
     - Multiple serial jobs: users_guide/users_guide_example_multi_serial_1.md
@@ -51,6 +52,11 @@ nav:
     - DDT debugger on Aurora: guides/debugging/ddt_debugger.md
   - Misc guides:
     - Using the 32-core nodes: guides/misc/cascadelake_user.md
+- Links:
+  - Web resources: links/links_web.md
+  - Video resources: links/links_video.md
+  - Social media: links/links_social.md 
+- About: about/about.md
 
 theme: 
   name: material
@@ -80,3 +86,8 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true 
+  - admonition
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg

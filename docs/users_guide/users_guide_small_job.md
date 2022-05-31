@@ -6,22 +6,28 @@ description file is also know as a *job script*.
 
 A very simple job script, looks as follows:
     
-    #!/bin/bash
-    #SBATCH -t 00:05:00
+```bash
+#!/bin/bash
+#SBATCH -t 00:05:00
 
-    echo "hello"
+echo "hello"
+```
 
 Write this into a file. In the following we assume the file is named
 echo_script.sh, but in principle any name will do. You can now send the
 script for execution using the sbatch command. This will execute the
 “program” echo on the backend.
 
-    sbatch echo_script.sh
+```bash
+sbatch echo_script.sh
+```
 
 This should deliver a screen output similar to
 
-    [fred@aurora Serial]$ sbatch echo_script.sh
-    Submitted batch job 7185
+```bash
+[fred@aurora Serial]$ sbatch echo_script.sh
+Submitted batch job 7185
+```
 
 Where 7185 is the job number assigned by SLURM. Once your job has
 executed you will find a file slurm-7185.out in your directory which

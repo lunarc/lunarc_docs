@@ -18,7 +18,9 @@ In terms of optimized performance, the Intel compilers usually give good results
 
 === "Intel"
 
-    **Adding the intel module:**
+    **Intel compiler commands:**
+
+    Adding the gnu compiler module:    
 
     ```bash
     module add intel 
@@ -70,6 +72,48 @@ In terms of optimized performance, the Intel compilers usually give good results
 
     ```
     -heap-arrays <size in kilobytes> 
+    ```
+
+=== "GNU Compilers"
+
+    **GNU Compiler commands** 
+
+    Adding the gnu compiler module:
+
+    ```bash
+    module add gcc
+    ```
+
+    Fortran 77/90/95 compiler:
+
+    ```bash
+    gfortran
+    ```
+
+    C compiler:
+
+    ```bash
+    gcc 
+    ```
+
+    C++ compiler:
+
+    ```bash
+    g++ 
+    ```
+
+    **Compiler Options:**
+
+    Checking for mistakes:
+
+    ```
+    -fbounds-check -g 
+    ```
+
+    Optimization flags:
+
+    ```
+    -O3 -funroll-loops 
     ```
 
 === "PathScale"
@@ -170,44 +214,3 @@ In terms of optimized performance, the Intel compilers usually give good results
     -mcmodel=medium 
     ```
 
-=== "GNU Compilers"
-
-    **GNU Compiler commands** 
-
-    Adding the gnu compiler module:
-
-    ```bash
-    module add gcc
-    ```
-
-    Fortran 77/90/95 compiler:
-
-    ```bash
-    gfortran
-    ```
-
-    C compiler:
-
-    ```bash
-    gcc 
-    ```
-
-    C++ compiler:
-
-    ```bash
-    g++ 
-    ```
-
-    **Compiler Options:**
-
-    Checking for mistakes:
-
-    ```
-    -fbounds-check -g 
-    ```
-
-    Optimization flags:
-
-    ```
-    -O3 -funroll-loops 
-    ```

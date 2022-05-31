@@ -1,24 +1,25 @@
-# Welcome to the LUNARC Documentation pages
-
-Authors: Joachim Hein, Jonas Lindemann, Anders Sjöström, Magnus Ullner, Nicolas Melot
+# Welcome to the LUNARC Documentation
 
 Here you will find all of the documentation for the LUNARC resources in a easy to find place.
 
-You can also find more information at:
+=== "New to HPC"
 
-https://www.lunarc.lu.se/
+    [:material-rocket-launch: Getting started](getting_started/login_password/){: .md-button }
 
-LUNARC also has a Twitter profile where we regularly push news and information:
+    [:material-linux: Introduction to Linux](guides/linux/linux_basics_intro.md){: .md-button }
 
-https://twitter.com/LUNARC_LU
+    [:material-application: Common applications](guides/python/Python){: .md-button }
 
-We also have a YouTube channel with useful information videos:
+    [:fontawesome-solid-question: Frequently asked questions](faq/faq_login.md){: .md-button }
 
-https://www.youtube.com/user/LunarcChannel
+=== "I have used HPC resources before"
 
-There are also some interesting relevant YouTube playlists here:
+    Go there
 
-[Scientific Programming in Python and Fortran](https://www.youtube.com/playlist?list=PLgLiRoLGqjOgPvUlpjkWArTL55JZemeqQ)
+=== "I am an expert HPC user"
 
-[Mixed LUNARC related videos](https://www.youtube.com/playlist?list=PLgLiRoLGqjOh51-QFmU-HvV7wWq0xLBmv)
+    Go there
 
+=== "I develop HPC software"
+
+    Go here

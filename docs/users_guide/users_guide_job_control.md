@@ -5,8 +5,10 @@ for execution. SLURM will reply with the jobid number. The job will then
 be held in the queue until the requested resources become available. A
 typical use case looks as follows:
 
-    [fred@aurora MPItest]$ sbatch runjob.sh
-    Submitted batch job 7197
+```bash
+[fred@aurora MPItest]$ sbatch runjob.sh
+Submitted batch job 7197
+```
 
 User fred submitted the script runjob.sh to the job queue and got the
 jobid 7197 assigned to it.
@@ -33,15 +35,17 @@ Jobinfo is a script that uses the command squeue, which can, of course, also be 
 It is less convenient, but more configurable. The standard output, created by calling squeue without any options looks as
 follows:
 
-    JOBID PARTITION NAME USER ST TIME NODES NODELIST(REASON)
-    7303 snic hybrid_n fred PD 0:00 32 (Priority)
-    7302 snic hybrid_n fred PD 0:00 32 (Priority)
-    7301 snic hybrid_n fred PD 0:00 32 (Resources)
-    7304 snic preproce karl PD 0:00 6 (Priority)
-    7300 snic hybrid_n fred R 0:24 32 an[001-032]
-    7305 snic preproce karl R 0:37 6 an[081-086]
-    7306 snic hybrid_n fred R 0:37 6 an[081-086]
-    7307 snic testsimu sven R 0:07 1 an081
+```bash
+JOBID PARTITION NAME USER ST TIME NODES NODELIST(REASON)
+7303 snic hybrid_n fred PD 0:00 32 (Priority)
+7302 snic hybrid_n fred PD 0:00 32 (Priority)
+7301 snic hybrid_n fred PD 0:00 32 (Resources)
+7304 snic preproce karl PD 0:00 6 (Priority)
+7300 snic hybrid_n fred R 0:24 32 an[001-032]
+7305 snic preproce karl R 0:37 6 an[081-086]
+7306 snic hybrid_n fred R 0:37 6 an[081-086]
+7307 snic testsimu sven R 0:07 1 an081
+```
 
 The first column gives the jobid, the third the job names, followed by
 the userid. The column labeled “ST” gives the job state. The most
@@ -74,6 +78,9 @@ to remove a job from the job queue. To do so you need the jobid, which
 can be queried with the jobinfo or squeue command. To remove the job with the
 jobid 7103 from the job queue type
 
+```bash
 scancel 7103
+```
+
 
  
