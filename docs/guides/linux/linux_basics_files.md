@@ -16,11 +16,13 @@ Typeing can also be reduced by the use of the wildcard *. It matches anything in
 
 Using the command ls -l to list files in adirectory can give something like
 
-    -rw-r--r-- 1 xxxx xgroup 38 Feb 22 17:08 file1 
-    -rw-rw-r-- 1 xxxx xgroup 50 Feb 22 17:08 file2 
-    lrwxrwxrwx 1 xxxx xgroup 5 Feb 22 17:14 link1 -> file2 
-    -rwxr-xr-x 1 xxxx xgroup 91 Feb 22 17:08 script1 
-    drwx------ 2 xxxx xgroup 4096 Feb 22 17:07 subdir1 
+```bash
+-rw-r--r-- 1 xxxx xgroup 38 Feb 22 17:08 file1 
+-rw-rw-r-- 1 xxxx xgroup 50 Feb 22 17:08 file2 
+lrwxrwxrwx 1 xxxx xgroup 5 Feb 22 17:14 link1 -> file2 
+-rwxr-xr-x 1 xxxx xgroup 91 Feb 22 17:08 script1 
+drwx------ 2 xxxx xgroup 4096 Feb 22 17:07 subdir1 
+```
 
 The very first character of each line indicate if the file is of a special kind, such as a link (l) or a directory (d). The next nine characters are the permissions in groups of three for the user (xxxx), group (xgroup), and others. The three types of permissions are read (r), write (w), and execute (x). Thus, in the example, anyone can read file1, but only the user can modify the file, provided the permissions of the directory allow anyone to go there. file2 can also be modfied by members of group xgroup
 

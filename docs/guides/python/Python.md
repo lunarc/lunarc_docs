@@ -151,7 +151,7 @@ In **Anaconda** (available as a loadable module) the users are free to create th
 
 In all other installations (default or loadable module) users can install their own packages using *pip*
 
-```
+```bash
 pip install --prefix=$HOME/local package_name
 ```
 
@@ -166,7 +166,7 @@ The following instructions work best using the <a href="/using_hpc_desktop">LUNA
 Once you started an <a href="/batch_system/#interactive-access-to-compute-nodes">interactive session</a>, <a href="#anaconda-distributions">load Anaconda</a> and start `jupyter-lab --ip=$HOSTNAME`.
 After a few seconds, Jupyter lab outputs logs on the terminal such as the example below:
 
-```
+```bash
 [I 11:49:07.211 LabApp] JupyterLab extension loaded from /sw/easybuild/software/Anaconda3/2020.11/lib/python3.8/site-packages/jupyterlab
 [I 11:49:07.211 LabApp] JupyterLab application directory is /sw/easybuild/software/Anaconda3/2020.11/share/jupyter/lab
 [I 11:49:07.214 LabApp] Serving notebooks from local directory: /home/username
@@ -198,7 +198,8 @@ If the python software environment in jupyter lab lacks additional software of p
 
 #### Build and install custom Jupyter Lab Kernel
 To build a customized kernel, <a href="#creating-conda-environments">create a new virtual Anaconda environment</a> and install anaconda packages `ypykernel` and `ipython_genutils` as well as other anaconda or pip packages required by your application. Finally, activate the Anaconda virtual environment and register the new kernel to Jupyter Lab:
-```
+
+```bash
 python -m ipykernel install --user --name "$KERNEL_NAME" --display-name "$KERNEL_DISPLAY_NAME"
 ```
 where `$KERNEL_NAME` is the name you choose for the environment (e.g. "tensorflow") and `$KERNEL_DISPLAY_NAME` is its human-readable name, e.g., "Python (TensorFlow)".
@@ -215,7 +216,8 @@ In any case, the kernel under used at any given time is shown on the upper-right
 
 #### Remove custom kernel
 To remove a custom kernel, activate the corresponding conda environment, and run the command
-```
+
+```bash
 jupyter kernelspec uninstall $KERNEL_NAME
 ```
 

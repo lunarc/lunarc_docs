@@ -7,31 +7,33 @@ COMSOL is installed on the cluster. It can either be used non-interactively for 
 Given a .mph file comsol is started and run on the backend using a sbatch-script.
 an example script is given below:
 
-    #!/bin/bash
-    #
-    # job time, change for what your job requires In this example 1h 
-    #SBATCH -t 1:00:00
-    #SBATCH -N 1
-    #SBATCH --tasks-per-node=20
-    #
-    #SBATCH -A <your-project-name>
-    # job name
-    #SBATCH -J <whatever_name_you_want>
-    #
-    # filenames stdout and stderr - customise, include %j
-    #SBATCH -o process_%j.out
-    #SBATCH -e process_%j.err
-    #
-    # write this script to stdout-file - useful for scripting errors
-    cat $0
+```bash
+#!/bin/bash
+#
+# job time, change for what your job requires In this example 1h 
+#SBATCH -t 1:00:00
+#SBATCH -N 1
+#SBATCH --tasks-per-node=20
+#
+#SBATCH -A <your-project-name>
+# job name
+#SBATCH -J <whatever_name_you_want>
+#
+# filenames stdout and stderr - customise, include %j
+#SBATCH -o process_%j.out
+#SBATCH -e process_%j.err
+#
+# write this script to stdout-file - useful for scripting errors
+cat $0
 
-    # Add modules
-    module add comsol
+# Add modules
+module add comsol
 
-    # run the program 
-    # customise for your program name and add arguments if required
-    
-    comsol batch -inputfile  input.mph -outputfile output.mph 
+# run the program 
+# customise for your program name and add arguments if required
+
+comsol batch -inputfile  input.mph -outputfile output.mph 
+```
 
 This will run the job input.mph on the cluster and save the output to output.mph
 
@@ -44,12 +46,16 @@ This means that the FIRST tome you start the server you MUST do it interactively
 
 To start an interactive session, start a terminal and type:
 
-    interactive -N1 --exclusive -A <your_project_name> -t 01:00:00
+```bash
+interactive -N1 --exclusive -A <your_project_name> -t 01:00:00
+```
 
 This will give you a new prompt on a node on the cluster for 1h.
 To start the server type:
 
-    comsol -np 16 server
+```bash
+comsol -np 16 server
+```
 
 This will start a server using 16 processing cores. You can adjust the number of cores to any number up to 20 which is the number of cores on a node.  You should select the number of cores giving you the fastes time to solution, which typically requires some experimentation.
 
@@ -74,31 +80,33 @@ You are now set up to run Comsol using the backend node for calculations. Please
 Having started the Comsol server once, all of your settings for the server are saved in the directory .comsol on your home directory. Having the settings saved enables you to start the server with an SBATCH-script instead of through the interactive command.
 Below is an example on how to start the server through such a script instead.
 
-    #!/bin/bash
-    #
-    # job time, change for what your job requires   
-    #SBATCH -t 1:00:00
-    #SBATCH -N 1
-    #SBATCH --tasks-per-node=20
-    #
-    #SBATCH -A <your_project_name>  
-    # job name
-    #SBATCH -J comsol_server
-    #
-    #SBATCH --mail-user=you@yourdomain
-    #SBATCH --mail-type=START
-    #
-    #
-    # filenames stdout and stderr - customise, include %j
-    #SBATCH -o process_%j.out
-    #SBATCH -e process_%j.err
-    #
-    # write this script to stdout-file - useful for scripting errors
-    cat $0
-    # Add modules
-    module add comsol
-    # run the program 
-    # customise for your program name and add arguments if required 
-    comsol -np 20 server
+```bash
+#!/bin/bash
+#
+# job time, change for what your job requires   
+#SBATCH -t 1:00:00
+#SBATCH -N 1
+#SBATCH --tasks-per-node=20
+#
+#SBATCH -A <your_project_name>  
+# job name
+#SBATCH -J comsol_server
+#
+#SBATCH --mail-user=you@yourdomain
+#SBATCH --mail-type=START
+#
+#
+# filenames stdout and stderr - customise, include %j
+#SBATCH -o process_%j.out
+#SBATCH -e process_%j.err
+#
+# write this script to stdout-file - useful for scripting errors
+cat $0
+# Add modules
+module add comsol
+# run the program 
+# customise for your program name and add arguments if required 
+comsol -np 20 server
+```
 
 In this script you are using one full node for 1h. you will also receive an email when the job starts so you will know when to connect to the server. 

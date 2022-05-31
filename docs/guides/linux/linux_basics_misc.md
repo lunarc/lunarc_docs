@@ -4,13 +4,17 @@
 
 To get more information about a command type
 
-    man command
+```bash
+man command
+```
 
 ### which
 
 Check where the command that will be used resides
 
-    which command
+```bash
+which command
+```
 
 This gives the path of the first occurence of command in the directories listed in the envrionment variable PATH. Note that a few commands are picked up directly by the shell, for example, the time command, and the program in the search path will not be executed. If a command behaves differently than expected from the man page, a solution may be to give the full path of the command found by which.
 
@@ -20,23 +24,31 @@ This gives the path of the first occurence of command in the directories listed 
 
 Give the value of a parameter
 
-    echo $PATH
+```bash
+echo $PATH
+```
 
 ### set
 
 List the values of all defined environment variables alphabetically
 
-    set
+```bash
+set
+```
 
 ### export
 
 Export a parameter to all future subshells
 
-    export parameter
+```bash
+export parameter
+```
 
 The value can be set and exported at the same time, for example,
 
-    export MyParameter=myvalue
+```bash
+export MyParameter=myvalue
+```
 
 ## Manage Files and Directories
 
@@ -44,35 +56,49 @@ The value can be set and exported at the same time, for example,
 
 Make a directory
 
-    mkdir dirname
+```bash
+mkdir dirname
+```
 
 -p: Make a directory and also any parent directories, if they do not exist
 
-    mkdir -p parentdir1/parentdir2/dirname
+```bash
+mkdir -p parentdir1/parentdir2/dirname
+```
 
 ### rmdir
 
 Remove an empty directory
 
-    rmdir dirname
+```bash
+rmdir dirname
+```
 
 ### cd
 
 Change the current directory
 
-    cd dirname
+```bash
+cd dirname
+```
 
 Some special behaviour:
 
-    cd
+```bash
+cd
+```
 
 Without a name the new directory is the home directory.
 
-    cd -
+```bash
+cd -
+```
 
 returns the user to the previous directory.
 
-    cd ..
+```bash
+cd ..
+```
 
 moves up one level in the file tree.
 
@@ -80,57 +106,81 @@ moves up one level in the file tree.
 
 Remove a file
 
-    rm filename
+```bash
+rm filename
+```
 
 -r: Remove a file or a directory with all files and directories in it
 
-    rm -r dirname
+```bash
+rm -r dirname
+```
 
 -i: Get a question before taking action (removing files, removing directories, descending in directories)
 
-    rm -ir dirname
+```bash
+rm -ir dirname
+```
 
 ### mv
 
 Change the name of a file or directory
 
-    mv oldname newname
+```bash
+mv oldname newname
+```
 
 ### cp
 
 Copy a file to a new file
 
-    cp oldname newname
+```bash
+cp oldname newname
+```
 
 or to another directory
 
-    cp file1 file2 file3 newlocation
+```bash
+cp file1 file2 file3 newlocation
+```
 
 Copy all files in the current directory to another directory
 
-    cp * newlocation
+```bash
+cp * newlocation
+```
 
 -p: Copy with preserved file settings (modification date, permissions, ownership):
 
-    cp -p oldname newname
+```bash
+cp -p oldname newname
+```
 
 -r: Copy a directory and its subdirectories
 
-    cp -r oldname newname
+```bash
+cp -r oldname newname
+```
 
 -u: Copy only files that do not exist or have an earlier modification date in another directory
 
-    cp -u * newlocation
+```bash
+cp -u * newlocation
+```
 
 ### ls
 
 List files in the current directory
 
-    ls
+```bash
+ls
+```
     
 List the files in another directory
 
-    ls dirname
+```bash
+ls dirname
+```
 
 -l: List in long format
 
@@ -146,27 +196,37 @@ List the files in another directory
 
 List files in long format with most recent file last
 
-    ls -ltr
+```bash
+ls -ltr
+```
 
 ### find
 
 Find a file/directory with a given name and print its path, starting from a given directory
 
-    find dirname -name filename
+```bash
+find dirname -name filename
+```
 
 Find all files that contain a specified string in their name, starting from the current directory
 
-    find . -name "*string*"
+```bash
+find . -name "*string*"
+```
 
 Find files newer than a specified file, starting from the current directory
 
-    find . -newer filename
+```bash
+find . -newer filename
+```
 
 -exec ... {} \;: Execute a command with the found file represented by {}
 
 Remove files and directories with a specified string in their name
 
-    find . -name "*string*" -exec rm -r {} \;
+```bash
+find . -name "*string*" -exec rm -r {} \;
+```
 
 -not: Negate an expression
 
@@ -174,27 +234,37 @@ Remove files and directories with a specified string in their name
 
 Get a long-format listing of files with a specified string in their name, as long as they are not directories
 
-    find . -name "*string*" -not -type d -exec ls -l {} \;
+```bash
+find . -name "*string*" -not -type d -exec ls -l {} \;
+```
 
 find is a powerful command with many options as a look at the man page will reveal,
 
-    man find
+```bash
+man find
+```
 
 ### du
 
 Print the disk usage of the current and all subdirectories
 
-    du
+```bash
+du
+```
 
 Print the disk usage of a specifed directory and all its subdirectories
 
-    du dirname
+```bash
+du dirname
+```
 
 -a: Print the size of individual files in addition to diectories
 
 Print the size of a file
 
-    du -a filename
+```bash
+du -a filename
+```
 
 -s: Just print the sum of the disk usage
 
@@ -208,11 +278,15 @@ Print the size of a file
 
 Print the summed disk usage of the current directory in human-readable form
 
-    du -sh
+```bash
+du -sh
+```
 
 Print the disk usage for the current directory and its immediate subdirectories in human-readable form
 
-    du -h --max-depth=1
+```bash
+du -h --max-depth=1
+```
 
 ### chmod
 
@@ -220,15 +294,21 @@ Set the file permission.
 
 Make a file executable for anyone
 
-    chmod +x filename 
+```bash
+chmod +x filename 
+```
 
 To be more precise it is possible to specify the changeas a string in the format who-add/remove-permission, where who is one of more of the characters u (user), g (group), and o (others); + means add and - means remove; and permission is one or more of the characters r (read), w (write), and x (execute). For example, to remove read and write permissions for the group and others
 
-    chmod go-rw filename 
+```bash
+chmod go-rw filename 
+```
 
 -R: Make the change recursively, i.e., for all files in all subdirectories
 
-    chmod -R g+w dirname
+```bash
+chmod -R g+w dirname
+```
 
 ## Text Handling
 
@@ -236,25 +316,35 @@ To be more precise it is possible to specify the changeas a string in the format
 
 List the contents of a file
 
-    cat filename
+```bash
+cat filename
+```
 
 List the contents of several files and put the result in a new file
 
-    cat file1 file2 file3 > newfile
+```bash
+cat file1 file2 file3 > newfile
+```
 
 Append a file to another file
 
-    cat file1 >> file2
+```bash
+cat file1 >> file2
+```
 
 ### more
 
 List the contents of a file without scrolling through everything at once
 
-    more filename
+```bash
+more filename
+```
 
 Display the output of a command without scrolling through everything at once
 
-    command | more
+```bash
+command | more
+```
 
 Pressing return gives a new line. Pressing the space bar gives a new page. b gives the previous page if possible (not for the output stream of a command). /string searches for a string. q exists more.
 
@@ -266,32 +356,46 @@ less is similar to more. One of the more important differences is that it also w
 
 Print lines that contain a specified string in a file
 
-    grep string filename
+```bash
+grep string filename
+```
 
 Search for and print lines containing a specified string in several files
 
-    grep string file1 file2 file3
+```bash
+grep string file1 file2 file3
+```
 
 Search for and print lines containing a specified string in all files in the current directory
 
-    grep string *
+```bash
+grep string *
+```
 
 Print the lines in the output of a command containing a specified string
 
-    command | grep string
+```bash
+command | grep string
+```
 
 -i: Ignore the case of the search string (print both upper and lower case matches)
 
 -v: Print lines that do not contain the string
 
-    command | grep -v string 
+```bash
+command | grep -v string 
+```
 
 ### diff
 
 Compare the contents of two files and print differences
 
-    diff file1 file2 
+```bash
+diff file1 file2 
+```
 
 --side-by-side: Display the file contents side-by-side with differences marked
 
-    diff --side-by-side file1 file2 
+```bash
+diff --side-by-side file1 file2 
+```

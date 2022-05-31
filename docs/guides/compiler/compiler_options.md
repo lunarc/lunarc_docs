@@ -1,157 +1,213 @@
-# Compiler Options
-
 Several compilers are available to Lunarc users. Here we list the command names and options that often produce good performance for the most used compilers. More may be found by looking through the list of available modules obtained by the command
 
-    module avail 
+```bash
+module avail 
+```
 
 Before running production runs, it is a good idea to test a program by running it with various checks turned on, for example to see that arrays are not indexed out of bounds. When the program has passed the test, it may be recompiled with optimization flags to get the best performance.
 
 The compiler options given here are only suggestions of useful combinations, but not guaranteed to be optimal in all cases. To see what options are available check the man pages
 
-    man compiler-command 
+```bash 
+man compiler-command 
+```
 
 In terms of optimized performance, the Intel compilers usually give good results (fast programs) for both Intel (Sigrid) and AMD processors (Docenten, Sweet16). PathScale and Portland Group compilers are in some cases superior on AMD. The GNU compilers generally work, but are usually outperformed by other compilers.
 
-## Intel 
+## Compiler commands and switches
 
-### Commands 
+=== "Intel"
 
-Adding the intel module:
+    **Adding the intel module:**
 
+    ```bash
     module add intel 
+    ```
 
-Fortran 77/90/95 compiler:
+    Fortran 77/90/95 compiler:
 
+    ```bash
     ifort 
+    ```
+    C compiler:
 
-C compiler:
-
+    ```bash
     icc 
+    ```
+    C++ compiler:
 
-C++ compiler:
-
+    ```bash
     icpc 
+    ```
 
-### Compiler Options
+    **Compiler Options:**
 
-Checking for mistakes
+    Checking for mistakes
 
+    ```
     -check all -g -traceback 
+    ```
 
-Optimization flags:
+    Optimization flags:
 
+    ```
     -O3 -xW 
 
     -O3 -ipo -unroll 
 
     -fast 
+    ```
 
-### Problem solving
+    **Problem solving**
 
-By default, the Intel compiler puts arrays on the stack and if they are too large, the program may crash with segmentation fault. A solution is to instruct the compiler to put the arrays on the heap instead.
+    By default, the Intel compiler puts arrays on the stack and if they are too large, the program may crash with segmentation fault. A solution is to instruct the compiler to put the arrays on the heap instead.
 
+    ```
     -heap-arrays 
+    ```
 
-This may reduce performance and it is therefore possible to specify a minimum size of arrays to be put on the heap instead of the stack, when the size is known at compile time.
+    This may reduce performance and it is therefore possible to specify a minimum size of arrays to be put on the heap instead of the stack, when the size is known at compile time.
 
+    ```
     -heap-arrays <size in kilobytes> 
+    ```
 
-## PathScale
+=== "PathScale"
 
-### Commands 
+    **PathScale compiler commands:** 
 
-Adding the pathscale module:
+    Adding the pathscale module:
 
+    ```bash
     module add pathscale 
+    ```
 
-Fortan 77/90/95 compiler:
+    Fortan 77/90/95 compiler:
 
+    ```bash
     pathf95 
+    ```
 
-C compiler:
+    C compiler:
 
+    ```bash
     pathcc 
+    ```
 
-C++ compiler
+    C++ compiler
 
+    ```bash
     pathCC 
+    ```
 
-### Compiler Options
+    **Compiler Options:**
 
-Checking for mistakes
+    Checking for mistakes
 
+    ```
     -C -g 
+    ```
 
-Optimization flags:
+    Optimization flags:
 
+    ```
     -O3 
+    ```
 
-## Portland Group
+=== "Portland Group"
 
-### Commands 
+    **Portland compiler commands** 
 
-Adding the portland compiler module:
+    Adding the portland compiler module:
 
+    ```bash
     module add pgi 
+    ```
 
-Fortran 77 compiler:
+    Fortran 77 compiler:
 
+    ```bash
     pgf77 
+    ```
 
-Fortran 90/95 compiler:
+    Fortran 90/95 compiler:
 
-    pgf90 
+    ```bash
+    pgf90
+    ``` 
 
-C compiler:
+    C compiler:
 
+    ```bash
     pgcc 
+    ```
 
-C++ compiler:
+    C++ compiler:
 
+    ```bash
     pgCC 
+    ```
 
-### Compiler Options
+    **Compiler Options:**
 
-Checking for mistakes:
+    Checking for mistakes:
 
+    ```
     -Mbounds -g 
+    ```
 
-Optimization flags:
+    Optimization flags:
 
+    ```
     -O3 -fastsse -Mvect 
+    ```
 
-### Problem solving:
+    **Problem solving:**
 
-By default, objects, such as arrays, are limited to 2 GB. The option to allow larger objects is
+    By default, objects, such as arrays, are limited to 2 GB. The option to allow larger objects is
 
+    ```
     -mcmodel=medium 
+    ```
 
-## GNU
+=== "GNU Compilers"
 
-### Commands 
+    **GNU Compiler commands** 
 
-Adding the gnu compiler module:
+    Adding the gnu compiler module:
 
+    ```bash
     module add gcc
+    ```
 
-Fortran 77/90/95 compiler:
+    Fortran 77/90/95 compiler:
 
+    ```bash
     gfortran
+    ```
 
-C compiler:
+    C compiler:
 
+    ```bash
     gcc 
+    ```
 
-C++ compiler:
+    C++ compiler:
 
+    ```bash
     g++ 
+    ```
 
-### Compiler Options
+    **Compiler Options:**
 
-Checking for mistakes:
+    Checking for mistakes:
 
+    ```
     -fbounds-check -g 
+    ```
 
-Optimization flags:
+    Optimization flags:
 
+    ```
     -O3 -funroll-loops 
+    ```

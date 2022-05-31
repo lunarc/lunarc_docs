@@ -5,11 +5,11 @@ Download and install the **PhenixID Pocket Pass** app on your smartphone.  The c
 
 ### Download for Apple iOS
 
-<a href="https://itunes.apple.com/se/app/phenixid-pocket-pass/id1071318323?mt=8" target="_blank"><img class="ios" src="https://www.phenixid.se/content/themes/phenixid/../images/app-store.svg" width=150></a>
+[![sample screen](../images/ios-download.png "Download for android"){: style="width:200px"}](https://itunes.apple.com/se/app/phenixid-pocket-pass/id1071318323?mt=8 "Pocket Pass download")
 
 ### Download for Android OS
 
-<a href="https://play.google.com/store/apps/details?id=com.phenixidentity.pocketpass" target="_blank"><img src="https://www.phenixid.se/content/themes/phenixid/../images/google-play.png" width=160></a>
+[![sample screen](../images/android-download.png "Download for android"){: style="width:200px"}](https://play.google.com/store/apps/details?id=com.phenixidentity.pocketpass "Pocket Pass download")
 
 ## <span style="color:red">Step 2:</span>  Accessing the self-service portal
 
