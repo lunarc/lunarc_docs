@@ -5,6 +5,7 @@ nav:
   - Creating a password for your account: getting_started/login_password.md
   - Activating Pocket Pass authenticator: getting_started/authenticator_howto.md
   - How to login: getting_started/login_howto.md
+  - Transferring files: getting_started/transferring_files.md
   - Accessing the LUNARC HPC Desktop: getting_started/using_hpc_desktop.md
   - On-demand applications: getting_started/gfxlauncher.md
 - FAQ: 
@@ -47,6 +48,13 @@ nav:
     - MATLAB: guides/matlab/MATLAB.md
     - Abaqus FEA: guides/abaqus/Abaqus.md
     - COMSOL: guides/comsol/COMSOL.md
+  - Transferring data:
+    - Wget and Curl: guides/data_transfer/io_wget_curl.md
+    - SFTP: guides/data_transfer/io_sftp.md
+    - WinSCP: guides/data_transfer/io_winscp.md
+    - Cyberduck: guides/data_transfer/io_cyberduck.md
+    - Mounting Swestore: guides/data_transfer/swestore_mounting.md
+    - Rclone and Swestore: guides/data_transfer/swestore_rclone.md
   - Software development:
     - Compiler options: guides/compiler/compiler_options.md
     - DDT debugger on Aurora: guides/debugging/ddt_debugger.md
@@ -74,8 +82,7 @@ theme:
     - navigation.top
     - header.autohide
 extra_css:
-  - stylesheets/extra.css    
-#markdown_extensions: [codehilite]
+  - stylesheets/extra.css   
 
 markdown_extensions:
   - attr_list
@@ -91,3 +98,5 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - meta
+
