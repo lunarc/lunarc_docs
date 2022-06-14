@@ -106,6 +106,31 @@ module load R/4.1.2
 Now we can start R using the `R` command on the commandline.
 
 ## Installing and using your own R extensions
+Inside R you can use the R-function `library()` to display the available extensions.  If your required extension is not available, you can install it in your own disk space.  For that we recommend creating a directory in **your home space**, which you may name `MyRextensions`.  This has to be done once for your account and one can store many extensions in that directory.  The creation of this directoy can be accomplished at the LINUX command line utilising:  
+
+```
+mkdir ~/MyRextensions
+```
+
+Once the directory has been created, we recommend the use of the R-function `.libPaths()` inside your R session.  This will make R-functions such as `library()` and `install.packages()` use this directory:
+
+```
+> .libPaths(c('~/MyRextensions', .libPaths()))
+
+```
+It is important that `MyRextensions` is the first argument.  After this, any call to `install.packages` will install the extensions into the directory `MyRextensions` inside your diskspace.   For instance, if we want to install the extension **geosphere** we have to run:
+
+```
+> install.packages('geosphere')
+```
+
+To use the package you have to make it available using the `library()` function of R
+
+```
+> library('geosphere')
+```
+
+If in a future R session you get an error, stating that there is no 'geosphere' package, remember to run the `.libPaths()` function before using the `library()` function.
 
 
 
