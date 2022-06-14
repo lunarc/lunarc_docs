@@ -107,7 +107,7 @@ module load R/4.1.2
 
 Now we can start R using the `R` command on the commandline.
 
-## Installing and using your own R extensions
+## Installing and using R extensions in your home space
 Inside R you can use the R-function `library()` to display the available extensions.  If your required extension is not available, you can install it in your own disk space.  For that we recommend creating a directory in **your home space**, which you may name `MyRextensions`.  This has to be done once for your account and one can store many extensions in that directory.  The creation of this directoy can be accomplished at the LINUX command line utilising:  
 
 ```
