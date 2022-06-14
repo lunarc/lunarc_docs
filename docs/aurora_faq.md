@@ -71,6 +71,8 @@ When using OpenBLAS, please be aware that you might [need to control the number 
 ## How do I link my code against the MKL installation provided on Aurora
 The Aurora modules providing MKL set the environment variable `MKLROOT` to assist the compiler in locating the library on the system.  To link your application we suggest consulting the [Intel® Math Kernel Library Link Line Advisor](https://software.intel.com/en-us/articles/intel-mkl-link-line-advisor) for the arguments needed. 
 
+## I want to install an R-extension
+LUNARC provides R on its systems.  The R installations have many R extensions build in.   If you require an R extension that is not provided by the installation, you can easily install it in your home space.  We describe this in your [R guide](https://lunarc-documentation.readthedocs.io/en/latest/Rscript/).
 
 ## My MPI code using OpenBLAS does not perform
 OpenBLAS as installed in the foss [toolchains](https://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/#compiling-code-and-using-toolchains) is compiled with thread support.  When OpenBLAS is used on Aurora, it will typically figure how many cores you are allocated on that node and spawn as many threads.  If this is not desirable (e.g. pure MPI code) you need to control the number of threads spawned by setting the `OMP_NUM_THREADS` variable.  For example for an MPI code running as many tasks as cores requested this is typically be set to:
@@ -100,13 +102,6 @@ The VASP5 executables on Aurora are compiled using Intel MPI.  They need to be s
 ## My MPI application doesn't launch
 On Aurora we support two MPI libraries: [OpenMPI](https://www.open-mpi.org/) and [Intel MPI](https://software.intel.com/en-us/intel-mpi-library).  Depending on the [toolchain](https://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/#compiling-code-and-using-toolchains) utilised to compile your application different job launchers are required.  Executables build with OpenMPI need to be launched with `mpirun`, while applications build with Intel MPI need to be started with `srun`.  
 
-## The SciPY installed on Aurora fails because of a missing library
-This only concerns the SciPY installations build with the Intel compiler.  
-This is a know issue, which we are currently trying to resolve.  If you access SciPY by loading the icc module and the impi module, the Fortran runtime will not be available to Python.  We recommend loading the matching intel module instead of the icc module.  Example:
-```bash
-module load intel/2016b
-module load scipy/0.17.0-Python-2.7.11
-```
 
 ## Visual Studio Code (code) doesn't work anymore
 

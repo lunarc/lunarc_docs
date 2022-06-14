@@ -5,7 +5,7 @@ Author: Joachim Hein
 
 R is a widely used software environment with a focus on statistical computing and graphics. 
 
-**Important:** Resource intensive R jobs (compute time and/or memory consumption) have to use the compute nodes via the batch scheduler.  Such jobs must not utilise login or frontend nodes. 
+**Important:** Resource intensive R jobs (compute time and/or memory consumption) have to use the compute nodes via the [batch scheduler](https://lunarc-documentation.readthedocs.io/en/latest/batch_system/).  Such jobs must not utilise login or frontend nodes. 
 
 ## Finding available R versions
 
