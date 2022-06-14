@@ -16,6 +16,7 @@ nav:
 - Aurora FAQ: aurora_faq.md
 - Specific topics:
   - PYTHON on the cluster: Python.md
+  - R on the cluser: Rscript.md
   - MATLAB on the cluster: MATLAB.md
   - ABAQUS on the cluster: Abaqus.md
   - COMSOL on the cluster: COMSOL.md
