@@ -5,6 +5,8 @@ Author: Joachim Hein
 
 R is a widely used software environment with a focus on statistical computing and graphics. 
 
+**Important:** Resource intensive R jobs (compute time and/or memory consumption) have to use the compute nodes via the batch scheduler.  Such jobs must not utilise login or frontend nodes. 
+
 ## Finding available R versions
 
 Information on available R versions installed can be obtained with the `module spider` command on the LINUX command line:
@@ -118,7 +120,7 @@ Once the directory has been created, we recommend the use of the R-function `.li
 > .libPaths(c('~/MyRextensions', .libPaths()))
 
 ```
-It is important that `MyRextensions` is the first argument.  After this, any call to `install.packages` will install the extensions into the directory `MyRextensions` inside your diskspace.   For instance, if we want to install the extension **geosphere** we have to run:
+It is important that `MyRextensions` is the first argument.  After this, any call to `install.packages()` will install the extensions into the directory `MyRextensions` inside your diskspace.   For instance, if we want to install the extension **geosphere** we have to run:
 
 ```
 > install.packages('geosphere')
@@ -130,7 +132,7 @@ To use the package you have to make it available using the `library()` function 
 > library('geosphere')
 ```
 
-If in a future R session you get an error, stating that there is no 'geosphere' package, remember to run the `.libPaths()` function before using the `library()` function.
+If in a future R session you get an error, stating that there is no 'geosphere' package, remember to run the `.libPaths()` function, as shown above, before using the `library()` function.
 
 
 
