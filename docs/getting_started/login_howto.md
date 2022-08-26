@@ -1,9 +1,9 @@
 There are two main ways of accessing the LUNARC systems:
 
 1. The LUNARC HPC desktop, described in a separate [guide](http://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop/)
-2. Terminal and command line tools
+2. Terminal and command-line tools
 
-This document describes the second item: how to access our system using a terminal and command line tools. To get access to a terminal the user has to login in to LUNARC using a Secure Shell (SSH) terminal client, for example:
+This document describes the second item: how to access our system using a terminal and command-line tools. To get access to a terminal the user has to login in to LUNARC using a Secure Shell (SSH) terminal client, for example:
 
     ssh aurora.lunarc.lu.se -l username
 
@@ -11,7 +11,7 @@ or
 
     ssh username@aurora.lunarc.lu.se
 
-On Linux and MacOS this client is built-in to the system and no installation is neccesary. Windows does not have a standard SSH terminal so an external application is needed such as PuTTY (http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) is needed.  However windows users are recommended to use the [HPC desktop](http://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop/)
+On Linux and MacOS this client is built-in to the system and no installation is necessary. Windows do not have a standard SSH terminal so an external application is needed such as PuTTY (http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) is needed.  However windows users are recommended to use the [HPC desktop](http://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop/)
 
 To authenticate to the LUNARC system a two-factor authentication solution is used. Two-factor authentication uses two factors for authentication instead of just one, e.g. a username and password systems. In the LUNARC case the two factors are:
 
@@ -85,23 +85,4 @@ Note: This works on a per-theme basis.  In the above examples you will need to c
 To be prompted for the OTP password the PuTTY client must be configured for so called "keyboard-interactive" login. Open PuTTY from the start-menu. Load the session options for Platon. Open the Connection/SSH/Auth item in the tree-view. Make sure the "Attempt "keyboard-interactive" auth (SSH-2) is checked in the settings, see the following image:
 
 To reduce the number of logins to the system the "Seconds between keepalives" can be changed to a value greater than 0. See the following figure:
-
-## File transfers
-
-To reduce the number of otp passwords needed when transferring files the SFTP protocoll should be used instead of SCP, as each SCP connection will require a new OTP password.
-
-### File transfers with WinSCP
-
-The default filetransfer method in WinSCP is SFTP, so no special settings is needed for this. Just make sure that the "File protocol" setting is set to SFTP as shown in the following figure:
-
-![sftp](./../images/WinSCP-sftp.png)
-
-To reduce the number of logins to the system the "Keepalive" options can be set as shown in the following figure:
-
-![keepalive](./../images/WinSCP-keepalive.png)
-
-Please note:
-
-that the "Advanced options" checkbox must be checked to access these settings
-
 
