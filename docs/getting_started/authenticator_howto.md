@@ -1,4 +1,4 @@
-#Activating Pocket Pass authenticator
+# Activating Pocket Pass authenticator
 
 The process to install and set up the Pocket Pass authenticator is in five (5) steps, it is important that ALL steps are performed correctly so PLEASE read the instructions carefully.
 
