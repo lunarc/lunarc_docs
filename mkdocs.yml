@@ -58,8 +58,8 @@ nav:
   - Software development:
     - Compiler options: guides/compiler/compiler_options.md
     - DDT debugger on Aurora: guides/debugging/ddt_debugger.md
-  - Misc guides:
-    - Using the 32-core nodes: guides/misc/cascadelake_user.md
+  - Batch system guides:
+    - Using the 32-core nodes: guides/batch_system/cascadelake_user.md
 - Links:
   - Web resources: links/links_web.md
   - Video resources: links/links_video.md
