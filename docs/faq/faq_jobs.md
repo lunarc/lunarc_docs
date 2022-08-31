@@ -1,6 +1,5 @@
 # Frequently asked questions - Jobs
 
-Author: Joachim Hein (LUNARC)
 
 ![Node icon](../images/node_icon.jpg "Node icon")
 
@@ -24,3 +23,10 @@ By default the Slurm job scheduler restarts jobs in case of e.g. a failing node.
 ```
 to the header portion of your job script prevents this behaviour.
 
+---
+
+**Author:**
+Joachim Hein (LUNARC)
+
+**Last Updated:**
+2022-08-31

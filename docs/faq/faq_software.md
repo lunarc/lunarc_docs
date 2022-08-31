@@ -1,6 +1,5 @@
 # Frequently asked questions - Software
 
-Author: Joachim Hein (LUNARC)
 
 ![Node icon](../images/node_icon.jpg "Node icon")
 
@@ -83,3 +82,10 @@ module load foss
 code
 ```
 
+---
+
+**Author:**
+Joachim Hein (LUNARC)
+
+**Last Updated:**
+2022-08-31

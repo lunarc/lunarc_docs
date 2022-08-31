@@ -1,6 +1,5 @@
 # Using installed software
 
-Author: Joachim Hein (LUNARC)
 
 ![Node icon](../images/node_icon.jpg "Node icon")
 
@@ -342,3 +341,10 @@ It is also possible to browse the module tree and select module using a graphica
 ml-browse
 ```
 
+---
+
+**Author:**
+Joachim Hein (LUNARC)
+
+**Last Updated:**
+2022-08-31

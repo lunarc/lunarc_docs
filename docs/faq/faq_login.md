@@ -1,6 +1,5 @@
 # Frequently asked questions - Accounts
 
-Author: Joachim Hein (LUNARC)
 
 ![Node icon](../images/node_icon.jpg "Node icon")
 
@@ -20,3 +19,10 @@ If you have persistent problems with connecting to LUNARC service after being pr
 
 Please enter the new phone number into [SUPR](https://supr.snic.se/person/) and raise a [support request](http://www.lunarc.lu.se/support/support_form) to update our internal database for this change.
 
+---
+
+**Author:**
+Joachim Hein (LUNARC)
+
+**Last Updated:**
+2022-08-31
