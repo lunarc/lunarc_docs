@@ -1,4 +1,4 @@
-# Frequently asked questions - Accounts
+# Frequently asked questions - Login
 
 
 ![Node icon](../images/node_icon.jpg "Node icon")
