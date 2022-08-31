@@ -1,4 +1,4 @@
-# Batch System Rules #
+# Batch System Rules
 
 *The rules applied by the scheduler for the batch queues.*
 

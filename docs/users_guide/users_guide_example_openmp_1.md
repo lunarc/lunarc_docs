@@ -1,3 +1,5 @@
+# OpenMP jobs using shared memory
+
 To run a shared memory code using OpenMP on Aurora, you specify the
 number of cores you require using --tasks-per-node option of sbatch. In
 this case you have to request placement on a single node with the “-N 1”

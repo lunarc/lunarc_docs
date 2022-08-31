@@ -1,6 +1,8 @@
+# About
+
 This documentation is a collaborative effort of many people.
 
-##Authors
+## Authors
 
 Joachim Hein
 

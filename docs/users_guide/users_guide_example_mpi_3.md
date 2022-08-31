@@ -1,3 +1,5 @@
+# MPI jobs using fewer than 20 tasks per node
+
 If you want to use fewer than 20 task per nodes to e.g. give more
 resources to the individual task, you can use the -N and --task-per-node
 options of sbatch. We recommend not to use the -n option in this case.

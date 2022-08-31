@@ -1,3 +1,5 @@
+# Using the 32-core nodes
+
 LUNARC's Aurora system offeres a new partition to its users.   This partition features compute nodes with more modern Cascade Lake CPUs, larger core count and more memory than the standard nodes.  These nodes are placed in a partition named *lu32*.   The name reflects that these nodes feature 32 cores per node. 
 
 This document assumes you are familar with Aurora.   Here we focus on the key differences between the standard partition and the new *lu32*-partition from a user perspective.
