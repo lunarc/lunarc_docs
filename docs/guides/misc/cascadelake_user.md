@@ -35,7 +35,7 @@ module load SoftwareTree/Cascade
 ```
 This should work on the frontend nodes (e.g. aurora.lunarc.lu.se or the HPC desktop) and within a batch script (aka. SLURM script).  Once this is loaded, the commands `module avail` and `module spider` can be used to enquire about available software.
 
-##### Comments:
+##### Comments
 * Software in the `SoftwareTree/Cascade` is not expected to work on the frontend nodes.
 * Only a subset of the available software titles has been built for the Cascade Lake CPUs.  Use the standard (Haswell) software if the software you need is not available for Cascade Lake
 * If you require additional software titles in `SoftwareTree/Cascade`, please contact LUNARC support.   Priority will be given to requests from research groups that helped to finance the relevant nodes and codes that consume substantial amounts of CPU time.
