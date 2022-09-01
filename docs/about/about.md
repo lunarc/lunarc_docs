@@ -15,3 +15,7 @@ Magnus Ullner, LUNARC
 Nicolas Melot, LUNARC
 
 Peter Bergdahl, LUNARC
+
+## Contact
+
+<contact@lunarc.lu.se>
