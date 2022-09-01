@@ -4,14 +4,14 @@ This documentation is a collaborative effort of many people.
 
 ## Authors
 
-Joachim Hein
+Joachim Hein, LUNARC
 
-Jonas Lindemann
+Jonas Lindemann, LUNARC
 
-Anders Sjöström
+Anders Sjöström, LUNARC
 
-Magnus Ullner
+Magnus Ullner, LUNARC
 
-Nicolas Melot
+Nicolas Melot, LUNARC
 
-Peter Bergdahl
+Peter Bergdahl, LUNARC
