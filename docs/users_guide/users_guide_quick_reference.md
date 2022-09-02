@@ -1,3 +1,5 @@
+# Quick reference
+
 Useful hints and short information on issues that may vary between the different systems
 
 ## Installed software software

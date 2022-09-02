@@ -1,3 +1,5 @@
+# An introduction to Linux shells and commands
+
 It is possible to assign values to parameters within a shell. Certain parameters, environment  or shell variables, have to be defined for the proper function of the shell and are usually set automatically. Some shell variables are modified when modules are loaded (see the User's Guide). The user can also define his/her own parameters.
 
 Shell variables set by the system have names in capital letters. Note that Linux shells are case sensitive; i.e., parameters or commands with names like PARAMETER, PARAmeter, and parameter are all different. The value of a parameter is represented by the name of the parameter preceded by a dollar sign ($) and the value can be checked with the command echo. For example,

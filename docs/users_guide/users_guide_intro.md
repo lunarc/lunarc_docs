@@ -1,3 +1,5 @@
+# SLURM resource manager
+
 On a modern HPC system efficient management of the compute resources is
 absolutely crucial for the system to perform. LUNARC deploys 
 [SLURM](http://slurm.schedmd.com/) (**S**imple **L**inux **U**tility

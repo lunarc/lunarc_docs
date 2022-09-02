@@ -1,3 +1,5 @@
+# SFTP
+
 SFTP is a secure data transfer protocol provided by the SSH software. The protocol is very similar to FTP and uses many of the commands provided by an FTP server.
 
 ### Loggin into an SFTP server

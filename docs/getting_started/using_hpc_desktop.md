@@ -1,3 +1,5 @@
+# Accessing the LUNARC HPC Desktop
+
 The LUNARC HPC Desktop provides LUNARC and SNIC users with a solution for hardware accelerated remote visualization that will provide a new scalable approach to HPC and scientific data visualization. The desktop introduces a convenient way to work with our clusters using not only multiple terminal windows but also file browsers, editors, graphical tools such as queue status and debuggers, 2D and 3D applications, etc.
 
 The same 2-factor authentication as for a normal ssh session is used and the desktop session can easily be disconnected for later reconnect. The whole desktop state (including the latest mouse position) is saved and the system works both from the campus network and from home or when traveling.

@@ -1,3 +1,4 @@
+# MPI job using the node local discs
 
 In many cases you can use the node local discs also for your MPI
 jobs.  This can be beneficial if your job is very demanding with
