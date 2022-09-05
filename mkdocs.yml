@@ -37,17 +37,13 @@ nav:
   - Batch system rules: users_guide/users_guide_rules.md
   - Quick reference: users_guide/users_guide_quick_reference.md
 - Guides:
+  - Introduction: guides/guides_intro.md
   - Linux Basics: 
     - Introduction to Linux: guides/linux/linux_basics_intro.md
     - An introduction to Linux shells and commands: guides/linux/linux_basics_shell_params.md
     - Files and directories in Linux: guides/linux/linux_basics_files.md
     - Special Command Symbols: guides/linux/linux_basics_special_symbols.md
     - Useful Linux commands: guides/linux/linux_basics_misc.md
-  - Specific applications:
-    - Python: guides/python/Python.md
-    - MATLAB: guides/matlab/MATLAB.md
-    - Abaqus FEA: guides/abaqus/Abaqus.md
-    - COMSOL: guides/comsol/COMSOL.md
   - Transferring data:
     - Wget and Curl: guides/data_transfer/io_wget_curl.md
     - SFTP: guides/data_transfer/io_sftp.md
@@ -55,11 +51,16 @@ nav:
     - Cyberduck: guides/data_transfer/io_cyberduck.md
     - Mounting Swestore: guides/data_transfer/swestore_mounting.md
     - Rclone and Swestore: guides/data_transfer/swestore_rclone.md
-  - Software development:
-    - Compiler options: guides/compiler/compiler_options.md
-    - DDT debugger on Aurora: guides/debugging/ddt_debugger.md
   - Batch system guides:
     - Using the 32-core nodes: guides/batch_system/cascadelake_user.md
+  - Specific applications:
+    - Python: guides/applications/Python.md
+    - MATLAB: guides/applications/MATLAB.md
+    - Abaqus FEA: guides/applications/Abaqus.md
+    - COMSOL: guides/applications/COMSOL.md
+  - Software development:
+    - Compiler options: guides/software_development/compiler_options.md
+    - DDT debugger on Aurora: guides/software_development/ddt_debugger.md
 - Links:
   - Web resources: links/links_web.md
   - Video resources: links/links_video.md
