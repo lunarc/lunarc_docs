@@ -14,26 +14,26 @@ nav:
   - Jobs: faq/faq_jobs.md
   - Software: faq/faq_software.md 
 - User's guide:
+  - Introduction: users_guide/users_guide_intro.md
   - Submitting jobs:
-    - SLURM resource manager: users_guide/users_guide_intro.md
-    - A basic job: users_guide/users_guide_small_job.md
-    - Specifying job requirements: users_guide/users_guide_resource_all.md
-    - Job requirements for multiprocessor jobs: users_guide/users_guide_resource_multiproc.md
-    - Job execution environment: users_guide/users_guide_env.md
-    - Using local disk to improve I/O performance: users_guide/users_guide_local_disk.md
-    - Running MPI jobs: users_guide/users_guide_mpi_jobs.md
-    - Controlling and monitoring jobs: users_guide/users_guide_job_control.md
+    - A basic job: users_guide/submitting_jobs/users_guide_small_job.md
+    - Specifying job requirements: users_guide/submitting_jobs/users_guide_resource_all.md
+    - Job requirements for multiprocessor jobs: users_guide/submitting_jobs/users_guide_resource_multiproc.md
+    - Job execution environment: users_guide/submitting_jobs/users_guide_env.md
+    - Using local disk to improve I/O performance: users_guide/submitting_jobs/users_guide_local_disk.md
+    - Running MPI jobs: users_guide/submitting_jobs/users_guide_mpi_jobs.md
+    - Controlling and monitoring jobs: users_guide/submitting_jobs/users_guide_job_control.md
   - Interactive node access: users_guide/users_guide_interactive.md
   - Using installed software: users_guide/users_guide_modules.md
   - Compiling code and using toolchains: users_guide/users_guide_modules_toolchains.md
   - Example jobs scripts:
-    - Basic serial jobs: users_guide/users_guide_example_basic_1.md
-    - Multiple serial jobs: users_guide/users_guide_example_multi_serial_1.md
-    - MPI job using 20 tasks per node: users_guide/users_guide_example_mpi_1.md
-    - MPI job using the node local discs: users_guide/users_guide_example_mpi_2.md
-    - MPI jobs using fewer than 20 tasks per node: users_guide/users_guide_example_mpi_3.md
-    - OpenMP jobs using shared memory: users_guide/users_guide_example_openmp_1.md
-    - Hybrid-jobs using threads within an MPI framework: users_guide/users_guide_example_openmp_2.md
+    - Basic serial jobs: users_guide/example_job_scripts/users_guide_example_basic_1.md
+    - Multiple serial jobs: users_guide/example_job_scripts/users_guide_example_multi_serial_1.md
+    - MPI job using 20 tasks per node: users_guide/example_job_scripts/users_guide_example_mpi_1.md
+    - MPI job using the node local discs: users_guide/example_job_scripts/users_guide_example_mpi_2.md
+    - MPI jobs using fewer than 20 tasks per node: users_guide/example_job_scripts/users_guide_example_mpi_3.md
+    - OpenMP jobs using shared memory: users_guide/example_job_scripts/users_guide_example_openmp_1.md
+    - Hybrid-jobs using threads within an MPI framework: users_guide/example_job_scripts/users_guide_example_openmp_2.md
   - Batch system rules: users_guide/users_guide_rules.md
   - Quick reference: users_guide/users_guide_quick_reference.md
 - Guides:
