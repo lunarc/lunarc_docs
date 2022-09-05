@@ -27,13 +27,13 @@ nav:
   - Using installed software: users_guide/users_guide_modules.md
   - Compiling code and using toolchains: users_guide/users_guide_modules_toolchains.md
   - Example jobs scripts:
-    - Basic serial jobs: users_guide/example_job_scripts/users_guide_example_basic_1.md
-    - Multiple serial jobs: users_guide/example_job_scripts/users_guide_example_multi_serial_1.md
-    - MPI job using 20 tasks per node: users_guide/example_job_scripts/users_guide_example_mpi_1.md
-    - MPI job using the node local discs: users_guide/example_job_scripts/users_guide_example_mpi_2.md
-    - MPI jobs using fewer than 20 tasks per node: users_guide/example_job_scripts/users_guide_example_mpi_3.md
-    - OpenMP jobs using shared memory: users_guide/example_job_scripts/users_guide_example_openmp_1.md
-    - Hybrid-jobs using threads within an MPI framework: users_guide/example_job_scripts/users_guide_example_openmp_2.md
+    - Basic serial jobs: users_guide/example_job_scripts/users_guide_example_basic_serial.md
+    - Multiple serial jobs: users_guide/example_job_scripts/users_guide_example_multiple_serial_jobs.md
+    - MPI job using 20 tasks per node: users_guide/example_job_scripts/users_guide_example_mpi_20_tasks.md
+    - MPI job using the node local discs: users_guide/example_job_scripts/users_guide_example_mpi_local_discs.md
+    - MPI jobs using fewer than 20 tasks per node: users_guide/example_job_scripts/users_guide_example_mpi_fewer_than_20.md
+    - OpenMP jobs using shared memory: users_guide/example_job_scripts/users_guide_example_openmp_shared_memory.md
+    - Hybrid-jobs using threads within an MPI framework: users_guide/example_job_scripts/users_guide_example_openmp_hybrid_jobs.md
   - Batch system rules: users_guide/users_guide_rules.md
   - Quick reference: users_guide/users_guide_quick_reference.md
 - Guides:
@@ -52,7 +52,7 @@ nav:
     - Mounting Swestore: guides/data_transfer/swestore_mounting.md
     - Rclone and Swestore: guides/data_transfer/swestore_rclone.md
   - Batch system guides:
-    - Using the 32-core nodes: guides/batch_system/cascadelake_user.md
+    - Using the 32-core nodes: guides/batch_system/32_core_nodes.md
   - Specific applications:
     - Python: guides/applications/Python.md
     - MATLAB: guides/applications/MATLAB.md
