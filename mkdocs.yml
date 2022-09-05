@@ -16,9 +16,9 @@ nav:
 - User's guide:
   - Introduction: users_guide/users_guide_intro.md
   - Submitting jobs:
-    - A basic job: users_guide/submitting_jobs/users_guide_small_job.md
-    - Specifying job requirements: users_guide/submitting_jobs/users_guide_resource_all.md
-    - Job requirements for multiprocessor jobs: users_guide/submitting_jobs/users_guide_resource_multiproc.md
+    - A basic job: users_guide/submitting_jobs/users_guide_basic_job.md
+    - Specifying job requirements: users_guide/submitting_jobs/users_guide_specifying_requirements.md
+    - Job requirements for multiprocessor jobs: users_guide/submitting_jobs/users_guide_requirements_multiproc.md
     - Job execution environment: users_guide/submitting_jobs/users_guide_env.md
     - Using local disk to improve I/O performance: users_guide/submitting_jobs/users_guide_local_disk.md
     - Running MPI jobs: users_guide/submitting_jobs/users_guide_mpi_jobs.md
