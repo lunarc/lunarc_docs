@@ -9,7 +9,7 @@ The nodes inside the *lu32*-partition feature more modern CPUs than the nodes in
 
 The *Cascade Lake* CPUs feature additional instructions, not availabe on the *Haswell* CPUs.  For a typical scientific computing job, the AVX512 instructions are the most interesting instructions.  Testing by LUNARC support has shown that code utilising these instructions can be up to 50% faster than code utilising AVX2 instructions.  
 
-### Key differences between the Haswell and Caccade Lake nodes
+### Key differences between the Haswell and Cascade Lake nodes
 |                | Aurora standard Haswell node | Aurora standard Cascade Lake node |
 |----------------|:----------------------------:|:---------------------------------:|
 |Cores per node: |      20 cores per node       |       32 cores per node           |

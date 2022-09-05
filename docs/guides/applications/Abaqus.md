@@ -1,4 +1,4 @@
-# ABAQUS
+# Abaqus FEA
 
 Abaqus is installed on the cluster. 
 Using Abaqus is divided into separate tasks. 
