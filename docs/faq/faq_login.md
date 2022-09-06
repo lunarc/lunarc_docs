@@ -5,7 +5,11 @@
 
 ## I have forgotten my login password for Aurora
 
-To receive a new password, please visit the [password self service portal](https://phenix3.lunarc.lu.se/pss); identify yourself with your email address and the mobile phone you have registered you have registered in [SUPR](https://supr.snic.se/person/). If this fails, phone LUNARC support on 0462224454 (+46462224454 outside Sweden) from your registered mobile phone. Additional questions will be asked to verify your identity.  
+To receive a new password, please visit the password self service portal at the link below:
+
+[Password self service portal](https://phenix3.lunarc.lu.se/pss)
+
+Identify yourself with your email address and the mobile phone you have registered in [SUPR](https://supr.snic.se/person/). If this fails, phone LUNARC support on 0462224454 (+46462224454 outside Sweden) from your registered mobile phone. Additional questions will be asked to verify your identity.  
 
 ## I can not login after installing a pocket pass token
 
@@ -25,4 +29,4 @@ Please enter the new phone number into [SUPR](https://supr.snic.se/person/) and 
 Joachim Hein (LUNARC)
 
 **Last Updated:**
-2022-08-31
+2022-09-06
