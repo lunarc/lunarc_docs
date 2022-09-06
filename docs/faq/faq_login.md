@@ -9,7 +9,7 @@ To receive a new password, please visit the password self service portal at the 
 
 [Password self service portal](https://phenix3.lunarc.lu.se/pss)
 
-Identify yourself with your email address and the mobile phone you have registered in [SUPR](https://supr.snic.se/person/). If this fails, phone LUNARC support on 0462224454 (+46462224454 outside Sweden) from your registered mobile phone. Additional questions will be asked to verify your identity.  
+Identify yourself with your email address and the mobile phone you have registered in [SUPR](https://supr.snic.se/person/). If this fails, phone LUNARC support on +46 (0)46-222 4454 from your registered mobile phone. Additional questions will be asked to verify your identity.
 
 ## I can not login after installing a pocket pass token
 
