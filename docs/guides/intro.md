@@ -1,1 +1,1 @@
-This section provides guides to additional topics not covered in the other sections of the documentation. 
+This section contains guides for a number of different topics, including Linux basics, advanced systems usage. special software and help for developers.
