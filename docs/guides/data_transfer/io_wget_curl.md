@@ -50,9 +50,9 @@ grace_hopper.jpg           100%[========================================>] 172,4
 2022-06-01 12:01:15 (1,87 MB/s) - ‘grace_hopper.jpg’ sparades [176587/176587]
 ```
 
-### Downloading from a FTP server
+### Downloading from an FTP server
 
-Wget also supports downloading files from FTP-servers. Using this protocol it is also possible to download multiple files from a FTP-directory. In the following example we download all files in a remote FTP-directory:
+Wget also supports downloading files from FTP servers. Using this protocol it is also possible to download multiple files from an FTP directory. In the following example we download all files in a remote FTP directory:
 
 ```bash
 $ mkdir space_images
@@ -60,7 +60,7 @@ $ cd space_images
 $ wget ftp://ftp.sunet.se/mirror/archive/ftp.sunet.se/pub/pictures/space/*
 ```
 
-Running these commands will produced the following output:
+Running these commands will produce the following output:
 
 ```
 ...
@@ -89,6 +89,10 @@ surveyor.gif               100%[========================================>] 221,0
 ```
 
 All files have now been downloaded in the created directory.
+
+## CUrl
+
+
 
 
 
