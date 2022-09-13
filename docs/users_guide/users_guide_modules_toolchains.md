@@ -1,5 +1,3 @@
-# Compiling code and using toolchains
-
 A significant portion of the Aurora software is build using the [EasyBuild](http://hpcugent.github.io/easybuild/) software framework.  This framework provides so called *Toolchains* which are utilised to build software.  LUNARC recommends to use toolchains when building software.  This includes compiling your own software outside the EasyBuild framework.
 
 ### Currently provided toolchains

@@ -1,5 +1,7 @@
 # Frequently asked questions - Files
 
+Author: Joachim Hein (LUNARC)
+
 ![Node icon](../images/node_icon.jpg "Node icon")
 
 ## I accidentally deleted or modified a file
@@ -11,10 +13,5 @@ cd .snapshots/@-2020.12.11-00.00.35
 ```
 and you get presented with the state of the directory and it's sub-directories at that time-stamp.  You can copy the required contents out of the snapshot directory into your current directory.
 
----
 
-**Author:**
-Joachim Hein (LUNARC)
 
-**Last Updated:**
-2022-08-31

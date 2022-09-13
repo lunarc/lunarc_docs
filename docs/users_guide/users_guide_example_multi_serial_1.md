@@ -1,5 +1,3 @@
-# Multiple serial jobs
-
 When you need to run many serial jobs, similar to the ones [described
 above](#basic-run-script), these should be bundled together and
 submitted to the job queue in a small number of submissions or even a

@@ -1,5 +1,3 @@
-# Hybrid-jobs using threads within an MPI framework
-
 A cluster with multicore nodes such as Alarik is a natural environment
 to execute parallel codes deploying both MPI and OpenMP threads. When
 running such applications the optimal number of MPI-tasks and OpenMP

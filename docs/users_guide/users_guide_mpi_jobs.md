@@ -1,5 +1,3 @@
-# Running MPI jobs
-
 ## Launching MPI jobs in OpenMPI
 
 To execute message passing parallel jobs these should be built against

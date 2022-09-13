@@ -14,15 +14,5 @@
     --md-primary-bg-color--light:        #FFFFFF;
     --md-primary-bg-color:               hsla(0, 0%, 100%, 1);
     --md-primary-bg-color--light:        hsla(0, 0%, 100%, 0.7);
-
-    --md-accent-fg-color:                #875e29;
-    --md-accent-fg-color--transparent:   rgba(82,108,254,.1);
-    --md-accent-bg-color:                #fff;
-    --md-accent-bg-color--light:         hsla(0,0%,100%,.7);
-
-    --md-typeset-a-color:                hsla(0, 0%, 0%, 0.87);
+ 
   }
-
-.md-typeset :is(.emojione,.twemoji,.gemoji) svg {
-    margin-right: 7px;
-}

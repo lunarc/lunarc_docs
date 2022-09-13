@@ -1,5 +1,3 @@
-# Job execution environment
-
 When submitting your job to SLURM using sbatch, your entire environment
 including the currently loaded modules gets copied.  On Aurora,
 when hitting sbatch:

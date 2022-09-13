@@ -1,5 +1,3 @@
-# MPI job using 20 tasks per node
-
 Most MPI jobs achieve best cost efficiency when deploying 20 tasks per
 node, that is one task per core.  The sample uses core binding as
 offered by the OpenMPI library.

@@ -1,5 +1,3 @@
-# Files and directories in Linux
-
 ## Organisation
 
 Files and directories are organised in a tree structure, with the top directory, known as the root directory, simply represented by /, which is also the separator for different directory levels. For example, the home directory of user xxxx is /home/xxxx, where home is a directory under / and xxxx a directory under home. A file in the home directory would be represented as /home/xxxx/xfile. This representation is known as a path and if it starts from the root directory, it is a full path.

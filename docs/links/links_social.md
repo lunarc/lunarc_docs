@@ -1,5 +1,3 @@
-# Social media
-
 LUNARC also has a Twitter profile where we regularly push news and information:
 
 === "Twitter"

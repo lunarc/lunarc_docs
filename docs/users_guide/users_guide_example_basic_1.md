@@ -1,5 +1,3 @@
-# Basic serial jobs
-
 ## Basic run script
 
 The following is an example for a simple script running the program

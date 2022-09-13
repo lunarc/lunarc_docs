@@ -1,5 +1,3 @@
-# Interactive node access
-
 Sometimes it is desirable to have an interactive connection to the compute
 nodes of the cluster. Extensive code testing and debugging is a typical use case.
 Regular production runs, in particular calculations requiring multiple days, are expected to

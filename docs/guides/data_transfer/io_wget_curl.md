@@ -1,5 +1,3 @@
-# Wget and Curl
-
 A common task when using HPC resources is to transfer data to the computing resource from external resources. It is of course possible to use a web browser to download files if you are using the LUNARC HPC Desktop, but this is often not possible if using a terminal or from a batch script. To accomplish this we can use the command line tools Wget or Curl instead. 
 
 ## Wget

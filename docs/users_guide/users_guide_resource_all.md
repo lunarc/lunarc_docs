@@ -1,5 +1,3 @@
-# Specifying job requirements
-
 We now describe a number of statements which are most commonly used to
 specify resource requirements for all kind of jobs. Refer to “man
 sbatch” for more information.

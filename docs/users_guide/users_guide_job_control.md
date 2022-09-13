@@ -1,5 +1,3 @@
-# Controlling and monitoring jobs
-
 ## Submitting with sbatch
 
 One uses the command sbatch to submit a job script to the batch system

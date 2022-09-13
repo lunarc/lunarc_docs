@@ -1,5 +1,3 @@
-# On-demand applications
-
 The graphical application launcher (GfxLauncher) is a software for launching graphical or interactive applications through SLURM. It is responsible for submitting a job to SLURM, connecting to the application running on the node and monitoring the progress of the application.
 
 ## User interface

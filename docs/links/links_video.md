@@ -1,5 +1,3 @@
-# Video resources
-
 Here you can find links to useful video materials provided by LUNARC or related organisations:
 
 === "General"

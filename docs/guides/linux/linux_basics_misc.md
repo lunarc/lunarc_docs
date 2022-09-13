@@ -1,5 +1,3 @@
-# Useful Linux commands
-
 ## About Commands
 
 ### man

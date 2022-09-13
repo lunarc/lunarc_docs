@@ -1,5 +1,3 @@
-# Special Command Symbols
-
 ## Redirection
 
 ```bash
