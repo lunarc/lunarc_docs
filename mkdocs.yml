@@ -37,7 +37,7 @@ nav:
   - Batch system rules: users_guide/users_guide_rules.md
   - Quick reference: users_guide/users_guide_quick_reference.md
 - Guides: 
-  - Introduction: guides/intro.md
+  - Introduction: guides/guides_intro.md
   - Linux Basics: 
     - Introduction to Linux: guides/linux/linux_basics_intro.md
     - An introduction to Linux shells and commands: guides/linux/linux_basics_shell_params.md
