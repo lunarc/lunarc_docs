@@ -1,3 +1,5 @@
+# Compiler options
+
 Several compilers are available to Lunarc users. Here we list the command names and options that often produce good performance for the most used compilers. More may be found by looking through the list of available modules obtained by the command
 
 ```bash

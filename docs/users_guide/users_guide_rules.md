@@ -1,6 +1,6 @@
-# Batch System Rules #
+# Batch System Rules
 
-*The rules applied by the scheduler for the batch queues.*
+### The rules applied by the scheduler for the batch queues###
 
 A maui scheduler is used to start jobs, organise the order in the batch queue and put jobs aside that are not eligible to run or to queue at the moment; i.e., manage active, idle and blocked jobs, which are displayed by the showq command.
 
