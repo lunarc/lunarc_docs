@@ -13,7 +13,7 @@ nav:
   - Files: faq/faq_files.md
   - Jobs: faq/faq_jobs.md
   - Software: faq/faq_software.md 
-- User's guide:
+- Manual:
   - Submitting jobs:
     - SLURM resource manager: users_guide/users_guide_intro.md
     - A basic job: users_guide/users_guide_small_job.md
@@ -36,7 +36,8 @@ nav:
     - Hybrid-jobs using threads within an MPI framework: users_guide/users_guide_example_openmp_2.md
   - Batch system rules: users_guide/users_guide_rules.md
   - Quick reference: users_guide/users_guide_quick_reference.md
-- Guides:
+- Guides: 
+  - Introduction: guides/intro.md
   - Linux Basics: 
     - Introduction to Linux: guides/linux/linux_basics_intro.md
     - An introduction to Linux shells and commands: guides/linux/linux_basics_shell_params.md
