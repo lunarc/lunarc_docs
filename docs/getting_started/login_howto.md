@@ -1,7 +1,7 @@
 There are two main ways of accessing the LUNARC systems:
 
-1. The LUNARC HPC desktop, described in a separate [guide](http://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop/)
-2. Terminal and command-line tools
+ * The LUNARC HPC desktop, described in a separate [guide](http://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop/)
+ * Terminal and command-line tools
 
 This document describes the second item: how to access our system using a terminal and command-line tools. To get access to a terminal the user has to login in to LUNARC using a Secure Shell (SSH) terminal client, for example:
 

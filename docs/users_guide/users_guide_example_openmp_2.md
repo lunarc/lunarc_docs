@@ -1,19 +1,6 @@
-A cluster with multicore nodes such as Alarik is a natural environment
-to execute parallel codes deploying both MPI and OpenMP threads. When
-running such applications the optimal number of MPI-tasks and OpenMP
-threads to place on a node can depend highly on the details of the
-application. In particular for application which make many references to
-main memory and the programmer has not implemented a proper “first touch
-data allocation” it is typically **best to have 2 or 4 threads** per MPI
-task on an Alarik node. Together with a proper binding of your MPI tasks
-to the “numa-islands”, this will ensure memory locality for your code.
-For the below syntax you have to use **version 1.8.3 or newer** of the
-OpenMPI library.
+A cluster with multicore nodes such as Alarik is a natural environment to execute parallel codes deploying both MPI and OpenMP threads. When running such applications the optimal number of MPI-tasks and OpenMP threads to place on a node can depend highly on the details of the application. In particular, for applications that make many references to main memory and the programmer has not implemented a proper “first touch data allocation” it is typically **best to have 2 or 4 threads** per MPI task on an Alarik node. Together with a proper binding of your MPI tasks to the “numa-islands”, this will ensure memory locality for your code. For the below syntax you have to use **version 1.8.3 or newer** of the OpenMPI library.
 
-In the following we give a simple example script to run a MPI-OpenMP
-hybrid named simul_hyb on 2 nodes using 10 tasks and 4 threads per task.
-The tasks and their threads will be bound to the *numa-islands*,
-minimising cc-numa effects.
+In the following, we give a simple example script to run a MPI-OpenMP hybrid named simul_hyb on 2 nodes using 10 tasks and 4 threads per task. The tasks and their threads will be bound to the *numa-islands*, minimising cc-numa effects.
 
 ```bash
 #!/bin/bash
@@ -58,12 +45,6 @@ mpiexec --map-by ppr:$SLURM_NTASKS_PER_NODE:node:PE=$SLURM_CPUS_PER_TASK simul_h
 cp -p result.dat $SLURM_SUBMIT_DIR
 ```
 
-The example assumes that MPI task 0 is the only task reading and writing
-input files. If your application reads and writes data on all nodes, you
-need to study the [*modifications*](#id.hpgejkt8dzry) described in the
-MPI section.
+The example assumes that MPI task 0 is the only task reading and writing input files. If your application reads and writes data on all nodes, you need to study the [*modifications*](#id.hpgejkt8dzry) described in the MPI section.
 
-As discussed, the above binds the tasks and their threads to the
-numa-islands of the Alarik architecture. Alariks numa-islands have four
-cores, therefore the script is best used with 2 or four threads per MPI
-task. This results in one or two MPI tasks per numa islands.
+As discussed, the above binds the tasks and their threads to the numa-islands of the Alarik architecture. Alariks numa-islands have four cores, therefore the script is best used with 2 or four threads per MPI task. This results in one or two MPI tasks per numa islands.

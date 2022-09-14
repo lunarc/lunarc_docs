@@ -13,6 +13,7 @@ nav:
   - Files: faq/faq_files.md
   - Jobs: faq/faq_jobs.md
   - Software: faq/faq_software.md 
+  - Phrases and acronyms: faq/common_phrases.md
 - Manual:
   - Submitting jobs:
     - SLURM resource manager: users_guide/users_guide_intro.md
@@ -84,6 +85,10 @@ theme:
     - header.autohide
 extra_css:
   - stylesheets/extra.css   
+
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js 
 
 markdown_extensions:
   - attr_list

@@ -1,13 +1,7 @@
 
-In many cases you can use the node local discs also for your MPI
-jobs.  This can be beneficial if your job is very demanding with
-respect to disc I/O and spends a lot of time doing it.
+In many cases, you can use the node local discs also for your MPI jobs.  This can be beneficial if your job is very demanding concerning disc I/O and spends a lot of time doing it.
 
-You need to transfer your executable onto the node local discs of all
-nodes.  Depending on the architecture of your application it is often
-sufficient to have the input files on the head node only.  Many MPI
-applications write result files only from the head node.  In these
-cases the below script should work.
+You need to transfer your executable onto the node local discs of all nodes.  Depending on the architecture of your application it is often sufficient to have the input files on the head node only.  Many MPI applications write result files only from the head node.  In these cases, the below script should work.
 
 ```bash
 #!/bin/bash
@@ -51,15 +45,12 @@ mpirun -bind-to core simula_mpi
 
 cp -p result.dat $SLURM_SUBMIT_DIR
 ```
-Again, applications using the Intel MPI library need starting with
-`srun`, see above.
+
+Again, applications using the Intel MPI library need to start with **srun**, see above.
 
 ## Modifications required for file I/O on all nodes
 
-As discussed in the comments of the sample script, the script assumes
-that only MPI-task 0 on the head node reads the input file and writes to
-the output file. If for your MPI application every MPI task reads the
-input file(s), replace the line
+As discussed in the comments of the sample script, the script assumes that only MPI-task 0 on the head node reads the input file and writes to the output file. If for your MPI application every MPI task reads the input file(s), replace the line
 
     cp -p input.dat $SNIC_TMP
 
@@ -67,13 +58,7 @@ with
 
     srun -n $SLURM_NNODES -N $SLURM_NNODES cp -p input.dat $SNIC_TMP
 
-and the file gets copied onto the local disk of each node. Matters are
-slightly more complex, if your output is written from all tasks. We
-assume the output files can be wild-carded as result_*.dat. Copying
-these files back to the submission directory can be achieved creating a
-script, which is placed on all nodes and subsequently executed on all
-nodes. The following addition to the submission script will create the
-script and place it on all your nodes
+and the file gets copied onto the local disk of each node. Matters are slightly more complex if your output is written from all tasks. We assume the output files can be wild-carded as result_*.dat. Copying these files back to the submission directory can be achieved creating a script, which is placed on all nodes and subsequently executed on all nodes. The following addition to the submission script will create the script and place it on all your nodes
 
 ```bash
 cat <<EOF > copyfile.sh
@@ -85,9 +70,7 @@ chmod u+x copyfile.sh
 srun -n $SLURM_NNODES -N $SLURM_NNODES cp copyfile.sh $SNIC_TMP
 ```
 
-This needs inserting into the script before the “cd $SNIC_TMP”
-statement. Once this is in place you can copy your result files by
-replacing the line
+This needs inserting into the script before the **cd $SNIC_TMP** statement. Once this is in place you can copy your result files by replacing the line
 
     cp -p result.dat $SLURM_SUBMIT_DIR
 

@@ -2,7 +2,7 @@ The LUNARC HPC Desktop provides LUNARC users with a solution for accelerated rem
 
 The same 2-factor authentication as for a normal ssh session is used and the desktop session can easily be disconnected for later reconnect. The whole desktop state (including the latest mouse position) is saved and the system works both from the campus network and from home or when traveling.
 
-The 2D desktop (currently Mate) runs on a scalable desktop infrastructure that supports multiple desktop agents and load-balancing features to ensure a smooth experience. 3D OpenGL applications are executed on dedicated visualization nodes with hardware graphics and seamlessly displayed on the 2D desktop.
+The 2D desktop (currently Mate) runs on a scalable desktop infrastructure that supports multiple desktop agents and load-balancing features to ensure a smooth experience. 3D OpenGL applications are executed on dedicated visualization nodes with hardware accelerated graphics and seamlessly displayed on the 2D desktop.
 
 ## Installing and starting the HPC desktop
 
@@ -27,8 +27,8 @@ The 2D desktop (currently Mate) runs on a scalable desktop infrastructure that s
 
 There are two ways to avoid the desktop window occupying the entire screen. 
 
-1. Before connecting to our system (step 4 of the above list), click on *Options* or *Inställningar* (depending on whether you got an English or Swedish interface).  In the menu system that appears you can deactivate full screen and select a window size.  
-2. While being connected to our system, pressing **F8** on the keyboard (on Mac it is: **fn F8**) will bring up a menu where you, among other things, can toggle full-screen mode on or off. 
+ 1. Before connecting to our system (step 4 of the above list), click on *Options* or *Inställningar* (depending on whether you got an English or Swedish interface).  In the menu system that appears you can deactivate full screen and select a window size.  
+ 2. While being connected to our system, pressing **F8** on the keyboard (on Mac it is: **fn F8**) will bring up a menu where you, among other things, can toggle full-screen mode on or off. 
 
 Depending on your system it might be convenient to *not _run_ in full-screen mode. Play around and see what suits you best.
 
@@ -44,9 +44,9 @@ Please try before contacting [Lunarc support](http://www.lunarc.lu.se/support/su
 
 Mac OSX 10.9 (Mavericks) and later: You need to
 
-1. Locate the client in Finder.
-2. Hold the [ctrl]-key while clicking on it.
-3. Choose the "open" option from the menu.
+ 1. Locate the client in Finder.
+ 2. Hold the **ctrl**-key while clicking on it.
+ 3. Choose the "open" option from the menu.
 
 when opening the client for the first time to get past the "unidentified developer" notification.
 
