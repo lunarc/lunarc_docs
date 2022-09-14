@@ -18,7 +18,7 @@ To access the Aurora GPU nodes, you need to be a member of an [LU local project]
 
 ## Can I prevent my job from restarting in case of a node failure
 
-By default the Slurm job scheduler restarts jobs in case of e.g. a failing node.  This is not always desirable.  Adding a line
+By default the SLURM job scheduler restarts jobs in case of e.g. a failing node.  This is not always desirable.  Adding a line
 ```bash
 #SBATCH --no-requeue
 ```
