@@ -1,3 +1,5 @@
+# Using the 32-core nodes
+
 LUNARC's Aurora system offeres a new partition to its users.   This partition features compute nodes with more modern Cascade Lake CPUs, larger core count and more memory than the standard nodes.  These nodes are placed in a partition named *lu32*.   The name reflects that these nodes feature 32 cores per node. 
 
 This document assumes you are familar with Aurora.   Here we focus on the key differences between the standard partition and the new *lu32*-partition from a user perspective.
@@ -7,7 +9,7 @@ The nodes inside the *lu32*-partition feature more modern CPUs than the nodes in
 
 The *Cascade Lake* CPUs feature additional instructions, not availabe on the *Haswell* CPUs.  For a typical scientific computing job, the AVX512 instructions are the most interesting instructions.  Testing by LUNARC support has shown that code utilising these instructions can be up to 50% faster than code utilising AVX2 instructions.  
 
-### Key differences between the Haswell and Caccade Lake nodes
+### Key differences between the Haswell and Cascade Lake nodes
 |                | Aurora standard Haswell node | Aurora standard Cascade Lake node |
 |----------------|:----------------------------:|:---------------------------------:|
 |Cores per node: |      20 cores per node       |       32 cores per node           |
@@ -33,7 +35,7 @@ module load SoftwareTree/Cascade
 ```
 This should work on the frontend nodes (e.g. aurora.lunarc.lu.se or the HPC desktop) and within a batch script (aka. SLURM script).  Once this is loaded, the commands `module avail` and `module spider` can be used to enquire about available software.
 
-##### Comments:
+##### Comments
 * Software in the `SoftwareTree/Cascade` is not expected to work on the frontend nodes.
 * Only a subset of the available software titles has been built for the Cascade Lake CPUs.  Use the standard (Haswell) software if the software you need is not available for Cascade Lake
 * If you require additional software titles in `SoftwareTree/Cascade`, please contact LUNARC support.   Priority will be given to requests from research groups that helped to finance the relevant nodes and codes that consume substantial amounts of CPU time.

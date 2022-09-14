@@ -1,4 +1,4 @@
-# Batch System Rules #
+# Batch System Rules
 
 !!! quote
 

@@ -1,3 +1,5 @@
+# Running MPI jobs
+
 ## Launching MPI jobs in OpenMPI
 
 To execute message passing parallel jobs these should be built against one of the MPI libraries provided by the support team as a module. To execute an MPI job for an executable build with an OpenMPI library, your job script should do the following:

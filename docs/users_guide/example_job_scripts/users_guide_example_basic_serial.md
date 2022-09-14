@@ -1,3 +1,5 @@
+# Basic serial jobs
+
 ## Basic run script
 
 The following is an example of a simple script running the program named `processor`, whose executable is located in the submission directory.  If you are using a LUNARC-provided executable, load the required module(s) and omit the dot before the program name. 

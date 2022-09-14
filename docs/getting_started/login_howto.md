@@ -1,3 +1,5 @@
+# How to login
+
 There are two main ways of accessing the LUNARC systems:
 
  * The LUNARC HPC desktop, described in a separate [guide](http://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop/)
