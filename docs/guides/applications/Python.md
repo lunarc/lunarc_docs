@@ -197,6 +197,7 @@ Note that you can share the session with any other LUNARC user logged in the <a 
 If the python software environment in jupyter lab lacks additional software of python packages, a customized jupyter lab python kernel can be a solution.
 
 #### Build and install custom Jupyter Lab Kernel
+
 To build a customized kernel, <a href="#creating-conda-environments">create a new virtual Anaconda environment</a> and install anaconda packages `ypykernel` and `ipython_genutils` as well as other anaconda or pip packages required by your application. Finally, activate the Anaconda virtual environment and register the new kernel to Jupyter Lab:
 
 ```bash
@@ -206,12 +207,15 @@ where `$KERNEL_NAME` is the name you choose for the environment (e.g. "tensorflo
 The new Jupyter Lab kernel is now ready to use. Proceed with starting jupyter lab as described <a href="#jupyter-lab">above</a>, but make sure to activate the conda virtual environment after the interactive session started and before starting jupyter lab.
 
 Once installed, the new custom kernel can be selected either on Jupyter lab web page startup:
+
 ![Kernel selection via launcher page](../../images/jupyter-lab_select_kernel_launcher.png)
 
 via main menu `Kernel/Change Kernel...` or on jupyter lab startup:
+
 ![Jupyter lab kernel selection dialog](../../images/jupyter-lab_select_kernel_dialog.png)
 
 In any case, the kernel under used at any given time is shown on the upper-right corner:
+
 ![Kernel in use](../../images/jupyter-lab_current_kernel.png)
 
 #### Remove custom kernel
