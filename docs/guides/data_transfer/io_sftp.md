@@ -2,7 +2,7 @@
 
 SFTP is a secure data transfer protocol provided by the SSH software. The protocol is very similar to FTP and uses many of the commands provided by an FTP server.
 
-### Loggin into an SFTP server
+## Logging into an SFTP server
 
 Login is accomplished by using the **sftp** command-line client, providing a username and a hostname as shown in the following example.
 
@@ -16,7 +16,7 @@ sftp>
 
 **sftp>** is a prompt where commands can be entered initiating data transfers, listing files or creating directories.
 
-### Listing remote files
+## Listing remote files
 
 Files on the remote server can be listed using the **ls** command as shown in the following example:
 
@@ -28,7 +28,7 @@ skampi                           skampi-5.0.4-r0355
 skampi-5.0.4-r0355.tar.gz 
 ```
 
-### Listing files on the local computer
+## Listing files on the local computer
 
 Listing files on the local computer is done using the **lls** command as shown in the following example:
 
@@ -44,7 +44,7 @@ Movies				usercert.p12
 Music
 ```
 
-### Changing remote directory
+## Changing remote directory
 
 Change working directory on the remote server is done using the **cd** command:
 
@@ -55,7 +55,7 @@ ReadMe_first    WINDOWS         doc             license
 src             versions_news 
 ```
 
-### Changing working directory locally
+## Changing working directory locally
 
 Changing the working directory on the local computer is done using the **lcd** command:
 
@@ -65,7 +65,7 @@ sftp> lls
 qmake.qch	qt.qch		qtcreator.qch	sdk.qch
 ```
 
-### Transferring local file to remote server
+## Transferring local file to remote server
 
 A transfer to the remote server of a single file is done using the **put** commmand. **put** takes a single argument with a file in the current working directory to transfer (put) to the remote server as shown in the following example:
 
@@ -81,7 +81,7 @@ mpibench-1.2                     skampi
 skampi-5.0.4-r0355               skampi-5.0.4-r0355.tar.gz 
 ```
 
-### Transferring a remote file to local computer
+## Transferring a remote file to local computer
 
 A file on the remote server is retrieved using the **get** command with the filename of the remote file. If no path is given the file is retrieved from the current working directory on the remote server. A remote path can also be prefixed on the filename.
 
@@ -98,7 +98,7 @@ Movies				sw_local_sbin.tar.gz
 Music				usercert.p1
 ```
 
-### Transferring multiple local files
+## Transferring multiple local files
 
 To transfer multiple local files the **mput** command is used. This commmand takes a wild card pattern for selecting the files to transfer as shown in the following example:
 
@@ -110,7 +110,7 @@ Uploading InstallationLog.txt to /home/bmjl/openmpi/InstallationLog.txt
 InstallationLog.txt        100%  452KB  90.5KB/s   00:05 
 ```
 
-### Transferring multiple remote files
+## Transferring multiple remote files
 
 To retrieve multiple remote files the **mget** command is used. The files transferred is selected by given a wildcard pattern as shown in the example below:
 

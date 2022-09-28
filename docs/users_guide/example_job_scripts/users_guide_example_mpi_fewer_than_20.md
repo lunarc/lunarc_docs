@@ -1,16 +1,8 @@
-# MPI jobs using fewer than 20 tasks per node
+If you want to use fewer than 20 tasks per node to e.g. give more resources to the individual task, you can use the **-N** and **--task-per-node** options of **sbatch**. We recommend not to use the -n option in this case. This example is for 4 nodes with 10 tasks each, a total of 40 tasks. In our experience, in this case, and when using **--exclusive** it is typically advantageous to not use binding. Though we encourage experimenting with your own application.
 
-If you want to use fewer than 20 task per nodes to e.g. give more
-resources to the individual task, you can use the -N and --task-per-node
-options of sbatch. We recommend not to use the -n option in this case.
-This example is for 4 nodes with 10 tasks each, a total of 40 tasks. In
-our experience, in this case and when using --exclusive it is typically
-advantageous to not use binding. Though we encourage experimenting with
-your own application.
+!!! note 
 
-**Note:** Despite the example using only 40 cores, it will be block 80
-  cores, since it uses all the memory of the 4 nodes.   Your
-  allocation will be charged for all 80 cores.
+    Despite the example using only 40 cores, it will be block 80 cores, since it uses all the memory of the 4 nodes. Your allocation will be charged for all 80 cores.
 
 ```bash
 #!/bin/bash

@@ -1,16 +1,12 @@
-# Job execution environment
+When submitting your job to SLURM using **sbatch**, your entire environment including the currently loaded modules gets copied. On Aurora, when hitting **sbatch**:
 
-When submitting your job to SLURM using sbatch, your entire environment
-including the currently loaded modules gets copied.  On Aurora,
-when hitting sbatch:
+!!! note
 
- * Make sure that the loaded modules and any environment variable you may have set will not be in conflict with the environment expected by the job script
+    Make sure that the loaded modules and any environment variable you may have set will not be in conflict with the environment expected by the job script
 
 ## Compiler modules
 
-On **Aurora** software modules are arranged in a **hierarchical module naming scheme**.  Accessing software on Aurora very different from 
-earlier LUNARC systems and a [separate guide](http://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/) is available.  
-When compiling code using a [toolchain](http://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/#compiling-code-and-using-toolchains) module is recommended.
+On **Aurora** software modules are arranged in a **hierarchical module naming scheme**.  Accessing software on Aurora very different from earlier LUNARC systems and a [separate guide](http://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/) is available. When compiling code using a [toolchain](http://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/#compiling-code-and-using-toolchains) module is recommended.
 
 
 ## SLURM variables
@@ -19,9 +15,7 @@ When compiling code using a [toolchain](http://lunarc-documentation.readthedocs.
 
 ## SNIC variables
 
-The SNIC meta-centres have agreed on a set of environment variables
-which should improve the portability of (parts of) job-scripts between
-SNIC sites. On Aurora the following variables are set by the system:
+The SNIC meta-centres have agreed on a set of environment variables that should improve the portability of (parts of) job-scripts between SNIC sites. On Aurora the following variables are set by the system:
 
 | Environment variable | Explanation | Value on Aurora |
 |----------------------|-------------|-----------------|

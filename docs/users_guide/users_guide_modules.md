@@ -5,15 +5,15 @@
 
 ## Hierarchical module naming scheme
 
-With the start of the Aurora service LUNARC is using an hierarchical module naming scheme.  Hierarchical modules ensure that the correct shared libraries are available when running an application, while keeping screen output of standard module commands such as `module avail` manageable.
+With the start of the Aurora service, LUNARC is using a hierarchical module naming scheme.  Hierarchical modules ensure that the correct shared libraries are available when running an application while keeping the screen output of standard module commands such as **module avail** manageable.
 
 ### Hierachical naming scheme concept
 
-When logging into the system, you only get access to those modules that do not require any special dynamic libraries.  After *loading a compiler module* you obtaining access to those packages that have been build with that specific compiler and depend on its shared libraries.  For many compilers this will include one or more matching MPI libraries.  After loading an MPI library additional software packages, depending on this pair (compiler & MPI library), will become available.  Users should take note that in many cases loading an MPI library is required for software that doesn't really depend on it.
+When logging into the system, you only get access to those modules that do not require any special dynamic libraries.  After *loading a compiler module* you obtain access to those packages that have been built with that specific compiler and depend on its shared libraries. For many compilers, this will include one or more matching MPI libraries.  After loading an MPI library additional software packages, depending on this pair (compiler & MPI library), will become available.  Users should take note that in many cases loading an MPI library is required for software that doesn't depend on it.
 
 ## Using Modules
 
-The module system on Aurora is utilising the Lua based [Lmod](https://www.tacc.utexas.edu/research-development/tacc-projects/lmod) software.
+The module system on Aurora uses the Lua-based [Lmod](https://www.tacc.utexas.edu/research-development/tacc-projects/lmod) software.
 
 ### Loading packages
 
@@ -49,29 +49,23 @@ shows the modules that can currently be accessed.  The output will look similar 
    lmod/6.0.24    settarg/6.0.24
 ```
 
-In this example you can see modules and versions located in 3 directories.  Any of these modules can be accessed directly.  To obtain access to the software inside e.g. the toolchain module `foss/2016a` one loads the module by issueing
+In this example, you can see modules and versions located in 3 directories.  Any of these modules can be accessed directly.  To obtain access to the software inside e.g. the toolchain module `foss/2016a` one loads the module by issuing
 
 ```bash
 module load foss/2016a
 ```
 
-Many modules will load a number of modules, which they depend on.
-Since in the above output from `module avail` version 2016a is marked
-as the default version, the command
+Many modules will load several modules, which they depend on. As the output from **module avail** version 2016a is marked as the default version, the command
 
 ```bash
 module load foss
 ```
-
-would have the same effect unless the default changes, which it may
-do, if
+would have the same effect unless the default changes, which it may do, if
 
  * You load a module
  * The LUNARC team installs another version of the software
 
-So if you require a specific version, the LUNARC team strongly
-recommends to not rely on defaults, but explicitly specify the version
-you are after.
+So if you require a specific version, the LUNARC team strongly recommends not relying on defaults, but explicitly specify the version you are after.
 
 To see what modules you have currently loaded use
 
@@ -79,29 +73,21 @@ To see what modules you have currently loaded use
 module list
 ```
 
-In a hierarchical module naming scheme the command `module avail` is
-not as useful as it is in a flat module naming scheme which LUNARC
-deployed on earlier services.   In many situations `module avail`
-resulted in the desired action, one has to use the `module spider`
-command which is described in the text below.
+In a hierarchical module naming scheme, the command **module avail** is not as useful as it is in a flat module naming scheme which LUNARC deployed on earlier services.   In many situations **module avail** resulted in the desired action, one has to use the **module spider** command which is described in the text below.
 
 ### Purging the loaded modules
 
-Many modules will load a number extra of modules, which they depend on.
-When unloading a  module, these dependencies will typically not be unloaded.  For
-that reason we currently recommend using
+Many modules will load a number extra of modules, which they depend on. When unloading a  module, these dependencies will typically not be unloaded.  For that reason, we currently recommend using
 
 ```bash
 module purge
 ```
 
-when loaded modules are no longer needed.   You would then start
-loading the modules required for the next task you need to accomplish
-from scratch.
+when loaded modules are no longer needed. You would then start loading the modules required for the next task you need to accomplish from scratch.
 
-##Searching for all software packages
+## Searching for all software packages
 
-In practical use, the command `module spider` is key to search for packages in an Lmod based hierarchical module naming scheme.  To get an overview on the software installed on Aurora, simply type
+In practical use, the command **module spider** is key to searching for packages in a Lmod-based hierarchical module naming scheme.  To get an overview of the software installed on Aurora, simply type:
 
 ```bash
 module spider
@@ -146,7 +132,7 @@ This is a full list of the packages and versions available on the service.
 
 ### Searching for a specific package
 
-If you are looking for a specific package and have an idea on what its name might be, you can give this as an argument to `module spider`.   This argument is case insensitive.  
+If you are looking for a specific package and have an idea of what its name might be, you can give this as an argument to **module spider**.   This argument is case insensitive.  
 
 #### Example: Accessing a Gromacs version
 
@@ -173,7 +159,9 @@ You obtain output similar to:
      $ module spider GROMACS/5.0.5-hybrid
 ---------------------------------------------------------------------------------
 ```
-This tells you that the multi threaded version 5.0.4 and the hybrid version 5.0.5 are installed.  If you want to use the version 5.0.5 issue the command:
+
+This tells you that the multi-threaded version 5.0.4 and the hybrid version 5.0.5 are installed.  If you want to use the version 5.0.5 issue the command:
+
 ```bash
 module spider GROMACS/5.0.5-hybrid
 ``` 
@@ -193,23 +181,23 @@ You get the following output
 ... 
 ```
 
-This lists the modules you have to load before accessing Gromacs.  In this case you have two options, we choose the first option.  We load
+This lists the modules you have to load before accessing Gromacs.  In this case, you have two options, we choose the first option.  We load
 
 ```bash
 module load icc/2016.1.150-GCC-4.9.3-2.25 impi/5.1.2.150
 ```
 
-After which we can load the gromacs installation:
+After which we can load the GROMACS-installation:
 
 ```bash
 module load GROMACS/5.0.5-hybrid
 ```
 
-Loading this module will load a number of additional module require for Gromacs to work.
+Loading this module will load several additional modules required for GROMACS to work.
 
 #### Example accessing R
 
-This is another example on how to access a specific software package.  This time we want to run the statistical software package R.
+This is another example of how to access a specific software package. This time we want to run the statistical software package R.
 
 ```bash
 module spider R
@@ -276,46 +264,52 @@ and have access to R.
 
 ### Working with a standard set of modules
 
-Many users of the LUNARC systems conduct similar tasks for many days, e.g. using the same pieces of software on different sets of data.  In this case users should consider creating **user collections** of modules.  Working with user collections are a better alternative to e.g. adding **module load** statements to e.g. your **.bashrc** file.
+Many users of the LUNARC systems conduct similar tasks for many days, e.g. using the same pieces of software on different sets of data.  In this case, users should consider creating **user collections** of modules.  Working with user collections is a better alternative to e.g. adding **module load** statements to e.g. your **.bashrc** file.
 
 #### Creating and restoring user collections
+
 To create a user collection load the modules required for the task at hand.  The command 
 
 ```bash
 module save
 ```
-would then store the currently loaded modules as a default collection.  Alternatively you can create a named collection
+would then store the currently loaded modules as a default collection. Alternatively, you can create a named collection
 
 ```bash
 module save collection-name
 ```
 
-Where you can choose any name you like as **collection-name**.  **Important:** the module system will remember whether a module was loaded as default (no version specified) or whether you loaded a specific version.  If you include default modules, the contents of your collection will change when ever the default changes.
+Where you can choose any name you like as **collection-name**.  
+
+!!! warning 
+
+    The module system will remember whether a module was loaded as default (no version specified) or whether you loaded a specific version.  If you include default modules, the contents of your collection will change whenever the default changes.
 
 When one restores a collection, this has two effects:
 
-1. Unloading/purging all currently loaded modules
-2. Loading all modules included in the collection
+ 1. Unloading/purging all currently loaded modules
+ 2. Loading all modules included in the collection
 
 To restore your default collection
 
 ```bash
 module restore
 ```
-for a named collection the restore is done as follows
+A named collection can be restored as follows
 
 ```bash
 module restore collection-name
 ```
 
 #### Enquiring about user collections
-To get a list of all user collections you have created use the sub-command `savelist`:
+
+To get a list of all user collections you have created using the sub-command **savelist**:
 
 ```bash
 module savelist
 ```
 
-The sub-command `describe` shows you the modules included in the collection
+The sub-command **describe** shows you the modules included in the collection
 
 ```bash
 module describe collection-name
@@ -326,16 +320,16 @@ If you want to remove a collection from your list:
 ```bash
 module disable collection-name
 ```
-which actually re-names the collection in a way that it would no longer show with `module savelist`, but recovery of the collection is possible.
+
+which actually renames the collection in a way that it would no longer show with **module savelist**, but recovery of the collection is possible.
 
 ### Lmod cache
 
-To improve the performance of the `module spider` command, lmod caches
-the entire module structure of the system.  The system cache, holding info about the modules installed by the LUNARC team, is updated, every time the LUNARC team installs new software. 
+To improve the performance of the **module spider** command, lmod caches the entire module structure of the system.  The system cache, holding info about the modules installed by the LUNARC team, is updated, every time the LUNARC team installs new software. 
 
 ### Searching for modules graphically
 
-It is also possible to browse the module tree and select module using a graphical user interface. This interface can be launched from the the command with the **ml-browse**:
+It is also possible to browse the module tree and select the module using a graphical user interface. This interface can be launched from the command with the **ml-browse**:
 
 ```bash
 ml-browse

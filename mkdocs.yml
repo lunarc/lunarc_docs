@@ -14,7 +14,8 @@ nav:
   - Files: faq/faq_files.md
   - Jobs: faq/faq_jobs.md
   - Software: faq/faq_software.md 
-- User's guide:
+  - Terms: faq/common_phrases.md
+- Manual:
   - Introduction: users_guide/users_guide_intro.md
   - Submitting jobs:
     - A basic job: users_guide/submitting_jobs/users_guide_basic_job.md
@@ -67,7 +68,6 @@ nav:
   - Video resources: links/links_video.md
   - Social media: links/links_social.md 
 - About: about/about.md
-
 theme: 
   name: material
   palette:
@@ -85,6 +85,10 @@ theme:
     - header.autohide
 extra_css:
   - stylesheets/extra.css   
+
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js 
 
 markdown_extensions:
   - attr_list

@@ -17,11 +17,9 @@ Many software modules on Aurora have complex pre-requisites. If you load multipl
 
 You have the follwing options to resolve the issues:
 
-* Have a look, whether there are different versions of the modules installed that have common pre-requisites.  Acutally in many cases we have the same version of the software installed with different pre-requisites to help this issue.
-
-* Have a terminal dedicated to each of the modules.  This should work if the modules do not really interact with each other, but e.g. one module creates files which the other module reads.  Consider using the [Lunarc HPC desktop](https://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop/) which easily allows having multiple terminals within a single session
-
-* If this does not work or does not work satisfactory, contact the [LUNARC helpdesk](http://www.lunarc.lu.se/support/support_form) and discuss your situation.
+ * Have a look, whether there are different versions of the modules installed that have common pre-requisites.  Acutally in many cases we have the same version of the software installed with different pre-requisites to help this issue.
+ * Have a terminal dedicated to each of the modules.  This should work if the modules do not really interact with each other, but e.g. one module creates files which the other module reads.  Consider using the [Lunarc HPC desktop](https://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop/) which easily allows having multiple terminals within a single session
+ * If this does not work or does not work satisfactory, contact the [LUNARC helpdesk](http://www.lunarc.lu.se/support/support_form) and discuss your situation.
 
 ## I need LAPACK and BLAS - they used to be in /usr/lib64
 
