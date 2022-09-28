@@ -14,7 +14,7 @@ nav:
   - Files: faq/faq_files.md
   - Jobs: faq/faq_jobs.md
   - Software: faq/faq_software.md 
-  - Terms: faq/common_phrases.md
+  - Phrases and terms: faq/common_phrases.md
 - Manual:
   - Introduction: users_guide/users_guide_intro.md
   - Submitting jobs:
@@ -38,6 +38,7 @@ nav:
     - Hybrid-jobs using threads within an MPI framework: users_guide/example_job_scripts/users_guide_example_openmp_hybrid_jobs.md
   - Batch system rules: users_guide/users_guide_rules.md
   - Quick reference: users_guide/users_guide_quick_reference.md
+  - Phrases and terms: faq/common_phrases.md
 - Guides:
   - Introduction: guides/guides_intro.md
   - Linux Basics: 
