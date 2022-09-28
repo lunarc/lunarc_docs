@@ -10,7 +10,7 @@ Here you will find all of the documentation for the LUNARC resources in a easy t
 
     [:material-application: Specific applications](guides/applications/Python){: .md-button }
 
-    [:fontawesome-solid-question: Frequently asked questions](faq/faq_login.md){: .md-button }
+    [:fontawesome-solid-question: Frequently asked questions](manual/faq/manual_faq_login.md){: .md-button }
 
     [:material-account-cog-outline: Forgot your password?](intro/lost_password.md){: .md-button }
 
@@ -36,6 +36,6 @@ Here you will find all of the documentation for the LUNARC resources in a easy t
 
     [:material-shield-crown: Knights of the HPC Table](guides/python/Python){: .md-button }
 
-    [:fontawesome-solid-award: Apply for Knighthood](faq/faq_login.md){: .md-button }
+    [:fontawesome-solid-award: Apply for Knighthood](getting_started/login_password/){: .md-button }
 
     [:material-account-cog-outline: Forgot your password?](intro/lost_password.md){: .md-button }
