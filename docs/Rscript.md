@@ -105,7 +105,7 @@ module load GCC/11.2.0  OpenMPI/4.1.1
 module load R/4.1.2
 ```
 
-Now we can start R using the `R` command on the commandline.
+Now we can start R using the `R` command on the commandline or inside a **batch script**
 
 ## Installing and using R extensions in your home space
 Inside R you can use the R-function `library()` to display the available extensions.  If your required extension is not available, you can install it in your own disk space.  For that we recommend creating a directory in **your home space**, which you may name `MyRextensions`.  This has to be done once for your account and one can store many extensions in that directory.  The creation of this directoy can be accomplished at the LINUX command line utilising:  
@@ -125,14 +125,54 @@ It is important that `MyRextensions` is the first argument.  After this, any cal
 ```
 > install.packages('geosphere')
 ```
-
-To use the package you have to make it available using the `library()` function of R
+###Example R session to install an extension
+A session to install the extension **geoshpere** on the existing directory `
+~//MyRextensions` on the commandline may look as follows:
 
 ```
+-bash-4.2$ R
+
+R version 4.2.1 (2022-06-23) -- "Funny-Looking Kid"
+Copyright (C) 2022 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> .libPaths(c('~/MyRextensions', .libPaths()))
+> .libPaths()
+[1] "/home/jhein/MyRextensions"                                
+[2] "/sw/easybuild/software/R/4.2.1-foss-2022a/lib64/R/library"
+> install.packages('geosphere')
+...
+> quit()
+Save workspace image? [y/n/c]: n
+```
+
+The `install.packages` will create quite some output and ask you to select a CRAN mirror, which we ommitted in this guide.
+
+### Using a user installed package
+To use the package you have to make it available using the `library()` function of R.  If it installed in your own space you have to tell R where to look for it.   You can do this in your R-script by using `.libPaths()`:
+
+```
+> .libPaths(c('~/MyRextensions', .libPaths()))
 > library('geosphere')
 ```
 
-If in a future R session you get an error, stating that there is no 'geosphere' package, remember to run the `.libPaths()` function, as shown above, before using the `library()` function.
+An alternative to motifying your R-scripts is to set the environment variable `R_LIBS` inside your submission script, prior to starting R:
 
-
+```
+  export R_LIBS=~/MyRextensions
+```
 
