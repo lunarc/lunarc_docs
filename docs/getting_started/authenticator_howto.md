@@ -27,7 +27,7 @@ Enter your LUNARC credentials. If all is OK you will receive an SMS with an OTP 
 
 ![sample screen](../images/selfservice_otp_rev1.png "Desktop sample screen")
 
-If all worked you will be taken to a page with a **GENERAL**-tab with user information and a **TOKENS**-tab with the registered tokens. Click on the **TOKENS**-tab. This will display a button **Activate PhenixID Pocket Pass**. 
+If everything worked you will be taken to a page with a **GENERAL**-tab with user information and a **TOKENS**-tab with the registered tokens. Click on the **TOKENS**-tab. This will display a button **Activate PhenixID Pocket Pass**. 
 
 ![sample screen](../images/add_token1.png "Desktop sample screen")
 
