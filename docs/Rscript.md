@@ -163,14 +163,17 @@ Save workspace image? [y/n/c]: n
 The `install.packages` will create quite some output and ask you to select a CRAN mirror, which we ommitted in this guide.
 
 ### Using a user installed package
-To use the package you have to make it available using the `library()` function of R.  If it installed in your own space you have to tell R where to look for it.   You can do this in your R-script by using `.libPaths()`:
+To use the package you have to make it available using the `library()` function of R.  If it installed in your own space you have to tell R where to look for it.   
+
+#### Modifying your R-scripts
+You can do this in your R-script by using `.libPaths()`:
 
 ```
 > .libPaths(c('~/MyRextensions', .libPaths()))
 > library('geosphere')
 ```
-
-An alternative to motifying your R-scripts is to set the environment variable `R_LIBS` inside your submission script, prior to starting R:
+#### Using the environment variable R_LIBS
+An alternative to motifying your R-scripts is to set the environment variable `R_LIBS` inside your SLURM submission script, prior to starting R:
 
 ```
   export R_LIBS=~/MyRextensions
