@@ -173,7 +173,7 @@ You can do this in your R-script by using `.libPaths()`:
 > library('geosphere')
 ```
 #### Using the environment variable R_LIBS
-An alternative to motifying your R-scripts is to set the environment variable `R_LIBS` inside your SLURM submission script, prior to starting R:
+An alternative to motifying your R-scripts is to set the environment variable `R_LIBS` inside your [SLURM submission script](https://lunarc-documentation.readthedocs.io/en/latest/batch_system/), prior to starting R:
 
 ```
   export R_LIBS=~/MyRextensions
