@@ -50,7 +50,6 @@ nav:
     - Wget and Curl: guides/data_transfer/io_wget_curl.md
     - SFTP: guides/data_transfer/io_sftp.md
     - WinSCP: guides/data_transfer/io_winscp.md
-    - Cyberduck: guides/data_transfer/io_cyberduck.md
     - Mounting Swestore: guides/data_transfer/swestore_mounting.md
     - Rclone and Swestore: guides/data_transfer/swestore_rclone.md
   - Batch system guides:
