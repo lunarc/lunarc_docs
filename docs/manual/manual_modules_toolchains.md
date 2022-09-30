@@ -1,8 +1,10 @@
+# Compiling code and using toolchains
+
 A significant portion of the Aurora software is built using the [EasyBuild](http://hpcugent.github.io/easybuild/) software framework.  This framework provides so-called _Toolchains_ which are utilised to build software.  LUNARC recommends using toolchains when building software.  This includes compiling your software outside the EasyBuild framework.
 
-### Currently provided toolchains
+## Currently provided toolchains
 
-#### Toolchains for CPU nodes
+### Toolchains for CPU nodes
 
 === "GCC compiler toolchains"
 
@@ -26,7 +28,7 @@ A significant portion of the Aurora software is built using the [EasyBuild](http
     * **pompi**: PGI, OpenMPI
     * **pomkl**: PGI, OpenMPI, MKL
 
-### CUDA based toolchains for GPU nodes
+## CUDA based toolchains for GPU nodes
 
 === "GCC compiler toolchains for GPU"
 
@@ -42,7 +44,7 @@ A significant portion of the Aurora software is built using the [EasyBuild](http
 
 If you require additional toolchains, contact [LUNARC support](http://www.lunarc.lu.se/support/support-form/) to discuss your requirements.
 
-### Selecting a toolchain
+## Selecting a toolchain
 
 The above choices of toolchains are a bit overwhelming, in particular for new users.  We recommend first choosing a toolchain and then selecting a version.  Good choices for general use are the toolchains:
 
@@ -90,7 +92,7 @@ will now show you which compiler and library versions it will be using.  Please 
 
 Selecting a version of the intel or the **pomkl** toolchain is very similar to selecting a foss module, just replace foss with intel or **pomkl** in the above examples.
 
-### Compiling serial code using a toolchain
+## Compiling serial code using a toolchain
 
 Once a toolchain module is selected, there are no differences from earlier LUNARC services when it comes to compiling serial code.
 If you have loaded a toolchain build use the following commands to compile.
@@ -116,11 +118,11 @@ If you have loaded a toolchain build use the following commands to compile.
  
 In all cases please do not forget about compiler options, in particular optimisation flags.  You should have the toolchain used for compiling loaded when executing the code.
 
-### Compiling MPI code using a toolchain
+## Compiling MPI code using a toolchain
 
 The commands you use to compile MPI code depend on the MPI library and the compiler you intend to use.  
 
-#### Toolchains using OpenMPI
+### Toolchains using OpenMPI
 
 When using a toolchain utilising **OpenMPI** (e.g. foss, iomkl, pomkl) use: 
 
@@ -140,7 +142,7 @@ If you use this, you will need to modify it for your own needs.  A [more detaile
 
     In the latest OpenMPI releases the commands `mpif77` and `mpif90` have been depreciated.  Fortran users should switch to using `mpifort`.
 
-#### Toolchains using the Intel compiler and Intel MPI library
+### Toolchains using the Intel compiler and Intel MPI library
 
 When using a toolchain utilising the **Intel MPI library** and the **Intel compiler** (e.g. intel, iimpi) use:
 
@@ -157,7 +159,7 @@ Inside your slurm job-script, executables build with the Intel MPI library need 
 If you use this, you will need to modify it for your own needs.  A [more detailed guide](http://lunarc-documentation.readthedocs.org/en/latest/batch_system/) on the submission system is available.
 
 
-#### Toolchains using the GCC compiler and Intel MPI library
+### Toolchains using the GCC compiler and Intel MPI library
 
 When using a toolchain utilising the **Intel MPI library** and the **GCC compiler** (e.g. gimkl) use:
 
@@ -166,5 +168,3 @@ When using a toolchain utilising the **Intel MPI library** and the **GCC compile
 * **mpif90**: MPI compiler for Fortran 95 code
 
 Executable builds using this setup are also started with the **srun** command from inside a job-script as described [above](#toolchains-using-the-intel-compiler-and-intel-mpi-library).
-
-
