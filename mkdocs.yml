@@ -51,7 +51,10 @@ nav:
     - SFTP: guides/data_transfer/io_sftp.md
     - WinSCP: guides/data_transfer/io_winscp.md
     - Mounting Swestore: guides/data_transfer/swestore_mounting.md
+    - Requesting a certificate for Swestore: guides/data_transfer/swestore_certificate.md
+    - Using ARC to access Swestore: guides/data_transfer/swestore_arc.md
     - Rclone and Swestore: guides/data_transfer/swestore_rclone.md
+    - Swestore links: guides/data_transfer/swestore_links.md
   - Batch system guides:
     - Using the 32-core nodes: guides/batch_system/32_core_nodes.md
   - Specific applications:
