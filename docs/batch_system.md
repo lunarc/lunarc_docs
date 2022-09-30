@@ -238,6 +238,8 @@ Will send an email to the address fred@institute.se once the job has
 ended. Valid type values, selecting the event you can get notified
 about, are BEGIN, END, FAIL, REQUEUE, and ALL (any state change).
 
+If messages do not arrive, please monitor your junkmail or spam folder.
+
 #### Job dependencies
 
 To describe job dependencies, use the -d option of sbatch. This is
