@@ -8,4 +8,4 @@ Support form (preferred way of contact): <http://www.lunarc.lu.se/support/suppor
 
 Email: <support@lunarc.lu.se>
 
-Telephone: +46 (0)46–222 4454
+Telephone: +46 (0)46-222 4454
