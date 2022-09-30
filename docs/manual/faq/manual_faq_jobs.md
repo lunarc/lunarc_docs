@@ -1,8 +1,5 @@
 # Frequently asked questions - Jobs
 
-
-![Node icon](../../images/node_icon.jpg "Node icon")
-
 ## What is the maximum job time on Aurora?
 
 We allow batch jobs to ask for up to 168 hours, which is 7 days.

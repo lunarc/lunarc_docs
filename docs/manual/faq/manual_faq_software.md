@@ -1,8 +1,5 @@
 # Frequently asked questions - Software
 
-
-![Node icon](../../images/node_icon.jpg "Node icon")
-
 ## Could you please install software for me
 
 Many packages that were installed in standard locations have now been moved to the module system.  Please search for the package using **module spider** before contacting the helpdesk.
