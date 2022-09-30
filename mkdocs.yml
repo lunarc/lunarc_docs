@@ -67,7 +67,11 @@ nav:
   - Web resources: links/links_web.md
   - Video resources: links/links_video.md
   - Social media: links/links_social.md 
-- About: about/about.md
+- About:
+  - Contact: about/contact.md
+  - LUNARC Documentation: about/about_documentation.md
+  - HPC Ambassadors: about/ambassadors.md
+
 theme: 
   name: material
   palette:

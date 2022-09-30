@@ -16,7 +16,7 @@ Here you will find all of the documentation for the LUNARC resources in a easy t
 
 === "I have used HPC resources before"
 
-    [:fontawesome-solid-jet-fighter-up: LUNARC Refresher Course](getting_started/login_password/){: .md-button }
+    [:fontawesome-solid-jet-fighter-up: LUNARC Refresher Course](manual/manual_intro/){: .md-button }
 
     [:material-account-cog-outline: Forgot your password?](intro/lost_password.md){: .md-button }
 
@@ -32,10 +32,8 @@ Here you will find all of the documentation for the LUNARC resources in a easy t
 
 === "I develop HPC software"
 
-    [:material-database-cog: Cluster info for developers](getting_started/login_password/){: .md-button }
+    [:material-database-cog: Software development guides](guides/software_development/compiler_options/){: .md-button }
 
-    [:material-shield-crown: Knights of the HPC Table](guides/python/Python){: .md-button }
-
-    [:fontawesome-solid-award: Apply for Knighthood](getting_started/login_password/){: .md-button }
+    [:fontawesome-solid-award: HPC Ambassadors](about/ambassadors.md){: .md-button }
 
     [:material-account-cog-outline: Forgot your password?](intro/lost_password.md){: .md-button }
