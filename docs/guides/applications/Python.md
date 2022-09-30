@@ -197,6 +197,7 @@ Note that you can share the session with any other LUNARC user logged in the <a 
 If the python software environment in Jupyter Lab lacks additional software of python packages, a customized Jupyter Lab python kernel can be a solution.
 
 #### Building and installing a custom Jupyter Lab kernel
+
 To build a customized kernel, <a href="#creating-conda-environments">create a new virtual Anaconda environment</a> and install anaconda packages `ipykernel` and `ipython_genutils` as well as other anaconda or pip packages required by your application. Finally, activate the Anaconda virtual environment and register the new kernel to Jupyter Lab:
 
 ```bash
