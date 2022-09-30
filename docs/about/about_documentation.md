@@ -1,4 +1,4 @@
-# About
+# LUNARC Documentation
 
 This documentation is a collaborative effort of many people.
 
@@ -19,7 +19,3 @@ Magnus Ullner, LUNARC
 Nicolas Melot, LUNARC
 
 Peter Bergdahl, LUNARC
-
-## Contact
-
-<contact@lunarc.lu.se>

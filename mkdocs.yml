@@ -9,35 +9,35 @@ nav:
   - Transferring files: getting_started/transferring_files.md
   - Accessing the LUNARC HPC Desktop: getting_started/using_hpc_desktop.md
   - On-demand applications: getting_started/gfxlauncher.md
-- FAQ: 
-  - Login: faq/faq_login.md
-  - Files: faq/faq_files.md
-  - Jobs: faq/faq_jobs.md
-  - Software: faq/faq_software.md 
-  - Terms: faq/common_phrases.md
 - Manual:
-  - Introduction: users_guide/users_guide_intro.md
+  - Introduction: manual/manual_intro.md
   - Submitting jobs:
-    - A basic job: users_guide/submitting_jobs/users_guide_basic_job.md
-    - Specifying job requirements: users_guide/submitting_jobs/users_guide_specifying_requirements.md
-    - Job requirements for multiprocessor jobs: users_guide/submitting_jobs/users_guide_requirements_multiproc.md
-    - Job execution environment: users_guide/submitting_jobs/users_guide_env.md
-    - Using local disk to improve I/O performance: users_guide/submitting_jobs/users_guide_local_disk.md
-    - Running MPI jobs: users_guide/submitting_jobs/users_guide_mpi_jobs.md
-    - Controlling and monitoring jobs: users_guide/submitting_jobs/users_guide_job_control.md
-  - Interactive node access: users_guide/users_guide_interactive.md
-  - Using installed software: users_guide/users_guide_modules.md
-  - Compiling code and using toolchains: users_guide/users_guide_modules_toolchains.md
+    - A basic job: manual/submitting_jobs/manual_basic_job.md
+    - Specifying job requirements: manual/submitting_jobs/manual_specifying_requirements.md
+    - Job requirements for multiprocessor jobs: manual/submitting_jobs/manual_requirements_multiproc.md
+    - Job execution environment: manual/submitting_jobs/manual_env.md
+    - Using local disk to improve I/O performance: manual/submitting_jobs/manual_local_disk.md
+    - Running MPI jobs: manual/submitting_jobs/manual_mpi_jobs.md
+    - Controlling and monitoring jobs: manual/submitting_jobs/manual_job_control.md
+  - Interactive node access: manual/manual_interactive.md
+  - Using installed software: manual/manual_modules.md
+  - Compiling code and using toolchains: manual/manual_modules_toolchains.md
   - Example jobs scripts:
-    - Basic serial jobs: users_guide/example_job_scripts/users_guide_example_basic_serial.md
-    - Multiple serial jobs: users_guide/example_job_scripts/users_guide_example_multiple_serial_jobs.md
-    - MPI job using 20 tasks per node: users_guide/example_job_scripts/users_guide_example_mpi_20_tasks.md
-    - MPI job using the node local discs: users_guide/example_job_scripts/users_guide_example_mpi_local_discs.md
-    - MPI jobs using fewer than 20 tasks per node: users_guide/example_job_scripts/users_guide_example_mpi_fewer_than_20.md
-    - OpenMP jobs using shared memory: users_guide/example_job_scripts/users_guide_example_openmp_shared_memory.md
-    - Hybrid-jobs using threads within an MPI framework: users_guide/example_job_scripts/users_guide_example_openmp_hybrid_jobs.md
-  - Batch system rules: users_guide/users_guide_rules.md
-  - Quick reference: users_guide/users_guide_quick_reference.md
+    - Basic serial jobs: manual/example_job_scripts/manual_example_basic_serial.md
+    - Multiple serial jobs: manual/example_job_scripts/manual_example_multiple_serial_jobs.md
+    - MPI job using 20 tasks per node: manual/example_job_scripts/manual_example_mpi_20_tasks.md
+    - MPI job using the node local discs: manual/example_job_scripts/manual_example_mpi_local_discs.md
+    - MPI jobs using fewer than 20 tasks per node: manual/example_job_scripts/manual_example_mpi_fewer_than_20.md
+    - OpenMP jobs using shared memory: manual/example_job_scripts/manual_example_openmp_shared_memory.md
+    - Hybrid-jobs using threads within an MPI framework: manual/example_job_scripts/manual_example_openmp_hybrid_jobs.md
+  - Batch system rules: manual/manual_rules.md
+  - Quick reference: manual/manual_quick_reference.md
+  - FAQ: 
+    - Login: manual/faq/manual_faq_login.md
+    - Files: manual/faq/manual_faq_files.md
+    - Jobs: manual/faq/manual_faq_jobs.md
+    - Software: manual/faq/manual_faq_software.md 
+  - Phrases and terms: manual/manual_common_phrases.md
 - Guides:
   - Introduction: guides/guides_intro.md
   - Linux Basics: 
@@ -50,7 +50,6 @@ nav:
     - Wget and Curl: guides/data_transfer/io_wget_curl.md
     - SFTP: guides/data_transfer/io_sftp.md
     - WinSCP: guides/data_transfer/io_winscp.md
-    - Cyberduck: guides/data_transfer/io_cyberduck.md
     - Mounting Swestore: guides/data_transfer/swestore_mounting.md
     - Rclone and Swestore: guides/data_transfer/swestore_rclone.md
   - Batch system guides:
@@ -67,7 +66,11 @@ nav:
   - Web resources: links/links_web.md
   - Video resources: links/links_video.md
   - Social media: links/links_social.md 
-- About: about/about.md
+- About:
+  - Contact: about/contact.md
+  - LUNARC Documentation: about/about_documentation.md
+  - HPC Ambassadors: about/ambassadors.md
+
 theme: 
   name: material
   palette:

@@ -1,7 +1,7 @@
 # Frequently asked questions - Jobs
 
 
-![Node icon](../images/node_icon.jpg "Node icon")
+![Node icon](../../images/node_icon.jpg "Node icon")
 
 ## What is the maximum job time on Aurora?
 

@@ -1,7 +1,7 @@
 # Frequently asked questions - Login
 
 
-![Node icon](../images/node_icon.jpg "Node icon")
+![Node icon](../../images/node_icon.jpg "Node icon")
 
 ## I have forgotten my login password for Aurora
 
