@@ -1,8 +1,5 @@
 # Using installed software
 
-
-![Node icon](../images/node_icon.jpg "Node icon")
-
 ## Hierarchical module naming scheme
 
 With the start of the Aurora service, LUNARC is using a hierarchical module naming scheme.  Hierarchical modules ensure that the correct shared libraries are available when running an application while keeping the screen output of standard module commands such as **module avail** manageable.
@@ -67,7 +64,7 @@ would have the same effect unless the default changes, which it may do, if
 
 So if you require a specific version, the LUNARC team strongly recommends not relying on defaults, but explicitly specify the version you are after.
 
-To see what modules you have currently loaded use
+To see what modules you have currently loaded, use
 
 ```bash
 module list
@@ -264,7 +261,7 @@ and have access to R.
 
 ### Working with a standard set of modules
 
-Many users of the LUNARC systems conduct similar tasks for many days, e.g. using the same pieces of software on different sets of data.  In this case, users should consider creating **user collections** of modules.  Working with user collections is a better alternative to e.g. adding **module load** statements to e.g. your **.bashrc** file.
+Many users of the LUNARC systems conduct similar tasks for many days, e.g. using the same pieces of software on different sets of data.  In this case, users should consider creating **user collections** of modules. Working with user collections is a better alternative to e.g. adding **module load** statements to e.g. your **.bashrc** file.
 
 #### Creating and restoring user collections
 
@@ -279,7 +276,7 @@ would then store the currently loaded modules as a default collection. Alternati
 module save collection-name
 ```
 
-Where you can choose any name you like as **collection-name**.  
+where you can choose any name you like as **collection-name**.  
 
 !!! warning 
 
@@ -303,7 +300,7 @@ module restore collection-name
 
 #### Enquiring about user collections
 
-To get a list of all user collections you have created using the sub-command **savelist**:
+To get a list of all user collections you have created use the sub-command **savelist**:
 
 ```bash
 module savelist
@@ -341,4 +338,4 @@ ml-browse
 Joachim Hein (LUNARC)
 
 **Last Updated:**
-2022-08-31
+2022-09-30
