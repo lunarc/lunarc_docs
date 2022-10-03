@@ -24,7 +24,7 @@ The *Cascade Lake* CPUs feature additional instructions, not availabe on the *Ha
 ### Using installed software
 LUNARC supports, installs, and maintains a substantial number of software titles on LUNARC services.  By default, after login, users will be able to select from the software titles suitable for the standard *Haswell* nodes and the new *Cascade Lake* nodes.  These software titles are expected to give decent performance on the *Cascade Lake*. They are not optimised for the more modern CPUs.  Depending on the nature of a software title, switching to software titles built for the *Cascade Lake* CPUs may or may not yield performance benefits.
 
-!!! quote "Notes"
+!!! info
     Users not using the *lu32*-partition, whose required software has not been optimised for the *Cascade Lake* nodes or who achieve satisfactory performance from the standard software do not need to change their workflows.  The module system will continue to work as it always did.  The only change is, that they will see a new module `SoftwareTree/Haswell` appearing in the list of loaded modules.
 
 #### Switching to Cascade Lake software
@@ -36,7 +36,7 @@ module load SoftwareTree/Cascade
 ```
 This should work on the frontend nodes (e.g. aurora.lunarc.lu.se or the HPC desktop) and within a batch script (aka. SLURM script).  Once this is loaded, the commands `module avail` and `module spider` can be used to enquire about available software.
 
-!!! quote "Notes"
+!!! info
     * Software in the `SoftwareTree/Cascade` is not expected to work on the frontend nodes.
     * Only a subset of the available software titles has been built for the Cascade Lake CPUs.  Use the standard (Haswell) software if the software you need is not available for Cascade Lake
     * If you require additional software titles in `SoftwareTree/Cascade`, please contact LUNARC support.   Priority will be given to requests from research groups that helped to finance the relevant nodes and codes that consume substantial amounts of CPU time.

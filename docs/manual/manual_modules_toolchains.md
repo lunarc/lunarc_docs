@@ -138,7 +138,7 @@ Inside your slurm job-script, executables build with OpenMPI need to get started
 
 If you use this, you will need to modify it for your own needs.  A [more detailed guide](http://lunarc-documentation.readthedocs.org/en/latest/batch_system/) on the submission system is available.
  
-!!! note 
+!!! info 
 
     In the latest OpenMPI releases the commands `mpif77` and `mpif90` have been depreciated.  Fortran users should switch to using `mpifort`.
 

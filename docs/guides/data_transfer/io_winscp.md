@@ -8,8 +8,8 @@ To reduce the number of logins to the system the "Keepalive" options can be set 
 
 ![keepalive](../../images/WinSCP-keepalive.png)
 
-Please note:
+!!! info
 
-that the "Advanced options" checkbox must be checked to access these settings
+    The "Advanced options" checkbox must be checked to access these settings
 
 

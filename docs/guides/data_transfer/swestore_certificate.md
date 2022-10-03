@@ -4,7 +4,7 @@ To be able to access Swestore resources through command line tool a user certifi
 
 Your identity must fulfill the requirements for requesting personal certificates, within Sweden the requirement is SWAMID Assurance Level 2 Profile (SWAMID AL2), or higher. At Lund university this is done when you identify youself when you get a LU-card.
 
-!!! note
+!!! info
 
     The use of a certificate is required if you want to use more advanced command line tools such as the ARC clients or rclone software directly on the LUNARC resources.
 

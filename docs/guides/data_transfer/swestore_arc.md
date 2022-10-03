@@ -21,7 +21,7 @@ Multiple files in directories can also be uploaded. The following commands uploa
 $ arccp --recursive=999 many_files/    gsiftp://gsiftp.swestore.se/snic/storage-training/
 ```
 
-!!! note 
+!!! info 
 
     The directory **many_files/** is not copied over.
 

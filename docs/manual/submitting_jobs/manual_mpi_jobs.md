@@ -23,6 +23,6 @@ When using LUNARC provided software, and you are loading an
 **impi** module to see your package, you need to use **srun** to start MPI
 executables of this package.
 
-!!! note
+!!! info
      
      Task binding for the Intel MPI library is still under investigation
