@@ -95,3 +95,11 @@ In special cases, such as using very unusual numbers of tasks, the **-n** option
 ```
 
 Please consider using the **--exclusive** option of **sbatch** to avoid SLURM spreading your job on more nodes than necessary and placing other user’s jobs on nodes utilising fewer than 20 cores for your job. Other user’s jobs could via shared node resources (memory bus, cache, …) interfere with your job and introduce undue operational noise. Such noise is something parallel program execution can be extremely sensitive to.
+
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

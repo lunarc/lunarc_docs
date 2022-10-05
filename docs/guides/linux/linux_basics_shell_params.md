@@ -70,3 +70,11 @@ Sum=$(($Number+1))
 ```
 
 No spaces necessary. In both cases, echo $Sum gives 5.
+
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

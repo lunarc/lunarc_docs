@@ -26,3 +26,11 @@ executables of this package.
 !!! info
      
      Task binding for the Intel MPI library is still under investigation
+
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

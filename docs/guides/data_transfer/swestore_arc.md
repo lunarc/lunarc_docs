@@ -122,4 +122,10 @@ Note that copying large directory trees can take quite some time, and might fail
 
  * We recommend to limit your transfer sessions (ie. the directory tree copied with each arccp command) to 1TB if you have mostly large (100+MB) files and to 100GB if you have smaller files.
 
+---
 
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

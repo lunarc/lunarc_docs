@@ -42,5 +42,10 @@
 | Toolchain | Refers to a specific compiler version with associated libraries for MPI. |
 | Walltime | Refers to the real-world (wristwatch, wall-clock) time a paralell job executes.  |
 
+---
 
+**Author:**
+(LUNARC)
 
+**Last Updated:**
+2022-10-05

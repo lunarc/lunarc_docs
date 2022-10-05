@@ -23,4 +23,10 @@ GfxLauncher has a very minimal user interface for the user to specify the reques
 
 Please note that not all resources are shown in the launcher dialog box. Which resources are displayed are determined by the application.
 
+---
 
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

@@ -110,3 +110,11 @@ comsol -np 20 server
 ```
 
 In this script you are using one full node for 1h. you will also receive an email when the job starts so you will know when to connect to the server. 
+
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

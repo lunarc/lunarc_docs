@@ -14,4 +14,10 @@ LUNARC also has a Twitter profile where we regularly push news and information:
 
     * [LUNARC YouTube channel](https://www.youtube.com/channel/UCpwDHa6L_Mou-oPeht_lwQQ)
 
+---
 
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

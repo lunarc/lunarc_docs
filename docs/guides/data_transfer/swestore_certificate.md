@@ -118,3 +118,11 @@ Proxy type: X.509 Proxy Certificate Profile RFC compliant impersonation proxy - 
 Proxy key length: 2048
 Proxy signature: sha384
 ```
+
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

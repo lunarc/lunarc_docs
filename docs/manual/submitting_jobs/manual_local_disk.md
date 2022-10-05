@@ -11,3 +11,11 @@ For the required UNIX scripting you should use the following environment variabl
 | SNIC_TMP | node local disk, copy your input data here and start your program from here |
 | TMPDIR | node local disk, many applications use this environment variable to locate a disk volume for temporary scratch space.  If your application follows that convention nothing needs to be done.  |
 | SLURM_SUBMIT_DIR | submission directory where you ran `sbatch` |
+
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

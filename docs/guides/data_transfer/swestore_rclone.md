@@ -64,3 +64,11 @@ $ rclone-cert ls swestore:/snic/storage-training
 ## Copying files
 
 ## File operations
+
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

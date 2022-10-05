@@ -29,3 +29,11 @@ drwx------ 2 xxxx xgroup 4096 Feb 22 17:07 subdir1
 The very first character of each line indicate if the file is of a special kind, such as a link (l) or a directory (d). The next nine characters are the permissions in groups of three for the user (xxxx), group (xgroup), and others. The three types of permissions are read (r), write (w), and execute (x). Thus, in the example, anyone can read file1, but only the user can modify the file, provided the permissions of the directory allow anyone to go there. file2 can also be modfied by members of group xgroup
 
 To run a shell script or a program, it must be executable, at least for the user. script1 can be run by anyone. Similarly, to enter a directory it has to be executable. Only the user xxxx may enter the directory subdir1 in the example.
+
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

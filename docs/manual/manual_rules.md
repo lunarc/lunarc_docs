@@ -23,3 +23,11 @@ The batch system rules are revised regularly to optimise system utilisation and 
 The reason for the quotas is that projects that submitted many jobs could run in large batches, keeping other projects in the queue. The purpose of the quota is, thus, to give projects their fair share all the time. Within a project, the same problem persists, i.e., some people can use up the quota and block others, but the soft quota is also soft in the sense that the queue system can choose to ignore it at times, for example, to let people in that are not running at all.
 
 In addition, to prevent the queue from being swamped, the number of jobs from one user is limited to 500. That is a safety limit and more than 100-200 jobs should be avoided, for example, by collecting many short jobs in fewer longer ones.
+
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

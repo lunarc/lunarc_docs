@@ -36,3 +36,10 @@ To mount the file system click **Connect**. This will bring up a new file window
 
 It is now possible to transfer files to and from Swestore.
 
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

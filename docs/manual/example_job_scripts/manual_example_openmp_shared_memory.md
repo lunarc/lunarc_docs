@@ -68,3 +68,11 @@ For version 13.1 of the Intel-compiler thread is controlled by setting the envir
     export KMP_AFFINITY=granularity=fine,compact
 
 might be a good starting point for your experimentation.
+
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

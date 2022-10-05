@@ -226,3 +226,11 @@ jupyter kernelspec uninstall $KERNEL_NAME
 ```
 
 where `$KERNEL_NAME` is the name of the kernel to remove.
+
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

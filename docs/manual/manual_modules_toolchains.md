@@ -168,3 +168,11 @@ When using a toolchain utilising the **Intel MPI library** and the **GCC compile
 * **mpif90**: MPI compiler for Fortran 95 code
 
 Executable builds using this setup are also started with the **srun** command from inside a job-script as described [above](#toolchains-using-the-intel-compiler-and-intel-mpi-library).
+
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

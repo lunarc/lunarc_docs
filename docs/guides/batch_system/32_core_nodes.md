@@ -120,3 +120,11 @@ There are currently issues when specifying `#!/bin/sh` for a job script. Scripts
 ```
 #!/bin/bash  
 ``` 
+
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

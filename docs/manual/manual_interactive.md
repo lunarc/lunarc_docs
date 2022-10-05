@@ -22,3 +22,11 @@ Loaded modules and environment variables are not always exported properly to you
 That is despite the **modules list** command claiming they are still loaded.
 
 You also need to check whether environment variables still have the required values. If the software you are using has a set-up script, you might need to re-run that script.
+
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

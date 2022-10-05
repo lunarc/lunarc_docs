@@ -39,3 +39,11 @@ The example echo_script.sh shows the three parts every job script requires
 In our example, each part consists of a single line. The first line of our example contains the shell specification, in most cases the sh-shell as used here is just fine. The second line starting with #SBATCH specifies the resources needed. In our case, it asks for 5 minutes of computer time. If the job hasn’t finished after that time, SLURM will terminate it. Job scripts typically contain more than one of these statements, specifying e.g. more than one processor or more memory. 
  
 The most commonly used resource statements at LUNARC will be explained below. The resource statements are followed by a list of programs and UNIX commands to be executed on the system. This is actually a normal UNIX script and everything you can do in a UNIX script can be done here as well. In our example, the script consists of the UNIX **echo** command.
+
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

@@ -9,3 +9,11 @@ Our HPC Ambassadors are not support staff. For support regarding LUNARC resource
 #####3D Visualization in Medical applications#####
 
 Shamit Soneji, Faculty of Medicine - Biomedicine <shamit.soneji@med.lu.se>
+
+---
+
+**Author:**
+Peter Bergdahl (LUNARC)
+
+**Last Updated:**
+2022-10-05

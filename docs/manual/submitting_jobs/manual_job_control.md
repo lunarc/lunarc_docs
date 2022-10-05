@@ -59,5 +59,10 @@ It is frequently required to remove jobs from the queue. This might be that you 
 scancel 7103
 ```
 
+---
 
- 
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

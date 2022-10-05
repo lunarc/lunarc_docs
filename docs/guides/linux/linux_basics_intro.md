@@ -6,3 +6,10 @@ Normally, the user does not have to consider the levels of shells, but it is goo
 
 There are different kinds of shells with some differences in commands and features. The default shell obtained by a LUNARC user is known as Bourne-Again shell (bash), combining features of Bourne shell (sh, a very early shell and the origin of the pun intended by the bash name), Korn shell (ksh), and C shell (csh). In the following, bash will be assumed, since users who have asked for ksh or csh are supposed to be familiar with their shell of choice.
 
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

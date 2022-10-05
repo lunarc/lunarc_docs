@@ -89,3 +89,10 @@ On Erik, there is one two-GPU node reserved for tests (maximum 1 h) in a partiti
 
 It is not allowed to submit long series of jobs to a test queue. 
 
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

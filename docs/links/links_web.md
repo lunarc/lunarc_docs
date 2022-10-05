@@ -38,6 +38,10 @@ Here are some links that can be of interest for using LUNARC resources.
     * [Fortran learning resources](https://fortran-lang.org/learn/)
     * [Fortran community resources](https://fortran-lang.org/community/)
 
+---
 
+**Author:**
+(LUNARC)
 
-
+**Last Updated:**
+2022-10-05

@@ -47,3 +47,10 @@ mpirun simula_mpi
 cp -p result.dat $SLURM_SUBMIT_DIR
 ```
 
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

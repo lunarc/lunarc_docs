@@ -20,3 +20,11 @@ Here you can find links to useful video materials provided by LUNARC or related 
 
     * [Using MATLAB at LUNARC](https://youtu.be/1k-YmnA9wbQ)
     * [ParaView Tutorial](https://youtu.be/6UUQZXnZHx4)
+
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

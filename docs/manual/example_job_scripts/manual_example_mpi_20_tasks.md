@@ -36,3 +36,10 @@ In case the executable was compiled with the **Intel MPI library** (using a modu
 srun simula_mpi
 ```
 
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

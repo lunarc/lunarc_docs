@@ -161,3 +161,10 @@ will request two K40 cards for you.  Each GPU is bundled with five specific core
 ```
 to standard job submission scripts, allowing the GPU nodes to be fully accessible
 
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

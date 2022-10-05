@@ -12,4 +12,10 @@ To reduce the number of logins to the system the "Keepalive" options can be set 
 
     The "Advanced options" checkbox must be checked to access these settings
 
+---
 
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

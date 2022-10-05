@@ -102,3 +102,11 @@ echo $OutputFile
 ```
 
 gives myprog_job1.out as output
+
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

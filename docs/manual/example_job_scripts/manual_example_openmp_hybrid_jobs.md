@@ -48,3 +48,11 @@ cp -p result.dat $SLURM_SUBMIT_DIR
 The example assumes that MPI task 0 is the only task reading and writing input files. If your application reads and writes data on all nodes, you need to study the [*modifications*](#id.hpgejkt8dzry) described in the MPI section.
 
 As discussed, the above binds the tasks and their threads to the numa-islands of the Alarik architecture. Alariks numa-islands have four cores, therefore the script is best used with 2 or four threads per MPI task. This results in one or two MPI tasks per numa islands.
+
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

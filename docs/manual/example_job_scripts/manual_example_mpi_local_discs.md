@@ -78,3 +78,11 @@ This needs inserting into the script before the **cd $SNIC_TMP** statement. Once
 with the line
 
     srun -n $SLURM_NNODES -N $SLURM_NNODES copyfile.sh
+
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

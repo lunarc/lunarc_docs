@@ -90,3 +90,11 @@ To be prompted for the OTP password the PuTTY client must be configured for keyb
 To reduce the number of logins to the system the "Seconds between keepalives" can be changed to a value greater than 0. See the following figure:
 
 ![putty_keyboard_interactive](../images/putty_keyboard_interactive.png "PuTTY Keyboard interactive login")
+
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

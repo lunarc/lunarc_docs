@@ -154,4 +154,10 @@ Below is an output from **squeue** when running a script processing 500 jobs on 
     8070.194 small_ex snic fred 0:13 an073
     8070.195 small_ex snic fred 0:13 an074
 
+---
 
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

@@ -50,4 +50,10 @@ Mac OSX 10.9 (Mavericks) and later: You need to
 
 when opening the client for the first time to get past the "unidentified developer" notification.
 
+---
 
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

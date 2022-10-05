@@ -401,3 +401,11 @@ diff file1 file2
 ```bash
 diff --side-by-side file1 file2 
 ```
+
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

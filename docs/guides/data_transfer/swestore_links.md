@@ -20,3 +20,11 @@ Using ARC with dCache
 Certificate setup with SweStore
 
 - [http://docs.snic.se/wiki/Certificate_Setup_for_Swestore]()
+
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

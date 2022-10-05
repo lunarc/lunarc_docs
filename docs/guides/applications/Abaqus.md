@@ -160,3 +160,11 @@ cp -p *.odb ${JOB_DIR}
 cd $SNIC_TMP
 rm -rf WRK_${WRK_NB}
 ```
+
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05

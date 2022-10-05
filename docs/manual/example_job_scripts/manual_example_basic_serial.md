@@ -122,3 +122,11 @@ module load R/4.1.0
 # customise for your program name and add arguments if required
 Rscript my_r_script.R
 ```
+
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2022-10-05
