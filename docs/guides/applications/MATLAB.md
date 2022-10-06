@@ -223,7 +223,7 @@ ans
 
 This is how the scheduler identifies the job.
 
-## To learn more
+## Learn more
 To learn more about the MATLAB Parallel Computing Toolbox, check out these resources:
 
 *	[Parallel Computing Coding Examples](http://www.mathworks.com/products/parallel-computing/code-examples.html)
@@ -239,4 +239,4 @@ To learn more about the MATLAB Parallel Computing Toolbox, check out these resou
 (LUNARC)
 
 **Last Updated:**
-2022-10-05
+2022-10-06

@@ -6,11 +6,12 @@ The default file transfer method in WinSCP is SFTP, so no special settings is ne
 
 To reduce the number of logins to the system the "Keepalive" options can be set as shown in the following figure:
 
-![keepalive](../../images/WinSCP-keepalive.png)
-
 !!! info
 
     The "Advanced options" checkbox must be checked to access these settings
+
+![keepalive](../../images/WinSCP-keepalive.png)
+
 
 ---
 
@@ -18,4 +19,4 @@ To reduce the number of logins to the system the "Keepalive" options can be set 
 (LUNARC)
 
 **Last Updated:**
-2022-10-05
+2022-10-06

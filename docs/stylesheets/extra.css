@@ -88,3 +88,22 @@
 .md-typeset .warning > summary::before {
   background-color: #875e29;
 }
+
+.md-typeset .admonition.note,
+.md-typeset details.note {
+  border-color: #875e29;
+}
+
+.md-typeset .note > .admonition-title,
+.md-typeset .note > summary {
+  background-color: hsla(0, 0%, 0%, 0.07);
+}
+
+.md-typeset .note > .admonition-title::before,
+.md-typeset .note > summary::before {
+  background-color: #875e29;
+}
+
+<!--Last updated: 22-10-06
+    Updated by: Peter Bergdahl
+-->

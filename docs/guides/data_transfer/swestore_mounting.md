@@ -1,4 +1,6 @@
-# Mounting Swestore (Windows)
+# Mounting Swestore
+
+## Windows
 
 The Swestore can be accessed directly using the WinSCP application. A connection can be established using the following settings:
 
@@ -14,7 +16,7 @@ Clicking **Log in** will open a file browser windows against your home directory
 
 It is now possible to transfer files to and from Swestore.
 
-# Mounting Swestore (Linux)
+## Linux
 
 It is possible to mount the Swestore storage infrastructure as a drive on Linux. This enables you to access Swestore both on your own computer as well as directly on the LUNARC HPC Desktop. 
 
@@ -39,7 +41,7 @@ It is now possible to transfer files to and from Swestore.
 ---
 
 **Author:**
-(LUNARC)
+Jonas Lindemann(LUNARC)
 
 **Last Updated:**
-2022-10-05
+2022-10-06

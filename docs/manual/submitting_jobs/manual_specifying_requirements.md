@@ -67,7 +67,9 @@ In many cases, the default file name is not convenient. You might want to have a
 #SBATCH -e calcflow_m1_%j.err
 ```
 
-You can give the same filename for both options to get stdout and stderr written to the same file.
+!!! info
+
+    You can give the same filename for both options to get **stdout** and **stderr** written to the same file.
 
 ## Job notification emails
 
@@ -167,4 +169,4 @@ to standard job submission scripts, allowing the GPU nodes to be fully accessibl
 (LUNARC)
 
 **Last Updated:**
-2022-10-05
+2022-10-06

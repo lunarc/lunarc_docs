@@ -1,8 +1,8 @@
 # Batch System Rules
 
-!!! quote
+!!! info
 
-    *The rules applied by the scheduler for the batch queues.*
+    These rules are applied by the scheduler for the batch queues.
 
 A scheduler is used to start jobs, organise the order in the batch queue and put jobs aside that are not eligible to run or to queue at the moment; i.e., manage active, idle and blocked jobs, which are displayed by the **showq** command.
 
@@ -30,4 +30,4 @@ In addition, to prevent the queue from being swamped, the number of jobs from on
 (LUNARC)
 
 **Last Updated:**
-2022-10-05
+2022-10-06

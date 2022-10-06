@@ -6,7 +6,7 @@ Many packages that were installed in standard locations have now been moved to t
 
 ## I can not find my software package in the module system
 
-On Aurora a hierarchical module naming scheme is deployed.  This is explained in a special [software guide](https://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/).  Please contact LUNARC support if you cannot locate your package with the **module spider** command.
+On Aurora a hierarchical module naming scheme is deployed.  This is explained in the [Using installed software guide](/../manual/manual_modules/).  Please contact [LUNARC support](/../about/contact/) if you cannot locate your package with the **module spider** command.
 
 ## Loading a module unloads pre-requisites from a previously loaded module
 
@@ -83,4 +83,4 @@ code
 Joachim Hein (LUNARC)
 
 **Last Updated:**
-2022-08-31
+2022-10-06

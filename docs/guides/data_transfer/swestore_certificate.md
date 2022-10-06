@@ -122,7 +122,7 @@ Proxy signature: sha384
 ---
 
 **Author:**
-(LUNARC)
+Jonas Lindemann (LUNARC)
 
 **Last Updated:**
-2022-10-05
+2022-10-06

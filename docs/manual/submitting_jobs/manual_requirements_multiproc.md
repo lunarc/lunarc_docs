@@ -6,13 +6,13 @@ There is a lot of structure within modern HPC equipment. For the purposes of thi
 
 | Term | Explanation | Number on Aurora |
 |-----------|---------------------------------|-----------------------------|
-| Node | A physical computer | Standard: 180 for SNIC use |
-| Processor | This denotes a the multi-core processor, housing many processing elements | 2 per node |
-| GPU | This denotes a nvidia co-processor | 0 for SNIC use | 
+| Node | A physical computer/server in a compute cluster | Standard: 180 for SNIC use |
+| Processor | This denotes a multi-core processor, housing many processing elements | 2 per node |
+| GPU | This denotes a NVIDIA/AMD co-processor. Can be used for both computing as well as graphics | 0 for SNIC use | 
 | Socket | This is the “plug” the processor gets plugged into.  Used as a synonym for the processor | 2 per node |
 | Core | Individual processing element | 20 per node |
 | Task | This is a software concept.  It denotes a process, which is an instance of a running program.  It has its own data and instruction stream(s).  It can fork multiple threads to increase the computational speed.  Serial programs and pure MPI programs do not spawn threads. | User controls in job script |
-| Thread | This is also a software concept.  A thread is a stream of instructions executed on the hardware.  It is part of a task and shares resources such as  data with other threads within the same task. | User controls in job script |
+| Thread | This is a software concept.  A thread is a stream of instructions executed on the hardware.  It is part of a task and shares resources such as  data with other threads within the same task. | User controls in job script |
 
 ## Outline: Resource requests for multiprocessor jobs
 
@@ -102,4 +102,4 @@ Please consider using the **--exclusive** option of **sbatch** to avoid SLURM sp
 (LUNARC)
 
 **Last Updated:**
-2022-10-05
+2022-10-06
