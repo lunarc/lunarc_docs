@@ -27,6 +27,21 @@
     margin-right: 7px;
 }
 
+.md-typeset .admonition.abstract,
+.md-typeset details.abstract {
+  border-color: #875e29;
+}
+
+.md-typeset .abstract > .admonition-title,
+.md-typeset .abstract > summary {
+  background-color: hsla(0, 0%, 0%, 0.07);
+}
+
+.md-typeset .abstract > .admonition-title::before,
+.md-typeset .abstract > summary::before {
+  background-color: #875e29;
+}
+
 .md-typeset .admonition.info,
 .md-typeset details.info {
   border-color: #875e29;
@@ -39,23 +54,6 @@
 
 .md-typeset .info > .admonition-title::before,
 .md-typeset .info > summary::before {
-  background-color: #875e29;
-  -webkit-mask-image: var(--md-admonition-icon--info);
-          mask-image: var(--md-admonition-icon--info);
-}
-
-.md-typeset .admonition.important,
-.md-typeset details.important {
-  border-color: #875e29;
-}
-
-.md-typeset .important > .admonition-title,
-.md-typeset .important > summary {
-  background-color: hsla(0, 0%, 0%, 0.07);
-}
-
-.md-typeset .important > .admonition-title::before,
-.md-typeset .important > summary::before {
   background-color: #875e29;
 }
 
@@ -74,6 +72,51 @@
   background-color: #875e29;
 }
 
+.md-typeset .admonition.success,
+.md-typeset details.success {
+  border-color: #875e29;
+}
+
+.md-typeset .success > .admonition-title,
+.md-typeset .success > summary {
+  background-color: hsla(0, 0%, 0%, 0.07);
+}
+
+.md-typeset .success > .admonition-title::before,
+.md-typeset .success > summary::before {
+  background-color: #875e29;
+}
+
+.md-typeset .admonition.question,
+.md-typeset details.question {
+  border-color: #875e29;
+}
+
+.md-typeset .question > .admonition-title,
+.md-typeset .question > summary {
+  background-color: hsla(0, 0%, 0%, 0.07);
+}
+
+.md-typeset .question > .admonition-title::before,
+.md-typeset .question > summary::before {
+  background-color: #875e29;
+}
+
+.md-typeset .admonition.important,
+.md-typeset details.important {
+  border-color: #875e29;
+}
+
+.md-typeset .important > .admonition-title,
+.md-typeset .important > summary {
+  background-color: hsla(0, 0%, 0%, 0.07);
+}
+
+.md-typeset .important > .admonition-title::before,
+.md-typeset .important > summary::before {
+  background-color: #875e29;
+}
+
 .md-typeset .admonition.warning,
 .md-typeset details.warning {
   border-color: #875e29;
@@ -89,6 +132,7 @@
   background-color: #875e29;
 }
 
+<<<<<<< Updated upstream
 .md-typeset .admonition.note,
 .md-typeset details.note {
   border-color: #875e29;
@@ -107,3 +151,79 @@
 <!--Last updated: 22-10-06
     Updated by: Peter Bergdahl
 -->
+=======
+.md-typeset .admonition.failure,
+.md-typeset details.failure {
+  border-color: #875e29;
+}
+
+.md-typeset .failure > .admonition-title,
+.md-typeset .failure > summary {
+  background-color: hsla(0, 0%, 0%, 0.07);
+}
+
+.md-typeset .failure > .admonition-title::before,
+.md-typeset .failure > summary::before {
+  background-color: #875e29;
+}
+
+.md-typeset .admonition.danger,
+.md-typeset details.danger {
+  border-color: #875e29;
+}
+
+.md-typeset .danger > .admonition-title,
+.md-typeset .danger > summary {
+  background-color: hsla(0, 0%, 0%, 0.07);
+}
+
+.md-typeset .danger > .admonition-title::before,
+.md-typeset .danger > summary::before {
+  background-color: #875e29;
+}
+
+.md-typeset .admonition.bug,
+.md-typeset details.bug {
+  border-color: #875e29;
+}
+
+.md-typeset .bug > .admonition-title,
+.md-typeset .bug > summary {
+  background-color: hsla(0, 0%, 0%, 0.07);
+}
+
+.md-typeset .bug > .admonition-title::before,
+.md-typeset .bug > summary::before {
+  background-color: #875e29;
+}
+
+.md-typeset .admonition.example,
+.md-typeset details.example {
+  border-color: #875e29;
+}
+
+.md-typeset .example > .admonition-title,
+.md-typeset .example > summary {
+  background-color: hsla(0, 0%, 0%, 0.07);
+}
+
+.md-typeset .example > .admonition-title::before,
+.md-typeset .example > summary::before {
+  background-color: #875e29;
+}
+
+.md-typeset .admonition.quote,
+.md-typeset details.quote {
+  border-color: #875e29;
+}
+
+.md-typeset .quote > .admonition-title,
+.md-typeset .quote > summary {
+  background-color: hsla(0, 0%, 0%, 0.07);
+}
+
+.md-typeset .quote > .admonition-title::before,
+.md-typeset .quote > summary::before {
+  background-color: #875e29;
+}
+>>>>>>> Stashed changes
