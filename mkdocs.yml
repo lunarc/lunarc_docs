@@ -73,6 +73,7 @@ nav:
   - Contact: about/contact.md
   - LUNARC Documentation: about/about_documentation.md
   - HPC Ambassadors: about/ambassadors.md
+  - Test page: about/testpage.md
 
 theme: 
   name: material
