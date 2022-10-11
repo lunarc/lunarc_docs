@@ -22,11 +22,7 @@ Here you will find all of the documentation for the LUNARC resources in a easy t
 
 === "I am an expert HPC user"
 
-    [:material-book-cog-outline: Expert documentation settings](getting_started/login_password/){: .md-button }
-
     [:material-book-open-variant: Application guides](guides/guides_intro){: .md-button }
-
-    [:material-database-cog-outline: Advanced cluster settings documentation](getting_started/login_password/){: .md-button }
 
     [:material-account-cog-outline: Forgot your password?](intro/lost_password.md){: .md-button }
 
