@@ -4,11 +4,12 @@ Our HPC Ambassadors are a diverse group of expert users with a broad collective 
 
 Our HPC Ambassadors are not support staff. For support regarding LUNARC resources and applications, please 
 
-##Ambassadors
+## Ambassadors
 
-#####3D Visualization in Medical applications#####
+##### 3D Visualization in Medical applications
 
-Shamit Soneji, Faculty of Medicine - Biomedicine <shamit.soneji@med.lu.se>
+Shamit Soneji, Faculty of Medicine - Biomedicine  
+<shamit.soneji@med.lu.se>
 
 ---
 
