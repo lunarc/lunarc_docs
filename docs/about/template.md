@@ -1,4 +1,6 @@
-# Documentation template
+# Documentation documentation
+
+A MarkDown template document can be found [here]()
 
 ## Page contents
 
@@ -40,7 +42,10 @@ The documentation uses four levels of Headers. Note the space after the hash-sig
     #### Fourth level header
     ```
 
-If you feel that you need more subheaders than four, try to find a different way to layout your page, using e.g. a tabbed section like the one above.
+!!! Warning
+    If you feel that your page needs more than one top-level header (#), consider breaking the page up into two (or more).
+
+    If you feel that you need more subheaders than level four (####), try to find a different way to layout your page, using e.g. a tabbed section like the one above.
 
 ### Text formatting
 
@@ -49,10 +54,6 @@ Text can be **bolded**, *italicized*, or ***both***.
 ```
     Text can be **bolded**, *italicized*, or ***both***.
 ```
-
-__Underlining__ text is accomplished using:
-
-
 
 ### Links
 
@@ -158,6 +159,13 @@ Keep the language as simple yet precise as possible.
 British or american spelling (e.g. colour - color)?
 
 ## Final notes
+
+
+### Useful links
+
+* [MarkDown syntax](https://www.markdownguide.org/basic-syntax/)
+* [Mkdocs user guide](https://www.mkdocs.org/user-guide/)
+* [Material for MkDocs reference](https://squidfunk.github.io/mkdocs-material/reference/)
 
 ---
 
