@@ -3,7 +3,7 @@
 | **Term** | **Explanation** |
 |----------|-----------------|
 | 2-factor authentication | Authentication method using 2 factors for login. The first factor is often a password. The second factor is often a generated token/code. |
-| batch job | A user create script the defines what tasks should be performed. The script is submitted to a job scheduler to be executed on the cluster nodes. |
+| Batch job | A user create script the defines what tasks should be performed. The script is submitted to a job scheduler to be executed on the cluster nodes. |
 | Centre storage | Shared file system available on all nodes. LUNARC currently uses an IBM SpectrumScale Parallel file system as center storage resource. |
 | Compiler | Compiles source code for languages such as C, C++ and Fortran to executables/machinecode that can be run directly by the processor. |
 | Core | Individual processing element, 20-48 per node. Can also be called a CPU. |
@@ -13,12 +13,12 @@
 | GPU | This denotes a NVIDIA/AMD co-processor. Can be used for both computing as well as graphics. | 
 | Hardware accelerated graphics | Graphics rendering that using hardware accelerator GPU for drawing in 2D and 3D.  |
 | HPC | High Performace Computing |
-| job script | See batch job |
+| Job script | See batch job |
 | Local disk | Local disk storage for each node. This storage is not shared between the nodes. |
 | LUNARC | Lund University NIC Application Research Center |
 | LUNARC HPC Desktop  | Remote desktop solution provided by LUNARC. |
 | Module | A single software package in the module system. Usually denoted by a name/version pair. MYAPP/1.1. |
-| module system | System for organising software installs. Enables multiple version of software to be installed on the same system. LUNARC uses the module system Lmod. |
+| Module system | System for organising software installs. Enables multiple version of software to be installed on the same system. LUNARC uses the module system Lmod. |
 | MPI | Message Passing Interface - An application programming interface (API) for programming multinode parallel applications. OpenMP/Intel MPI are commonly available implementations of this API |
 | Node | A physical computer/server in a compute cluster. |
 | OpenGL | Open standard for hardware accelerated graphics. |
