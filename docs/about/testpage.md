@@ -14,9 +14,9 @@ This page is for testing layouts, components etc
 
 ## Ambassadors
 
-| **Area of expertise** | **Department** | **Ambassador** |
+| **Ambassador** | **Department** | **Area of expertise** |
 |---|---|---|
-| 3D/VR Visualization in Medical applications | Faculty of Medicine - Biomedicine | [Shamit Soneji, PhD](shamit.soneji@med.lu.se) |
+| Shamit Soneji, PhD <br> <shamit.soneji@med.lu.se> | Faculty of Medicine, Biomedicine | 3D/VR Visualization in Medical applications |
 
 ---
 
