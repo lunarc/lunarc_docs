@@ -1,7 +1,9 @@
 site_name: LUNARC Documentation
 nav:
-- Home: index.md
-- Forgot your password?: intro/lost_password.md
+- Home:
+  - Welcome to the LUNARC Documentation: index.md
+- Forgot your password?:
+  - Resetting your password: intro/lost_password.md
 - Getting started: 
   - Creating a password for your account: getting_started/login_password.md
   - Activating Pocket Pass authenticator: getting_started/authenticator_howto.md
