@@ -1,5 +1,9 @@
 # Documentation documentation
 
+!!! warning
+
+    This document is a work in progress. It is not complete, and as such should not be "trusted" for guidance.
+
 A MarkDown template document can be found [here]()
 
 ## Page contents
