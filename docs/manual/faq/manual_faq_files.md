@@ -9,10 +9,17 @@ cd .snapshots/@-2020.12.11-00.00.35
 ```
 and you get presented with the state of the directory and it's sub-directories at that time-stamp.  You can copy the required contents out of the snapshot directory into your current directory.
 
+## I can't access my MAX-IV files on Aurora
+
+If your MAX-IV project (i.e., "proposal" in MAX-IV terms) files are not already accessible on Aurora on /projects/, then send a ticket to LUNARC via [SUPR](https://supr.snic.se/support/) to request it. Mention the project name and, if possible, the UNIX Group name and GID.
+
+Note that when MAX-IV project files are made accessible on Aurora, access is only possible from frontends, i.e., they are not accessible from compute nodes. Before starting a job, please copy the files from /projects/<group name> to your home directory, then modify the job to use the copies in your home directory before submitting it.
+
 ---
 
 **Author:**
-Joachim Hein (LUNARC)
+Joachim Hein (LUNARC)  
+Nicolas Melot (LUNARC)
 
 **Last Updated:**
-2022-08-31
+2022-11-01
