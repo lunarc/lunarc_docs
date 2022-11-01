@@ -112,3 +112,8 @@ module load foss
 code
 ```
 
+## Access to MAX-IV files from Aurora
+
+If your MAX-IV project (i.e., "proposal" in MAX-IV terms) files are not already accessible on Aurora on /projects/, then send a ticket to LUNARC via [SUPR](https://supr.snic.se/support/) to request it. Mention the project name and, if possible, the UNIX Group name and GID.
+
+Note that when MAX-IV project files are made accessible on Aurora, access is only possible from frontends, i.e., they are not accessible from compute nodes. Before starting a job, please copy the files from /projects/<group name> to your home directory, then modify the job to use the copies in your home directory before submitting it.
