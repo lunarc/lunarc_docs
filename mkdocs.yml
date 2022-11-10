@@ -31,7 +31,6 @@ nav:
     - MPI job using the node local discs: manual/example_job_scripts/manual_example_mpi_local_discs.md
     - MPI jobs using fewer than 20 tasks per node: manual/example_job_scripts/manual_example_mpi_fewer_than_20.md
     - OpenMP jobs using shared memory: manual/example_job_scripts/manual_example_openmp_shared_memory.md
-    - Hybrid-jobs using threads within an MPI framework: manual/example_job_scripts/manual_example_openmp_hybrid_jobs.md
   - Batch system rules: manual/manual_rules.md
   - Quick reference: manual/manual_quick_reference.md
   - FAQ: 
