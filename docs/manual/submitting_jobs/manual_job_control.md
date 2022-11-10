@@ -17,7 +17,7 @@ jobid 7197 assigned to it.
 
 ## Starting executables within SLURM with srun
 
-The command **srun** allows starting executables in a way managed by SLURM. This is particularly effective if you want to process a large number of jobs within a single submission to the batch system. A use case of **srun** to start many serial jobs in a single multicore submission scipt is discussed in the [*example section*](#id.bdphbddpef0).
+The command **srun** allows starting executables in a way managed by SLURM. This is particularly effective if you want to process a large number of jobs within a single submission to the batch system. A use case of **srun** to start many serial jobs in a single multicore submission scipt is discussed in the example section below.
 
 ## Monitoring jobs
 
