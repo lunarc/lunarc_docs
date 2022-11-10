@@ -7,7 +7,7 @@ To create models, set up simulation jobs and view results Abaqus CAE is used. Th
 
 ![Start Abaqus](../../images/start_abaqus.png "Start ABAQUS") 
 
-To run the simulation as defined in the .inp file produced by the Abaqus CAE, a sbatch script detailing the resources needed for the simulation is required. The sbatch script is the description telling the queueing system which project is to be used, what resources are needed and for how long and also what program is to be run. The queueing system used at LUNARC is SLURM and a good tutorial on how to use it is found here: [SLURM tutorial](http://lunarc-documentation.readthedocs.io/en/latest/batch_system/)
+To run the simulation as defined in the .inp file produced by the Abaqus CAE, a sbatch script detailing the resources needed for the simulation is required. The sbatch script is the description telling the queueing system which project is to be used, what resources are needed and for how long and also what program is to be run. The queueing system used at LUNARC is SLURM and a good tutorial on how to use it is found here: [SLURM tutorial](../../../manual/manual_intro/)
 
 Below an example SBATCH-script to run an Abaqus-job called sample.inp is shown, adjust as needed.
 
