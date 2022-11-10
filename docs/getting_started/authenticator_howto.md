@@ -1,6 +1,6 @@
 The process to install and set up the Pocket Pass authenticator is in five (5) steps, **ALL** steps must be performed correctly so **PLEASE** read the instructions carefully.
 
-## <span style="color:red">Step 1:</span>  Download and install Pocket Pass
+## Step 1: Download and install Pocket Pass
 Download and install the **PhenixID Pocket Pass** app on your smartphone. The correct app is free of charge.
 
 ### Download for Apple iOS
@@ -11,14 +11,14 @@ Download and install the **PhenixID Pocket Pass** app on your smartphone. The co
 
 [![sample screen](../images/android-download.png "Download for android"){: style="width:200px"}](https://play.google.com/store/apps/details?id=com.phenixidentity.pocketpass "Pocket Pass download")
 
-## <span style="color:red">Step 2:</span>  Accessing the self-service portal
+## Step 2: Accessing the self-service portal
 
 Activation of the Pocket Pass app is done via a web-based activation portal. This can be done with any web browser from any computer. Use the link below to access the portal:
 
-[Self-service portal](https://phenix3.lunarc.lu.se/selfservice/). 
+[Self-service portal](https://phenix3.lunarc.lu.se/selfservice/)
 
 
-## <span style="color:red">Step 3:</span>  Token activation
+## Step 3: Token activation
 The self-service portal will show the following login screen:
 
 ![sample screen](../images/selfservice_login_rev1.png "Desktop sample screen")
@@ -39,7 +39,7 @@ Click next to continue. This will display a QR code, which you scan with the Poc
 
 ![sample screen](../images/add_token3.png "Desktop sample screen")
 
-## <span style="color:red">Step 4:</span>  Install the token on your smart phone
+## Step 4: Install the token on your smart phone
 
 Make sure the Pocket Pass app can access the camera of your smartphone. Open the Pocket Pass app and click **Install key**
 
@@ -63,7 +63,7 @@ Click continue to display the current valid OTP-code.
 
 ![sample screen](../images/pp_ss6.png "Desktop sample screen")
 
-## <span style="color:red">Step 5:</span>  Important last step: Activate your token
+## Step 5: Important last step: Activate your token
 
 Go back to the self-service portal and click "next". You will then be prompted for an OTP to finalize the activation. You will get this OTP from the pocket-pass application and will **NOT** be sent as a text-message.
 
@@ -78,10 +78,10 @@ You can now log in to the LUNARC systems using the Pocket Pass app. Having enter
 
 You can check the validity, in particular the expiration state, of your pocket pass token inside the self-service portal.  Use
 
-* your Aurora password (Not your SUPR password)
-* the one-time-password sent by **text message** to your mobile (Not from the Pocket Pass app) 
+* your Aurora password (not your SUPR password)
+* the one-time-password sent by **text message** to the phone number you have registered (not from the Pocket Pass app) 
 
-when following [steps 2](#step-2-accessing-the-self-service-portal) and 3 mentioned above to access the self-service portal.  Please check the [Aurora FAQ](https://lunarc-documentation.readthedocs.io/en/latest/aurora_faq/#could-your-send-my-one-time-password-for-pocket-pass-activation-to-my-new-mobile-phone-number) if you need to update your mobile phone number.
+when following [steps 2](#step-2-accessing-the-self-service-portal) and [3](#step-3-token-activation) mentioned above to access the self-service portal.  Please check the [FAQ](/../manual/faq/manual_faq_login/#could-your-send-my-one-time-password-for-pocket-pass-activation-to-my-new-mobile-phone-number) if you need to update your mobile phone number.
 
 Inside the self-service portal, go to the **TOKENS** tab.  You will see your tokens.  Klicking on **More** will reveal the relevant dates for your token:
 
