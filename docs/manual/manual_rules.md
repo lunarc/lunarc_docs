@@ -12,8 +12,6 @@ To be eligible to run, a job may not have a walltime that exceeds 168 hours (7 d
 |-----------------|-------------------|-------------|---------|----------|-----|
 | Aurora | 30240 h/15120 h | 512/64-256* | 30240 h | 24 | 256 |
  
-On Monday to Friday between 8.00 and 20.00, four nodes on Platon only accept jobs with walltimes of 2 hours and less, to make it possible to run short tests. It is not allowed to submit long series of two-hour jobs to bypass the queue.
-
 The order of the jobs waiting in the queue is governed by two factors, waiting time and "fair share". These give priorities, which are constantly updated. The longer a job sits in the queue, the higher the priority, but a short job will gain priority faster than a job requesting more walltime and may overtake longer jobs. "Fair share" means that users who have not used the system much during the last 14 days will have a higher initial priority than users who have used the system to a large degree. "Fair share" is also a function of the allocated time; i.e., a small allocation will lose priority quicker per used absolute time than a large allocation.
 
 The batch system rules are revised regularly to optimise system utilisation and fairness.
