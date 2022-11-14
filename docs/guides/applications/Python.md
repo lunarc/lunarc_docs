@@ -101,7 +101,7 @@ When activated all package installations, both conda and pip, goes into this env
 
 ### Python distributions
 
-Users who are planning to do **larger scale calculations** potentially using MPI4PY or requiring specific compilers and libraries, the recommended distribution is named **Python**. Please note that this these require loading of pre-requisites, such as compilers, MPI and/or CUDA libraries, as detailed in the [Overview section](#Overview). 
+Users who are planning to do **larger scale calculations** potentially using MPI4PY or requiring specific compilers and libraries, the recommended distribution is named **Python**. Please note that this these require loading of pre-requisites, such as compilers, MPI and/or CUDA libraries, as detailed in the [Overview section](#overview). 
  
 Please note that there are several versions of the toolchains such as the foss or intel toolchain.  Each with multiple versions of Python.  Please choose the one appropriate for you. Note that after having chosen your toolchain use **module avail Python** to see versions available.
 
