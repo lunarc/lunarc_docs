@@ -1,5 +1,18 @@
 # A basic job
 
+!!! info "Introduction"
+
+    Here you will learn about how to run jobs on LUNARC nodes. It is assumed that you know the basics of SLURM, which you can learn in our beginner course on HPC use, or from (http://slurm.schedmd.com/).
+
+    To run a job you need to have the following prepared:
+
+    * Research data
+    * An application to use
+    * Your login information
+    * A text editor can be helpful (we recommend xyz)
+
+    Make sure you are logged in before continuing.
+
 ## The job script and sbatch
 
 You register your program with SLURM for execution using the **sbatch** command. This is easiest accomplished using a *job description file*. The job description file is also known as a *job script*.
