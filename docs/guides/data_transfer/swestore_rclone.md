@@ -63,12 +63,60 @@ $ rclone-cert ls swestore:/snic/storage-training
 
 ## Copying files
 
+Copying a single file can be done using the following command:
+
+```bash
+$ rclone-cert copyto IMG_E0868.JPG swestore:/snic/storage-training/IMG_E0868.JPG
+```
+
+Recursive copying:
+
+```bash
+$ rclone-cert copy /home/bmjl/Courses/storage-training/examples swestore:/snic/storage-training/examples
+```
+
+Recursive copying with progress status:
+
+```bash
+rclone-cert copy -P /home/bmjl/Courses/storage-training/examples swestore:/snic/storage-training/examples
+Transferred:      338.249 MiB / 1.894 GiB, 17%, 52.625 MiB/s, ETA 30s
+Transferred:           75 / 407, 18%
+Elapsed time:         6.5s
+Transferring:
+ *                          runsten/DJI_0051.JPG: 33% /4.505Mi, 0/s, -
+ *                          runsten/DJI_0052.JPG:  6% /4.658Mi, 0/s, -
+ *                          runsten/DJI_0053.JPG: 17% /4.747Mi, 0/s, -
+ *                          runsten/DJI_0054.JPG:  7% /4.808Mi, 0/s, -
+```
+
 ## File operations
 
----
+Creating a directory:
 
-**Author:**
-(LUNARC)
+```bash
+$ rclone-cert mkdir swestore:/snic/storage-training/examples/new_dir
+```
 
-**Last Updated:**
-2022-10-05
+Removing a file:
+
+```bash
+$ rclone-cert deletefile swestore:/snic/storage-training/examples/test.txt
+```
+
+Removing a directory:
+
+```bash
+$ rclone-cert rmdir swestore:/snic/storage-training/examples/new_dir/
+```
+
+Removing all files in a directory:
+
+```bash
+$ rclone-cert delete swestore:/snic/storage-training/examples/
+```
+Removing all empty directories:
+
+```bash
+$ rclone-cert delete swestore:/snic/storage-training/examples/
+```
+
