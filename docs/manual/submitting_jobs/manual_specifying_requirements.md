@@ -2,13 +2,13 @@ We now describe several statements that are most commonly used to specify resour
 
 ## Walltime (reqeuested job time)
 
-The walltime attribute specifies the time requested for completing the job. The time is *not* CPU-time but the total time, as measured by a normal clock. In the previous example, the time requested was 0 hours 5 minutes and 0 seconds. Walltime is specified in seconds or using the following notation:
+The walltime attribute specifies the time requested for completing the job. The time is _not_ CPU-time but the total time measured by an ordinary clock. In the previous example, the time requested was 0 hours 5 minutes and 0 seconds. Walltime is specified in seconds or using the following notation:
 
 ```
 Hours:Minutes:Seconds
 ```
 
-If your calculation hasn’t finished once the specified time has elapsed, SLURM will terminate your job. It is therefore **good practise** to specify a bit more time than you anticipate your job to take. This makes sure that you still get your results, even if the job is slowed by some interference, e.g. waiting for a write to a shared file system to finish. However, don’t specify excessive amounts of extra time. Due to scheduling constraints, jobs asking for less time will typically spend less time in the queue, waiting for their execution. This also provides safety against depletion of your allocation. If e.g., your job hangs, SLURM will terminate your job and the project will be charged less time if the walltime margin is not excessive.
+If your calculation hasn’t finished once the specified time has elapsed, SLURM will terminate your job. It is, therefore **good practise**** to specify a bit more time than you anticipate your job to take. This ensures that you still get your results, even if the job is slowed by some interference, e.g. waiting for a write to a shared file system to finish. However, don’t specify excessive amounts of extra time. Due to scheduling constraints, jobs asking for less time will typically spend less time in the queue, waiting for their execution. This also provides safety against the depletion of your allocation. If e.g., your job hangs, SLURM will terminate your job and the project will be charged less time if the walltime margin is not excessive.
 
 To specify your walltime requirements write a statement like
 
@@ -22,7 +22,7 @@ The maximum walltime for any job on Aurora is 168h (7 days).
 
 ## Naming jobs
 
-All jobs are given both a job identifier and a name, for easier identification in the batch system. The default name given to a job is the file name of the submit script, which can make it difficult to identify your job if you use a standard name for your submit scripts. You can give your job a name from inside the script by using the -J
+All jobs are given both a job identifier and a name for easier identification in the batch system. The default name given to a job is the file name of the submit script, making it difficult to identify your job if you use a common name for your submit scripts. You can give your job a name from inside the script by using the -J
 option:
 
 ```bash
@@ -50,6 +50,23 @@ There are a few nodes, however, where jobs can utilise up to 12800 MB per proces
 #SBATCH -C mem256GB
 ```
 
+### COSMOS
+
+The COSMOS system has 256 GB of memory installed on a normal compute node. To allow memory for the operating system, only 254000 MB are available for jobs and the default memory request per core is 5300 MB of memory (48 cores per node). If more than 5300 MB per core is needed, it has to be requested explicitly using the **--mem-per-cpu** option.  For example, if you require  10000 MB per core, add the line:
+
+```bash
+#SBATCH --mem-per-cpu=10000
+```
+
+When requesting more than 5300 MB per processing core on a normal COSMOS node, your jobs will be charged at a higher rate. If you do this, some processing cores must remain idle since you use more than your fair share of memory.
+
+However, there are a few nodes where jobs can utilise up to FIXME MB per processing core without any cores idling, by requesting placement on a large memory node via the **-C** option.  The following example will request FIXME MB per processing core on a large memory node
+ 
+```bash
+#SBATCH --mem-per-cpu=FIXME
+#SBATCH -C mem512GB
+```
+
 ## Controlling job output
 
 By default, the output which your job writes to standard output (stdout) and standard error (stderr) is written to a file named
@@ -73,20 +90,20 @@ In many cases, the default file name is not convenient. You might want to have a
 
 ## Job notification emails
 
-SLURM on the systems can send you an email if the status of your job changes as it progresses through the job queue. To use this feature you need to specify the email address using the **--mail-user** option and specify the event you want to get notified about using the **--mail-type** option. The following
+SLURM on the systems can send you an email if the status of your job changes as it progresses through the job queue. To use this feature, you need to specify the email address using the **--mail-user** option and specify the event you want to get notified about using the **--mail-type** option. The following
 
 ```bash
 #SBATCH --mail-user=fred@institute.se
 #SBATCH --mail-type=END
 ```
 
-Will send an email to the address fred@institute.se once the job has ended. Valid type values, selecting the event you can get notified about, are BEGIN, END, FAIL, REQUEUE, and ALL (any state change).
+will send an email to the address fred@institute.se once the job has ended. Valid type values, selecting the event you can get notified about, are BEGIN, END, FAIL, REQUEUE, and ALL (any state change).
 
 ## Job dependencies
 
 To describe job dependencies, use the **-d** option of **sbatch**. This is particularly useful for job dependencies, in workflows.
 
-To illustrate this consider the following example. You require a serial job to create a mesh for your simulation. Once this has finished, you want to start a parallel job, which uses the mesh. You first submit the mesh creation job using **sbatch**
+To illustrate this consider the following example. You require a serial job to create a mesh for your simulation. Once this has finished, you want to start a parallel job using the mesh. You first submit the mesh creation job using **sbatch**
 
 ```bash
 [fred@aurora Simcode]$ sbatch run_mesh.sh
@@ -140,7 +157,7 @@ In addition, for those who access private nodes (financed by a research project)
 #SBATCH --reservation=lu2022-x-xx
 ```
 
-## Accessing GPUs in the Aurora LU partition
+## Accessing GPUs in th LU-partition
 
 Some compute nodes in the Lund University partition are equipped with GPUs. These nodes are equipped with 2 Nvidia K80 cards that have been configured as four K40 cards.
 
