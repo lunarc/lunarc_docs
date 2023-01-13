@@ -1,8 +1,8 @@
 # Using the 32-core nodes
 
-LUNARC's Aurora system offeres a new partition to its users.   This partition features compute nodes with more modern Cascade Lake CPUs, larger core count and more memory than the standard nodes.  These nodes are placed in a partition named *lu32*.   The name reflects that these nodes feature 32 cores per node. 
+LUNARC's resources offers a new partition to its users.   This partition features compute nodes with more modern Cascade Lake CPUs, larger core count and more memory than the standard nodes.  These nodes are placed in a partition named *lu32*.   The name reflects that these nodes feature 32 cores per node. 
 
-This document assumes you are familar with Aurora.   Here we focus on the key differences between the standard partition and the new *lu32*-partition from a user perspective.
+This document assumes you are familar with LUNARC resources. Here we focus on the key differences between the standard partition and the new *lu32*-partition from a user perspective.
 
 ## Hardware
 The nodes inside the *lu32*-partition feature more modern CPUs than the nodes in the standard partition.  Both partitions contain Intel CPUs.  The CPUs in the standard nodes are commonly referred to as *Haswell*, while the CPUs in the *lu32* partition are commonly referred to as *Cascade Lake*.  Software executables build for *Haswell* CPUs should run in the *lu32* partition.  On the other hand, software specifically built for the new *Cascade Lake nodes* is **not** expected to work on the older *Haswell* nodes.
@@ -10,13 +10,12 @@ The nodes inside the *lu32*-partition feature more modern CPUs than the nodes in
 The *Cascade Lake* CPUs feature additional instructions, not availabe on the *Haswell* CPUs.  For a typical scientific computing job, the AVX512 instructions are the most interesting instructions.  Testing by LUNARC support has shown that code utilising these instructions can be up to 50% faster than code utilising AVX2 instructions.  
 
 ### Key differences between the Haswell and Cascade Lake nodes
-|                | Aurora standard Haswell node | Aurora standard Cascade Lake node |
-|----------------|:----------------------------:|:---------------------------------:|
-|Cores per node: |      20 cores per node       |       32 cores per node           |
-|Memory per node:|      64 GB per node	        |               192 GB per node     |
-|Memory per core:| 3100 MB per core (SLURM default) |     6000 MB per core          |
-|AVX vector instructions: | AVX, AVX2            | AVX, AVX2, **AVX512**                 |
-
+|                | Aurora standard Haswell node | Aurora/COSMOS standard Cascade Lake node | COSMOS AMD Milan node             |
+|----------------|:----------------------------:|:----------------------------------------:|:---------------------------------:|
+|Cores per node: |      20 cores per node       |       32 cores per node                  | 48 cores per node
+|Memory per node:|      64 GB per node	        |               192 GB per node            | 256 GB per node
+|Memory per core:| 3100 MB per core (SLURM default) |     6000 MB per core                 | 5000 MB per core |
+|AVX vector instructions: | AVX, AVX2            | AVX, AVX2, **AVX512**                   | AVX, AVX2 |
 
 
 ## Software

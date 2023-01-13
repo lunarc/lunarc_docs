@@ -10,7 +10,7 @@ When logging into the system, you only get access to those modules that do not r
 
 ## Using Modules
 
-The module system on Aurora uses the Lua-based [Lmod](https://www.tacc.utexas.edu/research-development/tacc-projects/lmod) software.
+The module system uses the Lua-based [Lmod](https://www.tacc.utexas.edu/research-development/tacc-projects/lmod) software.
 
 ### Loading packages
 
@@ -84,7 +84,7 @@ when loaded modules are no longer needed. You would then start loading the modul
 
 ## Searching for all software packages
 
-In practical use, the command **module spider** is key to searching for packages in a Lmod-based hierarchical module naming scheme.  To get an overview of the software installed on Aurora, simply type:
+In practical use, the command **module spider** is key to searching for packages in a Lmod-based hierarchical module naming scheme.  To get an overview of the software installed, simply type:
 
 ```bash
 module spider

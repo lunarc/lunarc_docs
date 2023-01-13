@@ -6,11 +6,11 @@ Many packages that were installed in standard locations have now been moved to t
 
 ## I can not find my software package in the module system
 
-On Aurora a hierarchical module naming scheme is deployed.  This is explained in the [Using installed software guide](/../manual/manual_modules/).  Please contact [LUNARC support](/../about/contact/) if you cannot locate your package with the **module spider** command.
+On LUNARC resources a hierarchical module naming scheme is deployed.  This is explained in the [Using installed software guide](/../manual/manual_modules/).  Please contact [LUNARC support](/../about/contact/) if you cannot locate your package with the **module spider** command.
 
 ## Loading a module unloads pre-requisites from a previously loaded module
 
-Many software modules on Aurora have complex pre-requisites. If you load multiple modules is can happen that they try to load conflicting modules as pre-requisites.  In this case the module loaded last unloads conflicting pre-requisistes from earlier loaded modules.  If that happens, the earlier loaded modules can become disfunctional and there is no guaranty that they still work.
+Many software modules have complex pre-requisites. If you load multiple modules is can happen that they try to load conflicting modules as pre-requisites.  In this case the module loaded last unloads conflicting pre-requisistes from earlier loaded modules.  If that happens, the earlier loaded modules can become disfunctional and there is no guaranty that they still work.
 
 You have the follwing options to resolve the issues:
 

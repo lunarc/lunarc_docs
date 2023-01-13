@@ -39,6 +39,12 @@ Aurora has 20 cores per node. In this system, 80 cores would be allocated throug
     #SBATCH -N 4 
     #SBACTH --tasks-per-node=20
 
+COSMOS has 48 cores per node. In this system, 192 cores would be allocated through
+
+    # 80 cores on Aurora
+    #SBATCH -N 4 
+    #SBACTH --tasks-per-node=48
+
 ### Memory per core
 
 The amount of memory per core is specified in the format
@@ -46,6 +52,8 @@ The amount of memory per core is specified in the format
     #SBATCH --mem-per-cpu=<amount_of_memory_per_core_in_MB>
 
 Aurora has nodes with 64 GB of memory. The default allocation per core is therefore 3200 MB, allowing some memory for the operating system.  Please note that if you increase your memory request beyond 3200 MB per core, some cores on the system will be idle due to the lack of memory.  Your account gets charged for these cores as well.
+
+COSMOS has nodes with 256 GB of memory. The default allocation per core is therefore 12400 MB, allowing some memory for the operating system.  
 
 ## File systems
 

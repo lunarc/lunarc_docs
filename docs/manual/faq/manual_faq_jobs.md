@@ -1,6 +1,6 @@
 # Frequently asked questions - Jobs
 
-## What is the maximum job time on Aurora?
+## What is the maximum job time on LUNARC resources?
 
 We allow batch jobs to ask for up to 168 hours, which is 7 days.
 

@@ -1,4 +1,4 @@
-# Resetting your password for Aurora
+# Resetting your password
 
 To receive a new password, please visit the password self service portal, identifying yourself with your email address and the phone number you have registered in SUPR.
 

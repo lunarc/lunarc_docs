@@ -1,6 +1,6 @@
 # MATLAB 
 
-SNIC provides a nationwide set resources with the MATLAB Distributed Computing Server (MDCS) installed. At each respective SNIC centra the hosting university MATLAB licenses and toolboxes are available for use. 
+SNIC/NAISS provides a nationwide set of resources with the MATLAB Distributed Computing Server (MDCS) installed. At each respective NAISS centra the hosting university MATLAB licenses and toolboxes are available for use. 
  
 The MATLAB versions available at LUNARC are:
 
@@ -31,7 +31,7 @@ matlab -singleCompThread
 
 On the LUNARC HPC Desktop (Thinlinc) MATLAB R2016a as well as MATLAB R2017a are available via the Applications menu. Starting MATLAB from the menue automatically will set the -singleCompThread flag. This is now the recommended way to start MATLAB on the LUNARC HPC Desktop.
 
-## Getting Started with Serial and Parallel MATLAB on Aurora
+## Getting Started with Serial and Parallel MATLAB
 
 ### Load the module
 The MATLAB module is loaded with
@@ -84,7 +84,7 @@ Please note that as of version 2017a the syntax for setting the ClusterInfo para
 ```matlab
 configCluster
 
-% Set ProjectName and WallTime before submitting jobs to AURORA
+% Set ProjectName and WallTime before submitting jobs
 c = parcluster;
 c.AdditionalProperties.ProjectName = 'project-name';
 c.AdditionalProperties.WallTime = '01:00:00';
