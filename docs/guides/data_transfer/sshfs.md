@@ -42,8 +42,8 @@ This example assumes the LUNARC directory connected in the example described in 
 Use `fusermount`'s option `-u` to disconnect the remote volume:
 
 ```bash
-lunarc_username@xps-nicmel:~$ fusermount -u ~/media/aurora-home
-lunarc_username@xps-nicmel:~$ 
+lunarc_username@localhost:~$ fusermount -u ~/media/aurora-home
+lunarc_username@localhost:~$ 
 ```
 
 **Author:**
