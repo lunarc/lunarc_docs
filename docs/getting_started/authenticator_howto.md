@@ -67,7 +67,7 @@ Click continue to display the current valid OTP-code.
 
 Go back to the self-service portal and click "next". You will then be prompted for an OTP to finalize the activation. You will get this OTP from the pocket-pass application and will **NOT** be sent as a text-message.
 
-Your token will expire in a year's time at which time you will need to activate a new token.
+Your token will expire in two year's time at which time you will need to activate a new token.
 
 ## Completed
 
