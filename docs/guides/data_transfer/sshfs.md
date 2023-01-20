@@ -20,7 +20,7 @@ Here we assume lunarc user `lunarc_username` to connect its home directory on Au
 
 
 ```bash
-username@localhost:~$ sshfs lunarc_username@aurora.lunarc.lu.se:/home/lunarc_username ~/media/aurora-home-nicmel
+username@localhost:~$ sshfs lunarc_username@aurora.lunarc.lu.se:/home/lunarc_username ~/media/aurora-home
 (lunarc_username@aurora.lunarc.lu.se) Password: 
 (lunarc_username@aurora.lunarc.lu.se) Enter your Pocket Pass OTP: 248921
 username@localhost:~$
