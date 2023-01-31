@@ -35,41 +35,41 @@ In SLURM one requests the number of nodes for a job with the **-N** option. The 
 #SBATCH -N 4
 ```
 
-**Important:** without using either the **--tasks-per-node** or the **--cpus-per-task** options of **sbatch**, this will reserve a single core per node, so four in total, which is most likely not what you want.
+**Important:** without using either the **--ntasks-per-node** or the **--cpus-per-task** options of **sbatch**, this will reserve a single core per node, so four in total, which is most likely not what you want.
 
 ## Specifying the number of tasks per node
 
-Use the **--tasks-per-node** of **sbatch** to specify the number of tasks you require per node. For most multinode jobs this will be set to the number of cores available per node. The following example asks for 20 task per node:
+Use the **--ntasks-per-node** of **sbatch** to specify the number of tasks you require per node. For most multinode jobs this will be set to the number of cores available per node. The following example asks for 20 task per node:
 
 ```bash
-#SBATCH --tasks-per-node=20
+#SBATCH --ntasks-per-node=20
 ```
 
 This should be used together with the -N option, specifying the number of nodes to be used. The default value for the number of tasks per node is 1. For example to specify the requirements for an MPI job with 80 tasks or a multiprocessor job using 80 processors to process a larger number of serial jobs one would specify
 
 ```bash
 #SBATCH -N 4
-#SBATCH --tasks-per-node=20
+#SBATCH --ntasks-per-node=20
 ```
 
 When using fewer than 20 tasks per node and you want to prevent other users’ jobs from sharing your node, you need to consider using the **--exclusive** option. If **--exclusive** is not specified, SLURM might place other tasks onto your node.
 
 ## Specifying the number of threads for a shared-memory job
 
-If you want to run shared-memory applications using threads, e.g. OpenMP parallelised code or Java applications, you need to specify the number of threads you require per task. This can be done with the **--tasks-per-node** option of **sbatch**.
+If you want to run shared-memory applications using threads, e.g. OpenMP parallelised code or Java applications, you need to specify the number of threads you require per task. This can be done with the **--ntasks-per-node** option of **sbatch**.
 
 For a standard shared-memory program, which doesn’t also use distributed memory programming models such as MPI, one is restricted to a single node. On the requested node, one can request as many threads as there are cores on the node. On the standard Aurora compute nodes one can efficiently use up to 20 threads. Use the following resource statement:
 
 ```bash
 #SBATCH -N 1
-#SBATCH --tasks-per-node=20
+#SBATCH --ntasks-per-node=20
 ```
 
 If your program is only efficient at a lower thread count, you may want to use e.g.:
 
 ```bash
 #SBATCH -N 1
-#SBATCH --tasks-per-node=4
+#SBATCH --ntasks-per-node=4
 ```
 
 if you only want to use four threads. 
@@ -80,7 +80,7 @@ So-called hybrid programs, using both distributed and shared-memory techniques h
 
 ```bash
 #SBATCH -N 4
-#SBATCH --tasks-per-node=10
+#SBATCH --ntasks-per-node=10
 #SBATCH --cpus-per-task=2
 ```
 
@@ -90,7 +90,7 @@ In special cases, such as using very unusual numbers of tasks, the **-n** option
 
 ```bash
 #SBATCH -N 4
-#SBATCH --tasks-per-node=20
+#SBATCH --ntasks-per-node=20
 #SBATCH -n 78
 ```
 
@@ -102,4 +102,5 @@ Please consider using the **--exclusive** option of **sbatch** to avoid SLURM sp
 (LUNARC)
 
 **Last Updated:**
-2022-10-06
+2023-01-31
+

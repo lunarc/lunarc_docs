@@ -105,8 +105,16 @@ To instruct the scheduler to execute your job to run on the *lu32*-partition you
 As the name indicates the nodes feature 32 cpu cores.  If your job can efficiently use all of them you can request all cores by specifying:
 
 ```
+#SBATCH --ntasks-per-node=32
+```
+
+or
+
+
+```
 #SBATCH --tasks-per-node=32
 ```
+
 ### Memory specification
 The default memory per CPU core on Aurora is set to 3100 MB.  Since the nodes in the *lu32*-partition have more memory, you can specify up to 6000 MB per core without being penalised:
 
@@ -126,4 +134,5 @@ There are currently issues when specifying `#!/bin/sh` for a job script. Scripts
 (LUNARC)
 
 **Last Updated:**
-2022-10-05
+2023-01-31
+

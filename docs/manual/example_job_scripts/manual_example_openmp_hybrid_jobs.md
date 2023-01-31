@@ -8,7 +8,7 @@ In the following, we give a simple example script to run a MPI-OpenMP hybrid nam
 # number of mpi-tasks per node
 # and number of threads per task exclusive nodes
 #SBATCH -N 2
-#SBATCH --tasks-per-node=5
+#SBATCH --ntasks-per-node=5
 #SBATCH --cpus-per-task=4
 # time required
 #SBATCH -t 01:00:00
@@ -55,4 +55,5 @@ As discussed, the above binds the tasks and their threads to the numa-islands of
 (LUNARC)
 
 **Last Updated:**
-2022-10-05
+2023-01-31
+

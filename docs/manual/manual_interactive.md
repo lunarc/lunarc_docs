@@ -6,7 +6,7 @@ To start an interactive session you need to use the **interactive** command. Thi
 
 Use the following command to start an interactive session asking for 4 cores on 1 node lasting 60 minutes
 
-    interactive -N 1 --tasks-per-node=4 -t 60
+    interactive -N 1 --ntasks-per-node=4 -t 60
 
 The interactive session will last until either the requested time, 60 minutes in the above example, has expired or you manually exit the interactive shell. Your account gets charged with the wall time duration of your interactive session, independent of the amount of computation you do. In the above example, if your session lasts until it expires after 60 min, you get charged for 4 CPU hours. If you terminate your session after 1/2 hour, you would get charged 2 CPU hours.
 
@@ -29,4 +29,5 @@ You also need to check whether environment variables still have the required val
 (LUNARC)
 
 **Last Updated:**
-2022-10-05
+2023-01-31
+

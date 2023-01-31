@@ -8,7 +8,7 @@ You need to transfer your executable onto the node local discs of all nodes.  De
 #!/bin/bash
 # requesting the number of cores needed on exclusive nodes
 #SBATCH -N 4
-#SBATCH --tasks-per-node=20
+#SBATCH --ntasks-per-node=20
 #
 # job time, change for what your job requires
 #SBATCH -t 0:30:0
@@ -85,4 +85,5 @@ with the line
 (LUNARC)
 
 **Last Updated:**
-2022-10-05
+2023-01-31
+

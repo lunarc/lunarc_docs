@@ -31,19 +31,19 @@ To unload a module
 The number of cores for a job is specified in the batch script in the format
 
     #SBATCH -N <number_of_nodes>
-    #SBATCH --tasks-per-node=<number_of_cores_per_node>
+    #SBATCH --ntasks-per-node=<number_of_cores_per_node>
 
 Aurora has 20 cores per node. In this system, 80 cores would be allocated through
 
     # 80 cores on Aurora
     #SBATCH -N 4 
-    #SBACTH --tasks-per-node=20
+    #SBACTH --ntasks-per-node=20
 
 COSMOS has 48 cores per node. In this system, 192 cores would be allocated through
 
     # 80 cores on Aurora
     #SBATCH -N 4 
-    #SBACTH --tasks-per-node=48
+    #SBACTH --ntasks-per-node=48
 
 ### Memory per core
 
@@ -103,4 +103,5 @@ It is not allowed to submit long series of jobs to a test queue.
 (LUNARC)
 
 **Last Updated:**
-2022-10-05
+2023-01-31
+
