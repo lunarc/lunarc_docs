@@ -23,7 +23,7 @@ Below an example SBATCH-script to run an Abaqus-job called sample.inp is shown, 
 #
 # How many cores do you need to use? Remember that a large number here WILL consume 
 # a lot of tokens i.e. limit the number left for other abaqus users: Max per node is 20
-#SBATCH --tasks-per-node=10
+#SBATCH --ntasks-per-node=10
 # 
 # What is the name of your project i.e. snic20xy-z-n or lu20xy-z-n
 #SBATCH -A <your-project-name>
