@@ -8,7 +8,7 @@ If you want to use fewer than 20 tasks per node to e.g. give more resources to t
 #!/bin/bash
 # requesting the number of nodes and cores needed, exclusive nodes
 #SBATCH -N 4
-#SBATCH --tasks-per-node=10
+#SBATCH --ntasks-per-node=10
 #SBATCH --mem-per-cpu=6200
 #
 # job time, change for what your job requires
