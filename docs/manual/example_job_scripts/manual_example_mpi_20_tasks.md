@@ -6,7 +6,7 @@ The resource request is straightforward in this case. Ask for several nodes and 
 #!/bin/bash
 # requesting the number of cores needed on exclusive nodes
 #SBATCH -N 4
-#SBATCH --tasks-per-node=20
+#SBATCH --ntasks-per-node=20
 #
 # job time, change for what your job requires
 #SBATCH -t 0:30:0
