@@ -13,7 +13,7 @@ an example script is given below:
 # job time, change for what your job requires In this example 1h 
 #SBATCH -t 1:00:00
 #SBATCH -N 1
-#SBATCH --tasks-per-node=20
+#SBATCH --ntasks-per-node=20
 #
 #SBATCH -A <your-project-name>
 # job name
@@ -86,7 +86,7 @@ Below is an example on how to start the server through such a script instead.
 # job time, change for what your job requires   
 #SBATCH -t 1:00:00
 #SBATCH -N 1
-#SBATCH --tasks-per-node=20
+#SBATCH --ntasks-per-node=20
 #
 #SBATCH -A <your_project_name>  
 # job name
