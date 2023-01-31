@@ -1,11 +1,11 @@
-To run a shared memory code using OpenMP on Aurora, you specify the number of cores you require using **--tasks-per-node** option of **sbatch**. In this case you have to request placement on a single node with the **-N 1** option. In this example, we call the executable “processor_omp” to emphasis that this need to be compiled with OpenMP support. Unless you are doing something special, you are not required to specify the environment variable **OMP_NUM_THREADS**. The example script uses the techniques described for the [*basic run script*](#id.oyajyndi4e55) to engage the node local disk.
+To run a shared memory code using OpenMP on Aurora, you specify the number of cores you require using **--ntasks-per-node** option of **sbatch**. In this case you have to request placement on a single node with the **-N 1** option. In this example, we call the executable “processor_omp” to emphasis that this need to be compiled with OpenMP support. Unless you are doing something special, you are not required to specify the environment variable **OMP_NUM_THREADS**. The example script uses the techniques described for the [*basic run script*](#id.oyajyndi4e55) to engage the node local disk.
 
 ```bash
 #!/bin/bash
 #
 # Specify the number of threads - request all on 1 node
 #SBATCH -N 1
-#SBATCH --tasks-per-node=20
+#SBATCH --ntasks-per-node=20
 #
 # job time, change for what your job requires
 #SBATCH -t 00:10:00
