@@ -21,7 +21,7 @@ The following example will be using 20 cores on 1 node to process 200 jobs.
 #!/bin/sh
 # requesting the number of nodes needed
 #SBATCH -N 1
-#SBATCH --tasks-per-node=20
+#SBATCH --ntasks-per-node=20
 #
 # job time, change for what your job farm requires
 #SBATCH -t 20:00:00
@@ -54,7 +54,7 @@ The script assumes that the job is described in a script file **workScript.sh**,
 
      When using **srun** inside a batch script many **srun**-options act differently compared to using **srun** within a different environment. Note also that even the order of the options **--exclusive** and **--overlap** is crucial for the correct behaviour. Consult the man-page of **srun** for documentation and contact the LUNARC help desk if you require further consultancy.
 
-If you need more than the default 3100 MB memory per core, you have to specify both **--tasks-per-node** and **--mem-per-cpu**. Please match the core count and the memory per core to best utilise the resources of a node, which has a total of 62000 MB of memory available for jobs.
+If you need more than the default 3100 MB memory per core, you have to specify both **--ntasks-per-node** and **--mem-per-cpu**. Please match the core count and the memory per core to best utilise the resources of a node, which has a total of 62000 MB of memory available for jobs.
 
 ## The worker script
 
