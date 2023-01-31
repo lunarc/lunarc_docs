@@ -117,4 +117,5 @@ In this script you are using one full node for 1h. you will also receive an emai
 (LUNARC)
 
 **Last Updated:**
-2022-10-05
+2023-01-31
+
