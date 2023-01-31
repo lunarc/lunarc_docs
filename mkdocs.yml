@@ -47,6 +47,8 @@ nav:
     - Files and directories in Linux: guides/linux/linux_basics_files.md
     - Special Command Symbols: guides/linux/linux_basics_special_symbols.md
     - Useful Linux commands: guides/linux/linux_basics_misc.md
+  - Using containers:
+    - Running containers on LUNARC using Singularity/Apptainer: guides/containers/apptainer.md
   - Transferring data:
     - Wget and Curl: guides/data_transfer/io_wget_curl.md
     - SFTP: guides/data_transfer/io_sftp.md
