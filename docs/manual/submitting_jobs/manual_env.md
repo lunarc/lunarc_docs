@@ -1,4 +1,4 @@
-When submitting your job to SLURM using **sbatch**, your entire environment including the currently loaded modules gets copied. On Aurora, when hitting **sbatch**:
+When submitting your job to SLURM using **sbatch**, your entire environment gets copied, including the currently loaded modules. On Aurora, when hitting **sbatch**:
 
 !!! info
 

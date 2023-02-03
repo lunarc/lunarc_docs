@@ -1,6 +1,6 @@
 # Frequently asked questions - Login
 
-## I have forgotten my login password for Aurora
+## I have forgotten my login password
 
 To receive a new password, please visit the password self service portal at the link below:
 
