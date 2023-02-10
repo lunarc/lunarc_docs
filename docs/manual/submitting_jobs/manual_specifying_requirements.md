@@ -160,7 +160,7 @@ In addition, for those who access private nodes (financed by a research project)
 #SBATCH --reservation=lu2022-x-xx
 ```
 
-## Accessing GPUs in th LU-partition
+## Accessing GPUs in the LU-partition
 
 Some compute nodes in the Lund University partition are equipped with GPUs. These nodes are equipped with 2 Nvidia K80 cards that have been configured as four K40 cards.
 
