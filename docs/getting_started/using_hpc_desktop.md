@@ -14,7 +14,7 @@ The 2D desktop (currently Mate) runs on a scalable desktop infrastructure that s
     ![login window](../images/desktopLogin.png "Desktop login window")
  
  1. Enter your login credentials (Username, Password) and click [**Connect**]
- 1. Enter the one time password from the [Pocket Pass app](/../getting_started/authenticator_howto/) on your smartphone
+ 1. Enter the one time password from the [Pocket Pass app](authenticator_howto.md) on your smartphone
  
     ![otp input screen](../images/desktopOTP.png "OTP input screen")
  
