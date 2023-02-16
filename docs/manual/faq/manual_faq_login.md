@@ -10,7 +10,7 @@ Identify yourself with your email address and the mobile phone you have register
 
 ## I can not login after installing a pocket pass token
 
-Many users have issues because of missing the [activation step](https://lunarc-documentation.readthedocs.io/en/latest/authenticator_howto/#step-5-important-last-step-activate-your-token).  To activate your token, connect to the [self-service portal](https://lunarc-documentation.readthedocs.io/en/latest/authenticator_howto/#accessing-the-self-service-portal), go into "tokens", choose "activate" and follow the instructions.
+Many users have issues because of missing the [activation step](https://lunarc-documentation.readthedocs.io/en/latest/getting_started/authenticator_howto/#step-5-important-last-step-activate-your-token).  To activate your token, connect to the [self-service portal](https://lunarc-documentation.readthedocs.io/en/latest/getting_started/authenticator_howto/#step-2-accessing-the-self-service-portal), go into "tokens", choose "activate" and follow the instructions.
 
 ## I have persistent problems connecting after beging prompted for my OTP
 
