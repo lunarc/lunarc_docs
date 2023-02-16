@@ -16,6 +16,9 @@ Many users have issues because of missing the [activation step](https://lunarc-d
 
 If you have persistent problems with connecting to LUNARC service after being prompted for my password and pocket pass password, it my be that your pocket pass token has expired.  Please check the [expiration status](https://lunarc-documentation.readthedocs.io/en/latest/authenticator_howto/#checking-the-validity-of-your-token) of your pocket pass token and create a new token if the old token has expired.
 
+## I do not get prompted for an OTP after entering a password
+Please make sure you entered the correct password.  If you are unsure, you can reset your password in the [Password self service portal](https://phenix3.lunarc.lu.se/pss).  If the problem pesists you may need to create a new pocket pass token on your mobile device.  Please visit the [self-service portal](https://lunarc-documentation.readthedocs.io/en/latest/getting_started/authenticator_howto/#step-2-accessing-the-self-service-portal).
+
 ## Could your send my *one time password* for pocket pass activation to my new mobile phone number?
 
 Please enter the new phone number into [SUPR](https://supr.snic.se/person/) and raise a [support request](http://www.lunarc.lu.se/support/support_form) to update our internal database for this change.
@@ -26,4 +29,4 @@ Please enter the new phone number into [SUPR](https://supr.snic.se/person/) and 
 Joachim Hein (LUNARC)
 
 **Last Updated:**
-2022-09-06
+2023-02-16
