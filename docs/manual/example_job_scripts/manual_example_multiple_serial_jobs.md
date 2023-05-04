@@ -39,7 +39,7 @@ export NB_of_jobs=200
 
 for ((i=0; i<$NB_of_jobs; i++))
 do
-    srun -Q --exclusive --overlap -n 1 -N 1 workScript.sh $i &> worker_${SLURM_JOB_ID}_${i} &
+    srun -Q --exclusive -n 1 -N 1 workScript.sh $i &> worker_${SLURM_JOB_ID}_${i} &
     sleep 1
 done
 
@@ -52,7 +52,7 @@ The script assumes that the job is described in a script file **workScript.sh**,
 
 !!! tip
 
-     When using **srun** inside a batch script many **srun**-options act differently compared to using **srun** within a different environment. Note also that even the order of the options **--exclusive** and **--overlap** is crucial for the correct behaviour. Consult the man-page of **srun** for documentation and contact the LUNARC help desk if you require further consultancy.
+     When using **srun** inside a batch script many **srun**-options act differently compared to using **srun** within a different environment. Note also that on Aurora, the option **--overlap** is also required and needs to be put after (not before) **--exclusive**. On COSMOS, the option **--overlap** should not be used at all. Consult the man-page of **srun** for documentation and contact the LUNARC help desk if you require further consultancy.
 
 If you need more than the default 3100 MB memory per core, you have to specify both **--tasks-per-node** and **--mem-per-cpu**. Please match the core count and the memory per core to best utilise the resources of a node, which has a total of 62000 MB of memory available for jobs.
 
