@@ -7,11 +7,11 @@ There are two main ways of accessing the LUNARC systems:
 
 This document describes the second item: how to access our system using a terminal and command-line tools. To get access to a terminal the user has to login in to LUNARC using a Secure Shell (SSH) terminal client, for example:
 
-    ssh aurora.lunarc.lu.se -l username
+    ssh cosmos.lunarc.lu.se -l username
 
 or
 
-    ssh username@aurora.lunarc.lu.se
+    ssh username@cosmos.lunarc.lu.se
 
 On Linux and macOS this client is built-in to the system and no installation is necessary. Windows do not have a standard SSH terminal so an external application is needed such as [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) is needed. However, windows users are recommended to use the [HPC desktop](using_hpc_desktop.md)
 
@@ -38,17 +38,17 @@ If the OTP and password are correct you will be logged in to the system.
 
 To be prompted for the OTP password the ssh client must be configured for keyboard-interactive login. These settings can be modified in either **/etc/ssh/ssh_config** (Redhat systems) or in the home-directory **~/.ssh/config**. An example configuration is shown below:
 
-    Host aurora.lunarc.lu.se 
+    Host cosmos.lunarc.lu.se 
     PreferredAuthentications keyboard-interactive 
 
     Host * 
     PreferredAuthentications hostbased,publickey,keyboard-interactive,password
 
-In the above example, Aurora is configured for keyboard-interactive login, but all other hosts are configured with default login options.
+In the above example, COSMOS is configured for keyboard-interactive login, but all other hosts are configured with default login options.
 
 To reduce the number of logins to the system the **ServerAlive** option can also be added:
 
-    Host aurora.lunarc.lu.se 
+    Host cosmos.lunarc.lu.se 
     PreferredAuthentications keyboard-interactive 
     ServerAliveInterval 10 
 
@@ -61,7 +61,7 @@ macOS is already configured to handle the login to LUNARC resources with one tim
 
 To reduce the number of logins to the system the **ServerAlive** option can also be added:
 
-    Host aurora.lunarc.lu.se 
+    Host cosmos.lunarc.lu.se 
     PreferredAuthentications keyboard-interactive 
     ServerAliceInterval 10 
 
@@ -97,4 +97,4 @@ To reduce the number of logins to the system the "Seconds between keepalives" ca
 (LUNARC)
 
 **Last Updated:**
-2022-10-05
+2023-05-29
