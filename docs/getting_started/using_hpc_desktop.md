@@ -9,7 +9,7 @@ The 2D desktop (currently Mate) runs on a scalable desktop infrastructure that s
  1. [Download](https://www.cendio.com/thinlinc/download "Download") the client for either Windows, Mac or Linux 
  1. Install it on your workstation or laptop
  1. Launch the client
- 1. Enter **aurora.lunarc.lu.se** in the server field 
+ 1. Enter **cosmos-dt.lunarc.lu.se** in the server field 
  
     ![login window](../images/desktopLogin.png "Desktop login window")
  
