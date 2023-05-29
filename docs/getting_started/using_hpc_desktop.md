@@ -34,21 +34,11 @@ Depending on your system it might be convenient to *not _run_ in full-screen mod
 
 ## Resolving issues when connecting
 
-After encountering issues in a desktop session (e.g. crashed application) the desktop state saved from a previous session can become corrupt. If this happens to you, you may not be able to reconnect. In this case, it is often required to start a fresh session and discard the old session.  This is achieved by checking the box: **End existing session** or **Avsluta aktiv session**, depending on the languate settings of your client, on the login window before connecting to LUNARC services.
+After encountering issues in a desktop session (e.g. crashed application) the desktop state saved from a previous session can become corrupt. If this happens to you, you may not be able to reconnect. In this case, it is often required to start a fresh session and discard the old session.  This is achieved by checking the box: **End existing session** or **Avsluta aktiv session**, depending on the language settings of your client, on the login window before connecting to LUNARC services.
 
 ![login window](../images/desktopLogin.png "Desktop login window")
 
 Please try before contacting [Lunarc support](http://www.lunarc.lu.se/support/support_form "LUNARC support form")
-
-## Starting the client on a Mac
-
-Mac OSX 10.9 (Mavericks) and later: You need to
-
- 1. Locate the client in Finder.
- 2. Hold the **ctrl**-key while clicking on it.
- 3. Choose the "open" option from the menu.
-
-when opening the client for the first time to get past the "unidentified developer" notification.
 
 ---
 
