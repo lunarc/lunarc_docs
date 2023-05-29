@@ -63,7 +63,7 @@ To reduce the number of logins to the system the **ServerAlive** option can also
 
     Host cosmos.lunarc.lu.se 
     PreferredAuthentications keyboard-interactive 
-    ServerAliceInterval 10 
+    ServerAliveInterval 10 
 
     Host * 
         PreferredAuthentications hostbased,publickey,keyboard-interactive,password
