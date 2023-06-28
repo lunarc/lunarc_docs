@@ -18,6 +18,16 @@ You have the follwing options to resolve the issues:
  * Have a terminal dedicated to each of the modules.  This should work if the modules do not really interact with each other, but e.g. one module creates files which the other module reads.  Consider using the [Lunarc HPC desktop](https://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop/) which easily allows having multiple terminals within a single session
  * If this does not work or does not work satisfactory, contact the [LUNARC helpdesk](http://www.lunarc.lu.se/support/support_form) and discuss your situation.
 
+ 
+## My application fails because is can't find libgfortran.so.3
+If you jobs fails with an error message similar to
+
+```
+error while loading shared libraries: libgfortran.so.3: cannot
+open shared object file: No such file or directory
+```
+you are using software that has been compiled with a really old version of GCC.  Please recompile you program on COSMOS using a modern version of GCC.  Preferably a GCC version we provided as a module.
+
 ## I need LAPACK and BLAS - they used to be in /usr/lib64
 
 Using an optimised BLAS library is important for achieving good performance.  The libraries in `/usr/lib64` are typically not highly optimised.  We currently support [OpenBLAS](https://www.openblas.net/) within the foss [toolchain](http://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/#compiling-code-and-using-toolchains) and [MKL](https://software.intel.com/en-us/intel-mkl) in the intel, iomkl and gimkl toolchains.  Both libraries show excellent performance when e.g. used to build HPL (high performance linpack).
