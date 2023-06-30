@@ -85,15 +85,9 @@ The quota can be increased on request.
 
 ## Test queues
 
-On Alarik, it is possible to request extra high priority to run short tests (maximum 1h) using at most 2 nodes using
+On COSMOS, it is possible to request extra high priority to run short tests (maximum 1h) using at most 2 nodes using
 
     #SBATCH --qos=test
-
-Floating reservations are used to free two nodes every second hour between 8.00 and 20.00 to reduce the queue time for test jobs, which means that a shorter walltime increases likelihood of an earlier start. Only two such test jobs are allowed to run at the same time.
-
-On Erik, there is one two-GPU node reserved for tests (maximum 1 h) in a partition of its own, which is specified with
-
-    #SBATCH -p test
 
 It is not allowed to submit long series of jobs to a test queue. 
 
