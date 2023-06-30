@@ -14,13 +14,13 @@ Here you will find all of the documentation for the LUNARC resources in a easy t
 
     [:fontawesome-solid-question: Frequently asked questions](manual/faq/manual_faq_login.md){: .md-button }
 
-    [:material-account-cog-outline: Forgot your password?](intro/lost_password.md){: .md-button }
-
 === "I have used HPC resources before"
 
     [:fontawesome-solid-jet-fighter-up:  User's Guide](manual/manual_intro/){: .md-button }
 
-    [:material-account-cog-outline: Forgot your password?](intro/lost_password.md){: .md-button }
+    [:material-application: Specific applications](guides/applications/Python){: .md-button }
+
+    [:fontawesome-solid-question: Frequently asked questions](manual/faq/manual_faq_login.md){: .md-button }
 
 === "I am an expert HPC user"
 
@@ -28,12 +28,15 @@ Here you will find all of the documentation for the LUNARC resources in a easy t
 
     [:material-book-open-variant: Application guides](guides/guides_intro){: .md-button }
 
-    [:material-account-cog-outline: Forgot your password?](intro/lost_password.md){: .md-button }
+    [:material-application: Specific applications](guides/applications/Python){: .md-button }
+
+    [:fontawesome-solid-question: Frequently asked questions](manual/faq/manual_faq_login.md){: .md-button }
 
 === "I develop HPC software"
 
     [:material-database-cog: Software development guides](guides/software_development/compiler_options/){: .md-button }
 
+    [:fontawesome-solid-jet-fighter-up: User's Guide](manual/manual_intro/){: .md-button }
+
     [:fontawesome-solid-award: HPC Ambassadors](about/ambassadors.md){: .md-button }
 
-    [:material-account-cog-outline: Forgot your password?](intro/lost_password.md){: .md-button }

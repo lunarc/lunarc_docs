@@ -1,6 +1,6 @@
 When you need to run many serial jobs, similar to the ones [described above](#basic-run-script), these should be bundled together and submitted to the job queue in a small number of submissions or even a single submission. With SLURM is perfectly reasonable to run several hundred individual jobs in a single submission. To speed up the processing of your jobs, you can ask for the cores from a number of nodes. The concept is known as a **task-farm**. The individual job are known as **job-steps**.
 
-The following is an example of processing 200 such jobs using 20 cores from one node. The scripting use two scripts, the master script and the worker script. The master script requests the resources (number of cores, job time, ...) and then registers 200 copies of the worker script with SLURM using the command **srun**. The worker script is a modification of the [basic script for I/O intensive jobs](#basic-run-script-for-io-intensive-jobs) described above. 
+The following is an example of processing 480 such jobs using 48 cores from one node. The scripting use two scripts, the master script and the worker script. The master script requests the resources (number of cores, job time, ...) and then registers 200 copies of the worker script with SLURM using the command **srun**. The worker script is a modification of the [basic script for I/O intensive jobs](#basic-run-script-for-io-intensive-jobs) described above. 
 
 In our example, this will then start forty jobs on the fourty cores you requested. Once a job has finished, it will take an unprocessed job and place it on the now idle core for processing. This will continue until all jobs are processed. The ordering of the jobs can not be relied on.
 
@@ -21,7 +21,7 @@ The following example will be using 20 cores on 1 node to process 200 jobs.
 #!/bin/sh
 # requesting the number of nodes needed
 #SBATCH -N 1
-#SBATCH --ntasks-per-node=20
+#SBATCH --ntasks-per-node=48
 #
 # job time, change for what your job farm requires
 #SBATCH -t 20:00:00
@@ -33,7 +33,7 @@ The following example will be using 20 cores on 1 node to process 200 jobs.
 cat $0
 
 # set the number of jobs - change for your requirements
-export NB_of_jobs=200
+export NB_of_jobs=480
 
 # Loop over the job number
 
@@ -54,7 +54,7 @@ The script assumes that the job is described in a script file **workScript.sh**,
 
      When using **srun** inside a batch script many **srun**-options act differently compared to using **srun** within a different environment. Note also that even the order of the options **--exclusive** and **--overlap** is crucial for the correct behaviour. Consult the man-page of **srun** for documentation and contact the LUNARC help desk if you require further consultancy.
 
-If you need more than the default 3100 MB memory per core, you have to specify both **--ntasks-per-node** and **--mem-per-cpu**. Please match the core count and the memory per core to best utilise the resources of a node, which has a total of 62000 MB of memory available for jobs.
+If you need more than the default 3100 MB memory per core, you have to specify both **--ntasks-per-node** and **--mem-per-cpu**. Please match the core count and the memory per core to best utilise the resources of a node, which has a total of 240000 MB of memory available for jobs.
 
 ## The worker script
 

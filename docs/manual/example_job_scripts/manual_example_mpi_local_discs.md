@@ -8,17 +8,17 @@ You need to transfer your executable onto the node local discs of all nodes.  De
 #!/bin/bash
 # requesting the number of cores needed on exclusive nodes
 #SBATCH -N 4
-#SBATCH --ntasks-per-node=20
+#SBATCH --ntasks-per-node=48
 #
 # job time, change for what your job requires
 #SBATCH -t 0:30:0
 #
 # job name
-#SBATCH -J simula_n80
+#SBATCH -J simula_n192
 #
 # filenames stdout and stderr - customise, include %j
-#SBATCH -o simula_n80_%j.out
-#SBATCH -e simula_n80_%j.out
+#SBATCH -o simula_n192_%j.out
+#SBATCH -e simula_n192_%j.out
 
 # write this script to stdout-file - useful for scripting errors
 cat $0

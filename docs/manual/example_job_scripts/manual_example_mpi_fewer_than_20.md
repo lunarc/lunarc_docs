@@ -1,4 +1,4 @@
-If you want to use fewer than 20 tasks per node to e.g. give more resources to the individual task, you can use the **-N** and **--task-per-node** options of **sbatch**. We recommend not to use the -n option in this case. This example is for 4 nodes with 10 tasks each, a total of 40 tasks. In our experience, in this case, and when using **--exclusive** it is typically advantageous to not use binding. Though we encourage experimenting with your own application.
+If you want to use fewer than 48 tasks per node to e.g. give more resources to the individual task, you can use the **-N** and **--task-per-node** options of **sbatch**. We recommend not to use the -n option in this case. This example is for 4 nodes with 24 tasks each, a total of 96 tasks. In our experience, in this case, and when using **--exclusive** it is typically advantageous to not use binding. Though we encourage experimenting with your own application.
 
 !!! info 
 
@@ -8,14 +8,14 @@ If you want to use fewer than 20 tasks per node to e.g. give more resources to t
 #!/bin/bash
 # requesting the number of nodes and cores needed, exclusive nodes
 #SBATCH -N 4
-#SBATCH --ntasks-per-node=10
-#SBATCH --mem-per-cpu=6200
+#SBATCH --ntasks-per-node=24
+#SBATCH --mem-per-cpu=6400
 #
 # job time, change for what your job requires
 #SBATCH -t 0:30:0
 #
 # job name
-#SBATCH -J simula_n40
+#SBATCH -J simula_n96
 #
 # filenames stdout and stderr - customise, include %j
 #SBATCH -o simula_n40_%j.out

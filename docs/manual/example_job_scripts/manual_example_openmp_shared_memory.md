@@ -1,11 +1,11 @@
-To run a shared memory code using OpenMP on Aurora, you specify the number of cores you require using **--ntasks-per-node** option of **sbatch**. In this case you have to request placement on a single node with the **-N 1** option. In this example, we call the executable “processor_omp” to emphasis that this need to be compiled with OpenMP support. Unless you are doing something special, you are not required to specify the environment variable **OMP_NUM_THREADS**. The example script uses the techniques described for the [*basic run script*](#id.oyajyndi4e55) to engage the node local disk.
+To run a shared memory code using OpenMP on COSMOS, you specify the number of cores you require using **--ntasks-per-node** option of **sbatch**. In this case you have to request placement on a single node with the **-N 1** option. In this example, we call the executable “processor_omp” to emphasis that this need to be compiled with OpenMP support. Unless you are doing something special, you are not required to specify the environment variable **OMP_NUM_THREADS**. The example script uses the techniques described for the [*basic run script*](#id.oyajyndi4e55) to engage the node local disk.
 
 ```bash
 #!/bin/bash
 #
 # Specify the number of threads - request all on 1 node
 #SBATCH -N 1
-#SBATCH --ntasks-per-node=20
+#SBATCH --ntasks-per-node=48
 #
 # job time, change for what your job requires
 #SBATCH -t 00:10:00
@@ -37,20 +37,20 @@ The Aurora nodes deploy a cache-coherent non-uniform-memory access architecture 
 
 By default, the GNU compiler suite (gcc/gfortran) does not bind threads to cores. To engage thread binding, you need to set the environment variable **GOMP_CPU_AFFINITY** and provide this with a binding list. When setting
 
-    export GOMP_CPU_AFFINITY=”0-19”
+    export GOMP_CPU_AFFINITY=”0-47”
 
 in your submission script, before starting your OpenMP application, this will bind the threads to the 20 cores in the node. The above will bind thread 0 to core 0, thread 1 to core 1 and so on.
 
 
 !!! info
 
-    If you want to utilise only 10 cores from a node and ask for exclusive node access (#SBATCH --exclusive), it might be a good idea to place threads on every second core only. This will give you more memory bandwidth and make sure you are utilising all FPUs of the Interlagos architecture. This can be achieved by setting:
+    If you want to utilise only 24 cores from a node and ask for exclusive node access (#SBATCH --exclusive), it might be a good idea to place threads on every second core only. This will give you more memory bandwidth and make sure you are utilising all FPUs of the Interlagos architecture. This can be achieved by setting:
 
-        export GOMP_CPU_AFFINITY=”0-19:2”
+        export GOMP_CPU_AFFINITY=”0-23:2”
 
     or
 
-        export GOMP_CPU_AFFINITY=”0 2 4 6 8 10 12 14 16 18”
+        export GOMP_CPU_AFFINITY=”0 2 4 6 8 10 12 14 16 18 20 22”
 
     It depends on the details of your application, and whether or not this helps performance. Also note, when asking for exclusive access to a node, you will be charged for the full node, whether or not you use all cores.
 
