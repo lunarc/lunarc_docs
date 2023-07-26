@@ -60,12 +60,6 @@ The COSMOS system has 256 GB of memory installed on a normal compute node. To al
 
 When requesting more than 5300 MB per processing core on a normal COSMOS node, your jobs will be charged at a higher rate. If you do this, some processing cores must remain idle since you use more than your fair share of memory.
 
-However, there are a few nodes where jobs can utilise up to FIXME MB per processing core without any cores idling, by requesting placement on a large memory node via the **-C** option.  The following example will request FIXME MB per processing core on a large memory node
- 
-```bash
-#SBATCH --mem-per-cpu=FIXME
-#SBATCH -C mem512GB
-```
 
 ## Controlling job output
 
