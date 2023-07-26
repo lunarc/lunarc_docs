@@ -33,25 +33,6 @@ This will name your job “parameterTest”.
 
 ## Specifying memory requirements
 
-### Aurora
-
-The Aurora system has 64 GB of memory installed on a normal compute node. To allow memory for the operating system, only 62000 MB are available for jobs and the default memory request per core is 3100 MB of memory (20 cores per node). If more than 3100 MB per core is needed it has to be requested explicitly using the **--mem-per-cpu** option.  For example, if you require  5000 MB per core add the line
-
-```bash
-#SBATCH --mem-per-cpu=5000
-```
-
-When requesting more than 3100 MB per processing core on a normal Aurora node, your jobs will be charged at a higher rate. If you do this, some processing cores have to remain idle since you are using more than your fair share of memory.
-
-There are a few nodes, however, where jobs can utilise up to 12800 MB per processing core without any cores idling, by requesting placement on a large memory node via the **-C** option.  The following example will request 11000 MB per processing core on a large memory node
- 
-```bash
-#SBATCH --mem-per-cpu=11000
-#SBATCH -C mem256GB
-```
-
-### COSMOS
-
 The COSMOS system has 256 GB of memory installed on a normal compute node. To allow memory for the operating system, only 254000 MB are available for jobs and the default memory request per core is 5300 MB of memory (48 cores per node). If more than 5300 MB per core is needed, it has to be requested explicitly using the **--mem-per-cpu** option.  For example, if you require  10000 MB per core, add the line:
 
 ```bash
@@ -156,26 +137,9 @@ In addition, for those who access private nodes (financed by a research project)
 
 ## Accessing GPUs in the LU-partition
 
-Some compute nodes in the Lund University partition are equipped with GPUs. These nodes are equipped with 2 Nvidia K80 cards that have been configured as four K40 cards.
+Some compute nodes in the Lund University partition are equipped with GPUs. 
 
-To access the GPU nodes you need to be a member of an LU project, which you need to specify with the **-A** option as explained above. In addition, your job script needs to specify the GPU-partition (instead of the LU-partition):
-
-```bash
-#SBATCH -p gpu
-```
-
-and the number of GPUs required is requested as a *generic consumable resource*. The line:
-
-```bash
-#SBATCH --gres=gpu:2
-```
-
-will request two K40 cards for you.  Each GPU is bundled with five specific cores and it is therefore recommended to specify five cores per requested GPU and not more than that, in order not to block other GPUs.  Some GPU nodes have less memory per node available for the users.  We would like to ask users to add a line: 
-
-```bash
-#SBATCH --mem-per-cpu=3100
-```
-to standard job submission scripts, allowing the GPU nodes to be fully accessible
+*Information on accessing the GPUs will be available shortly*
 
 ---
 
