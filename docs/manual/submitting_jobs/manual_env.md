@@ -19,7 +19,7 @@ The SNIC meta-centres had agreed on a set of environment variables that should i
 
 | Environment variable | Explanation | Value on COSMOS |
 |----------------------|-------------|-----------------|
-| SNIC_TMP | Directory for best performance during a job.  At LUNARC: Local disk on nodes for storing temporary data during job execution. Transfer data with long-term value to SNIC_NOBACKUP before job has finished |  jobid dependent |
+| SNIC_TMP | Directory for best performance during a job.  At LUNARC: Local disk on nodes for storing temporary data during job execution. Transfer data with long-term value to permanent storage before job has finished |  jobid dependent |
 
 ---
 
