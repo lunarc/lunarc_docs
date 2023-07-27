@@ -2,7 +2,7 @@
 
 ## Submitting with sbatch
 
-One uses the command **sbatch** to submit a job script to the batch system
+One uses the command `sbatch` to submit a job script to the batch system
 for execution. SLURM will reply with the jobid number. The job will then
 be held in the queue until the requested resources become available. A
 typical use case looks as follows:
@@ -17,14 +17,14 @@ jobid 7197 assigned to it.
 
 ## Starting executables within SLURM with srun
 
-The command **srun** allows starting executables in a way managed by SLURM. This is particularly effective if you want to process a large number of jobs within a single submission to the batch system. A use case of **srun** to start many serial jobs in a single multicore submission scipt is discussed in the example section below.
+The command `srun` allows starting executables in a way managed by SLURM. This is particularly effective if you want to process a large number of jobs within a single submission to the batch system. A use case of `srun` to start many serial jobs in a single multicore submission scipt is discussed in the example section below.
 
 ## Monitoring jobs
 
-The best overview of the queue is obtained with the command **jobinfo**. It sorts jobs in the
-queue into running and waiting jobs. It also shows additional information, such as how long running jobs have left and in some cases when waiting jobs are expected to start. It can take some of the options available to the command **squeue** to filter the output, such as -u myid to only show jobs of user myid, -A lu2022-x-xx to only show jobs belonging to project lu2022-x-xx, and -p gpu to only show jobs using or waiting for nodes in the gpu partition.
+The best overview of the queue is obtained with the command `jobinfo`. It sorts jobs in the
+queue into running and waiting jobs. It also shows additional information, such as how long running jobs have left and in some cases when waiting jobs are expected to start. It can take some of the options available to the command `squeue` to filter the output, such as `-u myid` to only show jobs of user myid, `-A lu2022-x-xx` to only show jobs belonging to project lu2022-x-xx, and `-p lu48` to only show jobs using or waiting for nodes in the lu48 partition.
 
-**jobinfo** is a script that uses the command **squeue**, which can, of course, also be used directly to show you the current state of the job queue. It is less convenient but more configurable. The standard output, created by calling **squeue** without any options looks as follows:
+`jobinfo` is a script that uses the command `squeue`, which can, of course, also be used directly to show you the current state of the job queue.  It is less convenient but more configurable. The standard output, created by calling `squeue without any options looks as follows:
 
 ```bash
 JOBID PARTITION NAME USER ST TIME NODES NODELIST(REASON)

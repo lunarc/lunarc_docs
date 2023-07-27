@@ -9,13 +9,13 @@
     * Research data
     * An application to use
     * Your login information
-    * A text editor can be helpful (we recommend xyz)
+    * A text editor can be helpful (nano is a good choice for new users)
 
     Make sure you are logged in before continuing.
 
 ## The job script and sbatch
 
-You register your program with SLURM for execution using the **sbatch** command. This is easiest accomplished using a *job description file*. The job description file is also known as a *job script*.
+You register your program with SLURM for execution using the `sbatch command. This is easiest accomplished using a *job description file*. The job description file is also known as a *job script*.
 
 A very simple job script looks as follows:
     
