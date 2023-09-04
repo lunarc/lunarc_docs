@@ -7,14 +7,16 @@ SFTP is a secure data transfer protocol provided by the SSH software. The protoc
 Login is accomplished by using the **sftp** command-line client, providing a username and a hostname as shown in the following example.
 
 ```bash
-sftp bmjl@aurora.lunarc.lu.se
+sftp bmjl@cosmos.lunarc.lu.se
 Password: 
-Please enter your onetime password :207151
-Connected to aurora.lunarc.lu.se.
+Enter your Pocket Pass OTP: 207151
+Connected to bmjl@cosmos.lunarc.lu.se.
 sftp> 
 ```
 
 **sftp>** is a prompt where commands can be entered initiating data transfers, listing files or creating directories.
+
+Use the [Pocket Pass app](../getting_started/authenticator_howto.md) on your smartphone to obtain the one **Pocket Pass OTP**.
 
 ## Listing remote files
 
