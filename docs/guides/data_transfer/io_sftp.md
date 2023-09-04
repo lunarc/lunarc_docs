@@ -16,7 +16,7 @@ sftp>
 
 **sftp>** is a prompt where commands can be entered initiating data transfers, listing files or creating directories.
 
-Use the [Pocket Pass app](../../getting_started/authenticator_howto.md) on your smartphone to obtain the one **Pocket Pass OTP**.
+Use the [Pocket Pass app](../../getting_started/authenticator_howto.md) on your smartphone to obtain the **Pocket Pass OTP**.
 
 ## Listing remote files
 
