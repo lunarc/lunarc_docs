@@ -11,7 +11,7 @@ nav:
   - Transferring files: getting_started/transferring_files.md
   - Accessing the LUNARC HPC Desktop: getting_started/using_hpc_desktop.md
   - On-demand applications: getting_started/gfxlauncher.md
-- Manual:
+- LUNARC manual:
   - Introduction: manual/manual_intro.md
   - Submitting jobs:
     - A basic job: manual/submitting_jobs/manual_basic_job.md
@@ -39,7 +39,7 @@ nav:
     - Jobs: manual/faq/manual_faq_jobs.md
     - Software: manual/faq/manual_faq_software.md 
   - Phrases and terms: manual/manual_common_phrases.md
-- Guides:
+- Other guides:
   - Introduction: guides/guides_intro.md
   - Linux Basics: 
     - Introduction to Linux: guides/linux/linux_basics_intro.md
@@ -74,7 +74,7 @@ nav:
   - Web resources: links/links_web.md
   - Video resources: links/links_video.md
   - Social media: links/links_social.md 
-- About:
+- About Us:
   - Contact: about/contact.md
   - LUNARC Documentation: about/about_documentation.md
   - HPC Ambassadors: about/ambassadors.md
