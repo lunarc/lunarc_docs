@@ -64,6 +64,13 @@ In order to be able to continue the provision of VASP to our ligitimate VASP use
 
 The VASP5 executables on Aurora are compiled using Intel MPI.  They need to be started with `srun`.  The VASP6 executable is build with OpenMPI.   These executables need to be started with `mpirun`.  Refer to the sample section of our batch [system guide](https://lunarc-documentation.readthedocs.io/en/latest/batch_system/#mpi-job-using-20-tasks-per-node) for a more comprehensive discussion.
 
+## I need access to Amber
+
+Amber 22 is licensed software. To be able to use it please read through the
+license on the [Amber website](https://ambermd.org/GetAmber.php#amber). Please review the
+"ASSIGNMENT RESTRICTIONS" in particular.
+
+To gain access to the Amber installation on COSMOS, please submit a [support request](https://www.lunarc.lu.se/getting-help/), confirming that you are accepting these rules.  Your account will then be enabled to access to the amber package.
 
 ## My MPI application doesn't launch
 
