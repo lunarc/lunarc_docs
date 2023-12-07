@@ -11,7 +11,7 @@ nav:
   - Transferring files: getting_started/transferring_files.md
   - Accessing the LUNARC HPC Desktop: getting_started/using_hpc_desktop.md
   - On-demand applications: getting_started/gfxlauncher.md
-  - Pre-launch checklist: getting_started/prelaunc_checklist.md
+  - Pre-launch considerations: getting_started/prelaunch_considerations.md
 - User manual:
   - Introduction: manual/manual_intro.md
   - Submitting jobs:
