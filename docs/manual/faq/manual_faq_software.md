@@ -64,28 +64,18 @@ In order to be able to continue the provision of VASP to our ligitimate VASP use
 
 The VASP5 executables on Aurora are compiled using Intel MPI.  They need to be started with `srun`.  The VASP6 executable is build with OpenMPI.   These executables need to be started with `mpirun`.  Refer to the sample section of our batch [system guide](https://lunarc-documentation.readthedocs.io/en/latest/batch_system/#mpi-job-using-20-tasks-per-node) for a more comprehensive discussion.
 
+## I need access to Amber
+
+Amber 22 is licensed software. To be able to use it please read through the
+license on the [Amber website](https://ambermd.org/GetAmber.php#amber). Please review the
+"ASSIGNMENT RESTRICTIONS" in particular.
+
+To gain access to the Amber installation on COSMOS, please submit a [support request](https://www.lunarc.lu.se/getting-help/), confirming that you are accepting these rules.  Your account will then be enabled to access to the amber package.
 
 ## My MPI application doesn't launch
 
 On Aurora we support two MPI libraries: [OpenMPI](https://www.open-mpi.org/) and [Intel MPI](https://software.intel.com/en-us/intel-mpi-library).  Depending on the [toolchain](https://lunarc-documentation.readthedocs.org/en/latest/aurora_modules/#compiling-code-and-using-toolchains) utilised to compile your application different job launchers are required.  Executables build with OpenMPI need to be launched with `mpirun`, while applications build with Intel MPI need to be started with `srun`.  
 
-## The SciPY installed on Aurora fails because of a missing library
-
-This only concerns the SciPY installations build with the Intel compiler.  
-This is a know issue, which we are currently trying to resolve.  If you access SciPY by loading the icc module and the impi module, the Fortran runtime will not be available to Python.  We recommend loading the matching intel module instead of the icc module.  Example:
-```bash
-module load intel/2016b
-module load scipy/0.17.0-Python-2.7.11
-```
-
-## Visual Studio Code (code) doesn't work anymore
-
-Microsofts code editor Visual Studio Code in its latest version uses a runtime library that is no longer suppoerted by CentOS 7. To fix this load the foss module before running Visual Studio Code
-
-```bash
-module load foss
-code
-```
 
 ---
 
