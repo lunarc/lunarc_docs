@@ -1,4 +1,4 @@
-site_name: LUNARC Documentation
+esite_name: LUNARC Documentation
 nav:
 - Home:
   - Welcome to the LUNARC Documentation: index.md
@@ -11,7 +11,7 @@ nav:
   - Transferring files: getting_started/transferring_files.md
   - Accessing the LUNARC HPC Desktop: getting_started/using_hpc_desktop.md
   - On-demand applications: getting_started/gfxlauncher.md
-  - Pre-launch considerations: getting_started/prelaunch_considerations.md
+  - Before you run...: getting_started/prelaunch_considerations.md
 - User manual:
   - Introduction: manual/manual_intro.md
   - Submitting jobs:
