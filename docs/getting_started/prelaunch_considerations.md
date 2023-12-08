@@ -1,4 +1,4 @@
-# Pre-launch considerations
+# Before you run...
 Naive use of HPC resources can easily lead to mistakes that disrupt other users. Hence, we ask that you please go over the user manual, guides, phrases and terms, and FAQ to make sure you understand the concepts therein before you run any code on LUNARC resources. [The HPC Wiki](https://hpc-wiki.info/hpc/Category:Basics) is also a good resource if you want a more thorough explanation of [commonly used phrases and terms](https://lunarc-documentation.readthedocs.io/en/latest/manual/manual_common_phrases/) in the manual.
 
 ### Don't clog the login node!
