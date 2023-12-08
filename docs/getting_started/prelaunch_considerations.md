@@ -11,5 +11,11 @@ LUNARC and NAISS offer a variety of training and development courses, including 
 
 You can also find the list of upcoming events on the [LUNARC website under "Learning More".](https://www.lunarc.lu.se/learning-more/training-courses/)
 
+---
 
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2023-12-08
 
