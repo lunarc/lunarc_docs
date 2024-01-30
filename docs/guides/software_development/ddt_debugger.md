@@ -1,12 +1,12 @@
 # DDT debugger on COSMOS
 
-A basic description on how to start a debugging session with DDT, part of [ARM Forge](http://www.allinea.com/products/develop-allinea-forge), on the Aurora systems.  Job will be submitted through the Slurm batch system to the back-end nodes.
+A basic description on how to start a debugging session with DDT, part of [Linaro Forge](https://www.linaroforge.com/), on the COSMOS cluster.  Job will be submitted through the Slurm batch system to the back-end nodes.
 
 ## About this document
 
 This document gives basic instruction on how to start a debugging session using the DDT debugger on the COSMOS cluster at LUNARC.  This document is based on Linaro DDT version 23.0.3 currently installed on COSMOS.  There is currently a centralised NAISS license hosted by NSC.  The licenses are shared between the users of all NAISS systems, so please be considerate of other users regarding how many licenses you use (time and number of cores).
     
-DDT is a powerful debugger for serial and parallel programs.  The tool is developed and maintained by Linaro, (formerly ARM and ALLINEA).  It is part of the Linaro Forge suite.  A number of parallel programming models are supported.  This includes MPI, OpenMP and a number of GPU languages.  This document is not a DDT userguide, we refer our users to the documentation available from the [Linaro website](https://www.linaroforge.com/), in particular their [user guide](https://docs.linaroforge.com/23.1.1/html/forge/forge/introduction_to_forge/ddt.html).
+DDT is a powerful debugger for serial and parallel programs.  The tool is developed and maintained by Linaro, (formerly ARM and ALLINEA).  It is part of the Linaro Forge suite.  A number of parallel programming models are supported.  This includes MPI, OpenMP and a number of GPU languages.  This document is not a DDT userguide, we refer our users to the documentation available from the [Linaro website](https://docs.linaroforge.com/23.1.1/html/forge/index.html), in particular their [DDT user guide](https://docs.linaroforge.com/23.1.1/html/forge/forge/introduction_to_forge/ddt.html).
 
 ## Getting started with DDT on COSMOS
 
