@@ -1,25 +1,25 @@
-# DDT debugger on Aurora
+# DDT debugger on COSMOS
 
 A basic description on how to start a debugging session with DDT, part of [ARM Forge](http://www.allinea.com/products/develop-allinea-forge), on the Aurora systems.  Job will be submitted through the Slurm batch system to the back-end nodes.
 
 ## About this document
 
-This document gives basic instruction on how to start a debugging session using the DDT debugger on the Aurora system at LUNARC.  This document is based on DDT version 6.0.2 currently installed on Aurora.  There is currently a centralised SNIC license hosted by NSC.  The licenses are shared between the users of all the SNIC systems.  So please be considerate to other users fellow regarding for how many licenses your use (time and number of cores).
+This document gives basic instruction on how to start a debugging session using the DDT debugger on the COSMOS cluster at LUNARC.  This document is based on Linaro DDT version 23.0.3 currently installed on COSMOS.  There is currently a centralised NAISS license hosted by NSC.  The licenses are shared between the users of all NAISS systems, so please be considerate of other users regarding how many licenses you use (time and number of cores).
     
-DDT is a powerful debugger for serial and parallel programs.  The tool is developed and maintained by ARM.  It is part of the ARM's Forge suite.  A number of parallel programming models are supported.  This includes MPI, OpenMP and a number of GPU languages.  This document is not a DDT userguide, we refer our users to the documentation available from the [ARM website](https://www.arm.com/products/development-tools/server-and-hpc/forge), in particular their [user guide](https://developer.arm.com/documentation/101136/2113/?lang=en).
+DDT is a powerful debugger for serial and parallel programs.  The tool is developed and maintained by Linaro, (formerly ARM and ALLINEA).  It is part of the Linaro Forge suite.  A number of parallel programming models are supported.  This includes MPI, OpenMP and a number of GPU languages.  This document is not a DDT userguide, we refer our users to the documentation available from the [Linaro website](https://www.linaroforge.com/), in particular their [user guide](https://docs.linaroforge.com/23.1.1/html/forge/forge/introduction_to_forge/ddt.html).
 
-## Getting started with DDT on Aurora
+## Getting started with DDT on COSMOS
 
-### Connect to Aurora via the LUNARC HPC desktop
+### Connect to COSMOS via the LUNARC HPC desktop
 
 To use DDT you need to be able to access its graphical user interface (GUI).  
-The recommended way to connect to the system is via the [LUNARC HPC desktop](../../../getting_started/using_hpc_desktop).  
+The recommended way to connect to the system is via the [LUNARC HPC desktop](../../../getting_started/using_hpc_desktop), which uses Thinlinc.  
 
 <!--
 ### Using x-forwarding under Linux or on a Mac
-Linux systems are typically setup to support x-windows.  On the latest releases of Mac OSX you have to install [XQuartz](http://www.xquartz.org/) to display x-windows.  Once this is available connect to Aurora:
+Linux systems are typically setup to support x-windows.  On the latest releases of Mac OSX you have to install [XQuartz](http://www.xquartz.org/) to display x-windows.  Once this is available connect to COSMOS:
 
-    ssh -X aurora.lunarc.lu.se -l <username>
+    ssh -X cosmos-dt.lunarc.lu.se -l <username>
     
 You will be prompted for password and one-time-password as usual.
 
@@ -27,12 +27,12 @@ You will be prompted for password and one-time-password as usual.
 To connect using x-forwarding from a windows it is recommended to install [Cygwin](https://www.cygwin.com/). 
 -->
 
-### Starting the DDT GUI on Aurora
+### Starting the DDT GUI on COSMOS
 
-LUNARC currently recommends using *reverse connect* to start DDT.  Load the relevant module.  On Aurora the module name is *arm_forge*.  Load it: 
+LUNARC currently recommends using *reverse connect* to start DDT.  Load the relevant module.  On COSMOS the module name is *linaro_forge*.  Load it with: 
 
 ```
-    module load arm_forge
+    module load linaro_forge
 ``` 
    
 You can now start the GUI by typing
@@ -58,7 +58,7 @@ You need to prepare your executable for debugging.  Please **recompile** and **r
 
 Once your created an executable with debugging support, run it using either a batch script or an interactive session.  
 
-Make sure the `arm_forge` module is loaded by your script or manually inside your session, before starting the executable.  This is in addition to the modules normally required to execute your code.
+Make sure the `linaro_forge` module and all other modules needed to run your executable (GCC, OpenMPI, SciPy-bundle, ...) are loaded by your script or manually inside your session, before starting the executable.
 
 To start your program, prefix the execution statement with `ddt --connect`.  For example an MPI code compiled against an OpenMPI-library should be started as follows
 
@@ -66,13 +66,13 @@ To start your program, prefix the execution statement with `ddt --connect`.  For
    ddt --connect mpirun program_g
 ```
 
-with the executable being named *program_g*.  In case of the Intel MPI-library the code gets started using *srun*
+with the executable being named *program_g*. If you are using `mpi4py`, between `mpirun` and the name of your executable, you will need to insert ` python3 %allinea_python_debug% `. In case of the Intel MPI-library the code gets started using *srun*
 
 ```
    ddt --connect srun program_g
 ```
 
-Once your job starts running, you get a request to allow your job connecting to the DDT GUI
+Once your job starts running, you will get a request to allow your job connecting to the DDT GUI
 
 ![Reverse connect request](../../images/ddtReverseConnectRequest.png "reverse connect request")     
 
