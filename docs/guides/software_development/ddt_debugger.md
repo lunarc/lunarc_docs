@@ -43,7 +43,7 @@ You can now start the GUI by typing
 
 at the command prompt.  This will bring up the following GUI window
 
-![Start window](../../images/allineaForgeStartWindow.png "Start window")    
+![Start window](../../images/linaroforgeDDTStartWindow.png "Start window")    
 
 In the bottom left hand corner you get confirmation whether you managed to reach the license server at NSC.
 
