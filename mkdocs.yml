@@ -1,4 +1,4 @@
-esite_name: LUNARC Documentation
+site_name: LUNARC Documentation
 nav:
 - Home:
   - Welcome to the LUNARC Documentation: index.md
