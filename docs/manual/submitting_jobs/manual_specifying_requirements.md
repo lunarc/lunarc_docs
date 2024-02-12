@@ -18,7 +18,7 @@ To specify your walltime requirements write a statement like
 
 into your job script.
 
-The maximum walltime for any job on Aurora is 168h (7 days).
+The maximum walltime for any job on COSMOS is 168h (7 days).
 
 ## Naming jobs
 
@@ -84,14 +84,14 @@ To describe job dependencies, use the **-d** option of **sbatch**. This is parti
 To illustrate this consider the following example. You require a serial job to create a mesh for your simulation. Once this has finished, you want to start a parallel job using the mesh. You first submit the mesh creation job using **sbatch**
 
 ```bash
-[fred@aurora Simcode]$ sbatch run_mesh.sh
+[fred@cosmos-dt Simcode]$ sbatch run_mesh.sh
 Submitted batch job 8042
 ```
 
 As discussed, **sbatch** returns you a jobid, 8042 in this example. You use this to declare your dependency when submitting the simulation job to the queue
 
 ```bash
-[fred@aurora Simcode]$ sbatch -d afterok:8042 run_sim.sh
+[fred@cosmos-dt Simcode]$ sbatch -d afterok:8042 run_sim.sh
 Submitted batch job 8043
 ```
 
@@ -99,7 +99,7 @@ When using **jobinfo** or **squeue** to monitor job 8043, this should now be in 
 
 ## Testing jobs (test queue)
 
-To run short tests, it is possible to request extra high priority on Aurora with the help of
+To run short tests, it is possible to request extra high priority on COSMOS with the help of
 
 ```bash
 #SBATCH --qos=test
@@ -147,4 +147,4 @@ Some compute nodes in the Lund University partition are equipped with GPUs.
 (LUNARC)
 
 **Last Updated:**
-2022-10-06
+2024-02-12
