@@ -128,8 +128,8 @@ It is important that `MyRextensions` is the first argument.  After this, any cal
 
 ### Example R session to install an extension
 
-A session to install the extension **geoshpere** on the existing directory `
-~//MyRextensions` on the commandline may look as follows:
+A session to install the extension **geosphere** on the existing directory `
+~/MyRextensions` on the commandline may look as follows:
 
 ```
 -bash-4.2$ R
@@ -162,11 +162,11 @@ Type 'q()' to quit R.
 Save workspace image? [y/n/c]: n
 ```
 
-The `install.packages` will create quite some output and ask you to select a CRAN mirror, which we ommitted in this guide.
+The `install.packages` will create quite some output and ask you to select a CRAN mirror, which we ommitted in this guide. Note that the `.libPaths()` command is not necessary to the build; it just prints your library path so you can make sure that your personal extension directory has been added.
 
 ### Using a user installed package
 
-To use the package you have to make it available using the `library()` function of R.  If it installed in your own space you have to tell R where to look for it.   
+To use the package you have to make it available using the `library()` function of R.  If it installed in your own space you have to tell R where to look for it. 
 
 #### Modifying your R-scripts
 
