@@ -10,7 +10,7 @@ You get a gui similar to:
 * Adjust the walltime to your needs. The session will be terminated once the requested time has elapsed.  Do not request excessive amounts of time, if you do not manually terminate the sesssion and the session keeps running, your project gets charged for the full time.
 * Due to licensing issues, do not utilise more than 4 tasks, which is the default setting.
 * Choose the relevant project
-* Press start.  The Mathematica gui will start resources are available.  This might take a moment or two.
+* Press start.  The Mathematica gui will start once resources are available.  This might take a moment or two.
 
 ## Licensing
 LUNARC does not have a Mathematica license.  To use Mathematica on COSMOS, you have to bring your own license.  Assuming your license is held on a MathLM or equivalent license server the Mathematica gui can be utilised to connect to the license server. On launch you get the following screen:
