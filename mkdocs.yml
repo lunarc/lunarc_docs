@@ -70,7 +70,7 @@ nav:
     - R: guides/applications/Rscript.md
   - Software development:
     - Compiler options: guides/software_development/compiler_options.md
-    - DDT debugger on Aurora: guides/software_development/ddt_debugger.md
+    - DDT debugger on COSMOS: guides/software_development/ddt_debugger.md
 - Links:
   - Web resources: links/links_web.md
   - Video resources: links/links_video.md
