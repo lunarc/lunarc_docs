@@ -64,6 +64,7 @@ nav:
   - Specific applications:
     - Python: guides/applications/Python.md
     - MATLAB: guides/applications/MATLAB.md
+    - Mathematica: guides/applications/Mathematica.md
     - Abaqus FEA: guides/applications/Abaqus.md
     - COMSOL: guides/applications/COMSOL.md
     - R: guides/applications/Rscript.md
