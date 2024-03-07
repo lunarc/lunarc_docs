@@ -28,7 +28,7 @@ Please note that not all resources are shown in the launcher dialog box. Which r
 
 ## Starting the GfxLauncher
 
-The GfxLauncher is started in the [LUNARC hpc desktop](using_hpc_desktop).  Click on **Applications** in the top left hand corner and you get a pull down menu, as shown below.   Hower over the groups on the left side of the menu and you will be shown the applications that can be started using this group on the right hand side of the menu. Groups starting with **Applications** will give access to a GfxLauncher. 
+The GfxLauncher is started in the [LUNARC HPC desktop](using_hpc_desktop).  Click on **Applications** in the top left hand corner and you get a pull down menu, as shown below.   Hower over the groups on the left side of the menu and you will be shown the applications that can be started using this group on the right hand side of the menu. Groups starting with **Applications** will give access to a GfxLauncher. 
 
  ![application pull down menu](../images/on_demand_menues.png "GfxLauncher main user interface")
 
