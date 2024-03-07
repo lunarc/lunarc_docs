@@ -26,9 +26,9 @@ GfxLauncher has a very minimal user interface for the user to specify the reques
 
 Please note that not all resources are shown in the launcher dialog box. Which resources are displayed are determined by the application.
 
-## Starting the GfxLauncher
+## Starting on-demand applications
 
-The GfxLauncher is started in the [LUNARC HPC desktop](../using_hpc_desktop).  Click on **Applications** in the top left hand corner and you get a pull down menu, as shown below.   Hower over the groups on the left side of the menu. On the right hand side you will be shown the applications that can be started whithin this group. Groups starting with **Applications** will give access to a GfxLauncher. 
+Click on **Applications** in the top left hand corner of the [LUNARC HPC desktop](../using_hpc_desktop) and you get a pull down menu, as shown below.   Hower over the groups on the left side of the menu. On the right hand side you will be shown the applications that can be started whithin this group. Groups starting with **Applications** will use the launcher to start the application on a dedicated server. 
 
  ![application pull down menu](../images/on_demand_menues.png "GfxLauncher main user interface")
 
