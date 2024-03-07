@@ -17,11 +17,12 @@ GfxLauncher has a very minimal user interface for the user to specify the reques
 | COSMOS CPU | Standard COSMOS CPU server. |
 | COSMOS GPU (A40) | COSMOS GPU server with NVIDIA A40. | 
 | COSMOS GPU (A100) | COSMOS GPU server with NVIDIA A100. | 
+| Windows on-demand (V100) | Windows server providing hardware accelerated windows sessions. |
+
 <!--| Aurora CPU | Standard Aurora CPU server. |
 | Aurora CPU (32c) | Upgraded Aurora CPU servers with 32 cores / server. |
 | Aurora GPU (K80) | Standard Aurora GPU server with NVIDIA K80. |
 | Aurora GPU (A100) | Upgraded Aurora GPU server with NVIDIA A100. | -->
-| Windows on-demand (V100) | Windows server providing hardware accelerated windows sessions. |
 
 Please note that not all resources are shown in the launcher dialog box. Which resources are displayed are determined by the application.
 
