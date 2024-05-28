@@ -21,8 +21,8 @@ For more information on how to use containers, please see the following links:
 
 [UPPMAX Singularity Workshop](https://pmitev.github.io/UPPMAX-Singularity-workshop)
 
-[Apptainer](http://apptainer.org/)
+[Apptainer Documentation](http://apptainer.org/)
 
-[Singularity](https://sylabs.io/singularity/)
+[Singularity Documentation](https://sylabs.io/singularity/)
 
 Singularity/Apptainer commands are available on front-ends and nodes.
