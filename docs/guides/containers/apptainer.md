@@ -11,7 +11,7 @@ Singularity / Apptainer can download premade containers for certain programs fro
 
 `$ apptainer pull tensorflow.sif docker://tensorflow/tensorflow:latest-gpu`
 
-The documentation for the `apptainer pull` command with all avilable repository options can be found [here](https://apptainer.org/docs/user/latest/cli/apptainer_pull.html#apptainer-pull)
+The documentation for the `apptainer pull` command with all avilable repository options can be found [at this link.](https://apptainer.org/docs/user/latest/cli/apptainer_pull.html#apptainer-pull)
 
 If you want to run software in a premade container immediately without modification and you know the repository link, you can run it with the command `apptainer run <repository://link/to/container>`. You might, for example, include this as a line in your slurm script if you know of a niche software package that converts or performs a fixed function on some highly specialized file format, and it's not worth requesting it as an installation on COSMOS.
 
@@ -48,7 +48,10 @@ If you download or receive a container in the form of a definition (.def) file, 
 
 This creates the .sif file, which you can then run via:
 
-`$ ./path/to/your/container.sif` or, for more runtime options,
+`$ ./path/to/your/container.sif`
+
+or, for more runtime options,
+
 `$ apptainer run [-options...] /path/to/your/container.sif [args...]`.
 
 If you only want to run a subset of the programs included in a container, you can also do that with the `apptainer exec` command and specify just the commands you want to run at the end, like so:
@@ -64,11 +67,17 @@ If you have to create a more complex environment, you may need to create your ow
 
 ### Parts of a Definition File
 There are two main parts to any definition file, each of which contains several elements:
+
 1. The **Header**, which describes the OS that the contained software is to run within and where the template for that OS kernel is located. The header must include a `Bootstrap` key-value pair, which determines which other key-value pairs must be included in the header. The full list of available bootstrap agents can be found [in this section of the Apptainer documentation](https://apptainer.org/docs/user/latest/definition_files.html#preferred-bootstrap-agents). The other keywords made available with the use of each agent can be found by clicking the name of the bootstrap agent, if it is highlighted as a hyperlink.
+   
 2. **Sections**, which include all other code needed to build the container. Each section must be prefaced with a title, all lower-case, that starts with `%`, like `%post` or `%environment`. All sections are optional and there can be more than one instance of each section in one .def file. Sections run at build time are executed with the `/bin/sh` interpreter and accept `/bin/sh` options. The full list of available sections can be found [in the Sections chapter of the Apptainer documentation](https://apptainer.org/docs/user/latest/definition_files.html#sections). The most important sections you are likely to use are:
+   
    - `%files`: this section lets you copy files into the container. Note that Apptainer as configured on our system mounts your home directory, so files there do not need to be copied into the container.
+     
    - `%post`: this section is where you give the commands to download and install software into the container. By default, the commands will be in either `sh` or `bash`, but if you wanted to change the shell language to, for example, `tcsh`, you could start the section as `%post -c tcsh`. Environmental variables that must be defined at *build* time must also be placed here.
+     
    - `%environment`: this section lets you set *runtime* environmental variables to be used in the container. Environmental variables are not copied from the host, but some may be set within the container by any software installations done in `%post`.
+
    - `%runscript`: this section is written to a dedicated file at build time and then, at run time, its contents execute when the container is run directly. Any options passed upon running the container will be passed to `%runscript`. Very often this section will contain a line that says something like ` <app_name> "$@" `. The `"$@"` expands all the arguments passed after the container name in `apptainer run <container> [args...]` and forwards them to the program executed inside the container at runtime.
   
 Once the definition file is finished, you can just run the `build` command to create the .sif like you would for a premade .def file. Once you have the .sif file, running the container is the same as described for premade containers.
