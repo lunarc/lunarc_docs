@@ -47,7 +47,7 @@ OpenBLAS as installed in the foss [toolchains](https://lunarc-documentation.read
 export OMP_NUM_THREADS=1
 ```
 
-For more information on compiling MPI code, 
+For more information, see also the LUNARC manual page on [compiling MPI code with a toolchain.](https://lunarc-documentation.readthedocs.io/en/latest/manual/manual_modules_toolchains/#compiling-mpi-code-using-a-toolchain)
 
 ## I want to run VASP on COSMOS but it doesn't work
 
