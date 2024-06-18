@@ -41,7 +41,7 @@ other file systems available. The following script assumes the program processor
 
 The script copies the input data and the program executable from the submission directory to the node local disk executes the program on the node local disk and copies the result file back to the submission directory for safekeeping. The individual steps are highlighted by comments starting with a “#”. These comment lines can be kept in the file.
 
-You need to customise the file to suit your specific needs. The script is suitable for jobs consuming no more than 3100 MB of main memory on Aurora.
+You need to customise the file to suit your specific needs. The script is suitable for jobs consuming no more than 5300 MB of main memory on COSMOS.
 
 ```bash
 #!/bin/bash
@@ -60,14 +60,14 @@ You need to customise the file to suit your specific needs. The script is suitab
 cat $0
 
 # load the modules required for you program - customise for your program
-module load foss/2016a
+module load foss/2023a
 
 # copy the input data and program to node local disk
 # customise for your input file(s) and program name
-cp -p input.dat processor $SNIC_TMP
+cp -p input.dat processor $NAISS_TMP
 
 # change to the execution directory
-cd $SNIC_TMP
+cd $NAISS_TMP
 
 # run the program
 # customise for your program name and add arguments if required
@@ -84,11 +84,11 @@ and result files you need to modify the copy statements accordingly.
 
 ## Module loading
 
-The above examples assume your program has been compiled with the foss/2016a tool-chain module. If it has been compiled with a different compiler or tool chain you need to load the compiler module by adding a line similar to
+The above examples assume your program has been compiled with the foss/2023a tool-chain module. If it has been compiled with a different compiler or tool chain you need to load the compiler module by adding a line similar to, for example,
 
-    module add intel/12.1
+    module add imkl/2023.1.0
 
-LUNARC-provided modules on Aurora are only visible once the required compiler or combination of compiler and MPI library is loaded. If you are using software another person has compiled for you need to consult with that person on the required modules to load. 
+LUNARC-provided modules on COSMOS are only visible once the required compiler or combination of compiler and MPI library is loaded. If you are using software another person has compiled for you need to consult with that person on the required modules to load. 
 
 On other services, the modules typically complain if the wrong compiler is loaded and are hence self-documenting.
 
@@ -129,4 +129,4 @@ Rscript my_r_script.R
 (LUNARC)
 
 **Last Updated:**
-2022-10-05
+2024-06-18
