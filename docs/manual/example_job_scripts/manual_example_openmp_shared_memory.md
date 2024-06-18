@@ -25,13 +25,13 @@ cat $0
 ./processor_omp
 ```
 
-This script allows using 3100 MB of main memory per requested core. Then asking for 20 cores on Aurora you can use all the memory available to users on the node.
+This script allows using 5300 MB of main memory per requested core. Then asking for 20 cores on COSMOS you can use all the memory available to users on the node.
 
 The modification required to utilise the node local discs is the same as required [for serial](#basicrun-script-for-io-intensive-jobs) jobs](#basicrun-script-for-io-intensive-jobs).
 
 ## Thread binding for OpenMP codes
 
-The Aurora nodes deploy a cache-coherent non-uniform-memory access architecture (cc-numa). Many scientific simulation codes gain significant performance benefits on a cc-numa architecture when the user binds the threads to the physical cores of the hardware. This inhibits thread migration and improves memory locality. In the latest OpenMP standards thread binding has been standardised. In addition, many compilers offer their binding syntax.
+The COSMOS nodes deploy a cache-coherent non-uniform-memory access architecture (cc-numa). Many scientific simulation codes gain significant performance benefits on a cc-numa architecture when the user binds the threads to the physical cores of the hardware. This inhibits thread migration and improves memory locality. In the latest OpenMP standards thread binding has been standardised. In addition, many compilers offer their binding syntax.
 
 ### Thread binding with the GNU compilers
 

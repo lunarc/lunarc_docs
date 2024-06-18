@@ -1,6 +1,6 @@
 # Compiling code and using toolchains
 
-A significant portion of the Aurora software is built using the [EasyBuild](http://hpcugent.github.io/easybuild/) software framework.  This framework provides so-called _Toolchains_ which are utilised to build software.  LUNARC recommends using toolchains when building software.  This includes compiling your software outside the EasyBuild framework.
+A significant portion of the COSMOS software is built using the [EasyBuild](http://hpcugent.github.io/easybuild/) software framework.  This framework provides so-called _Toolchains_ which are utilised to build software.  LUNARC recommends using toolchains when building software.  This includes compiling your software outside the EasyBuild framework.
 
 ## Currently provided toolchains
 
@@ -11,23 +11,25 @@ A significant portion of the Aurora software is built using the [EasyBuild](http
     * **GCC**: GCC
     * **foss**: GCC, OpenMPI, OpenBLAS, FFTW, BLACS, ScaLAPACK
     * **gompi**: GCC, OpenMPI
-    * **gimpi**: GCC, Intel MPI
-    * **gimkl**: GCC, Intel MPI, MKL
+    * **gomkl**: GCC, OpenMPI, MKL
+    * **gfbf**: GCC, FlexiBLAS, FFTW  (no MPI)
 
 === "Intel compiler toolchains"
 
-    * **iccifort**: icc, ifort
     * **intel**: icc, ifort, Intel MPI, MKL
     * **iimpi**: icc, ifort, Intel MPI
-    * **iomkl**: icc, ifort, OpenMPI, MKL
+<!---    * **iomkl**: icc, ifort, OpenMPI, MKL
     * **iompi**: icc, ifort, OpenMPI
+    * **iccifort**: icc, ifort
+    ml spider didn't find those last 3--->
 
-=== "PGI compiler toolchains"
+<!---
+=== "PGI compiler toolchains" <--these no longer appear to be supported on COSMOS
  
     * **PGI**: PGI
     * **pompi**: PGI, OpenMPI
     * **pomkl**: PGI, OpenMPI, MKL
-
+--->
 ## CUDA based toolchains for GPU nodes
 
 === "GCC compiler toolchains for GPU"
@@ -48,10 +50,9 @@ If you require additional toolchains, contact [LUNARC support](http://www.lunarc
 
 The above choices of toolchains are a bit overwhelming, in particular for new users.  We recommend first choosing a toolchain and then selecting a version.  Good choices for general use are the toolchains:
 
-* **foss**, if you like to use the GCC compiler suite
-* **gimkl**, if you like to use the GCC compiler suite with Intel's MKL performance library
-* **intel**, if you like to use the Intel compiler suite
-* **pomkl**, if you like to use the PGI compiler suite
+* **foss**, if you want to use the GCC compiler suite
+* **gomkl**, if you want to use the GCC compiler suite with Intel's MKL performance library
+* **intel**, if you want to use the Intel compiler suite
 
 **Example:** To check the foss versions available you
 
@@ -73,10 +74,10 @@ Use "module keyword key1 key2 ..." to search for all possible
 modules matching any of the "keys".
 ```
 
-This shows you that three versions of the foss toolchain are available, with version 2016a being the default.  The version numbering at the time of writing is a *time stamp*.  Version 2015a was released at the beginning of 2015, 2015b in the middle of 2015 and 2016a at the beginning of 2016.  If you load e.g. the `foss/2016a` module
+This shows you that three versions of the foss toolchain are available, with version 2016a being the default.  The version numbering at the time of writing is a *time stamp*.  Version 2022a was released at the beginning of 2022, 2022b in the middle of 2022 and 2023a at the beginning of 2023.  If you load e.g. the `foss/2023a` module
 
 ```bash
-module load foss/2016a
+module load foss/2023a
 ```
 
 It will load several modules for you, incl. compiler, libraries and utilities.  The command 
@@ -109,12 +110,12 @@ If you have loaded a toolchain build use the following commands to compile.
     * **icpc**: C++ compiler
     * **ifort**: Fortran compiler
 
-=== "PGI Toolchain"
+<!---=== "PGI Toolchain"
 
     * **pgcc**: C compiler
     * **pgc++**: C++ compiler
     * **pgf90**: Fortran compiler
-    * **pgf77**: Fortran77 compiler
+    * **pgf77**: Fortran77 compiler--->
  
 In all cases please do not forget about compiler options, in particular optimisation flags.  You should have the toolchain used for compiling loaded when executing the code.
 
@@ -130,7 +131,7 @@ When using a toolchain utilising **OpenMPI** (e.g. foss, iomkl, pomkl) use:
  * **mpicxx** or **mpic++*: MPI compiler for C++ code
  * **mpifort**: MPI compiler for Fortran code
  
-Inside your slurm job-script, executables build with OpenMPI need to get started using the **mpirun** command.  For MPI jobs not using threads, we recommend using task binding.  A simple job script for standard MPI jobs (no threads, e.g. OpenMP) is available on Aurora
+Inside your slurm job-script, executables build with OpenMPI need to get started using the **mpirun** command.  For MPI jobs not using threads, we recommend using task binding.  A simple job script for standard MPI jobs (no threads, e.g. OpenMP) is available on COSMOS:
 
 ```bash
 /sw/pkg/submissionsScripts/script_openmpi.sh
@@ -150,7 +151,7 @@ When using a toolchain utilising the **Intel MPI library** and the **Intel compi
 * **mpiicpc**: MPI compiler for C++ code
 * **mpiifort**: MPI compiler for Fortran code
  
-Inside your slurm job-script, executables build with the Intel MPI library need to get started using the `srun` command.  Task binding is still under investigation and not yet available. For a simple job script for standard MPI jobs is available on Aurora:
+Inside your slurm job-script, executables build with the Intel MPI library need to get started using the `srun` command.  Task binding is still under investigation and not yet available. For a simple job script for standard MPI jobs is available on COSMOS:
 
 ```bash
 /sw/pkg/submissionsScripts/script_intelmpi.sh
@@ -175,4 +176,4 @@ Executable builds using this setup are also started with the **srun** command fr
 (LUNARC)
 
 **Last Updated:**
-2022-10-05
+2024-06-18

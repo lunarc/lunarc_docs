@@ -2,8 +2,7 @@
 
 ## Hierarchical module naming scheme
 
-With the start of the Aurora service, LUNARC is using a hierarchical module naming scheme.  Hierarchical modules ensure that the correct shared libraries are available when running an application while keeping the screen output of standard module commands such as **module avail** manageable.
-
+Starting with the Aurora service and continuing with COSMOS, LUNARC uses a hierarchical module naming scheme.  Hierarchical modules ensure that the correct shared libraries are available when running an application while keeping the screen output of standard module commands such as **module avail** manageable.
 ### Hierarchical naming scheme concept
 
 When logging into the system, you only get access to those modules that do not require any special dynamic libraries.  After *loading a compiler module* you obtain access to those packages that have been built with that specific compiler and depend on its shared libraries. For many compilers, this will include one or more matching MPI libraries.  After loading an MPI library additional software packages, depending on this pair (compiler & MPI library), will become available.  Users should take note that in many cases loading an MPI library is required for software that doesn't depend on it.
