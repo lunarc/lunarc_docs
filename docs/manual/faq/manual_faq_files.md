@@ -2,7 +2,7 @@
 
 ## I accidentally deleted or modified a file
 
-For the home space on Aurora, we have **snapshots** enabled.  If you type `ls .snapshots` at the commandline in the current directory you get to see a number of diretories named like `@-2020.12.11-00.00.35`, which stands for the date and time of the snapshot.  Change into the directory specifying a point of time before the accident, e.g.:
+For the home space on COSMOS, we have **snapshots** enabled.  If you type `ls .snapshots` at the commandline in the current directory you get to see a number of diretories named like `@-2020.12.11-00.00.35`, which stands for the date and time of the snapshot.  Change into the directory specifying a point of time before the accident, e.g.:
 
 ```
 cd .snapshots/@-2020.12.11-00.00.35
