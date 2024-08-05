@@ -33,7 +33,7 @@ To change to the software titles compiled for the *Cascade Lake* CPUs, users nee
 module --force purge
 module load SoftwareTree/Cascade
 ```
-This should work on the frontend nodes (e.g. aurora.lunarc.lu.se or the HPC desktop) and within a batch script (aka. SLURM script).  Once this is loaded, the commands `module avail` and `module spider` can be used to enquire about available software.
+This should work on the frontend nodes (e.g. cosmos.lunarc.lu.se or the HPC desktop cosmos-dt.lunarc.lu.se) and within a batch script (aka. SLURM script).  Once this is loaded, the commands `module avail` and `module spider` can be used to enquire about available software.
 
 !!! info
     * Software in the `SoftwareTree/Cascade` is not expected to work on the frontend nodes.
@@ -46,7 +46,7 @@ This should work on the frontend nodes (e.g. aurora.lunarc.lu.se or the HPC desk
 Many users compile their own software.  To obtain executables and binaries which are optimised for the *Cascade Lake* CPUs, it is necessary to instruct the compilers to do so.   This can be accomplished via cross compiling or by building the software on a compute node by e.g. submitting a batch job with the build instructions.   For complex build proceedures, the latter might actually be easier.
 
 #### Cross compiling on a frontend node
-The Aurora frontend node `aurora.lunarc.lu.se` as well as the nodes utilised for the LUNARC HPC desktop feature *Haswell* CPUs.  To generate code optimised for *Cascade Lake* processors you need to instruct the compiler to generate code intended to be used on a different architecture than utilised for the compilation.  These instructions depend on the compiler.
+The COSMOS frontend node `cosmos.lunarc.lu.se` as well as the nodes utilised for the LUNARC HPC desktop `cosmos-dt.lunarc.lu.se` feature *AMD* CPUs. To generate code optimised for *Cascade Lake* processors you need to instruct the compiler to generate code intended to be used on a different architecture than utilised for the compilation. These instructions depend on the compiler.
 
 === "GCC compiler"
 
