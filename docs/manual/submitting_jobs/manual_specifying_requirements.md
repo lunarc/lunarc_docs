@@ -137,7 +137,7 @@ In addition, for those who access private nodes (financed by a research project)
 
 ## Accessing GPUs in the LU-partition
 
-Some compute nodes in the Lund University partition are equipped with GPUs. At the time of this revision, there are  4 nodes with A100 GPUs available for users whose projects were approved to use GPUs. To specify the use of those nodes, you must include
+Some compute nodes in the Lund University partition are equipped with GPUs. At the time of this revision, there are  4 nodes with A100 NVIDIA GPUs available for users whose projects were approved to use GPUs. To specify the use of those nodes, you must include
 
 ```bash
 #SBATCH -p gpua100
@@ -152,6 +152,14 @@ in your batch scipt.
 for the A40 nodes.
 
 -->
+
+These nodes have more memory than the regular compute nodes. To use all available memory, your batch script must request all of it explicitly, or it will default to the usual CPU memory limit. After the line specifying the GPU partition, you can add
+
+```bash
+#SBATCH --mem-per-cpu=10600
+```
+to use all allowable memory.
+
 ---
 
 **Author:**
