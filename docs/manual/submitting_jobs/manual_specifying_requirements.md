@@ -137,9 +137,19 @@ In addition, for those who access private nodes (financed by a research project)
 
 ## Accessing GPUs in the LU-partition
 
-Some compute nodes in the Lund University partition are equipped with GPUs. 
+Some compute nodes in the Lund University partition are equipped with GPUs. At the time of this revision, there are 5 nodes with NVIDIA A40 GPU nodes and 4 nodes with A100 GPUs in the Intel partitions. To specify the use of those nodes, you must include either
 
-*Information on accessing the GPUs will be available shortly*
+```bash
+#SBATCH -p gpua100
+```
+
+for the A100 nodes or
+
+```bash
+#SBATCH -p gpua40
+```
+
+for the A40 nodes.
 
 ---
 
@@ -147,4 +157,4 @@ Some compute nodes in the Lund University partition are equipped with GPUs.
 (LUNARC)
 
 **Last Updated:**
-2024-02-12
+2024-07-10
