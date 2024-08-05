@@ -9,26 +9,26 @@ This guides describes a method to connect a remote SSHFS volume using a linux te
 ## Connecting a SSHFS volume
 
 Make sure the SSHFS client is installed on your system (Debian: `apt-get install sshfs`, Fedora: `dnf install fuse-sshfs`).
-Create a directory in your home directory on your local (non-LUNARC) computer, where your files hosted at LUNARC will be accessible, for example `~/media/aurora-home`.
+Create a directory in your home directory on your local (non-LUNARC) computer, where your files hosted at LUNARC will be accessible, for example `~/media/cosmos-home`.
 
 ```bash
-username@localhost:~$ mkdir -p ~/media/aurora-home
+username@localhost:~$ mkdir -p ~/media/cosmos-home
 ```
 
 Use SSHFS to connect the directory at LUNARC, that you want accessible on your local computer.
-Here we assume lunarc user `lunarc_username` to connect its home directory on Aurora:
+Here we assume lunarc user `lunarc_username` to connect its home directory on COSMOS:
 
 
 ```bash
-username@localhost:~$ sshfs lunarc_username@aurora.lunarc.lu.se:/home/lunarc_username ~/media/aurora-home
-(lunarc_username@aurora.lunarc.lu.se) Password: 
-(lunarc_username@aurora.lunarc.lu.se) Enter your Pocket Pass OTP: 248921
+username@localhost:~$ sshfs lunarc_username@cosmos.lunarc.lu.se:/home/lunarc_username ~/media/cosmos-home
+(lunarc_username@cosmos.lunarc.lu.se) Password: 
+(lunarc_username@cosmos.lunarc.lu.se) Enter your Pocket Pass OTP: 248921
 username@localhost:~$
 ```
 
 Your LUNARC files are now accessible on your local computer:
 ```bash
-username@localhost:~$ ls ~/media/aurora-home/
+username@localhost:~$ ls ~/media/cosmos-home/
  create                      slurm-6411487.out   slurm-6890513.out
  Desktop                     slurm-6411488.out   slurm-6890522.out
  dev                         slurm-6411489.out   slurm-6890523.out
@@ -42,7 +42,7 @@ This example assumes the LUNARC directory connected in the example described in 
 Use `fusermount`'s option `-u` to disconnect the remote volume:
 
 ```bash
-lunarc_username@localhost:~$ fusermount -u ~/media/aurora-home
+lunarc_username@localhost:~$ fusermount -u ~/media/cosmos-home
 lunarc_username@localhost:~$ 
 ```
 
