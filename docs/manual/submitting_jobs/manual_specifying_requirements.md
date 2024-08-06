@@ -135,7 +135,7 @@ In addition, for those who access private nodes (financed by a research project)
 #SBATCH --reservation=lu2022-x-xx
 ```
 
-## Accessing GPUs in the LU-partition
+## Accessing GPUs
 
 ### NVIDIA A100 GPUs with AMD processors 
 

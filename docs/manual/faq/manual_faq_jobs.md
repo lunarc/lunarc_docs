@@ -10,7 +10,7 @@ When using a Lund University project (LU project), you have to specify the proje
 
 ## I want to use the COSMOS GPU nodes
 
-To access the COSMOS GPU nodes, you need to be a member of an [LU local project](https://supr.snic.se/round/2020locallu/). Please review our [batch system guide](https://lunarc-documentation.readthedocs.io/en/latest/manual/submitting_jobs/manual_specifying_requirements/#accessing-gpus-in-the-lu-partition) for the required modification to your submission script.  The [software guide](https://lunarc-documentation.readthedocs.io/en/latest/manual/manual_modules_toolchains/#cuda-based-toolchains-for-gpu-nodes) provides an overview on Compiler, Cuda and MPI support for the GPU nodes. 
+Please review our [batch system guide](https://lunarc-documentation.readthedocs.io/en/latest/manual/submitting_jobs/manual_specifying_requirements/#accessing-gpus) for the required modification to your submission script.  The [software guide](https://lunarc-documentation.readthedocs.io/en/latest/manual/manual_modules_toolchains/#cuda-based-toolchains-for-gpu-nodes) provides an overview on Compiler, Cuda and MPI support for the GPU nodes. 
 
 ## Can I prevent my job from restarting in case of a node failure
 
