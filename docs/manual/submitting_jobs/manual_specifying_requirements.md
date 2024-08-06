@@ -137,28 +137,19 @@ In addition, for those who access private nodes (financed by a research project)
 
 ## Accessing GPUs in the LU-partition
 
-Some compute nodes in the Lund University partition are equipped with GPUs. At the time of this revision, there are  4 nodes with A100 NVIDIA GPUs available for users whose projects were approved to use GPUs. To specify the use of those nodes, you must include
+Some compute nodes in the Lund University partition are equipped with GPUs, which are placed in the **gpua100** partition. At the time of this revision, there are six nodes with A100 NVIDIA GPUs available.  These nodes feature two AMD EPYC 7413 24-Core processors, a total fo 48 cores.   These nodes are equiped with 512 GB of RAm. To access these nodes, you must include the line
 
 ```bash
 #SBATCH -p gpua100
 ```
-in your batch scipt.
-<!--for the A100 nodes or
+in your batch scipt.  These nodes are configured as exclusive access and will not be shared between users.   User projects will be charged for the entire node (48 cores).
 
-```bash
-#SBATCH -p gpua40i
-```
-
-for the A40 nodes.
-
--->
-
-These nodes have more memory than the regular compute nodes. To use all available memory, your batch script must request all of it explicitly, or it will default to the usual CPU memory limit. After the line specifying the GPU partition, you can add
+To gain access to all the memory of the nodes, users need to override the default memory request of 5300 MB per core. Your batch script should include the line:
 
 ```bash
 #SBATCH --mem-per-cpu=10600
 ```
-to use all allowable memory.
+to use all allowable memory.  These nodes in the gpua100 pratition must not be used for CPU only applications, which are not utilising the GPUs.
 
 ---
 
