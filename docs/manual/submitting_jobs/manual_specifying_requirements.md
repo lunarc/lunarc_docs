@@ -137,7 +137,9 @@ In addition, for those who access private nodes (financed by a research project)
 
 ## Accessing GPUs in the LU-partition
 
-Some compute nodes in the Lund University partition are equipped with GPUs, which are placed in the **gpua100** partition. At the time of this revision, there are six nodes with A100 NVIDIA GPUs and AMD CPUs available.  These nodes feature two AMD EPYC 7413 24-Core processors, a total fo 48 cores, and 512 GB of RAM. To access these nodes, you must include the line
+### NVIDIA A100 GPUs with AMD processors 
+
+A number of compute nodes on COSMOS are equipped with GPUs. At the time of this revision, there are six nodes with A100 NVIDIA GPUs and AMD CPUs available.  These nodes feature two AMD EPYC 7413 24-Core processors, a total of 48 cores.  These nodes have 512 GB of RAM are placed in the **gpua100** partition. To access these nodes, you must include the line
 
 ```bash
 #SBATCH -p gpua100
@@ -150,6 +152,10 @@ To gain access to all the memory of the nodes, users need to override the defaul
 #SBATCH --mem-per-cpu=10600
 ```
 to use all allowable memory.  These nodes in the gpua100 partition must not be used for CPU only applications, which are not utilising the GPUs.
+
+### NVIDIA A40 GPUs with AMD processors
+
+These nodes placed in the **gpua40** are reserved for interactive graphic work in the on-demand system.  Please do not submit compute jobs via slurm to these nodes.  Compute jobs submitted to the gpua40 partition may be terminated without prior warning.   
 
 ---
 
