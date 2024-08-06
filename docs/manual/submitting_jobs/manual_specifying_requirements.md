@@ -151,7 +151,7 @@ To gain access to all the memory of the nodes, users need to override the defaul
 ```bash
 #SBATCH --mem-per-cpu=10600
 ```
-to use all allowable memory.  These nodes in the gpua100 partition must not be used for CPU only applications, which are not utilising the GPUs.
+to use all allowable memory.  The nodes in the gpua100 partition must not be used for CPU only applications, which are not utilising the GPUs.
 
 ### NVIDIA A40 GPUs with AMD processors
 

@@ -23,8 +23,8 @@ to the header portion of your job script prevents this behaviour.
 ---
 
 **Authors:**
-Joachim Hein (LUNARC)
+Joachim Hein (LUNARC),
 Rebecca Pitts (LUNARC)
 
 **Last Updated:**
-2022-08-31
+2024-08-06
