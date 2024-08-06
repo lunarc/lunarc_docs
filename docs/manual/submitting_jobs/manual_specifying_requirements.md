@@ -137,7 +137,7 @@ In addition, for those who access private nodes (financed by a research project)
 
 ## Accessing GPUs in the LU-partition
 
-Some compute nodes in the Lund University partition are equipped with GPUs, which are placed in the **gpua100** partition. At the time of this revision, there are six nodes with A100 NVIDIA GPUs available.  These nodes feature two AMD EPYC 7413 24-Core processors, a total fo 48 cores.   These nodes are equiped with 512 GB of RAm. To access these nodes, you must include the line
+Some compute nodes in the Lund University partition are equipped with GPUs, which are placed in the **gpua100** partition. At the time of this revision, there are six nodes with A100 NVIDIA GPUs and AMD CPUs available.  These nodes feature two AMD EPYC 7413 24-Core processors, a total fo 48 cores.   These nodes are equiped with 512 GB of RAm. To access these nodes, you must include the line
 
 ```bash
 #SBATCH -p gpua100
@@ -157,4 +157,4 @@ to use all allowable memory.  These nodes in the gpua100 pratition must not be u
 (LUNARC)
 
 **Last Updated:**
-2024-08-05
+2024-08-06
