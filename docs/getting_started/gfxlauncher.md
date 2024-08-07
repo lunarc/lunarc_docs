@@ -19,6 +19,7 @@ Groups starting with **Applications** will use the launcher to start the applica
 GfxLauncher has a very minimal user interface for the user to specify the requested time the application is needed, any specific resources required (GPU, CPU) and the project charged when running the application. The main user interface is described in the following figure:
 
 ![sample screen](../images/gfxlauncher_main_new.png "GfxLauncher main user interface")
+![sample screen](../images/gfxlauncher_main_terminal.png "GfxLauncher main user interface")
 
 * Walltime: Specify how long you need the application.   The session will be terminated once the time has elapsed
 * Requirements: Select number of cores utilised, memory available etc.  Use the cog wheel to change.  You will be presented with another interface to change these settings.
