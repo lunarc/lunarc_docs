@@ -16,15 +16,21 @@ Groups starting with **Applications** will use the launcher to start the applica
 
 ## Job Launcher
 
-GfxLauncher has a very minimal user interface for the user to specify the requested time the application is needed, any specific resources required (GPU, CPU) and the project charged when running the application. The main user interface is described in the following figure:
+GfxLauncher has a very minimal user interface for the user to specify the requested time the application is needed, any specific resources required (GPU, CPU) and the project charged when running the application. Two examples for the main user interface is described in the following figures.
 
-![sample screen](../images/gfxlauncher_main_new.png "GfxLauncher main user interface")
+
+![sample screen](../images/gfxlauncher_main_jupyter.png "GfxLauncher main user interface")
+
 ![sample screen](../images/gfxlauncher_main_terminal.png "GfxLauncher main user interface")
 
+You can make the following selections:
 * Walltime: Specify how long you need the application.   The session will be terminated once the time has elapsed
 * Requirements: Select number of cores utilised, memory available etc.  Use the cog wheel to change.  You will be presented with another interface to change these settings.
 * Project: GfxLauncher presents you with a list of projects you have access to.   Select the project you want the job to be charged to.
+* Resource: Select the resource type (e.g. node type) required
 * Job setting ...: Allows you select a specific application if the default does not full fill your needs.
+
+Not all applications will have all options as already shown in the examples.
 
 ## Resources
 
