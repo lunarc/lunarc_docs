@@ -19,9 +19,9 @@ Groups starting with **Applications** will use the launcher to start the applica
 GfxLauncher has a very minimal user interface for the user to specify the requested time the application is needed, any specific resources required (GPU, CPU) and the project charged when running the application. Two examples for the main user interface is described in the following figures.
 
 
-![sample screen](../images/gfxlauncher_main_jupyter.png "GfxLauncher main user interface")
+![sample screen](../images/gfxlauncher_main_jupyter.png "GfxLauncher main user interface for a jupyter lab")
 
-![sample screen](../images/gfxlauncher_main_terminal.png "GfxLauncher main user interface")
+![sample screen](../images/gfxlauncher_main_terminal.png "GfxLauncher main user interface for a terminal")
 
 You can make the following selections:
 * Walltime: Specify how long you need the application.   The session will be terminated once the time has elapsed
