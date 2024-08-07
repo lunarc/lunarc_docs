@@ -24,6 +24,7 @@ GfxLauncher has a very minimal user interface for the user to specify the reques
 ![sample screen](../images/gfxlauncher_main_terminal.png "GfxLauncher main user interface for a terminal")
 
 You can make the following selections:
+
 * Walltime: Specify how long you need the application.   The session will be terminated once the time has elapsed
 * Requirements: Select number of cores utilised, memory available etc.  Use the cog wheel to change.  You will be presented with another interface to change these settings.
 * Project: GfxLauncher presents you with a list of projects you have access to.   Select the project you want the job to be charged to.
@@ -31,6 +32,7 @@ You can make the following selections:
 * Job setting ...: Allows you select a specific application if the default does not full fill your needs.
 
 Not all applications will have all options as already shown in the examples.
+
 
 ## Resources
 
@@ -50,6 +52,21 @@ Not all applications will have all options as already shown in the examples.
 
 Please note that for a given application not all resources are shown in the launcher dialog box.  Which resources are displayed is determined by the application.
 The remaining groups with names starting differently from **Applications**, will start applications and tools on the login-nodes.  The login-nodes are only suitable for lightweight work, consuming limited CPU time and memory.  
+
+## Resource requirements
+When using the cog wheel button of the **Requirements** option in the job launcher main window you get to the resource specification window:
+
+![sample screen](../images/gfxlauncher_resource_specification.png "GfxLauncher resource specification window")
+
+In this window you can set
+
+* Jobname: Specify a jobname to identify your job with e.g. squeue on a command line
+* Task per node: Number of cores to be used for your job.  Make sure your application can utilise all the requested cores.  Your project will be charged for all the cores you request here
+* Memory per cpu: leave unchecked if you want to use default settings.  If you check the box, you can enter the amount of memory per core you need in MB.  If you request more memory than your fair share, your project will be charged for the cores left without memory.
+* Full node: By checking the box you request all the cores and memory of the resource specified.  Your project will be charged for the full node.
+
+At the time of writing the on-demand desktop does not support multi-node running. 
+
 
 ---
 
