@@ -8,7 +8,7 @@ Click on **Applications** in the top left hand corner of the [LUNARC HPC desktop
 
 ![application pull down menu](../images/on_demand_menues.png "GfxLauncher main user interface")
 
-Hover over a group on the left side of the menu. On the right hand side you will be shown the applications that can be started in this group. The below example shows the interface when hovering over **Applications Pyton**:
+Hover over a group on the left side of the menu. On the right hand side you will be shown the applications that can be started in this group. The below example shows the interface when hovering over **Applications Python**:
 
 ![application pull down menu](../images/on_demand_menues_2.png "GfxLauncher main user interface with Python applications")
 
