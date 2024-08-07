@@ -14,6 +14,8 @@ Hover over a group on the left side of the menu. On the right hand side you will
 
 Groups starting with **Applications** will use the launcher to start the application on a dedicated server.  Clicking on an application on the right hand side will start the job launcher.
 
+The remaining groups with names starting differently from **Applications**, will start applications and tools on the login-nodes.  The login-nodes are only suitable for lightweight work, consuming limited CPU time and memory.  
+
 ## Job Launcher
 
 GfxLauncher has a very minimal user interface for the user to specify the requested time the application is needed, any specific resources required (GPU, CPU) and the project charged when running the application. Two examples for the main user interface is described in the following figures.
@@ -51,7 +53,6 @@ Not all applications will have all options as already shown in the examples.
 | Aurora GPU (A100) | Upgraded Aurora GPU server with NVIDIA A100. | -->
 
 Please note that for a given application not all resources are shown in the launcher dialog box.  Which resources are displayed is determined by the application.
-The remaining groups with names starting differently from **Applications**, will start applications and tools on the login-nodes.  The login-nodes are only suitable for lightweight work, consuming limited CPU time and memory.  
 
 ## Resource requirements
 When using the cog wheel button of the **Requirements** option in the job launcher main window you get to the resource specification window:
@@ -61,7 +62,7 @@ When using the cog wheel button of the **Requirements** option in the job launch
 In this window you can set
 
 * Jobname: Specify a jobname to identify your job with e.g. squeue on a command line
-* Task per node: Number of cores to be used for your job.  Make sure your application can utilise all the requested cores.  Your project will be charged for all the cores you request here
+* Tasks per node: Number of cores to be used for your job.  Make sure your application can utilise all the requested cores.  Your project will be charged for all the cores you request here
 * Memory per cpu: leave unchecked if you want to use default settings.  If you check the box, you can enter the amount of memory per core you need in MB.  If you request more memory than your fair share, your project will be charged for the cores left without memory.
 * Full node: By checking the box you request all the cores and memory of the resource specified.  Your project will be charged for the full node.
 
