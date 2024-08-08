@@ -1,4 +1,4 @@
-Sometimes it is desirable to have an interactive connection to the compute nodes of the cluster. Extensive code testing and debugging are typical use cases. Regular production runs, in particular calculations requiring multiple days, are expected to access the compute nodes via the [**sbatch**](../submitting_jobs/manual_basic/job) command.
+Sometimes it is desirable to have an interactive connection to the compute nodes of the cluster. Extensive code testing and debugging are typical use cases. Regular production runs, in particular calculations requiring multiple days, are expected to access the compute nodes via the [**sbatch**](../submitting_jobs/manual_basic_job) command.
 
 ## Two ways of interactive computing
 LUNARC is commited to interactive HPC.  We currently support two ways of interactive resource access:
