@@ -3,7 +3,7 @@ Sometimes it is desirable to have an interactive connection to the compute nodes
 ## Two ways of interactive computing
 LUNARC is commited to interactive HPC.  We currently support two ways of interactive resource access:
 
-* The **LUNARC Desktop on Demand** allows interactive access to compute resources utilising an easy to use graphical interface.  One can choose from a large number of application or just start a command line terminal on the choosen resources.  If you want a terminal on your choosen resource, seach for **Interactive Terminal** (CPU only) or **Accelerated Terminal** (GPU support).  Both terminals allow users to easily start graphical applications on the command line.  There is a dedicated [user document](../../getting_started/gfxlauncher) on the Desktop on Demand.
+* The **LUNARC Desktop on Demand** offers an easy to use graphical interface, which provides interactive access to compute resources.  One can choose from a large number of application or just start a command line terminal on the choosen resources.  If you want a terminal on your choosen resource, seach for **Interactive Terminal** (CPU only) or **Accelerated Terminal** (GPU support).  Both terminals allow users to easily start graphical applications on the command line.  There is a dedicated [user document](../../getting_started/gfxlauncher) on the Desktop on Demand.
 * The **interactive** command described in this document
 
 We expect most users, in particular new users of our services to be better served by the [Desktop on Demand](../../getting_started/gfxlauncher).
