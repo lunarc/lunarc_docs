@@ -126,7 +126,5 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - meta
 
-plugins:
-  - git-revision-date-localized:
-      type: iso_datetime
+
 
