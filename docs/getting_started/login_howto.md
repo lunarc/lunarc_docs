@@ -61,14 +61,14 @@ macOS is already configured to handle the login to LUNARC resources with one tim
 
 To reduce the number of logins to the system the **ServerAlive** option can also be added:
 
-    Host cosmos.lunarc.lu.se 
-    PreferredAuthentications keyboard-interactive 
-    ServerAliveInterval 10 
+```ssh
+Host cosmos.lunarc.lu.se 
+PreferredAuthentications keyboard-interactive 
+ServerAliveInterval 10 
 
-    Host * 
-        PreferredAuthentications hostbased,publickey,keyboard-interactive,password
-
-
+Host * 
+    PreferredAuthentications hostbased,publickey,keyboard-interactive,password
+```
 
 ## Windows
 
