@@ -2,7 +2,7 @@
 
 The LUNARC **On-demand desktop** facilitates the interactive execution of resource intensive applications on LUNARC's HPC cluster COSMOS.  It utilises the graphical application launcher (GfxLauncher) for launching graphical or interactive applications through SLURM.  It is responsible for submitting a job to SLURM, connecting to the application running on the node and monitoring the progress of the application.
 
-The **On-demancd desktop** is particularly use full for interactive work consuming small to medium resources levels (cpu time, core count, memory, etc.).  Computational work not requiring interactive supervision, significant resources and/or multiple nodes are better submitted using the [batch system](../../manual/submitting_jobs/manual_basic_job).  
+The **On-demancd desktop** is particularly use full for interactive work consuming small to medium resources levels (cpu time, core count, memory, etc.).  Computational work not requiring interactive supervision, utilising significant resources and/or multiple nodes is better submitted using the [batch system](../../manual/submitting_jobs/manual_basic_job).  
 
 ## Starting on-demand applications
 
@@ -29,13 +29,17 @@ GfxLauncher has a very minimal user interface for the user to specify the reques
 
 You can make the following selections:
 
-* Walltime: Specify how long you need the application.   The session will be terminated once the time has elapsed
-* Requirements: Select number of cores utilised, memory available etc.  Use the cog wheel to change.  You will be presented with another interface to change these settings.
-* Project: GfxLauncher presents you with a list of projects you have access to.   Select the project you want the job to be charged to.
-* Resource: Select the resource type (e.g. node type) required
-* Job setting ...: Allows you select a specific application if the default does not full fill your needs.
+| Terminal option | Description |
+|-----------------|-----------------------|
+| Walltime        | Specify how long you need the application.   The session will be terminated once the time has elapsed |
+| Requirements    | Select number of cores utilised, memory available etc.  Use the cog wheel to change.  You will be presented with another interface to change these settings |
+| Project         | GfxLauncher presents you with a list of projects you have access to.   Select the project you want the job to be charged to |
+| Resource        | Select the resource type (e.g. node type) required |
+| Job settings... | Allows you select a specific application if the default does not full fill your needs |
 
-Not all applications will have all options as already shown in the examples.
+The available options depend on the application.
+
+Hit the **Start**-button to start your session.  This will put a resource request into the job queue (SLURM) of the system and will be competing for resources on an equal level with request submitted through the [batch system](../../manual/submitting_jobs/manual_basic_job).  Depending on your request (e.g. resource level, resource type, job time) you may encounter a significant wait time before your session starts.  
 
 
 ## Resources
@@ -63,10 +67,12 @@ When using the cog wheel button of the **Requirements** option in the job launch
 
 In this window you can set
 
-* Jobname: Specify a jobname to identify your job with e.g. squeue on a command line
-* Tasks per node: Number of cores to be used for your job.  Make sure your application can utilise all the requested cores.  Your project will be charged for all the cores you request here
-* Memory per cpu: leave unchecked if you want to use default settings.  If you check the box, you can enter the amount of memory per core you need in MB.  If you request more memory than your fair share, your project will be charged for the cores left without memory.
-* Full node: By checking the box you request all the cores and memory of the resource specified.  Your project will be charged for the full node.
+| Terminal option | Description |
+|-----------------|-------------|
+| Jobname         | Specify a jobname to identify your job with e.g. squeue on a command line |
+| Tasks per node  | Number of cores to be used for your job.  Make sure your application can utilise all the requested cores.  Your project will be charged for all the cores you request here |
+| Memory per cpu  | Leave this unchecked if you want to use default settings.  If you check the box, you can enter the amount of memory per core you need in MB.  If you request more memory than your fair share, your project will be charged for the cores left without memory |
+| Full node       | By checking the box you request all the cores and memory of the resource specified.  Your project will be charged for the full node |
 
 At the time of writing the on-demand desktop does not support multi-node running. 
 
