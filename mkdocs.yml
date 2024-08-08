@@ -107,7 +107,12 @@ extra_javascript:
 markdown_extensions:
   - attr_list
   - pymdownx.highlight:
+      use_pygments: true
+      auto_title: true
+      linenums: true
+      linenums_style: pymdownx-inline
       anchor_linenums: true
+      line_spans: __span
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
