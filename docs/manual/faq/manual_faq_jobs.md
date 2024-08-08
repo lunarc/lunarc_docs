@@ -6,7 +6,7 @@ We allow batch jobs to ask for up to 168 hours, which is 7 days.
 
 ## How do I run an interactive application
 
-LUNARC supports interactive HPC.  You need to connect to our system via the [LUNARC HPC desktop](../../../getting_started/using_hpc_desktop).  Inside the HPC desktop you can use the [On-demand desktop](../../../getting_started/gfxlauncher) to start your application.
+LUNARC supports interactive HPC.  You need to connect to our system via the [LUNARC HPC desktop](../../../getting_started/using_hpc_desktop).  Inside the HPC desktop you can use the [Desktop on-demand](../../../getting_started/gfxlauncher) to start your application.
 
 ## How do I specify a project or reservation
 
