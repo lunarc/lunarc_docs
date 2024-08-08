@@ -7,7 +7,7 @@ The most disruptive mistake that a new HPC user can make is to run resource-inte
 For any job big enough to be worth running on a HPC system, *you must make sure it is not utilising resources from the frontend or login node*.  To use dedicated resources you have two options:
 
 * Create a job script and run your code by calling the job script with **sbatch**. For more on job scripts, [refer to the section of the manual on submitting jobs](../manual/submitting_jobs/manual_basic_job/).
-* For interactive work you may use the Desktop on Demand.   For more information on the desktop on demand review our guide on [On Demand Applications](../gfxlauncher).
+* For interactive work you may use the Desktop on Demand.   For more information review our guide on [On Demand Applications](../gfxlauncher).
 
 Remember that repeated disruptive misuse of the frontend is a violation of the terms and conditions of your NAISS user agreement, and may result in the suspension or termination of your account.
 
