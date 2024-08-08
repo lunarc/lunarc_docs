@@ -2,6 +2,8 @@
 
 The LUNARC **On-demand desktop** facilitates the interactive execution of resource intensive applications on LUNARC's HPC cluster COSMOS.  It utilises the graphical application launcher (GfxLauncher) for launching graphical or interactive applications through SLURM.  It is responsible for submitting a job to SLURM, connecting to the application running on the node and monitoring the progress of the application.
 
+The **On-demancd desktop** is particularly use full for interactive work consuming small to medium resources levels (cpu time, core count, memory, etc.).  Computational work not requiring interactive supervision, significant resources and/or multiple nodes are better submitted using the [batch system](../../manual/submitting_jobs/manual_basic_jobs).  
+
 ## Starting on-demand applications
 
 Click on **Applications** in the top left hand corner of the [LUNARC HPC desktop](../using_hpc_desktop). You get a pull down menu, as shown below.   
