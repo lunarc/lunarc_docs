@@ -69,19 +69,6 @@ To reduce the number of logins to the system the **ServerAlive** option can also
         PreferredAuthentications hostbased,publickey,keyboard-interactive,password
 
 
-### macOS 10.7 Lion and 10.8 Mountain Lion
-
-To login to a LUNARC system from a Mac system running Mac OS X 10.7 and 10.8, you need to unset the box "Set locale environment variables on startup" in the settings window of the terminal application, and press **[cmd] + ,** to get there. 
-
-English example:
-
-Setting locale in lion (english)
-
-Swedish example:
-
-Setting locale in lion (english)
-
-Note: This works on a per-theme basis. In the above examples, you will need to choose the theme "Homebrew" to connect to the LUNARC servers.
 
 ## Windows
 
