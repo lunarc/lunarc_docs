@@ -43,20 +43,16 @@ Hit the **Start**-button to start your session.  This will put a resource reques
 
 
 ## Resources
+Depending on the application one or more of the following resource types can be choosen with the *Resource*-option.
 
-| Resource | Description |
-|--------|-----------------------------|
-| On-demand | Servers providing support for hardware accelerated applications (OpenGL). |
-| On-demand (A40) | Servers for hardware accelerated applications using NVIDIA A40 GPU. |
-| COSMOS CPU | Standard COSMOS CPU server. |
-| COSMOS GPU (A40) | COSMOS GPU server with NVIDIA A40. | 
-| COSMOS GPU (A100) | COSMOS GPU server with NVIDIA A100. | 
-| Windows on-demand (V100) | Windows server providing hardware accelerated windows sessions. |
+| Resource | Description                 |
+|----------|-----------------------------|
+| AMD 48 cores | CPU node with two AMD EPYC 7413 processors (Milan).  Up to 48 cores can be requested. |
+| Intel 32 cores | CPU node with two Intel Xeon Gold 6226R processors (Cascade Lake). Up to 32 cores can be requested |
+| AMD/NVIDIA A40 48c 24h |   GPU node with two AMD EPYC 7413 processors (Milan) and one NVIDIA A40 GPU.  Up to 48 cores can be requested  | 
+| Intel/NVIDIA A40 32c 48h | GPU node with two Intel Xeon Gold 6326 processors and one NVIDIA A40 GPU. Up to 32 cores can be requested.
 
-<!--| Aurora CPU | Standard Aurora CPU server. |
-| Aurora CPU (32c) | Upgraded Aurora CPU servers with 32 cores / server. |
-| Aurora GPU (K80) | Standard Aurora GPU server with NVIDIA K80. |
-| Aurora GPU (A100) | Upgraded Aurora GPU server with NVIDIA A100. | -->
+
 
 Please note that for a given application not all resources are shown in the launcher dialog box.  Which resources are displayed is determined by the application.
 
@@ -76,6 +72,9 @@ In this window you can set
 
 At the time of writing the on-demand desktop does not support multi-node running. 
 
+## SLURM output files
+
+Since the the Desktop on-Demand submits your resource request to SLURM, SLURM will be writing output files.   These are located in the hidden directory `~/.lhpc`, which is in your homespace.  It might be a good idea to clean this out from time to time, to save some disc space.
 
 ---
 
