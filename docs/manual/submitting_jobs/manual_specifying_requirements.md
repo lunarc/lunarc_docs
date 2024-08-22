@@ -139,19 +139,36 @@ In addition, for those who access private nodes (financed by a research project)
 
 ### NVIDIA A100 GPUs with AMD processors 
 
-A number of compute nodes on COSMOS are equipped with GPUs. At the time of this revision, there are six nodes with A100 NVIDIA GPUs and AMD CPUs available.  These nodes feature two AMD EPYC 7413 24-Core processors, a total of 48 cores.  These nodes have 512 GB of RAM are placed in the **gpua100** partition. To access these nodes, you must include the line
+A number of compute nodes on COSMOS are equipped with GPUs. At the time of this revision, there are six nodes with A100 NVIDIA GPUs and AMD CPUs available.  These nodes feature two AMD EPYC 7413 24-Core processors, a total of 48 cores and have formally 512 GB of RAM, but only 512 000 MB are accessible. The nodes are placed in the **gpua100** partition. To access these nodes, you must include the line
 
 ```bash
 #SBATCH -p gpua100
 ```
-in your batch scipt.  These nodes are configured as exclusive access and will not be shared between users.   User projects will be charged for the entire node (48 cores).
+in your batch scipt.  These nodes are configured as exclusive access and will not be shared between users.   User projects will be charged for the entire node (48 cores). A job on a node will also have access to all memory on the node.
 
-To gain access to all the memory of the nodes, users need to override the default memory request of 5300 MB per core. Your batch script should include the line:
+### NVIDIA A100 GPUs with Intel processors 
+
+At the time of this revision, there are four nodes with A100 NVIDIA GPUs and Intel CPUs available.  These nodes feature two Intel Xeon Gold 6226R 16-Core processors, a total of 32 cores and have formally 384 GB of RAM, but only 380 000 MB are accessible. The nodes are placed in the **gpua100i** partition. To access these nodes, you must include the line
 
 ```bash
-#SBATCH --mem-per-cpu=10600
+#SBATCH -p gpua100i
 ```
-to use all allowable memory.  The nodes in the gpua100 partition must not be used for CPU only applications, which are not utilising the GPUs.
+in your batch scipt. 
+
+Two of the nodes have 1 GPU and two have 2 GPUs. This means that resource requirements have to be requested explicitly. Jobs using 16 cores and 1 GPU, can potentially fit on all nodes simultaneously, using all 6 GPUs. The resource specification of such a job would be
+
+```bash
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=16
+#SBATCH --gres=gpu:1
+```
+
+This would automatically provide the default memory of 5300 MB per core. To use the memory available to each core, you need to specify
+
+```bash
+#SBATCH --mem-per-cpu=11800
+```
+The nodes in the gpua100i partition must not be used for CPU only applications, which are not utilising the GPUs.
 
 ### NVIDIA A40 GPUs with AMD processors
 
