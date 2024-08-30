@@ -8,8 +8,8 @@ To execute message passing parallel jobs these should be built against one of th
  * Load the OpenMPI module relevant to the compiler you are using
  * Start the program with **mpirun**
  * Using the correct binding can help code performance. 
-     *   When using 20 tasks per node on Aurora, we recommend using the **-bind-to core** option of mpirun 
-     *   When using fewer than 16 tasks we recommend experimenting with whether not using binding helps or hinders performance.
+     *   When using 20 or more tasks per node on COSMOS, we recommend using the **-bind-to core** option of mpirun 
+     *   When using fewer than 16 tasks we recommend experimenting with whether using binding helps or hinders performance.
 
 ## Launching MPI jobs compiled with the Intel MPI library
 
@@ -33,4 +33,4 @@ executables of this package.
 (LUNARC)
 
 **Last Updated:**
-2022-10-05
+2024-08-30
