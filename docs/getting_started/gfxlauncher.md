@@ -20,12 +20,12 @@ The remaining groups with names starting differently from **Applications**, will
 
 ## Job Launcher
 
-GfxLauncher has a very minimal user interface for the user to specify the requested time the application is needed, any specific resources required (GPU, CPU) and the project charged when running the application. Two examples for the main user interface is described in the following figures.
-
-
+GfxLauncher has a very minimal user interface for the user to specify the requested time the application is needed, any specific resources required (GPU, CPU) and the project charged when running the application. Two examples for the main user interface are described in the following figures, the first for a standard interactive package and the second for an interactive terminal that can be used to start arbitrary graphical applications from the command line. 
 ![sample screen](../images/gfxlauncher_main_jupyter.png "GfxLauncher main user interface for a jupyter lab")
 
 ![sample screen](../images/gfxlauncher_main_terminal.png "GfxLauncher main user interface for a terminal")
+
+Most common IDEs can be found in a drop-down menu that appears when you hover over `Applications - <Language>` for your language of choice, but more niche packages may be listed under a subject-matter field instead, like `Applications - Engineering`. If you don't see the program you want to run interactively listed under any other `Applications` sub-menus, you may still be able to launch it via the **Interactive Terminal** (CPU only) under `Applications - General`, or the **Accelerated Terminal** (GPU support) under `Applications - Visualization`.  Both terminals allow users to easily start graphical applications on the command line. For more information on the usage of these terminals, refer to [the manual page on interactive node access.](https://lunarc-documentation.readthedocs.io/en/latest/manual/manual_interactive/#two-ways-of-interactive-computing)
 
 You can make the following selections:
 
