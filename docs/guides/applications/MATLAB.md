@@ -197,13 +197,15 @@ Alternatively, to retrieve job results via a graphical user interface (GUI), use
 #### Setting and Managing Cluster Profiles in the GUI
 If you have a common set of configurations you like to use for parallel computations on COSMOS, the MATLAB GUI provides a way to set these preferences and save them as one or more Cluster Profiles. From the main menu ribbon along the top, you can can either go to `Preferences` and select `Parallel Computing Toolbox` from the popup menu at left, or select `Parallel` and go to `Parallel Preferences` at the bottom of the drop-down menu. In both cases, the `Parallel Computing Toolbox Preferences` section will have a box where you can select a default profile if any profiles exist; otherwise, click `Cluster Profile Manager` to create one. Please leave the boxes checked to automatically start the parallel pool if parallelized commands are detected in your code, and shut down idle parallel pools after 30 minutes.
 
-\[insert screengrab here\]
+![Code example](../../images/Matlab-ParallelToolboxPrefs.png "Preferences") 
 
-In the Cluster Profile Manager, the editor will let you can set the name of the profile, the number of workers, and the default working directory for the job at the top. Most other configuration parameters like your account, walltime, memory per node, number of tasks per node, GPUs per node, and whether to require an exclusive node are set lower down in the table under `Scheduler Plugin`. All the way at the bottom, you can select a preferred number and range of workers under the `Workers` tab, and here you can also pass copies of important environmental variables to the workers.
+In the Cluster Profile Manager, the editor will let you can set the name of the profile, the number of workers, and the default working directory for the job at the top. Most other configuration parameters like your account, walltime, memory per node, number of tasks per node, GPUs per node, and whether to require an exclusive node are set lower down in the table under `Scheduler Plugin`. All the way at the bottom, you can select a preferred number and range of workers under the `Workers` tab, and here you can also pass copies of important environmental variables to the workers. To check that these settings work, after saving your edits, you will need to run the `Validate` command in the Cluster Profile Manager's top toolbar.
 
-\[insert screengrabs here\]
+![Code example](../../images/Matlab-ClusterManager0.png "Cluster Profile Manager") 
 
 In the `Parallel` drop-down menu, hovering over `Select Parallel Environment` will reveal a second drop-down menu where previously-saved profiles will appear under the `Cluster Tab`.
+
+![Code example](../../images/Matlab-ParallelMenu.png "Parallel Menu") 
 
 
 ### Debugging
