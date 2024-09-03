@@ -201,7 +201,7 @@ If you have a common set of configurations you like to use for parallel computat
 
 In the Cluster Profile Manager, the editor will let you can set the name of the profile, the number of workers, and the default working directory for the job at the top. Most other configuration parameters like your account, walltime, memory per node, number of tasks per node, GPUs per node, and whether to require an exclusive node are set lower down in the table under `Scheduler Plugin`. All the way at the bottom, you can select a preferred number and range of workers under the `Workers` tab, and here you can also pass copies of important environmental variables to the workers. To check that these settings work, after saving your edits, you will need to run the `Validate` command in the Cluster Profile Manager's top toolbar.
 
-![Code example](../../images/Matlab-ClusterManager0.png "Cluster Profile Manager") 
+![Code example](../../images/Matlab-ClusterMgr0.png "Cluster Profile Manager") 
 
 In the `Parallel` drop-down menu, hovering over `Select Parallel Environment` will reveal a second drop-down menu where previously-saved profiles will appear under the `Cluster Tab`.
 
