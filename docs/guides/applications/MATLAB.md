@@ -7,14 +7,9 @@ The MATLAB versions available at LUNARC are:
 ```bash
 Version        Module name
 
-R2014a         matlab/8.3
-R2014b         matlab/8.4
-R2015a         matlab/8.5
-R2015b         matlab/8.6
-R2016a         matlab/8.7  (available on Aurora only)
-R2017a         matlab/2017a
-R2020a        matlab/2020a
-R2020b        matlab/2020b
+R2022a         matlab/2022a
+R2023a         matlab/2023a
+R202bb         matlab/2023b
 ```
 
 ## Running MATLAB on login-node 
@@ -29,7 +24,7 @@ To start MATLAB on a login node use:
 matlab -singleCompThread
 ```
 
-On the LUNARC HPC Desktop (Thinlinc) MATLAB R2016a as well as MATLAB R2017a are available via the Applications menu. Starting MATLAB from the menue automatically will set the -singleCompThread flag. This is now the recommended way to start MATLAB on the LUNARC HPC Desktop.
+On the LUNARC HPC Desktop (Thinlinc), these versions are available as Desktop On-Demand graphic interfaces via the Applications menu. Starting MATLAB from the menu automatically will set the -singleCompThread flag. This is now the recommended way to start MATLAB on the LUNARC HPC Desktop. Job configurations as described in the following sections can be entered at the Command Window in the MATLAB GUI, or can be set and saved as a cluster profile.
 
 ## Getting Started with Serial and Parallel MATLAB
 
@@ -195,9 +190,21 @@ ans =
 ```
 
 The job now runs in 4.73 seconds using 8 workers.  Run the code with different number of workers to determine the ideal number to use.
-Alternatively, to retrieve job results via a graphical user interface, use the Job Monitor (Parallel > Monitor Jobs).
+Alternatively, to retrieve job results via a graphical user interface (GUI), use the Job Monitor (Parallel > Monitor Jobs).
 
 ![Code example](../../images/Parallel_interface.png "Start window") 
+
+#### Setting and Managing Cluster Profiles in the GUI
+If you have a common set of configurations you like to use for parallel computations on COSMOS, the MATLAB GUI provides a way to set these preferences and save them as one or more Cluster Profiles. From the main menu ribbon along the top, you can can either go to `Preferences` and select `Parallel Computing Toolbox` from the popup menu at left, or select `Parallel` and go to `Parallel Preferences` at the bottom of the drop-down menu. In both cases, the `Parallel Computing Toolbox Preferences` section will have a box where you can select a default profile if any profiles exist; otherwise, click `Cluster Profile Manager` to create one. Please leave the boxes checked to automatically start the parallel pool if parallelized commands are detected in your code, and shut down idle parallel pools after 30 minutes.
+
+\[insert screengrab here\]
+
+In the Cluster Profile Manager, the editor will let you can set the name of the profile, the number of workers, and the default working directory for the job at the top. Most other configuration parameters like your account, walltime, memory per node, number of tasks per node, GPUs per node, and whether to require an exclusive node are set lower down in the table under `Scheduler Plugin`. All the way at the bottom, you can select a preferred number and range of workers under the `Workers` tab, and here you can also pass copies of important environmental variables to the workers.
+
+\[insert screengrabs here\]
+
+In the `Parallel` drop-down menu, hovering over `Select Parallel Environment` will reveal a second drop-down menu where previously-saved profiles will appear under the `Cluster Tab`.
+
 
 ### Debugging
 
