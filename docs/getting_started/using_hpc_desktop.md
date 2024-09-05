@@ -6,8 +6,8 @@ The 2D desktop (currently Mate) runs on a scalable desktop infrastructure that s
 
 ## Installing and starting the HPC desktop
 
- 1. [Download](https://www.cendio.com/thinlinc/download "Download") the client for either Windows, Mac or Linux 
- 1. Install it on your workstation or laptop
+ 1. [Download](https://www.cendio.com/thinlinc/download "Download") the Thinlinc client for either Windows, Mac or Linux 
+ 1. Install it on your workstation or laptop (see [install and update client](https://www.cendio.com/resources/docs/tag/client_linux.html) and select your operating system under Client Platforms)
  1. Launch the client
  1. Enter **cosmos-dt.lunarc.lu.se** in the server field 
  
@@ -46,4 +46,4 @@ Please try before contacting [Lunarc support](http://www.lunarc.lu.se/support/su
 (LUNARC)
 
 **Last Updated:**
-2023-05-29
+2024-09-05
