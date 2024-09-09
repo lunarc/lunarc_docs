@@ -28,6 +28,16 @@ When you apply for an account your mobile number is registered in our user datab
 
 The login process is described in the following sections.
 
+## First login and server fingerprints
+
+If you haven't logged into any of the LUNARC systems SSH or the Thinlinc clients will prompt you to verify the server finger print. The reason for this is to make sure that you login to the correct server. Below are the fingerprints of the LUNARC front-end servers:
+
+```console
+2048 SHA256:NQ/G3C89HTTHDsNo53MueduO8s9WA4ePCCn4XV1G5do cosmos.lunarc.lu.se (RSA)
+256 SHA256:Dz3UFUfoEItFI6Oee1NRmpx+r4mkD1PLnm6NKrl6a6s cosmos.lunarc.lu.se (ECDSA)
+256 SHA256:cmCshUQAZ+DqFRyMntx9NbNHSDu9BExg8OJ+TX05gCs cosmos.lunarc.lu.se (ED25519)
+```
+
 ## Logging in using One Time Passwords (OTP)
 
 Logging in to the LUNARC system with OTP passwords is not very different from a normal SSH login, except for the additional extra password prompt. A typical session is shown in the following example:
