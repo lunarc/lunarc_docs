@@ -30,7 +30,7 @@ The login process is described in the following sections.
 
 ## First login and server fingerprints
 
-If you haven't logged into any of the LUNARC systems SSH or the Thinlinc clients will prompt you to verify the server finger print. The reason for this is to make sure that you login to the correct server. Below are the fingerprints of the LUNARC front-end servers:
+If you have yet to log into any LUNARC systems, SSH or the Thinlinc clients will prompt you to verify the server fingerprint. The reason for this is to make sure that you login to the correct server. Below are the fingerprints of the LUNARC front-end servers:
 
 ```console
 2048 SHA256:NQ/G3C89HTTHDsNo53MueduO8s9WA4ePCCn4XV1G5do cosmos.lunarc.lu.se (RSA)
