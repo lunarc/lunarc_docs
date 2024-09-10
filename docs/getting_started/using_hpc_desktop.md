@@ -6,8 +6,8 @@ The 2D desktop (currently Mate) runs on a scalable desktop infrastructure that s
 
 ## Installing and starting the HPC desktop
 
- 1. [Download](https://www.cendio.com/thinlinc/download "Download") the client for either Windows, Mac or Linux 
- 1. Install it on your workstation or laptop
+ 1. [Download](https://www.cendio.com/thinlinc/download "Download") the Thinlinc client for either Windows, Mac or Linux 
+ 1. Install it on your workstation or laptop (see [install and update client](https://www.cendio.com/resources/docs/tag/client_linux.html) and select your operating system under Client Platforms)
  1. Launch the client
  1. Enter **cosmos-dt.lunarc.lu.se** in the server field 
  
@@ -22,6 +22,15 @@ The 2D desktop (currently Mate) runs on a scalable desktop infrastructure that s
 
     ![sample screen](../images/desktopSampleScreen.png "Desktop sample screen")
 
+## First login and server fingerprints
+
+If you have yet to log into any LUNARC systems, SSH or the Thinlinc clients will prompt you to verify the server fingerprint. The reason for this is to make sure that you login to the correct server. Below are the fingerprints of the LUNARC front-end servers:
+
+```console
+2048 SHA256:NQ/G3C89HTTHDsNo53MueduO8s9WA4ePCCn4XV1G5do cosmos.lunarc.lu.se (RSA)
+256 SHA256:Dz3UFUfoEItFI6Oee1NRmpx+r4mkD1PLnm6NKrl6a6s cosmos.lunarc.lu.se (ECDSA)
+256 SHA256:cmCshUQAZ+DqFRyMntx9NbNHSDu9BExg8OJ+TX05gCs cosmos.lunarc.lu.se (ED25519)
+```
 
 ## Resizing the desktop window and full-screen mode
 
@@ -46,4 +55,4 @@ Please try before contacting [Lunarc support](http://www.lunarc.lu.se/support/su
 (LUNARC)
 
 **Last Updated:**
-2023-05-29
+2024-09-05
