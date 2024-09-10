@@ -30,7 +30,7 @@ nav:
     - Multiple serial jobs: manual/example_job_scripts/manual_example_multiple_serial_jobs.md
     - MPI job using 48 tasks per node: manual/example_job_scripts/manual_example_mpi_48_tasks.md
     - MPI job using the node local discs: manual/example_job_scripts/manual_example_mpi_local_discs.md
-    - MPI jobs using fewer than 20 tasks per node: manual/example_job_scripts/manual_example_mpi_fewer_than_48.md
+    - MPI jobs using fewer than 48 tasks per node: manual/example_job_scripts/manual_example_mpi_fewer_than_48.md
     - OpenMP jobs using shared memory: manual/example_job_scripts/manual_example_openmp_shared_memory.md
   - Quick reference: manual/manual_quick_reference.md
   - FAQ: 

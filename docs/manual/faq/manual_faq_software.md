@@ -58,13 +58,14 @@ After registerering with the VASP team, contact the [LUNARC helpdesk](http://www
 * Your LUNARC userid
 * Name and Department of the license holder (typically your supervisor/research group leader)
 * The number of the license
-* Your name as stated on the license
+* Your name as stated on the VASP license
+* Your email address as stated on the VASP license
 * Whether you require VASP 5 or VASP 6 access
 
 In order to be able to continue the provision of VASP to our legitimate VASP users, we cannot make any exceptions. 
 
 
-The VASP executables are build with OpenMPI.   These executables need to be started with `mpirun`.  Refer to the sample section of our batch [system guide](../example_job_scripts/manual_example_mpi_48_tasks/) for a more comprehensive discussion.
+The VASP executables are build with OpenMPI.   These executables need to be started with `mpirun`.  Refer to the sample section of our batch [system guide](../../example_job_scripts/manual_example_mpi_48_tasks/) for a more comprehensive discussion.
 
 ## I need access to Amber
 
