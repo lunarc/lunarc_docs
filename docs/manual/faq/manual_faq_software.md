@@ -59,12 +59,12 @@ After registerering with the VASP team, contact the [LUNARC helpdesk](http://www
 * Name and Department of the license holder (typically your supervisor/research group leader)
 * The number of the license
 * Your name as stated on the license
-* Whether you require VASP 4 or VASP 5 access
+* Whether you require VASP 5 or VASP 6 access
 
 In order to be able to continue the provision of VASP to our legitimate VASP users, we cannot make any exceptions. 
 
 
-The VASP5 executables on COSMOS are compiled using Intel MPI.  They need to be started with `srun`.  The VASP6 executable is build with OpenMPI.   These executables need to be started with `mpirun`.  Refer to the sample section of our batch [system guide](https://lunarc-documentation.readthedocs.io/en/latest/manual/example_job_scripts/manual_example_mpi_20_tasks/) for a more comprehensive discussion.
+The VASP executables are build with OpenMPI.   These executables need to be started with `mpirun`.  Refer to the sample section of our batch [system guide](../example_job_scripts/manual_example_mpi_48_tasks/) for a more comprehensive discussion.
 
 ## I need access to Amber
 

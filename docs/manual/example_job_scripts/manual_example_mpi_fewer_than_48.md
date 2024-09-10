@@ -2,14 +2,14 @@ If you want to use fewer than 48 tasks per node to e.g. give more resources to t
 
 !!! info 
 
-    Despite the example using only 40 cores, it will block 80 cores, since it uses all the memory of the 4 nodes. Your allocation will be charged for all 80 cores.
+    Despite the example using only 96 cores, it will block 192 cores, since it uses all the memory of the 4 nodes. Your allocation will be charged for all 192 cores.
 
 ```bash
 #!/bin/bash
 # requesting the number of nodes and cores needed, exclusive nodes
 #SBATCH -N 4
 #SBATCH --ntasks-per-node=24
-#SBATCH --mem-per-cpu=6400
+#SBATCH --mem-per-cpu=10600
 #
 # job time, change for what your job requires
 #SBATCH -t 0:30:0
@@ -26,7 +26,7 @@ cat $0
 
 # Example assumes we need the intel runtime and OpenMPI library
 # customise for the libraries your executable needs
-module add iomkl/2015.03
+module load foss/2023b
 
 # Copying the executable onto the local disks of the nodes
 srun -n $SLURM_NNODES -N $SLURM_NNODES cp -p simula_mpi $SNIC_TMP

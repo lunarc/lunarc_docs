@@ -1,6 +1,6 @@
 Most MPI jobs achieve the best cost efficiency when deploying 48 tasks per node, that is one task per core.  The sample uses core binding as offered by the OpenMPI library.
 
-The resource request is straightforward in this case. Ask for several nodes and place 48 tasks on each node.  The product should match the number of tasks you want to run. We recommend using the **--exclusive** option.  The following is an example submission script to run the MPI application simula_mpi with 80 tasks on 4 nodes. Notice you do not need to specify the node count.
+The resource request is straightforward in this case. Ask for several nodes and place 48 tasks on each node.  The product should match the number of tasks you want to run. We recommend using the **--exclusive** option.  The following is an example submission script to run the MPI application simula_mpi with 192 tasks on 4 nodes. Notice you do not need to specify the total core count.
 
 ```bash
 #!/bin/bash
@@ -23,7 +23,7 @@ cat $0
 
 # Example assumes we need the intel runtime and OpenMPI library
 # customise for the libraries your executable needs
-module load iomkl/2015.03
+module load foss/2023b
 
 # start the mpi executable - use mpirun in case of OpenMPI
 mpirun -bind-to core simula_mpi
@@ -42,5 +42,5 @@ srun simula_mpi
 (LUNARC)
 
 **Last Updated:**
-2023-01-31
+2024-09-10
 
