@@ -1,6 +1,7 @@
-Most MPI jobs achieve the best cost efficiency when deploying 48 tasks per node, that is one task per core.  The sample uses core binding as offered by the OpenMPI library.
+Most MPI jobs which give good performance on a larger numbers of tasks 
+achieve the best cost efficiency when deploying 48 tasks per node.  On COSMOS 48 tasks relates to one task per core.  The sample uses core binding as offered by the OpenMPI library.
 
-The resource request is straightforward in this case. Ask for several nodes and place 48 tasks on each node.  The product should match the number of tasks you want to run. We recommend using the **--exclusive** option.  The following is an example submission script to run the MPI application simula_mpi with 192 tasks on 4 nodes. Notice you do not need to specify the total core count.
+The resource request is straightforward in this case. Ask one or more nodes and place 48 taisks on each node.  The product should match the number of tasks you want to run. The following is an example submission script to run the MPI application simula_mpi with 192 tasks on 4 nodes. Notice you do not need to specify the total core count.
 
 ```bash
 #!/bin/bash
