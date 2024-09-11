@@ -29,3 +29,11 @@ ml mpi4py/3.1.4
 # run your script
 mpirun --bind-to core python3 hello_mpi.py
 ```
+
+---
+
+**Author:**
+(LUNARC)
+
+**Last Updated:**
+2024-09-11
