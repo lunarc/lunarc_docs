@@ -207,6 +207,29 @@ In the `Parallel` drop-down menu, hovering over `Select Parallel Environment` wi
 
 ![Code example](../../images/Matlab-ParallelMenu.png "Parallel Menu") 
 
+Now whenever you start a `parpool` instance (i.e. the template for a group of tasks to be run in parallel), it will be generated with your default cluster profile settings, or the settings for whichever cluster profile you select as the default for the current session, if you don't pass any arguments or let another function start it anonymously. If you want to generate one or more `parpool` instances with different settings, but without changing which cluster profile is the default, you pass override arguments to `parpool` to change the number of workers and/or select a different cluster for only that instance of `parpool`. Alternative clusters can be passed by handle or by the name (string) of the cluster as defined in the cluster profile manager. But don't forget that only 1 `parpool` instance can be active at a time, and the settings can't be changed once the pool instantiated. An existing pool must be deleted and a new one instantiated to get a pool with different settings.
+
+```matlab
+% start a default pool and get handle
+poolobj = parpool
+
+% Oops, that one has N workers but we need 2N.
+% Delete the old one
+delete(poolobj)
+% Start a new pool with 2N workers (let's say N was 8)
+pool2n = parpool(16)
+% ...do stuff...
+
+% clean up
+delete(pool2n)
+
+% Now we want to use a different cluster
+% get handle for some other cluster profile
+c = parcluster;
+% start a pool with this profile and 32 workers
+pool4n = parpool(c, 32);
+```
+
 
 ### Debugging
 
