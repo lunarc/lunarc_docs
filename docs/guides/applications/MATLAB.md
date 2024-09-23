@@ -14,37 +14,44 @@ R2023b         matlab/2023b
 
 ## Running MATLAB on login-node 
 
-MATLAB can be used on the login-nodes (either using LUNARC HPC Desktop i.e. ThinLinc. Or using SSH) Please note that as these are shared resources excessive use of MATLAB on the login-nodes will prevent other users from using the resources. 
+MATLAB can be used on the login-nodes (either using LUNARC HPC Desktop i.e. ThinLinc. Or using SSH). Please note that, as these are shared resources, excessive use of MATLAB on the login-nodes will prevent other users from using the resources and may result in the offending jobs being killed without warning.
 As MATLAB by default will use as many threads (cores) it possibly can, any user who is to use MATLAB on the login-nodes MUST start matlab with the option "-singleCompThread" thus preventing MATLAB from using more that one thread.
-This will NOT prevent matlab from utilizing the MATLAB Distributed Computing Server (MDCS) with which any number of cores can be used for computations.
+This will NOT prevent MATLAB from utilizing the MATLAB Distributed Computing Server (MDCS) with which any number of cores can be used for computations. You can also still send batch jobs on the local compute nodes this way if you correctly configure and instantiate a cluster profile, and call the batch method on that instance.
 
-To start MATLAB on a login node use: 
-
-```bash
-matlab -singleCompThread
-```
-
-On the LUNARC HPC Desktop (Thinlinc), these versions are available as Desktop On-Demand graphic interfaces via the Applications menu. Starting MATLAB from the menu automatically will set the -singleCompThread flag. This is now the recommended way to start MATLAB on the LUNARC HPC Desktop. Job configurations as described in the following sections can be entered at the Command Window in the MATLAB GUI, or can be set and saved as a cluster profile.
-
-## Getting Started with Serial and Parallel MATLAB
-
-### Load the module
-The MATLAB module is loaded with
+To start MATLAB on a login node, use: 
 
 ```bash
 $ module load matlab/<version>
+$ matlab -singleCompThread
 ```
+
+To avoid starting the graphical interface, use:
+
+```bash
+$ module load matlab/<version>
+$ matlab -singleCompThread -nodesktop -nodisplay
+```
+
+On the LUNARC HPC Desktop (Thinlinc), these versions are available as Desktop On-Demand graphic interfaces via the Applications menu. Starting MATLAB from the menu automatically will set the -singleCompThread flag. This is now the recommended way to start MATLAB on the LUNARC HPC Desktop. Job configurations as described in the following sections can be entered at the Command Window in the MATLAB GUI, can be set and saved as a cluster profile, or can be configured at the MATLAB command line in the termninal.
+
+## Getting Started with Serial and Parallel MATLAB
+
+### Loading and starting the module
+The recommanded way to run MATLAB on cosmos is to log into the HPC desktop with Thinlinc, go to the Applications menu, mouse over `Applications - MATLAB`, and select your preferred version. This will launch a GfxLauncher window where you can specify the resources you need like your choice of node(s), the number of tasks per node, the walltime, etc. Once you press `start`, the MATLAB GUI will automatically launch on a backend node with a graphical partition, and the GfxLauncher window in the background will show how much of your walltime has been used.
+
+Batch jobs and other parallelized scripts can be submitted to the slurm scheduler via the MATLAB GUI's Parallel Computing Toolbox. However, at this time the GUI cannot be closed while running such a job, and since running the GUI means that you have to use a GPU node, jobs run in this manner are limited to 48 hours.
+
+If you need to use the command line for longer or less interactive jobs, whether on the front end or the interactive terminal, the commands are what were shown above for the login nodes. In both cases, the GUI will still launch if you do not include the flags `-nodesktop` and `-nodisplay`, so don't forget those if you need to run a job that lasts longer than 48 hours.
 
 ### Configuration
 
 Start MATLAB.  
-Configure MATLAB to run parallel jobs on your cluster by calling configCluster.  
-For each cluster, configCluster only needs to be called once per version of MATLAB.
+Configure MATLAB to run parallel jobs on your cluster by calling configCluster, or, if you are in the GUI, going under the Parallel menu item, selecting Parallel Preferences, and going to the Cluster Profile Manager. 
+For each cluster, `configCluster` only needs to be called once per version of MATLAB, but you can save more than one profile for the same version. Likewise, you only need to set up one cluster profile in the Cluster Profile Manager for each version you run in the GUI. Once you're happy with your settings, you can select the profile by name from the Parallel menu each time you start MATLAB and to make every parallel pool instance start with those cluster configurations.
 
 ```matlab
 configCluster
 ```
-
 
 Jobs will now default to the cluster rather than submit to the local machine.
 Before submitting a job, you must specify the name of the charge account and the walltime, via ClusterInfo, which will be explained in more detail below.
@@ -271,4 +278,4 @@ To learn more about the MATLAB Parallel Computing Toolbox, check out these resou
 (LUNARC)
 
 **Last Updated:**
-2022-10-06
+2024-09-23
