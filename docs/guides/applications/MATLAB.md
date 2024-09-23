@@ -9,7 +9,7 @@ Version        Module name
 
 R2022a         matlab/2022a
 R2023a         matlab/2023a
-R202bb         matlab/2023b
+R2023b         matlab/2023b
 ```
 
 ## Running MATLAB on login-node 
