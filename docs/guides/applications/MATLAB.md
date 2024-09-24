@@ -12,7 +12,7 @@ R2023a         matlab/2023a
 R2023b         matlab/2023b
 ```
 
-## Getting started
+## Load and Run MATLAB
 ### Running MATLAB on login-node 
 
 MATLAB can be used on the login-nodes (either using LUNARC HPC Desktop i.e. ThinLinc. Or using SSH). Please note that, as these are shared resources, excessive use of MATLAB on the login-nodes will prevent other users from using the resources and may result in the offending jobs being killed without warning.
