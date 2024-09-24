@@ -12,7 +12,8 @@ R2023a         matlab/2023a
 R2023b         matlab/2023b
 ```
 
-## Running MATLAB on login-node 
+## Getting started
+### Running MATLAB on login-node 
 
 MATLAB can be used on the login-nodes (either using LUNARC HPC Desktop i.e. ThinLinc. Or using SSH). Please note that, as these are shared resources, excessive use of MATLAB on the login-nodes will prevent other users from using the resources and may result in the offending jobs being killed without warning.
 As MATLAB by default will use as many threads (cores) it possibly can, any user who is to use MATLAB on the login-nodes MUST start matlab with the option "-singleCompThread" thus preventing MATLAB from using more that one thread.
@@ -25,41 +26,44 @@ $ module load matlab/<version>
 $ matlab -singleCompThread
 ```
 
-To avoid starting the graphical interface, use:
-
-```bash
-$ module load matlab/<version>
-$ matlab -singleCompThread -nodesktop -nodisplay
-```
+To avoid starting the graphical interface, add the `-nodesktop -nodisplay` flags after the `-singleCompThread` flag.
 
 On the LUNARC HPC Desktop (Thinlinc), these versions are available as Desktop On-Demand graphic interfaces via the Applications menu. Starting MATLAB from the menu automatically will set the -singleCompThread flag. This is now the recommended way to start MATLAB on the LUNARC HPC Desktop. Job configurations as described in the following sections can be entered at the Command Window in the MATLAB GUI, can be set and saved as a cluster profile, or can be configured at the MATLAB command line in the termninal.
-
-## Getting Started with Serial and Parallel MATLAB
 
 ### Loading and starting the module
 The recommanded way to run MATLAB on cosmos is to log into the HPC desktop with Thinlinc, go to the Applications menu, mouse over `Applications - MATLAB`, and select your preferred version. This will launch a GfxLauncher window where you can specify the resources you need like your choice of node(s), the number of tasks per node, the walltime, etc. Once you press `start`, the MATLAB GUI will automatically launch on a backend node with a graphical partition, and the GfxLauncher window in the background will show how much of your walltime has been used.
 
 Batch jobs and other parallelized scripts can be submitted to the slurm scheduler via the MATLAB GUI's Parallel Computing Toolbox. However, at this time the GUI cannot be closed while running such a job, and since running the GUI means that you have to use a GPU node, jobs run in this manner are limited to 48 hours.
 
-If you need to use the command line for longer or less interactive jobs, whether on the front end or the interactive terminal, the commands are what were shown above for the login nodes. In both cases, the GUI will still launch if you do not include the flags `-nodesktop` and `-nodisplay`, so don't forget those if you need to run a job that lasts longer than 48 hours.
+If you need to use the command line for longer or less interactive jobs, whether on the front end or the interactive terminal, you will need to run these lines:
 
-### Configuration
+```bash
+$ module load matlab/<version>
+$ matlab -singleCompThread -nodesktop -nodisplay
+```
 
-Start MATLAB.  
-Configure MATLAB to run parallel jobs on your cluster by calling configCluster, or, if you are in the GUI, going under the Parallel menu item, selecting Parallel Preferences, and going to the Cluster Profile Manager. 
-For each cluster, `configCluster` only needs to be called once per version of MATLAB, but you can save more than one profile for the same version. Likewise, you only need to set up one cluster profile in the Cluster Profile Manager for each version you run in the GUI. Once you're happy with your settings, you can select the profile by name from the Parallel menu each time you start MATLAB and to make every parallel pool instance start with those cluster configurations.
+and then submit scripts via the batch method of a cluster profile as discussed in the next section. Regardless of which terminal you use, the GUI will still launch if you do not include the flags `-nodesktop` and `-nodisplay`, so don't forget those if you need to run a job that lasts longer than 48 hours.
+
+## Getting Started with Serial and Parallel MATLAB
+### Cluster Configuration
+There are two ways to configure MATLAB to run parallel jobs on your cluster depending on whether you want to run those jobs from the MATLAB GUI or from the command line. At the command line, users must call `configCluster` and set the parameters of the job with class methods of `ClusterInfo`. When running the GUI, users can go to a `Cluster Profile Manager` in `Parallel Settings` to set their job parameters and other constraints. Both ways are discussed in more detail below.
+
+In both cases, cluster profile configuration only needs to be done once per version of MATLAB you use, but you can save more than one profile for the same version if you want.
+
+#### Configuration at the Command Line
+
+Load and start MATLAB.
+
+For each cluster, `configCluster` only needs to be called once per version of MATLAB. This cluster profile will be automatically saved and made available from then on every time you load that version of MATLAB. 
 
 ```matlab
 configCluster
 ```
 
 Jobs will now default to the cluster rather than submit to the local machine.
-Before submitting a job, you must specify the name of the charge account and the walltime, via ClusterInfo, which will be explained in more detail below.
-
-### Configuring jobs
 
 Prior to submitting the job, we can specify various parameters to pass to our jobs, such as queue, e-mail, etc.  
-Specification is done with ClusterInfo.  The ClusterInfo class supports tab completion to ease recollection of method names.
+Specification is done with `ClusterInfo`.  The `ClusterInfo` class supports tab completion to ease recollection of method names.
 NOTE:  Any parameters set with ClusterInfo will be persistent between MATLAB sessions.
 
 ```matlab
@@ -81,7 +85,7 @@ Additional parameters that can be supplied are:
 * Reservation
 * UseGpu
 
-Please note that as of version 2017a the syntax for setting the ClusterInfo parameters have changed. These are now properties of a parcluster object instead of methods in the ClusterInfo object.
+Please note that as of version 2017a the syntax for setting the ClusterInfo parameters have changed. These are now properties of a `parcluster` object instead of methods in the `ClusterInfo` object.
 
 ```matlab
 configCluster
@@ -93,7 +97,7 @@ c.AdditionalProperties.WallTime = '01:00:00';
 c.saveProfile
 ```
 
-In the above example c is a parcluster object to which all properties are set accordingly.
+In the above example `c` is a `parcluster` object to which all properties are set accordingly.
 
 To see the values of the current configuration options, call the state method.  To clear a value, assign the property an empty value (‘’, [], or false), or call the clear method to clear all values.
 
@@ -106,6 +110,48 @@ ClusterInfo.setEmailAddress(‘ ’)
 ClusterInfo.clear
 ```
 
+#### Cluster Profiles in the GUI
+If you have a common set of configurations you like to use for parallel computations on COSMOS, the MATLAB GUI provides a way to set these preferences and save them as one or more Cluster Profiles. From the main menu ribbon along the top, you can can either go to `Preferences` and select `Parallel Computing Toolbox` from the pop-up menu at left, or select `Parallel` and go to `Parallel Preferences` at the bottom of the drop-down menu. In both cases, the `Parallel Computing Toolbox Preferences` section will have a box where you can select a default profile if any profiles exist; otherwise, click `Cluster Profile Manager` to create one. (Please leave the boxes checked to automatically start the parallel pool if parallelized commands are detected in your code, and shut down idle parallel pools after 30 minutes.)
+
+![Code example](../../images/Matlab-ParallelToolboxPrefs.png "Preferences") 
+
+In the `Cluster Profile Manager`, the editor will let you can set the name of the profile, the number of workers (the total number of processes **minus 1**), and the default working directory for the job at the top. Most other job configuration parameters like your account, walltime, memory per node, number of tasks per node, GPUs per node, and whether to require an exclusive node are set lower down in the table under `Scheduler Plugin`. All the way at the bottom, you can select a preferred number and range of workers under the `Workers` tab, and here you can also pass copies of important environmental variables to the workers. To check that these settings work, after saving your edits, you will need to run the `Validate` command in the Cluster Profile Manager's top toolbar.
+
+![Code example](../../images/Matlab-ClusterMgr0.png "Cluster Profile Manager") 
+
+In the `Parallel` drop-down menu, hovering over `Select Parallel Environment` will reveal a second drop-down menu where previously-saved profiles will appear under the `Cluster Tab`.
+
+![Code example](../../images/Matlab-ParallelMenu.png "Parallel Menu") 
+
+Now whenever you start a `parpool` instance (i.e. the template for a group of tasks to be run in parallel) or use the `'pool'` option with a cluster's `batch` method, it will be generated with your default cluster profile settings, or the settings for whichever cluster profile you select as the default for the current session, if you don't pass any arguments or let another function start it anonymously.
+
+In the GUI, if you want to generate one or more `parpool` instances with different settings but without changing which cluster profile is the default, you pass override arguments to `parpool` to change the number of workers and/or select a different cluster for only that instance of `parpool`. Alternative clusters can be passed by handle or by the name (string) of the cluster as defined in the cluster profile manager. But don't forget that only 1 `parpool` instance can be active at a time, and the settings can't be changed once the pool instantiated. An existing pool must be deleted and a new one instantiated to get a pool with different settings. Below is an example of how you might start a parallel pool for a small interactive parallel job. Batch mode is discussed in the next section for larger jobs and is still generally preferred.
+
+```matlab
+% start a default pool and get handle
+poolobj = parpool;
+
+% Oops, that has N workers but we need 2N.
+% Delete the old one
+delete(poolobj)
+% Start a new pool with 2N workers (let's say N was 7)
+pool2n = parpool(15);
+% ...do stuff...
+
+% clean up
+delete(pool2n)
+
+% Now we want to use a different cluster
+% get handle for some other cluster profile
+c = parcluster;
+% start a pool with this profile and 31 workers
+pool4n = parpool(c, 31);
+% ...continue doing stuff...
+```
+
+It is also important to remember that **the number of workers is 1 less than the total number of processes that will be spawned**, because MATLAB implicitly spawns one additional process to manage overhead for the others. Therefore, if you want to run a parallel job using 1 task per CPU on a node with 32 CPUs, you must specify 31 workers to stay within that node.
+
+### Running Jobs
 #### Serial jobs
 
 Use the batch command to submit asynchronous jobs to the cluster.  The batch command will return a job object which is used to access the output of the submitted job.  See the MATLAB documentation for more help on batch.
@@ -147,7 +193,7 @@ Users can also submit parallel workflows with batch.  Let’s use the following 
 
 ![Code example](../../images/Code_example.png "Start window")    
 
-We’ll use the batch command again, but since we’re running a parallel job, we’ll also specify a MATLAB Pool.     
+We’ll use the batch command again, but since we’re running a parallel job, we’ll also specify a MATLAB Parallel Pool.
 
 ```matlab
 % Get a handle to the cluster
@@ -179,7 +225,7 @@ id =
 clear j
 ```
 
-Once we have a handle to the cluster, we’ll call the findJob method to search for the job with the specified job ID.   
+Once we have a handle to the cluster, we’ll call the findJob method to search for the job with the specified job ID.  
 
 ```matlab
 % Get a handle to the cluster
@@ -200,42 +246,6 @@ The job now runs in 4.73 seconds using 8 workers.  Run the code with different n
 Alternatively, to retrieve job results via a graphical user interface (GUI), use the Job Monitor (Parallel > Monitor Jobs).
 
 ![Code example](../../images/Parallel_interface.png "Start window") 
-
-#### Setting and Managing Cluster Profiles in the GUI
-If you have a common set of configurations you like to use for parallel computations on COSMOS, the MATLAB GUI provides a way to set these preferences and save them as one or more Cluster Profiles. From the main menu ribbon along the top, you can can either go to `Preferences` and select `Parallel Computing Toolbox` from the popup menu at left, or select `Parallel` and go to `Parallel Preferences` at the bottom of the drop-down menu. In both cases, the `Parallel Computing Toolbox Preferences` section will have a box where you can select a default profile if any profiles exist; otherwise, click `Cluster Profile Manager` to create one. Please leave the boxes checked to automatically start the parallel pool if parallelized commands are detected in your code, and shut down idle parallel pools after 30 minutes.
-
-![Code example](../../images/Matlab-ParallelToolboxPrefs.png "Preferences") 
-
-In the Cluster Profile Manager, the editor will let you can set the name of the profile, the number of workers, and the default working directory for the job at the top. Most other configuration parameters like your account, walltime, memory per node, number of tasks per node, GPUs per node, and whether to require an exclusive node are set lower down in the table under `Scheduler Plugin`. All the way at the bottom, you can select a preferred number and range of workers under the `Workers` tab, and here you can also pass copies of important environmental variables to the workers. To check that these settings work, after saving your edits, you will need to run the `Validate` command in the Cluster Profile Manager's top toolbar.
-
-![Code example](../../images/Matlab-ClusterMgr0.png "Cluster Profile Manager") 
-
-In the `Parallel` drop-down menu, hovering over `Select Parallel Environment` will reveal a second drop-down menu where previously-saved profiles will appear under the `Cluster Tab`.
-
-![Code example](../../images/Matlab-ParallelMenu.png "Parallel Menu") 
-
-Now whenever you start a `parpool` instance (i.e. the template for a group of tasks to be run in parallel), it will be generated with your default cluster profile settings, or the settings for whichever cluster profile you select as the default for the current session, if you don't pass any arguments or let another function start it anonymously. If you want to generate one or more `parpool` instances with different settings, but without changing which cluster profile is the default, you pass override arguments to `parpool` to change the number of workers and/or select a different cluster for only that instance of `parpool`. Alternative clusters can be passed by handle or by the name (string) of the cluster as defined in the cluster profile manager. But don't forget that only 1 `parpool` instance can be active at a time, and the settings can't be changed once the pool instantiated. An existing pool must be deleted and a new one instantiated to get a pool with different settings.
-
-```matlab
-% start a default pool and get handle
-poolobj = parpool
-
-% Oops, that one has N workers but we need 2N.
-% Delete the old one
-delete(poolobj)
-% Start a new pool with 2N workers (let's say N was 8)
-pool2n = parpool(16)
-% ...do stuff...
-
-% clean up
-delete(pool2n)
-
-% Now we want to use a different cluster
-% get handle for some other cluster profile
-c = parcluster;
-% start a pool with this profile and 32 workers
-pool4n = parpool(c, 32);
-```
 
 
 ### Debugging
