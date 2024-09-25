@@ -13,42 +13,37 @@ R2023b         matlab/2023b
 ```
 
 ## Load and Run MATLAB
-### Running MATLAB on login-node 
+### Running the GUI with Desktop On-Demand (Recommended)
 
-MATLAB can be used on the login-nodes (either using LUNARC HPC Desktop i.e. ThinLinc. Or using SSH). Please note that, as these are shared resources, excessive use of MATLAB on the login-nodes will prevent other users from using the resources and may result in the offending jobs being killed without warning.
-As MATLAB by default will use as many threads (cores) it possibly can, any user who is to use MATLAB on the login-nodes MUST start matlab with the option "-singleCompThread" thus preventing MATLAB from using more that one thread.
-This will NOT prevent MATLAB from utilizing the MATLAB Distributed Computing Server (MDCS) with which any number of cores can be used for computations. You can also still send batch jobs on the local compute nodes this way if you correctly configure and instantiate a cluster profile, and call the batch method on that instance.
+The recommanded way to run MATLAB on cosmos is to log into the LUNARC HPC desktop with Thinlinc, go to the Applications menu, mouse over `Applications - MATLAB`, and click your preferred version. This will launch a GfxLauncher window where you can specify the resources you need to run the graphical user interface (GUI), like your choice of node(s), the number of tasks per node, the walltime, etc. Once you press `start`, the MATLAB GUI will automatically launch on a backend node with a graphical partition, and the GfxLauncher window in the background will show how much of your walltime has been used. With this method, there is no need to load any modules in a terminal.
 
-To start MATLAB on a login node, use: 
+Batch jobs and other parallelised scripts can be submitted to the slurm scheduler via the MATLAB GUI's Parallel Computing Toolbox once you have established a cluster profile (see the Configuration section). **The settings you enter for a cluster profile in the Parallel Computing Toolbox are distinct from those you set at the GfxLauncher for running the GUI.** Batch jobs are not bound by the parameters you set at the GfxLauncher. As long as you save your outputs to a directory with sufficient space, you are free to close the GUI and fetch your results later.
 
-```bash
-$ module load matlab/<version>
-$ matlab -singleCompThread
-```
+### Load and Run MATLAB in the terminal
 
-To avoid starting the graphical interface, add the `-nodesktop -nodisplay` flags after the `-singleCompThread` flag.
-
-On the LUNARC HPC Desktop (Thinlinc), these versions are available as Desktop On-Demand graphic interfaces via the Applications menu. Starting MATLAB from the menu automatically will set the -singleCompThread flag. This is now the recommended way to start MATLAB on the LUNARC HPC Desktop. Job configurations as described in the following sections can be entered at the Command Window in the MATLAB GUI, can be set and saved as a cluster profile, or can be configured at the MATLAB command line in the termninal.
-
-### Loading and starting the module
-The recommanded way to run MATLAB on cosmos is to log into the HPC desktop with Thinlinc, go to the Applications menu, mouse over `Applications - MATLAB`, and select your preferred version. This will launch a GfxLauncher window where you can specify the resources you need like your choice of node(s), the number of tasks per node, the walltime, etc. Once you press `start`, the MATLAB GUI will automatically launch on a backend node with a graphical partition, and the GfxLauncher window in the background will show how much of your walltime has been used.
-
-Batch jobs and other parallelized scripts can be submitted to the slurm scheduler via the MATLAB GUI's Parallel Computing Toolbox. However, at this time the GUI cannot be closed while running such a job, and since running the GUI means that you have to use a GPU node, jobs run in this manner are limited to 48 hours.
-
-If you need to use the command line for longer or less interactive jobs, whether on the front end or the interactive terminal, you will need to run these lines:
+If you want to use the command line for less interactive jobs or slurm scripts that call other programs besides MATLAB, you can choose to run MATLAB in a terminal instead of launching the GUI. **There are 2 options for starting a terminal session on the HPC desktop depending on which nodes you want to use:** the interactive terminal in `Applications` &rarr; `Applications - General`, which runs on the compute nodes, and the regular terminal that appears in `Favorites`, which runs on the login nodes. Regardless of which one you use, you will need to run these lines:
 
 ```bash
 $ module load matlab/<version>
-$ matlab -singleCompThread -nodesktop -nodisplay
+$ matlab -singleCompThread -nodisplay
 ```
 
-and then submit scripts via the batch method of a cluster profile as discussed in the next section. Regardless of which terminal you use, the GUI will still launch if you do not include the flags `-nodesktop` and `-nodisplay`, so don't forget those if you need to run a job that lasts longer than 48 hours.
+and then you can submit scripts via the batch method of a cluster profile as discussed in the Configuration section below. The flag `-nodisplay` is required to keep the GUI from launching.
+
+As MATLAB by default will use as many threads (cores) as it possibly can, any user who is to use MATLAB on the login-nodes **must start matlab with the option `-singleCompThread`** to prevent MATLAB from using more that one thread.
+This will **not** prevent MATLAB from utilizing the MATLAB Distributed Computing Server (MDCS) with which any number of cores can be used for computations. You can also still send batch jobs on the local compute nodes this way if you correctly configure and instantiate a cluster profile, and call the batch method on that instance. 
+
+#### Running MATLAB on login-node
+
+MATLAB can also be used on the login nodes (either using LUNARC HPC Desktop, i.e. ThinLinc, or using SSH), and users can choose whether to open the GUI or stay within a terminal session. Please note that, as the login nodes are shared resources, excessive use of MATLAB on the login nodes will prevent other users from fully utilizing their requested resources. LUNARC administrators will kill any jobs associated with such misuse immediately upon identification and send a warning to the user afterward.
+
+Users who want to run on the login nodes are advised to stick to the terminal interface (i.e. set `-nodisplay`) to help keep their resource usage low, and run most scripts via the cluster profile's batch method (discussed later in the next section) whenever possible. Scripts run outside of batch mode should be quick (<30 min) and strictly serial. Because it bears repeating, any user who plans to start MATLAB on the login nodes **MUST start matlab with the option `-singleCompThread`** to prevent MATLAB from using more than one thread on the login node's CPUs.
 
 ## Getting Started with Serial and Parallel MATLAB
 ### Cluster Configuration
 There are two ways to configure MATLAB to run parallel jobs on your cluster depending on whether you want to run those jobs from the MATLAB GUI or from the command line. At the command line, users must call `configCluster` and set the parameters of the job with class methods of `ClusterInfo`. When running the GUI, users can go to a `Cluster Profile Manager` in `Parallel Settings` to set their job parameters and other constraints. Both ways are discussed in more detail below.
 
-In both cases, cluster profile configuration only needs to be done once per version of MATLAB you use, but you can save more than one profile for the same version if you want.
+Either way, cluster profile configuration only needs to be done once per version of MATLAB you use, but you can save more than one profile for the same version if you want.
 
 #### Configuration at the Command Line
 
@@ -111,11 +106,25 @@ ClusterInfo.clear
 ```
 
 #### Cluster Profiles in the GUI
-If you have a common set of configurations you like to use for parallel computations on COSMOS, the MATLAB GUI provides a way to set these preferences and save them as one or more Cluster Profiles. From the main menu ribbon along the top, you can can either go to `Preferences` and select `Parallel Computing Toolbox` from the pop-up menu at left, or select `Parallel` and go to `Parallel Preferences` at the bottom of the drop-down menu. In both cases, the `Parallel Computing Toolbox Preferences` section will have a box where you can select a default profile if any profiles exist; otherwise, click `Cluster Profile Manager` to create one. (Please leave the boxes checked to automatically start the parallel pool if parallelized commands are detected in your code, and shut down idle parallel pools after 30 minutes.)
+The MATLAB GUI provides a way to set common batch job parameters and save them as one or more Cluster Profiles (`parcluster` objects) to load each time you load that version of MATLAB. These are distinct from the settings input into the GfxLauncher, which only apply to the MATLAB GUI itself, not to batch jobs submitted to SLURM within MATLAB.
+
+From the main menu ribbon along the top, you can can either go to `Preferences` &rarr; `Parallel Computing Toolbox`, or `Parallel` &rarr; `Parallel Preferences`. Either way, the `Parallel Computing Toolbox Preferences` section of the pop-up will have a box where you can select a default profile if any profiles exist; otherwise, click `Cluster Profile Manager` to create one.
 
 ![Code example](../../images/Matlab-ParallelToolboxPrefs.png "Preferences") 
 
-In the `Cluster Profile Manager`, the editor will let you can set the name of the profile, the number of workers (the total number of processes **minus 1**), and the default working directory for the job at the top. Most other job configuration parameters like your account, walltime, memory per node, number of tasks per node, GPUs per node, and whether to require an exclusive node are set lower down in the table under `Scheduler Plugin`. All the way at the bottom, you can select a preferred number and range of workers under the `Workers` tab, and here you can also pass copies of important environmental variables to the workers. To check that these settings work, after saving your edits, you will need to run the `Validate` command in the Cluster Profile Manager's top toolbar.
+In the `Cluster Profile Manager`, the editor will let you set:
+* the name of the profile
+* the default number of workers (the total number of processes **minus 1**)
+* the default working directory for the job
+* your account name
+* the required walltime
+* the number of tasks per node
+* the memory per node
+* the number of GPUs per node (optional)
+* the range of numbers of workers to allow
+* whether to require an exclusive node (default is false)
+
+Most familiar SBATCH parameters are set in a box near the bottom titled "Scheduler Plugin". At the very bottom, you can also pass important environmental variables to the workers. To check that these settings work, after saving your edits, you will need to run the `Validate` command in the Cluster Profile Manager's top toolbar. It is recommended that you leave the boxes checked that shut down and delete parallel pools that have been idle for 30 minutes.
 
 ![Code example](../../images/Matlab-ClusterMgr0.png "Cluster Profile Manager") 
 
@@ -243,7 +252,8 @@ ans =
 ```
 
 The job now runs in 4.73 seconds using 8 workers.  Run the code with different number of workers to determine the ideal number to use.
-Alternatively, to retrieve job results via a graphical user interface (GUI), use the Job Monitor (Parallel > Monitor Jobs).
+
+Alternatively, to retrieve job results via the GUI, use the Job Monitor (`Parallel` &rarr; `Monitor Jobs`).
 
 ![Code example](../../images/Parallel_interface.png "Start window") 
 
