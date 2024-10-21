@@ -83,6 +83,9 @@ nav:
   - Test page: about/testpage.md
   - Template: about/template.md
 
+repo_url: https://github.com/lunarc/lunarc_docs
+repo_name: LUNARC Documentation
+
 theme: 
   name: material
   palette:

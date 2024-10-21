@@ -98,6 +98,12 @@ To reduce the number of logins to the system the "Seconds between keepalives" ca
 
 ---
 
+## Troubleshooting
+
+### SSH keeps asking for a password
+
+Assuming you have a LUNARC account, this happens because the Pocket Pass has not been activated yet. Activate your Pocket Pass and try again.
+
 **Author:**
 (LUNARC)
 
