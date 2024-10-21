@@ -5,6 +5,10 @@ There are two main ways of accessing the LUNARC systems:
  * The LUNARC HPC desktop, described in a separate [guide](using_hpc_desktop.md)
  * Terminal and command-line tools
 
+???- question "Prefer a video?"
+
+    See [the YouTube video 'Login to LUNARC's COSMOS using SSH, including password and Pocket Pass reset'](https://youtu.be/sMsenzWERTg)
+
 This document describes the second item: how to access our system using a terminal and command-line tools. To get access to a terminal the user has to login in to LUNARC using a Secure Shell (SSH) terminal client, for example:
 
 ```console

@@ -1,5 +1,9 @@
 The LUNARC HPC Desktop provides LUNARC users with a solution for accelerated remote visualization that will provide a new scalable approach to HPC and scientific data visualization. The desktop introduces a convenient way to work with our clusters using not only multiple terminal windows but also file browsers, editors, graphical tools such as queue status and debuggers, 2D and 3D applications, etc.
 
+???- question "Prefer a video?"
+
+    See [the YouTube video 'Accessing the LUNARC HPC Desktop'](https://youtu.be/wn7TgElj_Ng).
+
 The same 2-factor authentication as for a normal ssh session is used and the desktop session can easily be disconnected for later reconnect. The whole desktop state (including the latest mouse position) is saved and the system works both from the campus network and from home or when traveling.
 
 The 2D desktop (currently Mate) runs on a scalable desktop infrastructure that supports multiple desktop agents and load-balancing features to ensure a smooth experience. 3D OpenGL applications are executed on dedicated visualization nodes with hardware accelerated graphics and seamlessly displayed on the 2D desktop.
