@@ -89,6 +89,22 @@ Inside the self-service portal, go to the **TOKENS** tab.  You will see your tok
 
 If your token has expired, please go through [steps 3](#step-3-token-activation) to 5 to create a new token.  Please do not **forget step 5**.  Newly created tokens will expire after two years.
 
+## Troubleshooting
+
+### Check your details to complete the login
+
+![Phenix error: Check your details to complete the login](phenix_error_vague.png)
+
+> Check your details to complete the login
+
+This is a vague error that can happen when you are trying to get a password
+and trying to get a Pocket Pass at the same time.
+
+Try again from the start:
+
+- [Reset your password at the self service portal](https://phenix3.lunarc.lu.se/pss)
+- Get your Pocket Pass authenticator set up
+
 ---
 
 **Author:**
