@@ -45,6 +45,14 @@ There are two ways to avoid the desktop window occupying the entire screen.
 
 Depending on your system it might be convenient to *not _run_ in full-screen mode. Play around and see what suits you best.
 
+## Accessing the LUNARC HPC Desktop from a web browser
+
+It is possible to access the LUNARC HPC Desktop using a modern HTML5-enabled browser. To use this method to connect go to the following URL:
+
+[Lunarc support](https://cosmos-dt.lunarc.lu.se:300)](https://cosmos-dt.lunarc.lu.se:300)
+
+A web based login screen appears. Login using your user name, password and OTP-token from your app.
+
 ## Resolving issues when connecting
 
 After encountering issues in a desktop session (e.g. crashed application) the desktop state saved from a previous session can become corrupt. If this happens to you, you may not be able to reconnect. In this case, it is often required to start a fresh session and discard the old session.  This is achieved by checking the box: **End existing session** or **Avsluta aktiv session**, depending on the language settings of your client, on the login window before connecting to LUNARC services.
