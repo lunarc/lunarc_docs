@@ -6,7 +6,7 @@ To receive a new password, please visit the password self service portal at the 
 
 [Password self service portal](https://phenix3.lunarc.lu.se/pss)
 
-Identify yourself with your email address and the mobile phone you have registered in [SUPR](https://supr.snic.se/person/). If this fails, phone LUNARC support on +46 (0)46-222 4454 from your registered mobile phone. Additional questions will be asked to verify your identity.
+Identify yourself with your email address and the mobile phone you have registered in [SUPR](https://supr.naiss.se/person/). If this fails, phone LUNARC support on +46 (0)46-222 4454 from your registered mobile phone. Additional questions will be asked to verify your identity.
 
 ## I can not login after installing a pocket pass token
 
@@ -21,7 +21,7 @@ Please make sure you entered the correct password.  If you are unsure, you can r
 
 ## Could your send my *one time password* for pocket pass activation to my new mobile phone number?
 
-Please enter the new phone number into [SUPR](https://supr.snic.se/person/) and raise a [support request](http://www.lunarc.lu.se/support/support_form) to update our internal database for this change.
+Please enter the new phone number into [SUPR](https://supr.naiss.se/person/) and raise a [support request](https://supr.naiss.se/support/?problem_type=accessing&centre_resource=c5&summary=Update+my+contact+information) to update our internal database for this change.
 
 ---
 
@@ -29,4 +29,4 @@ Please enter the new phone number into [SUPR](https://supr.snic.se/person/) and 
 Joachim Hein (LUNARC)
 
 **Last Updated:**
-2023-02-16
+2024-11-13 (Marcos Acebes)
