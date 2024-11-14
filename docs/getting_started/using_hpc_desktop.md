@@ -59,7 +59,7 @@ After encountering issues in a desktop session (e.g. crashed application) the de
 
 ![login window](../images/desktopLogin.png "Desktop login window")
 
-Please try before contacting [Lunarc support](http://www.lunarc.lu.se/support/support_form "LUNARC support form")
+Please try before contacting [Lunarc support](https://supr.naiss.se/support/?centre_resource=c5 "LUNARC support form")
 
 ---
 
@@ -67,4 +67,4 @@ Please try before contacting [Lunarc support](http://www.lunarc.lu.se/support/su
 (LUNARC)
 
 **Last Updated:**
-2024-09-05
+2024-11-14
