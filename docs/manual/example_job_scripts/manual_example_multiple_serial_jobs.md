@@ -1,14 +1,14 @@
 When you need to run many serial jobs, similar to the ones [described above](#basic-run-script), these should be bundled together and submitted to the job queue in a small number of submissions or even a single submission. With SLURM is perfectly reasonable to run several hundred individual jobs in a single submission. To speed up the processing of your jobs, you can ask for the cores from a number of nodes. The concept is known as a **task-farm**. The individual job are known as **job-steps**.
 
-The following is an example of processing 480 such jobs using 48 cores from one node. The scripting use two scripts, the master script and the worker script. The master script requests the resources (number of cores, job time, ...) and then registers 200 copies of the worker script with SLURM using the command **srun**. The worker script is a modification of the [basic script for I/O intensive jobs](#basic-run-script-for-io-intensive-jobs) described above. 
+The following is an example of processing 480 such jobs using 48 cores from one node. The scripting use two scripts, the master script and the worker script. The master script requests the resources (number of cores, job time, ...) and then registers 480 copies of the worker script with SLURM using the command **srun**. The worker script is a modification of the [basic script for I/O intensive jobs](#basic-run-script-for-io-intensive-jobs) described above. 
 
-In our example, this will then start forty jobs on the fourty cores you requested. Once a job has finished, it will take an unprocessed job and place it on the now idle core for processing. This will continue until all jobs are processed. The ordering of the jobs can not be relied on.
+In our example, this will then start 48 jobs on the 48 cores you have requested. Once a job has finished, it will take an unprocessed job and place it on the now idle core for processing. This will continue until all jobs are processed. The ordering of the jobs can not be relied on.
 
-For our example, the entire setup assumes the submission directory has 200 sub-directories, named job_0, job_1, job_2, …, job_199. Each of the directories contains the input data and the program executable to be run.
+For our example, the entire setup assumes the submission directory has 480 sub-directories, named job_0, job_1, job_2, …, job_479. Each of the directories contains the input data and the program executable to be run.
 
 !!! tip
 
-     * Keep the number of jobs-steps at a reasonable level. Recent testing by the LUNARC support team has shown that when including a sleep statement inside the do loop the setup can be used to process 800 jobs.
+     * Keep the number of jobs-steps at a reasonable level. Testing by the LUNARC support team has shown that when including a sleep statement inside the do loop the setup can be used to process 800 jobs.
      * Make sure to spawn worker tasks from a unique master script running within a unique **sbatch** job submission. Please refrain from using **sbatch** or **sbatch --array** to spawn each worker's tasks as an individual job.
 
 ## The master script
@@ -48,13 +48,13 @@ done
 wait
 ```
 
-The script assumes that the job is described in a script file **workScript.sh**, which takes a single number identifying the job directory to be accessed as a command line argument. Please note the “sleep 1” command inside the do loop. In our testing this greatly enhances the stability by submitting the actual jobs over a longer period of time. With this statement included the script was able to successfully handle up to about 800 outstanding jobs on 16 and 32 cores of our earlier Alarik system. For reasons of job reliability, we, therefore, recommend not to process more than 800 jobs in a single script. However, it is possible to process significantly larger job numbers than 800 by carefully tuning sleep-time and core count to the average job time.
+The script assumes that the job is described in a script file **workScript.sh**, which takes a single number identifying the job directory to be accessed as a command line argument. Please note the “**sleep 1**” command inside the do loop. In our testing this greatly enhances the stability by submitting the actual jobs over a longer period of time. With this statement included the script was able to successfully handle up to about 800 outstanding jobs on 16 and 32 cores of our earlier Alarik system. For reasons of job reliability, we, therefore, recommend not to process more than 800 jobs in a single script. However, it is possible to process significantly larger job numbers than 800 by carefully tuning sleep-time and core count to the average job time.
 
 !!! tip
 
      When using **srun** inside a batch script many **srun**-options act differently compared to using **srun** within a different environment. Note also that even the order of the options **--exclusive** and **--overlap** is crucial for the correct behaviour. Consult the man-page of **srun** for documentation and contact the LUNARC help desk if you require further consultancy.
 
-If you need more than the default 3100 MB memory per core, you have to specify both **--ntasks-per-node** and **--mem-per-cpu**. Please match the core count and the memory per core to best utilise the resources of a node, which has a total of 240000 MB of memory available for jobs.
+If you need more than the default 5300 MB memory per core, you have to specify both **--ntasks-per-node** and **--mem-per-cpu**. Please match the core count and the memory per core to best utilise the resources of a node, which has a total of 254000 MB of memory available for jobs.
 
 ## The worker script
 
@@ -160,5 +160,5 @@ Below is an output from **squeue** when running a script processing 500 jobs on 
 (LUNARC)
 
 **Last Updated:**
-2023-01-31
+2025-02-05
 
