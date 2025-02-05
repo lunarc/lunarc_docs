@@ -15,7 +15,7 @@ For our example, the entire setup assumes the submission directory has 480 sub-d
 
 The master script describes the resources required and registers, once running the worker tasks with SLURM. In most cases modifying the number of nodes needed, the total job time and the number of jobs to be processed should be all that is required.
 
-The following example will be using 20 cores on 1 node to process 200 jobs.
+The following example will be using 48 cores on 1 node to process 480 jobs.
 
 ```bash
 #!/bin/sh
