@@ -15,7 +15,16 @@ R2023b         matlab/2023b
 ## Load and Run MATLAB
 ### Running the GUI with Desktop On-Demand (Recommended)
 
-The recommanded way to run MATLAB on cosmos is to log into the LUNARC HPC desktop with Thinlinc, go to the Applications menu, mouse over `Applications - MATLAB`, and click your preferred version. This will launch a GfxLauncher window where you can specify the resources you need to run the graphical user interface (GUI), like your choice of node(s), the number of tasks per node, the walltime, etc. Once you press `start`, the MATLAB GUI will automatically launch on a backend node with a graphical partition, and the GfxLauncher window in the background will show how much of your walltime has been used. With this method, there is no need to load any modules in a terminal.
+The recommanded way to run MATLAB on cosmos is to log into the LUNARC HPC desktop with Thinlinc, go to the Applications menu, mouse over `Applications - MATLAB`, and click your preferred version. For each release, you will see 3 versions. The release is up to you, but there are important differences between the 3 variants of each release:
+* Matlab R202Xy - this is the regular version. It runs on a 32-core Intel node with a GPU partition. Wall time is limited to 48 hours.
+* Matlab R202Xy (CPU) - this version starts on a 48-core AMD CPU-only node. Graphics support is more limited, but wall time can be as long as 168 hours (7 days).
+* Matlab R202Xy (HEP,CPU) - Do not use this version unless you are a member of the group who owns these nodes.
+
+![Code example](../../images/Cosmos-AppMenu-Matlab.png "MATLAB versions menu") 
+
+This will launch a GfxLauncher window (example below) where you can specify the resources you need to run the graphical user interface (GUI), like your choice of node(s), the number of tasks per node, the walltime, etc. Once you press `start`, the MATLAB GUI will automatically launch on a backend node with a graphical partition, and the GfxLauncher window in the background will show how much of your walltime has been used. With this method, there is no need to load any modules in a terminal.
+
+![Code example](../../images/Cosmos-OnDemand-Matlab23b-advreqs.png "GfxLauncher Options") 
 
 Batch jobs and other parallelised scripts can be submitted to the slurm scheduler via the MATLAB GUI's Parallel Computing Toolbox once you have established a cluster profile (see the Configuration section). **The settings you enter for a cluster profile in the Parallel Computing Toolbox are distinct from those you set at the GfxLauncher for running the GUI.** Batch jobs are not bound by the parameters you set at the GfxLauncher. As long as you save your outputs to a directory with sufficient space, you are free to close the GUI and fetch your results later.
 
@@ -105,14 +114,16 @@ ClusterInfo.setEmailAddress(‘ ’)
 ClusterInfo.clear
 ```
 
-#### Cluster Profiles in the GUI
+#### Modifyin Cluster Profiles in the GUI
 The MATLAB GUI provides a way to set common batch job parameters and save them as one or more Cluster Profiles (`parcluster` objects) to load each time you load that version of MATLAB. These are distinct from the settings input into the GfxLauncher, which only apply to the MATLAB GUI itself, not to batch jobs submitted to SLURM within MATLAB.
 
-From the main menu ribbon along the top, you can can either go to `Preferences` &rarr; `Parallel Computing Toolbox`, or `Parallel` &rarr; `Parallel Preferences`. Either way, the `Parallel Computing Toolbox Preferences` section of the pop-up will have a box where you can select a default profile if any profiles exist; otherwise, click `Cluster Profile Manager` to create one.
+From the main menu ribbon along the top, you can can either go to `Preferences` &rarr; `Parallel Computing Toolbox`, or `Parallel` &rarr; `Parallel Preferences`. Either way, the `Parallel Computing Toolbox Preferences` section of the pop-up will have a box where you can select a default profile if any profiles exist.
+
+**If there is no default profile, it is strongly recommended that you run `configCluster` at the MATLAB command line** and follow steps previously described above, as there are a number of settings that need to be provided by that shell script that users would not be expected to know. The cluster profile manager is better for adding parameters that are not given by default.
 
 ![Code example](../../images/Matlab-ParallelToolboxPrefs.png "Preferences") 
 
-In the `Cluster Profile Manager`, the editor will let you set:
+In the `Cluster Profile Manager`, the editor will let you set or modify:
 * the name of the profile
 * the default number of workers (the total number of processes **minus 1**)
 * the default working directory for the job

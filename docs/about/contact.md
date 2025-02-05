@@ -4,7 +4,7 @@ For general inquiries, please contact LUNARC at <info@lunarc.lu.se>
 
 ## Support
 
-Support form in SUPR (preferred way of contact): <https://supr.naiss.se/support/>
+Support form in SUPR (preferred way of contact): <https://supr.naiss.se/support/?centre_resource=c5>
 
 Email: <support@lunarc.lu.se>
 

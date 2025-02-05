@@ -16,7 +16,7 @@ You have the following options to resolve the issues:
 
  * Have a look at whether there are different versions of the modules installed that have common pre-requisites.  In many cases we have the same version of the software installed with different pre-requisites to help this issue.
  * Have a terminal dedicated to each of the modules.  This should work if the modules do not really interact with each other, but e.g. one module creates files which the other module reads.  Consider using the [Lunarc HPC desktop](https://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop/) which easily allows having multiple terminals within a single session
- * If this does not work or does not work satisfactory, contact the [LUNARC helpdesk](http://www.lunarc.lu.se/support/support_form) and discuss your situation.
+ * If this does not work or does not work satisfactory, contact the [LUNARC helpdesk](https://supr.naiss.se/support/?centre_resource=c5) and discuss your situation.
 
  
 ## My application fails because it can't find libgfortran.so.3
@@ -53,7 +53,7 @@ For more information, see also the LUNARC manual page on [compiling MPI code wit
 
 If you would like to use VASP on COSMOS, please ensure that you are registed on a license with the VASP developers in Vienna. To comply with the terms of our handling license, we have to confirm the validity of your license with the VASP developers before granting access. That will take normally take a few days but can take weeks under bad circumstances. **Being named in a SUPR VASP group does not imply you are entitled to use VASP.**
 
-After registerering with the VASP team, contact the [LUNARC helpdesk](http://www.lunarc.lu.se/support/support_form) and provide the following information:
+After registerering with the VASP team, contact the [LUNARC helpdesk](https://supr.naiss.se/support/?centre_resource=c5&summary=Getting+access+to+VASP) and provide the following information:
 
 * Your LUNARC userid
 * Name and Department of the license holder (typically your supervisor/research group leader)
@@ -86,4 +86,4 @@ On COSMOS we support two MPI libraries: [OpenMPI](https://www.open-mpi.org/) and
 Joachim Hein (LUNARC)
 
 **Last Updated:**
-2022-10-06
+2024-11-14

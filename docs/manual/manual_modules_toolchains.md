@@ -44,7 +44,7 @@ A significant portion of the COSMOS software is built using the [EasyBuild](http
     * **iimpic**: icc, ifort, CUDA, Intel MPI
     * **intelcuda**: icc, ifort, CUDA, Intel MPI, MKL
 
-If you require additional toolchains, contact [LUNARC support](http://www.lunarc.lu.se/support/support-form/) to discuss your requirements.
+If you require additional toolchains, contact [LUNARC support](https://supr.naiss.se/support/?centre_resource=c5) to discuss your requirements.
 
 ## Selecting a toolchain
 
@@ -176,4 +176,4 @@ Executable builds using this setup are also started with the **srun** command fr
 (LUNARC)
 
 **Last Updated:**
-2024-06-18
+2024-11-14

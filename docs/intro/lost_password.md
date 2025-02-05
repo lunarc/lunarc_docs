@@ -7,7 +7,7 @@ To receive a new password, please visit the password self service portal, identi
 If this fails, phone LUNARC support on +46 (0)46-222 4454 from your registered phone number. Additional questions will be asked to verify your identity.
 
 !!! note
-    If you have changed your phone number in SUPR, make sure to create a ticket for LUNARC to have your phone number updated using <https://supr.snic.se/support/>.
+    If you have changed your phone number in SUPR, make sure to create a ticket for LUNARC to have your phone number updated using <https://supr.naiss.se/support/?centre_resource=c5&summary=Update+my+contact+information>.
 
 ---
 
@@ -15,4 +15,4 @@ If this fails, phone LUNARC support on +46 (0)46-222 4454 from your registered p
 (LUNARC)
 
 **Last Updated:**
-2022-10-05
+2024-11-13 (Marcos Acebes)

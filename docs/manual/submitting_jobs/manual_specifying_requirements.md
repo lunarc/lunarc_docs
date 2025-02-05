@@ -139,7 +139,7 @@ In addition, for those who access private nodes (financed by a research project)
 
 ### NVIDIA A100 GPUs with AMD processors 
 
-A number of compute nodes on COSMOS are equipped with GPUs. At the time of this revision, there are six nodes with A100 NVIDIA GPUs and AMD CPUs available.  These nodes feature two AMD EPYC 7413 24-Core processors, a total of 48 cores and have formally 512 GB of RAM, but only 512 000 MB are accessible. The nodes are placed in the **gpua100** partition. To access these nodes, you must include the line
+A number of compute nodes on COSMOS are equipped with GPUs. At the time of this revision, there are six nodes with A100 NVIDIA 80 GB GPUs and AMD CPUs available.  These nodes feature two AMD EPYC 7413 24-Core processors, a total of 48 cores and have formally 512 GB of RAM, but only 512 000 MB are accessible. The nodes are placed in the **gpua100** partition. To access these nodes, you must include the line
 
 ```bash
 #SBATCH -p gpua100
@@ -148,7 +148,7 @@ in your batch scipt.  These nodes are configured as exclusive access and will no
 
 ### NVIDIA A100 GPUs with Intel processors 
 
-At the time of this revision, there are four nodes with A100 NVIDIA GPUs and Intel CPUs available.  These nodes feature two Intel Xeon Gold 6226R 16-Core processors, a total of 32 cores and have formally 384 GB of RAM, but only 380 000 MB are accessible. The nodes are placed in the **gpua100i** partition. To access these nodes, you must include the line
+At the time of this revision, there are four nodes with A100 NVIDIA 40 GB GPUs and Intel CPUs available.  These nodes feature two Intel Xeon Gold 6226R 16-Core processors, a total of 32 cores and have formally 384 GB of RAM, but only 380 000 MB are accessible. The nodes are placed in the **gpua100i** partition. To access these nodes, you must include the line
 
 ```bash
 #SBATCH -p gpua100i
