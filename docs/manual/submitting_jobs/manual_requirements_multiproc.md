@@ -45,7 +45,7 @@ Use the `--ntasks-per-node` of `sbatch` to specify the number of tasks you requi
 #SBATCH --ntasks-per-node=48
 ```
 
-This should be used together with the -N option, specifying the number of nodes to be used. The default value for the number of tasks per node is 1. For example to specify the requirements for an MPI job with 80 tasks or a multiprocessor job using 192 processors to process a larger number of serial jobs one would specify
+This should be used together with the -N option, specifying the number of nodes to be used. The default value for the number of tasks per node is 1. For example to specify the requirements for an MPI job with 192 tasks or a multiprocessor job using 192 processors to process a larger number of serial jobs one would specify
 
 ```bash
 #SBATCH -N 4
@@ -100,5 +100,5 @@ In special cases, such as using very unusual numbers of tasks, the `-n` option o
 (LUNARC)
 
 **Last Updated:**
-2023-01-31
+2025-02-10
 
