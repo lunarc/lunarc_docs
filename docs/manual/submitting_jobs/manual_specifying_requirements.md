@@ -33,13 +33,13 @@ This will name your job “parameterTest”.
 
 ## Specifying memory requirements
 
-The COSMOS system has 256 GB of memory installed on a normal compute node. To allow memory for the operating system, only 254000 MB are available for jobs and the default memory request per core is 5300 MB of memory (48 cores per node). If more than 5300 MB per core is needed, it has to be requested explicitly using the **--mem-per-cpu** option.  For example, if you require  10000 MB per core, add the line:
+The COSMOS system has 256 GB of memory installed on a normal compute node. To allow memory for the operating system, only 254000 MB are available for jobs and the default memory request per core is 5300 MB of memory (48 cores per node). If more than 5300 MB per core is needed, it has to be requested explicitly using the **--mem-per-cpu** option.  For example, if you require  10600 MB per core, add the line:
 
 ```bash
-#SBATCH --mem-per-cpu=10000
+#SBATCH --mem-per-cpu=10600
 ```
 
-When requesting more than 5300 MB per processing core on a normal COSMOS node, your jobs will be charged at a higher rate. If you do this, some processing cores must remain idle since you use more than your fair share of memory.
+When requesting more than 5300 MB per processing core on a normal COSMOS node, your jobs will be charged at a higher rate. If you ask for more than 5300 MB, some processing cores must remain idle since you use more than your fair share of memory.  Your jobs will be charged for these idle cores.
 
 
 ## Controlling job output
