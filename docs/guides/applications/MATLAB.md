@@ -42,9 +42,9 @@ and then you can submit scripts via the batch method of a cluster profile as dis
 As MATLAB by default will use as many threads (cores) as it possibly can, any user who is to use MATLAB on the login-nodes **must start matlab with the option `-singleCompThread`** to prevent MATLAB from using more that one thread.
 This will **not** prevent MATLAB from utilizing the MATLAB Distributed Computing Server (MDCS) with which any number of cores can be used for computations. You can also still send batch jobs on the local compute nodes this way if you correctly configure and instantiate a cluster profile, and call the batch method on that instance. 
 
-#### Running MATLAB on login-node
+#### Running MATLAB on login-node (not recommended)
 
-MATLAB can also be used on the login nodes (either using LUNARC HPC Desktop, i.e. ThinLinc, or using SSH), and users can choose whether to open the GUI or stay within a terminal session. Please note that, as the login nodes are shared resources, excessive use of MATLAB on the login nodes will prevent other users from fully utilizing their requested resources. LUNARC administrators will kill any jobs associated with such misuse immediately upon identification and send a warning to the user afterward.
+MATLAB can be used on the login nodes (either using LUNARC HPC Desktop, i.e. ThinLinc, or using SSH), and users can choose whether to open the GUI or stay within a terminal session. However, the login nodes are shared resources, so intensive use of MATLAB on the login nodes will prevent other users from fully utilizing their requested resources. LUNARC administrators will kill any jobs associated with such misuse immediately upon identification and send a warning to the user afterward.
 
 Users who want to run on the login nodes are advised to stick to the terminal interface (i.e. set `-nodisplay`) to help keep their resource usage low, and run most scripts via the cluster profile's batch method (discussed later in the next section) whenever possible. Scripts run outside of batch mode should be quick (<30 min) and strictly serial. Because it bears repeating, any user who plans to start MATLAB on the login nodes **MUST start matlab with the option `-singleCompThread`** to prevent MATLAB from using more than one thread on the login node's CPUs.
 
@@ -124,6 +124,7 @@ From the main menu ribbon along the top, you can can either go to `Preferences` 
 ![Code example](../../images/Matlab-ParallelToolboxPrefs.png "Preferences") 
 
 In the `Cluster Profile Manager`, the editor will let you set or modify:
+
 * the name of the profile
 * the default number of workers (the total number of processes **minus 1**)
 * the default working directory for the job
@@ -169,7 +170,7 @@ pool4n = parpool(c, 31);
 % ...continue doing stuff...
 ```
 
-It is also important to remember that **the number of workers is 1 less than the total number of processes that will be spawned**, because MATLAB implicitly spawns one additional process to manage overhead for the others. Therefore, if you want to run a parallel job using 1 task per CPU on a node with 32 CPUs, you must specify 31 workers to stay within that node.
+It is also important to remember that **the number of workers is 1 less than the total number of processes that will be spawned**, because MATLAB implicitly spawns one additional process to manage overhead for the others. Therefore, if you want to run a parallel job using 1 task per CPU core on a node with 32 CPUs, you must specify 31 workers to stay within that node.
 
 ### Running Jobs
 #### Serial jobs
