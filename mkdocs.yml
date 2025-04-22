@@ -132,8 +132,7 @@ markdown_extensions:
 
 plugins:
   - git-revision-date-localized:
-      enable_creation_date: true
-      type: iso_datetime
+      type: iso_date
 
 
 
