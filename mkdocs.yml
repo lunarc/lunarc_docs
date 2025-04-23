@@ -72,6 +72,8 @@ nav:
   - Software development:
     - Compiler options: guides/software_development/compiler_options.md
     - DDT debugger on COSMOS: guides/software_development/ddt_debugger.md
+- Available Software:
+  - software: software/installed_software.md
 - Links:
   - Web resources: links/links_web.md
   - Video resources: links/links_video.md
@@ -105,7 +107,7 @@ extra_css:
   - stylesheets/extra.css   
 
 extra_javascript:
-  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - https://unpkg.com/tablesort@5.6.0/dist/tablesort.min.js
   - javascripts/tablesort.js 
 
 markdown_extensions:
