@@ -133,6 +133,7 @@ markdown_extensions:
   - meta
 
 plugins:
+  - search
   - git-revision-date-localized:
       type: iso_date
 
