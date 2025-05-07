@@ -210,7 +210,7 @@ ADMONITIONS
 
 /* Hiding manual 'Last Updated' entries... */
 
-article.md-content__inner p:last-of-type {
+article.md-content__inner > p:last-of-type {
     display: none;
 }
 
