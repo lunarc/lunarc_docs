@@ -208,6 +208,11 @@ ADMONITIONS
   background-color: #875e29;
 }
 
+/* Hiding manual 'Last Updated' entries... */
+
+article.md-content__inner p:last-of-type {
+    display: none;
+}
 
 /* ------------------------
 Last updated: 22-10-06
