@@ -3,7 +3,7 @@
 There are two main ways of accessing the LUNARC systems:
 
  * The LUNARC HPC desktop, described in a separate [guide](using_hpc_desktop.md)
- * Terminal and command-line tools
+ * Terminal and command-line tools, described below
 
 ???- question "Prefer a video?"
 
@@ -20,6 +20,10 @@ or
 ```console
 ssh username@cosmos.lunarc.lu.se
 ```
+
+!!! note
+
+    If you are logging in via SSH, the server is **cosmos.lunarc.lu.se**. If you are logging in via ThinLinc, the server name beceomes **cosmos-dt.lunarc.lu.se**
 
 On Linux and macOS this client is built-in to the system and no installation is necessary. Windows do not have a standard SSH terminal so an external application is needed such as [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) is needed. However, windows users are recommended to use the [HPC desktop](using_hpc_desktop.md)
 
