@@ -23,7 +23,7 @@ Please make sure you entered the correct password.  If you are unsure, you can r
 
 When trying to log in via ThinLinc, if you receive the error message quoted above and featured in the screenshot below, chances are that you used the wrong server name.
 
-[!](../../images/thinlinc-error-server.png)
+![Wrong server error](../../images/thinlinc-error-server.png "ThinLinc Login Failed")
 
 Typically this happens when you use the server for logging in via SSH, `cosmos.lunarc.lu.se`, instead of the one for ThinLinc, `cosmos-dt.lunarc.lu.se`. Double-check that you are using the right server name for your method of logging in.
 
