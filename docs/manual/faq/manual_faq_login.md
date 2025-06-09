@@ -19,6 +19,14 @@ If you have persistent problems with connecting to LUNARC service after being pr
 ## I do not get prompted for an One Time Password (OTP) after entering a password
 Please make sure you entered the correct password.  If you are unsure, you can reset your password in the [Password self service portal](https://phenix3.lunarc.lu.se/pss).  If the problem pesists you may need to create a new pocket pass token on your mobile device.  Please visit the [OTP self-service portal](https://lunarc-documentation.readthedocs.io/en/latest/getting_started/authenticator_howto/#step-2-accessing-the-self-service-portal).
 
+## My ThinLinc login is failing ("The SSH connection succeeded, but the ThinLinc server connection failed")
+
+When trying to log in via ThinLinc, if you receive the error message quoted above and featured in the screenshot below, chances are that you used the wrong server name.
+
+[!](../../images/thinlinc-error-server.png)
+
+Typically this happens when you use the server for logging in via SSH, `cosmos.lunarc.lu.se`, instead of the one for ThinLinc, `cosmos-dt.lunarc.lu.se`. Double-check that you are using the right server name for your method of logging in.
+
 ## Could your send my *one time password* for pocket pass activation to my new mobile phone number?
 
 Please enter the new phone number into [SUPR](https://supr.naiss.se/person/) and raise a [support request](https://supr.naiss.se/support/?problem_type=accessing&centre_resource=c5&summary=Update+my+contact+information) to update our internal database for this change.
