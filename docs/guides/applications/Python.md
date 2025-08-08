@@ -126,6 +126,8 @@ By default the SciPy-bundle will load a Python 3 module.  If you require a Pytho
 
 For users working in **bioinformatics,** one of the Biopython packages is most likely the desired one.
 
+### Bioconda
+
 There are also 2 large Bioconda environments developed as modules for users who need Bioconda software with AI/ML applications:
 
 * `bioconda/bio-suite-py3.10-tf` - built around Keras and TensorFlow with Python 3.10
