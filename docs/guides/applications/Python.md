@@ -124,7 +124,14 @@ By default the SciPy-bundle will load a Python 3 module.  If you require a Pytho
 
 ### Biopython
 
-For users working in **bioinformatics** on of the Biopython packages is most likely the desired one.
+For users working in **bioinformatics,** one of the Biopython packages is most likely the desired one.
+
+There are also 2 large Bioconda environments developed as modules for users who need Bioconda software with AI/ML applications:
+
+* `bioconda/bio-suite-py3.10-tf` - built around Keras and TensorFlow with Python 3.10
+* `bioconda/bio-suite-py3.12-torch` - built around PyTorch with Python 3.12
+
+These were built to fit as many compatible biostatistics packages as possible, both to minimize redundancy and because only 1 conda environment can be active at a time (i.e. no additional conda-based modules can be loaded on top; other modules will typically not be detected either, even if they raise no errors). The full list of installed packages in each can be viewed by loading the module and using `conda list`, and specific packages can be searched for with `conda list | grep <package_name>`. Users can *not* `conda install` new packages to these environments themselves, but may submit installation requests for additional packages. Administrators may install the package(s) if they are determined to be compatible with the requested environment, but be aware that you may instead be advised to build a custom conda environment, or switch to more flexible PyPI-based modules (like Biopython).
  
 
 ## Python site-packages (aka. Python packages)
