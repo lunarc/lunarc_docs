@@ -23,7 +23,7 @@ The self-service portal will show the following login screen:
 
 ![sample screen](../images/selfservice_login_rev1.png "Desktop sample screen")
 
-Enter your LUNARC credentials (note: not the same as your LU credentials). If all is OK you will receive an SMS with an OTP token to the registered phone number. Enter the OTP token on the next page:
+Enter your **LUNARC** username (not an email address) and password. These will generally be different from your LU credentials; if you are an existing user returning to these instructions to reset your password or replace a PocketPass, the username and password that PhenixID needs are the same as the ones used to log into COSMOS with SSH or ThinLinc. If everything works, you will receive an SMS with an OTP token to the registered phone number. Enter the OTP token on the next page:
 
 ![sample screen](../images/selfservice_otp_rev1.png "Desktop sample screen")
 
