@@ -13,11 +13,13 @@ We expect most users, in particular new users of our services to be better serve
 
 To start an interactive session you need to use the **interactive** command. This will request the required resources from the resource pool for you and start the interactive session once the resources are available.
 
-Use the following command to start an interactive session asking for 4 cores on 1 node lasting 60 minutes
+The following command starts an interactive session asking for 4 cores on 1 node lasting 60 minutes. In this example, it is associated with Project ID `lu-test` (strictly for administrator testing).
 
-    interactive -N 1 --ntasks-per-node=4 -t 60
+    interactive -N 1 --ntasks-per-node=4 -t 60 -A lu-test
 
-The interactive session will last until either the requested time, 60 minutes in the above example, has expired or you manually exit the interactive shell. Your account gets charged with the wall time duration of your interactive session, independent of the amount of computation you do. In the above example, if your session lasts until it expires after 60 min, you get charged for 4 CPU hours. If you terminate your session after 1/2 hour, you would get charged 2 CPU hours.
+The interactive session will last until either the requested time---60 minutes in the above example---has expired or you manually exit the interactive shell. Your account will be charged according to the wall time duration of your interactive session, independent of the amount of computation you do. In the above example for 4 CPU cores, if your session lasts until it expires after 60 min, you get charged for 4 CPU hours. If you terminate your session after 1/2 hour, you would get charged 2 CPU hours.
+
+**Note**: If you copy this example, you must replace `lu-test` with the project ID of whichever compute project allocation this session's usage should count toward, if you are a member of more than one project. Project IDs are typically of the form `lu20YY-X-Z` where `YY` is the year that the allocation was awarded, `X` is a 1- or 2-digit code indicating the project type, and `Z` is a 1- or 2-digit identifier assigned in the order in which the proposal was approved. If your account is associated with exactly one project, you may omit the `-A` and its argument.
 
 The interactive command supports most command-line options of the **sbatch** command. Please refer to the man pages of **sbatch**.
 
@@ -38,5 +40,5 @@ You also need to check whether environment variables still have the required val
 (LUNARC)
 
 **Last Updated:**
-2024-08-08
+2025-09-08
 
