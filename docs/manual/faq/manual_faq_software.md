@@ -6,7 +6,7 @@ Many packages that were installed in standard locations have been moved to the m
 
 ## I cannot find my software package in the module system
 
-On LUNARC resources a hierarchical module naming scheme is deployed.  This is explained in the [Using installed software guide](/../manual/manual_modules/).  Please contact [LUNARC support](/../about/contact/) if you cannot locate your package with the **module spider** command.
+On LUNARC resources a hierarchical module naming scheme is deployed.  This is explained in the [Using installed software guide](../../manual/manual_modules.md).  Please contact [LUNARC support](../../about/contact.md) if you cannot locate your package with the **module spider** command.
 
 ## Loading a module unloads pre-requisites from a previously loaded module
 
@@ -65,7 +65,7 @@ After registerering with the VASP team, contact the [LUNARC helpdesk](https://su
 In order to be able to continue the provision of VASP to our legitimate VASP users, we cannot make any exceptions. 
 
 
-The VASP executables are build with OpenMPI.   These executables need to be started with `mpirun`.  Refer to the sample section of our batch [system guide](../../example_job_scripts/manual_example_mpi_48_tasks/) for a more comprehensive discussion.
+The VASP executables are build with OpenMPI.   These executables need to be started with `mpirun`.  Refer to the sample section of our batch [system guide](../example_job_scripts/manual_example_mpi_48_tasks.md) for a more comprehensive discussion.
 
 ## I need access to Amber
 

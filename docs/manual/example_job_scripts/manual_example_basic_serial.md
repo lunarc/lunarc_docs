@@ -4,9 +4,9 @@
 
 The following is an example of a simple script running the program named `processor`, whose executable is located in the submission directory.  If you are using a LUNARC-provided executable, load the required module(s) and omit the dot before the program name. 
 
-This example does not use the node local disc, which is ok for modest I/O requirements and regular, in particular streaming data access.  If your program is demanding with respect to its I/O requirements and is irregularly accessing data you should be utilising the node local disc as [described below](#basicrun-script-for-io-intensive-jobs).
+This example does not use the node local disc, which is ok for modest I/O requirements and regular, in particular streaming data access.  If your program is demanding with respect to its I/O requirements and is irregularly accessing data you should be utilising the node local disc as [described below](#basic-run-script-for-io-intensive-jobs).
 
-This example executes a single serial program.  If you need to process a large number of serial jobs, your might want to bundle them into a single submission. Refer to the section [Running multiple serial jobs within a single job submission](#running-multiple-serial-jobs-within-a-single-job-submission) for a scripting example.
+This example executes a single serial program.  If you need to process a large number of serial jobs, your might want to bundle them into a single submission. Refer to the section [Running multiple serial jobs within a single job submission](manual_example_multiple_serial_jobs.md) for a scripting example.
 
 
 ```bash

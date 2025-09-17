@@ -156,7 +156,7 @@ Your Name
 
 Keep the language as simple yet precise as possible.
 
-* Check the [Commonly used phrases and terms](/../manual/manual_common_phrases/) page for important words and concepts that you are using. Do not hesitate to add to the list if you are writing about new concepts that are missing.
+* Check the [Commonly used phrases and terms](../manual/manual_common_phrases.md) page for important words and concepts that you are using. Do not hesitate to add to the list if you are writing about new concepts that are missing.
 
 ### English
 

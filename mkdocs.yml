@@ -1,89 +1,94 @@
+
+
+
 site_name: LUNARC Documentation
+
 nav:
-- Home:
-  - Welcome to the LUNARC Documentation: index.md
-- Forgot your password?:
-  - Resetting your password: intro/lost_password.md
-- Getting started: 
-  - Creating a password for your account: getting_started/login_password.md
-  - Activating Pocket Pass authenticator: getting_started/authenticator_howto.md
-  - How to login: getting_started/login_howto.md
-  - Transferring files: getting_started/transferring_files.md
-  - Accessing the LUNARC HPC Desktop: getting_started/using_hpc_desktop.md
-  - On-demand applications: getting_started/gfxlauncher.md
-  - Before you run...: getting_started/prelaunch_considerations.md
-- User manual:
-  - Introduction: manual/manual_intro.md
-  - Submitting jobs:
-    - A basic job: manual/submitting_jobs/manual_basic_job.md
-    - Specifying job requirements: manual/submitting_jobs/manual_specifying_requirements.md
-    - Job requirements for multiprocessor jobs: manual/submitting_jobs/manual_requirements_multiproc.md
-    - Job execution environment: manual/submitting_jobs/manual_env.md
-    - Using local disk to improve I/O performance: manual/submitting_jobs/manual_local_disk.md
-    - Running MPI jobs: manual/submitting_jobs/manual_mpi_jobs.md
-    - Controlling and monitoring jobs: manual/submitting_jobs/manual_job_control.md
-  - Interactive node access: manual/manual_interactive.md
-  - Using installed software: manual/manual_modules.md
-  - Compiling code and using toolchains: manual/manual_modules_toolchains.md
-  - Example jobs scripts:
-    - Basic serial jobs: manual/example_job_scripts/manual_example_basic_serial.md
-    - Multiple serial jobs: manual/example_job_scripts/manual_example_multiple_serial_jobs.md
-    - MPI job using 48 tasks per node: manual/example_job_scripts/manual_example_mpi_48_tasks.md
-    - MPI job using the node local discs: manual/example_job_scripts/manual_example_mpi_local_discs.md
-    - MPI jobs using fewer than 48 tasks per node: manual/example_job_scripts/manual_example_mpi_fewer_than_48.md
-    - MPI job for Python scripts utilising MPI4PY: manual/example_job_scripts/manual_example_mpi4py.md
-    - OpenMP jobs using shared memory: manual/example_job_scripts/manual_example_openmp_shared_memory.md
-  - Quick reference: manual/manual_quick_reference.md
-  - FAQ: 
-    - Login: manual/faq/manual_faq_login.md
-    - Files: manual/faq/manual_faq_files.md
-    - Jobs: manual/faq/manual_faq_jobs.md
-    - Software: manual/faq/manual_faq_software.md 
-  - Phrases and terms: manual/manual_common_phrases.md
-- Other guides:
-  - Introduction: guides/guides_intro.md
-  - Linux Basics: 
-    - Introduction to Linux: guides/linux/linux_basics_intro.md
-    - An introduction to Linux shells and commands: guides/linux/linux_basics_shell_params.md
-    - Files and directories in Linux: guides/linux/linux_basics_files.md
-    - Special Command Symbols: guides/linux/linux_basics_special_symbols.md
-    - Useful Linux commands: guides/linux/linux_basics_misc.md
-  - Using containers:
-    - Running containers on LUNARC using Singularity/Apptainer: guides/containers/apptainer.md
-  - Transferring data:
-    - Wget and Curl: guides/data_transfer/io_wget_curl.md
-    - SFTP: guides/data_transfer/io_sftp.md
-    - WinSCP: guides/data_transfer/io_winscp.md
-    - SSHFS: guides/data_transfer/sshfs.md
-    - Mounting Swestore: guides/data_transfer/swestore_mounting.md
-    - Requesting a certificate for Swestore: guides/data_transfer/swestore_certificate.md
-    - Using ARC to access Swestore: guides/data_transfer/swestore_arc.md
-    - Rclone and Swestore: guides/data_transfer/swestore_rclone.md
-    - Swestore links: guides/data_transfer/swestore_links.md
-  - Batch system guides:
-    - Using the 32-core nodes: guides/batch_system/32_core_nodes.md
-  - Specific applications:
-    - Python: guides/applications/Python.md
-    - MATLAB: guides/applications/MATLAB.md
-    - Mathematica: guides/applications/Mathematica.md
-    - Abaqus FEA: guides/applications/Abaqus.md
-    - COMSOL: guides/applications/COMSOL.md
-    - R: guides/applications/Rscript.md
-  - Software development:
-    - Compiler options: guides/software_development/compiler_options.md
-    - DDT debugger on COSMOS: guides/software_development/ddt_debugger.md
-- Available Software:
-  - software: software/installed_software.md
-- Links:
-  - Web resources: links/links_web.md
-  - Video resources: links/links_video.md
-  - Social media: links/links_social.md 
-- About us:
-  - Contact: about/contact.md
-  - LUNARC Documentation: about/about_documentation.md
-  - HPC Ambassadors: about/ambassadors.md
-  - Test page: about/testpage.md
-  - Template: about/template.md
+  - Home:
+    - Welcome to the LUNARC Documentation: index.md
+  - Getting Started:
+    - Creating a password for your account: getting_started/login_password.md
+    - Activating Pocket Pass authenticator: getting_started/authenticator_howto.md
+    - How to login: getting_started/login_howto.md
+    - Transferring files: getting_started/transferring_files.md
+    - Accessing the LUNARC HPC Desktop: getting_started/using_hpc_desktop.md
+    - On-demand applications: getting_started/gfxlauncher.md
+    - Before you run...: getting_started/prelaunch_considerations.md
+  - User Guide:
+    - Introduction: manual/manual_intro.md
+    - Submitting jobs:
+      - A basic job: manual/submitting_jobs/manual_basic_job.md
+      - Specifying job requirements: manual/submitting_jobs/manual_specifying_requirements.md
+      - Job requirements for multiprocessor jobs: manual/submitting_jobs/manual_requirements_multiproc.md
+      - Job execution environment: manual/submitting_jobs/manual_env.md
+      - Using local disk to improve I/O performance: manual/submitting_jobs/manual_local_disk.md
+      - Running MPI jobs: manual/submitting_jobs/manual_mpi_jobs.md
+      - Controlling and monitoring jobs: manual/submitting_jobs/manual_job_control.md
+    - Interactive node access: manual/manual_interactive.md
+    - Using installed software: manual/manual_modules.md
+    - Compiling code and using toolchains: manual/manual_modules_toolchains.md
+    - Example jobs scripts:
+      - Basic serial jobs: manual/example_job_scripts/manual_example_basic_serial.md
+      - Multiple serial jobs: manual/example_job_scripts/manual_example_multiple_serial_jobs.md
+      - MPI job using 48 tasks per node: manual/example_job_scripts/manual_example_mpi_48_tasks.md
+      - MPI job using the node local discs: manual/example_job_scripts/manual_example_mpi_local_discs.md
+      - MPI jobs using fewer than 48 tasks per node: manual/example_job_scripts/manual_example_mpi_fewer_than_48.md
+      - MPI job for Python scripts utilising MPI4PY: manual/example_job_scripts/manual_example_mpi4py.md
+      - OpenMP jobs using shared memory: manual/example_job_scripts/manual_example_openmp_shared_memory.md
+    - Quick reference: manual/manual_quick_reference.md
+    - FAQ:
+      - General: manual/faq/README.md
+      - Login: manual/faq/manual_faq_login.md
+      - Files: manual/faq/manual_faq_files.md
+      - Jobs: manual/faq/manual_faq_jobs.md
+      - Software: manual/faq/manual_faq_software.md
+      - Resetting your password: intro/lost_password.md
+  - Additional Guides:
+    - Introduction: guides/guides_intro.md
+    - Linux Basics:
+      - Introduction to Linux: guides/linux/linux_basics_intro.md
+      - An introduction to Linux shells and commands: guides/linux/linux_basics_shell_params.md
+      - Files and directories in Linux: guides/linux/linux_basics_files.md
+      - Special Command Symbols: guides/linux/linux_basics_special_symbols.md
+      - Useful Linux commands: guides/linux/linux_basics_misc.md
+    - Using containers:
+      - Running containers on LUNARC using Singularity/Apptainer: guides/containers/apptainer.md
+    - Transferring data:
+      - Wget and Curl: guides/data_transfer/io_wget_curl.md
+      - SFTP: guides/data_transfer/io_sftp.md
+      - WinSCP: guides/data_transfer/io_winscp.md
+      - SSHFS: guides/data_transfer/sshfs.md
+      - Mounting Swestore: guides/data_transfer/swestore_mounting.md
+      - Requesting a certificate for Swestore: guides/data_transfer/swestore_certificate.md
+      - Using ARC to access Swestore: guides/data_transfer/swestore_arc.md
+      - Rclone and Swestore: guides/data_transfer/swestore_rclone.md
+      - Swestore links: guides/data_transfer/swestore_links.md
+    - Batch system guides:
+      - Using the 32-core nodes: guides/batch_system/32_core_nodes.md
+    - Specific applications:
+      - Python: guides/applications/Python.md
+      - MATLAB: guides/applications/MATLAB.md
+      - Mathematica: guides/applications/Mathematica.md
+      - Abaqus FEA: guides/applications/Abaqus.md
+      - COMSOL: guides/applications/COMSOL.md
+      - R: guides/applications/Rscript.md
+    - Software development:
+      - Compiler options: guides/software_development/compiler_options.md
+      - DDT debugger on COSMOS: guides/software_development/ddt_debugger.md
+  - Software Catalog:
+    - Installed Software: software/installed_software.md
+  - FAQ: manual/faq/manual_faq.md
+  - Glossary: manual/manual_common_phrases.md
+  - Links:
+    - Web resources: links/links_web.md
+    - Video resources: links/links_video.md
+    - Social media: links/links_social.md
+  - About:
+    - Contact: about/contact.md
+    - About LUNARC: about/about_documentation.md
+    - HPC Ambassadors: about/ambassadors.md
+    - Test page: about/testpage.md
+    - Template: about/template.md
 
 repo_url: https://github.com/lunarc/lunarc_docs
 repo_name: LUNARC Documentation
@@ -103,8 +108,10 @@ theme:
     - navigation.tabs
     - navigation.top
     - header.autohide
+
 extra_css:
-  - stylesheets/extra.css   
+  - stylesheets/extra.css
+  - stylesheets/lunarc_custom.css
 
 extra_javascript:
   - https://unpkg.com/tablesort@5.6.0/dist/tablesort.min.js

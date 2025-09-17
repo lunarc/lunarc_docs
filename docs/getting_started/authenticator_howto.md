@@ -81,7 +81,7 @@ You can check the validity, in particular the expiration state, of your pocket p
 * your LUNARC password (not your SUPR password)
 * the one-time-password sent by **text message** to the phone number you have registered (not from the Pocket Pass app) 
 
-when following [steps 2](#step-2-accessing-the-self-service-portal) and [3](#step-3-token-activation) mentioned above to access the self-service portal.  Please check the [FAQ](/../manual/faq/manual_faq_login/#could-your-send-my-one-time-password-for-pocket-pass-activation-to-my-new-mobile-phone-number) if you need to update your mobile phone number.
+when following [steps 2](#step-2-accessing-the-self-service-portal) and [3](#step-3-token-activation) mentioned above to access the self-service portal.  Please check the [FAQ](../manual/faq/manual_faq_login.md#could-your-send-my-one-time-password-for-pocket-pass-activation-to-my-new-mobile-phone-number) if you need to update your mobile phone number.
 
 Inside the self-service portal, go to the **TOKENS** tab.  You will see your tokens.  Klicking on **More** will reveal the relevant dates for your token:
 

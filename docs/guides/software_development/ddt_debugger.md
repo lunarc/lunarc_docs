@@ -13,7 +13,7 @@ DDT is a powerful debugger for serial and parallel programs.  The tool is develo
 ### Connect to COSMOS via the LUNARC HPC desktop
 
 To use DDT you need to be able to access its graphical user interface (GUI).  
-The recommended way to connect to the system is via the [LUNARC HPC desktop](../../../getting_started/using_hpc_desktop), which uses Thinlinc.  
+The recommended way to connect to the system is via the [LUNARC HPC desktop](../../getting_started/using_hpc_desktop.md), which uses Thinlinc.  
 
 <!--
 ### Using x-forwarding under Linux or on a Mac

@@ -1,0 +1,72 @@
+/* LUNARC custom styles for documentation */
+
+/* Example color palette based on lunarc.lu.se (adjust as needed) */
+:root {
+  --lunarc-blue: #003366;
+  --lunarc-gold: #b9975b;
+  --lunarc-light: #f5f5f5;
+  --lunarc-dark: #222;
+  --lunarc-bronze: #875e29
+}
+
+/* Header and navigation */
+.md-header, .md-tabs {
+  background-color: var(--lunarc-light) !important;
+  color: var(--lunarc-bronze) !important;
+}
+.md-header__title, .md-header__topic, .md-tabs__link, .md-tabs__item {
+  color: var(--lunarc-bronze) !important;
+  font-size: 1.5em !important;
+}
+.md-tabs__link--active, .md-tabs__link:focus, .md-tabs__link:hover {
+  color: var(--lunarc-bronze) !important;
+}
+.md-tabs__link, .md-tabs__item {
+  color: var(--lunarc-bronze) !important;
+  font-size: 1.3em !important;
+  font-weight: 500;
+}
+
+/* Primary buttons */
+.md-button, .md-typeset .md-button {
+  background: var(--lunarc-light);
+  color: var(--lunarc-blue);
+  border: 2px solid var(--lunarc-gold);
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+.md-button:hover, .md-typeset .md-button:hover {
+  background: var(--lunarc-gold);
+  color: var(--lunarc-dark);
+}
+
+/* Links */
+a {
+  color: var(--lunarc-bronze);
+}
+a:hover {
+  color: var(--lunarc-gold);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--lunarc-bronze);
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* Section backgrounds */
+.md-content {
+  background: var(#fff);
+}
+
+/* Footer */
+.md-footer {
+  background: var(--lunarc-blue);
+  color: var(--lunarc-light);
+}
+
+/* Admonitions */
+.md-typeset .admonition, .md-typeset details {
+  border-left: 4px solid var(--lunarc-gold);
+}

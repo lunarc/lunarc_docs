@@ -3,7 +3,7 @@
 SSHFS is a network filesystem that relies on SSH service to transfer files.
 Once a volume is connected, the files in the remote system are available on the user's computer as if they were local files.
 There is a wide variety of software available for [Windows, MacOS or Linux](http://pig.made-it.com/sshfs.html) able to connect a network volume via SSHFS.
-Most Graphical User Interfaces to connect SSHFS volumes, mainly on Windows or MacOS, fail to comply with LUNARC's mandatory [Second Factor authentication](/en/latest/getting_started/login_howto/#logging-in-using-one-time-passwords-otp).
+Most Graphical User Interfaces to connect SSHFS volumes, mainly on Windows or MacOS, fail to comply with LUNARC's mandatory [Second Factor authentication](../../getting_started/login_howto.md#logging-in-using-one-time-passwords-otp).
 This guides describes a method to connect a remote SSHFS volume using a linux terminal, even with LUNARC's second factor authentication.
 
 ## Connecting a SSHFS volume
@@ -38,7 +38,7 @@ username@localhost:~$ ls ~/media/cosmos-home/
 
 ## Disconnecting a SSHFS volume
 
-This example assumes the LUNARC directory connected in the example described in section "[Connecting a SSHFS volume](#connecting_a_sshfs_volume)".
+This example assumes the LUNARC directory connected in the example described in section "[Connecting a SSHFS volume](#connecting-a-sshfs-volume)".
 Use `fusermount`'s option `-u` to disconnect the remote volume:
 
 ```bash

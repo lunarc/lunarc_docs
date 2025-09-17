@@ -2,11 +2,11 @@
 
 The LUNARC **Desktop on-demand** facilitates the interactive execution of resource intensive applications on LUNARC's HPC cluster COSMOS.  It utilises the graphical application launcher (GfxLauncher) for launching graphical or interactive applications through SLURM.  It is responsible for submitting a job to SLURM, connecting to the application running on the node and monitoring the progress of the application.
 
-The **Desktop on-demand** is particularly use full for interactive work consuming small to medium resources levels (cpu time, core count, memory, etc.).  Computational work not requiring interactive supervision, utilising significant resources and/or multiple nodes is better submitted using the [batch system](../../manual/submitting_jobs/manual_basic_job).  
+The **Desktop on-demand** is particularly use full for interactive work consuming small to medium resources levels (cpu time, core count, memory, etc.).  Computational work not requiring interactive supervision, utilising significant resources and/or multiple nodes is better submitted using the [batch system](../manual/submitting_jobs/manual_basic_job.md).  
 
 ## Starting on-demand applications
 
-Click on **Applications** in the top left hand corner of the [LUNARC HPC desktop](../using_hpc_desktop). You get a pull down menu, as shown below.   
+Click on **Applications** in the top left hand corner of the [LUNARC HPC desktop](using_hpc_desktop.md). You get a pull down menu, as shown below.   
 
 ![application pull down menu](../images/on_demand_menues.png "GfxLauncher main user interface")
 
@@ -39,7 +39,7 @@ You can make the following selections:
 
 The available options depend on the application.
 
-Hit the **Start**-button to start your session.  This will put a resource request into the job queue (SLURM) of the system and will be competing for resources on an equal level with request submitted through the [batch system](../../manual/submitting_jobs/manual_basic_job).  Depending on your request (e.g. resource level, resource type, job time) you may encounter a significant wait time before your session starts.  
+Hit the **Start**-button to start your session.  This will put a resource request into the job queue (SLURM) of the system and will be competing for resources on an equal level with request submitted through the [batch system](../manual/submitting_jobs/manual_basic_job.md).  Depending on your request (e.g. resource level, resource type, job time) you may encounter a significant wait time before your session starts.  
 
 
 ## Resources

@@ -1,6 +1,6 @@
-When you need to run many serial jobs, similar to the ones [described above](#basic-run-script), these should be bundled together and submitted to the job queue in a small number of submissions or even a single submission. With SLURM is perfectly reasonable to run several hundred individual jobs in a single submission. To speed up the processing of your jobs, you can ask for the cores from a number of nodes. The concept is known as a **task-farm**. The individual job are known as **job-steps**.
+When you need to run many serial jobs, similar to the ones [described above](manual_example_basic_serial.md), these should be bundled together and submitted to the job queue in a small number of submissions or even a single submission. With SLURM is perfectly reasonable to run several hundred individual jobs in a single submission. To speed up the processing of your jobs, you can ask for the cores from a number of nodes. The concept is known as a **task-farm**. The individual job are known as **job-steps**.
 
-The following is an example of processing 480 such jobs using 48 cores from one node. The scripting use two scripts, the master script and the worker script. The master script requests the resources (number of cores, job time, ...) and then registers 480 copies of the worker script with SLURM using the command **srun**. The worker script is a modification of the [basic script for I/O intensive jobs](#basic-run-script-for-io-intensive-jobs) described above. 
+The following is an example of processing 480 such jobs using 48 cores from one node. The scripting use two scripts, the master script and the worker script. The master script requests the resources (number of cores, job time, ...) and then registers 480 copies of the worker script with SLURM using the command **srun**. 
 
 In our example, this will then start 48 jobs on the 48 cores you have requested. Once a job has finished, it will take an unprocessed job and place it on the now idle core for processing. This will continue until all jobs are processed. The ordering of the jobs can not be relied on.
 
@@ -58,8 +58,7 @@ If you need more than the default 5300 MB memory per core, you have to specify b
 
 ## The worker script
 
-This outlines the worker script. Compared to the script describing a
-[basic script for I/O intensive jobs](#basic-run-script-for-io-intensive-jobs), a few modifications are required:
+This outlines the worker script.
 
  * To avoid access conflicts between the individual jobs, each job creates a job private sub-directory on the node local disk.
 

@@ -1,13 +1,13 @@
 # Before you run...
-Naive use of HPC resources can easily lead to mistakes that disrupt other users. Hence, we ask that you please go over the user manual, guides, phrases and terms, and FAQ to make sure you understand what your code will do in the HPC system before you use LUNARC resources. [The HPC Wiki](https://hpc-wiki.info/hpc/Category:Basics) is also a good resource if you want a more thorough explanation of [commonly used phrases and terms](../manual/manual_common_phrases/) in the manual.
+Naive use of HPC resources can easily lead to mistakes that disrupt other users. Hence, we ask that you please go over the user manual, guides, phrases and terms, and FAQ to make sure you understand what your code will do in the HPC system before you use LUNARC resources. [The HPC Wiki](https://hpc-wiki.info/hpc/Category:Basics) is also a good resource if you want a more thorough explanation of [commonly used phrases and terms](../manual/manual_common_phrases.md) in the manual.
 
 ### Don't clog the login node!
 The most disruptive mistake that a new HPC user can make is to run resource-intensive code directly as if it were a much smaller task on their own laptop. **Be careful what you run outside the SLURM scheduling system!** If you run a demanding job directly, either by calling the code file at the command line or through a user interface (JupyterLab for example), it will run on the frontend - the login node - creating a bottleneck that can stall other users' jobs. 
 
 For any job big enough to be worth running on a HPC system, *you must make sure it is using dedicated resources and not utilising resources from the frontend or login node*.  To utilise dedicated resources you have two options:
 
-* Create a job script and run your code by calling the job script with **sbatch**. For more on job scripts, [refer to the section of the manual on submitting jobs](../manual/submitting_jobs/manual_basic_job/).
-* For interactive work you may use the Desktop on Demand.   For more information review our guide on [On-Demand Applications](../gfxlauncher).
+* Create a job script and run your code by calling the job script with **sbatch**. For more on job scripts, [refer to the section of the manual on submitting jobs](../manual/submitting_jobs/manual_basic_job.md).
+* For interactive work you may use the Desktop on Demand.   For more information review our guide on [On-Demand Applications](gfxlauncher.md).
 
 Remember that repeated disruptive misuse of the frontend is a violation of the terms and conditions of your NAISS user agreement, and may result in the suspension or termination of your account.
 
