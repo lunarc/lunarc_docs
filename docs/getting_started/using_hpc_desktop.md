@@ -49,7 +49,7 @@ Depending on your system it might be convenient to *not _run_ in full-screen mod
 
 It is possible to access the LUNARC HPC Desktop using a modern HTML5-enabled browser. To use this method to connect go to the following URL:
 
-[Lunarc support](https://cosmos-dt.lunarc.lu.se:300)
+[ThinLinc web access](https://cosmos-dt.lunarc.lu.se:300)
 
 A web based login screen appears. Login using your user name, password and OTP-token from your app.
 
