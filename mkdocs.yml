@@ -6,7 +6,7 @@ nav:
   - Resetting your password: intro/lost_password.md
 - Getting started: 
   - Creating a password for your account: getting_started/login_password.md
-  - Activating Pocket Pass authenticator: getting_started/authenticator_howto.md
+  - Activating 2FA authenticator (OneTouch): getting_started/authenticator_howto.md
   - How to login: getting_started/login_howto.md
   - Transferring files: getting_started/transferring_files.md
   - Accessing the LUNARC HPC Desktop: getting_started/using_hpc_desktop.md
