@@ -1,26 +1,55 @@
-# Using installed software
+# Using Installed Software with Modules
 
-## Hierarchical module naming scheme
+LUNARC uses a **module system** to manage software environments on its clusters. This system makes it easy to load, switch, and combine different compilers, libraries, and applications while ensuring compatibility and reducing conflicts.
 
-Starting with the Aurora service and continuing with COSMOS, LUNARC uses a hierarchical module naming scheme.  Hierarchical modules ensure that the correct shared libraries are available when running an application while keeping the screen output of standard module commands such as **module avail** manageable.
-### Hierarchical naming scheme concept
+## What is a Module?
 
-When logging into the system, you only get access to those modules that do not require any special dynamic libraries.  After *loading a compiler module* you obtain access to those packages that have been built with that specific compiler and depend on its shared libraries. For many compilers, this will include one or more matching MPI libraries.  After loading an MPI library additional software packages, depending on this pair (compiler & MPI library), will become available.  Users should take note that in many cases loading an MPI library is required for software that doesn't depend on it.
+A *module* is a configuration file that sets up your environment to use a specific version of a software package. Modules allow you to:
+- Load and unload software on demand
+- Switch between different versions of the same software
+- Automatically set environment variables and paths
+
+## Hierarchical Module Naming Scheme
+
+Starting with the Aurora service and continuing with COSMOS, LUNARC uses a hierarchical module naming scheme. Hierarchical modules ensure that the correct shared libraries are available when running an application while keeping the screen output of standard module commands such as **module avail** manageable.
+### How the Hierarchy Works
+
+When logging into the system, you only get access to those modules that do not require any special dynamic libraries. After *loading a compiler module* you obtain access to those packages that have been built with that specific compiler and depend on its shared libraries. For many compilers, this will include one or more matching MPI libraries. After loading an MPI library, additional software packages, depending on this pair (compiler & MPI library), will become available.
+
+!!! important
+  
+    In many cases loading an MPI library is required for software that doesn't depend on it.
+
+!!! tip 
+
+    If you can't find a module you're looking for, try loading a compiler module first!
 
 ## Using Modules
 
 The module system uses the Lua-based [Lmod](https://www.tacc.utexas.edu/research-development/tacc-projects/lmod) software.
 
+### Quick Reference
+
+| Command | Description |
+|---------|-------------|
+| `module avail` | List currently available modules |
+| `module load <name>/<version>` | Load a specific module |
+| `module list` | Show currently loaded modules |
+| `module purge` | Unload all modules |
+| `module spider <name>` | Search for a module (all versions) |
+| `module unload <name>` | Unload a specific module |
+
 ### Loading packages
 
-The command
+To see which modules are currently available, use:
 
 ```bash
 module avail
 ```
 
-shows the modules that can currently be accessed.  The output will look similar to
+This shows modules you can load right now. If you don't see what you need, try loading a compiler module first.
 
+Example output:
 ```bash
 --------------------------------- /sw/Modules/modulefiles/Core ---------------------------------
    matlab/8.5
@@ -45,31 +74,33 @@ shows the modules that can currently be accessed.  The output will look similar 
    lmod/6.0.24    settarg/6.0.24
 ```
 
-In this example, you can see modules and versions located in 3 directories.  Any of these modules can be accessed directly.  To obtain access to the software inside e.g. the toolchain module `foss/2016a` one loads the module by issuing
+You can see modules and versions located in different directories. The `(D)` indicates the default version. To load a module:
 
 ```bash
 module load foss/2016a
 ```
 
-Many modules will load several modules, which they depend on. As the output from **module avail** version 2016a is marked as the default version, the command
+Many modules will load several modules they depend on. Since version 2016a is marked as the default version `(D)`, you could also use:
 
 ```bash
 module load foss
 ```
-would have the same effect unless the default changes, which it may do, if
 
- * You load a module
- * The LUNARC team installs another version of the software
+However, this is **not recommended** because the default may change when:
+- You load another module
+- The LUNARC team installs a newer version
 
-So if you require a specific version, the LUNARC team strongly recommends not relying on defaults, but explicitly specify the version you are after.
+!!! tip 
 
-To see what modules you have currently loaded, use
+    **Best Practice:** Always specify the exact version you need to avoid surprises!
+
+To see what modules you currently have loaded:
 
 ```bash
 module list
 ```
 
-In a hierarchical module naming scheme, the command **module avail** is not as useful as it is in a flat module naming scheme which LUNARC deployed on earlier services.   In many situations **module avail** resulted in the desired action, one has to use the **module spider** command which is described in the text below.
+> **Note:** In a hierarchical module naming scheme, `module avail` is less useful than in flat schemes. Often you need to use `module spider` instead (described below).
 
 ### Purging the loaded modules
 
@@ -81,14 +112,19 @@ module purge
 
 when loaded modules are no longer needed. You would then start loading the modules required for the next task you need to accomplish from scratch.
 
-## Searching for all software packages
+## Searching for Modules with `module spider`
 
-In practical use, the command **module spider** is key to searching for packages in a Lmod-based hierarchical module naming scheme.  To get an overview of the software installed, simply type:
+The `module spider` command is essential for finding software in a hierarchical module system. It searches through all available modules, even those not currently accessible.
+
+### Getting an Overview of All Software
+
+To see all available software on the system:
 
 ```bash
 module spider
 ```
-at the command prompt.  This will create an output similar to:
+
+This produces output like:
 
 ```bash
 ---------------------------------------------------------------------
@@ -124,21 +160,26 @@ The following is a list of the modules currently available:
 
   ...
 ```
-This is a full list of the packages and versions available on the service.  
 
-### Searching for a specific package
+This shows all packages and their available versions.
 
-If you are looking for a specific package and have an idea of what its name might be, you can give this as an argument to **module spider**.   This argument is case insensitive.  
+### Searching for Specific Software
 
-#### Example: Accessing a Gromacs version
-
-For example, when looking to run Gromacs:
+If you know the software name (or part of it), use it as an argument. The search is **case insensitive**:
 
 ```bash
 module spider gromacs
 ```
 
-You obtain output similar to:
+#### Example: Finding GROMACS Versions
+
+When searching for GROMACS:
+
+```bash
+module spider gromacs
+```
+
+You get output like:
 
 ```bash
 ---------------------------------------------------------------------------------
@@ -156,13 +197,19 @@ You obtain output similar to:
 ---------------------------------------------------------------------------------
 ```
 
-This tells you that the multi-threaded version 5.0.4 and the hybrid version 5.0.5 are installed.  If you want to use the version 5.0.5 issue the command:
+This shows:
+- **Multi-threaded version:** 5.0.4-mt 
+- **Hybrid version:** 5.0.5-hybrid
+
+### Getting Detailed Module Information
+
+For specific loading instructions, query the exact module version:
 
 ```bash
 module spider GROMACS/5.0.5-hybrid
 ``` 
 
-You get the following output
+This provides detailed information:
 
 ```bash
 ---------------------------------------------------------------------------------
@@ -177,29 +224,33 @@ You get the following output
 ... 
 ```
 
-This lists the modules you have to load before accessing Gromacs.  In this case, you have two options, we choose the first option.  We load
+!!! important
+
+    This shows the prerequisite modules you must load first! You have two options - let's use the first one:
 
 ```bash
+# Load prerequisites first
 module load icc/2016.1.150-GCC-4.9.3-2.25 impi/5.1.2.150
-```
 
-After which we can load the GROMACS-installation:
-
-```bash
+# Then load GROMACS
 module load GROMACS/5.0.5-hybrid
 ```
 
-Loading this module will load several additional modules required for GROMACS to work.
+!!! tip 
 
-#### Example accessing R
+    The hierarchical system ensures compatibility between modules. Only compatible versions are shown together!
 
-This is another example of how to access a specific software package. This time we want to run the statistical software package R.
+Loading this module automatically loads all required dependencies.
+
+#### Example: Finding R Statistical Software
+
+Let's find the R statistical package:
 
 ```bash
 module spider R
 ```
 
-One gets:
+Output:
 
 ```bash
 ------------------------------------------------------------------
@@ -225,13 +276,18 @@ One gets:
 ------------------------------------------------------------------
 ```
 
-If we are interested in version 3.2.3, we do a
+Notice:
+- **Three R versions available:** 3.2.1-bare, 3.2.1, and 3.2.3
+- **Other matches:** Shows packages containing "R" in their name
+- **Regex search tip:** Use `module -r spider '.*R.*'` for broader searches
+
+For version 3.2.3 details:
 
 ```bash
 module spider R/3.2.3
 ```
 
-next and get the following info:
+This shows the loading requirements:
 
 ```bash
 ------------------------------------------------------------------
@@ -248,7 +304,26 @@ next and get the following info:
 ...
 ```
 
-The output states the two modules that need loading to get access to this R version.  We issue
+To load R version 3.2.3:
+
+```bash
+# Load prerequisites
+module load GCC/4.9.3-binutils-2.25
+module load OpenMPI/1.8.8
+
+# Load R
+module load R/3.2.3
+```
+
+Now you have access to R!
+
+## Working with Module Collections
+
+If you regularly use the same set of modules, **user collections** are much better than adding `module load` commands to your `.bashrc` file.
+
+### Creating Collections
+
+First, load all the modules you need for your work:
 
 ```bash
 module load GCC/4.9.3-binutils-2.25
@@ -256,85 +331,78 @@ module load OpenMPI/1.8.8
 module load R/3.2.3
 ```
 
-and have access to R.
-
-### Working with a standard set of modules
-
-Many users of the LUNARC systems conduct similar tasks for many days, e.g. using the same pieces of software on different sets of data.  In this case, users should consider creating **user collections** of modules. Working with user collections is a better alternative to e.g. adding **module load** statements to e.g. your **.bashrc** file.
-
-#### Creating and restoring user collections
-
-To create a user collection load the modules required for the task at hand.  The command 
+Then save them as a collection:
 
 ```bash
+# Save as default collection
 module save
-```
-would then store the currently loaded modules as a default collection. Alternatively, you can create a named collection
 
-```bash
-module save collection-name
+# Or save with a specific name
+module save my-r-environment
 ```
-
-where you can choose any name you like as **collection-name**.  
 
 !!! warning 
 
-    The module system will remember whether a module was loaded as default (no version specified) or whether you loaded a specific version.  If you include default modules, the contents of your collection will change whenever the default changes.
+    The module system remembers whether you loaded default versions or specific versions. If you use defaults, your collection will change when the system defaults change!
 
 When one restores a collection, this has two effects:
 
  1. Unloading/purging all currently loaded modules
  2. Loading all modules included in the collection
 
-To restore your default collection
+### Restoring Collections
+
+Restoring a collection will:
+1. Unload all currently loaded modules
+2. Load all modules from the collection
 
 ```bash
+# Restore default collection
 module restore
-```
-A named collection can be restored as follows
 
-```bash
-module restore collection-name
+# Restore named collection
+module restore my-r-environment
 ```
 
-#### Enquiring about user collections
+### Managing Collections
 
-To get a list of all user collections you have created use the sub-command **savelist**:
+List all your collections:
 
 ```bash
 module savelist
 ```
 
-The sub-command **describe** shows you the modules included in the collection
+See what's in a collection:
 
 ```bash
-module describe collection-name
+module describe my-r-environment
 ```
 
-If you want to remove a collection from your list:
+Remove a collection:
 
 ```bash
-module disable collection-name
+module disable my-r-environment
 ```
 
-which actually renames the collection in a way that it would no longer show with **module savelist**, but recovery of the collection is possible.
+> **Note:** `disable` doesn't permanently delete - it renames the collection so it won't show in `savelist`, but recovery is possible.
 
-### Lmod cache
+## System Performance and Caching
 
-To improve the performance of the **module spider** command, lmod caches the entire module structure of the system.  The system cache, holding info about the modules installed by the LUNARC team, is updated, every time the LUNARC team installs new software. 
+Lmod uses caching to improve `module spider` performance. The system cache is automatically updated when LUNARC installs new software.
 
-### Searching for modules graphically
+## Graphical Module Browser
 
-It is also possible to browse the module tree and select the module using a graphical user interface. This interface can be launched from the command with the **ml-browse**:
+You can also browse and select modules using a graphical interface. Launch it with:
 
 ```bash
 ml-browse
 ```
 
+This provides a visual way to explore the module hierarchy and select modules to load.
+
 ---
 
-**Author:**
-Joachim Hein (LUNARC)
+**Author:** Joachim Hein (LUNARC)
 
 **Last Updated:**
 2022-10-06

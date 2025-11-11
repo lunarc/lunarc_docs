@@ -1,174 +1,411 @@
-# Compiling code and using toolchains
+# Compiling Code with Toolchains
 
-A significant portion of the COSMOS software is built using the [EasyBuild](http://hpcugent.github.io/easybuild/) software framework.  This framework provides so-called _Toolchains_ which are utilised to build software.  LUNARC recommends using toolchains when building software.  This includes compiling your software outside the EasyBuild framework.
+## What is a Toolchain?
 
-## Currently provided toolchains
+A **toolchain** is a coordinated set of software development tools including compilers, libraries, and utilities that work together to build software. Think of it as a "recipe" that ensures all components are compatible with each other.
 
-### Toolchains for CPU nodes
+On COSMOS, most software is built using [EasyBuild](http://hpcugent.github.io/easybuild/) which provides these pre-configured toolchains. LUNARC strongly recommends using toolchains for all code compilation to ensure:
 
-=== "GCC compiler toolchains"
+- **Compatibility:** All components are tested to work together
+- **Performance:** Optimized library combinations for best performance  
+- **Reproducibility:** Consistent build environments across systems
+- **Support:** LUNARC can better help with issues when standard toolchains are used
 
-    * **GCC**: GCC
-    * **foss**: GCC, OpenMPI, OpenBLAS, FFTW, BLACS, ScaLAPACK
-    * **gompi**: GCC, OpenMPI
-    * **gomkl**: GCC, OpenMPI, MKL
-    * **gfbf**: GCC, FlexiBLAS, FFTW  (no MPI)
+!!! important
 
-=== "Intel compiler toolchains"
+    Always use toolchains for compiling your code, whether using EasyBuild or compiling manually!
 
-    * **intel**: icc, ifort, Intel MPI, MKL
-    * **iimpi**: icc, ifort, Intel MPI
+## Quick Reference: Choosing a Toolchain
+
+| Use Case | Recommended Toolchain | Why? |
+|----------|----------------------|------|
+| **General CPU computing** | `foss` | Free, open-source, well-tested |
+| **Performance-critical CPU** | `gomkl` or `intel` | Intel MKL provides optimized math libraries |
+| **GPU computing** | `goolfc` or `intelcuda` | Includes CUDA support |
+| **Maximum compatibility** | `foss` | Works everywhere, no licensing issues |
+| **Intel processors** | `intel` | Optimized for Intel hardware |
+
+!!! tip 
+    
+    New to toolchains? Start with `foss` - it's free, reliable, and works for most applications!
+
+## Available Toolchains
+
+COSMOS provides several pre-configured toolchains for different computing needs. Each toolchain includes specific compilers and libraries optimized to work together.
+
+### CPU Toolchains
+
+=== "GCC-Based Toolchains (Recommended for most users)"
+
+    **GCC** - GNU Compiler Collection only
+    
+    - **Components:** GCC compilers only
+    - **Use when:** Basic compilation, minimal dependencies
+    - **Best for:** Simple programs, testing
+
+    **foss** - Free Open Source Software ⭐ **MOST POPULAR**
+    
+    - **Components:** GCC, OpenMPI, OpenBLAS, FFTW, BLACS, ScaLAPACK
+    - **Use when:** General parallel computing, open-source projects
+    - **Best for:** Most HPC applications, PhD research, teaching
+
+    **gompi** - GCC + OpenMPI
+    
+    - **Components:** GCC, OpenMPI
+    - **Use when:** MPI programs without math libraries
+    - **Best for:** Custom parallel applications
+
+    **gomkl** - GCC + Intel Math Kernel Library
+    
+    - **Components:** GCC, OpenMPI, Intel MKL
+    - **Use when:** Need optimized math performance with GCC
+    - **Best for:** Math-intensive applications
+
+    **gfbf** - GCC + FlexiBLAS + FFTW
+    
+    - **Components:** GCC, FlexiBLAS, FFTW (no MPI)
+    - **Use when:** Serial math applications
+    - **Best for:** Single-node numerical computing
+
+=== "Intel Toolchains (For maximum performance)"
+
+    **intel** - Intel Compiler Suite ⭐ **BEST PERFORMANCE**
+    
+    - **Components:** icc, ifort, Intel MPI, Intel MKL
+    - **Use when:** Maximum performance on Intel processors
+    - **Best for:** Production runs, performance-critical applications
+
+    **iimpi** - Intel Compilers + Intel MPI
+    
+    - **Components:** icc, ifort, Intel MPI
+    - **Use when:** Intel compilers without math libraries
+    - **Best for:** Custom applications with Intel compilers
 <!---    * **iomkl**: icc, ifort, OpenMPI, MKL
     * **iompi**: icc, ifort, OpenMPI
     * **iccifort**: icc, ifort
     ml spider didn't find those last 3--->
 
-<!---
-=== "PGI compiler toolchains" <--these no longer appear to be supported on COSMOS
- 
-    * **PGI**: PGI
-    * **pompi**: PGI, OpenMPI
-    * **pomkl**: PGI, OpenMPI, MKL
---->
-## CUDA based toolchains for GPU nodes
+### GPU Toolchains
 
-=== "GCC compiler toolchains for GPU"
+For applications requiring GPU acceleration, these toolchains include CUDA support:
 
-    * **gcccuda**:  GCC, CUDA
-    * **gompic**: GCC, CUDA, OpenMPI
-    * **goolfc**: GCC, CUDA, OpenMPI, OpenBLAS, FFTW, BLACS, ScaLAPACK
+=== "GCC + CUDA Toolchains"
 
-=== "Intel compiler toolchains for GPU"
+    **gcccuda** - GCC + CUDA
+    
+    - **Components:** GCC, CUDA
+    - **Use when:** Basic GPU programming with GCC
+    - **Best for:** Learning CUDA, simple GPU applications
 
-    * **iccifortcuda**: icc, ifort, CUDA
-    * **iimpic**: icc, ifort, CUDA, Intel MPI
-    * **intelcuda**: icc, ifort, CUDA, Intel MPI, MKL
+    **gompic** - GCC + CUDA + MPI
+    
+    - **Components:** GCC, CUDA, OpenMPI
+    - **Use when:** Multi-GPU applications across nodes
+    - **Best for:** Distributed GPU computing
 
-If you require additional toolchains, contact [LUNARC support](https://supr.naiss.se/support/?centre_resource=c5) to discuss your requirements.
+    **goolfc** - Complete GCC + CUDA Stack ⭐ **RECOMMENDED FOR GPU**
+    
+    - **Components:** GCC, CUDA, OpenMPI, OpenBLAS, FFTW, BLACS, ScaLAPACK
+    - **Use when:** Full-featured GPU+CPU computing
+    - **Best for:** Complex applications using both GPU and CPU
 
-## Selecting a toolchain
+=== "Intel + CUDA Toolchains"
 
-The above choices of toolchains are a bit overwhelming, in particular for new users.  We recommend first choosing a toolchain and then selecting a version.  Good choices for general use are the toolchains:
+    **iccifortcuda** - Intel Compilers + CUDA
+    
+    - **Components:** icc, ifort, CUDA
+    - **Use when:** Intel compilers with GPU support
+    - **Best for:** High-performance CPU+GPU code
 
-* **foss**, if you want to use the GCC compiler suite
-* **gomkl**, if you want to use the GCC compiler suite with Intel's MKL performance library
-* **intel**, if you want to use the Intel compiler suite
+    **iimpic** - Intel + CUDA + MPI
+    
+    - **Components:** icc, ifort, CUDA, Intel MPI
+    - **Use when:** Intel MPI with GPU support
+    - **Best for:** Multi-node GPU applications with Intel tools
 
-**Example:** To check the foss versions available you
+    **intelcuda** - Complete Intel + CUDA Stack
+    
+    - **Components:** icc, ifort, CUDA, Intel MPI, MKL
+    - **Use when:** Maximum performance GPU+CPU computing
+    - **Best for:** Production GPU applications
+
+!!! tip 
+    
+    Need a different toolchain? Contact [LUNARC support](https://supr.naiss.se/support/?centre_resource=c5) to discuss your requirements.
+
+## How to Choose and Load a Toolchain
+
+### Decision Guide
+
+The variety of toolchains can seem overwhelming at first. Here's a simple decision process:
+
+1. **Start here for most users:** Use `foss` - it's free, reliable, and works for 80% of applications
+2. **Need GPU support?** Use `goolfc` (GCC-based) or `intelcuda` (Intel-based)
+3. **Performance critical?** Try `intel` or `gomkl` for better math library performance
+4. **Research/Academic use?** Stick with `foss` for maximum compatibility and reproducibility
+
+### Finding Available Versions
+
+Once you've chosen a toolchain type, check what versions are available:
 
 ```bash
-  module avail foss
+module avail foss
 ```
-and you get an output similar to
+
+Example output:
 
 ```bash
-
 ------------------ /sw/easybuild/modules/all/Core ------------------
    foss/2015a    foss/2015b    foss/2016a (D)
 
   Where:
    D:  Default Module
-
-Use "module spider" to find all possible modules.
-Use "module keyword key1 key2 ..." to search for all possible
-modules matching any of the "keys".
 ```
 
-This shows you that three versions of the foss toolchain are available, with version 2016a being the default.  The version numbering at the time of writing is a *time stamp*.  Version 2022a was released at the beginning of 2022, 2022b in the middle of 2022 and 2023a at the beginning of 2023.  If you load e.g. the `foss/2023a` module
+**Understanding version numbers:**
+- Format: `YYYY[a|b]` (e.g., `2023a`, `2023b`)
+- `2023a` = Released early 2023
+- `2023b` = Released mid-2023  
+- `(D)` = Default version
+
+!!! tip 
+    
+    Version Selection Tip: Always specify exact versions in your scripts! Don't rely on defaults as they may change.
+
+### Loading a Toolchain
+
+Load your chosen toolchain with the specific version:
 
 ```bash
+# Recommended: Specify exact version
 module load foss/2023a
+
+# Not recommended: Using default (may change)
+module load foss
 ```
 
-It will load several modules for you, incl. compiler, libraries and utilities.  The command 
+**What happens when you load a toolchain:**
+
+1. Multiple related modules are loaded automatically
+2. Compilers and libraries become available  
+3. Other software built with this toolchain becomes accessible
+4. Module defaults change to versions compatible with your toolchain
+
+Check what was loaded:
 
 ```bash
 module list
 ```
 
-will now show you which compiler and library versions it will be using.  Please note that after loading a toolchain
+!!! tip
 
- * Several modules become available, which rely on components inside this specific toolchain 
- * The defaults of many modules change to a version that was built with the components inside the selected foss module
+    Loading a toolchain makes many additional software packages available! Use `module avail` after loading to see new options.
 
-Selecting a version of the intel or the **pomkl** toolchain is very similar to selecting a foss module, just replace foss with intel or **pomkl** in the above examples.
+## Compiling Serial Code
 
-## Compiling serial code using a toolchain
+Once you've loaded a toolchain, compiling serial (single-processor) code works just like on any other system. The toolchain provides the compilers and libraries you need.
 
-Once a toolchain module is selected, there are no differences from earlier LUNARC services when it comes to compiling serial code.
-If you have loaded a toolchain build use the following commands to compile.
+### Available Compilers
 
-=== "GCC Toolchain"
+The compiler commands depend on which toolchain you loaded:
 
-    * **gcc**: C compiler
-    * **g++**: C++ compiler
-    * **gfortran**: Fortran compiler
+=== "GCC Toolchain (foss, gompi, etc.)"
 
-=== "Intel Toolchain"
+    ```bash
+    gcc      # C compiler
+    g++      # C++ compiler  
+    gfortran # Fortran compiler
+    ```
 
-    * **icc**: C compiler
-    * **icpc**: C++ compiler
-    * **ifort**: Fortran compiler
+    **Example: Compiling a C program**
+    ```bash
+    # Load toolchain first
+    module load foss/2023a
+    
+    # Compile with optimization
+    gcc -O3 -o myprogram myprogram.c
+    ```
 
-<!---=== "PGI Toolchain"
+=== "Intel Toolchain (intel, iimpi, etc.)"
 
-    * **pgcc**: C compiler
-    * **pgc++**: C++ compiler
-    * **pgf90**: Fortran compiler
-    * **pgf77**: Fortran77 compiler--->
- 
-In all cases please do not forget about compiler options, in particular optimisation flags.  You should have the toolchain used for compiling loaded when executing the code.
+    ```bash
+    icc      # C compiler
+    icpc     # C++ compiler
+    ifort    # Fortran compiler
+    ```
 
-## Compiling MPI code using a toolchain
+    **Example: Compiling a Fortran program**
+    ```bash
+    # Load toolchain first
+    module load intel/2023a
+    
+    # Compile with optimization
+    ifort -O3 -o myprogram myprogram.f90
+    ```
 
-The commands you use to compile MPI code depend on the MPI library and the compiler you intend to use.  
+!!! important 
 
-### Toolchains using OpenMPI
+    🔧 Don't forget optimization flags! Always use `-O2` or `-O3` for production code.
+    📦 Keep toolchain loaded: The same toolchain used for compilation should be loaded when running your program.
 
-When using a toolchain utilising **OpenMPI** (e.g. foss, iomkl, pomkl) use: 
-
- * **mpicc**: MPI compiler for C code
- * **mpicxx** or **mpic++*: MPI compiler for C++ code
- * **mpifort**: MPI compiler for Fortran code
- 
-Inside your slurm job-script, executables build with OpenMPI need to get started using the **mpirun** command.  For MPI jobs not using threads, we recommend using task binding.  A simple job script for standard MPI jobs (no threads, e.g. OpenMP) is available on COSMOS:
-
-```bash
-/sw/pkg/submissionsScripts/script_openmpi.sh
-```
-
-If you use this, you will need to modify it for your own needs.  A [more detailed guide](http://lunarc-documentation.readthedocs.org/en/latest/batch_system/) on the submission system is available.
- 
-!!! info 
-
-    In the latest OpenMPI releases the commands `mpif77` and `mpif90` have been depreciated.  Fortran users should switch to using `mpifort`.
-
-### Toolchains using the Intel compiler and Intel MPI library
-
-When using a toolchain utilising the **Intel MPI library** and the **Intel compiler** (e.g. intel, iimpi) use:
-
-* **mpiicc**: MPI compiler for C code
-* **mpiicpc**: MPI compiler for C++ code
-* **mpiifort**: MPI compiler for Fortran code
- 
-Inside your slurm job-script, executables build with the Intel MPI library need to get started using the `srun` command.  Task binding is still under investigation and not yet available. For a simple job script for standard MPI jobs is available on COSMOS:
+### Example Build Process
 
 ```bash
-/sw/pkg/submissionsScripts/script_intelmpi.sh
+# 1. Load your chosen toolchain
+module load foss/2023a
+
+# 2. Compile with appropriate flags
+gcc -O3 -march=native -o calculate calculate.c -lm
+
+# 3. Verify the build worked
+./calculate --version
 ```
 
-If you use this, you will need to modify it for your own needs.  A [more detailed guide](http://lunarc-documentation.readthedocs.org/en/latest/batch_system/) on the submission system is available.
+## Compiling MPI Code
 
+MPI (Message Passing Interface) compilation depends on both the MPI library and compiler in your toolchain. Here's how to compile and run MPI programs:
 
-### Toolchains using the GCC compiler and Intel MPI library
+### MPI Compiler Commands
 
-When using a toolchain utilising the **Intel MPI library** and the **GCC compiler** (e.g. gimkl) use:
+=== "OpenMPI Toolchains (foss, gompi, goolfc, etc.)"
 
-* **mpigcc**: MPI compiler for C code
-* **mpigxx**: MPI compiler for C++ code
-* **mpif90**: MPI compiler for Fortran 95 code
+    ```bash
+    mpicc    # MPI C compiler
+    mpicxx   # MPI C++ compiler (also: mpic++)
+    mpifort  # MPI Fortran compiler
+    ```
 
-Executable builds using this setup are also started with the **srun** command from inside a job-script as described [above](#toolchains-using-the-intel-compiler-and-intel-mpi-library).
+    **Example: Compiling MPI C code**
+    ```bash
+    # Load OpenMPI-based toolchain
+    module load foss/2023a
+    
+    # Compile MPI program
+    mpicc -O3 -o mpi_program mpi_program.c
+    ```
+
+    **Running OpenMPI programs:** Use `mpirun` in your job script
+    ```bash
+    #!/bin/bash
+    #SBATCH --ntasks=16
+    #SBATCH --time=1:00:00
+    
+    module load foss/2023a
+    mpirun myprogram
+    ```
+
+    > **📋 Sample script:** `/sw/pkg/submissionsScripts/script_openmpi.sh`
+
+=== "Intel MPI Toolchains (intel, iimpi, intelcuda, etc.)"
+
+    ```bash
+    mpiicc   # MPI C compiler
+    mpiicpc  # MPI C++ compiler
+    mpiifort # MPI Fortran compiler
+    ```
+
+    **Example: Compiling MPI Fortran code**
+    ```bash
+    # Load Intel MPI toolchain
+    module load intel/2023a
+    
+    # Compile MPI program
+    mpiifort -O3 -o mpi_program mpi_program.f90
+    ```
+
+    **Running Intel MPI programs:** Use `srun` in your job script
+    ```bash
+    #!/bin/bash
+    #SBATCH --ntasks=16
+    #SBATCH --time=1:00:00
+    
+    module load intel/2023a
+    srun myprogram
+    ```
+
+    > **📋 Sample script:** `/sw/pkg/submissionsScripts/script_intelmpi.sh`
+
+=== "GCC + Intel MPI (gimkl, etc.)"
+
+    ```bash
+    mpigcc  # MPI C compiler
+    mpigxx  # MPI C++ compiler
+    mpif90  # MPI Fortran compiler
+    ```
+
+    **Running:** Use `srun` (same as Intel MPI above)
+
+!!! Tip
+
+    * ⚡ Performance Tip: For pure MPI jobs (no OpenMP), use task binding for better performance.
+    * 🔄 Consistency: Always use the same toolchain for compiling and running your MPI code.
+    * 📖 More Info: See the [detailed batch system guide](http://lunarc-documentation.readthedocs.org/en/latest/batch_system/) for advanced job submission options.
+
+!!! warning "Deprecated Commands"
+    
+    The OpenMPI commands `mpif77` and `mpif90` are deprecated. Use `mpifort` instead for all Fortran code.
+
+## Troubleshooting and Best Practices
+
+### Common Issues and Solutions
+
+**Problem: "Command not found" after loading toolchain**
+
+```bash
+# Solution: Check if toolchain loaded correctly
+module list
+# If not loaded, reload:
+module purge
+module load foss/2023a
+```
+
+**Problem: Library linking errors**
+
+```bash
+# Solution: Ensure you're using the MPI compiler wrappers
+# Wrong:
+gcc -lmpi myprogram.c
+# Right:
+mpicc myprogram.c
+```
+
+**Problem: Different performance between identical code**
+
+- Always use the same toolchain version for compilation and execution
+- Check optimization flags: `-O2` or `-O3` make a huge difference
+- For Intel processors, consider using Intel toolchains
+
+### Best Practices Checklist
+
+✅ **Always specify exact toolchain versions** in your scripts  
+✅ **Use optimization flags** (`-O2` or `-O3`) for production code  
+✅ **Keep the same toolchain loaded** for compilation and execution  
+✅ **Use MPI compiler wrappers** (`mpicc`, `mpiicc`) instead of bare compilers  
+✅ **Test with different toolchains** if performance is critical  
+✅ **Document your toolchain choice** in your code/scripts for reproducibility  
+
+### Quick Workflow Summary
+
+```bash
+# 1. Choose and load toolchain
+module load foss/2023a
+
+# 2. Compile your code
+mpicc -O3 -o myprogram myprogram.c
+
+# 3. Create job script with same toolchain
+echo "module load foss/2023a" > myjob.sh
+echo "mpirun myprogram" >> myjob.sh
+
+# 4. Submit job
+sbatch myjob.sh
+```
+
+### Getting Help
+
+- **Sample job scripts:** Check `/sw/pkg/submissionsScripts/`
+- **Detailed guides:** [Batch system documentation](http://lunarc-documentation.readthedocs.org/en/latest/batch_system/)
+- **Support:** [LUNARC support portal](https://supr.naiss.se/support/?centre_resource=c5)
 
 ---
 
