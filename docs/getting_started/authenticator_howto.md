@@ -1,4 +1,5 @@
-The process to install and set up the OneTouch authenticator is in five (5) steps, **ALL** steps must be performed correctly so **PLEASE** read the instructions carefully.
+The process to install and set up the OneTouch authenticator is in five (5) steps, **ALL** steps must be performed correctly so **PLEASE** read the instructions carefully.  
+**Your login will fail if you don't complete the token activation.**  
 
 ## Step 1: Download and install PhenixID OneTouch
 Download and install the **PhenixID OneTouch** app on your smartphone. The correct app is free of charge.
@@ -18,7 +19,7 @@ Activation of the OneTouch app is done via a web-based activation portal. This c
 [Self-service portal](https://phenix3.lunarc.lu.se/selfservice/)
 
 
-## Step 3: Token activation
+## Step 3: Token registration
 The self-service portal will show the following login screen:
 
 ![sample screen](../images/selfservice_login_rev2.png "Desktop sample screen")
