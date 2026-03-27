@@ -1,18 +1,18 @@
 # Social media
 
-LUNARC also has a Twitter profile where we regularly push news and information:
+LUNARC maintains social media accounts where we push news and information about events, updates, and HPC topics.
 
-=== "Twitter"
+=== "X (formerly Twitter)"
 
-    * [LUNARC Twitter account](https://twitter.com/LUNARC_LU)
-    * [LU Twitter](https://twitter.com/Lundsuni)
-    * [LTH Twitter](https://twitter.com/LTHinfo)
-    * [LINXS on Twitter](https://twitter.com/LINXS_Sweden)
-    * [MAX IV on Twitter](https://twitter.com/MAXIVLaboratory)
+    - [LUNARC on X](https://twitter.com/LUNARC_LU)
+    - [Lund University on X](https://twitter.com/Lundsuni)
+    - [LTH on X](https://twitter.com/LTHinfo)
+    - [LINXS on X](https://twitter.com/LINXS_Sweden)
+    - [MAX IV on X](https://twitter.com/MAXIVLaboratory)
 
 === "YouTube"
 
-    * [LUNARC YouTube channel](https://www.youtube.com/channel/UCpwDHa6L_Mou-oPeht_lwQQ)
+    - [LUNARC YouTube channel](https://www.youtube.com/channel/UCpwDHa6L_Mou-oPeht_lwQQ)
 
 ---
 
@@ -20,4 +20,4 @@ LUNARC also has a Twitter profile where we regularly push news and information:
 (LUNARC)
 
 **Last Updated:**
-2022-10-05
+2025-09-08
