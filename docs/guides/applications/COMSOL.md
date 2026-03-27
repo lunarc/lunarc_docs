@@ -1,11 +1,10 @@
 # COMSOL
 
-COMSOL is installed on the cluster. It can either be used non-interactively for running a .mph file by sending it through the queue system from any login node or interactively from the LUNARC desktop. If run interactively, care has to be taken so that the program does not consume large amounts of resources on the frontend.
+COMSOL is installed on the cluster. It can either be used non-interactively for running a `.mph` file by sending it through the queue system from any login node, or interactively from the LUNARC desktop.
 
 ## Non-interactive use
 
-Given a .mph file comsol is started and run on the backend using a sbatch-script.
-an example script is given below:
+Given a `.mph` file, COMSOL can be started and run on a compute node using a batch script. An example script is given below:
 
 ```bash
 #!/bin/bash
@@ -17,7 +16,7 @@ an example script is given below:
 #
 #SBATCH -A <your-project-name>
 # job name
-#SBATCH -J <whatever_name_you_want>
+#SBATCH -J <your_job_name>
 #
 # filenames stdout and stderr - customise, include %j
 #SBATCH -o process_%j.out
@@ -26,8 +25,8 @@ an example script is given below:
 # write this script to stdout-file - useful for scripting errors
 cat $0
 
-# Add modules
-module add comsol
+# Add modules (specify version for reproducibility)
+module load comsol/<version>
 
 # run the program 
 # customise for your program name and add arguments if required
@@ -39,77 +38,30 @@ This will run the job input.mph on the cluster and save the output to output.mph
 
 ## Interactive use
 
-To run interactively the LUNARC Desktop (thinlinc) MUST be used. 
-The setup is based on having a comsol server process running on the backend which the GUI (which is running on the frontend) connects to.
-The first time the comsol server process is started you will be prompted to give a username and a password. NOTE! Do NOT use your LUNARC username and password! invent your own.
-This means that the FIRST tome you start the server you MUST do it interactively.
+To run interactively, the LUNARC Desktop (ThinLinc) MUST be used. Running COMSOL interactively works similarly to other On-Demand applications.
 
-To start an interactive session, start a terminal and type:
+At the top left of the HPC Desktop, click `Applications`, then hover over `Applications - Comsol`, and select your desired version of COMSOL from the menu that pops up to the side of the main menu, as shown below:
 
-```bash
-interactive -N1 --exclusive -A <your_project_name> -t 01:00:00
-```
+![Start Comsol](../../images/comsol_appmenu.png "Start COMSOL") 
 
-This will give you a new prompt on a node on the cluster for 1h.
-To start the server type:
+Once you have clicked a version of COMSOL to run, a popup---the GfxLauncher window---will appear that says "Application Requirements" just under the title bar. Below that will be several drop-down menus: 
 
-```bash
-comsol -np 16 server
-```
+- "Walltime",
+- "Requirements", and
+- "Project".
 
-This will start a server using 16 processing cores. You can adjust the number of cores to any number up to 20 which is the number of cores on a node.  You should select the number of cores giving you the fastes time to solution, which typically requires some experimentation.
+These will have some default values filled in, but all of them can be changed as needed. For Walltime in particular, if you do not like the provided options, you can type in any value for the number of hours, minutes, and seconds up to `168:00:00`, but it is strongly recommended that you choose the shortest time that you think you can work within to reduce the amount of time spent in the queue waiting for your session to start.
 
-The program will ask you for a username and a password as described above. This username and password will be saved in your .comsol directory in your home directory.
-Make a note of which node you are running on (it will be stated in the console as auxxx)
+If you want a different number of tasks per node (i.e. if you need more cores and/or want to change the default memory per core), click the gear icon (:gear:) to the right of the Requirements line item. A second popup will appear with options to name your job, vary the number of tasks per node, change the memory per core (be careful with this option!), occupy a full node, or use a reservation.
 
-It is now time to start the GUI. As seen in the figure, Comsol is available through the Applications menu on the LUNARC desktop.
+![GfxLauncher Windows for COMSOL](../../images/comsol_gfxlauncher.png "GfxLauncher Windows for COMSOL") 
+> Left: main GfxLauncher window showing the default application requirements for COMSOL. Right: Popup that appears after clicking the :gear: icon and enables custom resource specifications.
 
-![Start Comsol](../../images/start_comsol.png "Start COMSOL")  
+Once you are happy with your settings, click Start at the bottom. The grey box to the left of the Usage bar will remain grey while your interactive COMSOL session is in the queue, and will turn green once your job is ready to start. When your job starts, you should also see that the Usage bar is starting to increment. Leave that window open to monitor how much of your walltime has been used. Be aware that once Usage reaches 100%, the program will terminate immediately and any unsaved data will be lost, so save often!
 
-This will bring up the comsol GUI. In the GUI you must now attach to the server as shown in the following images
+> [!WARNING] Do not close the GfxLauncher window while COMSOL is running! Doing so will end your interactive COMSOL session immediately and you will lose all unsaved data along with your place in the queue!
 
-![Connect to server](../../images/connect_to_server.png "Connect to COMSOL server")  
-
-This will bring up a window where you need to supply which node the server is started on as shown below.
-
-![Which node](../../images/which_node.png "Select node")  
-
-Make sure that the server is the one you have started the server on. The username and password are the ones that you selected above, they should be filled in already but if not you have to supply them.
-You are now set up to run Comsol using the backend node for calculations. Please note that the comsol process WILL use your core-hours regardless of wheter you are doing calculations or not. So it is a good idea to shut down the server if it is not needed.
-
-Having started the Comsol server once, all of your settings for the server are saved in the directory .comsol on your home directory. Having the settings saved enables you to start the server with an SBATCH-script instead of through the interactive command.
-Below is an example on how to start the server through such a script instead.
-
-```bash
-#!/bin/bash
-#
-# job time, change for what your job requires   
-#SBATCH -t 1:00:00
-#SBATCH -N 1
-#SBATCH --ntasks-per-node=20
-#
-#SBATCH -A <your_project_name>  
-# job name
-#SBATCH -J comsol_server
-#
-#SBATCH --mail-user=you@yourdomain
-#SBATCH --mail-type=START
-#
-#
-# filenames stdout and stderr - customise, include %j
-#SBATCH -o process_%j.out
-#SBATCH -e process_%j.err
-#
-# write this script to stdout-file - useful for scripting errors
-cat $0
-# Add modules
-module add comsol
-# run the program 
-# customise for your program name and add arguments if required 
-comsol -np 20 server
-```
-
-In this script you are using one full node for 1h. you will also receive an email when the job starts so you will know when to connect to the server. 
+[Click here for more details about the general usage of On-Demand applications.](https://lunarc-documentation.readthedocs.io/en/latest/getting_started/gfxlauncher/)
 
 ---
 
@@ -117,5 +69,5 @@ In this script you are using one full node for 1h. you will also receive an emai
 (LUNARC)
 
 **Last Updated:**
-2023-01-31
+2025-11-06
 
