@@ -24,13 +24,13 @@ OutputFile=${Program}_job$JobNr.out
 
 Note that an underscore (_) counts as ordinary text and is not a special character, while a period (.) is the latter.
 
-A very important shell variable is PATH. It contains a list of paths where the shell will look for commands, which are actually files containing programs. A selected part of the default PATH on Milleotto is
+A very important shell variable is PATH. It contains a list of paths where the shell will look for commands, which are actually files containing programs. A selected part of the default PATH on COSMOS is
 
 ```bash
-/usr/kerberos/bin:/usr/lpp/mmfs/bin/:/usr/local/bin:/bin:/usr/bin 
+/usr/kerberos/bin:/usr/lpp/mmfs/bin/:/usr/local/bin:/bin:/usr/bin
 ```
 
-There are two things to note here. First, the order is important. If a command or program with the same name exists in more than one of the directories, the shell will pick the one that comes first in the list. Second, a standard name for a directory is bin. A user can customise the environment by defining and modifying shell variables in the file .bash_profile, which resides in the home directory. On MIlleotto, the default file contains the lines
+There are two things to note here. First, the order is important. If a command or program with the same name exists in more than one of the directories, the shell will pick the one that comes first in the list. Second, a standard name for a directory is bin. A user can customise the environment by defining and modifying shell variables in the file .bash_profile, which resides in the home directory. On COSMOS, the default file contains the lines
 
 ```bash
 PATH=$PATH:$HOME/bin 

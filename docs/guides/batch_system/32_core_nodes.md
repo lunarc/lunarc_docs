@@ -1,132 +1,128 @@
-# Using the 32-core nodes
+# Using the lu32 partition
 
-LUNARC's resources offers a new partition to its users.   This partition features compute nodes with more modern Cascade Lake CPUs, larger core count and more memory than the standard nodes.  These nodes are placed in a partition named *lu32*.   The name reflects that these nodes feature 32 cores per node. 
-
-This document assumes you are familar with LUNARC resources. Here we focus on the key differences between the standard partition and the new *lu32*-partition from a user perspective.
+LUNARC offers a partition named *lu32* featuring nodes with Intel Cascade Lake CPUs, 32 cores per node, and more memory than the standard AMD Milan nodes. This document focuses on the key differences between the standard partition and the *lu32* partition from a user perspective.
 
 ## Hardware
-The nodes inside the *lu32*-partition feature more modern CPUs than the nodes in the standard partition.  Both partitions contain Intel CPUs.  The CPUs in the standard nodes are commonly referred to as *Haswell*, while the CPUs in the *lu32* partition are commonly referred to as *Cascade Lake*.  Software executables build for *Haswell* CPUs should run in the *lu32* partition.  On the other hand, software specifically built for the new *Cascade Lake nodes* is **not** expected to work on the older *Haswell* nodes.
 
-The *Cascade Lake* CPUs feature additional instructions, not availabe on the *Haswell* CPUs.  For a typical scientific computing job, the AVX512 instructions are the most interesting instructions.  Testing by LUNARC support has shown that code utilising these instructions can be up to 50% faster than code utilising AVX2 instructions.  
+The *lu32* nodes feature Intel Cascade Lake CPUs, while the standard COSMOS nodes use AMD Milan CPUs. Software executables built for AMD will generally run on the Cascade Lake nodes. However, software specifically built to exploit Cascade Lake instructions is **not** expected to work on AMD nodes.
 
-### Key differences between the Haswell and Cascade Lake nodes
-|                | Aurora standard Haswell node | Aurora/COSMOS standard Cascade Lake node | COSMOS AMD Milan node             |
-|----------------|:----------------------------:|:----------------------------------------:|:---------------------------------:|
-|Cores per node: |      20 cores per node       |       32 cores per node                  | 48 cores per node
-|Memory per node:|      64 GB per node	        |               192 GB per node            | 256 GB per node
-|Memory per core:| 3100 MB per core (SLURM default) |     6000 MB per core                 | 5000 MB per core |
-|AVX vector instructions: | AVX, AVX2            | AVX, AVX2, **AVX512**                   | AVX, AVX2 |
+The Cascade Lake CPUs feature AVX512 instructions not present on the AMD Milan CPUs. Testing by LUNARC support has shown that code using these instructions can be up to 50% faster than code using AVX2 instructions.
 
+### Key differences between the Cascade Lake and AMD Milan nodes
+
+| | COSMOS Cascade Lake node (lu32) | COSMOS AMD Milan node (standard) |
+| --- | :---: | :---: |
+| Cores per node | 32 | 48 |
+| Memory per node | 192 GB | 256 GB |
+| Memory per core | 6000 MB | 5000 MB |
+| AVX vector instructions | AVX, AVX2, **AVX512** | AVX, AVX2 |
 
 ## Software
 
 ### Using installed software
-LUNARC supports, installs, and maintains a substantial number of software titles on LUNARC services.  By default, after login, users will be able to select from the software titles suitable for the standard *Haswell* nodes and the new *Cascade Lake* nodes.  These software titles are expected to give decent performance on the *Cascade Lake*. They are not optimised for the more modern CPUs.  Depending on the nature of a software title, switching to software titles built for the *Cascade Lake* CPUs may or may not yield performance benefits.
+
+LUNARC supports, installs, and maintains a substantial number of software titles. By default, users can select from software titles suitable for both node types. These titles are expected to give decent performance on the Cascade Lake nodes but are not optimised for them. Depending on the software, switching to titles built specifically for Cascade Lake may or may not yield performance benefits.
 
 !!! info
-    Users not using the *lu32*-partition, whose required software has not been optimised for the *Cascade Lake* nodes or who achieve satisfactory performance from the standard software do not need to change their workflows.  The module system will continue to work as it always did.  The only change is, that they will see a new module `SoftwareTree/Haswell` appearing in the list of loaded modules.
+    Users not using the *lu32* partition who achieve satisfactory performance from the standard software do not need to change their workflows. The only change they will notice is a new module `SoftwareTree/Haswell` appearing in the list of loaded modules.
 
 #### Switching to Cascade Lake software
-To change to the software titles compiled for the *Cascade Lake* CPUs, users need to unload the `SoftwareTree/Haswell` module and load the `SoftwareTree/Cascade` module.  Since the `SoftwareTree` modules are *sticky* they have to be purged by force.  Change from the *Haswell* software to the *Cascade Lake* software is accomplished as follows:
 
-```
+To change to software compiled for the Cascade Lake CPUs, unload the `SoftwareTree/Haswell` module and load `SoftwareTree/Cascade`. Since `SoftwareTree` modules are *sticky* they must be purged by force:
+
+```bash
 module --force purge
 module load SoftwareTree/Cascade
 ```
-This should work on the frontend nodes (e.g. cosmos.lunarc.lu.se or the HPC desktop cosmos-dt.lunarc.lu.se) and within a batch script (aka. SLURM script).  Once this is loaded, the commands `module avail` and `module spider` can be used to enquire about available software.
+
+This works on the frontend nodes (`cosmos.lunarc.lu.se`, `cosmos-dt.lunarc.lu.se`) and within a batch script. Once loaded, use `module avail` and `module spider` to explore available software.
 
 !!! info
-    * Software in the `SoftwareTree/Cascade` is not expected to work on the frontend nodes.
-    * Only a subset of the available software titles has been built for the Cascade Lake CPUs.  Use the standard (Haswell) software if the software you need is not available for Cascade Lake
-    * If you require additional software titles in `SoftwareTree/Cascade`, please contact LUNARC support.   Priority will be given to requests from research groups that helped to finance the relevant nodes and codes that consume substantial amounts of CPU time.
-
+    - Software in `SoftwareTree/Cascade` is not expected to work on the frontend nodes.
+    - Only a subset of available software titles has been built for Cascade Lake. Use the standard software if what you need is not available.
+    - To request additional software titles in `SoftwareTree/Cascade`, contact LUNARC support.
 
 ### Building your own software
 
-Many users compile their own software.  To obtain executables and binaries which are optimised for the *Cascade Lake* CPUs, it is necessary to instruct the compilers to do so.   This can be accomplished via cross compiling or by building the software on a compute node by e.g. submitting a batch job with the build instructions.   For complex build proceedures, the latter might actually be easier.
+To obtain executables optimised for the Cascade Lake CPUs, you need to instruct the compilers to target that architecture. This can be done via cross-compilation on a frontend node or by compiling on a Cascade Lake compute node inside a batch job.
 
 #### Cross compiling on a frontend node
-The COSMOS frontend node `cosmos.lunarc.lu.se` as well as the nodes utilised for the LUNARC HPC desktop `cosmos-dt.lunarc.lu.se` feature *AMD* CPUs. To generate code optimised for *Cascade Lake* processors you need to instruct the compiler to generate code intended to be used on a different architecture than utilised for the compilation. These instructions depend on the compiler.
+
+The COSMOS frontend nodes feature AMD CPUs. To generate code for Cascade Lake processors, instruct the compiler to target a different architecture than the one used for compilation.
 
 === "GCC compiler"
 
-    When using the GCC compiler to compile C, C++ and/or Fortran code the `-march` compiler option has to be used to specify the CPU whose instructions set is to be used.  In addition one can use the `-mtune` option to instruct the compiler to tune the code for a specific CPU.  The latter may or may not lead to a faster code.  When cross compiling for the *lu32*-partition with the GCC compiler, the following compiler options are recommended in addition to the ones you are typically using:
+    Add the following options to your compilation command:
 
-    ```
+    ```bash
     -march=cascadelake -mtune=cascadelake
     ```
 
-    Older versions of GCC will not support code generation for *Cascade Lake* CPUs.
+    Older versions of GCC do not support code generation for Cascade Lake CPUs.
 
 === "Intel compiler"
 
-    Similar to what is described for the GCC compiler, when using the Intel compiler, you need to instruct it that you want to obtain code for *Cascade Lake* CPUs.  In case of recent versions of the Intel compiler, we recommend using the compiler options in addition to the ones you are typically using:
+    Add the following options to your compilation command:
 
-    ```
+    ```bash
     -xCASCADELAKE -mtune=cascadelake
     ```
 
-    Older versions of the Intel compiler will not support code generation for the *Cascade Lake* CPU.
+    Older versions of the Intel compiler do not support Cascade Lake code generation.
 
-#### Compiling on compute node, inside a batch script
-Alternatively you can compile on a compute node of the *lu32*-partition.  It is recommended to have a separate compilation job with a suitable number of cores on a single node and not to include the build of the code in a production job.
+#### Compiling on a compute node inside a batch script
 
-When compiling on a *Cascade Lake* compute node one can instruct the compilers to generate code optimised for the architecture used for the building step.   It is advisable to use compilers and libraries inside the ```SoftwareTree/Cascade```.  
+Alternatively, compile on a compute node of the *lu32* partition. Use a separate compilation job rather than including the build in a production job.
+
+When compiling on a Cascade Lake node, you can instruct the compiler to optimise for the native architecture:
 
 === "GCC compiler"
 
-    When compiling on a compute note with the GCC compiler we recommend adding the options:
-
-    ```
+    ```bash
     -march=native -mtune=native
     ```
 
-    to the compilation options.
-
 === "Intel compiler"
 
-    When compiling on a compute note with the Intel compiler we recommend adding the option:
-
+    ```bash
+    -xHost
     ```
-    -xHost 
-    ```
-
-    to the compilation options.  In addtion one can specify `-mtune=cascadelake` as well.
 
 ## Batch scheduler
-This document assumes that the reader is familiar with the SLURM scheduler as deployed for years on the standard Aurora nodes.   We only document the extra bits required to utilise the *lu32*-partition.
-### Selecting the *lu32*-partition
-To instruct the scheduler to execute your job to run on the *lu32*-partition you need to add a line to your batch script:
 
-```
+This section covers only the extra SLURM directives needed for the *lu32* partition.
+
+### Selecting the lu32 partition
+
+Add the following line to your batch script:
+
+```bash
 #SBATCH -p lu32
 ```
-### Cores per node
-As the name indicates the nodes feature 32 cpu cores.  If your job can efficiently use all of them you can request all cores by specifying:
 
-```
+### Cores per node
+
+The *lu32* nodes have 32 CPU cores. To use all cores on a node:
+
+```bash
 #SBATCH --ntasks-per-node=32
 ```
 
-or
-
-
-```
-#SBATCH --tasks-per-node=32
-```
-
 ### Memory specification
-The default memory per CPU core on Aurora is set to 3100 MB.  Since the nodes in the *lu32*-partition have more memory, you can specify up to 6000 MB per core without being penalised:
 
+The *lu32* nodes have more memory than the standard partition. You can request up to 6000 MB per core without penalty:
+
+```bash
+#SBATCH --mem-per-cpu=6000
 ```
-#SBATCH --mem-per-cpu=6000 
-```
+
 ### Shebang
-There are currently issues when specifying `#!/bin/sh` for a job script. Scripts work when specifying:
 
+There are currently issues when specifying `#!/bin/sh` for a job script. Use instead:
+
+```bash
+#!/bin/bash
 ```
-#!/bin/bash  
-``` 
 
 ---
 
@@ -135,4 +131,3 @@ There are currently issues when specifying `#!/bin/sh` for a job script. Scripts
 
 **Last Updated:**
 2023-01-31
-

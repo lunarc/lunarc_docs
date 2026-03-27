@@ -10,11 +10,11 @@ Before running production runs, it is a good idea to test a program by running i
 
 The compiler options given here are only suggestions of useful combinations, but not guaranteed to be optimal in all cases. To see what options are available check the man pages
 
-```bash 
-man compiler-command 
+```bash
+man compiler-command
 ```
 
-In terms of optimized performance, the Intel compilers usually give good results (fast programs) for both Intel (Sigrid) and AMD processors (Docenten, Sweet16). PathScale and Portland Group compilers are in some cases superior on AMD. The GNU compilers generally work, but are usually outperformed by other compilers.
+In terms of optimised performance, the Intel compilers generally give good results for Intel code, while the AMD AOCC compiler is optimised for the AMD Milan processors in COSMOS standard nodes. The GNU compilers are broadly compatible and work well in most cases.
 
 ## Compiler commands and switches
 
@@ -116,104 +116,6 @@ In terms of optimized performance, the Intel compilers usually give good results
 
     ```
     -O3 -funroll-loops 
-    ```
-
-=== "PathScale"
-
-    **PathScale compiler commands:** 
-
-    Adding the pathscale module:
-
-    ```bash
-    module add pathscale 
-    ```
-
-    Fortan 77/90/95 compiler:
-
-    ```bash
-    pathf95 
-    ```
-
-    C compiler:
-
-    ```bash
-    pathcc 
-    ```
-
-    C++ compiler
-
-    ```bash
-    pathCC 
-    ```
-
-    **Compiler Options:**
-
-    Checking for mistakes
-
-    ```
-    -C -g 
-    ```
-
-    Optimization flags:
-
-    ```
-    -O3 
-    ```
-
-=== "Portland Group"
-
-    **Portland compiler commands** 
-
-    Adding the portland compiler module:
-
-    ```bash
-    module add pgi 
-    ```
-
-    Fortran 77 compiler:
-
-    ```bash
-    pgf77 
-    ```
-
-    Fortran 90/95 compiler:
-
-    ```bash
-    pgf90
-    ``` 
-
-    C compiler:
-
-    ```bash
-    pgcc 
-    ```
-
-    C++ compiler:
-
-    ```bash
-    pgCC 
-    ```
-
-    **Compiler Options:**
-
-    Checking for mistakes:
-
-    ```
-    -Mbounds -g 
-    ```
-
-    Optimization flags:
-
-    ```
-    -O3 -fastsse -Mvect 
-    ```
-
-    **Problem solving:**
-
-    By default, objects, such as arrays, are limited to 2 GB. The option to allow larger objects is
-
-    ```
-    -mcmodel=medium 
     ```
 
 ---

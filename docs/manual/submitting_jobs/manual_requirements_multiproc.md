@@ -1,82 +1,83 @@
-In HPC it is very common to have many processing elements working on a job. The extra processing power can be utilised to process large problems beyond the capabilities of a single processing element. It can also be used to swiftly perform many calculations within a single job submission.
+# Job requirements for multiprocessor jobs
 
-## Terminology around nodes, processors, cores, tasks
+In HPC it is very common to have many processing elements working on a job. The extra processing power can be used to tackle problems too large for a single core, or to run many calculations within a single job submission.
 
-There is a lot of structure within modern HPC equipment. For the purposes of this user guide we will stick to the following terminology:
+## Terminology: nodes, processors, cores, tasks
 
 | Term | Explanation | Number on COSMOS |
-|-----------|---------------------------------|-----------------------------|
-| Node | A physical computer/server in a compute cluster | over 200 standard CPU nodes|
-| Processor | This denotes a multi-core processor, housing many processing elements | 2 per node |
-| GPU | This denotes a NVIDIA/AMD co-processor. Can be used for both computing as well as graphics | none on CPU nodes| 
-| Socket | This is the “plug” the processor gets plugged into.  Used as a synonym for the processor | 2 per node |
+| --- | --- | --- |
+| Node | A physical computer/server in a compute cluster | Over 200 standard CPU nodes |
+| Processor | A multi-core processor housing many processing elements | 2 per node |
+| Socket | The physical slot the processor plugs into — used as a synonym for processor | 2 per node |
 | Core | Individual processing element | 48 per node |
-| Task | This is a software concept.  It denotes a process, which is an instance of a running program.  It has its own data and instruction stream(s).  It can fork multiple threads to increase the computational speed.  Serial programs and pure MPI programs do not spawn threads. | User controls in job script |
-| Thread | This is a software concept.  A thread is a stream of instructions executed on the hardware.  It is part of a task and shares resources such as  data with other threads within the same task. | User controls in job script |
+| GPU | NVIDIA/AMD co-processor, used for compute or graphics | None on standard CPU nodes |
+| Task | A software process — an instance of a running program with its own data and instruction stream. Serial and pure MPI programs use one task per core. | Controlled in job script |
+| Thread | A stream of instructions within a task, sharing memory with other threads in the same task. Used by OpenMP and similar frameworks. | Controlled in job script |
 
-## Outline: Resource requests for multiprocessor jobs
+## Resource requests for multiprocessor jobs
 
-When running multi-processor jobs on the LUNARC clusters, one should specify:
+When running multi-processor jobs, specify:
 
- 1.  The number of nodes required by the jobs
- 2.  The number of computational tasks per node
- 3.  The number of threads spawned by each task
+1. The number of nodes required
+2. The number of tasks per node
+3. The number of threads per task (for threaded programs)
 
-For a pure MPI job or when processing a large number of serial jobs in a so called task farm, one will typically only specify items 1 and 2, while for a threaded job, using e.g. OpenMP or Java, one will typically only specify items 1 and 3.
+For pure MPI or task-farm jobs, specify items 1 and 2 only. For threaded jobs (OpenMP, Java), specify items 1 and 3.
 
-It is typically not advisable to have the product of items 2 and 3 exceeding the number of cores per node, which is 48 for COSMOS compute nodes. In most cases, users requesting multiple nodes will want the product to equal the number of cores per node. The syntax for how to control nodes,
-tasks per node and threads per task is explained below.
+The product of items 2 and 3 should not exceed 48 (the number of cores per node on COSMOS). For multi-node jobs, the product should usually equal 48 to fully utilise each node.
 
-## Specifying the number of nodes required for the job
+## Specifying the number of nodes
 
-In SLURM one requests the number of nodes for a job with the `-N option. The following statement requests four nodes for your job:
+Request nodes with the `-N` option:
 
 ```bash
 #SBATCH -N 4
 ```
 
-**Important:** without using either the `--ntasks-per-node` or the `--cpus-per-task` options of `sbatch`, this will reserve a single core per node, so four in total, which is most likely not what you want.
+!!! warning
+    Using `-N` alone reserves only one core per node. You must also specify `--ntasks-per-node` or `--cpus-per-task` to use the full node.
 
-## Specifying the number of tasks per node
+## Specifying the number of tasks per node (MPI jobs)
 
-Use the `--ntasks-per-node` of `sbatch` to specify the number of tasks you require per node. For most multinode jobs this will be set to the number of cores available per node. The following example asks for 48 task per node:
-
-```bash
-#SBATCH --ntasks-per-node=48
-```
-
-This should be used together with the -N option, specifying the number of nodes to be used. The default value for the number of tasks per node is 1. For example to specify the requirements for an MPI job with 192 tasks or a multiprocessor job using 192 processors to process a larger number of serial jobs one would specify
+Use `--ntasks-per-node` to set the number of MPI tasks per node. For a fully-packed MPI job on COSMOS, set this to 48:
 
 ```bash
 #SBATCH -N 4
 #SBATCH --ntasks-per-node=48
 ```
 
-When using fewer than 48 tasks per node and you want to prevent other users’ jobs from sharing your node, you need to consider using the `--exclusive` option. If `--exclusive` is not specified, SLURM might place other tasks onto your node(s).  When specifying `--exclusive` your project will be charged for all the cores of the nodes you utilise.  
+This allocates 192 MPI tasks across 4 nodes.
 
-## Specifying the number of threads for a shared-memory job
+If you use fewer than 48 tasks per node and want to prevent other users' jobs from sharing your nodes, add `--exclusive`. Note that your project will be charged for all cores on the allocated nodes when using `--exclusive`.
 
-If you want to run shared-memory applications using threads, e.g. OpenMP parallelised code or Java applications, you need to specify the number of threads you require per task. This can be done with the `--ntasks-per-node` option of `sbatch`.
+## Specifying the number of threads per task (shared-memory jobs)
 
-For a standard shared-memory program, which doesn’t also use distributed memory programming models such as MPI, one is restricted to a single node. On the requested node, one can request as many threads as there are cores on the node. On the standard COSMOS compute nodes one can efficiently use up to 48 threads. Use the following resource statement:
-
-```bash
-#SBATCH -N 1
-#SBATCH --ntasks-per-node=48
-```
-
-If your program is only efficient at a lower thread count, you may want to use e.g.:
+For threaded programs (e.g. OpenMP, Java) use `--cpus-per-task` to specify how many CPU cores each task may use. For a single-node job using all 48 cores:
 
 ```bash
 #SBATCH -N 1
-#SBATCH --ntasks-per-node=4
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=48
 ```
 
-if you only want to use four threads. 
+For a 4-thread job:
 
-## Resource statements for hybrid programs using distributed and shared memory 
+```bash
+#SBATCH -N 1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+```
 
-So-called hybrid programs, using both distributed and shared-memory techniques have recently become popular. For example: for a program utilising 48 MPI tasks, each task spawning 4 OpenMP threads one would require 4 nodes and place twelve tasks on each node. The number of threads per task is given by `--cpus-per-task. The resource statement would look as follows:
+!!! info "Setting the thread count for OpenMP"
+    SLURM allocates the cores but does not automatically tell your program how many threads to use. Set `OMP_NUM_THREADS` explicitly in your job script to match `--cpus-per-task`:
+
+    ```bash
+    export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+    ```
+
+## Hybrid jobs (MPI + OpenMP)
+
+Hybrid programs combining distributed and shared memory have become increasingly common. For a job using 48 MPI tasks where each task spawns 4 OpenMP threads, you need 4 nodes with 12 tasks per node, and 4 cores per task:
 
 ```bash
 #SBATCH -N 4
@@ -84,15 +85,19 @@ So-called hybrid programs, using both distributed and shared-memory techniques h
 #SBATCH --cpus-per-task=4
 ```
 
-## Specifying the number of cores to be required by the job
+Remember to also set `OMP_NUM_THREADS=4` in the job script body.
 
-In special cases, such as using very unusual numbers of tasks, the `-n` option of `sbatch` to specify the number of cores might become useful. When running a pure MPI program this option corresponds to the **number of tasks** required for your program. The following statement in a job script would reserve 94 cores for your job
+## Specifying an exact number of cores
+
+In unusual cases — for example when the required task count does not divide evenly across nodes — the `-n` option lets you specify the total number of tasks directly:
 
 ```bash
 #SBATCH -N 2
 #SBATCH --ntasks-per-node=48
 #SBATCH -n 94
 ```
+
+This reserves 94 cores across 2 nodes.
 
 ---
 
@@ -101,4 +106,3 @@ In special cases, such as using very unusual numbers of tasks, the `-n` option o
 
 **Last Updated:**
 2025-02-10
-

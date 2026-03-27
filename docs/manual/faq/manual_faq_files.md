@@ -2,23 +2,25 @@
 
 ## I accidentally deleted or modified a file
 
-For the home space on COSMOS, we have **snapshots** enabled.  If you type `ls .snapshots` at the commandline in the current directory you get to see a number of diretories named like `@-2020.12.11-00.00.35`, which stands for the date and time of the snapshot.  Change into the directory specifying a point of time before the accident, e.g.:
+Snapshots are enabled for home directories on COSMOS. Run `ls .snapshots` in any directory to see available snapshots, named by date and time — for example `@-2020.12.11-00.00.35`. Change into the snapshot directory for a point in time before the accident:
 
-```
+```bash
 cd .snapshots/@-2020.12.11-00.00.35
 ```
-and you get presented with the state of the directory and it's sub-directories at that time-stamp.  You can copy the required contents out of the snapshot directory into your current directory.
+
+You will see the state of the directory and its subdirectories at that timestamp. Copy what you need back to your current directory.
 
 ## I can't access my MAX-IV files on LUNARC resources
 
-If your MAX-IV project (i.e., "proposal" in MAX-IV terms) files are not already accessible under /projects/, then send a ticket to LUNARC via [SUPR](https://supr.naiss.se/support/?centre_resource=c5&summary=Access+to+MAXIV+folder) to request it. Mention the project name and, if possible, the UNIX Group name and GID.
+If your MAX-IV project files are not accessible under `/projects/`, send a ticket to LUNARC via [SUPR](https://supr.naiss.se/support/?centre_resource=c5&summary=Access+to+MAXIV+folder) to request access. Include the project name and, if possible, the UNIX group name and GID.
 
-Note that when MAX-IV project files are made accessible on LUNARC resources, access is only possible from frontends, i.e., they are not accessible from compute nodes. Before starting a job, please copy the files from /projects/<group name> to your home directory, then modify the job to use the copies in your home directory before submitting it.
+!!! warning "MAX-IV files are not available on compute nodes"
+    MAX-IV project files under `/projects/` are only accessible from the frontend (login) nodes. Before submitting a job, copy the required files to your home directory and update your job script to use those copies.
 
 ---
 
 **Author:**
-Joachim Hein (LUNARC)  
+Joachim Hein (LUNARC)
 Nicolas Melot (LUNARC)
 
 **Last Updated:**

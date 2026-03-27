@@ -1,84 +1,88 @@
 # Frequently asked questions - Software
 
-## Could you please install software for me
+## Can you install software for me?
 
-Many packages that were installed in standard locations have been moved to the module system.  Please search for the package using **module spider** before contacting the helpdesk.
+Many packages are available through the module system. Search first with `module spider` before contacting the helpdesk — it may already be installed.
 
 ## I cannot find my software package in the module system
 
-On LUNARC resources a hierarchical module naming scheme is deployed.  This is explained in the [Using installed software guide](/../manual/manual_modules/).  Please contact [LUNARC support](/../about/contact/) if you cannot locate your package with the **module spider** command.
+LUNARC uses a hierarchical module naming scheme, explained in the [Using installed software guide](../manual_modules.md). If you still cannot locate your package after using `module spider`, contact [LUNARC support](../../about/contact.md).
 
-## Loading a module unloads pre-requisites from a previously loaded module
+## Loading a module unloads prerequisites from a previously loaded module
 
-Many software modules have complex pre-requisites. If you load multiple modules, they may try to load conflicting modules as pre-requisites.  In this case the module loaded last purges conflicting pre-requisistes from previously loaded modules.  If that happens, the modules loaded earlier can become dysfunctional and there is no guarantee that they will still work.
+Software modules can have conflicting prerequisites. When you load a second module whose prerequisites clash with the first, SLURM will purge the conflicting ones — potentially breaking the earlier module.
 
-You have the following options to resolve the issues:
+Options to resolve this:
 
- * Have a look at whether there are different versions of the modules installed that have common pre-requisites.  In many cases we have the same version of the software installed with different pre-requisites to help this issue.
- * Have a terminal dedicated to each of the modules.  This should work if the modules do not really interact with each other, but e.g. one module creates files which the other module reads.  Consider using the [Lunarc HPC desktop](https://lunarc-documentation.readthedocs.io/en/latest/using_hpc_desktop/) which easily allows having multiple terminals within a single session
- * If this does not work or does not work satisfactory, contact the [LUNARC helpdesk](https://supr.naiss.se/support/?centre_resource=c5) and discuss your situation.
+- Check whether different versions of the conflicting modules share common prerequisites. We often provide the same software built against different toolchains for this reason.
+- Use a separate terminal for each module. This works when the modules produce or consume files rather than interacting directly. The [LUNARC HPC Desktop](../../getting_started/using_hpc_desktop.md) makes it easy to run multiple terminals in one session.
+- If neither option works, contact the [LUNARC helpdesk](https://supr.naiss.se/support/?centre_resource=c5) to discuss your situation.
 
- 
 ## My application fails because it can't find libgfortran.so.3
-If your jobs fails with an error message like
 
-```
+```text
 error while loading shared libraries: libgfortran.so.3: cannot
 open shared object file: No such file or directory
 ```
-you are using software that has been compiled with a deprecated version of GCC.  Please recompile you program on COSMOS using a newer version of GCC, preferably a GCC version we provided as a module.
 
-## I need LAPACK and BLAS - they used to be in /usr/lib64
+This means your software was compiled with a deprecated version of GCC. Recompile it on COSMOS using a newer GCC version — preferably one provided as a module.
 
-Using an optimised BLAS library is important for achieving good performance.  The libraries in `/usr/lib64` are typically not highly optimised.  We currently support [OpenBLAS](https://www.openblas.net/) within the foss [toolchain](https://lunarc-documentation.readthedocs.io/en/latest/manual/manual_modules_toolchains/) and [MKL](https://software.intel.com/en-us/intel-mkl) in the intel, iomkl, and gimkl toolchains.  Both libraries show excellent performance when e.g. used to build HPL (high performance linpack).
+## I need LAPACK and BLAS — they used to be in /usr/lib64
 
-When using OpenBLAS, please be aware that you might [need to control the number of threads](#my-mpi-code-using-openblas-does-not-perform) spawned.
+The libraries in `/usr/lib64` are not highly optimised. LUNARC provides:
 
+- **[OpenBLAS](https://www.openblas.net/)** — included in the `foss` [toolchain](../manual_modules_toolchains.md)
+- **[MKL](https://software.intel.com/en-us/intel-mkl)** — included in the `intel`, `iomkl`, and `gimkl` toolchains
 
-## How do I link my code against the MKL installation provided on COSMOS
+Both deliver excellent performance. If you use OpenBLAS in an MPI job, see [below](#my-mpi-code-using-openblas-runs-slowly--does-not-perform-as-expected) for thread control.
 
-The COSMOS modules providing MKL set the environment variable `MKLROOT` to assist the compiler in locating the library on the system.  To link your application we suggest consulting the [Intel® Math Kernel Library Link Line Advisor](https://software.intel.com/en-us/articles/intel-mkl-link-line-advisor) for the arguments needed. 
+## How do I link my code against the MKL installation on COSMOS?
 
+LUNARC's MKL modules set the `MKLROOT` environment variable automatically. For the correct linker flags, use the [Intel MKL Link Line Advisor](https://software.intel.com/en-us/articles/intel-mkl-link-line-advisor).
 
 ## My MPI code using OpenBLAS runs slowly / does not perform as expected
 
-OpenBLAS as installed in the foss [toolchains](https://lunarc-documentation.readthedocs.io/en/latest/manual/manual_modules_toolchains/#currently-provided-toolchains) is compiled with thread support.  When OpenBLAS is used on COSMOS, it will typically figure how many cores you are allocated on that node and spawn as many threads.  If this is not desirable (e.g. pure MPI code) you need to control the number of threads spawned by setting the `OMP_NUM_THREADS` variable.  For example for an MPI code running as many tasks as cores requested this is typically be set to:
+OpenBLAS in the `foss` [toolchains](../manual_modules_toolchains.md#currently-provided-toolchains) is built with thread support and will spawn one thread per allocated core by default. For pure MPI jobs this is usually undesirable. Set `OMP_NUM_THREADS` to control it:
+
 ```bash
 export OMP_NUM_THREADS=1
 ```
 
-For more information, see also the LUNARC manual page on [compiling MPI code with a toolchain.](https://lunarc-documentation.readthedocs.io/en/latest/manual/manual_modules_toolchains/#compiling-mpi-code-using-a-toolchain)
+See also: [compiling MPI code with a toolchain](../manual_modules_toolchains.md#compiling-mpi-code-using-a-toolchain).
 
 ## I want to run VASP on COSMOS but it doesn't work
 
-If you would like to use VASP on COSMOS, please ensure that you are registed on a license with the VASP developers in Vienna. To comply with the terms of our handling license, we have to confirm the validity of your license with the VASP developers before granting access. That will take normally take a few days but can take weeks under bad circumstances. **Being named in a SUPR VASP group does not imply you are entitled to use VASP.**
+VASP requires a valid license registered with the VASP developers in Vienna. Being named in a SUPR VASP group does **not** grant access.
 
-After registerering with the VASP team, contact the [LUNARC helpdesk](https://supr.naiss.se/support/?centre_resource=c5&summary=Getting+access+to+VASP) and provide the following information:
+To request access:
 
-* Your LUNARC userid
-* Name and Department of the license holder (typically your supervisor/research group leader)
-* The number of the license
-* Your name as stated on the VASP license
-* Your email address as stated on the VASP license
-* Whether you require VASP 5 or VASP 6 access
+1. Register your license with the VASP developers
+2. Contact the [LUNARC helpdesk](https://supr.naiss.se/support/?centre_resource=c5&summary=Getting+access+to+VASP) with:
+    - Your LUNARC user ID
+    - Name and department of the license holder
+    - License number
+    - Your name as it appears on the license
+    - Your email address as it appears on the license
+    - Whether you need VASP 5 or VASP 6
 
-In order to be able to continue the provision of VASP to our legitimate VASP users, we cannot make any exceptions. 
-
-
-The VASP executables are build with OpenMPI.   These executables need to be started with `mpirun`.  Refer to the sample section of our batch [system guide](../../example_job_scripts/manual_example_mpi_48_tasks/) for a more comprehensive discussion.
+Note: verification with the VASP developers typically takes a few days but can take longer. VASP executables are built with OpenMPI and must be launched with `mpirun`. See the [MPI example scripts](../example_job_scripts/manual_example_mpi_48_tasks.md) for reference.
 
 ## I need access to Amber
 
-Amber 22 is licensed software. To be able to use it please read through the
-license on the [Amber website](https://ambermd.org/GetAmber.php#amber). Please review the
-"ASSIGNMENT RESTRICTIONS" in particular.
+Amber 22 is licensed software. Review the license on the [Amber website](https://ambermd.org/GetAmber.php#amber), paying particular attention to the **Assignment Restrictions**.
 
-To gain access to the Amber installation on COSMOS, please submit a [support request](https://www.lunarc.lu.se/getting-help/), confirming that you are accepting these rules.  Your account will then be enabled to access to the amber package.
+Submit a [support request](https://www.lunarc.lu.se/getting-help/) confirming that you accept the license terms. Your account will then be enabled for the Amber module.
 
 ## My MPI application doesn't launch
 
-On COSMOS we support two MPI libraries: [OpenMPI](https://www.open-mpi.org/) and [Intel MPI](https://software.intel.com/en-us/intel-mpi-library).  Depending on the [toolchain](https://lunarc-documentation.readthedocs.io/en/latest/manual/manual_modules_toolchains/#currently-provided-toolchains) utilised to compile your application different job launchers are required.  Executables build with OpenMPI need to be launched with `mpirun`, while applications build with Intel MPI need to be started with `srun`.  
+COSMOS supports two MPI libraries with different launchers:
 
+| Library | Launcher |
+| --- | --- |
+| OpenMPI (foss toolchain) | `mpirun` |
+| Intel MPI (intel toolchain) | `srun` |
+
+Using the wrong launcher for the toolchain your application was built with is the most common cause of this issue. See the [toolchain guide](../manual_modules_toolchains.md#currently-provided-toolchains) for details.
 
 ---
 

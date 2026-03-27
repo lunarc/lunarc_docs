@@ -1,13 +1,16 @@
 # Resetting your password
 
-To receive a new password, please visit the password self service portal, identifying yourself with your email address and the phone number you have registered in SUPR.
+Visit the password self-service portal and identify yourself with your email address and the phone number registered in SUPR:
 
-[Password self service portal](https://phenix3.lunarc.lu.se/pss)
+[Password self-service portal](https://phenix3.lunarc.lu.se/pss){ .md-button }
 
-If this fails, phone LUNARC support on +46 (0)46-222 4454 from your registered phone number. Additional questions will be asked to verify your identity.
+If the portal does not work, call LUNARC support on **+46 (0)46-222 4454** from your registered phone number. Additional questions will be asked to verify your identity.
 
-!!! note
-    If you have changed your phone number in SUPR, make sure to create a ticket for LUNARC to have your phone number updated using <https://supr.naiss.se/support/?centre_resource=c5&summary=Update+my+contact+information>.
+!!! tip "Changed your phone number?"
+    Update it in [SUPR](https://supr.naiss.se/person/) first, then raise a [support request](https://supr.naiss.se/support/?centre_resource=c5&summary=Update+my+contact+information) so LUNARC can update its internal database.
+
+!!! info "Setting up for the first time?"
+    If you are a new user creating a password for the first time, see the full [account setup guide](../getting_started/login_password.md).
 
 ---
 

@@ -1,4 +1,4 @@
-# Read the Docs configuration file for MkDocs projects
+# Read the Docs configuration file for Zensical projects
 # See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
 
 # Required
@@ -9,11 +9,7 @@ build:
   os: ubuntu-22.04
   tools:
     python: "3.11"
-
-mkdocs:
-  configuration: mkdocs.yml
-
-# Optionally declare the Python requirements required to build your docs
-python:
-  install:
-  - requirements: requirements.txt
+  commands:
+    - pip install -r requirements.txt
+    - zensical build
+    - cp -r site $READTHEDOCS_OUTPUT/html
