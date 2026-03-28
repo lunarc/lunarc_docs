@@ -2,7 +2,7 @@
 site_name = "LUNARC Documentation"
 repo_url = "https://github.com/lunarc/lunarc_docs"
 repo_name = "LUNARC Documentation"
-# extra_css = ["stylesheets/extra.css"]
+extra_css = ["stylesheets/extra.css"]
 extra_javascript = [
   "https://unpkg.com/tablesort@5.6.0/dist/tablesort.min.js",
   "javascripts/tablesort.js",
@@ -123,7 +123,7 @@ features = [
 
 [[project.theme.palette]]
 media = "(prefers-color-scheme: light)"
-scheme = "default"
+scheme = "youtube"
 toggle.icon = "material/weather-night"
 toggle.name = "Switch to dark mode"
 
