@@ -165,4 +165,5 @@ emoji_generator = "zensical.extensions.emoji.to_svg"
 [project.plugins.search]
 
 [project.plugins."git-revision-date-localized"]
-type = "iso_date"
+type = "date"
+enable_creation_date = true
