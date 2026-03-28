@@ -1,6 +1,6 @@
 # Welcome to the LUNARC Documentation
 
-LUNARC is the high-performance computing (HPC) centre at Lund University, providing compute resources and support to researchers across Sweden through [NAISS](https://www.naiss.se/). The primary resource is the **COSMOS** cluster, running [SLURM](https://slurm.schedmd.com/) for job scheduling.
+LUNARC is the high-performance computing (HPC) centre at Lund University, providing compute resources and support to researchers at Lund university. LUNARC is also a branch of [NAISS](https://www.naiss.se/) providing support and training on a national level. The primary resource is the **COSMOS** cluster, running [SLURM](https://slurm.schedmd.com/) for job scheduling.
 
 This documentation covers everything from first-time login to advanced job scripting. Use the tabs below to find the right starting point for you.
 

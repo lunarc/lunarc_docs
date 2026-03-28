@@ -12,4 +12,5 @@ build:
   commands:
     - pip install -r requirements.txt
     - zensical build
-    - cp -r site $READTHEDOCS_OUTPUT/html
+    - mkdir -p $READTHEDOCS_OUTPUT/html
+    - cp -r site/. $READTHEDOCS_OUTPUT/html
