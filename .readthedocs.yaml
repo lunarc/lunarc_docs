@@ -9,10 +9,8 @@ build:
   os: ubuntu-22.04
   tools:
     python: "3.11"
-  jobs:
-    pre_build:
-      - git fetch --unshallow
   commands:
+    - git fetch --unshallow
     - pip install -r requirements.txt
     - zensical build
     - mkdir -p $READTHEDOCS_OUTPUT/html
