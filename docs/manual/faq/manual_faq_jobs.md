@@ -1,5 +1,15 @@
 # Frequently asked questions - Jobs
 
+## My job failed — where do I start?
+
+Check the output file (`slurm-<jobid>.out`) for error messages, then use `sacct` to see how the job ended:
+
+```bash
+sacct -j <jobid> --format=JobID,State,ExitCode,MaxRSS,Elapsed
+```
+
+For a full walkthrough of common failure modes and how to fix them, see [When your job fails](../submitting_jobs/manual_job_failures.md).
+
 ## What is the maximum job time on LUNARC resources?
 
 Batch jobs can request up to **168 hours** (7 days).

@@ -28,6 +28,12 @@ How to find, load, and manage software using the modules system, including compi
 
 [Using installed software](manual_modules.md){ .md-button }
 
+### Storage and filesystems
+
+An overview of the storage locations available on COSMOS — home directory, project storage, local scratch (`$SNIC_TMP`), and long-term archival via Swestore — including quotas and how to check them.
+
+[Storage and filesystems](manual_quick_reference.md#file-systems){ .md-button }
+
 ### Quick reference
 
 A compact summary of the most commonly used SLURM directives, module commands, and filesystem paths.

@@ -42,7 +42,6 @@ Additional guidance on using specific node types and partitions.
 For users building their own software on COSMOS — compiler flags, toolchains, and debugging tools.
 
 [Compiler options](software_development/compiler_options.md){ .md-button }
-[DDT debugger](software_development/ddt_debugger.md){ .md-button }
 
 ---
 

@@ -2,6 +2,9 @@
 
 There are two ways to access LUNARC systems:
 
+!!! tip "New to the Linux command line?"
+    Once you log in you will be working in a Linux terminal. If you have not used one before, read the [Introduction to Linux](../guides/linux/linux_basics_intro.md) first — it covers the basic commands you will need immediately after logging in.
+
 - The **LUNARC HPC Desktop** (ThinLinc) — see the [HPC Desktop guide](using_hpc_desktop.md)
 - **SSH terminal** — described on this page
 

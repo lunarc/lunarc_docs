@@ -1,5 +1,31 @@
 # Transferring files
 
+## Where to put your files
+
+Before transferring anything, it helps to know what storage is available and what each location is for.
+
+| Location | Path | Purpose | Persists after job? |
+|---|---|---|---|
+| Home directory | `$HOME` | Code, scripts, job scripts, results | Yes |
+| Project storage | `/lunarc/nobackup/projects/<project>` | Shared storage for larger datasets, shared within a project group | Yes |
+| Local scratch | `$SNIC_TMP` | Fast temporary storage on the compute node during a job | No — deleted when job ends |
+| Swestore | — | Long-term archival of research data | Yes (separate service) |
+
+**Home directory (`$HOME`)** is your main working area. It is backed up via snapshots — if you accidentally delete a file, run `ls .snapshots` in the affected directory to browse restore points. Your quota is displayed at login; run `snicquota` at any time to check current usage. Quota increases are available on request.
+
+**Project storage (`/lunarc/nobackup/projects`)** is a larger shared area suitable for datasets and other files that need to be accessible to all members of a project group. Storage here is allocated per project and must be applied for separately through [SUPR](https://supr.naiss.se/). If your project has been granted storage, the path will be `/lunarc/nobackup/projects/<project-name>`. Note that this area is not snapshotted — deleted files cannot be recovered.
+
+**Local scratch (`$SNIC_TMP`)** is a fast per-node disk available only while a job is running. Use it for heavy read/write workloads within a job to avoid putting load on the shared filesystem. Do not transfer files from your laptop here — it is not accessible from the login node. See [Using local disk to improve I/O performance](../manual/submitting_jobs/manual_local_disk.md) for details.
+
+**Swestore** is NAISS's long-term storage service, separate from COSMOS. Use it to archive data that does not need to be on the cluster permanently. See the [Swestore guides](../guides/data_transfer/swestore_mounting.md) for access options.
+
+!!! note
+    The old `/lunarc/nobackup/users` personal storage area has been decommissioned. If you see references to it in older guides or scripts, use `$HOME` instead.
+
+---
+
+## Transferring files to and from COSMOS
+
 There are several ways to move files between your local machine and COSMOS. The right choice depends on your operating system and workflow.
 
 ## Quick guide by use case

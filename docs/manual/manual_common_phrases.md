@@ -14,13 +14,13 @@
 | Hardware accelerated graphics | Graphics rendering that uses a GPU hardware accelerator for drawing in 2D and 3D. |
 | HPC | High Performance Computing |
 | Job script | See *Batch job*. |
-| Local disk | Disk storage local to each compute node. Not shared between nodes. Used as fast scratch space during jobs via `$NAISS_TMP`. |
+| Local disk | Disk storage local to each compute node. Not shared between nodes. Used as fast scratch space during jobs via `$SNIC_TMP`. |
 | LUNARC | Lund University NIC Application Research Center |
 | LUNARC HPC Desktop | Remote desktop solution provided by LUNARC, based on ThinLinc. |
 | Module | A single software package in the module system, typically identified by a name/version pair (e.g. `GROMACS/2023a`). |
 | Module system | System for managing software installations. Allows multiple versions of the same software to coexist. LUNARC uses [Lmod](https://lmod.readthedocs.io/). |
 | MPI | Message Passing Interface — an API for writing multi-node parallel programs. OpenMPI and Intel MPI are the commonly available implementations on COSMOS. |
-| NAISS_TMP | Environment variable pointing to the local scratch disk on an allocated compute node. Fast I/O, deleted when the job ends. See also `SNIC_TMP` (legacy name). |
+| NAISS_TMP | Environment variable used on some NAISS resources to point to the local scratch disk. Not used on COSMOS — use `$SNIC_TMP` instead. |
 | Node | A physical computer/server in a compute cluster. |
 | OpenGL | Open standard for hardware-accelerated graphics. |
 | OpenMP | Open Multi-Processing — an API for shared-memory parallel programming within a single node using threads. |
@@ -33,7 +33,7 @@
 | Queue | When a job is submitted it enters a queue in the scheduler and waits until the requested resources become available. |
 | Quota | The amount of disk space (and number of files) allocated to a user. Quota status can be checked with `snicquota`. |
 | SLURM | Simple Linux Utility for Resource Management — the job scheduler used on COSMOS. |
-| SNIC_TMP | Legacy environment variable for the local node scratch disk (same location as `NAISS_TMP`). Still set on COSMOS for backwards compatibility. |
+| SNIC_TMP | Environment variable pointing to the local scratch disk on an allocated compute node on COSMOS. Fast I/O, deleted when the job ends. Use this in your job scripts. |
 | Socket | The physical slot a processor plugs into — used as a synonym for processor. COSMOS nodes have 2 sockets. |
 | SSH | Secure Shell — the encrypted protocol used to connect to LUNARC resources. Built into Linux and macOS; PuTTY provides it on Windows. |
 | SUPR | NAISS User and Project Repository — the web portal for creating and managing project proposals for compute and storage resources. |

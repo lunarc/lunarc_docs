@@ -1,5 +1,10 @@
 # DDT debugger on COSMOS
 
+!!! warning "Not available on COSMOS"
+    DDT is part of Linaro Forge and uses a centralised NAISS license hosted at NSC. This license is restricted to NAISS resources and **cannot be used on COSMOS**. This page is retained for reference only.
+
+    If you need a parallel debugger, contact [LUNARC support](https://supr.naiss.se/support/?centre_resource=c5) to discuss available options.
+
 A basic description on how to start a debugging session with DDT, part of [Linaro Forge](https://www.linaroforge.com/), on the COSMOS cluster. Jobs are submitted through the SLURM batch system to the back-end nodes.
 
 ## About this document

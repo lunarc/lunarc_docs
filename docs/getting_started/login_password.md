@@ -7,6 +7,8 @@
     2. An approved project membership on a LUNARC resource
     3. An active LUNARC account — apply for one under the **Accounts** section of your SUPR profile once your project membership is approved
 
+    If you do not have a SUPR account or project membership yet, see [Getting access to LUNARC resources](https://www.lunarc.lu.se/getting-access) on the LUNARC website.
+
 ## Steps
 
 ### 1. Go to the password self-service portal

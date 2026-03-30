@@ -43,16 +43,15 @@ cp result.dat $SLURM_SUBMIT_DIR
 
 For a full list of SLURM variables, run `man sbatch` on COSMOS.
 
-## NAISS local scratch variable
+## Local scratch variable
 
-NAISS provides a standard variable for the local scratch disk on each compute node:
+COSMOS provides a variable for the local scratch disk on each compute node:
 
 | Variable | Description |
 | --- | --- |
-| `NAISS_TMP` | Local scratch disk on the allocated node — fast I/O, deleted when the job ends |
+| `SNIC_TMP` | Local scratch disk on the allocated node — fast I/O, deleted when the job ends |
 
-!!! note "Legacy variable name"
-    The older name `SNIC_TMP` (from the previous SNIC era) is also still set and points to the same directory. New job scripts should use `NAISS_TMP`.
+`TMPDIR` is also set to the same location and is used automatically by many applications as their default scratch space.
 
 Using the local scratch disk is strongly recommended for I/O-intensive jobs. See [Using local disk to improve I/O performance](manual_local_disk.md) for details and example scripts.
 
