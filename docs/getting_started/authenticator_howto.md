@@ -74,7 +74,7 @@ Your token will expire in two year's time at which time you will need to activat
 
 You can now log in to the LUNARC systems using the OneTouch app. Having entered your password you will be prompted to enter your OneTouch generated OTP-token when logging in.
 
-## Troubleshooting
+## Trouble shooting
 
 ### Token validity and expiry
 
