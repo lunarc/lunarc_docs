@@ -74,8 +74,9 @@ Your token will expire in two year's time at which time you will need to activat
 
 You can now log in to the LUNARC systems using the OneTouch app. Having entered your password you will be prompted to enter your OneTouch generated OTP-token when logging in.
 
+## Troubleshooting
 
-## Checking the validity of your token
+### Token validity and expiry
 
 You can check the validity, in particular the expiration state, of your pocket pass token inside the self-service portal.  Use
 
@@ -90,9 +91,8 @@ Inside the self-service portal, go to the **TOKENS** tab.  You will see your tok
 
 If your token has expired, please go through [steps 3](#step-3-token-activation) to 5 to create a new token.  Please do not **forget step 5**.  Newly created tokens will expire after two years.
 
-## Troubleshooting
 
-### Check your details to complete the login
+### Error message: Check your details to complete the login
 
 ![Phenix error: Check your details to complete the login](phenix_error_vague.png)
 
