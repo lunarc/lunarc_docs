@@ -8,19 +8,20 @@
     --md-default-bg-color--light:        hsla(0, 0%, 100%, 0.7);
     --md-default-bg-color--lighter:      hsla(0, 0%, 100%, 0.3);
     --md-default-bg-color--lightest:     hsla(0, 0%, 100%, 0.12);
-  
-    --md-primary-fg-color:               #875e29;
+
+    /* LU Navy Blue as header/primary background */
+    --md-primary-fg-color:               #000080;
     --md-primary-bg-color:               #FFFFFF;
-    --md-primary-bg-color--light:        #FFFFFF;
-    --md-primary-bg-color:               hsla(0, 0%, 100%, 1);
     --md-primary-bg-color--light:        hsla(0, 0%, 100%, 0.7);
 
-    --md-accent-fg-color:                hsla(0, 0%, 0%, 0.32);
-    --md-accent-fg-color--transparent:   rgba(82,108,254,.1);
+    /* LU Bronze/Gold as accent */
+    --md-accent-fg-color:                #9C6114;
+    --md-accent-fg-color--transparent:   rgba(156, 97, 20, 0.1);
     --md-accent-bg-color:                #fff;
     --md-accent-bg-color--light:         hsla(0,0%,100%,.7);
 
-    --md-typeset-a-color:                #875e29;
+    /* LU Bronze/Gold for links */
+    --md-typeset-a-color:                #9C6114;
   }
 
 .md-typeset :is(.emojione,.twemoji,.gemoji) svg {
@@ -28,11 +29,24 @@
 }
 
 .tabbed-labels {
-  --md-accent-fg-color:                #875e29;
+  --md-accent-fg-color:                #9C6114;
 }
 
 .md-button {
-  --md-accent-fg-color:                #875e29;
+  --md-accent-fg-color:                #9C6114;
+}
+
+.md-header {
+  background-color: hsla(0, 0%, 80%, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+
+/* Title bar blends with box background */
+.md-typeset .admonition > .admonition-title,
+.md-typeset details > summary {
+  background-color: transparent !important;
 }
 
 /* ------------------------
@@ -41,178 +55,173 @@ ADMONITIONS
 
 .md-typeset .admonition.abstract,
 .md-typeset details.abstract {
-  border-color: #875e29;
+  border-color: #9C6114;
 }
 .md-typeset .abstract > .admonition-title,
 .md-typeset .abstract > summary {
-  background-color: hsla(0, 0%, 0%, 0.07);
+  background-color: transparent;
 }
 .md-typeset .abstract > .admonition-title::before,
 .md-typeset .abstract > summary::before {
-  background-color: #875e29;
+  background-color: #9C6114;
 }
 
 .md-typeset .admonition.info,
 .md-typeset details.info {
-  border-color: #875e29;
+  border-color: #9C6114;
 }
 .md-typeset .info > .admonition-title,
 .md-typeset .info > summary {
-  background-color: hsla(0, 0%, 0%, 0.07);
+  background-color: transparent;
 }
 .md-typeset .info > .admonition-title::before,
 .md-typeset .info > summary::before {
-  background-color: #875e29;
+  background-color: #9C6114;
 }
 
 .md-typeset .admonition.tip,
 .md-typeset details.tip {
-  border-color: #875e29;
+  border-color: #9C6114;
 }
 .md-typeset .tip > .admonition-title,
 .md-typeset .tip > summary {
-  background-color: hsla(0, 0%, 0%, 0.07);
+  background-color: transparent;
 }
 .md-typeset .tip > .admonition-title::before,
 .md-typeset .tip > summary::before {
-  background-color: #875e29;
+  background-color: #9C6114;
 }
 
 .md-typeset .admonition.success,
 .md-typeset details.success {
-  border-color: #875e29;
+  border-color: #9C6114;
 }
 .md-typeset .success > .admonition-title,
 .md-typeset .success > summary {
-  background-color: hsla(0, 0%, 0%, 0.07);
+  background-color: transparent;
 }
 .md-typeset .success > .admonition-title::before,
 .md-typeset .success > summary::before {
-  background-color: #875e29;
+  background-color: #9C6114;
 }
 
 .md-typeset .admonition.question,
 .md-typeset details.question {
-  border-color: #875e29;
+  border-color: #9C6114;
 }
 .md-typeset .question > .admonition-title,
 .md-typeset .question > summary {
-  background-color: hsla(0, 0%, 0%, 0.07);
+  background-color: transparent;
 }
 .md-typeset .question > .admonition-title::before,
 .md-typeset .question > summary::before {
-  background-color: #875e29;
+  background-color: #9C6114;
 }
 
 .md-typeset .admonition.important,
 .md-typeset details.important {
-  border-color: #875e29;
+  border-color: #9C6114;
 }
 .md-typeset .important > .admonition-title,
 .md-typeset .important > summary {
-  background-color: hsla(0, 0%, 0%, 0.07);
+  background-color: transparent;
 }
 .md-typeset .important > .admonition-title::before,
 .md-typeset .important > summary::before {
-  background-color: #875e29;
+  background-color: #9C6114;
 }
 
 .md-typeset .admonition.warning,
 .md-typeset details.warning {
-  border-color: #875e29;
+  border-color: #9C6114;
 }
 .md-typeset .warning > .admonition-title,
 .md-typeset .warning > summary {
-  background-color: hsla(0, 0%, 0%, 0.07);
+  background-color: transparent;
 }
 .md-typeset .warning > .admonition-title::before,
 .md-typeset .warning > summary::before {
-  background-color: #875e29;
+  background-color: #9C6114;
 }
 
 .md-typeset .admonition.note,
 .md-typeset details.note {
-  border-color: #875e29;
+  border-color: #9C6114;
 }
 .md-typeset .note > .admonition-title,
 .md-typeset .note > summary {
-  background-color: hsla(0, 0%, 0%, 0.07);
+  background-color: transparent;
 }
 .md-typeset .note > .admonition-title::before,
 .md-typeset .note > summary::before {
-  background-color: #875e29;
+  background-color: #9C6114;
 }
 
 .md-typeset .admonition.failure,
 .md-typeset details.failure {
-  border-color: #875e29;
+  border-color: #9C6114;
 }
 .md-typeset .failure > .admonition-title,
 .md-typeset .failure > summary {
-  background-color: hsla(0, 0%, 0%, 0.07);
+  background-color: transparent;
 }
 .md-typeset .failure > .admonition-title::before,
 .md-typeset .failure > summary::before {
-  background-color: #875e29;
+  background-color: #9C6114;
 }
 
 .md-typeset .admonition.danger,
 .md-typeset details.danger {
-  border-color: #875e29;
+  border-color: #9C6114;
 }
 .md-typeset .danger > .admonition-title,
 .md-typeset .danger > summary {
-  background-color: hsla(0, 0%, 0%, 0.07);
+  background-color: transparent;
 }
 .md-typeset .danger > .admonition-title::before,
 .md-typeset .danger > summary::before {
-  background-color: #875e29;
+  background-color: #9C6114;
 }
 
 .md-typeset .admonition.bug,
 .md-typeset details.bug {
-  border-color: #875e29;
+  border-color: #9C6114;
 }
 .md-typeset .bug > .admonition-title,
 .md-typeset .bug > summary {
-  background-color: hsla(0, 0%, 0%, 0.07);
+  background-color: transparent;
 }
 .md-typeset .bug > .admonition-title::before,
 .md-typeset .bug > summary::before {
-  background-color: #875e29;
+  background-color: #9C6114;
 }
 
 .md-typeset .admonition.example,
 .md-typeset details.example {
-  border-color: #875e29;
+  border-color: #9C6114;
 }
 .md-typeset .example > .admonition-title,
 .md-typeset .example > summary {
-  background-color: hsla(0, 0%, 0%, 0.07);
+  background-color: transparent;
 }
 .md-typeset .example > .admonition-title::before,
 .md-typeset .example > summary::before {
-  background-color: #875e29;
+  background-color: #9C6114;
 }
 
 .md-typeset .admonition.quote,
 .md-typeset details.quote {
-  border-color: #875e29;
+  border-color: #9C6114;
 }
 .md-typeset .quote > .admonition-title,
 .md-typeset .quote > summary {
-  background-color: hsla(0, 0%, 0%, 0.07);
+  background-color: transparent;
 }
 .md-typeset .quote > .admonition-title::before,
 .md-typeset .quote > summary::before {
-  background-color: #875e29;
+  background-color: #9C6114;
 }
 
-/* Hiding manual 'Last Updated' entries... */
-
-article.md-content__inner > p:last-of-type {
-    display: none;
-}
 
 /* ------------------------
 Last updated: 22-10-06

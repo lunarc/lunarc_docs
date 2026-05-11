@@ -1,34 +1,52 @@
 # Welcome to the LUNARC Documentation
 
-Here you will find all of the documentation for the LUNARC resources in a easy to find place.
+LUNARC is the high-performance computing (HPC) centre at Lund University, providing compute resources and support to researchers at Lund university. LUNARC is also a branch of [NAISS](https://www.naiss.se/) providing support and training on a national level. The primary resource is the **COSMOS** cluster, running [SLURM](https://slurm.schedmd.com/) for job scheduling.
+
+This documentation covers everything from first-time login to advanced job scripting. Use the tabs below to find the right starting point for you.
+
+!!! info "Before you begin"
+    To access COSMOS you need an approved LUNARC account. If you do not have one yet, visit the [LUNARC website](https://www.lunarc.lu.se/getting-access) to apply for a project allocation and a LUNARC account through [SUPR](https://supr.naiss.se/).
 
 === "New to HPC"
 
-    [:material-rocket-launch: Getting started](getting_started/login_password/){: .md-button }
+    Start here if you are setting up your account for the first time or have never used an HPC cluster before. Work through these in order:
 
-    [:material-linux: Introduction to Linux](guides/linux/linux_basics_intro.md){: .md-button }
+    [:material-lock-reset: 1. Create your password](getting_started/login_password.md){: .md-button }
 
-    [:fontawesome-solid-jet-fighter-up: User's Guide](manual/manual_intro/){: .md-button }
+    [:material-cellphone-key: 2. Set up two-factor authentication](getting_started/authenticator_howto.md){: .md-button }
 
-    [:material-application: Specific applications](guides/applications/Python){: .md-button }
+    [:material-linux: 3. Introduction to Linux](guides/linux/linux_basics_intro.md){: .md-button }
 
-    [:fontawesome-solid-question: Frequently asked questions](manual/faq/manual_faq_login.md){: .md-button }
+    [:material-login: 4. Log in to COSMOS](getting_started/login_howto.md){: .md-button }
+
+    [:material-package-variant: 5. Using software modules](getting_started/using_modules.md){: .md-button }
+
+    [:material-rocket-launch: 6. Run your first job](getting_started/first_job.md){: .md-button }
 
 === "Experienced with HPC"
 
-    [:fontawesome-solid-jet-fighter-up: User's Guide](manual/manual_intro/){: .md-button }
+    Already familiar with HPC? Jump straight to what you need:
 
-    [:material-application: Specific applications](guides/applications/Python){: .md-button }
+    [:fontawesome-solid-jet-fighter-up: User's Guide](manual/manual_intro.md){: .md-button }
 
-    [:material-book-open-variant: Application guides](guides/guides_intro){: .md-button }
+    [:material-script-text: Example job scripts](manual/example_job_scripts/manual_example_basic_serial.md){: .md-button }
+
+    [:material-file-find: Quick reference](manual/manual_quick_reference.md){: .md-button }
+
+    [:material-expansion-card: GPU nodes](manual/manual_gpu.md){: .md-button }
+
+    [:material-application: Application guides](guides/guides_intro.md#specific-applications){: .md-button }
 
     [:fontawesome-solid-question: Frequently asked questions](manual/faq/manual_faq_login.md){: .md-button }
 
 === "Developing HPC software"
 
-    [:material-database-cog: Software development guides](guides/software_development/compiler_options/){: .md-button }
+    Resources for building, compiling, and optimising software on COSMOS:
 
-    [:fontawesome-solid-jet-fighter-up: User's Guide](manual/manual_intro/){: .md-button }
+    [:material-tools: Compiling code and toolchains](manual/manual_modules_toolchains.md){: .md-button }
 
-    [:fontawesome-solid-award: HPC Ambassadors](about/ambassadors.md){: .md-button }
+    [:material-database-cog: Compiler options](guides/software_development/compiler_options.md){: .md-button }
 
+    [:material-cube-outline: Containers (Apptainer)](guides/containers/apptainer.md){: .md-button }
+
+    [:fontawesome-solid-jet-fighter-up: User's Guide](manual/manual_intro.md){: .md-button }

@@ -1,14 +1,16 @@
-We now describe several statements that are most commonly used to specify resource requirements for all kinds of jobs. Refer to **“man sbatch”** for more information.
+# Specifying job requirements
+
+The following sections describe the most commonly used `#SBATCH` directives for specifying resource requirements. Refer to `man sbatch` on COSMOS for the full list of options.
 
 ## Walltime (reqeuested job time)
 
 The walltime attribute specifies the time requested for completing the job. The time is _not_ CPU-time but the total time measured by an ordinary clock. In the previous example, the time requested was 0 hours 5 minutes and 0 seconds. Walltime is specified in seconds or using the following notation:
 
-```
+```text
 Hours:Minutes:Seconds
 ```
 
-If your calculation hasn’t finished once the specified time has elapsed, SLURM will terminate your job. It is, therefore **good practise**** to specify a bit more time than you anticipate your job to take. This ensures that you still get your results, even if the job is slowed by some interference, e.g. waiting for a write to a shared file system to finish. However, don’t specify excessive amounts of extra time. Due to scheduling constraints, jobs asking for less time will typically spend less time in the queue, waiting for their execution. This also provides safety against the depletion of your allocation. If e.g., your job hangs, SLURM will terminate your job and the project will be charged less time if the walltime margin is not excessive.
+If your calculation hasn’t finished once the specified time has elapsed, SLURM will terminate your job. It is, therefore **good practice** to specify a bit more time than you anticipate your job to take. This ensures that you still get your results, even if the job is slowed by some interference, e.g. waiting for a write to a shared file system to finish. However, don’t specify excessive amounts of extra time. Due to scheduling constraints, jobs asking for less time will typically spend less time in the queue, waiting for their execution. This also provides safety against the depletion of your allocation. If e.g., your job hangs, SLURM will terminate your job and the project will be charged less time if the walltime margin is not excessive.
 
 To specify your walltime requirements write a statement like
 
@@ -19,6 +21,8 @@ To specify your walltime requirements write a statement like
 into your job script.
 
 The maximum walltime for any job on COSMOS is 168h (7 days).
+
+For guidance on how to arrive at a good walltime estimate before a production run, see [Estimating job resources](manual_estimating_resources.md).
 
 ## Naming jobs
 
@@ -40,7 +44,6 @@ The COSMOS system has 256 GB of memory installed on a normal compute node. To al
 ```
 
 When requesting more than 5300 MB per processing core on a normal COSMOS node, your jobs will be charged at a higher rate. If you ask for more than 5300 MB per core, some processing cores must remain idle since you use more than your fair share of memory.  Your jobs will be charged for these idle cores.
-
 
 ## Controlling job output
 
@@ -72,7 +75,7 @@ SLURM on the systems can send you an email if the status of your job changes as 
 #SBATCH --mail-type=END
 ```
 
-will send an email to the address fred@institute.se once the job has ended. Valid type values, selecting the event you can get notified about, are BEGIN, END, FAIL, REQUEUE, and ALL (any state change).
+will send an email to the address `fred@institute.se` once the job has ended. Valid type values, selecting the event you can get notified about, are BEGIN, END, FAIL, REQUEUE, and ALL (any state change).
 
 !!! note
     If messages do not arrive, please monitor your junkmail or spam folder.
@@ -117,7 +120,7 @@ By default, the scheduler will requeue (aka. restart) jobs that suffered from no
 
 to the header portion of your job script prevents this behavior.
 
-## Specifying a project allocation and partition 
+## Specifying a project allocation and partition
 
 Most users are members of a single LU project. These users do not need to specify a project in their submission script. The LUNARC set-up will automatically use that project for accounting.
 
@@ -137,42 +140,7 @@ In addition, for those who access private nodes (financed by a research project)
 
 ## Accessing GPUs
 
-### NVIDIA A100 GPUs with AMD processors 
-
-A number of compute nodes on COSMOS are equipped with GPUs. At the time of this revision, there are six nodes with A100 NVIDIA 80 GB GPUs and AMD CPUs available.  These nodes feature two AMD EPYC 7413 24-Core processors, a total of 48 cores and have formally 512 GB of RAM, but only 512 000 MB are accessible. The nodes are placed in the **gpua100** partition. To access these nodes, you must include the line
-
-```bash
-#SBATCH -p gpua100
-```
-in your batch scipt.  These nodes are configured as exclusive access and will not be shared between users.   User projects will be charged for the entire node (48 cores). A job on a node will also have access to all memory on the node.
-
-### NVIDIA A100 GPUs with Intel processors 
-
-At the time of this revision, there are four nodes with A100 NVIDIA 40 GB GPUs and Intel CPUs available.  These nodes feature two Intel Xeon Gold 6226R 16-Core processors, a total of 32 cores and have formally 384 GB of RAM, but only 380 000 MB are accessible. The nodes are placed in the **gpua100i** partition. To access these nodes, you must include the line
-
-```bash
-#SBATCH -p gpua100i
-```
-in your batch scipt. 
-
-Two of the nodes have 1 GPU and two have 2 GPUs. This means that resource requirements have to be requested explicitly. Jobs using 16 cores and 1 GPU, can potentially fit on all nodes simultaneously, using all 6 GPUs. The resource specification of such a job would be
-
-```bash
-#SBATCH -N 1
-#SBATCH --ntasks-per-node=16
-#SBATCH --gres=gpu:1
-```
-
-This would automatically provide the default memory of 5300 MB per core. To use the memory available to each core, you need to specify
-
-```bash
-#SBATCH --mem-per-cpu=11800
-```
-The nodes in the gpua100i partition must not be used for CPU only applications, which are not utilising the GPUs.
-
-### NVIDIA A40 GPUs with AMD processors
-
-These nodes placed in the **gpua40** are reserved for interactive graphic work in the on-demand system.  Please do not submit compute jobs via slurm to these nodes.  Compute jobs submitted to the gpua40 partition may be terminated without prior warning.   
+COSMOS has three GPU partitions: `gpua100` (A100 80 GB, AMD), `gpua100i` (A100 40 GB, Intel), and `gpua40` (A40, interactive visualisation only). For a full overview of the hardware, partition selection guidance, and example job scripts, see [Using GPU nodes](../manual_gpu.md).
 
 ---
 

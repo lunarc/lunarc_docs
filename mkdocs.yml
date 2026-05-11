@@ -11,18 +11,23 @@ nav:
   - Transferring files: getting_started/transferring_files.md
   - Accessing the LUNARC HPC Desktop: getting_started/using_hpc_desktop.md
   - On-demand applications: getting_started/gfxlauncher.md
-  - Before you run...: getting_started/prelaunch_considerations.md
+  - Before you run: getting_started/prelaunch_considerations.md
+  - Using software modules: getting_started/using_modules.md
+  - Your first job: getting_started/first_job.md
 - User manual:
   - Introduction: manual/manual_intro.md
   - Submitting jobs:
     - A basic job: manual/submitting_jobs/manual_basic_job.md
     - Specifying job requirements: manual/submitting_jobs/manual_specifying_requirements.md
+    - Estimating job resources: manual/submitting_jobs/manual_estimating_resources.md
     - Job requirements for multiprocessor jobs: manual/submitting_jobs/manual_requirements_multiproc.md
     - Job execution environment: manual/submitting_jobs/manual_env.md
     - Using local disk to improve I/O performance: manual/submitting_jobs/manual_local_disk.md
     - Running MPI jobs: manual/submitting_jobs/manual_mpi_jobs.md
     - Controlling and monitoring jobs: manual/submitting_jobs/manual_job_control.md
+    - When your job fails: manual/submitting_jobs/manual_job_failures.md
   - Interactive node access: manual/manual_interactive.md
+  - Using GPU nodes: manual/manual_gpu.md
   - Using installed software: manual/manual_modules.md
   - Compiling code and using toolchains: manual/manual_modules_toolchains.md
   - Example jobs scripts:
@@ -71,7 +76,6 @@ nav:
     - R: guides/applications/Rscript.md
   - Software development:
     - Compiler options: guides/software_development/compiler_options.md
-    - DDT debugger on COSMOS: guides/software_development/ddt_debugger.md
 - Available Software:
   - software: software/installed_software.md
 - Links:
@@ -135,7 +139,8 @@ markdown_extensions:
 plugins:
   - search
   - git-revision-date-localized:
-      type: iso_date
+      type: date
+      enable_creation_date: true
 
 
 

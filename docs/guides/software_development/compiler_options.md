@@ -1,220 +1,159 @@
 # Compiler options
 
-Several compilers are available to Lunarc users. Here we list the command names and options that often produce good performance for the most used compilers. More may be found by looking through the list of available modules obtained by the command
+COSMOS has two CPU architectures, and choosing the right compiler and flags for each gives the best performance:
 
-```bash
-module avail 
-```
+| Nodes | CPU | Architecture | Best compiler choice |
+|---|---|---|---|
+| Standard (48-core) | AMD EPYC 7413 (Milan) | Zen 3 | AMD AOCC or GCC |
+| Intel (32-core) | Intel Xeon Gold 6226R (Cascade Lake) | Cascade Lake | Intel or GCC |
 
-Before running production runs, it is a good idea to test a program by running it with various checks turned on, for example to see that arrays are not indexed out of bounds. When the program has passed the test, it may be recompiled with optimization flags to get the best performance.
+Before production runs, always test with bounds-checking and debug flags enabled first, then recompile with optimisation flags once the code is correct.
 
-The compiler options given here are only suggestions of useful combinations, but not guaranteed to be optimal in all cases. To see what options are available check the man pages
+!!! tip "Compiling for the right architecture"
+    Flags like `-march=native` detect the CPU of the machine where you compile. If you compile on the login node, this may not match the compute node architecture. Either compile in an [interactive session](../../manual/manual_interactive.md) on the target node type, or specify the architecture explicitly using the flags below.
 
-```bash 
-man compiler-command 
-```
+## Compiler commands and flags
 
-In terms of optimized performance, the Intel compilers usually give good results (fast programs) for both Intel (Sigrid) and AMD processors (Docenten, Sweet16). PathScale and Portland Group compilers are in some cases superior on AMD. The GNU compilers generally work, but are usually outperformed by other compilers.
+=== "AMD AOCC"
 
-## Compiler commands and switches
+    AOCC (AMD Optimizing C/C++ Compiler) is based on LLVM/Clang and gives the best performance on the AMD Milan nodes that make up the majority of COSMOS.
+
+    ```bash
+    module load AOCC
+    ```
+
+    Use `module spider AOCC` to find available versions.
+
+    **Compiler commands:**
+
+    | Language | Command |
+    |---|---|
+    | C | `clang` |
+    | C++ | `clang++` |
+    | Fortran | `flang` |
+
+    **Debug flags:**
+
+    ```text
+    -g -O0
+    ```
+
+    **Optimisation flags for AMD Milan (Zen 3):**
+
+    ```text
+    -O3 -march=znver3 -ffast-math
+    ```
+
+    `-march=znver3` targets the Zen 3 microarchitecture of the EPYC 7413 processors in the standard COSMOS nodes, enabling AVX2 and other Milan-specific instructions.
+
+=== "GCC"
+
+    GCC is the broadly compatible choice and works well on both node types.
+
+    ```bash
+    module load GCC
+    ```
+
+    **Compiler commands:**
+
+    | Language | Command |
+    |---|---|
+    | C | `gcc` |
+    | C++ | `g++` |
+    | Fortran | `gfortran` |
+
+    **Debug flags:**
+
+    ```text
+    -g -O0 -Wall -fbounds-check
+    ```
+
+    **Optimisation flags for AMD Milan (standard nodes):**
+
+    ```text
+    -O3 -march=znver3 -funroll-loops
+    ```
+
+    **Optimisation flags for Intel Cascade Lake (32-core nodes):**
+
+    ```text
+    -O3 -march=cascadelake -funroll-loops
+    ```
+
+    **Problem solving — stack overflow / segmentation fault:**
+
+    GCC (like most compilers) allocates local arrays on the stack by default. Large arrays can exhaust the stack and cause segmentation faults. Move them to static or heap allocation, or increase the stack size limit:
+
+    ```bash
+    ulimit -s unlimited
+    ```
 
 === "Intel"
 
-    **Intel compiler commands:**
-
-    Adding the gnu compiler module:    
+    The Intel compilers give good performance on the Intel Cascade Lake 32-core nodes. They can also be used on the AMD nodes, but AOCC or GCC will typically produce faster code there.
 
     ```bash
-    module add intel 
+    module load intel
     ```
 
-    Fortran 77/90/95 compiler:
+    **Compiler commands:**
 
-    ```bash
-    ifort 
-    ```
-    C compiler:
+    | Language | Command |
+    |---|---|
+    | C | `icx` |
+    | C++ | `icpx` |
+    | Fortran | `ifx` |
 
-    ```bash
-    icc 
-    ```
-    C++ compiler:
+    !!! note "Classic vs oneAPI compilers"
+        Newer Intel toolchains provide the oneAPI compilers `icx`, `icpx`, and `ifx`. Older versions provided `icc`, `icpc`, and `ifort`. Check which commands are available after loading the module with `which icx` or `which icc`.
 
-    ```bash
-    icpc 
-    ```
+    **Debug flags:**
 
-    **Compiler Options:**
-
-    Checking for mistakes
-
-    ```
-    -check all -g -traceback 
+    ```text
+    -g -O0 -traceback -check all
     ```
 
-    Optimization flags:
+    (`-check all` and `-traceback` are Fortran-specific; for C/C++ use `-g -O0`.)
 
-    ```
-    -O3 -xW 
+    **Optimisation flags for Intel Cascade Lake:**
 
-    -O3 -ipo -unroll 
-
-    -fast 
+    ```text
+    -O3 -march=cascadelake -unroll
     ```
 
-    **Problem solving**
+    Or let the compiler detect the host architecture automatically:
 
-    By default, the Intel compiler puts arrays on the stack and if they are too large, the program may crash with segmentation fault. A solution is to instruct the compiler to put the arrays on the heap instead.
-
-    ```
-    -heap-arrays 
+    ```text
+    -O3 -xHost
     ```
 
-    This may reduce performance and it is therefore possible to specify a minimum size of arrays to be put on the heap instead of the stack, when the size is known at compile time.
+    **Problem solving — stack overflow / segmentation fault:**
 
-    ```
-    -heap-arrays <size in kilobytes> 
-    ```
+    The Intel Fortran compiler places arrays on the stack by default. For large arrays this can cause segmentation faults. Instruct the compiler to use the heap instead:
 
-=== "GNU Compilers"
-
-    **GNU Compiler commands** 
-
-    Adding the gnu compiler module:
-
-    ```bash
-    module add gcc
+    ```text
+    -heap-arrays
     ```
 
-    Fortran 77/90/95 compiler:
+    To only move arrays above a certain size (in kilobytes) to the heap:
 
-    ```bash
-    gfortran
+    ```text
+    -heap-arrays 64
     ```
 
-    C compiler:
+## Compiling for debugging
 
-    ```bash
-    gcc 
-    ```
+When preparing code for debugging, compile everything with debug support and without optimisation:
 
-    C++ compiler:
+```text
+-g -O0
+```
 
-    ```bash
-    g++ 
-    ```
+Recompile with optimisation flags only after debugging is complete.
 
-    **Compiler Options:**
+## Profiling
 
-    Checking for mistakes:
-
-    ```
-    -fbounds-check -g 
-    ```
-
-    Optimization flags:
-
-    ```
-    -O3 -funroll-loops 
-    ```
-
-=== "PathScale"
-
-    **PathScale compiler commands:** 
-
-    Adding the pathscale module:
-
-    ```bash
-    module add pathscale 
-    ```
-
-    Fortan 77/90/95 compiler:
-
-    ```bash
-    pathf95 
-    ```
-
-    C compiler:
-
-    ```bash
-    pathcc 
-    ```
-
-    C++ compiler
-
-    ```bash
-    pathCC 
-    ```
-
-    **Compiler Options:**
-
-    Checking for mistakes
-
-    ```
-    -C -g 
-    ```
-
-    Optimization flags:
-
-    ```
-    -O3 
-    ```
-
-=== "Portland Group"
-
-    **Portland compiler commands** 
-
-    Adding the portland compiler module:
-
-    ```bash
-    module add pgi 
-    ```
-
-    Fortran 77 compiler:
-
-    ```bash
-    pgf77 
-    ```
-
-    Fortran 90/95 compiler:
-
-    ```bash
-    pgf90
-    ``` 
-
-    C compiler:
-
-    ```bash
-    pgcc 
-    ```
-
-    C++ compiler:
-
-    ```bash
-    pgCC 
-    ```
-
-    **Compiler Options:**
-
-    Checking for mistakes:
-
-    ```
-    -Mbounds -g 
-    ```
-
-    Optimization flags:
-
-    ```
-    -O3 -fastsse -Mvect 
-    ```
-
-    **Problem solving:**
-
-    By default, objects, such as arrays, are limited to 2 GB. The option to allow larger objects is
-
-    ```
-    -mcmodel=medium 
-    ```
+COSMOS provides several profiling tools including `gprof` (GCC), `Valgrind`, `gperftools`, and `Score-P` for MPI/OpenMP tracing. See [What profiling tools are available on COSMOS?](../../manual/faq/manual_faq_software.md#what-profiling-tools-are-available-on-cosmos) in the FAQ for usage examples.
 
 ---
 
@@ -222,4 +161,4 @@ In terms of optimized performance, the Intel compilers usually give good results
 (LUNARC)
 
 **Last Updated:**
-2022-10-05
+2026-03-30

@@ -18,7 +18,7 @@ Check where the command that will be used resides
 which command
 ```
 
-This gives the path of the first occurence of command in the directories listed in the envrionment variable PATH. Note that a few commands are picked up directly by the shell, for example, the time command, and the program in the search path will not be executed. If a command behaves differently than expected from the man page, a solution may be to give the full path of the command found by which.
+This gives the path of the first occurrence of command in the directories listed in the environment variable PATH. Note that a few commands are picked up directly by the shell, for example, the time command, and the program in the search path will not be executed. If a command behaves differently than expected from the man page, a solution may be to give the full path of the command found by which.
 
 ## Manage Shell Variables and Parameters
 
@@ -177,7 +177,7 @@ List files in the current directory
 ```bash
 ls
 ```
-    
+
 List the files in another directory
 
 ```bash
@@ -254,13 +254,13 @@ Print the disk usage of the current and all subdirectories
 du
 ```
 
-Print the disk usage of a specifed directory and all its subdirectories
+Print the disk usage of a specified directory and all its subdirectories
 
 ```bash
 du dirname
 ```
 
--a: Print the size of individual files in addition to diectories
+-a: Print the size of individual files in addition to directories
 
 Print the size of a file
 
@@ -300,7 +300,7 @@ Make a file executable for anyone
 chmod +x filename 
 ```
 
-To be more precise it is possible to specify the changeas a string in the format who-add/remove-permission, where who is one of more of the characters u (user), g (group), and o (others); + means add and - means remove; and permission is one or more of the characters r (read), w (write), and x (execute). For example, to remove read and write permissions for the group and others
+To be more precise it is possible to specify the change as a string in the format who-add/remove-permission, where who is one of more of the characters u (user), g (group), and o (others); + means add and - means remove; and permission is one or more of the characters r (read), w (write), and x (execute). For example, to remove read and write permissions for the group and others
 
 ```bash
 chmod go-rw filename 

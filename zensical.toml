@@ -1,0 +1,173 @@
+[project]
+site_name = "LUNARC Documentation"
+repo_url = "https://github.com/lunarc/lunarc_docs"
+repo_name = "LUNARC Documentation"
+extra_css = ["stylesheets/extra.css"]
+extra_javascript = [
+  "https://unpkg.com/tablesort@5.6.0/dist/tablesort.min.js",
+  "javascripts/tablesort.js",
+]
+
+nav = [
+  {"Home" = [
+    {"Welcome to the LUNARC Documentation" = "index.md"},
+  ]},
+  {"Getting started" = [
+    {"Resetting your password" = "intro/lost_password.md"},
+    {"Creating a password for your account" = "getting_started/login_password.md"},
+    {"Activating two-factor authentication (2FA)" = "getting_started/authenticator_howto.md"},
+    {"How to log in" = "getting_started/login_howto.md"},
+    {"Transferring files" = "getting_started/transferring_files.md"},
+    {"Accessing the LUNARC HPC Desktop" = "getting_started/using_hpc_desktop.md"},
+    {"On-demand applications" = "getting_started/gfxlauncher.md"},
+    {"Before you run" = "getting_started/prelaunch_considerations.md"},
+    {"Using software modules" = "getting_started/using_modules.md"},
+    {"Your first job" = "getting_started/first_job.md"},
+  ]},
+  {"User Manual" = [
+    {"Introduction" = "manual/manual_intro.md"},
+    {"Submitting jobs" = [
+      {"A basic job" = "manual/submitting_jobs/manual_basic_job.md"},
+      {"Specifying job requirements" = "manual/submitting_jobs/manual_specifying_requirements.md"},
+      {"Estimating job resources" = "manual/submitting_jobs/manual_estimating_resources.md"},
+      {"Job requirements for multiprocessor jobs" = "manual/submitting_jobs/manual_requirements_multiproc.md"},
+      {"Job execution environment" = "manual/submitting_jobs/manual_env.md"},
+      {"Using local disk to improve I/O performance" = "manual/submitting_jobs/manual_local_disk.md"},
+      {"Running MPI jobs" = "manual/submitting_jobs/manual_mpi_jobs.md"},
+      {"Controlling and monitoring jobs" = "manual/submitting_jobs/manual_job_control.md"},
+      {"When your job fails" = "manual/submitting_jobs/manual_job_failures.md"},
+    ]},
+    {"Interactive node access" = "manual/manual_interactive.md"},
+    {"Using GPU nodes" = "manual/manual_gpu.md"},
+    {"Using installed software" = "manual/manual_modules.md"},
+    {"Compiling code and using toolchains" = "manual/manual_modules_toolchains.md"},
+    {"Example job scripts" = [
+      {"Basic serial jobs" = "manual/example_job_scripts/manual_example_basic_serial.md"},
+      {"Multiple serial jobs" = "manual/example_job_scripts/manual_example_multiple_serial_jobs.md"},
+      {"MPI job using 48 tasks per node" = "manual/example_job_scripts/manual_example_mpi_48_tasks.md"},
+      {"MPI job using the node local discs" = "manual/example_job_scripts/manual_example_mpi_local_discs.md"},
+      {"MPI jobs using fewer than 48 tasks per node" = "manual/example_job_scripts/manual_example_mpi_fewer_than_48.md"},
+      {"MPI job for Python scripts utilising MPI4PY" = "manual/example_job_scripts/manual_example_mpi4py.md"},
+      {"OpenMP jobs using shared memory" = "manual/example_job_scripts/manual_example_openmp_shared_memory.md"},
+    ]},
+    {"Quick reference" = "manual/manual_quick_reference.md"},
+    {"FAQ" = [
+      {"Login" = "manual/faq/manual_faq_login.md"},
+      {"Files" = "manual/faq/manual_faq_files.md"},
+      {"Jobs" = "manual/faq/manual_faq_jobs.md"},
+      {"Software" = "manual/faq/manual_faq_software.md"},
+    ]},
+    {"Phrases and terms" = "manual/manual_common_phrases.md"},
+  ]},
+  {"Guides" = [
+    {"Introduction" = "guides/guides_intro.md"},
+    {"Linux basics" = [
+      {"Introduction to Linux" = "guides/linux/linux_basics_intro.md"},
+      {"Linux shells and commands" = "guides/linux/linux_basics_shell_params.md"},
+      {"Files and directories" = "guides/linux/linux_basics_files.md"},
+      {"Special command symbols" = "guides/linux/linux_basics_special_symbols.md"},
+      {"Useful Linux commands" = "guides/linux/linux_basics_misc.md"},
+    ]},
+    {"Containers" = [
+      {"Running containers with Apptainer/Singularity" = "guides/containers/apptainer.md"},
+    ]},
+    {"Transferring data" = [
+      {"Wget and Curl" = "guides/data_transfer/io_wget_curl.md"},
+      {"SFTP" = "guides/data_transfer/io_sftp.md"},
+      {"WinSCP" = "guides/data_transfer/io_winscp.md"},
+      {"SSHFS" = "guides/data_transfer/sshfs.md"},
+      {"Mounting Swestore" = "guides/data_transfer/swestore_mounting.md"},
+      {"Requesting a certificate for Swestore" = "guides/data_transfer/swestore_certificate.md"},
+      {"Using ARC to access Swestore" = "guides/data_transfer/swestore_arc.md"},
+      {"Rclone and Swestore" = "guides/data_transfer/swestore_rclone.md"},
+      {"Swestore links" = "guides/data_transfer/swestore_links.md"},
+    ]},
+    {"Batch system" = [
+      {"Using the 32-core nodes" = "guides/batch_system/32_core_nodes.md"},
+    ]},
+    {"Applications" = [
+      {"Python" = "guides/applications/Python.md"},
+      {"MATLAB" = "guides/applications/MATLAB.md"},
+      {"Mathematica" = "guides/applications/Mathematica.md"},
+      {"Abaqus FEA" = "guides/applications/Abaqus.md"},
+      {"COMSOL" = "guides/applications/COMSOL.md"},
+      {"R" = "guides/applications/Rscript.md"},
+    ]},
+    {"Software development" = [
+      {"Compiler options" = "guides/software_development/compiler_options.md"},
+    ]},
+  ]},
+  {"Software" = [
+    {"Installed software" = "software/installed_software.md"},
+  ]},
+  {"Resources" = [
+    {"Web resources" = "links/links_web.md"},
+    {"Video resources" = "links/links_video.md"},
+    {"Social media" = "links/links_social.md"},
+  ]},
+  {"About" = [
+    {"Contact" = "about/contact.md"},
+    {"LUNARC Documentation" = "about/about_documentation.md"},
+    {"HPC Ambassadors" = "about/ambassadors.md"},
+    {"Test page" = "about/testpage.md"},
+    {"Template" = "about/template.md"},
+  ]},
+]
+
+[project.theme]
+font.text = "Roboto"
+font.code = "Roboto Mono"
+features = [
+  "navigation.instant",
+  "navigation.tracking",
+  "navigation.tabs",
+  "navigation.top",
+  "header.autohide",
+]
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "youtube"
+toggle.icon = "material/weather-night"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+toggle.icon = "material/weather-sunny"
+toggle.name = "Switch to light mode"
+
+# Markdown extensions
+[project.markdown_extensions.attr_list]
+
+[project.markdown_extensions.pymdownx.highlight]
+use_pygments = true
+pygments_lang_class = true
+auto_title = false
+linenums = true
+linenums_style = "pymdownx-inline"
+anchor_linenums = true
+line_spans = "__span"
+
+[project.markdown_extensions.pymdownx.inlinehilite]
+[project.markdown_extensions.pymdownx.snippets]
+[project.markdown_extensions.pymdownx.superfences]
+
+[project.markdown_extensions.pymdownx.tabbed]
+alternate_style = true
+
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.pymdownx.details]
+
+[project.markdown_extensions.pymdownx.emoji]
+emoji_index = "zensical.extensions.emoji.twemoji"
+emoji_generator = "zensical.extensions.emoji.to_svg"
+
+[project.markdown_extensions.meta]
+
+# Plugins
+[project.plugins.search]
+
+[project.plugins."git-revision-date-localized"]
+type = "date"
+enable_creation_date = true

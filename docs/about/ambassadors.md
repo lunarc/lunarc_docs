@@ -7,7 +7,7 @@ Our HPC Ambassadors are not support staff. For support regarding LUNARC resource
 ## Ambassadors
 
 | **Ambassador** | **Department** | **Area of expertise** |
-|---|---|---|
+| --- | --- | --- |
 | Shamit Soneji, PhD <br> <shamit.soneji@med.lu.se> | Faculty of Medicine, Biomedicine | 3D/VR Visualization in Medical applications |
 
 
