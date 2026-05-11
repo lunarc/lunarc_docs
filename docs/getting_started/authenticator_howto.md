@@ -87,7 +87,7 @@ You can now log in to LUNARC systems. After entering your password you will be p
 
 ---
 
-## Checking the validity of your token
+### Token validity and expiry
 
 You can check whether your token is still valid — and when it expires — through the self-service portal.
 
