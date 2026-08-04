@@ -1,7 +1,5 @@
 # Connection of LU Research Data folders to COSMOS
 
-Connecting your LU Research Data folders to COSMOS is now possible.
-
 > Please contact [LUNARC support](https://supr.naiss.se/support/?centre_resource=c5) if you need this functionality activated for your account.
 
 Connection can be initiated via menus if you're using the COSMOS desktop, or from the commandline in your COSMOS session.
@@ -17,9 +15,9 @@ Once connected, your LU Research Data folders will be seen in your $HOME (`/home
 
 ## For GUI use
 
-In your COSMOS desktop, please open the 'Applications' menu, and choose the entry 'LUNARC - Wizards/Connect LU Research Data'. A small form will open and ask for your LUCAT ID and password, and using this information it will try and connect your LU Research Data folders into your $HOME.
+In your COSMOS desktop, please open the **'Applications'** menu, and choose the entry **'LUNARC - Wizards/Connect LU Research Data'**. A small form will open and ask for your LUCAT ID and password, and using this information it will try and connect your LU Research Data folders into your $HOME.
 
-If started with the folders connected, the same tool will allow you (without filling in LUCAT ID and password) to disconnect your LU Research Data folders from your $HOME.
+The same tool will, if started with the folders connected, allow you to disconnect your LU Research Data folders from your $HOME.
 
 ## For CLI use
 
