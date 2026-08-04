@@ -1,12 +1,13 @@
 # Connection of LU Research Data folders to COSMOS
 
 Connecting your LU Research Data folders to COSMOS is now possible.
-Please contact [LUNARC support](https://supr.naiss.se/support/?centre_resource=c5) if you need this functionality activated for your account.
+
+> Please contact [LUNARC support](https://supr.naiss.se/support/?centre_resource=c5) if you need this functionality activated for your account.
 
 Connection can be initiated via menus if you're using the COSMOS desktop, or from the commandline in your COSMOS session.
 Once connected, your LU Research Data folders will be seen in your $HOME (`/home/$USER/lu_research_data`), and you'll be able move or copy data back and forth between that network-mounted folder and your storage in COSMOS with the same tools/commands you use for moving and copying files within your COSMOS storage.
 
-A few important points on efficient usage:
+## A few important points on efficient usage:
 
 - This functionality will only be available on COSMOS frontends, and ***not*** on COSMOS nodes. The main reason for this is that we want to maximise performance in COSMOS, which requires that jobs in the cluster should only be accessing the cluster local storage for reading/writing data.
 - This means that using data from your LU Research Data folders in COSMOS jobs, will require you to copy the relevant data into your COSMOS storage before running your jobs.
