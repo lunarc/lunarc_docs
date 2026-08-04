@@ -60,6 +60,7 @@ nav:
     - SFTP: guides/data_transfer/io_sftp.md
     - WinSCP: guides/data_transfer/io_winscp.md
     - SSHFS: guides/data_transfer/sshfs.md
+    - Mounting LU Research Data folders: guides/data_transfer/lurd_mount.md
     - Mounting Swestore: guides/data_transfer/swestore_mounting.md
     - Requesting a certificate for Swestore: guides/data_transfer/swestore_certificate.md
     - Using ARC to access Swestore: guides/data_transfer/swestore_arc.md
