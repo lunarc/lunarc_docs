@@ -11,7 +11,7 @@ When logging into the system, you only get access to those modules that do not r
 
 The module system uses the Lua-based [Lmod](https://www.tacc.utexas.edu/research-development/tacc-projects/lmod) software.
 
-[These are the software packages and versions](/software/installed_software) we currently provide as modules.
+[These](/en/latest/software/installed_software) are the software packages and versions we currently provide as modules.
 
 ### Loading packages
 
