@@ -1,5 +1,5 @@
 # Applications installed as modules
-**Last updated:** 2026-08-13 11:43:01
+**Last updated:** 2026-08-14 11:43:02
 ## A
 
 | Modulename | Versions |
@@ -3696,4 +3696,4 @@
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-08-13 11:43:01
+**Last updated:** 2026-08-14 11:43:02
