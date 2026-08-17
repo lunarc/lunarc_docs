@@ -2,7 +2,7 @@
 
 > Please contact [LUNARC support](https://supr.naiss.se/support/?centre_resource=c5) if you need this functionality activated for your account.
 
-Connection can be initiated via menus if you're using the COSMOS desktop, or from the commandline in your COSMOS session.
+Connection can be initiated via [menus](#for-gui-use) if you're using the COSMOS desktop, or from the [commandline](#for-cli-use) in your COSMOS session.
 Once connected, your [LU Research Data folders](https://www.staff.lu.se/get-started-research-data-folders/) will be seen in your $HOME (`/home/$USER/lu_research_data`), and you'll be able move or copy data back and forth between that network-mounted folder and your storage in COSMOS with the same tools/commands you use for moving and copying files within your COSMOS storage.
 
 ## A few important points on efficient usage:
