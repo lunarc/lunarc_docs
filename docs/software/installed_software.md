@@ -1,5 +1,5 @@
 # Applications installed as modules
-**Last updated:** 2026-08-16 11:43:02
+**Last updated:** 2026-08-19 10:23:02
 ## A
 
 | Modulename | Versions |
@@ -2182,6 +2182,7 @@
 | `officer` | 0.7.0 |
 | `oligo` | 1.74.0 |
 | `oligoClasses` | 1.72.0 |
+| `ollama` | 0.32.14 |
 | `onetimepass` | 1.0.1 |
 | `ontologyIndex` | 2.12 |
 | `oompaBase` | 3.2.10 |
@@ -3696,4 +3697,4 @@
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-08-16 11:43:02
+**Last updated:** 2026-08-19 10:23:02
