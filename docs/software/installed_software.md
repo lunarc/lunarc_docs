@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3566, with 1 to 20 versions each *(2026-08-21 15:28)*
+Total number of applications: 3566, with 1 to 20 versions each *(2026-08-21 15:33)*
 ## A
 
 **[167 modules]**
@@ -2224,7 +2224,7 @@ Total number of applications: 3566, with 1 to 20 versions each *(2026-08-21 15:2
 | `OpenCV` | 4.5.1-contrib, 4.6.0-CUDA-11.7.0-contrib, 4.6.0-contrib |
 | `openCyto` | 2.22.0 |
 | `OpenEXR` | 2.5.5, 3.1.1, 3.1.5, 3.1.7, 3.2.0, 3.2.4, 3.3.4 |
-| `OpenFOAM` | 10, 11, 12, 13, 2512, 7-20200508, 9, v2112, v2206, v2306, v2406, v2506, v2512 |
+| `OpenFOAM` | 10, 11, 12, 13, 7-20200508, 9, v2112, v2206, v2306, v2406, v2506, v2512 |
 | `OpenGL` | 2025.09 |
 | `OpenJPEG` | 2.4.0, 2.5.0, 2.5.2, 2.5.3 |
 | `OpenMM` | 7.7.0-foss-2022a-CUDA-11.7.0, 8.0.0, 8.0.0-CUDA-12.1.1, 8.0.0-foss-2022a-CUDA-11.7.0 |
@@ -3749,4 +3749,4 @@ Total number of applications: 3566, with 1 to 20 versions each *(2026-08-21 15:2
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-08-21 15:28
+**Last updated:** 2026-08-21 15:33
