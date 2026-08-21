@@ -1,7 +1,7 @@
 # Applications installed as modules
-**Last updated:** 2026-08-20 11:23:01
+Total number of applications: 3566, with 1 to 20 versions each *(2026-08-21 12:23)*
 ## A
-
+*[167 modules]*
 | Modulename | Versions |
 | :--- | :--- |
 | `abaqus` | R2020x, V6R2017x, V6R2019x, V6R2023a, V6R2023x |
@@ -173,7 +173,7 @@
 | `awsMethods` | 1.1-1 |
 
 ## B
-
+*[173 modules]*
 | Modulename | Versions |
 | :--- | :--- |
 | `b3sum` | 1.8.5 |
@@ -351,7 +351,7 @@
 | `bzip2` | 1.0.8 |
 
 ## C
-
+*[238 modules]*
 | Modulename | Versions |
 | :--- | :--- |
 | `ca` | 0.71.1 |
@@ -594,7 +594,7 @@
 | `CytoML` | 2.22.0 |
 
 ## D
-
+*[183 modules]*
 | Modulename | Versions |
 | :--- | :--- |
 | `d3Network` | 0.5.2.1 |
@@ -782,7 +782,7 @@
 | `DynDoc` | 1.88.0 |
 
 ## E
-
+*[84 modules]*
 | Modulename | Versions |
 | :--- | :--- |
 | `e1071` | 1.7-16 |
@@ -871,7 +871,7 @@
 | `ExtUtils::ParseXS` | 3.51, 3.58 |
 
 ## F
-
+*[162 modules]*
 | Modulename | Versions |
 | :--- | :--- |
 | `FabIO` | 0.14.0, 2024.9.0 |
@@ -1038,7 +1038,7 @@
 | `future.apply` | 1.20.0 |
 
 ## G
-
+*[257 modules]*
 | Modulename | Versions |
 | :--- | :--- |
 | `gam` | 1.22-6 |
@@ -1300,7 +1300,7 @@
 | `gzip` | 1.10, 1.12, 1.13, 1.14 |
 
 ## H
-
+*[95 modules]*
 | Modulename | Versions |
 | :--- | :--- |
 | `h11` | 0.14.0 |
@@ -1400,7 +1400,7 @@
 | `Hypre` | 2.20.0, 2.25.0, 2.27.0 |
 
 ## I
-
+*[110 modules]*
 | Modulename | Versions |
 | :--- | :--- |
 | `ica` | 1.0-3 |
@@ -1515,7 +1515,7 @@
 | `itsdangerous` | 2.1.2, 2.2.0 |
 
 ## J
-
+*[77 modules]*
 | Modulename | Versions |
 | :--- | :--- |
 | `JADE` | 2.0-4 |
@@ -1597,7 +1597,7 @@
 | `jxrlib` | 1.1, 2019.10.9 |
 
 ## K
-
+*[26 modules]*
 | Modulename | Versions |
 | :--- | :--- |
 | `kableExtra` | 1.4.0 |
@@ -1628,7 +1628,7 @@
 | `ks` | 1.15.1 |
 
 ## L
-
+*[179 modules]*
 | Modulename | Versions |
 | :--- | :--- |
 | `labdsv` | 2.1-2 |
@@ -1812,7 +1812,7 @@
 | `LZO` | 2.10 |
 
 ## M
-
+*[248 modules]*
 | Modulename | Versions |
 | :--- | :--- |
 | `M3Drop` | 1.36.0 |
@@ -2065,7 +2065,7 @@
 | `mzR` | 2.44.0 |
 
 ## N
-
+*[98 modules]*
 | Modulename | Versions |
 | :--- | :--- |
 | `nabor` | 0.5.0 |
@@ -2168,7 +2168,7 @@
 | `NVHPC` | 21.11, 22.11-CUDA-11.7.0, 23.1-CUDA-12.0.0 |
 
 ## O
-
+*[70 modules]*
 | Modulename | Versions |
 | :--- | :--- |
 | `oai` | 0.4.0 |
@@ -2194,7 +2194,7 @@
 | `OpenCV` | 4.5.1-contrib, 4.6.0-CUDA-11.7.0-contrib, 4.6.0-contrib |
 | `openCyto` | 2.22.0 |
 | `OpenEXR` | 2.5.5, 3.1.1, 3.1.5, 3.1.7, 3.2.0, 3.2.4, 3.3.4 |
-| `OpenFOAM` | 10, 11, 12, 13, 2512, 7-20200508, 9, v2112, v2206, v2306, v2406, v2506, v2512 |
+| `OpenFOAM` | 10, 11, 12, 13, 7-20200508, 9, v2112, v2206, v2306, v2406, v2506, v2512 |
 | `OpenGL` | 2025.09 |
 | `OpenJPEG` | 2.4.0, 2.5.0, 2.5.2, 2.5.3 |
 | `OpenMM` | 7.7.0-foss-2022a-CUDA-11.7.0, 8.0.0, 8.0.0-CUDA-12.1.1, 8.0.0-foss-2022a-CUDA-11.7.0 |
@@ -2243,7 +2243,7 @@
 | `oyaml` | 1.0 |
 
 ## P
-
+*[334 modules]*
 | Modulename | Versions |
 | :--- | :--- |
 | `p7zip` | 17.04 |
@@ -2582,7 +2582,7 @@
 | `PyZMQ` | 24.0.1, 25.1.1, 25.1.2, 26.2.0 |
 
 ## Q
-
+*[31 modules]*
 | Modulename | Versions |
 | :--- | :--- |
 | `qap` | 0.1-2 |
@@ -2618,7 +2618,7 @@
 | `Qwt` | 6.2.0 |
 
 ## R
-
+*[252 modules]*
 | Modulename | Versions |
 | :--- | :--- |
 | `R` | 4.2.1, 4.3.2, 4.4.1, 4.5.1, 4.5.2 |
@@ -2875,7 +2875,7 @@
 | `RWekajars` | 3.9.3-2 |
 
 ## S
-
+*[355 modules]*
 | Modulename | Versions |
 | :--- | :--- |
 | `s2` | 1.1.9 |
@@ -3235,7 +3235,7 @@
 | `Szip` | 2.1.1 |
 
 ## T
-
+*[203 modules]*
 | Modulename | Versions |
 | :--- | :--- |
 | `tabixpp` | 1.1.0, 1.1.2 |
@@ -3443,7 +3443,7 @@
 | `tzdb` | 0.5.0 |
 
 ## U
-
+*[44 modules]*
 | Modulename | Versions |
 | :--- | :--- |
 | `ubiquerg` | 0.7.0, 0.8.0 |
@@ -3492,7 +3492,7 @@
 | `uwot` | 0.2.3, 0.2.4 |
 
 ## V
-
+*[40 modules]*
 | Modulename | Versions |
 | :--- | :--- |
 | `V8` | 8.0.1 |
@@ -3537,7 +3537,7 @@
 | `VTK` | 9.0.1, 9.1.0, 9.2.2, 9.2.6, 9.3.0 |
 
 ## W
-
+*[51 modules]*
 | Modulename | Versions |
 | :--- | :--- |
 | `waiter` | 0.2.5.1 |
@@ -3593,7 +3593,7 @@
 | `wxWidgets` | 3.2.1 |
 
 ## X
-
+*[56 modules]*
 | Modulename | Versions |
 | :--- | :--- |
 | `X11` | 20201008, 20210518, 20210802, 20220504, 20221110, 20230603, 20231019, 20240607, 20250521, 20250608 |
@@ -3654,7 +3654,7 @@
 | `XZ` | 5.2.5, 5.2.7, 5.4.2, 5.4.4, 5.4.5, 5.6.3, 5.8.1 |
 
 ## Y
-
+*[11 modules]*
 | Modulename | Versions |
 | :--- | :--- |
 | `yacman` | 0.9.3 |
@@ -3670,7 +3670,7 @@
 | `yulab.utils` | 0.2.1 |
 
 ## Z
-
+*[22 modules]*
 | Modulename | Versions |
 | :--- | :--- |
 | `Z3` | 4.10.2, 4.12.2, 4.13.0, 4.13.4, 4.15.1, 4.8.10, 4.8.11, 4.8.12 |
@@ -3697,4 +3697,4 @@
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-08-20 11:23:01
+**Last updated:** 2026-08-21 12:23
