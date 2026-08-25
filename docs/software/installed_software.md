@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3566, with 1 to 20 versions each *(2026-08-21 15:33)*
+Total number of applications: 3566, with 1 to 20 versions each *(2026-08-25 23:23)*
 ## A
 
 **[167 modules]**
@@ -1581,7 +1581,7 @@ Total number of applications: 3566, with 1 to 20 versions each *(2026-08-21 15:3
 | `jstable` | 1.3.19 |
 | `Judy` | 1.0.5 |
 | `juicyjuice` | 0.1.0 |
-| `Julia` | 1.10.4-linux-x86_64, 1.8.5-linux-x86_64, 1.9.0-linux-x86_64, 1.9.2-linux-x86_64, 1.9.3-linux-x86_64 |
+| `Julia` | 1.10.4-linux-x86_64, 1.12.2, 1.8.5-linux-x86_64, 1.9.0-linux-x86_64, 1.9.2-linux-x86_64, 1.9.3-linux-x86_64 |
 | `JUM` | 3.0.0 |
 | `jupyter` | 1.1.1 |
 | `Jupyter-bundle` | 20230823, 20240522 |
@@ -2624,7 +2624,7 @@ Total number of applications: 3566, with 1 to 20 versions each *(2026-08-21 15:3
 | `QDNAseq` | 1.46.0 |
 | `QFeatures` | 1.20.0 |
 | `qgam` | 2.0.0 |
-| `QGIS` | 3.30.3, 4.0.1 |
+| `QGIS` | 3.30.3, 4.0.1, 4.2.1 |
 | `qgraph` | 1.9.8 |
 | `Qhull` | 2020.2 |
 | `qlcMatrix` | 0.9.9 |
@@ -3749,4 +3749,4 @@ Total number of applications: 3566, with 1 to 20 versions each *(2026-08-21 15:3
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-08-21 15:33
+**Last updated:** 2026-08-25 23:23
