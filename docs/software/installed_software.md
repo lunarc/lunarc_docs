@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3566, with 1 to 20 versions each *(2026-08-25 23:23)*
+Total number of applications: 3568, with 1 to 20 versions each *(2026-08-28 1:23)*
 ## A
 
 **[167 modules]**
@@ -356,7 +356,7 @@ Total number of applications: 3566, with 1 to 20 versions each *(2026-08-25 23:2
 
 ## C
 
-**[238 modules]**
+**[239 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
@@ -577,18 +577,19 @@ Total number of applications: 3566, with 1 to 20 versions each *(2026-08-25 23:2
 | `CubeLib` | 4.6, 4.8, 4.8.1, 4.8.2, 4.9 |
 | `cubelyr` | 1.0.2 |
 | `CubeWriter` | 4.6, 4.8, 4.8.1, 4.8.2, 4.9 |
-| `CUDA` | 11.1.1, 11.4.1, 11.7.0, 12.0.0, 12.1.1, 12.2.0, 12.6.0, 12.8.0 |
+| `CUDA` | 11.1.1, 11.4.1, 11.7.0, 12.0.0, 12.1.1, 12.2.0, 12.6.0, 12.8.0, 12.9.1 |
 | `CUDA-Python` | 12.1.0-CUDA-12.1.1 |
 | `cuda-python` | 12.1.0 |
 | `CUDAcore` | 11.1.1 |
 | `cuDNN` | 8.0.4.30-CUDA-11.1.1, 8.4.1.50-CUDA-11.7.0, 8.9.2.26-CUDA-12.1.1, 8.9.2.26-CUDA-12.2.0, 9.5.0.50-CUDA-12.6.0 |
 | `CUnit` | 2.1-3 |
-| `CuPy` | 13.0.0-foss-2023a-CUDA-12.1.1 |
+| `CuPy` | 13.0.0-foss-2023a-CUDA-12.1.1, 13.6.0-CUDA-12.9.1 |
+| `cupy` | 13.6.0 |
 | `cURL` | 7.69.1, 7.72.0, 7.76.0, 7.78.0, 7.83.0, 7.86.0, 8.0.1, 8.11.1, 8.14.1, 8.3.0, 8.7.1 |
 | `curl` | 7.0.0 |
-| `cuSPARSELt` | 0.6.0.6-CUDA-12.1.1 |
+| `cuSPARSELt` | 0.6.0.6-CUDA-12.1.1, 0.8.0.4-CUDA-12.9.1 |
 | `cutadapt` | 4.9, 5.0, 5.0, 5.1, 5.1 |
-| `cuTENSOR` | 2.0.1.2-CUDA-12.1.1 |
+| `cuTENSOR` | 2.0.1.2-CUDA-12.1.1, 2.3.0.6-CUDA-12.9.1 |
 | `cvAUC` | 1.1.4 |
 | `CVST` | 0.2-3 |
 | `CVXR` | 1.0-15 |
@@ -882,7 +883,7 @@ Total number of applications: 3566, with 1 to 20 versions each *(2026-08-25 23:2
 
 ## F
 
-**[162 modules]**
+**[163 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
@@ -907,6 +908,7 @@ Total number of applications: 3566, with 1 to 20 versions each *(2026-08-25 23:2
 | `fastmatrix` | 0.6-6 |
 | `fastp` | 0.23.4 |
 | `FastQC` | 0.11.9-Java-11 |
+| `fastrlock` | 0.8.3 |
 | `fastseg` | 1.56.0 |
 | `FastTree` | 2.1.11 |
 | `fBasics` | 4041.97 |
@@ -1089,7 +1091,7 @@ Total number of applications: 3566, with 1 to 20 versions each *(2026-08-25 23:2
 | `gdc-client` | 1.6.0 |
 | `gdistance` | 1.6.5 |
 | `Gdk-Pixbuf` | 2.40.0, 2.42.10, 2.42.11, 2.42.12, 2.42.6, 2.42.8 |
-| `GDRCopy` | 2.1-CUDA-11.1.1, 2.3, 2.3.1, 2.4.1, 2.4.4 |
+| `GDRCopy` | 2.1-CUDA-11.1.1, 2.3, 2.3.1, 2.4.1, 2.4.4, 2.5 |
 | `gdsfmt` | 1.46.0 |
 | `gdtools` | 0.4.4 |
 | `Geant4` | 10.7.1, 11.0.2, 11.1.2, 11.2.2 |
@@ -2120,7 +2122,7 @@ Total number of applications: 3566, with 1 to 20 versions each *(2026-08-25 23:2
 | `nbformat` | 5.10.4, 5.9.2 |
 | `ncbi-vdb` | 3.0.2 |
 | `ncbit` | 2013.03.29.1 |
-| `NCCL` | 2.12.12-CUDA-11.7.0, 2.18.3-CUDA-12.1.1, 2.22.3-CUDA-12.6.0, 2.26.6-CUDA-12.8.0, 2.8.3-CUDA-11.1.1 |
+| `NCCL` | 2.12.12-CUDA-11.7.0, 2.18.3-CUDA-12.1.1, 2.22.3-CUDA-12.6.0, 2.26.6-CUDA-12.8.0, 2.27.7-CUDA-12.9.1, 2.8.3-CUDA-11.1.1 |
 | `ncdf4` | 1.24 |
 | `ncdfFlow` | 2.56.0 |
 | `NCmisc` | 1.2.0 |
@@ -3495,7 +3497,7 @@ Total number of applications: 3566, with 1 to 20 versions each *(2026-08-25 23:2
 | `ucminf` | 1.2.2 |
 | `UCSC.utils` | 1.6.0 |
 | `UCX` | 1.10.0, 1.11.2, 1.12.1, 1.13.1, 1.14.1, 1.15.0, 1.16.0, 1.18.0, 1.19.0, 1.9.0, 1.9.0-CUDA-11.1.1 |
-| `UCX-CUDA` | 1.11.2-CUDA-11.4.1, 1.12.1-CUDA-11.7.0, 1.14.1-CUDA-12.1.1, 1.16.0-CUDA-12.6.0, 1.18.0-CUDA-12.8.0 |
+| `UCX-CUDA` | 1.11.2-CUDA-11.4.1, 1.12.1-CUDA-11.7.0, 1.14.1-CUDA-12.1.1, 1.16.0-CUDA-12.6.0, 1.18.0-CUDA-12.8.0, 1.19.0-CUDA-12.9.1 |
 | `udpipe` | 0.8.12 |
 | `UDUNITS` | 2.2.28 |
 | `ujson` | 5.10.0 |
@@ -3749,4 +3751,4 @@ Total number of applications: 3566, with 1 to 20 versions each *(2026-08-25 23:2
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-08-25 23:23
+**Last updated:** 2026-08-28 1:23
