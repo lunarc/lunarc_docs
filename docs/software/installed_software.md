@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3568, with 1 to 20 versions each *(2026-08-28 1:23)*
+Total number of applications: 3568, with 1 to 20 versions each *(2026-09-02 6:23)*
 ## A
 
 **[167 modules]**
@@ -835,7 +835,7 @@ Total number of applications: 3568, with 1 to 20 versions each *(2026-08-28 1:23
 | `EnsDb.Hsapiens.v86` | 2.99.0 |
 | `ensembldb` | 2.34.0 |
 | `entropy` | 1.3.2 |
-| `ENVI` | 6.0, 6.1, 6.2 |
+| `ENVI` | 6.0, 6.1, 6.2, 6.3 |
 | `EnvStats` | 3.1.0 |
 | `EPICS` | base-7.0.7 |
 | `epitools` | 0.5-10.1 |
@@ -3751,4 +3751,4 @@ Total number of applications: 3568, with 1 to 20 versions each *(2026-08-28 1:23
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-08-28 1:23
+**Last updated:** 2026-09-02 6:23
