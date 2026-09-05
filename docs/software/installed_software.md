@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3568, with 1 to 20 versions each *(2026-09-02 6:23)*
+Total number of applications: 3569, with 1 to 20 versions each *(2026-09-05 9:23)*
 ## A
 
 **[167 modules]**
@@ -1536,12 +1536,13 @@ Total number of applications: 3568, with 1 to 20 versions each *(2026-09-02 6:23
 
 ## J
 
-**[77 modules]**
+**[78 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
 | `JADE` | 2.0-4 |
 | `JAGS` | 4.3.0 |
+| `jamovi` | 2.3.13 |
 | `janeaustenr` | 1.0.0 |
 | `jaraco.classes` | 3.3.0, 3.4.0 |
 | `jaraco.context` | 6.0.1 |
@@ -3751,4 +3752,4 @@ Total number of applications: 3568, with 1 to 20 versions each *(2026-09-02 6:23
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-09-02 6:23
+**Last updated:** 2026-09-05 9:23
