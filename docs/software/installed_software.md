@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3569, with 1 to 20 versions each *(2026-09-05 9:23)*
+Total number of applications: 3569, with 1 to 20 versions each *(2026-09-15 19:23)*
 ## A
 
 **[167 modules]**
@@ -1013,7 +1013,7 @@ Total number of applications: 3569, with 1 to 20 versions each *(2026-09-05 9:23
 | `fontquiver` | 0.2.1 |
 | `fonttools` | 4.53.1, 4.58.4, 4.58.5 |
 | `forcats` | 1.0.1 |
-| `FORCE` | 3.10.00-virt, 3.10.04-virt, 3.7.10-virt, 3.7.11-virt, 3.7.12-virt, 3.8.00-virt, 3.8.01-virt |
+| `FORCE` | 3.10.00-virt, 3.10.04-virt, 3.11.00-virt, 3.7.10-virt, 3.7.11-virt, 3.7.12-virt, 3.8.00-virt, 3.8.01-virt |
 | `foreach` | 1.5.2 |
 | `forecast` | 8.24.0 |
 | `foreign` | 0.8-90 |
@@ -3752,4 +3752,4 @@ Total number of applications: 3569, with 1 to 20 versions each *(2026-09-05 9:23
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-09-05 9:23
+**Last updated:** 2026-09-15 19:23
