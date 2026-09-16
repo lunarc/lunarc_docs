@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3569, with 1 to 20 versions each *(2026-09-15 19:23)*
+Total number of applications: 3574, with 1 to 20 versions each *(2026-09-16 20:23)*
 ## A
 
 **[167 modules]**
@@ -176,7 +176,7 @@ Total number of applications: 3569, with 1 to 20 versions each *(2026-09-15 19:2
 
 ## B
 
-**[173 modules]**
+**[174 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
@@ -227,9 +227,10 @@ Total number of applications: 3569, with 1 to 20 versions each *(2026-09-15 19:2
 | `BDgraph` | 2.74 |
 | `bdsmatrix` | 1.3-7 |
 | `beachmat` | 2.26.0 |
-| `beagle-lib` | 3.1.2, 4.0.0, 4.0.1, 4.0.1-CUDA-12.1.1 |
+| `beagle-lib` | 3.1.2, 4.0.0, 4.0.1, 4.0.1-CUDA-12.1.1, 4.0.1-CUDA-12.8.0 |
 | `beanplot` | 1.3.1 |
 | `Beast` | 1.10.4, 1.10.4-CUDA-12.1.1, 2.6.7, 2.7.3, 2.7.7, 2.7.7-CUDA-12.1.1 |
+| `BEAST-X` | 10.6.0-beta6-CUDA-12.8.0 |
 | `BeautifulSoup` | 4.10.0, 4.11.1, 4.12.2, 4.12.3, 4.12.3 |
 | `BEDOPS` | 2.4.41 |
 | `BEDTools` | 2.30.0, 2.31.0, 2.31.1 |
@@ -1654,7 +1655,7 @@ Total number of applications: 3569, with 1 to 20 versions each *(2026-09-15 19:2
 
 ## L
 
-**[179 modules]**
+**[181 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
@@ -1697,6 +1698,8 @@ Total number of applications: 3569, with 1 to 20 versions each *(2026-09-15 19:2
 | `leidenbase` | 0.1.35 |
 | `Leptonica` | 1.83.0 |
 | `LERC` | 4.0.0 |
+| `Levenshtein` | 0.27.3 |
+| `levenshtein` | 0.27.3 |
 | `lhs` | 1.2.0 |
 | `liac-arff` | 2.5.0 |
 | `libaec` | 1.0.6, 1.1.3, 1.1.4 |
@@ -2095,7 +2098,7 @@ Total number of applications: 3569, with 1 to 20 versions each *(2026-09-15 19:2
 
 ## N
 
-**[98 modules]**
+**[99 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
@@ -2113,6 +2116,7 @@ Total number of applications: 3569, with 1 to 20 versions each *(2026-09-15 19:2
 | `nanonext` | 1.7.2 |
 | `NanoPlot` | 1.43.0 |
 | `nanopolish` | 0.14.0 |
+| `NanoRepeat` | 1.8.3 |
 | `NASM` | 2.15.05, 2.16.01, 2.16.03 |
 | `natserv` | 1.0.0 |
 | `natsort` | 8.4.0 |
@@ -2277,7 +2281,7 @@ Total number of applications: 3569, with 1 to 20 versions each *(2026-09-15 19:2
 
 ## P
 
-**[334 modules]**
+**[335 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
@@ -2563,6 +2567,7 @@ Total number of applications: 3569, with 1 to 20 versions each *(2026-09-15 19:2
 | `pylev` | 1.4.0 |
 | `Pylint` | 3.2.5 |
 | `pyls` | pyls |
+| `pyminimap2` | 2.30.3 |
 | `PyMOL` | 2.5.0 |
 | `PyNaCl` | 1.5.0 |
 | `pynndescent` | 0.5.11 |
@@ -3752,4 +3757,4 @@ Total number of applications: 3569, with 1 to 20 versions each *(2026-09-15 19:2
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-09-15 19:23
+**Last updated:** 2026-09-16 20:23
