@@ -3,17 +3,17 @@
 !!! warning "Complete all five steps"
     All steps must be performed correctly or your login will fail. **Do not skip Step 5** — it is the most commonly missed step.
 
-## Step 1: Download and install PhenixID OneTouch
+## Step 1: Download and install Clavister OneID
 
-Download and install the **PhenixID OneTouch** app on your smartphone. The app is free of charge.
+Download and install the **Clavister OneID** app on your smartphone. The app is free of charge.
 
 ### Apple iOS
 
-[![Download on the App Store](../images/ios-download.png "Download for iOS"){: style="width:200px"}](https://apps.apple.com/se/app/phenixid-onetouch/id1118849636 "OneTouch on the App Store")
+[![Download on the App Store](../images/ios-download.png "Download for iOS"){: style="width:200px"}](https://apps.apple.com/se/app/clavister-oneid/id6747501162 "OneID on the App Store")
 
 ### Android
 
-[![Get it on Google Play](../images/android-download.png "Download for Android"){: style="width:200px"}](https://play.google.com/store/apps/details?id=com.phenixidentity.onetouch "OneTouch on Google Play")
+[![Get it on Google Play](../images/android-download.png "Download for Android"){: style="width:200px"}](https://play.google.com/store/apps/details?id=com.clavister.oneid "OneID on Google Play")
 
 ## Step 2: Accessing the self-service portal
 
@@ -41,7 +41,7 @@ Click the button to begin token activation. Enter a descriptive name for your to
 
 ![Token naming dialog in the self-service portal](../images/add_token2.png)
 
-Click **Next**. A QR code will be displayed — you will scan this with the OneTouch app in the next step.
+Click **Next**. A QR code will be displayed — you will scan this with the OneID app in the next step.
 
 !!! warning "Keep your QR code private"
     Do not let anyone else scan your QR code. It grants full access to your two-factor authentication.
@@ -50,40 +50,39 @@ Click **Next**. A QR code will be displayed — you will scan this with the OneT
 
 ## Step 4: Install the token on your smartphone
 
-Make sure the OneTouch app has camera access. Open the app and tap **Install key**:
+Make sure the OneID app has camera access. Open the app and tap **Install profile**:
 
-![OneTouch app home screen showing the Install key button](../images/ot_ss1.jpg)
+![OneID app home screen showing the Install key button](../images/OneID_ss1.png)
 
-Tap **Scan barcode**:
+Tap **Scan QR Code**:
 
-![OneTouch app showing the Scan barcode option](../images/ot_ss2.jpg)
+![OneID app showing the Scan QR Code option](../images/OneID_ss2.png)
 
 Point your camera at the QR code shown on your computer screen. The app will detect the code and install the key automatically.
 
 The app will then ask you to set a PIN to protect your key:
 
-![OneTouch app PIN code entry screen](../images/ot_ss3.jpg)
+![OneID app PIN code entry screen](../images/OneID_ss3.png)
 
 When the key is installed, you will see a confirmation screen:
 
-![OneTouch app showing successful key installation](../images/ot_ss4.jpg)
+![OneID app showing successful key installation](../images/OneID_ss4.png)
 
-Tap **Continue**, then **One-time password** to display your current OTP. You will be asked to enter the PIN you just set:
+Tap **One-time password** to display your current OTP. You will be asked to enter the PIN you just set (alternative authenticate with Face ID or fingerprint).  
 
-![OneTouch app displaying a one-time password](../images/ot_ss5.jpg)
 
 ## Step 5: Activate your token
 
-!!! danger "Do not skip this step"
+__!!! Danger "Do not skip this step"__  
     This is the step most users miss. Without it your token will not work.
 
-Go back to the self-service portal and click **Next**. You will be prompted for an OTP to finalise the activation — use the code from the **OneTouch app** (it will **not** arrive by SMS at this point).
+Go back to the self-service portal and click **Next**. You will be prompted for an OTP to finalise the activation — use the code from the **OneID app** (it will **not** arrive by SMS at this point).
 
 Your token will expire after two years, at which point you will need to register a new one.
 
 ## Setup complete
 
-You can now log in to LUNARC systems. After entering your password you will be prompted for the OTP from the OneTouch app.
+You can now log in to LUNARC systems. After entering your password you will be prompted for the OTP from the OneID app.
 
 ---
 
@@ -94,7 +93,7 @@ You can check whether your token is still valid — and when it expires — thro
 To log in to the portal for this check, use:
 
 - Your **LUNARC password** (not your SUPR password)
-- The OTP sent by **SMS** to your registered phone number (not from the OneTouch app)
+- The OTP sent by **SMS** to your registered phone number (not from the OneID app)
 
 Follow [Step 2](#step-2-accessing-the-self-service-portal) and [Step 3](#step-3-token-registration) above to reach the portal, then go to the **TOKENS** tab and click **More** to see the expiration dates for your token:
 
