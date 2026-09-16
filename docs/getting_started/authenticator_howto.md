@@ -9,11 +9,12 @@ Download and install the **Clavister OneID** app on your smartphone. The app is 
 
 ### Apple iOS
 
-[![Download on the App Store](../images/ios-download.png "Download for iOS"){: style="width:200px"}](https://apps.apple.com/se/app/clavister-oneid/id6747501162 "OneID on the App Store")
+[![Download on the App Store](../images/ios-download.png "Download for iOS"){: style="width:200px"}](https://apps.apple.com/se/app/clavister-oneid/id6747501162 "Clavister OneID on the App Store")
 
 ### Android
 
-[![Get it on Google Play](../images/android-download.png "Download for Android"){: style="width:200px"}](https://play.google.com/store/apps/details?id=com.clavister.oneid "OneID on Google Play")
+[![Get it on Google Play](../images/android-download.png "Download for Android"){: style="width:200px"}](https://play.google.com/store/apps/details?id=com.clavister.oneid "Clavister OneID on Google Play")  
+
 
 ## Step 2: Accessing the self-service portal
 
