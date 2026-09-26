@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3574, with 1 to 20 versions each *(2026-09-16 20:23)*
+Total number of applications: 3574, with 1 to 20 versions each *(2026-09-26 5:23)*
 ## A
 
 **[167 modules]**
@@ -230,7 +230,7 @@ Total number of applications: 3574, with 1 to 20 versions each *(2026-09-16 20:2
 | `beagle-lib` | 3.1.2, 4.0.0, 4.0.1, 4.0.1-CUDA-12.1.1, 4.0.1-CUDA-12.8.0 |
 | `beanplot` | 1.3.1 |
 | `Beast` | 1.10.4, 1.10.4-CUDA-12.1.1, 2.6.7, 2.7.3, 2.7.7, 2.7.7-CUDA-12.1.1 |
-| `BEAST-X` | 10.6.0-beta6-CUDA-12.8.0 |
+| `BEAST-X` | 10.5.0, 10.5.0-CUDA-12.8.0, 10.6.0-beta6-CUDA-12.8.0 |
 | `BeautifulSoup` | 4.10.0, 4.11.1, 4.12.2, 4.12.3, 4.12.3 |
 | `BEDOPS` | 2.4.41 |
 | `BEDTools` | 2.30.0, 2.31.0, 2.31.1 |
@@ -3757,4 +3757,4 @@ Total number of applications: 3574, with 1 to 20 versions each *(2026-09-16 20:2
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-09-16 20:23
+**Last updated:** 2026-09-26 5:23
