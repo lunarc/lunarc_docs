@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3574, with 1 to 20 versions each *(2026-09-26 5:23)*
+Total number of applications: 3575, with 1 to 20 versions each *(2026-09-30 9:23)*
 ## A
 
 **[167 modules]**
@@ -2661,7 +2661,7 @@ Total number of applications: 3574, with 1 to 20 versions each *(2026-09-26 5:23
 
 ## R
 
-**[252 modules]**
+**[253 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
@@ -2745,6 +2745,7 @@ Total number of applications: 3574, with 1 to 20 versions each *(2026-09-26 5:23
 | `Readonly` | 2.05 |
 | `readr` | 2.1.5 |
 | `readxl` | 1.4.5 |
+| `realityscan` | 2.2.0 |
 | `rebird` | 1.3.0 |
 | `recipes` | 1.3.1 |
 | `Redis` | 6.2.6, 7.2.3, 7.4.1 |
@@ -3757,4 +3758,4 @@ Total number of applications: 3574, with 1 to 20 versions each *(2026-09-26 5:23
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-09-26 5:23
+**Last updated:** 2026-09-30 9:23
