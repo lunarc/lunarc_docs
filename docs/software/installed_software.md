@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3575, with 1 to 20 versions each *(2026-10-01 10:23)*
+Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:23)*
 ## A
 
 **[167 modules]**
@@ -2204,7 +2204,7 @@ Total number of applications: 3575, with 1 to 20 versions each *(2026-10-01 10:2
 
 ## O
 
-**[70 modules]**
+**[71 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
@@ -2230,6 +2230,7 @@ Total number of applications: 3575, with 1 to 20 versions each *(2026-10-01 10:2
 | `OpenBLAS` | 0.3.12, 0.3.15, 0.3.18, 0.3.20, 0.3.20-int8, 0.3.21, 0.3.23, 0.3.24, 0.3.27, 0.3.29, 0.3.30 |
 | `OpenCV` | 4.5.1-contrib, 4.6.0-CUDA-11.7.0-contrib, 4.6.0-contrib |
 | `openCyto` | 2.22.0 |
+| `OpenDroneMap` | 3.6.2 |
 | `OpenEXR` | 2.5.5, 3.1.1, 3.1.5, 3.1.7, 3.2.0, 3.2.4, 3.3.4 |
 | `OpenFOAM` | 10, 11, 12, 13, 7-20200508, 9, v2112, v2206, v2306, v2406, v2506, v2512 |
 | `OpenGL` | 2025.09 |
@@ -3758,4 +3759,4 @@ Total number of applications: 3575, with 1 to 20 versions each *(2026-10-01 10:2
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-10-01 10:23
+**Last updated:** 2026-10-02 11:23
