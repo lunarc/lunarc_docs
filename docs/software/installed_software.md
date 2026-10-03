@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:23)*
+Total number of applications: 3583, with 1 to 20 versions each *(2026-10-03 12:23)*
 ## A
 
 **[167 modules]**
@@ -7,18 +7,18 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | Modulename | Versions |
 | :--- | :--- |
 | `abaqus` | R2020x, V6R2017x, V6R2019x, V6R2023a, V6R2023x |
-| `abc` | 2.2.2 |
+| `abc` | 2.2.1, 2.2.2 |
 | `abc.data` | 1.1 |
-| `abe` | 5.1.2 |
+| `abe` | 3.0.1, 5.1.2 |
 | `abind` | 1.4-8 |
 | `Abseil` | 20230125.2, 20230125.3, 20240116.1, 20240722.0, 20250512.1 |
 | `absl-py` | 1.4.0, 2.1.0, 2.1.0 |
-| `acepack` | 1.6.3 |
+| `acepack` | 1.4.2, 1.6.3 |
 | `ACTC` | 1.1 |
-| `adabag` | 5.1 |
-| `ade4` | 1.7-23 |
+| `adabag` | 5.0, 5.1 |
+| `ade4` | 1.7-22, 1.7-23 |
 | `ADGofTest` | 0.3 |
-| `admisc` | 0.38, 0.39 |
+| `admisc` | 0.36, 0.38, 0.39 |
 | `AdmixTools` | 7.0.2 |
 | `AdmixTools2` | 2.0.1 |
 | `affine` | 2.4.0 |
@@ -30,17 +30,17 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `aggregation` | 1.0.1 |
 | `AgiMicroRna` | 2.60.0 |
 | `agricolae` | 1.3-7 |
-| `AICcmodavg` | 2.3-4 |
+| `AICcmodavg` | 2.3-3, 2.3-4 |
 | `aiobotocore` | 2.15.2 |
 | `aiohappyeyeballs` | 2.4.3 |
 | `aiohttp` | 3.10.10, 3.10.10, 3.8.5, 3.8.5, 3.9.5 |
 | `aioitertools` | 0.12.0 |
 | `aiosignal` | 1.3.1 |
-| `akima` | 0.6-3.6 |
+| `akima` | 0.6-3.4, 0.6-3.6 |
 | `alabama` | 2023.1.0 |
 | `alabaster` | 1.0.0 |
 | `ALDEx2` | 1.42.0 |
-| `AlgDesign` | 1.2.1.2 |
+| `AlgDesign` | 1.2.1.1, 1.2.1.2 |
 | `Algorithm::Dependency` | 1.112 |
 | `Algorithm::Diff` | 1.201 |
 | `aliased` | 0.34 |
@@ -59,7 +59,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Amelia` | 1.8.3 |
 | `Anaconda3` | 2022.05, 2023.03-1, 2023.07-2, 2023.09-0, 2024.02-1, 2024.06-1 |
 | `ANCOMBC` | 2.12.0 |
-| `animation` | 2.8 |
+| `animation` | 2.7, 2.8 |
 | `annaffy` | 1.82.0 |
 | `anndata` | 0.10.5.post1, 0.10.5.post1 |
 | `annotate` | 1.88.0 |
@@ -80,10 +80,10 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `AOCC` | 4.0.0 |
 | `AOCL-BLAS` | 5.0, 5.1 |
 | `aod` | 1.3.3 |
-| `apcluster` | 1.4.14 |
-| `ape` | 5.8-1 |
+| `apcluster` | 1.4.13, 1.4.14 |
+| `ape` | 5.8, 5.8-1 |
 | `apipkg` | 3.0.2 |
-| `aplot` | 0.2.9 |
+| `aplot` | 0.2.3, 0.2.9 |
 | `App::Cmd` | 0.336, 0.337 |
 | `App::cpanminus` | 1.7048 |
 | `AppConfig` | 1.71 |
@@ -95,7 +95,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `archspec` | 0.1.2, 0.1.3, 0.2.2 |
 | `argon2-cffi-bindings` | 21.2.0 |
 | `argon2_cffi` | 23.1.0 |
-| `argparse` | 2.3.1 |
+| `argparse` | 2.2.4, 2.3.1 |
 | `argparse-dataclass` | 2.0.0 |
 | `aricode` | 1.0.3 |
 | `arm` | 1.14-4 |
@@ -112,7 +112,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `arrayhelpers` | 1.1-0 |
 | `Arriba` | 2.4.0 |
 | `Arrow` | 11.0.0, 14.0.1, 17.0.0, 22.0.0, 6.0.0, 6.0.1, 8.0.0 |
-| `arrow-R` | 14.0.1-R-4.3.2, 14.0.1-R-4.4.1, 22.0.0-R-4.5.2, 8.0.0-R-4.2.1 |
+| `arrow-R` | 14.0.1-R-4.3.2, 14.0.1-R-4.4.1, 17.0.0.1-R-4.4.2, 22.0.0-R-4.5.2, 8.0.0-R-4.2.1 |
 | `ASCAT` | 3.2.0-R-4.5.2 |
 | `ASE` | 3.22.1, 3.23.0, 3.25.0 |
 | `ase` | 3.23.0, 3.25.0 |
@@ -202,7 +202,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `basilisk` | 1.22.0 |
 | `basilisk.utils` | 1.22.0 |
 | `batchelor` | 1.26.0 |
-| `BatchJobs` | 1.10 |
+| `BatchJobs` | 1.10, 1.9 |
 | `batchmeans` | 1.0-4 |
 | `batchspawner` | 1.2.0-2a9eda060a875a2b65ca9521368fe052a09c3266 |
 | `Battenberg` | 3.0.0-R-4.5.2 |
@@ -210,8 +210,8 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `BayesLogit` | 2.1 |
 | `bayesm` | 3.1-6 |
 | `BayesPen` | 1.0 |
-| `bayesplot` | 1.14.0 |
-| `bayestestR` | 0.17.0 |
+| `bayesplot` | 1.11.1, 1.14.0 |
+| `bayestestR` | 0.15.0, 0.17.0 |
 | `baySeq` | 2.44.0 |
 | `Bazel` | 3.7.2, 5.1.1, 6.1.0, 6.3.1, 6.5.0-Java-11 |
 | `BB` | 2019.10-1 |
@@ -224,7 +224,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `bcl-convert` | 4.0.3-2el7.x86_64 |
 | `bcl2fastq2` | 2.20.0 |
 | `bcrypt` | 4.0.1, 4.1.3 |
-| `BDgraph` | 2.74 |
+| `BDgraph` | 2.73, 2.74 |
 | `bdsmatrix` | 1.3-7 |
 | `beachmat` | 2.26.0 |
 | `beagle-lib` | 3.1.2, 4.0.0, 4.0.1, 4.0.1-CUDA-12.1.1, 4.0.1-CUDA-12.8.0 |
@@ -237,15 +237,15 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `beepr` | 2.0 |
 | `beeswarm` | 0.4.0 |
 | `beniget` | 0.4.2.post1 |
-| `berryFunctions` | 1.22.13 |
-| `betareg` | 3.2-4 |
+| `berryFunctions` | 1.22.13, 1.22.5 |
+| `betareg` | 3.2-1, 3.2-4 |
 | `bgen` | v1.2.0 |
 | `BGEN-enkre` | 1.1.7 |
-| `BH` | 1.87.0-1 |
+| `BH` | 1.84.0-0, 1.87.0-1 |
 | `BiasedUrn` | 2.0.12 |
 | `bibtex` | 0.5.1 |
-| `BIEN` | 1.2.7 |
-| `bigD` | 0.3.1 |
+| `BIEN` | 1.2.6, 1.2.7 |
+| `bigD` | 0.3.0, 0.3.1 |
 | `BIGL` | 1.9.3 |
 | `biglm` | 0.9-3 |
 | `bigmemory` | 4.6.4 |
@@ -274,7 +274,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `biom-format` | 2.1.14 |
 | `biomaRt` | 2.66.0 |
 | `biomformat` | 1.38.0 |
-| `biomod2` | 4.2-6-2 |
+| `biomod2` | 4.2-5-2, 4.2-6-2 |
 | `BioPerl` | 1.7.8 |
 | `Biopython` | 1.76-Python-2.7.18, 1.79, 1.81, 1.83, 1.84 |
 | `Biostrings` | 2.78.0 |
@@ -283,8 +283,8 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Bismark` | 0.24.1 |
 | `Bison` | 3.5.3, 3.7.1, 3.7.6, 3.8.2 |
 | `bispdep` | 1.0-2 |
-| `bit` | 4.6.0 |
-| `bit64` | 4.6.0-1 |
+| `bit` | 4.5.0, 4.6.0 |
+| `bit64` | 4.5.2, 4.6.0-1 |
 | `bitarray` | 3.3.1, 3.6.0 |
 | `bitops` | 1.0-9 |
 | `bitstring` | 4.3.1 |
@@ -293,7 +293,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `BLAST+` | 2.13.0, 2.14.0, 2.14.1, 2.16.0 |
 | `blast_databases` | v5 |
 | `BLAT` | 3.7 |
-| `blavaan` | 0.5-9 |
+| `blavaan` | 0.5-6, 0.5-9 |
 | `bleach` | 6.1.0 |
 | `Blender` | 4.0.1-linux-x86_64-CUDA-12.1.1 |
 | `blender` | 3.5.1, 4.0.2, 4.2.0, 4.5.3, 5.1.2 |
@@ -304,18 +304,18 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Blosc` | 1.21.3, 1.21.5 |
 | `Blosc2` | 2.6.1, 2.8.0 |
 | `bluster` | 1.20.0 |
-| `BMA` | 3.18.20 |
-| `bmp` | 0.3.1 |
-| `bnlearn` | 5.1 |
+| `BMA` | 3.18.19, 3.18.20 |
+| `bmp` | 0.3, 0.3.1 |
+| `bnlearn` | 5.0.1, 5.1 |
 | `bokeh` | 2.2.3, 2.4.2, 2.4.3, 3.2.1, 3.2.2, 3.4.1, 3.6.0, 3.6.0 |
 | `bold` | 1.3.0 |
 | `bookdown` | 0.45 |
 | `boolean` | 0.46 |
 | `Boost` | 1.55.0, 1.74.0, 1.76.0, 1.77.0, 1.79.0, 1.81.0, 1.82.0, 1.83.0, 1.85.0, 1.88.0 |
 | `Boost.MPI` | 1.79.0, 1.85.0 |
-| `boot` | 1.3-32 |
+| `boot` | 1.3-31, 1.3-32 |
 | `bootstrap` | 2019.6 |
-| `Boruta` | 9.0.0 |
+| `Boruta` | 8.0.0, 9.0.0 |
 | `boto3` | 1.26.163, 1.26.37, 1.35.36, 1.35.36 |
 | `botocore` | 1.35.36 |
 | `bottleneck` | 1.5.0 |
@@ -323,14 +323,14 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Bowtie2` | 2.4.5, 2.5.1, 2.5.4 |
 | `brainvisa` | v5.1.2-virt |
 | `brew` | 1.0-10 |
-| `brglm` | 0.7.3 |
+| `brglm` | 0.7.2, 0.7.3 |
 | `bridgedist` | 0.1.3 |
 | `bridgesampling` | 1.1-2 |
 | `brio` | 1.1.5 |
-| `brms` | 2.23.0 |
+| `brms` | 2.22.0, 2.23.0 |
 | `Brobdingnag` | 1.2-9 |
-| `broom` | 1.0.10 |
-| `broom.helpers` | 1.22.0 |
+| `broom` | 1.0.10, 1.0.7 |
+| `broom.helpers` | 1.17.0, 1.22.0 |
 | `broom.mixed` | 0.2.9.6 |
 | `Brotli` | 1.0.9, 1.1.0 |
 | `Brunsli` | 0.1 |
@@ -339,7 +339,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `BSgenome.Hsapiens.UCSC.hg19` | 1.4.3 |
 | `BSgenome.Hsapiens.UCSC.hg38` | 1.4.5 |
 | `BSgenome.Mmusculus.UCSC.mm10` | 1.4.3 |
-| `bslib` | 0.9.0 |
+| `bslib` | 0.8.0, 0.9.0 |
 | `bsseq` | 1.46.0 |
 | `bst` | 0.3-24 |
 | `build` | 1.0.3, 1.0.3, 1.2.2.post1, 1.3.0, 1.3.0 |
@@ -369,7 +369,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `cachy` | 0.3.0 |
 | `CAGEfightR` | 1.30.0 |
 | `CAGEr` | 2.16.0 |
-| `Cairo` | 1.6-5, 1.7-0 |
+| `Cairo` | 1.6-2, 1.6-5, 1.7-0 |
 | `cairo` | 1.16.0, 1.17.4, 1.17.8, 1.18.0, 1.18.4 |
 | `calibrate` | 1.7.7 |
 | `callr` | 3.7.6 |
@@ -378,15 +378,15 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Capture::Tiny` | 0.48, 0.50 |
 | `car` | 3.1-3 |
 | `carData` | 3.0-5 |
-| `cards` | 0.7.0 |
+| `cards` | 0.3.0, 0.7.0 |
 | `cardx` | 0.3.0 |
-| `caret` | 7.0-1 |
+| `caret` | 6.0-94, 7.0-1 |
 | `Carp::Clan` | 6.08 |
 | `Carp::Heavy` | 1.50 |
 | `CASTEP` | 25.11 |
 | `Catch2` | 2.13.10, 2.13.9 |
 | `Category` | 2.76.0 |
-| `catlearn` | 1.1 |
+| `catlearn` | 1.0, 1.1 |
 | `caTools` | 1.18.3 |
 | `cattrs` | 23.2.3, 24.1.1 |
 | `Cbc` | 2.10.11, 2.10.12, 2.10.5 |
@@ -394,7 +394,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `ccache` | 4.6.3 |
 | `ccdata` | 1.36.0 |
 | `CDO` | 2.1.1, 2.4.1, 2.4.4 |
-| `celestial` | 1.5.8 |
+| `celestial` | 1.4.6, 1.5.8 |
 | `Cellpose` | 2.2.2-CUDA-11.7.0 |
 | `CellRanger` | 6.0.0, 7.1.0, 7.2.0, 9.0.0 |
 | `cellranger` | 1.1.0 |
@@ -420,21 +420,21 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `charset-normalizer` | 3.3.2, 3.4.1, 3.4.2 |
 | `charset_normalizer` | 3.4.1, 3.4.2 |
 | `Check` | 0.15.2 |
-| `checkmate` | 2.3.3 |
+| `checkmate` | 2.3.2, 2.3.3 |
 | `chemometrics` | 1.4.4 |
 | `chex` | 0.1.86 |
 | `ChIPpeakAnno` | 3.44.0 |
 | `ChIPseeker` | 1.45.0 |
-| `chk` | 0.10.0 |
+| `chk` | 0.10.0, 0.9.2 |
 | `chkptstanr` | 0.1.1 |
 | `chromVAR` | 1.32.0 |
-| `chron` | 2.3-62 |
+| `chron` | 2.3-61, 2.3-62 |
 | `cigarillo` | 1.0.0 |
 | `circlize` | 0.4.16 |
-| `circular` | 0.5-2 |
+| `circular` | 0.5-1, 0.5-2 |
 | `Clang` | 12.0.1, 13.0.1, 16.0.6, 16.0.6-CUDA-12.1.1, 17.0.6, 18.1.8 |
 | `Clang-Python-bindings` | 13.0.1, 16.0.6 |
-| `class` | 7.3-23 |
+| `class` | 7.3-22, 7.3-23 |
 | `Class::Accessor` | 0.51 |
 | `Class::Data::Inheritable` | 0.10 |
 | `Class::DBI` | v3.0.17 |
@@ -448,23 +448,23 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Class::Tiny` | 1.008 |
 | `Class::Trigger` | 0.15 |
 | `Class::XSAccessor` | 1.19 |
-| `classInt` | 0.4-11 |
-| `cld2` | 1.2.6 |
+| `classInt` | 0.4-10, 0.4-11 |
+| `cld2` | 1.2.5, 1.2.6 |
 | `cleo` | 2.1.0 |
 | `CLHEP` | 2.4.4.0, 2.4.5.3, 2.4.6.2, 2.4.7.1 |
-| `cli` | 3.6.5 |
+| `cli` | 3.6.3, 3.6.5 |
 | `click` | 8.1.8, 8.2.1 |
 | `click-plugins` | 1.1.1 |
 | `cligj` | 0.7.2 |
 | `clipr` | 0.8.0 |
 | `clisymbols` | 1.2.0 |
-| `clock` | 0.7.3 |
+| `clock` | 0.7.1, 0.7.3 |
 | `Clone` | 0.47 |
 | `Clone::Choose` | 0.010 |
 | `cloudpickle` | 2.2.1, 3.1.1 |
 | `Clp` | 1.17.10, 1.17.8, 1.17.9 |
 | `clue` | 0.3-66 |
-| `cluster` | 2.1.8.1 |
+| `cluster` | 2.1.6, 2.1.8.1 |
 | `clusterGeneration` | 1.3.8 |
 | `clusterProfiler` | 4.18.1 |
 | `clusterRepro` | 0.9 |
@@ -475,10 +475,10 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `cmprsk` | 2.2-12 |
 | `CMSeq` | 1.0.4 |
 | `CNEr` | 1.46.0 |
-| `cNORM` | 3.5.1 |
+| `cNORM` | 3.4.0, 3.5.1 |
 | `CNVkit` | 0.9.10-R-4.4.1 |
-| `cobalt` | 4.6.1 |
-| `cobs` | 1.3-9-1 |
+| `cobalt` | 4.5.5, 4.6.1 |
+| `cobs` | 1.3-8, 1.3-9-1 |
 | `coda` | 0.19-4.1 |
 | `code-server` | 4.92.2 |
 | `codetools` | 0.2-20 |
@@ -486,24 +486,24 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `coin` | 1.4-3 |
 | `CoinUtils` | 2.11.10, 2.11.12, 2.11.9 |
 | `colabdesign` | 1.1.1, 1.1.3 |
-| `collapse` | 2.1.4 |
+| `collapse` | 2.0.18, 2.1.4 |
 | `COLMAP` | 3.13.0, 3.8 |
 | `coloc` | 5.2.3 |
 | `colorama` | 0.4.6 |
 | `coloredlogs` | 15.0.1 |
 | `colorRamps` | 2.3.4 |
-| `colorspace` | 2.1-2 |
+| `colorspace` | 2.1-1, 2.1-2 |
 | `colourpicker` | 1.3.0 |
 | `cols4all` | 0.10 |
 | `combinat` | 0.0-8 |
 | `ComICS` | 1.0.4 |
 | `comm` | 0.2.2 |
 | `common::sense` | 3.75 |
-| `commonmark` | 0.9.1, 2.0.0 |
+| `commonmark` | 0.9.1, 1.9.2, 2.0.0 |
 | `ComplexHeatmap` | 2.26.0 |
 | `ComplexUpset` | 1.3.3 |
-| `compositions` | 2.0-9 |
-| `CompQuadForm` | 1.4.4 |
+| `compositions` | 2.0-8, 2.0-9 |
+| `CompQuadForm` | 1.4.3, 1.4.4 |
 | `Compress-Raw-Zlib` | 2.202 |
 | `Compress::Raw::Bzip2` | 2.213 |
 | `Compress::Raw::Zlib` | 2.213 |
@@ -527,7 +527,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `connection-pool` | 0.0.3 |
 | `conquer` | 1.3.3 |
 | `ConsensusClusterPlus` | 1.74.0 |
-| `ConsRank` | 2.1.5 |
+| `ConsRank` | 2.1.4, 2.1.5 |
 | `Const::Exporter` | v1.2.3, v1.3.0 |
 | `Const::Fast` | 0.014 |
 | `contextlib2` | 21.6.0 |
@@ -539,14 +539,14 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `cooler` | 0.10.2, 0.9.1 |
 | `CoordgenLibs` | 3.0.1, 3.0.2 |
 | `copCAR` | 2.0-4 |
-| `copula` | 1.1-6 |
+| `copula` | 1.1-4, 1.1-6 |
 | `Core/SoftwareTree` | Milan |
 | `corpcor` | 1.6.10 |
 | `corrplot` | 0.95 |
 | `covr` | 3.6.4 |
-| `CovSel` | 1.2.2 |
+| `CovSel` | 1.2.1, 1.2.2 |
 | `covsim` | 1.1.0 |
-| `cowplot` | 1.2.0 |
+| `cowplot` | 1.1.3, 1.2.0 |
 | `coxed` | 0.3.3 |
 | `coxme` | 2.2-22 |
 | `CP2K` | 2023.1 |
@@ -558,22 +558,22 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `CPANPLUS` | 0.9914, 0.9916 |
 | `cpio` | 2.15 |
 | `cplm` | 0.7-12.1 |
-| `cpp11` | 0.5.2 |
+| `cpp11` | 0.5.0, 0.5.2 |
 | `cppy` | 1.1.0, 1.2.1, 1.3.1 |
 | `crashtest` | 0.4.1 |
 | `crayon` | 1.5.3 |
-| `credentials` | 2.0.3 |
+| `credentials` | 2.0.2, 2.0.3 |
 | `crfsuite` | 0.4.2 |
-| `crosstalk` | 1.2.2 |
-| `crul` | 1.6.0 |
+| `crosstalk` | 1.2.1, 1.2.2 |
+| `crul` | 1.5.0, 1.6.0 |
 | `cryolo` | 1.9.9 |
 | `Crypt::DES` | 2.07 |
 | `Crypt::Rijndael` | 1.16 |
 | `cryptography` | 41.0.1, 41.0.5, 42.0.8, 44.0.2, 45.0.5 |
-| `cSEM` | 0.6.1 |
+| `cSEM` | 0.5.0, 0.6.1 |
 | `csSAM` | 1.2.4 |
 | `ctmle` | 0.1.2 |
-| `cubature` | 2.1.4 |
+| `cubature` | 2.1.1, 2.1.4 |
 | `CubeGUI` | 4.8, 4.8.2 |
 | `CubeLib` | 4.6, 4.8, 4.8.1, 4.8.2, 4.9 |
 | `cubelyr` | 1.0.2 |
@@ -587,7 +587,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `CuPy` | 13.0.0-foss-2023a-CUDA-12.1.1, 13.6.0-CUDA-12.9.1 |
 | `cupy` | 13.6.0 |
 | `cURL` | 7.69.1, 7.72.0, 7.76.0, 7.78.0, 7.83.0, 7.86.0, 8.0.1, 8.11.1, 8.14.1, 8.3.0, 8.7.1 |
-| `curl` | 7.0.0 |
+| `curl` | 6.0.1, 7.0.0 |
 | `cuSPARSELt` | 0.6.0.6-CUDA-12.1.1, 0.8.0.4-CUDA-12.9.1 |
 | `cutadapt` | 4.9, 5.0, 5.0, 5.1, 5.1 |
 | `cuTENSOR` | 2.0.1.2-CUDA-12.1.1, 2.3.0.6-CUDA-12.9.1 |
@@ -613,8 +613,8 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `dask` | 2021.2.0, 2022.1.0, 2022.10.0, 2023.12.1, 2023.7.1, 2023.9.2, 2023.9.2, 2024.5.1, 2024.9.1, 2024.9.1 |
 | `dask-jobqueue` | 0.8.2, 0.8.5 |
 | `dask-mpi` | 2022.4.0 |
-| `data.table` | 1.16.0, 1.17.8 |
-| `data.tree` | 1.2.0 |
+| `data.table` | 1.16.0, 1.16.2, 1.17.8 |
+| `data.tree` | 1.1.0, 1.2.0 |
 | `Data::Dump` | 1.25 |
 | `Data::Dumper::Concise` | 2.023 |
 | `Data::Grove` | 0.08 |
@@ -625,7 +625,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Data::Types` | 0.17 |
 | `Data::UUID` | 1.227 |
 | `DataCombine` | 0.2.21 |
-| `datawizard` | 1.3.0 |
+| `datawizard` | 0.13.0, 1.3.0 |
 | `date` | 1.2-42 |
 | `Date::Handler` | 1.2 |
 | `Date::Language` | 2.33 |
@@ -637,7 +637,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `dav1d` | 1.5.2 |
 | `DB` | 18.1.40 |
 | `DB_File` | 1.858 |
-| `dbarts` | 0.9-32 |
+| `dbarts` | 0.9-28, 0.9-32 |
 | `DBD-mysql` | 4.050 |
 | `DBD::CSV` | 0.60, 0.62 |
 | `DBD::SQLite` | 1.76 |
@@ -647,11 +647,11 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `DBIx::Admin::TableInfo` | 3.04 |
 | `DBIx::ContextualFetch` | 1.03 |
 | `DBIx::Simple` | 1.37 |
-| `dbplyr` | 2.5.1 |
-| `dbscan` | 1.2.3 |
+| `dbplyr` | 2.5.0, 2.5.1 |
+| `dbscan` | 1.2-0, 1.2.3 |
 | `DBus` | 1.13.18, 1.14.0, 1.15.2, 1.15.4, 1.15.8, 1.16.2 |
 | `dbus-glib` | 0.112 |
-| `dcurver` | 0.9.3 |
+| `dcurver` | 0.9.2, 0.9.3 |
 | `ddalpha` | 1.3.16 |
 | `ddPCRclust` | 1.30.0 |
 | `deal` | 1.2-42 |
@@ -672,20 +672,20 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `deldir` | 2.0-4 |
 | `Delly` | 1.1.6 |
 | `DeltaLake` | 0.15.1 |
-| `dendextend` | 1.19.1 |
+| `dendextend` | 1.19.0, 1.19.1 |
 | `DendroPy` | 4.5.2, 4.6.1 |
 | `densEstBayes` | 1.0-2.2 |
 | `DEoptim` | 2.2-8 |
-| `DEoptimR` | 1.1-4 |
+| `DEoptimR` | 1.1-3-1, 1.1-4 |
 | `dep-logic` | 0.4.6 |
 | `Deprecated` | 1.2.13, 1.2.14 |
 | `deprecation` | 2.1.0 |
-| `DepthProc` | 2.1.6 |
+| `DepthProc` | 2.1.5, 2.1.6 |
 | `derfinder` | 1.44.0 |
 | `derfinderHelper` | 1.44.0 |
-| `Deriv` | 4.2.0 |
+| `Deriv` | 4.1.6, 4.2.0 |
 | `desc` | 1.4.3 |
-| `DescTools` | 0.99.60 |
+| `DescTools` | 0.99.58, 0.99.60 |
 | `DESeq2` | 1.50.0 |
 | `deSolve` | 1.40 |
 | `Devel::CheckCompiler` | 0.07 |
@@ -696,9 +696,9 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Devel::OverloadInfo` | 0.007 |
 | `Devel::Size` | 0.84, 0.85 |
 | `Devel::StackTrace` | 2.05 |
-| `devtools` | 2.4.6 |
+| `devtools` | 2.4.5, 2.4.6 |
 | `DEXSeq` | 1.56.0 |
-| `dfidx` | 0.2-0 |
+| `dfidx` | 0.1-0, 0.2-0 |
 | `dfoptim` | 2023.1.0 |
 | `DFT-D3` | 3.2.0 |
 | `DHARMa` | 0.4.7 |
@@ -706,31 +706,31 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `diagram` | 1.6.5 |
 | `DiagrammeR` | 1.0.11 |
 | `DIAMOND` | 2.1.0, 2.1.11, 2.1.8, 2.1.9 |
-| `DiceKriging` | 1.6.1 |
+| `DiceKriging` | 1.6.0, 1.6.1 |
 | `dichromat` | 2.0-0.1 |
 | `diffcyt` | 1.30.0 |
-| `diffobj` | 0.3.6 |
+| `diffobj` | 0.3.5, 0.3.6 |
 | `digest` | 0.6.37 |
 | `Digest::HMAC` | 1.05 |
 | `Digest::MD5::File` | 0.08 |
 | `Digest::SHA1` | 2.13 |
 | `dill` | 0.3.6, 0.3.7, 0.3.9, 0.3.9 |
-| `dimRed` | 0.2.7 |
-| `diptest` | 0.77-2 |
+| `dimRed` | 0.2.6, 0.2.7 |
+| `diptest` | 0.77-1, 0.77-2 |
 | `dir.expiry` | 1.18.0 |
 | `directlabels` | 2025.6.24 |
 | `DirichletMultinomial` | 1.52.0 |
 | `DiscriMiner` | 0.1-29 |
-| `dismo` | 1.3-16 |
+| `dismo` | 1.3-14, 1.3-16 |
 | `Dist::CheckConflicts` | 0.11 |
 | `Dist::Zilla` | 6.032, 6.033 |
-| `distillery` | 1.2-2 |
+| `distillery` | 1.2-1, 1.2-2 |
 | `distlib` | 0.3.9, 0.4.0 |
-| `distr` | 2.9.7 |
-| `distrEx` | 2.9.6 |
+| `distr` | 2.9.5, 2.9.7 |
+| `distrEx` | 2.9.5, 2.9.6 |
 | `distributed` | 2023.9.2, 2024.9.1 |
 | `distributional` | 0.5.0 |
-| `DistributionUtils` | 0.6-2 |
+| `DistributionUtils` | 0.6-1, 0.6-2 |
 | `distro` | 1.9.0 |
 | `diveRsity` | 1.9.90 |
 | `dlm` | 1.1-6.1 |
@@ -742,7 +742,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `DNAcopy` | 1.84.0 |
 | `dnaio` | 1.2.3 |
 | `DO.db` | 2.9 |
-| `doBy` | 4.7.0 |
+| `doBy` | 4.6.24, 4.7.0 |
 | `doc2vec` | 0.2.0 |
 | `docker` | 7.0.0 |
 | `docopt` | 0.6.2, 0.7.2 |
@@ -753,31 +753,31 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `doMC` | 1.3.8 |
 | `doParallel` | 1.0.17 |
 | `dorado` | 0.3.1-CUDA-11.7.0, 0.5.1-CUDA-11.7.0, 0.7.1-CUDA-11.7.0, 0.7.3-CUDA-11.7.0 |
-| `doRNG` | 1.8.6.2 |
+| `doRNG` | 1.8.6, 1.8.6.2 |
 | `DOSE` | 4.4.0 |
 | `doSNOW` | 1.0.20 |
 | `dotCall64` | 1.2 |
 | `double-conversion` | 3.1.5, 3.2.0, 3.2.1, 3.3.0, 3.3.1 |
 | `downlit` | 0.4.4 |
-| `downloader` | 0.4.1 |
+| `downloader` | 0.4, 0.4.1 |
 | `Doxygen` | 1.11.0, 1.14.0, 1.8.20, 1.9.1, 1.9.4, 1.9.5, 1.9.7, 1.9.8 |
 | `dpath` | 2.1.6, 2.2.0 |
 | `dpclust` | v2.2.8 |
 | `dplyr` | 1.1.4 |
 | `dqrng` | 0.4.1 |
-| `dr` | 3.0.11 |
-| `dreamerr` | 1.5.0 |
-| `drgee` | 1.1.10-3 |
+| `dr` | 3.0.10, 3.0.11 |
+| `dreamerr` | 1.4.0, 1.5.0 |
+| `drgee` | 1.1.10, 1.1.10-3 |
 | `dRiftDM` | 0.3.1 |
 | `DRIMSeq` | 1.38.0 |
 | `DropletUtils` | 1.30.0 |
 | `DRR` | 0.0.4 |
 | `drugCombo` | 1.2.1 |
 | `DSS` | 2.58.0 |
-| `DT` | 0.34.0 |
+| `DT` | 0.33, 0.34.0 |
 | `dtangle` | 2.0.9 |
-| `dtplyr` | 1.3.2 |
-| `DTRreg` | 2.3 |
+| `dtplyr` | 1.3.1, 1.3.2 |
+| `DTRreg` | 2.2, 2.3 |
 | `dtw` | 1.23-1 |
 | `dulwich` | 0.21.7, 0.22.8 |
 | `dummies` | 1.5.6 |
@@ -819,30 +819,30 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Elk` | 8.5.2 |
 | `ellipse` | 0.5.0 |
 | `ellipsis` | 0.3.2 |
-| `elliptic` | 1.5-0 |
+| `elliptic` | 1.4-0, 1.5-0 |
 | `ELPA` | 2021.11.001, 2023.05.001, 2024.05.001, 2025.01.002, 2025.06.001 |
 | `Email::Date::Format` | 1.008 |
-| `emdbook` | 1.3.14 |
-| `emmeans` | 1.11.2-8, 2.0.0 |
+| `emdbook` | 1.3.13, 1.3.14 |
+| `emmeans` | 1.10.5, 1.11.2-8, 2.0.0 |
 | `emoa` | 0.5-3 |
 | `emulator` | 1.2-24 |
 | `Encode` | 3.21 |
 | `Encode::Locale` | 1.05 |
 | `energy` | 1.7-12 |
-| `ENMeval` | 2.0.5.2 |
+| `ENMeval` | 2.0.4, 2.0.5.2 |
 | `enrichplot` | 1.30.0 |
 | `EnsDb.Hsapiens.v75` | 2.99.0 |
 | `EnsDb.Hsapiens.v79` | 2.99.0 |
 | `EnsDb.Hsapiens.v86` | 2.99.0 |
 | `ensembldb` | 2.34.0 |
-| `entropy` | 1.3.2 |
+| `entropy` | 1.3.1, 1.3.2 |
 | `ENVI` | 6.0, 6.1, 6.2, 6.3 |
-| `EnvStats` | 3.1.0 |
+| `EnvStats` | 3.0.0, 3.1.0 |
 | `EPICS` | base-7.0.7 |
 | `epitools` | 0.5-10.1 |
-| `ergm` | 4.10.1 |
-| `ergm.count` | 4.1.3 |
-| `ergm.multi` | 0.3.0 |
+| `ergm` | 4.10.1, 4.7.5 |
+| `ergm.count` | 4.1.2, 4.1.3 |
+| `ergm.multi` | 0.2.1.1, 0.3.0 |
 | `Error` | 0.17029, 0.17030 |
 | `escape` | 2.6.1 |
 | `ESMF` | 8.3.0, 8.6.0 |
@@ -850,8 +850,8 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `et_xmlfile` | 1.1.0, 2.0.0 |
 | `etils` | 1.10.0 |
 | `Eval::Closure` | 0.14 |
-| `evaluate` | 1.0.5 |
-| `EValue` | 4.1.4 |
+| `evaluate` | 1.0.1, 1.0.5 |
+| `EValue` | 4.1.3, 4.1.4 |
 | `evd` | 2.3-7.1 |
 | `Exact` | 3.3 |
 | `Exception::Class` | 1.45 |
@@ -867,12 +867,12 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `expm` | 1.0-0 |
 | `Exporter::Declare` | 0.114 |
 | `Exporter::Tiny` | 1.006002 |
-| `ExPosition` | 2.11.0 |
+| `ExPosition` | 2.11.0, 2.8.23 |
 | `expsmooth` | 2.3 |
 | `extraDistr` | 1.10.0 |
-| `extrafont` | 0.20 |
-| `extrafontdb` | 1.1 |
-| `extRemes` | 2.2-1 |
+| `extrafont` | 0.19, 0.20 |
+| `extrafontdb` | 1.0, 1.1 |
+| `extRemes` | 2.1-4, 2.2-1 |
 | `ExtUtils::CBuilder` | 0.280236 |
 | `ExtUtils::Config` | 0.010 |
 | `ExtUtils::Constant` | 0.25 |
@@ -890,22 +890,22 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | :--- | :--- |
 | `FabIO` | 0.14.0, 2024.9.0 |
 | `factoextra` | 1.0.7 |
-| `FactoMineR` | 2.12 |
+| `FactoMineR` | 2.11, 2.12 |
 | `FactorCopula` | 0.9.3 |
 | `fail` | 1.3 |
 | `fANCOVA` | 0.6-1 |
 | `fansi` | 1.0.6 |
 | `farver` | 2.1.2 |
 | `fastahack` | 1.0.0 |
-| `fastcluster` | 1.3.0 |
-| `fastDummies` | 1.7.5 |
+| `fastcluster` | 1.2.6, 1.3.0 |
+| `fastDummies` | 1.7.4, 1.7.5 |
 | `fasterize` | 1.1.0 |
 | `fastGHQuad` | 1.0.1 |
-| `fastICA` | 1.2-7 |
+| `fastICA` | 1.2-5.1, 1.2-7 |
 | `fastjsonschema` | 2.19.1, 2.20.0, 2.21.1 |
 | `fastlogranktest` | 0.2.1 |
 | `fastmap` | 1.2.0 |
-| `fastmatch` | 1.1-6 |
+| `fastmatch` | 1.1-4, 1.1-6 |
 | `fastmatrix` | 0.6-6 |
 | `fastp` | 0.23.4 |
 | `FastQC` | 0.11.9-Java-11 |
@@ -922,7 +922,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `feature` | 1.2.15 |
 | `Fennec::Lite` | 0.004 |
 | `fermi-lite` | 20190320 |
-| `ff` | 4.5.2 |
+| `ff` | 4.5.0, 4.5.2 |
 | `FFI::CheckLib` | 0.31 |
 | `FFmpeg` | 4.3.1, 4.3.2, 4.4.2, 5.1.2, 6.0, 7.0.2, 7.1.1, 7.1.2 |
 | `ffnvcodec` | 11.1.5.2, 12.0.16.0, 12.1.14.0, 12.2.72.0, 13.0.19.0 |
@@ -931,7 +931,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `FFTW.MPI` | 3.3.10 |
 | `fftwtools` | 0.9-11 |
 | `fgsea` | 1.36.0 |
-| `fields` | 17.1 |
+| `fields` | 16.3, 17.1 |
 | `file` | 5.43 |
 | `File::chdir` | 0.1011 |
 | `File::CheckTree` | 4.42 |
@@ -960,14 +960,14 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `filevercmp` | 20191210 |
 | `fillpattern` | 1.0.2 |
 | `FinaleMe` | v0.58.1 |
-| `finalfit` | 1.1.0 |
+| `finalfit` | 1.0.8, 1.1.0 |
 | `findpython` | 0.6.1, 0.6.3, 1.0.9 |
 | `Fiona` | 1.9.5 |
 | `fishMod` | 0.29.2 |
-| `fitdistrplus` | 1.2-4 |
-| `fixest` | 0.13.2 |
+| `fitdistrplus` | 1.2-1, 1.2-4 |
+| `fixest` | 0.12.1, 0.13.2 |
 | `FKSUM` | 1.0.1 |
-| `FLAC` | 1.3.3, 1.3.4, 1.4.2, 1.5.0 |
+| `FLAC` | 1.3.3, 1.3.4, 1.4.2, 1.4.3, 1.5.0 |
 | `FLANN` | 1.9.2 |
 | `flashClust` | 1.01-2 |
 | `Flask` | 2.2.2, 2.3.3, 3.0.3 |
@@ -979,10 +979,10 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Flax` | 0.8.4-CUDA-12.1.1 |
 | `flax` | 0.8.4 |
 | `flex` | 2.6.4 |
-| `flexclust` | 1.5.0 |
+| `flexclust` | 1.4-2, 1.5.0 |
 | `FlexiBLAS` | 3.0.4, 3.2.0, 3.2.1, 3.3.1, 3.4.4, 3.4.5 |
-| `flexmix` | 2.3-20 |
-| `flextable` | 0.9.10 |
+| `flexmix` | 2.3-19, 2.3-20 |
+| `flextable` | 0.9.10, 0.9.7 |
 | `flit` | 3.10.1, 3.10.1, 3.12.0, 3.12.0, 3.9.0 |
 | `flit-scm` | 1.7.0 |
 | `flit_core` | 3.10.1, 3.12.0 |
@@ -1003,7 +1003,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `flowWorkspace` | 4.22.0 |
 | `FLTK` | 1.3.7, 1.3.8 |
 | `fma` | 2.5 |
-| `FME` | 1.3.6.4 |
+| `FME` | 1.3.6.3, 1.3.6.4 |
 | `fmri` | 1.9.12.1 |
 | `FNN` | 1.1.4.1 |
 | `Font::TTF` | 1.06 |
@@ -1013,11 +1013,11 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `fontLiberation` | 0.1.0 |
 | `fontquiver` | 0.2.1 |
 | `fonttools` | 4.53.1, 4.58.4, 4.58.5 |
-| `forcats` | 1.0.1 |
+| `forcats` | 1.0.0, 1.0.1 |
 | `FORCE` | 3.10.00-virt, 3.10.04-virt, 3.11.00-virt, 3.7.10-virt, 3.7.11-virt, 3.7.12-virt, 3.8.00-virt, 3.8.01-virt |
 | `foreach` | 1.5.2 |
-| `forecast` | 8.24.0 |
-| `foreign` | 0.8-90 |
+| `forecast` | 8.23.0, 8.24.0 |
+| `foreign` | 0.8-87, 0.8-90 |
 | `formatR` | 1.14 |
 | `Formula` | 1.2-5 |
 | `formula.tools` | 1.7.1 |
@@ -1040,7 +1040,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `fresh` | 0.2.2 |
 | `FriBidi` | 1.0.10, 1.0.12, 1.0.13, 1.0.15, 1.0.16 |
 | `frozenlist` | 1.4.0, 1.4.1 |
-| `fs` | 1.6.6 |
+| `fs` | 1.6.5, 1.6.6 |
 | `FSL` | 6.0.5.1 |
 | `fsom` | 20141119, 20151117 |
 | `fsspec` | 2024.9.0, 2025.3.2, 2025.7.0 |
@@ -1049,26 +1049,26 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `FusionInspector` | v2.8.0 |
 | `futile.logger` | 1.4.3 |
 | `futile.options` | 1.0.1 |
-| `future` | 1.0.0, 1.67.0 |
-| `future.apply` | 1.20.0 |
+| `future` | 1.0.0, 1.34.0, 1.67.0 |
+| `future.apply` | 1.11.3, 1.20.0 |
 
 ## G
 
-**[257 modules]**
+**[258 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
-| `gam` | 1.22-6 |
+| `gam` | 1.22-5, 1.22-6 |
 | `GAMESS-US` | 20230930-R2-gompi-2022a |
-| `gamlss` | 5.5-0 |
-| `gamlss.data` | 6.0-7 |
+| `gamlss` | 5.4-22, 5.5-0 |
+| `gamlss.data` | 6.0-6, 6.0-7 |
 | `gamlss.dist` | 6.1-1 |
 | `gamlss.tr` | 5.1-9 |
-| `gamm4` | 0.2-7 |
+| `gamm4` | 0.2-6, 0.2-7 |
 | `gap` | 1.6 |
 | `gap.datasets` | 0.0.6 |
 | `gapfill` | 0.9.6-1 |
-| `gargle` | 1.6.0 |
+| `gargle` | 1.5.2, 1.6.0 |
 | `gast` | 0.6.0 |
 | `GATE` | 9.2, 9.4 |
 | `GATK` | 4.3.0.0-Java-11, 4.5.0.0-Java-17 |
@@ -1081,32 +1081,33 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `GCC` | 10.2.0, 10.3.0, 11.2.0, 11.3.0, 12.2.0, 12.3.0, 13.2.0, 13.3.0, 14.2.0, 14.3.0 |
 | `GCCcore` | 10.2.0, 10.3.0, 11.2.0, 11.3.0, 12.2.0, 12.3.0, 13.2.0, 13.3.0, 14.2.0, 14.3.0, 15.2.0, 9.3.0 |
 | `gcccuda` | 2020b |
-| `gclus` | 1.3.3 |
-| `gcmr` | 1.0.4 |
+| `gclus` | 1.3.2, 1.3.3 |
+| `gcmr` | 1.0.3, 1.0.4 |
 | `GConf` | 3.2.6 |
 | `gcrma` | 2.82.0 |
 | `GCTA` | 1.94.1 |
 | `GDAL` | 2.4.4, 3.10.0, 3.11.1, 3.11.3, 3.2.1, 3.4.1, 3.5.0, 3.6.2, 3.7.1, 3.9.0 |
+| `gdalUtils` | 2.0.3.2 |
 | `gdata` | 3.0.1 |
 | `GDB` | 13.2 |
 | `gdc-client` | 1.6.0 |
-| `gdistance` | 1.6.5 |
+| `gdistance` | 1.6.4, 1.6.5 |
 | `Gdk-Pixbuf` | 2.40.0, 2.42.10, 2.42.11, 2.42.12, 2.42.6, 2.42.8 |
 | `GDRCopy` | 2.1-CUDA-11.1.1, 2.3, 2.3.1, 2.4.1, 2.4.4, 2.5 |
 | `gdsfmt` | 1.46.0 |
-| `gdtools` | 0.4.4 |
+| `gdtools` | 0.4.1, 0.4.4 |
 | `Geant4` | 10.7.1, 11.0.2, 11.1.2, 11.2.2 |
 | `Geant4-data` | 11.1, 11.2 |
-| `gee` | 4.13-29 |
+| `gee` | 4.13-27, 4.13-29 |
 | `geeM` | 0.10.1 |
-| `geepack` | 1.3.13 |
+| `geepack` | 1.3.12, 1.3.13 |
 | `geex` | 1.1.1 |
 | `geiger` | 2.0.11 |
 | `genefilter` | 1.92.0 |
 | `geneLenDataBase` | 1.46.0 |
-| `GeneNet` | 1.2.17 |
+| `GeneNet` | 1.2.16, 1.2.17 |
 | `geneplotter` | 1.88.0 |
-| `generics` | 0.1.4 |
+| `generics` | 0.1.3, 0.1.4 |
 | `GENESIS` | 2.40.0 |
 | `GENIE3` | 1.32.0 |
 | `genomation` | 1.42.0 |
@@ -1123,13 +1124,13 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `geojsonsf` | 2.0.3 |
 | `GEOmap` | 2.5-11 |
 | `geometries` | 0.2.4 |
-| `geometry` | 0.5.2 |
+| `geometry` | 0.5.0, 0.5.2 |
 | `geopandas` | 0.14.2 |
 | `geopy` | 2.4.1 |
 | `GEOquery` | 2.78.0 |
 | `geoR` | 1.9-6 |
 | `GEOS` | 3.10.3, 3.11.1, 3.12.0, 3.12.1, 3.12.2, 3.13.1, 3.9.1 |
-| `gert` | 2.1.5 |
+| `gert` | 2.1.4, 2.1.5 |
 | `GET` | 1.0-7 |
 | `getopt` | 1.20.4 |
 | `Getopt::Long` | 2.58 |
@@ -1140,83 +1141,83 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `gfbf` | 2022b, 2023a, 2023b, 2024a, 2025a, 2025b |
 | `gflags` | 2.2.2 |
 | `gfonts` | 0.2.0 |
-| `GGally` | 2.4.0 |
+| `GGally` | 2.2.1, 2.4.0 |
 | `ggbeeswarm` | 0.7.2 |
 | `ggbio` | 1.58.0 |
 | `ggcyto` | 1.38.0 |
 | `ggdag` | 0.2.13 |
 | `ggdendro` | 0.2.0 |
-| `ggdist` | 3.3.3 |
-| `ggExtra` | 0.11.0 |
+| `ggdist` | 3.3.2, 3.3.3 |
+| `ggExtra` | 0.10.1, 0.11.0 |
 | `ggfan` | 0.1.3 |
-| `ggforce` | 0.5.0 |
-| `ggformula` | 1.0.0 |
-| `ggfun` | 0.2.0 |
-| `ggh4x` | 0.3.1 |
+| `ggforce` | 0.4.2, 0.5.0 |
+| `ggformula` | 0.12.0, 1.0.0 |
+| `ggfun` | 0.1.7, 0.2.0 |
+| `ggh4x` | 0.2.8, 0.3.1 |
 | `ggiraph` | 0.9.2 |
-| `ggnetwork` | 0.5.14 |
+| `ggnetwork` | 0.5.13, 0.5.14 |
 | `ggnewscale` | 0.5.2 |
 | `ggpicrust2` | 2.5.2 |
-| `ggplot2` | 4.0.0 |
-| `ggplotify` | 0.1.3 |
+| `ggplot2` | 3.5.1, 4.0.0 |
+| `ggplotify` | 0.1.2, 0.1.3 |
 | `ggpointdensity` | 0.2.0 |
-| `ggprism` | 1.0.7 |
-| `ggpubr` | 0.6.2 |
-| `ggraph` | 2.2.2 |
+| `ggprism` | 1.0.6, 1.0.7 |
+| `ggpubr` | 0.6.0, 0.6.2 |
+| `ggraph` | 2.2.1, 2.2.2 |
 | `ggrastr` | 1.0.2 |
 | `ggrepel` | 0.9.6 |
-| `ggridges` | 0.5.7 |
-| `ggsci` | 4.1.0 |
+| `ggridges` | 0.5.6, 0.5.7 |
+| `ggsci` | 3.2.0, 4.1.0 |
 | `ggseqlogo` | 0.2 |
 | `ggsignif` | 0.6.4 |
 | `ggstance` | 0.3.7 |
-| `ggstats` | 0.11.0 |
+| `ggstats` | 0.11.0, 0.7.0 |
 | `ggtangle` | 0.0.7 |
 | `ggtext` | 0.1.2 |
 | `ggthemes` | 5.1.0 |
 | `ggtree` | 4.0.1 |
-| `ggvenn` | 0.1.19 |
+| `ggvenn` | 0.1.10, 0.1.19 |
 | `ggvis` | 0.4.9 |
-| `gh` | 1.5.0, 2.52.0 |
+| `gh` | 1.4.1, 1.5.0, 2.52.0 |
 | `Ghostscript` | 10.01.2, 10.02.1, 10.03.1, 10.05.1, 9.53.3, 9.54.0, 9.56.1 |
 | `giflib` | 5.2.1, 5.2.2 |
 | `GillespieSSA` | 0.6.2 |
 | `Git` | 0.42 |
 | `git` | 2.28.0-nodocs, 2.32.0-nodocs, 2.33.1-nodocs, 2.36.0-nodocs, 2.38.1-nodocs, 2.41.0-nodocs, 2.42.0, 2.45.1, 2.49.0, 2.50.1 |
 | `git-lfs` | 3.5.1 |
-| `git2r` | 0.36.2 |
+| `git2r` | 0.35.0, 0.36.2 |
 | `gitcreds` | 0.1.2 |
 | `gitdb` | 4.0.11, 4.0.9 |
 | `GitPython` | 3.1.27, 3.1.27, 3.1.31, 3.1.40, 3.1.42, 3.1.42, 3.1.43, 3.1.43 |
-| `GJRM` | 0.2-6.8 |
+| `GJRM` | 0.2-6.7, 0.2-6.8 |
 | `GKlib-METIS` | 5.1.1 |
 | `GL2PS` | 1.4.2 |
 | `GLAD` | 2.74.0 |
 | `glasso` | 1.11 |
-| `gld` | 2.6.8 |
+| `gld` | 2.6.6, 2.6.8 |
 | `glew` | 2.1.0, 2.2.0-egl |
 | `GLib` | 2.66.1, 2.68.2, 2.69.1, 2.72.1, 2.75.0, 2.77.1, 2.78.1, 2.80.4, 2.85.1, 2.85.3 |
 | `GLibmm` | 2.66.4 |
 | `Glimma` | 2.20.0 |
 | `GLIMPSE` | 2.0.0 |
 | `glimpse` | v2.0.0 |
-| `gllvm` | 2.0.5 |
+| `gllvm` | 1.4.3, 2.0.5 |
 | `GLM` | 0.9.9.8 |
 | `glmmML` | 1.1.7 |
-| `glmmTMB` | 1.1.13 |
-| `glmnet` | 4.1-10 |
+| `glmmTMB` | 1.1.10, 1.1.13 |
+| `glmnet` | 4.1-10, 4.1-8 |
 | `glob2` | 0.7 |
 | `GlobalAncova` | 4.28.0 |
 | `GlobalArrays` | 5.8, 5.8.1, 5.8.2 |
 | `GlobalOptions` | 0.1.2 |
-| `globals` | 0.18.0 |
+| `globals` | 0.16.3, 0.18.0 |
 | `globaltest` | 5.64.0 |
 | `glog` | 0.6.0, 0.7.1 |
 | `GLPK` | 5.0 |
 | `glslang-SPIRV` | 15.3.0, 15.4.0 |
 | `glue` | 1.8.0 |
 | `GMAP-GSNAP` | 2023-02-17 |
-| `gmm` | 1.9-1 |
+| `gmm` | 1.8, 1.9-1 |
 | `gmodels` | 2.19.1 |
 | `GMP` | 6.2.0, 6.2.1, 6.3.0 |
 | `gmp` | 0.7-5 |
@@ -1232,7 +1233,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `GO::Utils` | 0.15 |
 | `GObject-Introspection` | 1.66.1, 1.68.0, 1.72.0, 1.74.0, 1.76.1, 1.78.1, 1.80.1, 1.84.0 |
 | `goftest` | 1.2-3 |
-| `goldilocks` | 0.4.0 |
+| `goldilocks` | 0.3.0, 0.4.0 |
 | `gomkl` | 2022a, 2023b |
 | `gomms` | 1.0 |
 | `gompi` | 2020b, 2021a, 2021b, 2022a, 2022b, 2023a, 2023b, 2024.05, 2024a, 2025a, 2025b |
@@ -1242,15 +1243,15 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `google-pasta` | 0.2.0 |
 | `google_auth` | 2.35.0 |
 | `googlebenchmark` | 1.9.4 |
-| `googledrive` | 2.1.2 |
-| `googlesheets4` | 1.1.2 |
+| `googledrive` | 2.1.1, 2.1.2 |
+| `googlesheets4` | 1.1.1, 1.1.2 |
 | `googletest` | 1.11.0, 1.12.1, 1.13.0, 1.14.0, 1.15.2, 1.17.0 |
 | `GOSemSim` | 2.36.0 |
 | `goseq` | 1.62.0 |
 | `GOstats` | 2.76.0 |
 | `GOTCHA` | 1.0.8 |
-| `gower` | 1.0.2 |
-| `GPArotation` | 2025.3-1 |
+| `gower` | 1.0.1, 1.0.2 |
+| `GPArotation` | 2024.3-1, 2025.3-1 |
 | `GPAW` | 24.1.0 |
 | `GPAW-setups` | 0.9.20000 |
 | `gperf` | 3.1, 3.3 |
@@ -1264,11 +1265,11 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Graphene` | 1.10.8 |
 | `graphite` | 1.56.0 |
 | `graphite2` | 1.3.14 |
-| `graphlayouts` | 1.2.2 |
+| `graphlayouts` | 1.2.1, 1.2.2 |
 | `Graphviz` | 2.47.2, 5.0.0, 8.1.0 |
 | `graphviz-python` | 0.20.1 |
 | `Greenlet` | 3.0.3 |
-| `grf` | 2.5.0 |
+| `grf` | 2.4.0, 2.5.0 |
 | `gridBase` | 0.4-7 |
 | `gridExtra` | 2.3 |
 | `gridGraphics` | 0.5-1 |
@@ -1281,7 +1282,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `grpreg` | 3.5.0 |
 | `GSA` | 1.03.3 |
 | `gsalib` | 2.2.1 |
-| `gsDesign` | 3.7.0 |
+| `gsDesign` | 3.6.5, 3.7.0 |
 | `GSEABase` | 1.72.0 |
 | `gsignal` | 0.3-7 |
 | `GSL` | 2.7, 2.8 |
@@ -1296,7 +1297,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `gsubfn` | 0.7 |
 | `GSVA` | 2.4.0 |
 | `gsw` | 1.2-0 |
-| `gt` | 1.1.0 |
+| `gt` | 0.11.1, 1.1.0 |
 | `gtable` | 0.3.6 |
 | `GTK+` | 3.24.23 |
 | `GTK2` | 2.24.33 |
@@ -1304,21 +1305,21 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `GTK4` | 4.7.0 |
 | `gtools` | 3.9.5 |
 | `GTS` | 0.7.6 |
-| `gtsummary` | 2.4.0 |
+| `gtsummary` | 2.0.3, 2.4.0 |
 | `Gurobi` | 10.0.1, 11.0.0, 9.5.0 |
-| `GUTS` | 1.2.6 |
+| `GUTS` | 1.2.5, 1.2.6 |
 | `Gviz` | 1.54.0 |
 | `gviz-api` | 1.10.0 |
 | `GWASExactHW` | 1.2 |
 | `GWASTools` | 1.56.0 |
-| `gWidgets2` | 1.0-10 |
-| `gWidgets2tcltk` | 1.0-9 |
+| `gWidgets2` | 1.0-10, 1.0-9 |
+| `gWidgets2tcltk` | 1.0-8, 1.0-9 |
 | `GxEScanR` | 2.0.2 |
 | `gzip` | 1.10, 1.12, 1.13, 1.14 |
 
 ## H
 
-**[95 modules]**
+**[96 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
@@ -1328,10 +1329,10 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `h5py` | 3.1.0, 3.11.0, 3.12.1, 3.2.1, 3.6.0, 3.7.0, 3.8.0, 3.9.0 |
 | `hahmmr` | 1.0.0 |
 | `hal9001` | 0.4.6 |
-| `haldensify` | 0.2.8 |
-| `hardhat` | 1.4.2 |
+| `haldensify` | 0.2.3, 0.2.8 |
+| `hardhat` | 1.4.0, 1.4.2 |
 | `HarfBuzz` | 11.2.1, 11.4.1, 2.6.7, 2.8.1, 2.8.2, 4.2.1, 5.3.1, 8.2.2, 9.0.0 |
-| `harmony` | 1.2.4 |
+| `harmony` | 1.2.1, 1.2.4 |
 | `hash` | 2.2.6.3 |
 | `Hash::Merge` | 0.302 |
 | `Hash::Objectify` | 0.008 |
@@ -1343,11 +1344,11 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `hatch_jupyter_builder` | 0.9.1 |
 | `hatch_nodejs_version` | 0.3.2 |
 | `hatchling` | 1.18.0, 1.24.2, 1.27.0, 1.27.0 |
-| `haven` | 2.5.5 |
+| `haven` | 2.5.4, 2.5.5 |
 | `HDF` | 4.2.15, 4.2.16-2, 4.3.0, 4.3.1 |
 | `HDF5` | 1.10.7, 1.12.1, 1.12.2, 1.14.0, 1.14.3, 1.14.5, 1.14.6 |
 | `HDF5Array` | 1.38.0 |
-| `hdf5r` | 1.3.12 |
+| `hdf5r` | 1.3.11, 1.3.12 |
 | `hdm` | 0.3.2 |
 | `HDO.db` | 1.0.0 |
 | `hdrcde` | 3.4 |
@@ -1357,7 +1358,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `heatmaply` | 1.6.0 |
 | `help2man` | 1.47.12, 1.47.16, 1.48.3, 1.49.2, 1.49.3 |
 | `HepMC3` | 3.2.5, 3.2.6 |
-| `here` | 1.0.2 |
+| `here` | 1.0.1, 1.0.2 |
 | `hexbin` | 1.28.5 |
 | `HF-Datasets` | 2.18.0 |
 | `HGNChelper` | 0.8.15 |
@@ -1368,17 +1369,17 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `HiCcompare` | 1.32.0 |
 | `HiCExplorer` | 3.7.5 |
 | `HiCMatrix` | 17, 17.2 |
-| `HiddenMarkov` | 1.8-14 |
+| `HiddenMarkov` | 1.8-13, 1.8-14 |
 | `highr` | 0.11 |
 | `Highway` | 1.0.3, 1.0.4 |
 | `hiredis` | 1.0.2 |
 | `HISAT2` | 2.2.1 |
 | `hishel` | 0.0.30 |
-| `Hmisc` | 5.2-4 |
+| `Hmisc` | 5.2-0, 5.2-4 |
 | `HMMcopy` | 1.52.0 |
 | `HMMER` | 3.3.2, 3.4 |
-| `hms` | 1.1.4 |
-| `Hmsc` | 3.3-7 |
+| `hms` | 1.1.3, 1.1.4 |
+| `Hmsc` | 3.0-13, 3.3-7 |
 | `Homer` | 2024-07 |
 | `Homo.sapiens` | 1.3.1 |
 | `Hook::LexWrap` | 0.26 |
@@ -1403,17 +1404,18 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `HTTP::Tiny` | 0.090 |
 | `httpcode` | 0.3.0 |
 | `httpcore` | 1.0.5, 1.0.6 |
-| `httpuv` | 1.6.16 |
+| `httpuv` | 1.6.15, 1.6.16 |
 | `httpx` | 0.27.2 |
 | `httr` | 1.4.7 |
-| `httr2` | 1.2.1 |
+| `httr2` | 1.0.6, 1.2.1 |
 | `huge` | 1.3.5 |
 | `huggingface-hub` | 0.21.4, 0.24.6 |
 | `humanfriendly` | 10.0 |
-| `hunspell` | 3.0.6 |
+| `hunspell` | 3.0.5, 3.0.6 |
 | `hwloc` | 2.10.0, 2.11.2, 2.12.1, 2.2.0, 2.4.1, 2.5.0, 2.7.1, 2.8.0, 2.9.1, 2.9.2 |
 | `hwriter` | 1.3.2.1 |
-| `hypergeo` | 1.2-14 |
+| `HWxtest` | 1.1.9 |
+| `hypergeo` | 1.2-13, 1.2-14 |
 | `Hyperopt` | 0.2.7 |
 | `hypothesis` | 4.57.1-Python-2.7.18, 5.41.2, 6.103.1, 6.13.1, 6.133.2, 6.136.6, 6.14.6, 6.46.7, 6.68.2, 6.82.0, 6.90.0 |
 | `Hypre` | 2.20.0, 2.25.0, 2.27.0 |
@@ -1433,9 +1435,9 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `IDPmisc` | 1.1.21 |
 | `idr` | 1.3 |
 | `ids` | 1.0.1 |
-| `ie2misc` | 0.9.2 |
+| `ie2misc` | 0.9.1, 0.9.2 |
 | `if` | 0.0608 |
-| `igraph` | 2.2.1 |
+| `igraph` | 2.1.1, 2.2.1 |
 | `IGV` | 2.17.4-Java-17, 2.18.4-Java-17 |
 | `igv-reports` | 1.5.1-Python-3.10.4 |
 | `IHW` | 1.38.0 |
@@ -1455,7 +1457,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `imagecodecs` | 2022.9.26 |
 | `imageio` | 2.13.5, 2.22.2, 2.31.1, 2.33.1 |
 | `ImageMagick` | 7.1.0-37, 7.1.0-4, 7.1.1-15, 7.1.1-38, 7.1.1-47, 7.1.2-7 |
-| `imager` | 1.0.5 |
+| `imager` | 1.0.2, 1.0.5 |
 | `imagerExtra` | 1.3.2 |
 | `imagesize` | 1.4.1 |
 | `ImageSmith` | 1.0 |
@@ -1482,8 +1484,8 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `ini` | 0.3.1 |
 | `iniconfig` | 2.0.0, 2.1.0 |
 | `Inline` | 0.86, 0.87 |
-| `inline` | 0.3.21 |
-| `insight` | 1.4.2 |
+| `inline` | 0.3.20, 0.3.21 |
+| `insight` | 0.20.5, 1.4.2 |
 | `installer` | 0.7.0 |
 | `intel` | 2021a, 2021b, 2022a, 2022b, 2023a, 2025b |
 | `intel-compilers` | 2021.2.0, 2021.4.0, 2022.1.0, 2022.1.0-GCC-11.2.0, 2022.2.1, 2023.1.0, 2025.2.0 |
@@ -1517,15 +1519,15 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `ipython_genutils` | 0.2.0 |
 | `ipywidgets` | 8.1.5 |
 | `IQ-TREE` | 2.2.2.3, 2.2.2.6, 2.2.2.7, 2.3.5 |
-| `irace` | 4.3 |
+| `irace` | 3.5, 4.3 |
 | `IRanges` | 2.44.0 |
 | `irlba` | 2.3.5.1 |
 | `ISA-L` | 2.30.0, 2.31.0 |
 | `ISL` | 0.26 |
-| `ismev` | 1.43 |
+| `ismev` | 1.42, 1.43 |
 | `Iso` | 0.0-21 |
 | `isoband` | 0.2.7 |
-| `ISOcodes` | 2025.05.18 |
+| `ISOcodes` | 2024.02.12, 2025.05.18 |
 | `IsoformSwitchAnalyzeR` | 1.18.0-R-4.2.1 |
 | `ISOweek` | 0.6-2 |
 | `isva` | 1.9 |
@@ -1559,7 +1561,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `jeepney` | 0.8.0, 0.9.0 |
 | `Jellyfish` | 2.3.0 |
 | `jemalloc` | 5.2.1, 5.3.0 |
-| `jiebaR` | 0.11.1 |
+| `jiebaR` | 0.11, 0.11.1 |
 | `jiebaRD` | 0.1 |
 | `Jinja2` | 3.1.6 |
 | `jmespath` | 1.0.1 |
@@ -1567,7 +1569,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `joblib` | 1.3.2, 1.4.2, 1.5.1 |
 | `jomo` | 2.7-6 |
 | `jose` | 1.2.1 |
-| `jpeg` | 0.1-11 |
+| `jpeg` | 0.1-10, 0.1-11 |
 | `jq` | 1.6 |
 | `jquerylib` | 0.1.4 |
 | `JSON` | 4.10 |
@@ -1578,11 +1580,11 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `JSON::XS` | 4.03 |
 | `JsonCpp` | 1.9.4, 1.9.5 |
 | `jsonify` | 1.2.2 |
-| `jsonlite` | 2.0.0 |
+| `jsonlite` | 1.8.9, 2.0.0 |
 | `jsonschema` | 4.21.0, 4.23.0, 4.25.0 |
 | `jsonschema-specifications` | 2025.4.1 |
 | `jsonschema_specifications` | 2023.12.1, 2024.10.1 |
-| `jstable` | 1.3.19 |
+| `jstable` | 1.3.19, 1.3.6 |
 | `Judy` | 1.0.5 |
 | `juicyjuice` | 0.1.0 |
 | `Julia` | 1.10.4-linux-x86_64, 1.12.2, 1.8.5-linux-x86_64, 1.9.0-linux-x86_64, 1.9.2-linux-x86_64, 1.9.3-linux-x86_64 |
@@ -1631,27 +1633,27 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Kaleido` | 0.2.1, 0.2.1 |
 | `Kalign` | 3.3.5, 3.4.0 |
 | `kallisto` | 0.48.0 |
-| `kde1d` | 1.1.1 |
+| `kde1d` | 1.0.7, 1.1.1 |
 | `kedd` | 1.0.4 |
 | `KEGGgraph` | 1.70.0 |
 | `KEGGREST` | 1.50.0 |
 | `keras` | 2.13.1, 3.9.2 |
 | `kernlab` | 0.9-33 |
-| `KernSmooth` | 2.23-26 |
+| `KernSmooth` | 2.23-24, 2.23-26 |
 | `keyring` | 24.3.0, 25.6.0 |
 | `keyrings.alt` | 5.0.2 |
 | `kim-api` | 2.2.1, 2.3.0 |
 | `kineto` | 0.4.0 |
 | `king` | 2.2.7 |
-| `kinship2` | 1.9.6.2 |
+| `kinship2` | 1.9.6.1, 1.9.6.2 |
 | `kiwisolver` | 1.4.5, 1.4.8 |
 | `klaR` | 1.7-3 |
 | `KMC` | 3.2.4 |
-| `knitr` | 1.50 |
-| `KODAMA` | 3.0 |
+| `knitr` | 1.49, 1.50 |
+| `KODAMA` | 2.4.1, 3.0 |
 | `kohonen` | 3.0.12 |
 | `krbalancing` | 0.5.0b0 |
-| `ks` | 1.15.1 |
+| `ks` | 1.14.3, 1.15.1 |
 
 ## L
 
@@ -1659,9 +1661,9 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 
 | Modulename | Versions |
 | :--- | :--- |
-| `labdsv` | 2.1-2 |
+| `labdsv` | 2.1-0, 2.1-2 |
 | `labeling` | 0.4.3 |
-| `labelled` | 2.16.0 |
+| `labelled` | 2.13.0, 2.16.0 |
 | `laeken` | 0.5.3 |
 | `lambda.r` | 1.2.4 |
 | `LAME` | 3.100 |
@@ -1669,12 +1671,12 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `LaplacesDemon` | 16.1.6 |
 | `lars` | 1.3 |
 | `lassosum` | 0.4.5 |
-| `later` | 1.4.4 |
+| `later` | 1.3.2, 1.4.4 |
 | `latex2exp` | 0.9.8 |
-| `lattice` | 0.22-7 |
-| `latticeExtra` | 0.6-31 |
-| `lava` | 1.8.1, 1.8.2 |
-| `lavaan` | 0.6-20 |
+| `lattice` | 0.22-6, 0.22-7 |
+| `latticeExtra` | 0.6-30, 0.6-31 |
+| `lava` | 1.8.0, 1.8.1, 1.8.2 |
+| `lavaan` | 0.6-19, 0.6-20 |
 | `lazy` | 1.2-18 |
 | `lazy_loader` | 0.3 |
 | `lazyeval` | 0.2.2 |
@@ -1684,10 +1686,10 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `ldbounds` | 2.0.2 |
 | `LDC` | 1.24.0-x86_64, 1.30.0 |
 | `LEA` | 3.22.0 |
-| `leafem` | 0.2.5 |
+| `leafem` | 0.2.3, 0.2.5 |
 | `leafgl` | 0.2.2 |
 | `leaflegend` | 1.2.1 |
-| `leaflet` | 2.2.3 |
+| `leaflet` | 2.2.2, 2.2.3 |
 | `leaflet.providers` | 2.0.0 |
 | `leafsync` | 0.1.0 |
 | `leaps` | 3.2 |
@@ -1722,7 +1724,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `libffi` | 3.2.1, 3.3, 3.4.2, 3.4.4, 3.4.5, 3.5.1 |
 | `libgd` | 2.3.1, 2.3.3 |
 | `libgeotiff` | 1.6.0, 1.7.0, 1.7.1, 1.7.3, 1.7.4 |
-| `libgit2` | 1.4.3, 1.5.0, 1.7.1, 1.9.1 |
+| `libgit2` | 1.4.3, 1.5.0, 1.7.1, 1.8.1, 1.9.1 |
 | `libGLU` | 9.0.1, 9.0.2, 9.0.3 |
 | `libglvnd` | 1.3.2, 1.3.3, 1.4.0, 1.6.0, 1.7.0 |
 | `libGridXC` | 2.0.2 |
@@ -1768,7 +1770,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `LiCSBAS2` | 1.9.0 |
 | `lifecycle` | 1.0.4 |
 | `limma` | 3.66.0 |
-| `limSolve` | 2.0.1 |
+| `limSolve` | 1.5.7.1, 2.0.1 |
 | `linaro_forge` | 23.0.3, 24.1.1 |
 | `Lingua::EN::PluralToSingular` | 0.21 |
 | `linkcomm` | 1.0-14 |
@@ -1786,17 +1788,17 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `LLVM` | 11.0.0, 11.1.0, 12.0.1, 14.0.3, 14.0.6, 14.0.6-llvmlite, 15.0.5, 16.0.6, 18.1.8, 19.1.7, 20.1.7, 20.1.8 |
 | `llvmlite` | 0.43.0 |
 | `LMDB` | 0.9.24, 0.9.29, 0.9.31 |
-| `lme4` | 1.1-37 |
+| `lme4` | 1.1-35.5, 1.1-37 |
 | `LMERConvenienceFunctions` | 3.0 |
 | `lmerTest` | 3.1-3, 3.1-3 |
 | `lmom` | 3.2 |
-| `Lmoments` | 1.3-2 |
+| `Lmoments` | 1.3-1, 1.3-2 |
 | `lmtest` | 0.9-40 |
 | `lobstr` | 1.1.2 |
 | `local::lib` | 2.000029 |
 | `Locale::Maketext::Simple` | 0.21 |
 | `locfdr` | 1.1-8 |
-| `locfit` | 1.5-9.12 |
+| `locfit` | 1.5-9.10, 1.5-9.12 |
 | `locket` | 1.0.0 |
 | `lockfile` | 0.12.2 |
 | `log4r` | 0.4.4 |
@@ -1810,20 +1812,20 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Log::Report` | 1.39, 1.40 |
 | `Log::Report::Optional` | 1.07 |
 | `logcondens` | 2.1.8 |
-| `logger` | 0.4.1 |
+| `logger` | 0.4.0, 0.4.1 |
 | `Logger::Simple` | 2.0 |
 | `logging` | 0.10-108 |
-| `logistf` | 1.26.1 |
+| `logistf` | 1.26.0, 1.26.1 |
 | `logmuse` | 0.2.7, 0.2.8 |
 | `logspline` | 2.1.22 |
 | `longitudinal` | 1.1.13 |
-| `longmemo` | 1.1-4 |
+| `longmemo` | 1.1-3, 1.1-4 |
 | `longphase` | v2.0 |
 | `loo` | 2.8.0 |
 | `loompy` | 3.0.7, 3.0.7 |
-| `lpSolve` | 5.6.23 |
+| `lpSolve` | 5.6.22, 5.6.23 |
 | `lpsolve` | 5.5.2.11 |
-| `lpSolveAPI` | 5.5.2.0-17.14 |
+| `lpSolveAPI` | 5.5.2.0-17.12, 5.5.2.0-17.14 |
 | `lpsymphony` | 1.38.0 |
 | `lqa` | 1.0-3 |
 | `lsa` | 0.73.3 |
@@ -1831,7 +1833,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `lsei` | 1.3-0 |
 | `lslx` | 0.6.11 |
 | `Lua` | 5.4.3, 5.4.4, 5.4.6, 5.4.8 |
-| `lubridate` | 1.9.4 |
+| `lubridate` | 1.9.3, 1.9.4 |
 | `lumi` | 2.62.0 |
 | `lwgeom` | 0.2-14 |
 | `LWP::MediaTypes` | 6.04 |
@@ -1843,7 +1845,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 
 ## M
 
-**[248 modules]**
+**[249 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
@@ -1853,9 +1855,9 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `maeparser` | 1.3.0, 1.3.1 |
 | `MAFFT` | 7.505-with-extensions, 7.520-with-extensions, 7.526-with-extensions |
 | `magic` | 1.6-1 |
-| `magick` | 2.9.0 |
+| `magick` | 2.8.5, 2.9.0 |
 | `magma` | 2.6.2-CUDA-11.7.0, 2.7.2-CUDA-12.1.1 |
-| `magrittr` | 2.0.4 |
+| `magrittr` | 2.0.3, 2.0.4 |
 | `Mail::Util` | 2.22 |
 | `make` | 4.3, 4.4.1 |
 | `makedepend` | 1.0.7 |
@@ -1865,41 +1867,42 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `MALDIquant` | 1.22.3 |
 | `manipulateWidget` | 0.11.1 |
 | `manta` | 1.6.0 |
-| `mapproj` | 1.2.12 |
-| `maps` | 3.4.3 |
+| `mapproj` | 1.2.11, 1.2.12 |
+| `maps` | 3.4.2.1, 3.4.3 |
 | `maptiles` | 0.10.0 |
+| `maptools` | 1.1-8 |
 | `margin` | 2.3.1 |
 | `MariaDB` | 10.9.3 |
 | `Markdown` | 3.4.4, 3.6, 3.7 |
-| `markdown` | 2.0 |
+| `markdown` | 1.13, 2.0 |
 | `markdown-it-py` | 3.0.0 |
 | `MarkUpSafe` | 3.0.2 |
 | `MarkupSafe` | 2.1.5, 3.0.2 |
 | `marray` | 1.88.0 |
 | `maSigPro` | 1.82.0 |
-| `MASS` | 7.3-65 |
+| `MASS` | 7.3-61, 7.3-65 |
 | `MassSpecWavelet` | 1.76.0 |
 | `Matching` | 4.10-15 |
-| `MatchIt` | 4.7.2 |
+| `MatchIt` | 4.6.0, 4.7.2 |
 | `Math::Bezier` | 0.01 |
 | `Math::CDF` | 0.1 |
 | `Math::Round` | 0.08 |
 | `Math::Utils` | 1.14 |
 | `Math::VecStat` | 0.08 |
 | `Mathematica` | 14.0.0 |
-| `mathjaxr` | 1.8-0 |
+| `mathjaxr` | 1.6-0, 1.8-0 |
 | `matlab` | 1.0.4.1, 2022a, 2023a, 2023b, 2024b, 2025b |
 | `matplotlib` | 2.2.5-Python-2.7.18, 3.10.3, 3.10.3, 3.10.5, 3.10.5, 3.3.3, 3.4.2, 3.4.3, 3.5.2, 3.7.0, 3.7.2, 3.8.2, 3.9.2 |
 | `matplotlib-inline` | 0.1.6 |
-| `Matrix` | 1.7-4, 1.7-5 |
+| `Matrix` | 1.7-1, 1.7-4, 1.7-5 |
 | `matrixcalc` | 1.0-6 |
 | `MatrixGenerics` | 1.22.0 |
-| `MatrixModels` | 0.5-4 |
-| `matrixStats` | 1.5.0 |
+| `MatrixModels` | 0.5-3, 0.5-4 |
+| `matrixStats` | 1.4.1, 1.5.0 |
 | `maturin` | 1.1.0, 1.3.1, 1.4.0-Rust-1.75.0, 1.5.0-Rust-1.76.0, 1.6.0, 1.8.3, 1.9.1 |
 | `Maven` | 3.6.3, 3.9.7 |
 | `maxLik` | 1.5-2.1 |
-| `maxlike` | 0.1-12 |
+| `maxlike` | 0.1-11, 0.1-12 |
 | `maxnet` | 0.1.4 |
 | `MBA` | 0.1-2 |
 | `mboost` | 2.9-11 |
@@ -1908,17 +1911,17 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `mclust` | 6.1.1, 6.1.2 |
 | `mcmc` | 0.9-8 |
 | `MCMCpack` | 1.7-1 |
-| `mcmcse` | 1.5-1 |
+| `mcmcse` | 1.5-0, 1.5-1 |
 | `mctc-lib` | 0.3.1 |
 | `mda` | 0.5-5 |
 | `MDI` | 1.4.29 |
 | `mdurl` | 0.1.2 |
-| `medflex` | 0.6-11 |
-| `mediation` | 4.5.1 |
+| `medflex` | 0.6-10, 0.6-11 |
+| `mediation` | 4.5.0, 4.5.1 |
 | `MEDIPS` | 1.62.0 |
 | `MEGAHIT` | 1.2.9 |
 | `MEME` | 5.5.7 |
-| `memisc` | 0.99.31.8.3 |
+| `memisc` | 0.99.31.8.1, 0.99.31.8.3 |
 | `memoise` | 2.0.1 |
 | `memuse` | 4.2-3 |
 | `Mesa` | 20.2.1, 21.1.1, 21.1.7, 22.0.3, 22.2.4, 23.1.4, 23.1.9, 24.1.3, 25.1.3 |
@@ -1926,12 +1929,12 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Meshroom` | 2023.3.0-CUDA-12.1.1 |
 | `Meson` | 0.55.3, 0.58.0, 0.58.2, 0.62.1, 0.64.0, 1.1.1, 1.2.3, 1.4.0, 1.6.1, 1.8.2 |
 | `meson-python` | 0.11.0, 0.13.2, 0.15.0, 0.16.0, 0.18.0, 0.18.0 |
-| `MESS` | 0.6.0 |
+| `MESS` | 0.5.12, 0.6.0 |
 | `Meta::Builder` | 0.004 |
 | `MetaboCoreUtils` | 1.18.0 |
-| `metadat` | 1.4-0 |
+| `metadat` | 1.2-0, 1.4-0 |
 | `MetaEuk` | 6 |
-| `metafor` | 4.8-0 |
+| `metafor` | 4.6-0, 4.8-0 |
 | `metagenomeSeq` | 1.52.0 |
 | `metaMA` | 3.1.3 |
 | `metap` | 1.12 |
@@ -1944,21 +1947,21 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `MethylSeekR` | 1.50.0 |
 | `methylumi` | 2.56.0 |
 | `METIS` | 5.1.0 |
-| `mets` | 1.3.8 |
+| `mets` | 1.3.4, 1.3.8 |
 | `Mfuzz` | 2.70.0 |
 | `mgatk` | 0.7.0 |
-| `mgcv` | 1.9-3 |
+| `mgcv` | 1.9-1, 1.9-3 |
 | `mgltools` | 1.5.7 |
 | `mgsub` | 1.7.3 |
 | `mhsmm` | 0.4.21 |
-| `mi` | 1.2 |
+| `mi` | 1.1, 1.2 |
 | `mia` | 1.18.0 |
-| `mice` | 3.18.0 |
-| `miceadds` | 3.18-36 |
+| `mice` | 3.16.0, 3.18.0 |
+| `miceadds` | 3.17-44, 3.18-36 |
 | `microbenchmark` | 1.5.0 |
 | `MicrobiomeStat` | 1.2 |
 | `MIIVsem` | 0.5.8 |
-| `mime` | 0.13 |
+| `mime` | 0.12, 0.13 |
 | `MIME::Base32` | 1.303 |
 | `MIME::Base64` | 3.16 |
 | `MIME::Charset` | v1.013.1 |
@@ -1969,16 +1972,16 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Miniforge3` | 24.1.2-0, 24.11.3-0, 25.3.0-3 |
 | `minimap2` | 2.24, 2.26, 2.28, 2.29 |
 | `miniprot` | 0.13 |
-| `miniUI` | 0.1.2 |
+| `miniUI` | 0.1.1.1, 0.1.2 |
 | `minpack.lm` | 1.2-4 |
 | `minqa` | 1.2.8 |
-| `minty` | 0.0.5 |
+| `minty` | 0.0.4, 0.0.5 |
 | `mirai` | 2.5.3 |
-| `mirt` | 1.45.1 |
+| `mirt` | 1.43, 1.45.1 |
 | `misc3d` | 0.9-1 |
 | `miscTools` | 0.6-28 |
-| `missForest` | 1.6.1 |
-| `missMDA` | 1.20 |
+| `missForest` | 1.5, 1.6.1 |
+| `missMDA` | 1.19, 1.20 |
 | `missMethyl` | 1.44.0 |
 | `mistune` | 3.0.2 |
 | `mitml` | 0.4-5 |
@@ -1987,16 +1990,16 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Mixin::Linewise::Readers` | 0.111 |
 | `mixOmics` | 6.34.0 |
 | `mixsqp` | 0.3-54 |
-| `mixtools` | 2.0.0.1 |
+| `mixtools` | 2.0.0, 2.0.0.1 |
 | `ml-collections` | 0.1.1 |
 | `ml_collections` | 0.1.1 |
 | `ml_dtypes` | 0.3.2, 0.5.0, 0.5.0 |
-| `mlbench` | 2.1-6 |
+| `mlbench` | 2.1-5, 2.1-6 |
 | `mlegp` | 3.1.9 |
 | `MLInterfaces` | 1.90.0 |
 | `MLmetrics` | 1.1.3 |
-| `mlogit` | 1.1-3 |
-| `mlr` | 2.19.3 |
+| `mlogit` | 1.1-1, 1.1-3 |
+| `mlr` | 2.19.2, 2.19.3 |
 | `mlrMBO` | 1.1.5.1 |
 | `mltools` | 0.3.5 |
 | `mm-common` | 1.0.4 |
@@ -2008,10 +2011,10 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `modeest` | 2.4.0 |
 | `ModelMetrics` | 1.2.2.2 |
 | `modelr` | 0.1.11 |
-| `modeltools` | 0.2-24 |
+| `modeltools` | 0.2-23, 0.2-24 |
 | `modin` | 0.32.0, 0.32.0 |
 | `modkit` | 0.5.0, 0.6.1 |
-| `modsem` | 1.0.13 |
+| `modsem` | 1.0.13, 1.0.6 |
 | `Module::Build` | 0.4234 |
 | `Module::Build::Tiny` | 0.051, 0.052 |
 | `Module::Build::XSUtil` | 0.19 |
@@ -2026,7 +2029,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Module::Runtime` | 0.016, 0.018 |
 | `Module::Runtime::Conflicts` | 0.003 |
 | `Molden` | 7.1 |
-| `momentfit` | 1.0 |
+| `momentfit` | 0.5, 1.0 |
 | `moments` | 0.14.1 |
 | `MonteCarlo` | 1.0.6 |
 | `Moo` | 2.005005 |
@@ -2039,7 +2042,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `MooseX::Types::Perl` | 0.101344 |
 | `more-itertools` | 10.2.0, 10.6.0, 10.7.0 |
 | `more_itertools` | 10.7.0 |
-| `mosaicCore` | 0.9.5 |
+| `mosaicCore` | 0.9.4.0, 0.9.5 |
 | `mosdepth` | 0.3.3 |
 | `motif` | 2.3.8 |
 | `MotifDb` | 1.52.0 |
@@ -2052,7 +2055,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `MPFR` | 4.1.0, 4.2.0, 4.2.1, 4.2.2 |
 | `mpi4py` | 3.1.4, 3.1.5, 4.0.1, 4.1.0, 4.1.0 |
 | `MPICH` | 3.4.2 |
-| `MplusAutomation` | 1.2 |
+| `MplusAutomation` | 1.1.1, 1.2 |
 | `mpmath` | 1.3.0 |
 | `MrBayes` | 3.2.7 |
 | `mRMRe` | 2.1.2.2 |
@@ -2074,7 +2077,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `MSstatsTMT` | 2.18.0 |
 | `mstate` | 0.3.3 |
 | `mstore` | 0.3.0 |
-| `multcomp` | 1.4-29 |
+| `multcomp` | 1.4-26, 1.4-29 |
 | `multcompView` | 0.1-10 |
 | `MultiAssayExperiment` | 1.36.0 |
 | `multichoose` | 1.0.3 |
@@ -2092,7 +2095,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `mutoss` | 0.1-13 |
 | `mvabund` | 4.2.1 |
 | `mvnfast` | 0.2.8 |
-| `mvtnorm` | 1.3-3 |
+| `mvtnorm` | 1.3-2, 1.3-3 |
 | `mzID` | 1.48.0 |
 | `mzR` | 2.44.0 |
 
@@ -2128,7 +2131,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `ncbi-vdb` | 3.0.2 |
 | `ncbit` | 2013.03.29.1 |
 | `NCCL` | 2.12.12-CUDA-11.7.0, 2.18.3-CUDA-12.1.1, 2.22.3-CUDA-12.6.0, 2.26.6-CUDA-12.8.0, 2.27.7-CUDA-12.9.1, 2.8.3-CUDA-11.1.1 |
-| `ncdf4` | 1.24 |
+| `ncdf4` | 1.23, 1.24 |
 | `ncdfFlow` | 2.56.0 |
 | `NCmisc` | 1.2.0 |
 | `NCO` | 5.1.3, 5.1.9 |
@@ -2146,10 +2149,10 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `netCDF-Fortran` | 4.5.3, 4.6.0, 4.6.1 |
 | `netcdf4-python` | 1.5.5.1, 1.6.4 |
 | `netifaces` | 0.11.0 |
-| `nettle` | 3.10.1, 3.10.2, 3.7.3, 3.8, 3.8.1, 3.9.1 |
-| `network` | 1.19.0 |
+| `nettle` | 3.10, 3.10.1, 3.10.2, 3.7.3, 3.8, 3.8.1, 3.9.1 |
+| `network` | 1.18.2, 1.19.0 |
 | `networkDynamic` | 0.11.5 |
-| `networkLite` | 1.1.0 |
+| `networkLite` | 1.0.5, 1.1.0 |
 | `networkx` | 2.5, 2.6.3, 2.8.4, 3.0, 3.1, 3.2.1, 3.4.2 |
 | `neuralnet` | 1.44.2 |
 | `neuRosim` | 0.2-14 |
@@ -2165,15 +2168,15 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Ninja` | 1.10.1, 1.10.2, 1.11.1, 1.12.1, 1.13.0 |
 | `NISTunits` | 1.0.1 |
 | `nleqslv` | 3.3.5 |
-| `nlme` | 3.1-168 |
+| `nlme` | 3.1-166, 3.1-168 |
 | `nlohmann_json` | 3.10.5, 3.11.2, 3.11.3, 3.12.0 |
 | `NLopt` | 2.10.0, 2.7.0, 2.7.1 |
-| `nloptr` | 2.2.1 |
+| `nloptr` | 2.1.1, 2.2.1 |
 | `NLP` | 0.3-2 |
 | `nlsem` | 0.8-1 |
 | `NLTK` | 3.8.1, 3.8.1 |
 | `NMF` | 0.28 |
-| `nnet` | 7.3-20 |
+| `nnet` | 7.3-19, 7.3-20 |
 | `nnls` | 1.6 |
 | `nodeenv` | 1.8.0, 1.9.1 |
 | `nodejs` | 16.15.1, 18.12.1, 18.17.1, 20.13.1, 20.9.0, 22.16.0, 22.17.1 |
@@ -2184,7 +2187,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `nortest` | 1.0-4 |
 | `notebook` | 7.0.8 |
 | `notebook_shim` | 0.2.4 |
-| `np` | 0.60-18 |
+| `np` | 0.60-17, 0.60-18 |
 | `npsurv` | 0.5-0 |
 | `NSPR` | 4.29, 4.30, 4.32, 4.34, 4.35, 4.36, 4.37 |
 | `NSS` | 3.104, 3.113, 3.114, 3.57, 3.65, 3.69, 3.79, 3.85, 3.89.1, 3.94 |
@@ -2214,9 +2217,9 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Object::InsideOut` | 4.05 |
 | `occt` | 7.5.0p1 |
 | `oce` | 1.8-3 |
-| `OceanView` | 1.0.8 |
-| `oddsratio` | 2.0.2 |
-| `officer` | 0.7.0 |
+| `OceanView` | 1.0.7, 1.0.8 |
+| `oddsratio` | 2.0.1, 2.0.2 |
+| `officer` | 0.6.7, 0.7.0 |
 | `oligo` | 1.74.0 |
 | `oligoClasses` | 1.72.0 |
 | `ollama` | 0.32.14 |
@@ -2225,7 +2228,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `oompaBase` | 3.2.10 |
 | `oompaData` | 3.1.5 |
 | `OPARI2` | 2.0.6, 2.0.7, 2.0.8, 2.0.9 |
-| `openair` | 2.19.0 |
+| `openair` | 2.18-2, 2.19.0 |
 | `OpenBabel` | 3.1.1 |
 | `OpenBLAS` | 0.3.12, 0.3.15, 0.3.18, 0.3.20, 0.3.20-int8, 0.3.21, 0.3.23, 0.3.24, 0.3.27, 0.3.29, 0.3.30 |
 | `OpenCV` | 4.5.1-contrib, 4.6.0-CUDA-11.7.0-contrib, 4.6.0-contrib |
@@ -2238,13 +2241,13 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `OpenMM` | 7.7.0-foss-2022a-CUDA-11.7.0, 8.0.0, 8.0.0-CUDA-12.1.1, 8.0.0-foss-2022a-CUDA-11.7.0 |
 | `OpenMolcas` | 22.10 |
 | `OpenMPI` | 4.0.5, 4.1.1, 4.1.4, 4.1.5, 4.1.6, 5.0.3, 5.0.7, 5.0.8 |
-| `OpenMx` | 2.22.9 |
+| `OpenMx` | 2.21.13, 2.22.9 |
 | `OpenPGM` | 5.2.122 |
 | `OpenPNM` | 3.3.0 |
 | `openpyxl` | 3.1.2, 3.1.2, 3.1.5, 3.1.5 |
 | `OpenSSL` | 1.1, 3 |
-| `openssl` | 2.3.4 |
-| `openxlsx` | 4.2.8, 4.2.8.1 |
+| `openssl` | 2.2.2, 2.3.4 |
+| `openxlsx` | 4.2.7.1, 4.2.8, 4.2.8.1 |
 | `operator.tools` | 1.6.3 |
 | `opt-einsum` | 3.3.0 |
 | `opt_einsum` | 3.3.0, 3.4.0 |
@@ -2254,7 +2257,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `optextras` | 2019-12.4 |
 | `optimParallel` | 1.0-2 |
 | `optimr` | 2019-12.16 |
-| `optimx` | 2025-4.9 |
+| `optimx` | 2023-10.21, 2025-4.9 |
 | `optmatch` | 0.10.8 |
 | `optparse` | 1.7.5 |
 | `optree` | 0.14.1 |
@@ -2292,13 +2295,13 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Package::Stash` | 0.40 |
 | `Package::Stash::XS` | 0.30 |
 | `packaging` | 23.1, 23.2, 24.2, 25.0 |
-| `packrat` | 0.9.3 |
+| `packrat` | 0.9.2, 0.9.3 |
 | `pacman` | 0.5.1 |
 | `PadWalker` | 2.5 |
 | `pagmo` | 2.19.1 |
 | `pairtools` | v1.1.0 |
 | `pamela` | 1.1.0 |
-| `pammtools` | 0.7.3 |
+| `pammtools` | 0.5.93, 0.7.3 |
 | `pamr` | 1.57 |
 | `pan` | 1.9 |
 | `pandas` | 2.3.0, 2.3.1 |
@@ -2309,11 +2312,11 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `PAPI` | 7.0.0, 7.0.1, 7.1.0 |
 | `parallel` | 20210322, 20220722, 20230722 |
 | `Parallel::ForkManager` | 2.03 |
-| `parallelDist` | 0.2.7 |
-| `parallelly` | 1.45.1 |
+| `parallelDist` | 0.2.6, 0.2.7 |
+| `parallelly` | 1.39.0, 1.45.1 |
 | `parallelMap` | 1.5.1 |
 | `parameterized` | 0.9.0 |
-| `ParamHelpers` | 1.14.2 |
+| `ParamHelpers` | 1.14.1, 1.14.2 |
 | `Params::Check` | 0.38 |
 | `Params::Util` | 1.102 |
 | `Params::Validate` | 1.31 |
@@ -2324,23 +2327,23 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `ParMETIS` | 4.0.3 |
 | `Parse::RecDescent` | 1.967015 |
 | `Parse::Yapp` | 1.21 |
-| `parsedate` | 1.3.2 |
+| `parsedate` | 1.3.1, 1.3.2 |
 | `parso` | 0.8.3 |
 | `partd` | 1.4.0, 1.4.2 |
-| `party` | 1.3-18 |
-| `partykit` | 1.2-24 |
+| `party` | 1.3-17, 1.3-18 |
+| `partykit` | 1.2-22, 1.2-24 |
 | `pastecs` | 1.4.2 |
 | `pastel` | 0.2.1 |
 | `patchelf` | 0.17.2, 0.18.0 |
-| `patchwork` | 1.3.2 |
+| `patchwork` | 1.3.0, 1.3.2 |
 | `Path::Tiny` | 0.146, 0.150 |
 | `pathlib2` | 2.3.7.post1 |
 | `pathspec` | 0.12.1 |
 | `pathview` | 1.50.0 |
 | `patsy` | 0.5.6 |
-| `pbapply` | 1.7-4 |
+| `pbapply` | 1.7-2, 1.7-4 |
 | `pbivnorm` | 0.6.0 |
-| `pbkrtest` | 0.5.5 |
+| `pbkrtest` | 0.5.3, 0.5.5 |
 | `pbmcapply` | 1.5.1 |
 | `pbr` | 6.1.1 |
 | `pbs-installer` | 2024.9.9 |
@@ -2361,14 +2364,14 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `pdp` | 0.8.2 |
 | `PDT` | 3.25.1, 3.25.2 |
 | `PEAR` | 0.9.11 |
-| `PearsonDS` | 1.3.2 |
-| `pec` | 2025.06.24 |
-| `penalized` | 0.9-53 |
+| `PearsonDS` | 1.3.1, 1.3.2 |
+| `pec` | 2023.04.12, 2025.06.24 |
+| `penalized` | 0.9-52, 0.9-53 |
 | `penfa` | 0.1.1 |
-| `peperr` | 1.6 |
+| `peperr` | 1.5, 1.6 |
 | `pephubclient` | 0.4.4 |
 | `peppy` | 0.40.1, 0.40.6 |
-| `performance` | 0.15.2 |
+| `performance` | 0.12.4, 0.15.2 |
 | `Perl` | 5.32.0, 5.32.0-minimal, 5.32.1, 5.32.1-minimal, 5.34.0, 5.34.1, 5.34.1-minimal, 5.36.0, 5.36.0-minimal, 5.36.1, 5.38.0, 5.38.2, 5.40.0, 5.40.2, 5.42.0 |
 | `Perl-bundle-CPAN` | 5.36.1, 5.38.0, 5.38.2, 5.40.0, 5.40.2 |
 | `Perl::OSType` | 1.010 |
@@ -2376,12 +2379,12 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `PerlIO::utf8_strict` | 0.010 |
 | `perm` | 1.0-0.4 |
 | `PermAlgo` | 1.2 |
-| `permute` | 0.9-8 |
+| `permute` | 0.9-7, 0.9-8 |
 | `PETSc` | 3.14.4, 3.17.4 |
 | `pexpect` | 4.9.0 |
 | `PFAM.db` | 3.22.0 |
 | `phangorn` | 2.12.1 |
-| `pheatmap` | 1.0.13 |
+| `pheatmap` | 1.0.12, 1.0.13 |
 | `phono3py` | 2.7.0 |
 | `phonopy` | 2.20.0 |
 | `phylobase` | 0.8.12 |
@@ -2389,38 +2392,38 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `phyloseq` | 1.54.0 |
 | `phylowgs` | v1.0 |
 | `PhyML` | 3.3.20220408 |
-| `phytools` | 2.5-2 |
+| `phytools` | 2.3-0, 2.5-2 |
 | `picard` | 2.25.1-Java-11 |
 | `pickleshare` | 0.7.5 |
 | `pigz` | 2.8 |
-| `pillar` | 1.11.1 |
+| `pillar` | 1.11.1, 1.9.0 |
 | `Pillow` | 10.0.0, 10.2.0, 10.4.0, 11.3.0, 8.0.1, 8.2.0, 8.3.2, 9.1.1, 9.4.0 |
 | `Pillow-SIMD` | 10.4.0, 9.2.0, 9.5.0 |
-| `pim` | 2.0.4 |
+| `pim` | 2.0.2, 2.0.4 |
 | `pinfsc50` | 1.3.0 |
 | `Pint` | 0.23 |
 | `pip` | 24.3.1, 25.1.1 |
 | `piper` | 0.14.0, 0.14.2 |
 | `pipestat` | 0.10.2, 0.8.2 |
 | `pixman` | 0.40.0, 0.42.2, 0.43.4, 0.46.2, 0.46.4 |
-| `pixmap` | 0.4-14 |
+| `pixmap` | 0.4-13, 0.4-14 |
 | `pkg-config` | 0.29.2 |
-| `pkgbuild` | 1.4.8 |
+| `pkgbuild` | 1.4.5, 1.4.8 |
 | `pkgconf` | 1.8.0, 1.9.3, 1.9.5, 2.0.3, 2.2.0, 2.3.0, 2.4.3 |
 | `pkgconfig` | 1.5.1-python, 1.5.4-python, 1.5.5-python, 2.0.3 |
-| `pkgdown` | 2.1.3 |
+| `pkgdown` | 2.1.1, 2.1.3 |
 | `pkginfo` | 1.12.1.2, 1.9.6 |
-| `pkgload` | 1.4.1 |
+| `pkgload` | 1.4.0, 1.4.1 |
 | `pkgmaker` | 0.32.10 |
-| `PKI` | 0.1-15 |
+| `PKI` | 0.1-14, 0.1-15 |
 | `plac` | 1.4.2, 1.4.3 |
 | `platformdirs` | 3.11.0, 4.3.6, 4.3.7, 4.3.8 |
 | `PLINK` | 1.9b_6.21-x86_64, 2.00a2.3, 2.00a3.7 |
 | `plinkliftover` | 0.3.0, 0.3.0 |
 | `plogr` | 0.2.0 |
-| `plot3D` | 1.4.2 |
-| `plot3Drgl` | 1.0.5 |
-| `plotly` | 4.11.0, 5.16.0 |
+| `plot3D` | 1.4.1, 1.4.2 |
+| `plot3Drgl` | 1.0.4, 1.0.5 |
+| `plotly` | 4.10.4, 4.11.0, 5.16.0 |
 | `plotly.py` | 5.12.0, 5.16.0, 5.4.0 |
 | `plotmo` | 3.6.4 |
 | `plotrix` | 3.8-4 |
@@ -2456,7 +2459,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `polars` | 0.20.2 |
 | `poLCA` | 1.6.0.1 |
 | `polspline` | 1.1.25 |
-| `Polychrome` | 1.5.4 |
+| `Polychrome` | 1.5.1, 1.5.4 |
 | `polyclip` | 1.10-7 |
 | `polycor` | 0.8-1 |
 | `polynom` | 1.4-1 |
@@ -2464,39 +2467,39 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `pooch` | 1.8.2 |
 | `poppler` | 22.01.0, 22.12.0, 23.09.0 |
 | `portpicker` | 1.5.2 |
-| `posterior` | 1.6.1 |
+| `posterior` | 1.6.0, 1.6.1 |
 | `PostgreSQL` | 16.1, 16.4, 17.5 |
 | `POV-Ray` | 3.7.0.10 |
 | `poweRlaw` | 1.0.0 |
 | `ppcor` | 1.1 |
 | `PPI` | 1.279, 1.283 |
 | `prabclus` | 2.3-4 |
-| `pracma` | 2.4.6 |
+| `pracma` | 2.4.4, 2.4.6 |
 | `praise` | 1.0.0 |
 | `pre-commit` | 3.7.0, 3.8.0 |
 | `predicts` | 0.1-19 |
 | `preprocessCore` | 1.72.0 |
 | `PresenceAbsence` | 1.1.11 |
 | `preseqR` | 4.0.0 |
-| `prettyGraphs` | 2.2.0 |
+| `prettyGraphs` | 2.1.6, 2.2.0 |
 | `prettyunits` | 1.2.0 |
 | `princurve` | 2.1.6 |
-| `pROC` | 1.19.0.1 |
-| `processx` | 3.8.6 |
+| `pROC` | 1.18.5, 1.19.0.1 |
+| `processx` | 3.8.4, 3.8.6 |
 | `prodigal` | 2.6.3 |
-| `prodlim` | 2025.04.28 |
+| `prodlim` | 2024.06.25, 2025.04.28 |
 | `profileModel` | 0.6.1 |
 | `proftools` | 0.99-3 |
 | `profvis` | 0.4.0 |
 | `progress` | 1.2.3 |
-| `progressr` | 0.17.0 |
+| `progressr` | 0.15.1, 0.17.0 |
 | `PROJ` | 7.2.1, 8.0.1, 8.1.0, 9.0.0, 9.1.1, 9.2.0, 9.3.1, 9.4.1, 9.6.2 |
-| `projpred` | 2.9.0, 2.9.1 |
+| `projpred` | 2.8.0, 2.9.0, 2.9.1 |
 | `pRoloc` | 1.50.0 |
 | `pRolocdata` | 1.48.0 |
 | `pRolocGUI` | 2.20.0 |
 | `prometheus_client` | 0.17.1, 0.21.0 |
-| `promises` | 1.3.3, 1.5.0 |
+| `promises` | 1.3.0, 1.3.3, 1.5.0 |
 | `prompt-toolkit` | 3.0.36 |
 | `prompt_toolkit` | 3.0.41 |
 | `propcache` | 0.2.0 |
@@ -2505,28 +2508,28 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `protobuf` | 23.0, 24.0, 25.3, 28.0, 3.14.0, 3.19.4 |
 | `protobuf-python` | 3.19.4, 4.23.0, 4.24.0, 4.25.3, 5.28.0 |
 | `proxy` | 0.4-27 |
-| `proxyC` | 0.5.2 |
+| `proxyC` | 0.4.1, 0.5.2 |
 | `PRROC` | 1.4 |
 | `PRRTE` | 3.0.11, 3.0.5, 3.0.8 |
 | `PRSice` | 2.3.5, v2.3.5 |
 | `pryr` | 0.1.6 |
-| `ps` | 1.9.1 |
+| `ps` | 1.8.1, 1.9.1 |
 | `PSCBS` | 0.68.0 |
 | `pscl` | 1.5.9 |
 | `PSMatch` | 1.14.0 |
-| `pspline` | 1.0-21 |
+| `pspline` | 1.0-20, 1.0-21 |
 | `psutil` | 6.0.0, 6.0.0, 7.0.0, 7.0.0 |
-| `psych` | 2.5.6 |
+| `psych` | 2.4.6.26, 2.5.6 |
 | `psycopg` | 3.1.18 |
 | `psycopg2` | 2.9.9 |
 | `ptyprocess` | 0.7.0 |
-| `Publish` | 2025.07.24 |
+| `Publish` | 2023.01.17, 2025.07.24 |
 | `pugixml` | 1.12.1, 1.14 |
 | `PuLP` | 2.7.0, 2.8.0, 2.8.0, 3.1.1 |
 | `pulsar` | 0.3.11 |
 | `pure_eval` | 0.2.2 |
 | `PureCN` | 2.16.0 |
-| `purrr` | 1.1.0, 1.2.0 |
+| `purrr` | 1.0.2, 1.1.0, 1.2.0 |
 | `pvclust` | 2.2-0 |
 | `pwalign` | 1.6.0 |
 | `PWEALL` | 1.3.0.1 |
@@ -2632,7 +2635,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `qctool` | v2.2.0rel |
 | `QDNAseq` | 1.46.0 |
 | `QFeatures` | 1.20.0 |
-| `qgam` | 2.0.0 |
+| `qgam` | 1.3.4, 2.0.0 |
 | `QGIS` | 3.30.3, 4.0.1, 4.2.1 |
 | `qgraph` | 1.9.8 |
 | `Qhull` | 2020.2 |
@@ -2649,45 +2652,45 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `QtPy` | 2.2.1, 2.3.0, 2.4.1 |
 | `quadprog` | 1.5-8, 1.5.8-R4.2.1 |
 | `Qualimap` | 2.3-R-4.4.1 |
-| `quanteda` | 4.3.1 |
-| `quantmod` | 0.4.28 |
-| `quantreg` | 6.1 |
+| `quanteda` | 4.1.0, 4.3.1 |
+| `quantmod` | 0.4.26, 0.4.28 |
+| `quantreg` | 5.99.1, 6.1 |
 | `quantsmooth` | 1.76.0 |
 | `QuantumESPRESSO` | 7.1, 7.3.1, 7.4, 7.4.1 |
 | `questionary` | 2.0.1 |
-| `questionr` | 0.8.1 |
-| `QuickJSR` | 1.8.1 |
+| `questionr` | 0.7.8, 0.8.1 |
+| `QuickJSR` | 1.4.0, 1.8.1 |
 | `qvalue` | 2.42.0 |
 | `Qwt` | 6.2.0 |
 
 ## R
 
-**[253 modules]**
+**[255 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
-| `R` | 4.2.1, 4.3.2, 4.4.1, 4.5.1, 4.5.2 |
+| `R` | 4.2.1, 4.3.2, 4.4.1, 4.4.2, 4.5.1, 4.5.2 |
 | `R-bundle-Bioconductor` | 3.15-R-4.2.1, 3.18-R-4.3.2, 3.18-R-4.4.1, 3.19-R-4.4.1, 3.22-R-4.5.2 |
-| `R-bundle-CRAN` | 2023.12, 2023.12-R-4.4.1, 2025.10, 2025.11 |
-| `R.cache` | 0.17.0 |
+| `R-bundle-CRAN` | 2023.12, 2023.12-R-4.4.1, 2024.11, 2025.10, 2025.11 |
+| `R.cache` | 0.16.0, 0.17.0 |
 | `R.devices` | 2.17.2 |
 | `R.filesets` | 2.15.1 |
 | `R.huge` | 0.10.1 |
 | `R.matlab` | 3.7.0 |
 | `R.methodsS3` | 1.8.2 |
-| `R.oo` | 1.27.1 |
+| `R.oo` | 1.27.0, 1.27.1 |
 | `R.rsp` | 0.46.0 |
-| `R.utils` | 2.13.0 |
-| `r2rtf` | 1.2.0 |
-| `R2WinBUGS` | 2.1-23 |
-| `R6` | 2.6.1 |
-| `ragg` | 1.5.0 |
+| `R.utils` | 2.12.3, 2.13.0 |
+| `r2rtf` | 1.1.1, 1.2.0 |
+| `R2WinBUGS` | 2.1-22.1, 2.1-23 |
+| `R6` | 2.5.1, 2.6.1 |
+| `ragg` | 1.3.3, 1.5.0 |
 | `rainbow` | 3.8 |
 | `RAMSES` | ramses-20240314 |
 | `random` | 0.2.6 |
 | `randomcoloR` | 1.1.0.1 |
 | `randomForest` | 4.7-1.2 |
-| `randomForestSRC` | 3.4.3 |
+| `randomForestSRC` | 3.3.1, 3.4.3 |
 | `randtoolbox` | 2.0.5 |
 | `rangeModelMetadata` | 0.1.5 |
 | `ranger` | 0.17.0 |
@@ -2698,18 +2701,18 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `RAPIDS` | rapids-25.06 |
 | `rappdirs` | 0.3.3 |
 | `rARPACK` | 0.11-0 |
-| `raster` | 3.6-32 |
+| `raster` | 3.6-30, 3.6-32 |
 | `rasterio` | 1.4.3, 1.4.3 |
-| `rasterVis` | 0.51.7 |
-| `ratelimitr` | 0.4.2 |
+| `rasterVis` | 0.51.6, 0.51.7 |
+| `ratelimitr` | 0.4.1, 0.4.2 |
 | `Ray` | 2.37.0, 2.9.1 |
 | `Ray-project` | 2.37.0, 2.9.1 |
-| `RBesT` | 1.8-2 |
+| `RBesT` | 1.7-4, 1.8-2 |
 | `RBGL` | 1.86.0 |
 | `rbibutils` | 2.3 |
 | `rbiom` | 2.2.1 |
 | `rbison` | 1.0.0 |
-| `Rborist` | 0.3-11 |
+| `Rborist` | 0.3-11, 0.3-7 |
 | `RCAL` | 2.0 |
 | `Rcgmin` | 2022-4.30 |
 | `RCircos` | 1.2.2 |
@@ -2717,22 +2720,22 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `rclone` | 1.63.1-amd64 |
 | `rcmdcheck` | 1.4.0 |
 | `RColorBrewer` | 1.1-3 |
-| `Rcpp` | 1.1.0 |
+| `Rcpp` | 1.0.13-1, 1.1.0 |
 | `RcppAnnoy` | 0.0.22 |
-| `RcppArmadillo` | 15.0.2-2 |
+| `RcppArmadillo` | 14.2.0-1, 15.0.2-2 |
 | `RcppEigen` | 0.3.4.0.2 |
 | `RcppGSL` | 0.3.13 |
 | `RcppHNSW` | 0.6.0 |
 | `RcppML` | 0.3.7 |
-| `RcppParallel` | 5.1.11-1 |
+| `RcppParallel` | 5.1.11-1, 5.1.9 |
 | `RcppProgress` | 0.4.2 |
 | `RcppRoll` | 0.3.1 |
-| `RcppThread` | 2.2.0 |
-| `RcppTOML` | 0.2.3 |
+| `RcppThread` | 2.1.7, 2.2.0 |
+| `RcppTOML` | 0.2.2, 0.2.3 |
 | `RcppZiggurat` | 0.1.8 |
-| `RCurl` | 1.98-1.17 |
+| `RCurl` | 1.98-1.16, 1.98-1.17 |
 | `rda` | 1.2-1 |
-| `Rdpack` | 2.6.4 |
+| `Rdpack` | 2.6.2, 2.6.4 |
 | `rdrop2` | 0.8.2.1 |
 | `RE2` | 2022-02-01, 2022-06-01, 2023-03-01, 2023-08-01, 2024-07-02, 2025-07-22 |
 | `re2c` | 2.0.3, 2.1.1, 2.2, 3.0, 3.1, 4.2, 4.3 |
@@ -2742,13 +2745,13 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `reactR` | 0.6.1 |
 | `readbitmap` | 0.1.5 |
 | `reader` | 1.0.6 |
-| `readODS` | 2.3.2 |
+| `readODS` | 2.3.1, 2.3.2 |
 | `Readonly` | 2.05 |
 | `readr` | 2.1.5 |
-| `readxl` | 1.4.5 |
+| `readxl` | 1.4.3, 1.4.5 |
 | `realityscan` | 2.2 |
 | `rebird` | 1.3.0 |
-| `recipes` | 1.3.1 |
+| `recipes` | 1.1.0, 1.3.1 |
 | `Redis` | 6.2.6, 7.2.3, 7.4.1 |
 | `redis-py` | 5.0.1, 5.0.1, 5.1.1, 5.1.1 |
 | `Ref::Util` | 0.204 |
@@ -2756,7 +2759,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `RefFreeEWAS` | 2.2 |
 | `refgenconf` | 0.12.2 |
 | `refgenie` | 0.12.1 |
-| `reformulas` | 0.4.1, 0.4.2 |
+| `reformulas` | 0.4.0, 0.4.1, 0.4.2 |
 | `Regenie` | 3.1.2 |
 | `regex` | 2023.12.25, 2024.11.6, 2024.7.24, 2025.7.31 |
 | `Regexp::Common` | 2024080801 |
@@ -2764,14 +2767,14 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `registry` | 0.5-1 |
 | `regsem` | 1.9.5 |
 | `reldist` | 1.7-2 |
-| `relsurv` | 2.3-3 |
+| `relsurv` | 2.2-9, 2.3-3 |
 | `remaCor` | 0.0.20 |
 | `rematch` | 2.0.0 |
 | `rematch2` | 2.1.2 |
 | `REMORA` | 2.0 |
 | `remotes` | 2.5.0 |
-| `rentrez` | 1.2.4 |
-| `renv` | 1.1.5 |
+| `rentrez` | 1.2.3, 1.2.4 |
+| `renv` | 1.0.11, 1.1.5 |
 | `RepeatMasker` | 4.2.1 |
 | `ReportingTools` | 2.50.0 |
 | `reportlab` | 3.6.12, 4.0.0 |
@@ -2783,22 +2786,24 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `reretry` | 0.11.8 |
 | `resample` | 0.6 |
 | `resampy` | 0.4.3 |
-| `reshape` | 0.8.10 |
+| `reshape` | 0.8.10, 0.8.9 |
 | `reshape2` | 1.4.4 |
 | `ResidualMatrix` | 1.20.0 |
 | `resolvelib` | 1.0.1 |
 | `restfulr` | 0.0.16 |
-| `reticulate` | 1.44.0 |
+| `reticulate` | 1.40.0, 1.44.0 |
 | `rex` | 1.2.1 |
 | `Rfast` | 2.1.5.2 |
 | `rfc3339_validator` | 0.1.4 |
 | `rfc3986_validator` | 0.1.1 |
 | `RFdiffusion` | 1.1.0 |
 | `RFOC` | 3.4-10 |
-| `rgbif` | 3.8.3 |
+| `rgbif` | 3.8.1, 3.8.3 |
 | `RGCCA` | 3.0.3 |
+| `rgdal` | 1.6-7 |
+| `rgeos` | 0.6-4 |
 | `rgexf` | 0.16.3 |
-| `rgl` | 1.3.24 |
+| `rgl` | 1.3.14, 1.3.24 |
 | `Rglpk` | 0.6-5.1 |
 | `Rgraphviz` | 2.54.0 |
 | `rhandsontable` | 0.3.8 |
@@ -2811,24 +2816,24 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `rich-click` | 1.8.8, 1.8.9 |
 | `ridge` | 3.3 |
 | `ridigbio` | 0.4.1 |
-| `RInside` | 0.2.19 |
-| `rio` | 1.2.4 |
-| `riskRegression` | 2025.09.17 |
+| `RInside` | 0.2.18, 0.2.19 |
+| `rio` | 1.2.3, 1.2.4 |
+| `riskRegression` | 2023.12.21, 2025.09.17 |
 | `ritis` | 1.0.0 |
-| `RItools` | 0.3-5 |
+| `RItools` | 0.3-4, 0.3-5 |
 | `rJava` | 1.0-11 |
 | `rjson` | 0.2.23 |
-| `RJSONIO` | 2.0.0 |
-| `rlang` | 1.1.6 |
-| `rle` | 0.10.0 |
+| `RJSONIO` | 1.3-1.9, 2.0.0 |
+| `rlang` | 1.1.4, 1.1.6 |
+| `rle` | 0.10.0, 0.9.2 |
 | `rlecuyer` | 0.3-8 |
 | `rlemon` | 0.2.1 |
 | `rlist` | 0.4.6.2 |
-| `rmarkdown` | 2.30 |
+| `rmarkdown` | 2.29, 2.30 |
 | `RMBlast` | 2.14.1 |
 | `rmeta` | 3.0 |
-| `Rmpfr` | 1.1-2 |
-| `rms` | 8.1-0 |
+| `Rmpfr` | 1.0-0, 1.1-2 |
+| `rms` | 6.8-2, 8.1-0 |
 | `RMTstat` | 0.3.1 |
 | `rmutil` | 1.1.10 |
 | `Rnanoflann` | 0.0.3 |
@@ -2844,8 +2849,8 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `RNeXML` | 2.4.11 |
 | `rngtools` | 1.5.2 |
 | `rngWELL` | 0.10-10 |
-| `RNifti` | 1.8.0 |
-| `robustbase` | 0.99-6 |
+| `RNifti` | 1.7.0, 1.8.0 |
+| `robustbase` | 0.99-4-1, 0.99-6 |
 | `ROC` | 1.86.0 |
 | `ROCR` | 1.0-11 |
 | `ROCR-Runtime` | 4.5.0 |
@@ -2861,39 +2866,39 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `ROOT` | 6.24.06, 6.26.06, 6.30.06 |
 | `rootSolve` | 1.8.2.4 |
 | `ropls` | 1.42.0 |
-| `roptim` | 0.1.7 |
+| `roptim` | 0.1.6, 0.1.7 |
 | `rotl` | 3.1.0 |
-| `roxygen2` | 7.3.3 |
-| `rpact` | 4.2.1 |
-| `rpart` | 4.1.24 |
+| `roxygen2` | 7.3.2, 7.3.3 |
+| `rpact` | 4.1.0, 4.2.1 |
+| `rpart` | 4.1.23, 4.1.24 |
 | `rpds-py` | 0.24.0, 0.26.0 |
 | `rpds_py` | 0.17.1, 0.20.0 |
-| `rpf` | 1.0.15 |
+| `rpf` | 1.0.14, 1.0.15 |
 | `RPMG` | 2.2-7 |
 | `RPMM` | 1.25 |
 | `rpmrebuild` | 2.11 |
-| `RPostgreSQL` | 0.7-8 |
-| `rprojroot` | 2.1.1 |
+| `RPostgreSQL` | 0.7-7, 0.7-8 |
+| `rprojroot` | 2.0.4, 2.1.1 |
 | `RProtoBufLib` | 2.22.0 |
-| `RPushbullet` | 0.3.5 |
-| `rrcov` | 1.7-7 |
-| `rredlist` | 1.1.1 |
+| `RPushbullet` | 0.3.4, 0.3.5 |
+| `rrcov` | 1.7-6, 1.7-7 |
+| `rredlist` | 0.7.1, 1.1.1 |
 | `rsa` | 4.9 |
-| `rsample` | 1.3.1 |
+| `rsample` | 1.2.1, 1.3.1 |
 | `Rsamtools` | 2.26.0 |
-| `rsconnect` | 1.5.1, 1.6.1 |
+| `rsconnect` | 1.3.3, 1.5.1, 1.6.1 |
 | `RSEIS` | 4.2-4 |
 | `RSEM` | 1.3.3 |
-| `Rserve` | 1.8-15 |
+| `Rserve` | 1.8-13, 1.8-15 |
 | `rserver` | 4.4.2 |
 | `RSNNS` | 0.4-17 |
-| `Rsolnp` | 2.0.1 |
+| `Rsolnp` | 1.16, 2.0.1 |
 | `RSpectra` | 0.16-2 |
-| `RSQLite` | 2.4.3 |
+| `RSQLite` | 2.3.8, 2.4.3 |
 | `Rssa` | 1.1 |
-| `rstan` | 2.32.7 |
-| `rstantools` | 2.5.0 |
-| `rstatix` | 0.7.3 |
+| `rstan` | 2.32.6, 2.32.7 |
+| `rstantools` | 2.4.0, 2.5.0 |
+| `rstatix` | 0.7.2, 0.7.3 |
 | `rstudio` | 2024.04.0-735, 2024.04.2-764 |
 | `rstudioapi` | 0.17.1 |
 | `Rsubread` | 2.24.0 |
@@ -2902,19 +2907,19 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `rtracklayer` | 1.70.0 |
 | `Rtree` | 1.2.0 |
 | `Rtsne` | 0.17 |
-| `Rttf2pt1` | 1.3.14 |
+| `Rttf2pt1` | 1.3.12, 1.3.14 |
 | `ruamel.yaml` | 0.17.21, 0.17.32, 0.17.32 |
 | `ruamel.yaml.base` | 0.3.2 |
 | `ruamel.yaml.clib` | 0.2.7 |
 | `ruamel.yaml.cmd` | 0.6.5 |
 | `ruamel.yaml.convert` | 0.3.2 |
-| `RUnit` | 0.4.33.1 |
+| `RUnit` | 0.4.33, 0.4.33.1 |
 | `Rust` | 1.52.1, 1.54.0, 1.56.0, 1.60.0, 1.65.0, 1.70.0, 1.73.0, 1.75.0, 1.76.0, 1.78.0, 1.83.0, 1.85.1, 1.86.0, 1.88.0, 1.91.1 |
 | `ruv` | 0.9.7.1 |
 | `rversions` | 2.1.2, 3.0.0 |
 | `rvertnet` | 0.8.4 |
-| `rvest` | 1.0.5 |
-| `rvinecopulib` | 0.7.3.1.0 |
+| `rvest` | 1.0.4, 1.0.5 |
+| `rvinecopulib` | 0.6.3.1.1, 0.7.3.1.0 |
 | `Rvmmin` | 2018-4.17.1 |
 | `Rwave` | 2.6-5 |
 | `RWeka` | 0.4-46 |
@@ -2922,11 +2927,11 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 
 ## S
 
-**[355 modules]**
+**[357 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
-| `s2` | 1.1.9 |
+| `s2` | 1.1.7, 1.1.9 |
 | `s3fs` | 2024.9.0, 2024.9.0 |
 | `s3transfer` | 0.10.3 |
 | `S4Arrays` | 1.10.0 |
@@ -2939,12 +2944,12 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Salmon` | 1.9.0 |
 | `Sambamba` | 1.0.1 |
 | `sample_pkg` | version |
-| `sampling` | 2.11 |
+| `sampling` | 2.10, 2.11 |
 | `samr` | 3.0 |
 | `SamSPECTRAL` | 1.64.0 |
 | `SAMtools` | 1.14, 1.16.1, 1.17, 1.18, 1.19.2, 1.21 |
 | `sandwich` | 3.1-1 |
-| `sass` | 0.4.10 |
+| `sass` | 0.4.10, 0.4.9 |
 | `SBdecomp` | 1.2 |
 | `SC3` | 1.38.0 |
 | `ScaFaCoS` | 1.0.1, 1.0.4 |
@@ -2954,14 +2959,14 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Scalasca` | 2.6.1, 2.6.2 |
 | `ScaledMatrix` | 1.18.0 |
 | `Scalene` | 1.5.26, 1.5.26 |
-| `scales` | 1.4.0 |
-| `scam` | 1.2-20 |
+| `scales` | 1.3.0, 1.4.0 |
+| `scam` | 1.2-17, 1.2-20 |
 | `scandir` | 1.10.0 |
 | `scanpy` | 1.9.8, 1.9.8 |
 | `SCANVIS` | 1.24.0 |
 | `scater` | 1.38.0 |
 | `scattermore` | 1.2 |
-| `scatterpie` | 0.2.6 |
+| `scatterpie` | 0.2.4, 0.2.6 |
 | `scatterplot3d` | 0.3-44 |
 | `scDblFinder` | 1.24.0 |
 | `scikit-bio` | 0.5.7 |
@@ -2980,25 +2985,26 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `SCOTCH` | 6.1.0, 6.1.2, 7.0.1, 7.0.10, 7.0.3, 7.0.6, 7.0.8 |
 | `scran` | 1.38.0 |
 | `scrime` | 1.3.5 |
-| `scs` | 3.2.7 |
-| `sctransform` | 0.4.2, 0.4.3 |
+| `scs` | 3.2.4, 3.2.7 |
+| `sctransform` | 0.4.1, 0.4.2, 0.4.3 |
 | `scuttle` | 1.20.0 |
 | `SDL2` | 2.0.20, 2.0.22, 2.26.3, 2.28.2, 2.28.5, 2.30.6, 2.32.10, 2.32.8 |
+| `SDMTools` | 1.1-221.2 |
 | `sdsl-lite` | 2.0.3 |
 | `Seaborn` | 0.11.2, 0.12.1, 0.12.2, 0.13.2 |
 | `SEACR` | 1.3 |
 | `SecretStorage` | 3.3.3 |
-| `seewave` | 2.2.4 |
-| `segmented` | 2.1-4 |
+| `seewave` | 2.2.3, 2.2.4 |
+| `segmented` | 2.1-3, 2.1-4 |
 | `selectr` | 0.4-2 |
 | `sem` | 3.1-16 |
 | `semantic-version` | 2.10.0 |
 | `semPLS` | 1.0-10 |
-| `semTools` | 0.5-7 |
+| `semTools` | 0.5-6, 0.5-7 |
 | `Send2Trash` | 1.8.3 |
 | `sendmailR` | 1.4-0 |
 | `sensemakr` | 0.1.6 |
-| `sentometrics` | 1.0.1 |
+| `sentometrics` | 1.0.0, 1.0.1 |
 | `SEPP` | 4.5.1, 4.5.5 |
 | `SeqArray` | 1.50.0 |
 | `Seqinfo` | 1.0.0 |
@@ -3012,7 +3018,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `seriation` | 1.5.8 |
 | `servr` | 0.32 |
 | `session-info` | 1.0.0 |
-| `sessioninfo` | 1.2.3 |
+| `sessioninfo` | 1.2.2, 1.2.3 |
 | `Set::Array` | 0.30 |
 | `Set::IntervalTree` | 0.12 |
 | `Set::IntSpan` | 1.19 |
@@ -3025,22 +3031,22 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `setuptools_scm` | 8.1.0, 8.3.1 |
 | `Seurat` | 4.2.0-R-4.2.1, 5.0.2, 5.1.0-R-4.3.2, 5.1.0-R-4.4.1, 5.3.1, 5.4.0, 5.4.0-R-4.5.2 |
 | `SeuratObject` | 5.2.0, 5.4.0 |
-| `sf` | 1.0-21, 1.1-1 |
+| `sf` | 1.0-19, 1.0-21, 1.1-1 |
 | `sfheaders` | 0.4.4 |
-| `sfsmisc` | 1.1-22 |
+| `sfsmisc` | 1.1-20, 1.1-22 |
 | `sftime` | 0.3.1 |
-| `sgdGMF` | 1.0.1 |
-| `shadowtext` | 0.1.6 |
+| `sgdGMF` | 1.0, 1.0.1 |
+| `shadowtext` | 0.1.4, 0.1.6 |
 | `shape` | 1.4.6.1 |
 | `shapefiles` | 0.7.2 |
 | `SHAPEIT4` | 4.2.2 |
 | `Shapely` | 1.8.2, 2.0.1 |
 | `Shell` | 0.73 |
 | `shellingham` | 1.5.4 |
-| `shiny` | 1.11.1 |
+| `shiny` | 1.11.1, 1.9.1 |
 | `shinyBS` | 0.61.1 |
 | `shinycssloaders` | 1.1.0 |
-| `shinydashboard` | 0.7.3 |
+| `shinydashboard` | 0.7.2, 0.7.3 |
 | `shinydashboardPlus` | 2.0.6 |
 | `shinyFiles` | 0.9.3 |
 | `shinyhelper` | 0.3.2 |
@@ -3057,7 +3063,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `SignifReg` | 4.3 |
 | `silx` | 1.0.0 |
 | `SimBu` | 1.12.0 |
-| `SimDesign` | 2.21 |
+| `SimDesign` | 2.17.1, 2.21 |
 | `simex` | 1.8 |
 | `simona` | 1.8.0 |
 | `simpervisor` | 1.0.0 |
@@ -3126,9 +3132,9 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `soupsieve` | 2.5 |
 | `sourcetools` | 0.1.7-1 |
 | `soxr` | 0.3.7 |
-| `sp` | 2.2-0, 2.2-1 |
-| `spaa` | 0.2.5 |
-| `spacefillr` | 0.4.0 |
+| `sp` | 2.1-4, 2.2-0, 2.2-1 |
+| `spaa` | 0.2.2, 0.2.5 |
+| `spacefillr` | 0.3.3, 0.4.0 |
 | `SpaceRanger` | 2.1.0 |
 | `spacesXYZ` | 1.6-0 |
 | `spacetime` | 1.3-3 |
@@ -3136,8 +3142,8 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Spack` | 0.21.2 |
 | `SPAdes` | 3.15.4, 4.1.0 |
 | `SPAM` | 0.6.3.2 |
-| `spam` | 2.11-1 |
-| `spaMM` | 4.6.1 |
+| `spam` | 2.11-0, 2.11-1 |
+| `spaMM` | 4.5.0, 4.6.1 |
 | `Spark` | 3.3.1 |
 | `SparseArray` | 1.10.1 |
 | `sparsehash` | 2.0.4 |
@@ -3146,22 +3152,23 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `sparsesvd` | 0.2-3 |
 | `sparsevctrs` | 0.3.4 |
 | `SPAtest` | 3.1.2 |
-| `spatial` | 7.3-18 |
+| `spatial` | 7.3-17, 7.3-18 |
 | `SpatialExperiment` | 1.20.0 |
 | `SpatialPack` | 0.4-1 |
 | `spatialreg` | 1.4-2 |
-| `spatstat` | 3.4-1 |
-| `spatstat.data` | 3.1-9 |
-| `spatstat.explore` | 3.5-3, 3.8-0 |
-| `spatstat.geom` | 3.6-0, 3.7-3 |
-| `spatstat.linnet` | 3.3-2 |
-| `spatstat.model` | 3.4-2 |
-| `spatstat.random` | 3.4-2, 3.4-5 |
+| `spatstat` | 3.3-0, 3.4-1 |
+| `spatstat.core` | 2.4-4 |
+| `spatstat.data` | 3.1-4, 3.1-9 |
+| `spatstat.explore` | 3.3-3, 3.5-3, 3.8-0 |
+| `spatstat.geom` | 3.3-4, 3.6-0, 3.7-3 |
+| `spatstat.linnet` | 3.2-3, 3.3-2 |
+| `spatstat.model` | 3.3-3, 3.4-2 |
+| `spatstat.random` | 3.3-2, 3.4-2, 3.4-5 |
 | `spatstat.sparse` | 3.1-0 |
-| `spatstat.univar` | 3.1-4, 3.1-7 |
-| `spatstat.utils` | 3.2-0, 3.2-2 |
-| `spData` | 2.3.4 |
-| `spdep` | 1.4-1 |
+| `spatstat.univar` | 3.1-1, 3.1-4, 3.1-7 |
+| `spatstat.utils` | 3.1-1, 3.2-0, 3.2-2 |
+| `spData` | 2.3.3, 2.3.4 |
+| `spdep` | 1.3-6, 1.4-1 |
 | `spdlog` | 1.11.0, 1.12.0 |
 | `Specio` | 0.48, 0.51 |
 | `SpectrA` | 1.0.1 |
@@ -3182,7 +3189,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `spin` | 0.14 |
 | `splancs` | 2.01-45 |
 | `splitstackshape` | 1.4.8 |
-| `spls` | 2.3-2 |
+| `spls` | 2.2-3, 2.3-2 |
 | `SPM` | 25.01.02 |
 | `spocc` | 1.2.3 |
 | `SPOTlight` | 1.14.0 |
@@ -3206,18 +3213,18 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `STAR-CCM+` | 16.02.009-r8, 17.02.007-r8, 18.06.006-r8, 19.06.009-r8, 20.06.010-double, 21.02.008-r8 |
 | `STAR-Fusion` | v1.13.0 |
 | `stargazer` | 5.2.3 |
-| `stars` | 0.6-8 |
-| `startupmsg` | 1.0.0 |
+| `stars` | 0.6-7, 0.6-8 |
+| `startupmsg` | 0.9.7, 1.0.0 |
 | `statip` | 0.2.3 |
 | `Statistics::Basic` | 1.6611 |
 | `Statistics::Descriptive` | 3.0801 |
-| `StatMatch` | 1.4.3 |
-| `statmod` | 1.5.1 |
+| `StatMatch` | 1.4.2, 1.4.3 |
+| `statmod` | 1.5.0, 1.5.1 |
 | `statnet` | 2019.6 |
-| `statnet.common` | 4.12.0 |
+| `statnet.common` | 4.10.0, 4.12.0 |
 | `statsmodels` | 0.13.1, 0.14.0, 0.14.1, 0.14.1 |
 | `stdlib_list` | 0.10.0 |
-| `stdReg` | 3.4.2 |
+| `stdReg` | 3.4.1, 3.4.2 |
 | `stopit` | 1.1.2 |
 | `stopwords` | 2.3 |
 | `Storable` | 3.25 |
@@ -3229,13 +3236,13 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `String::RewritePrefix` | 0.009 |
 | `String::Truncate` | 1.100603 |
 | `String::TtyLength` | 0.03 |
-| `stringdist` | 0.9.15 |
-| `stringi` | 1.8.7 |
-| `stringmagic` | 1.2.0 |
-| `stringr` | 1.5.2, 1.6.0 |
+| `stringdist` | 0.9.12, 0.9.15 |
+| `stringi` | 1.8.4, 1.8.7 |
+| `stringmagic` | 1.1.2, 1.2.0 |
+| `stringr` | 1.5.1, 1.5.2, 1.6.0 |
 | `strobealign` | v0.14.0 |
 | `strucchange` | 1.5-4 |
-| `styler` | 1.11.0 |
+| `styler` | 1.10.3, 1.11.0 |
 | `Sub::Exporter` | 0.991 |
 | `Sub::Exporter::ForMethods` | 0.100055 |
 | `Sub::Exporter::GlobExporter` | 0.006 |
@@ -3256,18 +3263,18 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `SuperLearner` | 2.0-29 |
 | `SuperLU` | 5.3.0 |
 | `SuperLU_DIST` | 8.1.0 |
-| `SuppDists` | 1.1-9.9 |
-| `survey` | 4.4-8 |
-| `survival` | 3.8-3 |
+| `SuppDists` | 1.1-9.8, 1.1-9.9 |
+| `survey` | 4.4-2, 4.4-8 |
+| `survival` | 3.7-0, 3.8-3 |
 | `survivalROC` | 1.0.3.1 |
 | `susieR` | 0.14.2 |
 | `sva` | 3.58.0 |
-| `svd` | 0.5.8 |
+| `svd` | 0.5.7, 0.5.8 |
 | `SVG` | 2.87 |
-| `svglite` | 2.2.2 |
+| `svglite` | 2.1.3, 2.2.2 |
 | `svMisc` | 1.4.3 |
 | `SVT-AV1` | 3.1.2 |
-| `svUnit` | 1.0.8 |
+| `svUnit` | 1.0.6, 1.0.8 |
 | `swagger` | 5.17.14.1 |
 | `swan` | 41.42_17Oct2023, gitlab_17Jan2024_openmp, gitlab_24May2024_openmp |
 | `SWIG` | 4.0.2, 4.1.1, 4.2.1, 4.3.1 |
@@ -3279,7 +3286,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Sys::Info::Base` | 0.7807 |
 | `Sys::Info::Driver::Linux` | 0.7905 |
 | `Sys::Info::Driver::Unknown` | 0.79 |
-| `systemfonts` | 1.3.1 |
+| `systemfonts` | 1.1.0, 1.3.1 |
 | `Szip` | 2.1.1 |
 
 ## T
@@ -3295,19 +3302,19 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `TailRank` | 3.2.4 |
 | `Task::Weaken` | 1.06 |
 | `tau` | 0.0-26 |
-| `taxize` | 0.10.0 |
+| `taxize` | 0.10.0, 0.9.100.1 |
 | `tbb` | 2020.3, 2021.10.0, 2021.11.0, 2021.13.0, 2021.5.0 |
 | `tblib` | 2.0.0, 3.0.0 |
 | `Tcl` | 8.6.10, 8.6.11, 8.6.12, 8.6.13, 8.6.14, 8.6.16, 9.0.1 |
-| `tcltk2` | 1.6.1 |
-| `tclust` | 2.1-2 |
+| `tcltk2` | 1.2-11, 1.6.1 |
+| `tclust` | 2.0-5, 2.1-2 |
 | `tcsh` | 6.22.03, 6.24.01, 6.24.10, 6.24.13 |
 | `TeachingDemos` | 2.13 |
 | `TELEMAC-MASCARET` | 8p3r1, 8p5r0, 9.0.0 |
 | `Template` | 3.102 |
 | `Template::Plugin::Number::Format` | 1.06 |
 | `tenacity` | 8.2.3 |
-| `tensor` | 1.5.1 |
+| `tensor` | 1.5, 1.5.1 |
 | `tensorA` | 0.36.2.1 |
 | `tensorboard` | 2.13.0, 2.15.1, 2.18.0, 2.18.0 |
 | `tensorboard-data-server` | 0.7.1 |
@@ -3317,7 +3324,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `TensorFlow` | 2.11.0-CUDA-11.7.0, 2.13.0, 2.13.0, 2.15.1-foss-2023a-CUDA-12.1.1, 2.18.1, 2.18.1, 2.18.1-CUDA-12.6.0, 2.9.1-CUDA-11.7.0 |
 | `tensorflow-estimator` | 2.13.0 |
 | `tensorstore` | 0.1.60, 0.1.65, 0.1.65 |
-| `tergm` | 4.2.2 |
+| `tergm` | 4.2.1, 4.2.2 |
 | `Term::Encoding` | 0.03 |
 | `Term::ReadKey` | 2.38 |
 | `Term::ReadLine::Gnu` | 1.46, 1.47 |
@@ -3325,7 +3332,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Term::UI` | 0.50 |
 | `termcolor` | 2.3.0, 2.5.0 |
 | `terminado` | 0.18.1 |
-| `terra` | 1.8-70, 1.8-80 |
+| `terra` | 1.7-83, 1.8-70, 1.8-80 |
 | `tesseract` | 5.3.0 |
 | `Test` | 1.26 |
 | `test-drive` | 0.5.0 |
@@ -3363,7 +3370,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Test::Without::Module` | 0.23 |
 | `Test::YAML` | 1.07 |
 | `testit` | 0.13 |
-| `testthat` | 3.2.3 |
+| `testthat` | 3.2.1.1, 3.2.3 |
 | `TEtranscripts` | 2.2.0, 2.2.3 |
 | `texlive` | 20220321, 20230313 |
 | `texreg` | 1.39.4 |
@@ -3383,23 +3390,23 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Text::Template` | 1.61 |
 | `textcat` | 1.0-9 |
 | `textplot` | 0.2.2 |
-| `textshaping` | 1.0.3, 1.0.4 |
+| `textshaping` | 0.4.0, 1.0.3, 1.0.4 |
 | `textual` | 0.54.0, 0.79.1 |
 | `TFBSTools` | 1.48.0 |
 | `TFisher` | 0.2.0 |
 | `TFMPvalue` | 0.0.9 |
-| `TH.data` | 1.1-4 |
+| `TH.data` | 1.1-2, 1.1-4 |
 | `threadpoolctl` | 3.6.0 |
-| `threejs` | 0.3.4 |
+| `threejs` | 0.3.3, 0.3.4 |
 | `throttler` | 1.2.2 |
 | `Throwable` | 1.001 |
-| `tibble` | 3.3.0 |
+| `tibble` | 3.2.1, 3.3.0 |
 | `tictoc` | 1.2.1 |
 | `tidybayes` | 3.0.7 |
 | `tidygraph` | 1.3.1 |
 | `tidyr` | 1.3.1 |
 | `tidyselect` | 1.2.1 |
-| `tidytext` | 0.4.3 |
+| `tidytext` | 0.4.2, 0.4.3 |
 | `tidytree` | 0.4.6 |
 | `tidyverse` | 2.0.0 |
 | `Tie::Function` | 0.02 |
@@ -3411,24 +3418,24 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Time::Piece` | 1.3401, 1.36 |
 | `Time::Piece::MySQL` | 0.06 |
 | `timechange` | 0.3.0 |
-| `timeDate` | 4051.111 |
-| `timereg` | 2.0.7 |
+| `timeDate` | 4041.110, 4051.111 |
+| `timereg` | 2.0.6, 2.0.7 |
 | `timeSeries` | 4041.111 |
 | `tinycss2` | 1.3.0 |
-| `tinytex` | 0.57 |
+| `tinytex` | 0.54, 0.57 |
 | `Tk` | 8.6.10, 8.6.11, 8.6.12, 8.6.13, 8.6.14, 8.6.16, 9.0.1 |
 | `Tkinter` | 2.7.18, 3.10.4, 3.10.8, 3.11.3, 3.11.5, 3.12.3, 3.13.1, 3.13.5, 3.8.6, 3.9.5, 3.9.6 |
-| `tkrplot` | 0.0-30 |
+| `tkrplot` | 0.0-27, 0.0-30 |
 | `tkWidgets` | 1.88.0 |
 | `tldr` | 1.2.2 |
 | `tlparse` | 0.3.37 |
-| `tm` | 0.7-16 |
-| `tmap` | 4.2 |
-| `tmaptools` | 3.3 |
-| `TMB` | 1.9.18 |
-| `tmle` | 2.1.1 |
+| `tm` | 0.7-15, 0.7-16 |
+| `tmap` | 3.3-4, 4.2 |
+| `tmaptools` | 3.1-1, 3.3 |
+| `TMB` | 1.9.15, 1.9.18 |
+| `tmle` | 2.0.1.1, 2.1.1 |
 | `tmvnsim` | 1.0-2 |
-| `tmvtnorm` | 1.7 |
+| `tmvtnorm` | 1.6, 1.7 |
 | `Togl` | 2.0 |
 | `tokenizers` | 0.15.2, 0.15.2, 0.19.1, 0.19.1, 0.3.0 |
 | `toml` | 0.10.2 |
@@ -3445,21 +3452,21 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `tqdm` | 4.61.2, 4.62.3, 4.64.0, 4.66.1, 4.66.2, 4.66.5, 4.67.1 |
 | `traitlets` | 5.13.0 |
 | `TrajectoryUtils` | 1.18.0 |
-| `TraMineR` | 2.2-12 |
+| `TraMineR` | 2.2-10, 2.2-12 |
 | `Transformers` | 4.39.3, 4.44.0 |
 | `transformers` | 4.39.3, 4.44.0 |
 | `transitions` | 0.9.2 |
-| `tree` | 1.0-45 |
+| `tree` | 1.0-43, 1.0-45 |
 | `Tree::DAG_Node` | 1.32, 1.35 |
 | `treeio` | 1.34.0 |
 | `TreeSummarizedExperiment` | 2.18.0 |
 | `TRF` | 4.09.1 |
 | `triebeard` | 0.4.1 |
 | `trimAl` | 1.4.1 |
-| `trimcluster` | 0.2-0 |
+| `trimcluster` | 0.1-5, 0.2-0 |
 | `Trimmomatic` | 0.39-Java-11 |
 | `Trinity` | 2.15.1 |
-| `tripack` | 1.3-9.3 |
+| `tripack` | 1.3-9.2, 1.3-9.3 |
 | `TRIQS` | 3.1.1, 3.2.0 |
 | `TRIQS-cthyb` | 3.2.1 |
 | `TRIQS-tprf` | 3.2.1 |
@@ -3472,7 +3479,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Try::Tiny` | 0.32 |
 | `tseries` | 0.10-58 |
 | `tseriesChaos` | 0.1-13.1 |
-| `tsna` | 0.3.6 |
+| `tsna` | 0.3.5, 0.3.6 |
 | `tsne` | 0.1-3.1 |
 | `TSP` | 1.2-5 |
 | `TTR` | 0.24.4 |
@@ -3490,7 +3497,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `typing-extensions` | 3.7.4.3, 4.10.0, 4.11.0, 4.12.2, 4.14.1, 4.9.0 |
 | `typing_extensions` | 4.12.2, 4.14.0, 4.4.0 |
 | `tzdata` | 2025.2 |
-| `tzdb` | 0.5.0 |
+| `tzdb` | 0.4.0, 0.5.0 |
 
 ## U
 
@@ -3506,7 +3513,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `UCSC.utils` | 1.6.0 |
 | `UCX` | 1.10.0, 1.11.2, 1.12.1, 1.13.1, 1.14.1, 1.15.0, 1.16.0, 1.18.0, 1.19.0, 1.9.0, 1.9.0-CUDA-11.1.1 |
 | `UCX-CUDA` | 1.11.2-CUDA-11.4.1, 1.12.1-CUDA-11.7.0, 1.14.1-CUDA-12.1.1, 1.16.0-CUDA-12.6.0, 1.18.0-CUDA-12.8.0, 1.19.0-CUDA-12.9.1 |
-| `udpipe` | 0.8.12 |
+| `udpipe` | 0.8.11, 0.8.12 |
 | `UDUNITS` | 2.2.28 |
 | `ujson` | 5.10.0 |
 | `umap` | 0.2.10.0 |
@@ -3520,12 +3527,12 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `unifdef` | 2.12 |
 | `unikn` | 1.0.0 |
 | `uniqueAtomMat` | 0.1-3-2 |
-| `units` | 1.0-0 |
+| `units` | 0.8-5, 1.0-0 |
 | `unittest-xml-reporting` | 3.1.0 |
 | `UNIVERSAL::moniker` | 0.08 |
 | `universalmotif` | 1.28.0 |
 | `Unix::Processors` | 2.046 |
-| `unmarked` | 1.5.1 |
+| `unmarked` | 1.4.3, 1.5.1 |
 | `UnZip` | 6.0 |
 | `UpSetR` | 1.4.0 |
 | `urca` | 1.3-4 |
@@ -3533,11 +3540,11 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `url-normalize` | 1.4.3 |
 | `urlchecker` | 1.0.1 |
 | `urllib3` | 2.1.0, 2.4.0, 2.5.0 |
-| `urltools` | 1.7.3.1 |
+| `urltools` | 1.7.3, 1.7.3.1 |
 | `uroot` | 2.1-3 |
 | `USEARCH` | 11.0.667-i86linux32 |
-| `usethis` | 3.2.1 |
-| `utf8` | 1.2.6 |
+| `usethis` | 3.0.0, 3.2.1 |
+| `utf8` | 1.2.4, 1.2.6 |
 | `utf8proc` | 2.10.0, 2.6.1, 2.7.0, 2.8.0, 2.9.0 |
 | `util-linux` | 2.36, 2.37, 2.38, 2.38.1, 2.39, 2.40, 2.41 |
 | `uuid` | 1.2-1 |
@@ -3549,7 +3556,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 
 | Modulename | Versions |
 | :--- | :--- |
-| `V8` | 8.0.1 |
+| `V8` | 6.0.0, 8.0.1 |
 | `Valgrind` | 3.20.0, 3.25.1, 3.26.0 |
 | `varhandle` | 2.0.6 |
 | `Variable::Magic` | 0.64 |
@@ -3563,7 +3570,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `vcfR` | 1.15.0 |
 | `VCFtools` | 0.1.16 |
 | `vctrs` | 0.6.5 |
-| `vegan` | 2.7-2 |
+| `vegan` | 2.6-8, 2.7-2 |
 | `velocyto` | 0.17.17, 0.17.17 |
 | `Velvet` | 1.2.10-mt-kmer_191 |
 | `venn` | 1.12 |
@@ -3572,22 +3579,22 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `version` | 0.9933 |
 | `versioneer` | 0.29 |
 | `versioningit` | 3.1.2 |
-| `VGAM` | 1.1-13 |
-| `VIM` | 6.2.6 |
-| `VineCopula` | 2.6.1 |
-| `vioplot` | 0.5.1 |
+| `VGAM` | 1.1-12, 1.1-13 |
+| `VIM` | 6.2.2, 6.2.6 |
+| `VineCopula` | 2.5.1, 2.6.1 |
+| `vioplot` | 0.5.0, 0.5.1 |
 | `vipor` | 0.4.7 |
 | `viridis` | 0.6.5 |
 | `viridisLite` | 0.4.2 |
 | `virtualenv` | 20.23.1, 20.24.6, 20.26.2, 20.29.2, 20.29.2, 20.32.0, 20.32.0 |
 | `visdat` | 0.6.0 |
-| `visNetwork` | 2.1.4 |
+| `visNetwork` | 2.1.2, 2.1.4 |
 | `VMD` | 1.9.4a57 |
 | `Voro++` | 0.4.6 |
-| `vroom` | 1.6.6 |
+| `vroom` | 1.6.5, 1.6.6 |
 | `VSCode` | 1.104.1, 1.92.2, 1.96.4, 1.97.1 |
 | `vsn` | 3.78.0 |
-| `VSURF` | 1.2.1 |
+| `VSURF` | 1.2.0, 1.2.1 |
 | `VTK` | 9.0.1, 9.1.0, 9.2.2, 9.2.6, 9.3.0 |
 
 ## W
@@ -3597,7 +3604,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | Modulename | Versions |
 | :--- | :--- |
 | `waiter` | 0.2.5.1 |
-| `waldo` | 0.6.2 |
+| `waldo` | 0.6.1, 0.6.2 |
 | `Wannier90` | 3.1.0 |
 | `Want` | 0.29 |
 | `warp` | 0.2.1 |
@@ -3606,13 +3613,13 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `Wayland` | 1.20.0, 1.22.0, 1.23.0, 1.23.92, 1.24.0 |
 | `WCSim` | 1.6-virt |
 | `wcwidth` | 0.2.13 |
-| `wdm` | 0.2.6 |
+| `wdm` | 0.2.4, 0.2.6 |
 | `webencodings` | 0.5.1 |
 | `webshot` | 0.5.5 |
 | `websocket-client` | 1.5.1 |
 | `websocket_client` | 1.8.0 |
 | `webutils` | 1.2.2 |
-| `weights` | 1.1.2 |
+| `weights` | 1.0.4, 1.1.2 |
 | `WeightSVM` | 1.7-16 |
 | `wellknown` | 0.7.4 |
 | `Werkzeug` | 2.3.7, 3.1.3 |
@@ -3620,7 +3627,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `WFA2` | 2.3.4 |
 | `wgbs_tools` | v0.2.2 |
 | `WGCNA` | 1.73 |
-| `wget` | 1.24.5 |
+| `wget` | 1.24.5, 1.25.0 |
 | `WhatsHap` | 2.2, 2.6 |
 | `whatshap` | 2.2, 2.6 |
 | `wheel` | 0.45.1 |
@@ -3641,8 +3648,8 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `worrms` | 0.4.3 |
 | `wrapt` | 1.15.0, 1.15.0, 1.16.0, 1.16.0 |
 | `Wrench` | 1.28.0 |
-| `writexl` | 1.5.4 |
-| `WriteXLS` | 6.8.0 |
+| `writexl` | 1.5.1, 1.5.4 |
+| `WriteXLS` | 6.7.0, 6.8.0 |
 | `wtdbg2` | 2.5 |
 | `wurlitzer` | 3.1.1 |
 | `WWW::RobotRules` | 6.02 |
@@ -3663,15 +3670,15 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `xcms` | 4.8.0 |
 | `XCrySDen` | 1.6.2 |
 | `Xerces-C++` | 3.2.4, 3.2.5, 3.3.0 |
-| `xfun` | 0.53, 0.54 |
-| `xgboost` | 1.7.11.1 |
+| `xfun` | 0.49, 0.53, 0.54 |
+| `xgboost` | 1.7.11.1, 1.7.8.1 |
 | `xlrd` | 2.0.1, 2.0.2 |
 | `xlsx` | 0.6.5 |
-| `xlsxjars` | 0.9.0 |
-| `XML` | 3.99-0.19 |
+| `xlsxjars` | 0.6.1, 0.9.0 |
+| `XML` | 3.99-0.17, 3.99-0.19 |
 | `XML-Compile` | 1.63 |
 | `XML-LibXML` | 2.0207, 2.0208, 2.0210 |
-| `xml2` | 1.4.0, 1.4.1 |
+| `xml2` | 1.3.6, 1.4.0, 1.4.1 |
 | `XML::Bare` | 0.53 |
 | `XML::Compile` | 1.63 |
 | `XML::Compile::Cache` | 1.06 |
@@ -3705,7 +3712,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `xTea` | v0.1.0-long |
 | `xts` | 0.14.1 |
 | `XVector` | 0.50.0 |
-| `Xvfb` | 1.20.13, 21.1.18, 21.1.3, 21.1.6, 21.1.8 |
+| `Xvfb` | 1.20.13, 21.1.14, 21.1.18, 21.1.3, 21.1.6, 21.1.8 |
 | `xxd` | 8.2.4220, 9.0.2112, 9.1.0307 |
 | `xxHash` | 0.8.2 |
 | `xyzservices` | 2024.4.0 |
@@ -3727,7 +3734,7 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `yarl` | 1.15.4, 1.9.2 |
 | `Yasm` | 1.3.0 |
 | `yte` | 1.5.4, 1.5.5 |
-| `yulab.utils` | 0.2.1 |
+| `yulab.utils` | 0.1.8, 0.2.1 |
 
 ## Z
 
@@ -3739,24 +3746,24 @@ Total number of applications: 3576, with 1 to 20 versions each *(2026-10-02 11:2
 | `z3-solver` | 4.13.0.0 |
 | `z3_solver` | 4.13.4.0, 4.15.1.0 |
 | `zCompositions` | 1.5.0-5 |
-| `zeallot` | 0.2.0 |
+| `zeallot` | 0.1.0, 0.2.0 |
 | `zellkonverter` | 1.20.0 |
 | `ZeroMQ` | 4.3.3, 4.3.4, 4.3.5 |
 | `zfp` | 1.0.0 |
 | `zict` | 3.0.0 |
 | `zigg` | 0.0.2 |
 | `Zip` | 3.0 |
-| `zip` | 2.3.3 |
+| `zip` | 2.3.1, 2.3.3 |
 | `zipfile36` | 0.1.3 |
 | `zipp` | 3.17.0, 3.21.0, 3.23.0 |
 | `zlib` | 1.2.11, 1.2.12, 1.2.13, 1.3.1, 2.3.2 |
 | `zlib-ng` | 0.4.1, 0.5.0, 2.0.7, 2.2.1 |
 | `Zoltan` | 3.901 |
-| `zoo` | 1.8-14 |
+| `zoo` | 1.8-12, 1.8-14 |
 | `Zopfli` | 1.0.3 |
 | `zstandard` | 0.22.0, 0.23.0 |
 | `zstd` | 1.4.5, 1.4.9, 1.5.0, 1.5.2, 1.5.5, 1.5.6, 1.5.7, 1.5.7 |
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-10-02 11:23
+**Last updated:** 2026-10-03 12:23
