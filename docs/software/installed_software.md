@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3595, with 1 to 20 versions each *(2026-10-04 13:23)*
+Total number of applications: 3594, with 1 to 20 versions each *(2026-10-05 14:23)*
 ## A
 
 **[167 modules]**
@@ -1322,7 +1322,7 @@ Total number of applications: 3595, with 1 to 20 versions each *(2026-10-04 13:2
 
 ## H
 
-**[98 modules]**
+**[97 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
@@ -1385,7 +1385,6 @@ Total number of applications: 3595, with 1 to 20 versions each *(2026-10-04 13:2
 | `hms` | 1.1.3, 1.1.4 |
 | `Hmsc` | 3.0-13, 3.3-7 |
 | `HOMER` | 5.1-R-4.4.2 |
-| `Homer` | 2024-07 |
 | `Homo.sapiens` | 1.3.1 |
 | `Hook::LexWrap` | 0.26 |
 | `HPL` | 2.3 |
@@ -3778,4 +3777,4 @@ Total number of applications: 3595, with 1 to 20 versions each *(2026-10-04 13:2
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-10-04 13:23
+**Last updated:** 2026-10-05 14:23
