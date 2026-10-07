@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3594, with 1 to 20 versions each *(2026-10-05 14:23)*
+Total number of applications: 3594, with 1 to 20 versions each *(2026-10-07 16:23)*
 ## A
 
 **[167 modules]**
@@ -1044,7 +1044,7 @@ Total number of applications: 3594, with 1 to 20 versions each *(2026-10-05 14:2
 | `FriBidi` | 1.0.10, 1.0.12, 1.0.13, 1.0.15, 1.0.16 |
 | `frozenlist` | 1.4.0, 1.4.1 |
 | `fs` | 1.6.5, 1.6.6 |
-| `FSL` | 6.0.5.1 |
+| `FSL` | 6.0.5.1, 6.0.7.17 |
 | `fsom` | 20141119, 20151117 |
 | `fsspec` | 2024.9.0, 2025.3.2, 2025.7.0 |
 | `furrr` | 0.3.1 |
@@ -3777,4 +3777,4 @@ Total number of applications: 3594, with 1 to 20 versions each *(2026-10-05 14:2
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-10-05 14:23
+**Last updated:** 2026-10-07 16:23
