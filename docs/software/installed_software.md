@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3594, with 1 to 20 versions each *(2026-10-07 16:23)*
+Total number of applications: 3595, with 1 to 20 versions each *(2026-10-12 21:23)*
 ## A
 
 **[167 modules]**
@@ -357,7 +357,7 @@ Total number of applications: 3594, with 1 to 20 versions each *(2026-10-07 16:2
 
 ## C
 
-**[241 modules]**
+**[242 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
@@ -426,6 +426,7 @@ Total number of applications: 3594, with 1 to 20 versions each *(2026-10-07 16:2
 | `chex` | 0.1.86 |
 | `ChIPpeakAnno` | 3.40.0, 3.44.0 |
 | `ChIPseeker` | 1.42.0, 1.45.0 |
+| `chisel` | 1.1.4 |
 | `chk` | 0.10.0, 0.9.2 |
 | `chkptstanr` | 0.1.1 |
 | `chromVAR` | 1.28.0, 1.32.0 |
@@ -3777,4 +3778,4 @@ Total number of applications: 3594, with 1 to 20 versions each *(2026-10-07 16:2
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-10-07 16:23
+**Last updated:** 2026-10-12 21:23
