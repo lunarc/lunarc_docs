@@ -29,15 +29,15 @@ module load iomkl/2015.03
 
 
 # Copying the executable onto the local disks of the nodes
-srun -n $SLURM_NNODES -N $SLURM_NNODES cp -p simula_mpi $SNIC_TMP
+srun -n $SLURM_NNODES -N $SLURM_NNODES cp -p simula_mpi $NODE_TMP
 
 # Copy the input file onto the headnode - if your MPI program
 # reads from all tasks, you need to do the above srun construct
 # again
-cp -p input.dat $SNIC_TMP
+cp -p input.dat $NODE_TMP
 
 # change to local disk and start the mpi executable
-cd $SNIC_TMP
+cd $NODE_TMP
 mpirun -bind-to core simula_mpi
 
 # Copy result files back - example assumes only task zero writes
@@ -53,11 +53,11 @@ Again, applications using the Intel MPI library need to start with **srun**, see
 
 As discussed in the comments of the sample script, the script assumes that only MPI-task 0 on the head node reads the input file and writes to the output file. If for your MPI application every MPI task reads the input file(s), replace the line
 
-    cp -p input.dat $SNIC_TMP
+    cp -p input.dat $NODE_TMP
 
 with
 
-    srun -n $SLURM_NNODES -N $SLURM_NNODES cp -p input.dat $SNIC_TMP
+    srun -n $SLURM_NNODES -N $SLURM_NNODES cp -p input.dat $NODE_TMP
 
 and the file gets copied onto the local disk of each node. Matters are slightly more complex if your output is written from all tasks. We assume the output files can be wild-carded as result_*.dat. Copying these files back to the submission directory can be achieved creating a script, which is placed on all nodes and subsequently executed on all nodes. The following addition to the submission script will create the script and place it on all your nodes
 
@@ -68,10 +68,10 @@ cp -p result*.dat $SLURM_SUBMIT_DIR
 EOF
 
 chmod u+x copyfile.sh
-srun -n $SLURM_NNODES -N $SLURM_NNODES cp copyfile.sh $SNIC_TMP
+srun -n $SLURM_NNODES -N $SLURM_NNODES cp copyfile.sh $NODE_TMP
 ```
 
-This needs inserting into the script before the **cd $SNIC_TMP** statement. Once this is in place you can copy your result files by replacing the line
+This needs inserting into the script before the **cd $NODE_TMP** statement. Once this is in place you can copy your result files by replacing the line
 
     cp -p result.dat $SLURM_SUBMIT_DIR
 

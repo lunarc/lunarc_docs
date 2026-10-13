@@ -49,7 +49,7 @@ COSMOS provides a variable for the local scratch disk on each compute node:
 
 | Variable | Description |
 | --- | --- |
-| `SNIC_TMP` | Local scratch disk on the allocated node — fast I/O, deleted when the job ends |
+| `NODE_TMP` | Local scratch disk on the allocated node — fast I/O, deleted when the job ends |
 
 `TMPDIR` is also set to the same location and is used automatically by many applications as their default scratch space.
 

@@ -25,13 +25,13 @@ module add intel/15.0
 module add openmpi/1.8.3/intel/15.0
 
 # Copying the executable onto the local disks of the nodes
-srun -n $SLURM_NNODES -N $SLURM_NNODES cp -p simul_hyb $SNIC_TMP
+srun -n $SLURM_NNODES -N $SLURM_NNODES cp -p simul_hyb $NODE_TMP
 
 # Copy the input file onto the headnode - if your MPI program
 # reads from all tasks, you need to do the above srun construct
 # again
-cp -p input.dat $SNIC_TMP
-cd $SNIC_TMP
+cp -p input.dat $NODE_TMP
+cd $NODE_TMP
 
 # setting number of OpenMP threads and ask for thread binding
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK

@@ -81,8 +81,8 @@ cat $0
 # receive my worker number
 export WRK_NB=$1
 
-# create worker-private subdirectory in $SNIC_TMP
-export WRK_DIR=$SNIC_TMP/WRK_${WRK_NB}
+# create worker-private subdirectory in $NODE_TMP
+export WRK_DIR=$NODE_TMP/WRK_${WRK_NB}
 mkdir $WRK_DIR
 
 # create a variable to address the "job directory"
@@ -108,7 +108,7 @@ cp -p result.dat ${JOB_DIR}
 
 # clean up the local disk and remove the worker-private directory
 
-cd $SNIC_TMP
+cd $NODE_TMP
 
 rm -rf WRK_${WRK_NB}
 ```

@@ -76,15 +76,15 @@ cat $0
 module load foss/2023b
 
 # Copying the executable onto the local disks of the nodes
-srun -n $SLURM_NNODES -N $SLURM_NNODES cp -p simula_mpi $SNIC_TMP
+srun -n $SLURM_NNODES -N $SLURM_NNODES cp -p simula_mpi $NODE_TMP
 
 # Copy the input file onto the headnode - if your MPI program
 # reads from all tasks, you need to do the above srun construct
 # again
-cp -p input.dat $SNIC_TMP
+cp -p input.dat $NODE_TMP
 
 # change to local disk and start the mpi executable
-cd $SNIC_TMP
+cd $NODE_TMP
 mpirun simula_mpi
 
 # Copy result files back - example assumes only task zero writes

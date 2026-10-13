@@ -30,7 +30,7 @@ How to find, load, and manage software using the modules system, including compi
 
 ### Storage and filesystems
 
-An overview of the storage locations available on COSMOS — home directory, project storage, local scratch (`$SNIC_TMP`), and long-term archival via Swestore — including quotas and how to check them.
+An overview of the storage locations available on COSMOS — home directory, project storage, local scratch (`$NODE_TMP`), and long-term archival via Swestore — including quotas and how to check them.
 
 [Storage and filesystems](manual_quick_reference.md#file-systems){ .md-button }
 

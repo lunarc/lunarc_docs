@@ -44,10 +44,10 @@ cat $0
 
 # copy the input data and program to node local disk
 # customise for your input file(s) and program name
-cp -p sample.inp $SNIC_TMP
+cp -p sample.inp $NODE_TMP
 
 # change to the execution directory
-cd $SNIC_TMP
+cd $NODE_TMP
 
 # Add modules, please check which module you want to use, in this example we use v6R2017x
 # Please note that this MUST correspond to the version used to create the .inp file
@@ -128,8 +128,8 @@ echo $1
 # receive my worker number
 export WRK_NB=$1
 
-# create worker-private subdirectory in $SNIC_TMP
-export WRK_DIR=$SNIC_TMP/WRK_${WRK_NB}
+# create worker-private subdirectory in $NODE_TMP
+export WRK_DIR=$NODE_TMP/WRK_${WRK_NB}
 mkdir $WRK_DIR
 
 # create a variable to address the "job directory"
@@ -157,7 +157,7 @@ cp -p *.odb ${JOB_DIR}
 
 # clean up the local disk and remove the worker-private directory
 
-cd $SNIC_TMP
+cd $NODE_TMP
 rm -rf WRK_${WRK_NB}
 ```
 

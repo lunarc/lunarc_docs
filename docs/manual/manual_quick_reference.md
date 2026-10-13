@@ -78,9 +78,9 @@ Use your home directory for job submission. The old `/lunarc/nobackup/users` dir
 
 ### Local working directory
 
-Each compute node has a local scratch disk available during a job at `$SNIC_TMP` (also `$TMPDIR`). It is deleted when the job ends.
+Each compute node has a local scratch disk available during a job at `$NODE_TMP` (also `$TMPDIR`). It is deleted when the job ends.
 
-If a job is terminated early (e.g. walltime exceeded), files on the local disk are lost. To preserve specific files, list them in `$SNIC_TMP/slurm_save_files` — paths should be relative to `$SNIC_TMP`, separated by spaces or newlines. These files will be copied to the submission directory if at all possible.
+If a job is terminated early (e.g. walltime exceeded), files on the local disk are lost. To preserve specific files, list them in `$NODE_TMP/slurm_save_files` — paths should be relative to `$NODE_TMP`, separated by spaces or newlines. These files will be copied to the submission directory if at all possible.
 
 ### Quotas
 
