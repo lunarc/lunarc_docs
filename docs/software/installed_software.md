@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3595, with 1 to 20 versions each *(2026-10-12 21:23)*
+Total number of applications: 3595, with 1 to 20 versions each *(2026-10-14 23:23)*
 ## A
 
 **[167 modules]**
@@ -269,7 +269,7 @@ Total number of applications: 3595, with 1 to 20 versions each *(2026-10-12 21:2
 | `BiocSingular` | 1.22.0, 1.26.0 |
 | `BiocStyle` | 2.34.0, 2.38.0 |
 | `BiocVersion` | 3.20.0, 3.22.0 |
-| `bioframe` | v0.6.4 |
+| `bioframe` | 0.7.2, v0.6.4 |
 | `biom` | 0.3.12 |
 | `biom-format` | 2.1.14 |
 | `biomaRt` | 2.62.0, 2.66.0 |
@@ -2305,7 +2305,7 @@ Total number of applications: 3595, with 1 to 20 versions each *(2026-10-12 21:2
 | `pacman` | 0.5.1 |
 | `PadWalker` | 2.5 |
 | `pagmo` | 2.19.1 |
-| `pairtools` | v1.1.0 |
+| `pairtools` | 1.1.2, 1.1.2, v1.1.0 |
 | `pamela` | 1.1.0 |
 | `pammtools` | 0.5.93, 0.7.3 |
 | `pamr` | 1.57 |
@@ -3778,4 +3778,4 @@ Total number of applications: 3595, with 1 to 20 versions each *(2026-10-12 21:2
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-10-12 21:23
+**Last updated:** 2026-10-14 23:23
