@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3595, with 1 to 20 versions each *(2026-10-14 23:23)*
+Total number of applications: 3594, with 1 to 20 versions each *(2026-10-17 1:23)*
 ## A
 
 **[167 modules]**
@@ -1850,7 +1850,7 @@ Total number of applications: 3595, with 1 to 20 versions each *(2026-10-14 23:2
 
 ## M
 
-**[250 modules]**
+**[249 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
@@ -1946,7 +1946,6 @@ Total number of applications: 3595, with 1 to 20 versions each *(2026-10-14 23:2
 | `metap` | 1.11, 1.12 |
 | `MetaPhlAn` | 4.0.6 |
 | `metapod` | 1.14.0, 1.18.0 |
-| `metashape` | 2.0.1, 2.0.2, 2.1.0, 2.3.0 |
 | `MetaUtility` | 2.1.2 |
 | `methylartist` | 1.2.6, 1.3.0, 1.5.3, 1.5.3 |
 | `methylKit` | 1.36.0 |
@@ -3778,4 +3777,4 @@ Total number of applications: 3595, with 1 to 20 versions each *(2026-10-14 23:2
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-10-14 23:23
+**Last updated:** 2026-10-17 1:23
