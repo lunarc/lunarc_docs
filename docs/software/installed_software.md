@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3594, with 1 to 20 versions each *(2026-10-17 1:23)*
+Total number of applications: 3594, with 1 to 21 versions each *(2026-10-29 12:23)*
 ## A
 
 **[167 modules]**
@@ -805,7 +805,7 @@ Total number of applications: 3594, with 1 to 20 versions each *(2026-10-17 1:23
 | `e3nn` | 0.3.3, 0.3.3-CUDA-11.7.0 |
 | `earth` | 5.3.4 |
 | `EasyABC` | 1.5.2 |
-| `EasyBuild` | 4.5.0, 4.6.0, 4.7.0, 4.7.1, 4.7.2, 4.8.0, 4.8.1, 4.8.2, 4.9.0, 4.9.1, 4.9.2, 4.9.3, 4.9.4, 5.0.0, 5.1.0, 5.1.1, 5.1.2, 5.2.0, 5.2.1, 5.3.0 |
+| `EasyBuild` | 4.5.0, 4.6.0, 4.7.0, 4.7.1, 4.7.2, 4.8.0, 4.8.1, 4.8.2, 4.9.0, 4.9.1, 4.9.2, 4.9.3, 4.9.4, 5.0.0, 5.1.0, 5.1.1, 5.1.2, 5.2.0, 5.2.1, 5.3.0, 5.4.1 |
 | `EBImage` | 4.48.0, 4.52.0 |
 | `ecBuild` | 3.8.0, 3.8.5 |
 | `ecCodes` | 2.22.1, 2.31.0, 2.38.3 |
@@ -3777,4 +3777,4 @@ Total number of applications: 3594, with 1 to 20 versions each *(2026-10-17 1:23
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-10-17 1:23
+**Last updated:** 2026-10-29 12:23
