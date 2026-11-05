@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3596, with 1 to 22 versions each *(2026-11-04 18:23)*
+Total number of applications: 3596, with 1 to 22 versions each *(2026-11-05 19:23)*
 ## A
 
 **[167 modules]**
@@ -472,7 +472,7 @@ Total number of applications: 3596, with 1 to 22 versions each *(2026-11-04 18:2
 | `clusterRepro` | 0.9 |
 | `clustree` | 0.5.1 |
 | `clValid` | 0.7 |
-| `CMake` | 3.12.1, 3.18.4, 3.20.1, 3.21.1, 3.22.1, 3.23.1, 3.24.3, 3.26.3, 3.27.6, 3.29.3, 3.31.3, 3.31.8, 4.0.3 |
+| `CMake` | 3.12.1, 3.18.4, 3.20.1, 3.21.1, 3.22.1, 3.23.1, 3.24.3, 3.26.3, 3.27.6, 3.29.3, 3.31.3, 3.31.8, 4.0.3, 4.2.1 |
 | `cmna` | 1.0.5 |
 | `cmprsk` | 2.2-12 |
 | `CMSeq` | 1.0.4 |
@@ -589,7 +589,7 @@ Total number of applications: 3596, with 1 to 22 versions each *(2026-11-04 18:2
 | `CUnit` | 2.1-3 |
 | `CuPy` | 13.0.0-foss-2023a-CUDA-12.1.1, 13.6.0-CUDA-12.9.1 |
 | `cupy` | 13.6.0 |
-| `cURL` | 7.69.1, 7.72.0, 7.76.0, 7.78.0, 7.83.0, 7.86.0, 8.0.1, 8.11.1, 8.14.1, 8.3.0, 8.7.1 |
+| `cURL` | 7.69.1, 7.72.0, 7.76.0, 7.78.0, 7.83.0, 7.86.0, 8.0.1, 8.11.1, 8.14.1, 8.17.0, 8.3.0, 8.7.1 |
 | `curl` | 6.0.1, 7.0.0 |
 | `cuSPARSELt` | 0.6.0.6-CUDA-12.1.1, 0.8.0.4-CUDA-12.9.1 |
 | `cutadapt` | 4.9, 5.0, 5.0, 5.1, 5.1 |
@@ -756,7 +756,7 @@ Total number of applications: 3596, with 1 to 22 versions each *(2026-11-04 18:2
 | `doit` | 0.36.0 |
 | `doMC` | 1.3.8 |
 | `doParallel` | 1.0.17 |
-| `dorado` | 0.3.1-CUDA-11.7.0, 0.5.1-CUDA-11.7.0, 0.7.1-CUDA-11.7.0, 0.7.3-CUDA-11.7.0 |
+| `dorado` | 0.3.1-CUDA-11.7.0, 0.5.1-CUDA-11.7.0, 0.7.1-CUDA-11.7.0, 0.7.3-CUDA-11.7.0, 1.3.3 |
 | `doRNG` | 1.8.6, 1.8.6.2 |
 | `DOSE` | 4.0.0, 4.4.0 |
 | `doSNOW` | 1.0.20 |
@@ -984,7 +984,7 @@ Total number of applications: 3596, with 1 to 22 versions each *(2026-11-04 18:2
 | `flax` | 0.8.4 |
 | `flex` | 2.6.4 |
 | `flexclust` | 1.4-2, 1.5.0 |
-| `FlexiBLAS` | 3.0.4, 3.2.0, 3.2.1, 3.3.1, 3.4.4, 3.4.5 |
+| `FlexiBLAS` | 3.0.4, 3.2.0, 3.2.1, 3.3.1, 3.4.4, 3.4.5, 3.5.0 |
 | `flexmix` | 2.3-19, 2.3-20 |
 | `flextable` | 0.9.10, 0.9.7 |
 | `flit` | 3.10.1, 3.10.1, 3.12.0, 3.12.0, 3.9.0 |
@@ -1026,7 +1026,7 @@ Total number of applications: 3596, with 1 to 22 versions each *(2026-11-04 18:2
 | `formatR` | 1.14 |
 | `Formula` | 1.2-5 |
 | `formula.tools` | 1.7.1 |
-| `foss` | 2020b, 2021a, 2021b, 2022a, 2022b, 2023a, 2023b, 2024.05, 2024a, 2025a, 2025b |
+| `foss` | 2020b, 2021a, 2021b, 2022a, 2022b, 2023a, 2023b, 2024.05, 2024a, 2025a, 2025b, 2026.1 |
 | `fosscuda` | 2020b |
 | `fossil` | 0.4.0 |
 | `fpc` | 2.2-13 |
@@ -1094,7 +1094,7 @@ Total number of applications: 3596, with 1 to 22 versions each *(2026-11-04 18:2
 | `GDAL` | 2.4.4, 3.10.0, 3.11.1, 3.11.3, 3.2.1, 3.4.1, 3.5.0, 3.6.2, 3.7.1, 3.9.0 |
 | `gdalUtils` | 2.0.3.2 |
 | `gdata` | 3.0.1 |
-| `GDB` | 13.2 |
+| `GDB` | 13.2, 16.3 |
 | `gdc-client` | 1.6.0 |
 | `gdistance` | 1.6.4, 1.6.5 |
 | `Gdk-Pixbuf` | 2.40.0, 2.42.10, 2.42.11, 2.42.12, 2.42.6, 2.42.8 |
@@ -1241,7 +1241,7 @@ Total number of applications: 3596, with 1 to 22 versions each *(2026-11-04 18:2
 | `goldilocks` | 0.3.0, 0.4.0 |
 | `gomkl` | 2022a, 2023b |
 | `gomms` | 1.0 |
-| `gompi` | 2020b, 2021a, 2021b, 2022a, 2022b, 2023a, 2023b, 2024.05, 2024a, 2025a, 2025b |
+| `gompi` | 2020b, 2021a, 2021b, 2022a, 2022b, 2023a, 2023b, 2024.05, 2024a, 2025a, 2025b, 2026.1 |
 | `gompic` | 2020b |
 | `google-auth` | 2.22.0 |
 | `google-auth-oauthlib` | 1.0.0 |
@@ -1418,7 +1418,7 @@ Total number of applications: 3596, with 1 to 22 versions each *(2026-11-04 18:2
 | `huggingface-hub` | 0.21.4, 0.24.6 |
 | `humanfriendly` | 10.0 |
 | `hunspell` | 3.0.5, 3.0.6 |
-| `hwloc` | 2.10.0, 2.11.2, 2.12.1, 2.2.0, 2.4.1, 2.5.0, 2.7.1, 2.8.0, 2.9.1, 2.9.2 |
+| `hwloc` | 2.10.0, 2.11.2, 2.12.1, 2.13.0, 2.2.0, 2.4.1, 2.5.0, 2.7.1, 2.8.0, 2.9.1, 2.9.2 |
 | `hwriter` | 1.3.2.1 |
 | `HWxtest` | 1.1.9 |
 | `hypergeo` | 1.2-13, 1.2-14 |
@@ -1529,7 +1529,7 @@ Total number of applications: 3596, with 1 to 22 versions each *(2026-11-04 18:2
 | `IRanges` | 2.40.0, 2.44.0 |
 | `irlba` | 2.3.5.1 |
 | `ISA-L` | 2.30.0, 2.31.0 |
-| `ISL` | 0.26 |
+| `ISL` | 0.26, 0.27 |
 | `ismev` | 1.42, 1.43 |
 | `Iso` | 0.0-21 |
 | `isoband` | 0.2.7 |
@@ -1744,7 +1744,7 @@ Total number of applications: 3596, with 1 to 22 versions each *(2026-11-04 18:2
 | `libnsl` | 1.3.0, 2.0.1 |
 | `libogg` | 1.3.5, 1.3.6 |
 | `libopus` | 1.3.1, 1.4, 1.5.2 |
-| `libpciaccess` | 0.16, 0.17, 0.18.1 |
+| `libpciaccess` | 0.16, 0.17, 0.18.1, 0.19 |
 | `libpng` | 1.2.59, 1.6.37, 1.6.38, 1.6.39, 1.6.40, 1.6.43, 1.6.48, 1.6.50 |
 | `libpsl` | 0.21.1, 0.21.5 |
 | `libPSML` | 2.1.0 |
@@ -1869,7 +1869,7 @@ Total number of applications: 3596, with 1 to 22 versions each *(2026-11-04 18:2
 | `make` | 4.3, 4.4.1 |
 | `makedepend` | 1.0.7 |
 | `makedepf90` | 2.8.8 |
-| `makeinfo` | 6.7-minimal, 7.0.3, 7.1 |
+| `makeinfo` | 6.7-minimal, 7.0.3, 7.1, 7.2 |
 | `Mako` | 1.1.3, 1.1.4, 1.2.0, 1.2.4, 1.3.10, 1.3.10, 1.3.5, 1.3.5 |
 | `MALDIquant` | 1.22.3 |
 | `manipulateWidget` | 0.11.1 |
@@ -1934,7 +1934,7 @@ Total number of applications: 3596, with 1 to 22 versions each *(2026-11-04 18:2
 | `Mesa` | 20.2.1, 21.1.1, 21.1.7, 22.0.3, 22.2.4, 23.1.4, 23.1.9, 24.1.3, 25.1.3 |
 | `MeshLab` | 2023.12 |
 | `Meshroom` | 2023.3.0-CUDA-12.1.1 |
-| `Meson` | 0.55.3, 0.58.0, 0.58.2, 0.62.1, 0.64.0, 1.1.1, 1.2.3, 1.4.0, 1.6.1, 1.8.2 |
+| `Meson` | 0.55.3, 0.58.0, 0.58.2, 0.62.1, 0.64.0, 1.1.1, 1.10.2, 1.2.3, 1.4.0, 1.6.1, 1.8.2 |
 | `meson-python` | 0.11.0, 0.13.2, 0.15.0, 0.16.0, 0.18.0, 0.18.0 |
 | `MESS` | 0.5.12, 0.6.0 |
 | `Meta::Builder` | 0.004 |
@@ -2236,7 +2236,7 @@ Total number of applications: 3596, with 1 to 22 versions each *(2026-11-04 18:2
 | `OPARI2` | 2.0.6, 2.0.7, 2.0.8, 2.0.9 |
 | `openair` | 2.18-2, 2.19.0 |
 | `OpenBabel` | 3.1.1 |
-| `OpenBLAS` | 0.3.12, 0.3.15, 0.3.18, 0.3.20, 0.3.20-int8, 0.3.21, 0.3.23, 0.3.24, 0.3.27, 0.3.29, 0.3.30 |
+| `OpenBLAS` | 0.3.12, 0.3.15, 0.3.18, 0.3.20, 0.3.20-int8, 0.3.21, 0.3.23, 0.3.24, 0.3.27, 0.3.29, 0.3.30, 0.3.32 |
 | `OpenCV` | 4.5.1-contrib, 4.6.0-CUDA-11.7.0-contrib, 4.6.0-contrib |
 | `openCyto` | 2.18.0, 2.22.0 |
 | `OpenDroneMap` | 3.6.2 |
@@ -2246,7 +2246,7 @@ Total number of applications: 3596, with 1 to 22 versions each *(2026-11-04 18:2
 | `OpenJPEG` | 2.4.0, 2.5.0, 2.5.2, 2.5.3 |
 | `OpenMM` | 7.7.0-foss-2022a-CUDA-11.7.0, 8.0.0, 8.0.0-CUDA-12.1.1, 8.0.0-foss-2022a-CUDA-11.7.0 |
 | `OpenMolcas` | 22.10 |
-| `OpenMPI` | 4.0.5, 4.1.1, 4.1.4, 4.1.5, 4.1.6, 5.0.3, 5.0.7, 5.0.8 |
+| `OpenMPI` | 4.0.5, 4.1.1, 4.1.4, 4.1.5, 4.1.6, 5.0.10, 5.0.3, 5.0.7, 5.0.8 |
 | `OpenMx` | 2.21.13, 2.22.9 |
 | `OpenPGM` | 5.2.122 |
 | `OpenPNM` | 3.3.0 |
@@ -2441,7 +2441,7 @@ Total number of applications: 3596, with 1 to 22 versions each *(2026-11-04 18:2
 | `plyr` | 1.8.9 |
 | `plyranges` | 1.26.0, 1.30.0 |
 | `PMA` | 1.2-4 |
-| `PMIx` | 3.1.5, 3.2.3, 4.1.0, 4.1.2, 4.2.2, 4.2.4, 4.2.6, 5.0.2, 5.0.6, 5.0.8 |
+| `PMIx` | 3.1.5, 3.2.3, 4.1.0, 4.1.2, 4.2.2, 4.2.4, 4.2.6, 5.0.2, 5.0.6, 5.0.8, 6.1.0 |
 | `pmp` | 1.18.0, 1.21.0 |
 | `PnetCDF` | 1.12.2, 1.12.3, 1.13.0 |
 | `png` | 0.1-8 |
@@ -2516,7 +2516,7 @@ Total number of applications: 3596, with 1 to 22 versions each *(2026-11-04 18:2
 | `proxy` | 0.4-27 |
 | `proxyC` | 0.4.1, 0.5.2 |
 | `PRROC` | 1.3.1, 1.4 |
-| `PRRTE` | 3.0.11, 3.0.5, 3.0.8 |
+| `PRRTE` | 3.0.11, 3.0.5, 3.0.8, 4.1.0 |
 | `PRSice` | 2.3.5, v2.3.5 |
 | `pryr` | 0.1.6 |
 | `ps` | 1.8.1, 1.9.1 |
@@ -3518,7 +3518,7 @@ Total number of applications: 3596, with 1 to 22 versions each *(2026-11-04 18:2
 | Modulename | Versions |
 | :--- | :--- |
 | `ubiquerg` | 0.7.0, 0.8.0 |
-| `UCC` | 1.0.0, 1.1.0, 1.2.0, 1.3.0, 1.4.4 |
+| `UCC` | 1.0.0, 1.1.0, 1.2.0, 1.3.0, 1.4.4, 1.7.0 |
 | `UCC-CUDA` | 1.3.0-CUDA-12.8.0 |
 | `UCell` | 2.10.1, 2.14.0 |
 | `ucminf` | 1.2.2 |
@@ -3779,4 +3779,4 @@ Total number of applications: 3596, with 1 to 22 versions each *(2026-11-04 18:2
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-11-04 18:23
+**Last updated:** 2026-11-05 19:23
