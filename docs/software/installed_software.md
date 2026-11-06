@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3596, with 1 to 22 versions each *(2026-11-05 19:23)*
+Total number of applications: 3597, with 1 to 22 versions each *(2026-11-06 20:23)*
 ## A
 
 **[167 modules]**
@@ -1059,7 +1059,7 @@ Total number of applications: 3596, with 1 to 22 versions each *(2026-11-05 19:2
 
 ## G
 
-**[258 modules]**
+**[259 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
@@ -1281,6 +1281,7 @@ Total number of applications: 3596, with 1 to 22 versions each *(2026-11-05 19:2
 | `GRIDSS` | 2.13.2-Java-11 |
 | `gridtext` | 0.1.5 |
 | `grImport2` | 0.3-3 |
+| `GRIPSS` | 2.4-Java-11 |
 | `groff` | 1.22.4, 1.23.0 |
 | `GROMACS` | 2019.4, 2021.5, 2021.5-PLUMED-2.8.0, 2022.3-nogmxapi, 2023.1, 2023.1-CUDA-11.7.0, 2023.1-nogmxapi, 2023.3, 2023.3-CUDA-11.7.0, 2024.1, 2024.4-PLUMED-2.9.2 |
 | `grpcio` | 1.57.0, 1.57.0, 1.62.1, 1.70.0, 1.70.0 |
@@ -2327,7 +2328,7 @@ Total number of applications: 3596, with 1 to 22 versions each *(2026-11-05 19:2
 | `Params::Util` | 1.102 |
 | `Params::Validate` | 1.31 |
 | `Params::ValidationCompiler` | 0.31 |
-| `ParaView` | 5.10.1-mpi, 5.11.1, 5.11.2, 5.13.2, 5.9.1-mpi, 6.0.1 |
+| `ParaView` | 5.10.1-mpi, 5.11.1, 5.11.2, 5.13.2, 5.9.1-mpi, 6.0.1, 6.2.0 |
 | `ParaView-Catalyst` | 2.0.0 |
 | `parent` | 0.243, 0.244 |
 | `ParMETIS` | 4.0.3 |
@@ -3779,4 +3780,4 @@ Total number of applications: 3596, with 1 to 22 versions each *(2026-11-05 19:2
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-11-05 19:23
+**Last updated:** 2026-11-06 20:23
