@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3597, with 1 to 22 versions each *(2026-11-06 20:23)*
+Total number of applications: 3598, with 1 to 22 versions each *(2026-11-09 13:23)*
 ## A
 
 **[167 modules]**
@@ -1059,7 +1059,7 @@ Total number of applications: 3597, with 1 to 22 versions each *(2026-11-06 20:2
 
 ## G
 
-**[259 modules]**
+**[260 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
@@ -1095,6 +1095,7 @@ Total number of applications: 3597, with 1 to 22 versions each *(2026-11-06 20:2
 | `gdalUtils` | 2.0.3.2 |
 | `gdata` | 3.0.1 |
 | `GDB` | 13.2, 16.3 |
+| `gdbgui` | 0.15.3.0 |
 | `gdc-client` | 1.6.0 |
 | `gdistance` | 1.6.4, 1.6.5 |
 | `Gdk-Pixbuf` | 2.40.0, 2.42.10, 2.42.11, 2.42.12, 2.42.6, 2.42.8 |
@@ -3780,4 +3781,4 @@ Total number of applications: 3597, with 1 to 22 versions each *(2026-11-06 20:2
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-11-06 20:23
+**Last updated:** 2026-11-09 13:23
