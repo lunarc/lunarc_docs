@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3598, with 1 to 22 versions each *(2026-11-09 13:23)*
+Total number of applications: 3599, with 1 to 22 versions each *(2026-11-11 0:23)*
 ## A
 
 **[167 modules]**
@@ -296,7 +296,7 @@ Total number of applications: 3598, with 1 to 22 versions each *(2026-11-09 13:2
 | `blavaan` | 0.5-6, 0.5-9 |
 | `bleach` | 6.1.0 |
 | `Blender` | 4.0.1-linux-x86_64-CUDA-12.1.1 |
-| `blender` | 3.5.1, 4.0.2, 4.2.0, 4.5.3, 5.1.2 |
+| `blender` | 4.0.2, 4.2.0, 4.5.3, 5.1.2 |
 | `blinker` | 1.6.2, 1.8.2 |
 | `BLIS` | 0.8.1, 0.9.0, 1.0, 1.1, 2.0 |
 | `blme` | 1.0-6 |
@@ -2635,7 +2635,7 @@ Total number of applications: 3598, with 1 to 22 versions each *(2026-11-09 13:2
 
 ## Q
 
-**[31 modules]**
+**[32 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
@@ -2668,6 +2668,7 @@ Total number of applications: 3598, with 1 to 22 versions each *(2026-11-09 13:2
 | `questionary` | 2.0.1 |
 | `questionr` | 0.7.8, 0.8.1 |
 | `QuickJSR` | 1.4.0, 1.8.1 |
+| `QuPath` | 0.6.0 |
 | `qvalue` | 2.38.0, 2.42.0 |
 | `Qwt` | 6.2.0 |
 
@@ -3781,4 +3782,4 @@ Total number of applications: 3598, with 1 to 22 versions each *(2026-11-09 13:2
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-11-09 13:23
+**Last updated:** 2026-11-11 0:23
