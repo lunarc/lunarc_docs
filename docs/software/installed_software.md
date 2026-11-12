@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3599, with 1 to 22 versions each *(2026-11-11 0:23)*
+Total number of applications: 3599, with 1 to 22 versions each *(2026-11-12 1:23)*
 ## A
 
 **[167 modules]**
@@ -1050,7 +1050,7 @@ Total number of applications: 3599, with 1 to 22 versions each *(2026-11-11 0:23
 | `fsom` | 20141119, 20151117 |
 | `fsspec` | 2024.9.0, 2025.3.2, 2025.7.0 |
 | `furrr` | 0.3.1 |
-| `fusioncatcher` | v1.33 |
+| `fusioncatcher` | 1.33-virt, v1.33 |
 | `FusionInspector` | v2.8.0 |
 | `futile.logger` | 1.4.3 |
 | `futile.options` | 1.0.1 |
@@ -3782,4 +3782,4 @@ Total number of applications: 3599, with 1 to 22 versions each *(2026-11-11 0:23
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-11-11 0:23
+**Last updated:** 2026-11-12 1:23
