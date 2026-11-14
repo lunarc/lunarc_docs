@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3638, with 1 to 22 versions each *(2026-11-13 2:23)*
+Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23)*
 ## A
 
 **[169 modules]**
@@ -151,7 +151,7 @@ Total number of applications: 3638, with 1 to 22 versions each *(2026-11-13 2:23
 | `async-timeout` | 4.0.3 |
 | `async_generator` | 1.10 |
 | `at-spi2-atk` | 2.38.0 |
-| `at-spi2-core` | 2.38.0, 2.44.1, 2.49.91, 2.50.0, 2.54.0 |
+| `at-spi2-core` | 2.38.0, 2.44.1, 2.49.91, 2.50.0, 2.54.0, 2.56.2 |
 | `ATACseqQC` | 1.30.0, 1.34.0 |
 | `ATK` | 2.36.0, 2.38.0 |
 | `atomicwrites` | 1.4.1 |
@@ -1070,7 +1070,7 @@ Total number of applications: 3638, with 1 to 22 versions each *(2026-11-13 2:23
 
 ## G
 
-**[260 modules]**
+**[261 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
@@ -1296,6 +1296,7 @@ Total number of applications: 3638, with 1 to 22 versions each *(2026-11-13 2:23
 | `GRIPSS` | 2.4-Java-11 |
 | `groff` | 1.22.4, 1.23.0, 1.24.1 |
 | `GROMACS` | 2019.4, 2021.5, 2021.5-PLUMED-2.8.0, 2022.3-nogmxapi, 2023.1, 2023.1-CUDA-11.7.0, 2023.1-nogmxapi, 2023.3, 2023.3-CUDA-11.7.0, 2024.1, 2024.4-PLUMED-2.9.2 |
+| `gRPC` | 1.83.0 |
 | `grpcio` | 1.57.0, 1.57.0, 1.62.1, 1.70.0, 1.70.0 |
 | `grpreg` | 3.5.0 |
 | `GSA` | 1.03.3 |
@@ -1319,7 +1320,7 @@ Total number of applications: 3638, with 1 to 22 versions each *(2026-11-13 2:23
 | `gtable` | 0.3.6 |
 | `GTK+` | 3.24.23 |
 | `GTK2` | 2.24.33 |
-| `GTK3` | 3.24.33, 3.24.37, 3.24.39, 3.24.42 |
+| `GTK3` | 3.24.33, 3.24.37, 3.24.39, 3.24.42, 3.24.52 |
 | `GTK4` | 4.7.0 |
 | `gtools` | 3.9.5 |
 | `GTS` | 0.7.6 |
@@ -1403,7 +1404,7 @@ Total number of applications: 3638, with 1 to 22 versions each *(2026-11-13 2:23
 | `Homo.sapiens` | 1.3.1 |
 | `Hook::LexWrap` | 0.26 |
 | `HPL` | 2.3 |
-| `html5lib` | 1.1 |
+| `html5lib` | 1.1, 1.1 |
 | `HTML::Entities::Interpolate` | 1.10 |
 | `HTML::Form` | 6.12, 6.13 |
 | `HTML::Parser` | 3.83 |
@@ -2205,7 +2206,7 @@ Total number of applications: 3638, with 1 to 22 versions each *(2026-11-13 2:23
 | `nnet` | 7.3-19, 7.3-20 |
 | `nnls` | 1.6 |
 | `nodeenv` | 1.8.0, 1.9.1 |
-| `nodejs` | 16.15.1, 18.12.1, 18.17.1, 20.13.1, 20.9.0, 22.16.0, 22.17.1, 22.23.4, 22.23.5, 24.16.0, 24.22.2 |
+| `nodejs` | 16.15.1, 18.12.1, 18.17.1, 20.13.1, 20.9.0, 22.16.0, 22.17.1, 22.23.4, 22.23.5, 24.16.0, 24.22.2, 24.22.3 |
 | `NOISeq` | 2.50.0, 2.54.0 |
 | `nonnest2` | 0.5-8 |
 | `nor1mix` | 1.3-3 |
@@ -2335,7 +2336,7 @@ Total number of applications: 3638, with 1 to 22 versions each *(2026-11-13 2:23
 | `pander` | 0.6.6 |
 | `Pandoc` | 3.1.2 |
 | `pandocfilters` | 1.5.1 |
-| `Pango` | 1.47.0, 1.48.5, 1.48.8, 1.50.12, 1.50.14, 1.50.7, 1.51.0, 1.54.0, 1.56.3, 1.57.0 |
+| `Pango` | 1.47.0, 1.48.5, 1.48.8, 1.50.12, 1.50.14, 1.50.7, 1.51.0, 1.54.0, 1.56.3, 1.57.0, 1.57.1 |
 | `PAPI` | 7.0.0, 7.0.1, 7.1.0 |
 | `parallel` | 20210322, 20220722, 20230722 |
 | `Parallel::ForkManager` | 2.03, 2.04 |
@@ -2678,7 +2679,7 @@ Total number of applications: 3638, with 1 to 22 versions each *(2026-11-13 2:23
 | `qrng` | 0.0-10 |
 | `qrnn` | 2.1.1 |
 | `Qt5` | 5.15.10, 5.15.13, 5.15.16, 5.15.2, 5.15.5, 5.15.7 |
-| `Qt6` | 6.6.3, 6.9.3 |
+| `Qt6` | 6.11.2, 6.6.3, 6.9.3 |
 | `Qtconsole` | 5.3.2, 5.6.0 |
 | `qtcreator` | 10.0.1, 14.0.1, 15.0.0 |
 | `QtPy` | 2.2.1, 2.3.0, 2.4.1 |
@@ -3667,7 +3668,7 @@ Total number of applications: 3638, with 1 to 22 versions each *(2026-11-13 2:23
 | `WCSim` | 1.6-virt |
 | `wcwidth` | 0.2.13, 0.6.0 |
 | `wdm` | 0.2.4, 0.2.6 |
-| `webencodings` | 0.5.1 |
+| `webencodings` | 0.5.1, 0.6.1 |
 | `webshot` | 0.5.5 |
 | `websocket-client` | 1.5.1 |
 | `websocket_client` | 1.8.0 |
@@ -3821,4 +3822,4 @@ Total number of applications: 3638, with 1 to 22 versions each *(2026-11-13 2:23
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-11-13 2:23
+**Last updated:** 2026-11-14 3:23
