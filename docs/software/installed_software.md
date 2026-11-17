@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23)*
+Total number of applications: 3640, with 1 to 22 versions each *(2026-11-17 10:23)*
 ## A
 
 **[169 modules]**
@@ -316,14 +316,14 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `bold` | 1.3.0 |
 | `bookdown` | 0.41, 0.45 |
 | `boolean` | 0.46 |
-| `Boost` | 1.55.0, 1.74.0, 1.76.0, 1.77.0, 1.79.0, 1.81.0, 1.82.0, 1.83.0, 1.85.0, 1.88.0 |
+| `Boost` | 1.55.0, 1.74.0, 1.76.0, 1.77.0, 1.79.0, 1.81.0, 1.82.0, 1.83.0, 1.85.0, 1.88.0, 1.90.0 |
 | `Boost.MPI` | 1.79.0, 1.85.0 |
 | `boot` | 1.3-31, 1.3-32 |
 | `bootstrap` | 2019.6 |
 | `Boruta` | 8.0.0, 9.0.0 |
 | `boto3` | 1.26.163, 1.26.37, 1.35.36, 1.35.36 |
 | `botocore` | 1.35.36 |
-| `bottleneck` | 1.5.0 |
+| `bottleneck` | 1.5.0, 1.6.0 |
 | `Bowtie` | 1.3.0, 1.3.1 |
 | `Bowtie2` | 2.4.5, 2.5.1, 2.5.4 |
 | `brainvisa` | v5.1.2-virt |
@@ -416,7 +416,7 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `cffi` | 1.15.1, 1.16.0, 1.17.1, 1.17.1, 2.0.0, 2.0.0 |
 | `cfgv` | 3.4.0 |
 | `CFITSIO` | 3.49, 4.2.0, 4.3.0, 4.3.1, 4.4.1, 4.6.2 |
-| `CGAL` | 4.14.3, 5.5.2, 5.6, 6.0.1 |
+| `CGAL` | 4.14.3, 5.5.2, 5.6, 6.0.1, 6.2 |
 | `cgdsr` | 1.3.0 |
 | `CGHbase` | 1.66.0, 1.70.0 |
 | `CGHcall` | 2.68.0, 2.72.0 |
@@ -480,7 +480,7 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `clusterRepro` | 0.9 |
 | `clustree` | 0.5.1 |
 | `clValid` | 0.7 |
-| `CMake` | 3.12.1, 3.18.4, 3.20.1, 3.21.1, 3.22.1, 3.23.1, 3.24.3, 3.26.3, 3.27.6, 3.29.3, 3.31.3, 3.31.8, 4.0.3, 4.2.1 |
+| `CMake` | 3.12.1, 3.18.4, 3.20.1, 3.21.1, 3.22.1, 3.23.1, 3.24.3, 3.26.3, 3.27.6, 3.29.3, 3.31.11, 3.31.3, 3.31.8, 4.0.3, 4.2.1 |
 | `cmna` | 1.0.5 |
 | `cmprsk` | 2.2-12 |
 | `CMSeq` | 1.0.4 |
@@ -668,7 +668,7 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `ddalpha` | 1.3.16 |
 | `ddPCRclust` | 1.26.0, 1.30.0 |
 | `deal` | 1.2-42 |
-| `deap` | 1.4.3 |
+| `deap` | 1.4.3, 1.4.4 |
 | `debugme` | 1.2.0 |
 | `debugpy` | 1.8.7 |
 | `DECIPHER` | 3.2.0, 3.6.0 |
@@ -827,7 +827,7 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `edlib` | 1.3.9.post1, 1.3.9.post1 |
 | `egg` | 0.4.5 |
 | `eido` | 0.2.2, 0.2.3 |
-| `Eigen` | 3.3.8, 3.3.9, 3.4.0 |
+| `Eigen` | 3.3.8, 3.3.9, 3.4.0, 5.0.0 |
 | `elementpath` | 4.1.5 |
 | `elfutils` | 0.183, 0.185, 0.187, 0.193, 0.195 |
 | `Elk` | 8.5.2 |
@@ -1155,7 +1155,7 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `GetoptLong` | 1.0.5 |
 | `GetOrganelle` | 1.7.7.1 |
 | `gettext` | 0.21, 0.21.1, 0.22, 0.22.5, 0.24, 0.25, 0.26 |
-| `gfbf` | 2022b, 2023a, 2023b, 2024a, 2025a, 2025b |
+| `gfbf` | 2022b, 2023a, 2023b, 2024a, 2025a, 2025b, 2026.1 |
 | `gflags` | 2.2.2 |
 | `gfonts` | 0.2.0 |
 | `GGally` | 2.2.1, 2.4.0 |
@@ -1243,7 +1243,7 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `GMT` | 6.2.0 |
 | `gmxapi` | 0.4.2 |
 | `gnumeric` | 0.7-10 |
-| `gnuplot` | 5.4.2, 5.4.4, 5.4.6, 5.4.8, 6.0.3 |
+| `gnuplot` | 5.4.2, 5.4.4, 5.4.6, 5.4.8, 6.0.3, 6.0.5 |
 | `GO` | 0.04 |
 | `Go` | 1.22.1, 1.25.0 |
 | `GO.db` | 3.20.0, 3.22.0 |
@@ -1365,7 +1365,7 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `hatchling` | 1.18.0, 1.24.2, 1.27.0, 1.27.0, 1.29.0, 1.29.0 |
 | `haven` | 2.5.4, 2.5.5 |
 | `HDF` | 4.2.15, 4.2.16-2, 4.3.0, 4.3.1 |
-| `HDF5` | 1.10.7, 1.12.1, 1.12.2, 1.14.0, 1.14.3, 1.14.5, 1.14.6 |
+| `HDF5` | 1.10.7, 1.12.1, 1.12.2, 1.14.0, 1.14.3, 1.14.5, 1.14.6, 2.1.1 |
 | `HDF5Array` | 1.34.0, 1.38.0 |
 | `hdf5r` | 1.3.11, 1.3.12 |
 | `hdm` | 0.3.2 |
@@ -1437,7 +1437,7 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `HWxtest` | 1.1.9 |
 | `hypergeo` | 1.2-13, 1.2-14 |
 | `Hyperopt` | 0.2.7 |
-| `hypothesis` | 4.57.1-Python-2.7.18, 5.41.2, 6.103.1, 6.13.1, 6.133.2, 6.136.6, 6.14.6, 6.46.7, 6.68.2, 6.82.0, 6.90.0 |
+| `hypothesis` | 4.57.1-Python-2.7.18, 5.41.2, 6.103.1, 6.13.1, 6.133.2, 6.136.6, 6.14.6, 6.153.2, 6.46.7, 6.68.2, 6.82.0, 6.90.0 |
 | `Hypre` | 2.20.0, 2.25.0, 2.27.0 |
 
 ## I
@@ -1668,7 +1668,7 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `kineto` | 0.4.0 |
 | `king` | 2.2.7 |
 | `kinship2` | 1.9.6.1, 1.9.6.2 |
-| `kiwisolver` | 1.4.5, 1.4.8 |
+| `kiwisolver` | 1.4.5, 1.4.8, 1.5.0 |
 | `klaR` | 1.7-3 |
 | `KMC` | 3.2.4 |
 | `knitr` | 1.49, 1.50 |
@@ -1727,12 +1727,12 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `levenshtein` | 0.27.3 |
 | `lhs` | 1.2.0 |
 | `liac-arff` | 2.5.0 |
-| `libaec` | 1.0.6, 1.1.3, 1.1.4 |
+| `libaec` | 1.0.6, 1.1.3, 1.1.4, 1.1.7 |
 | `libaio` | 0.3.112, 0.3.113 |
 | `libaom` | 3.10.0, 3.14.0 |
 | `libarchive` | 3.4.3, 3.5.1, 3.6.1, 3.6.2, 3.7.2, 3.7.4, 3.7.7, 3.8.1, 3.8.5 |
 | `libavif` | 0.11.1 |
-| `libcerf` | 1.17, 2.1, 2.3, 3.0 |
+| `libcerf` | 1.17, 2.1, 2.3, 3.0, 3.3 |
 | `libclc` | 20.1.8, 21.1.8 |
 | `libcoin` | 1.0-10 |
 | `libdap` | 3.20.11 |
@@ -1787,7 +1787,7 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `libxc` | 5.2.3, 6.2.2, 7.0.0 |
 | `libxml++` | 2.42.1 |
 | `libxml2` | 2.10.3, 2.11.4, 2.11.5, 2.12.7, 2.13.4, 2.14.3, 2.15.1, 2.9.10, 2.9.13 |
-| `libxslt` | 1.1.34, 1.1.37, 1.1.38, 1.1.42, 1.1.43 |
+| `libxslt` | 1.1.34, 1.1.37, 1.1.38, 1.1.42, 1.1.43, 1.1.45 |
 | `libxsmm` | 1.17 |
 | `libyaml` | 0.2.1, 0.2.5 |
 | `LiCSBAS2` | 1.9.0 |
@@ -1807,7 +1807,7 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `listenv` | 0.10.0, 0.9.1 |
 | `lit` | 18.1.7, 18.1.7, 18.1.8, 18.1.8 |
 | `litedown` | 0.7, 0.8 |
-| `LittleCMS` | 2.12, 2.13.1, 2.14, 2.15, 2.16, 2.17 |
+| `LittleCMS` | 2.12, 2.13.1, 2.14, 2.15, 2.16, 2.17, 2.19.1 |
 | `LLVM` | 11.0.0, 11.1.0, 12.0.1, 14.0.3, 14.0.6, 14.0.6-llvmlite, 15.0.5, 16.0.6, 18.1.8, 19.1.7, 20.1.7, 20.1.8, 21.1.8 |
 | `llvmlite` | 0.43.0 |
 | `LMDB` | 0.9.24, 0.9.29, 0.9.31 |
@@ -1855,7 +1855,7 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `LSD2` | 2.3, 2.4.1 |
 | `lsei` | 1.3-0 |
 | `lslx` | 0.6.11 |
-| `Lua` | 5.4.3, 5.4.4, 5.4.6, 5.4.8 |
+| `Lua` | 5.4.3, 5.4.4, 5.4.6, 5.4.8, 5.5.0 |
 | `lubridate` | 1.9.3, 1.9.4 |
 | `lumi` | 2.58.0, 2.62.0 |
 | `lwgeom` | 0.2-14 |
@@ -1868,7 +1868,7 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 
 ## M
 
-**[253 modules]**
+**[254 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
@@ -1918,7 +1918,7 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `Mathematica` | 14.0.0 |
 | `mathjaxr` | 1.6-0, 1.8-0 |
 | `matlab` | 1.0.4.1, 2022a, 2023a, 2023b, 2024b, 2025b |
-| `matplotlib` | 2.2.5-Python-2.7.18, 3.10.3, 3.10.3, 3.10.5, 3.10.5, 3.3.3, 3.4.2, 3.4.3, 3.5.2, 3.7.0, 3.7.2, 3.8.2, 3.9.2 |
+| `matplotlib` | 2.2.5-Python-2.7.18, 3.10.3, 3.10.3, 3.10.5, 3.10.5, 3.10.9, 3.10.9, 3.3.3, 3.4.2, 3.4.3, 3.5.2, 3.7.0, 3.7.2, 3.8.2, 3.9.2 |
 | `matplotlib-inline` | 0.1.6 |
 | `Matrix` | 1.7-1, 1.7-4, 1.7-5 |
 | `matrixcalc` | 1.0-6 |
@@ -1955,7 +1955,7 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `MeshLab` | 2023.12 |
 | `Meshroom` | 2023.3.0-CUDA-12.1.1 |
 | `Meson` | 0.55.3, 0.58.0, 0.58.2, 0.62.1, 0.64.0, 1.1.1, 1.10.2, 1.2.3, 1.4.0, 1.6.1, 1.8.2 |
-| `meson-python` | 0.11.0, 0.13.2, 0.15.0, 0.16.0, 0.18.0, 0.18.0 |
+| `meson-python` | 0.11.0, 0.13.2, 0.15.0, 0.16.0, 0.18.0, 0.18.0, 0.19.0, 0.19.0 |
 | `MESS` | 0.5.12, 0.6.0 |
 | `Meta::Builder` | 0.004 |
 | `MetaboCoreUtils` | 1.14.0, 1.18.0 |
@@ -2059,6 +2059,7 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `moments` | 0.14.1 |
 | `MonteCarlo` | 1.0.6 |
 | `Moo` | 2.005005 |
+| `moocore` | 0.3.1 |
 | `Moose` | 2.2207, 2.4000 |
 | `MooseX::LazyRequire` | 0.11 |
 | `MooseX::OneArgNew` | 0.007 |
@@ -2082,7 +2083,7 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `mpi4py` | 3.1.4, 3.1.5, 4.0.1, 4.1.0, 4.1.0 |
 | `MPICH` | 3.4.2 |
 | `MplusAutomation` | 1.1.1, 1.2 |
-| `mpmath` | 1.3.0 |
+| `mpmath` | 1.3.0, 1.4.1 |
 | `MrBayes` | 3.2.7 |
 | `mRMRe` | 2.1.2.2 |
 | `MRO::Compat` | 0.15 |
@@ -2171,7 +2172,7 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `Net::SNMP` | v6.0.1 |
 | `Net::SSLeay` | 1.94, 1.96 |
 | `netaddr` | 1.3.0 |
-| `netCDF` | 4.7.4, 4.8.0, 4.8.1, 4.9.0, 4.9.2, 4.9.3 |
+| `netCDF` | 4.10.0, 4.7.4, 4.8.0, 4.8.1, 4.9.0, 4.9.2, 4.9.3 |
 | `netCDF-C++4` | 4.3.1 |
 | `netCDF-Fortran` | 4.5.3, 4.6.0, 4.6.1 |
 | `netcdf4-python` | 1.5.5.1, 1.6.4 |
@@ -2226,8 +2227,8 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `Number::Compare` | 0.03 |
 | `Number::Format` | 1.76 |
 | `numDeriv` | 2016.8-1.1 |
-| `numexpr` | 2.11.0, 2.8.1, 2.8.4 |
-| `numpy` | 2.3.1, 2.3.2 |
+| `numexpr` | 2.11.0, 2.14.1, 2.8.1, 2.8.4 |
+| `numpy` | 2.3.1, 2.3.2, 2.4.6 |
 | `numpy-groupies` | 0.10.2 |
 | `numpydoc` | 1.10.0, 1.8.0 |
 | `NVHPC` | 21.11, 22.11-CUDA-11.7.0, 23.1-CUDA-12.0.0 |
@@ -2262,7 +2263,7 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `openCyto` | 2.18.0, 2.22.0 |
 | `OpenDroneMap` | 3.6.2 |
 | `OpenEXR` | 2.5.5, 3.1.1, 3.1.5, 3.1.7, 3.2.0, 3.2.4, 3.3.4 |
-| `OpenFOAM` | 10, 11, 12, 13, 7-20200508, 9, v2112, v2206, v2306, v2406, v2506, v2512 |
+| `OpenFOAM` | 10, 11, 12, 13, 14, 7-20200508, 9, v2112, v2206, v2306, v2406, v2506, v2512 |
 | `OpenGL` | 2025.09, 2026.05 |
 | `OpenH264` | 2.6.0 |
 | `OpenJPEG` | 2.4.0, 2.5.0, 2.5.2, 2.5.3, 2.5.4 |
@@ -2332,7 +2333,7 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `pammtools` | 0.5.93, 0.7.3 |
 | `pamr` | 1.57 |
 | `pan` | 1.9 |
-| `pandas` | 2.3.0, 2.3.1 |
+| `pandas` | 2.3.0, 2.3.1, 3.0.3 |
 | `pander` | 0.6.6 |
 | `Pandoc` | 3.1.2 |
 | `pandocfilters` | 1.5.1 |
@@ -2349,8 +2350,8 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `Params::Util` | 1.102 |
 | `Params::Validate` | 1.31 |
 | `Params::ValidationCompiler` | 0.31 |
-| `ParaView` | 5.10.1-mpi, 5.11.1, 5.11.2, 5.13.2, 5.9.1-mpi, 6.0.1, 6.2.0 |
-| `ParaView-Catalyst` | 2.0.0 |
+| `ParaView` | 5.10.1-mpi, 5.11.1, 5.11.2, 5.13.2, 5.9.1-mpi, 6.0.1, 6.1.1, 6.2.0 |
+| `ParaView-Catalyst` | 2.0.0, 2.1.0 |
 | `parent` | 0.243, 0.244 |
 | `ParMETIS` | 4.0.3 |
 | `Parse::RecDescent` | 1.967015 |
@@ -2425,7 +2426,7 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `pickleshare` | 0.7.5 |
 | `pigz` | 2.8 |
 | `pillar` | 1.11.1, 1.9.0 |
-| `Pillow` | 10.0.0, 10.2.0, 10.4.0, 11.3.0, 8.0.1, 8.2.0, 8.3.2, 9.1.1, 9.4.0 |
+| `Pillow` | 10.0.0, 10.2.0, 10.4.0, 11.3.0, 12.2.0, 8.0.1, 8.2.0, 8.3.2, 9.1.1, 9.4.0 |
 | `Pillow-SIMD` | 10.4.0, 9.2.0, 9.5.0 |
 | `pim` | 2.0.2, 2.0.4 |
 | `pinfsc50` | 1.3.0 |
@@ -2574,7 +2575,7 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `pybedtools` | 0.9.0, 0.9.1 |
 | `PyBIDS` | 0.21.0 |
 | `pyBigWig` | 0.3.18, 0.3.22 |
-| `pybind11` | 2.10.3, 2.11.1, 2.12.0, 2.13.6, 2.6.0, 2.6.2, 2.7.1, 2.7.1-Python-2.7.18, 2.9.2, 3.0.0 |
+| `pybind11` | 2.10.3, 2.11.1, 2.12.0, 2.13.6, 2.6.0, 2.6.2, 2.7.1, 2.7.1-Python-2.7.18, 2.9.2, 3.0.0, 3.0.4 |
 | `pybtex` | 0.26.1 |
 | `pybtex-docutils` | 1.0.3 |
 | `PyCairo` | 1.21.0 |
@@ -2649,7 +2650,7 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `python-slugify` | 8.0.4, 8.0.4 |
 | `python-xxhash` | 3.4.1 |
 | `python-zlib-ng` | 0.5.1 |
-| `pythran` | 0.18.0 |
+| `pythran` | 0.18.0, 0.18.1 |
 | `pytoml` | 0.1.21 |
 | `PyTorch` | 1.12.0-CUDA-11.7.0, 1.12.1-CUDA-11.7.0, 2.1.2, 2.1.2-foss-2023a-CUDA-12.1.1, 2.6.0 |
 | `pytz` | 2025.2, 2026.1.post1 |
@@ -3014,13 +3015,13 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `scikit-learn` | 1.0.1, 1.0.2, 1.1.2, 1.2.1, 1.3.1, 1.4.0, 1.4.2, 1.5.2, 1.5.2, 1.7.1, 1.7.1 |
 | `scikit-misc` | 0.1.4 |
 | `scikit_build_core` | 0.10.6, 0.11.1, 0.11.5, 0.5.0 |
-| `scipy` | 1.16.0, 1.16.1 |
-| `SciPy-bundle` | 2020.11, 2020.11-Python-2.7.18, 2021.05, 2021.10, 2021.10-Python-2.7.18, 2022.05, 2023.02, 2023.07, 2023.11, 2024.05, 2025.06, 2025.07 |
+| `scipy` | 1.16.0, 1.16.1, 1.17.1 |
+| `SciPy-bundle` | 2020.11, 2020.11-Python-2.7.18, 2021.05, 2021.10, 2021.10-Python-2.7.18, 2022.05, 2023.02, 2023.07, 2023.11, 2024.05, 2025.06, 2025.07, 2026.05 |
 | `scistreer` | 1.2.0 |
 | `SCons` | 4.1.0.post1, 4.2.0, 4.4.0 |
 | `Scope::Guard` | 0.21 |
 | `Score-P` | 8.0, 8.1, 8.4, 9.0 |
-| `SCOTCH` | 6.1.0, 6.1.2, 7.0.1, 7.0.10, 7.0.3, 7.0.6, 7.0.8 |
+| `SCOTCH` | 6.1.0, 6.1.2, 7.0.1, 7.0.10, 7.0.11, 7.0.3, 7.0.6, 7.0.8 |
 | `scran` | 1.34.0, 1.38.0 |
 | `scrime` | 1.3.5 |
 | `scs` | 3.2.4, 3.2.7 |
@@ -3232,7 +3233,7 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `sphinxcontrib-websupport` | 2.0.0 |
 | `SPIA` | 2.58.0, 2.62.0 |
 | `Spiffy` | 0.46 |
-| `spin` | 0.14 |
+| `spin` | 0.14, 0.18 |
 | `splancs` | 2.01-45 |
 | `splitstackshape` | 1.4.8 |
 | `spls` | 2.2-3, 2.3-2 |
@@ -3474,8 +3475,8 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `timeSeries` | 4041.111 |
 | `tinycss2` | 1.3.0 |
 | `tinytex` | 0.54, 0.57 |
-| `Tk` | 8.6.10, 8.6.11, 8.6.12, 8.6.13, 8.6.14, 8.6.16, 9.0.1 |
-| `Tkinter` | 2.7.18, 3.10.4, 3.10.8, 3.11.3, 3.11.5, 3.12.3, 3.13.1, 3.13.5, 3.8.6, 3.9.5, 3.9.6 |
+| `Tk` | 8.6.10, 8.6.11, 8.6.12, 8.6.13, 8.6.14, 8.6.16, 9.0.1, 9.0.3 |
+| `Tkinter` | 2.7.18, 3.10.4, 3.10.8, 3.11.3, 3.11.5, 3.12.3, 3.13.1, 3.13.5, 3.14.2, 3.8.6, 3.9.5, 3.9.6 |
 | `tkrplot` | 0.0-27, 0.0-30 |
 | `tkWidgets` | 1.84.0, 1.88.0 |
 | `tldr` | 1.2.2 |
@@ -3822,4 +3823,4 @@ Total number of applications: 3639, with 1 to 22 versions each *(2026-11-14 3:23
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-11-14 3:23
+**Last updated:** 2026-11-17 10:23
