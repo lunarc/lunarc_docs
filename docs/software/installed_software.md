@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3640, with 1 to 22 versions each *(2026-11-17 10:23)*
+Total number of applications: 3640, with 1 to 22 versions each *(2026-11-18 11:23)*
 ## A
 
 **[169 modules]**
@@ -1689,7 +1689,7 @@ Total number of applications: 3640, with 1 to 22 versions each *(2026-11-17 10:2
 | `laeken` | 0.5.3 |
 | `lambda.r` | 1.2.4 |
 | `LAME` | 3.100 |
-| `LAMMPS` | 23Jun2022-kokkos, 29Aug2024-kokkos |
+| `LAMMPS` | 13Nov2026, 23Jun2022-kokkos, 29Aug2024-kokkos |
 | `LaplacesDemon` | 16.1.6 |
 | `lars` | 1.3 |
 | `lassosum` | 0.4.5 |
@@ -3823,4 +3823,4 @@ Total number of applications: 3640, with 1 to 22 versions each *(2026-11-17 10:2
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-11-17 10:23
+**Last updated:** 2026-11-18 11:23
