@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3640, with 1 to 22 versions each *(2026-11-18 11:23)*
+Total number of applications: 3640, with 1 to 22 versions each *(2026-11-19 11:23)*
 ## A
 
 **[169 modules]**
@@ -1573,7 +1573,7 @@ Total number of applications: 3640, with 1 to 22 versions each *(2026-11-18 11:2
 | `jaraco.functools` | 4.1.0, 4.2.1, 4.4.0 |
 | `JASPAR2020` | 0.99.10 |
 | `JasPer` | 2.0.24, 2.0.28, 2.0.33, 4.0.0, 4.2.4, 4.2.5, 4.2.8, 4.2.9 |
-| `Java` | 1.8.0_192, 11.0.16, 11.0.20, 17.0.6, 21.0.8 |
+| `Java` | 1.8.0_192, 11.0.16, 11.0.20, 17.0.6, 21.0.8, 27.0.1.1 |
 | `jax` | 0.3.25-CUDA-11.7.0, 0.4.25, 0.4.25-CUDA-12.1.1 |
 | `jbigkit` | 2.1 |
 | `JBTools` | 0.7.2.9 |
@@ -3823,4 +3823,4 @@ Total number of applications: 3640, with 1 to 22 versions each *(2026-11-18 11:2
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-11-18 11:23
+**Last updated:** 2026-11-19 11:23
