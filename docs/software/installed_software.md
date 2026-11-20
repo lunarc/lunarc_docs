@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3640, with 1 to 22 versions each *(2026-11-19 11:23)*
+Total number of applications: 3641, with 1 to 22 versions each *(2026-11-20 12:23)*
 ## A
 
 **[169 modules]**
@@ -425,7 +425,7 @@ Total number of applications: 3640, with 1 to 22 versions each *(2026-11-19 11:2
 | `Cgl` | 0.60.7, 0.60.8 |
 | `changepoint` | 2.3 |
 | `chardet` | 5.2.0, 7.4.3 |
-| `CharLS` | 2.4.1 |
+| `CharLS` | 2.4.1, 2.4.5 |
 | `charset-normalizer` | 3.3.2, 3.4.1, 3.4.2, 3.4.7 |
 | `charset_normalizer` | 3.4.1, 3.4.2 |
 | `Check` | 0.15.2 |
@@ -616,7 +616,7 @@ Total number of applications: 3640, with 1 to 22 versions each *(2026-11-19 11:2
 
 ## D
 
-**[184 modules]**
+**[185 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
@@ -664,6 +664,7 @@ Total number of applications: 3640, with 1 to 22 versions each *(2026-11-19 11:2
 | `dbscan` | 1.2-0, 1.2.3 |
 | `DBus` | 1.13.18, 1.14.0, 1.15.2, 1.15.4, 1.15.8, 1.16.2 |
 | `dbus-glib` | 0.112 |
+| `dcm2niix` | 1.0.20261029 |
 | `dcurver` | 0.9.2, 0.9.3 |
 | `ddalpha` | 1.3.16 |
 | `ddPCRclust` | 1.26.0, 1.30.0 |
@@ -1573,7 +1574,7 @@ Total number of applications: 3640, with 1 to 22 versions each *(2026-11-19 11:2
 | `jaraco.functools` | 4.1.0, 4.2.1, 4.4.0 |
 | `JASPAR2020` | 0.99.10 |
 | `JasPer` | 2.0.24, 2.0.28, 2.0.33, 4.0.0, 4.2.4, 4.2.5, 4.2.8, 4.2.9 |
-| `Java` | 1.8.0_192, 11.0.16, 11.0.20, 17.0.6, 21.0.8, 27.0.1.1 |
+| `Java` | 1.8.0_192, 11.0.16, 11.0.20, 17.0.21.1, 17.0.6, 21.0.13.1, 21.0.8, 27.0.1.1 |
 | `jax` | 0.3.25-CUDA-11.7.0, 0.4.25, 0.4.25-CUDA-12.1.1 |
 | `jbigkit` | 2.1 |
 | `JBTools` | 0.7.2.9 |
@@ -3823,4 +3824,4 @@ Total number of applications: 3640, with 1 to 22 versions each *(2026-11-19 11:2
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-11-19 11:23
+**Last updated:** 2026-11-20 12:23
