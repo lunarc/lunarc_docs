@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3641, with 1 to 22 versions each *(2026-11-20 12:23)*
+Total number of applications: 3641, with 1 to 22 versions each *(2026-11-21 13:23)*
 ## A
 
 **[169 modules]**
@@ -2939,7 +2939,7 @@ Total number of applications: 3641, with 1 to 22 versions each *(2026-11-20 12:2
 | `rstan` | 2.32.6, 2.32.7 |
 | `rstantools` | 2.4.0, 2.5.0 |
 | `rstatix` | 0.7.2, 0.7.3 |
-| `rstudio` | 2024.04.0-735, 2024.04.2-764 |
+| `rstudio` | 2021.09.1, 2022.07.2, 2023.03.0, 2023.12.1, 2023.12.1_v2, 2024.04.0-735, 2024.04.2-764 |
 | `rstudioapi` | 0.17.1 |
 | `Rsubread` | 2.20.0, 2.24.0 |
 | `rsvd` | 1.0.5 |
@@ -3824,4 +3824,4 @@ Total number of applications: 3641, with 1 to 22 versions each *(2026-11-20 12:2
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-11-20 12:23
+**Last updated:** 2026-11-21 13:23
