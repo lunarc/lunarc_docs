@@ -1,8 +1,8 @@
 # Applications installed as modules
-Total number of applications: 3641, with 1 to 22 versions each *(2026-11-21 13:23)*
+Total number of applications: 3648, with 1 to 22 versions each *(2026-11-25 10:23)*
 ## A
 
-**[169 modules]**
+**[170 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
@@ -77,6 +77,7 @@ Total number of applications: 3641, with 1 to 22 versions each *(2026-11-21 13:2
 | `ANTs` | 2.3.5, 2.5.0 |
 | `AnyEvent` | 7.17 |
 | `anyio` | 4.13.0, 4.3.0, 4.4.0 |
+| `anysqlite` | 0.0.5 |
 | `anytime` | 0.3.12, 0.3.9 |
 | `AOCC` | 4.0.0 |
 | `AOCL-BLAS` | 5.0, 5.1, 5.2 |
@@ -302,7 +303,7 @@ Total number of applications: 3641, with 1 to 22 versions each *(2026-11-21 13:2
 | `bleach` | 6.1.0 |
 | `Blender` | 4.0.1-linux-x86_64-CUDA-12.1.1 |
 | `blender` | 4.0.2, 4.2.0, 4.5.3, 5.1.2 |
-| `blinker` | 1.6.2, 1.8.2 |
+| `blinker` | 1.6.2, 1.8.2, 1.9.0 |
 | `BLIS` | 0.8.1, 0.9.0, 1.0, 1.1, 2.0 |
 | `blme` | 1.0-6 |
 | `blob` | 1.2.4 |
@@ -692,7 +693,7 @@ Total number of applications: 3641, with 1 to 22 versions each *(2026-11-21 13:2
 | `densEstBayes` | 1.0-2.2 |
 | `DEoptim` | 2.2-8 |
 | `DEoptimR` | 1.1-3-1, 1.1-4 |
-| `dep-logic` | 0.4.6 |
+| `dep-logic` | 0.4.6, 0.6.0 |
 | `Deprecated` | 1.2.13, 1.2.14 |
 | `deprecation` | 2.1.0 |
 | `DepthProc` | 2.1.5, 2.1.6 |
@@ -808,7 +809,7 @@ Total number of applications: 3641, with 1 to 22 versions each *(2026-11-21 13:2
 
 ## E
 
-**[84 modules]**
+**[85 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
@@ -862,6 +863,7 @@ Total number of applications: 3641, with 1 to 22 versions each *(2026-11-21 13:2
 | `escape` | 2.2.1, 2.6.1 |
 | `ESMF` | 8.3.0, 8.6.0 |
 | `estimability` | 1.5.1 |
+| `et-xmlfile` | 2.0.0 |
 | `et_xmlfile` | 1.1.0, 2.0.0 |
 | `etils` | 1.10.0 |
 | `Eval::Closure` | 0.14 |
@@ -1339,7 +1341,7 @@ Total number of applications: 3641, with 1 to 22 versions each *(2026-11-21 13:2
 
 ## H
 
-**[97 modules]**
+**[98 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
@@ -1395,7 +1397,7 @@ Total number of applications: 3641, with 1 to 22 versions each *(2026-11-21 13:2
 | `Highway` | 1.0.3, 1.0.4 |
 | `hiredis` | 1.0.2 |
 | `HISAT2` | 2.2.1 |
-| `hishel` | 0.0.30 |
+| `hishel` | 0.0.30, 1.3.0 |
 | `Hmisc` | 5.2-0, 5.2-4 |
 | `HMMcopy` | 1.48.0, 1.52.0 |
 | `HMMER` | 3.3.2, 3.4 |
@@ -1424,9 +1426,10 @@ Total number of applications: 3641, with 1 to 22 versions each *(2026-11-21 13:2
 | `HTTP::Negotiate` | 6.01 |
 | `HTTP::Tiny` | 0.090, 0.094 |
 | `httpcode` | 0.3.0 |
-| `httpcore` | 1.0.5, 1.0.6 |
+| `httpcore` | 1.0.5, 1.0.6, 1.0.9 |
 | `httpuv` | 1.6.15, 1.6.16 |
-| `httpx` | 0.27.2 |
+| `HTTPX` | 0.28.1 |
+| `httpx` | 0.27.2, 0.28.1 |
 | `httr` | 1.4.7 |
 | `httr2` | 1.0.6, 1.2.1 |
 | `huge` | 1.3.5 |
@@ -1443,13 +1446,14 @@ Total number of applications: 3641, with 1 to 22 versions each *(2026-11-21 13:2
 
 ## I
 
-**[111 modules]**
+**[112 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
 | `ica` | 1.0-3 |
 | `iced` | 0.5.10 |
 | `ICU` | 67.1, 69.1, 71.1, 72.1, 73.2, 74.1, 75.1, 76.1, 77.1, 78.3 |
+| `id` | 1.6.1 |
 | `identify` | 2.5.35, 2.6.0 |
 | `idl` | 8.9, 9.1 |
 | `idna` | 3.10, 3.11, 3.6 |
@@ -1507,7 +1511,7 @@ Total number of applications: 3641, with 1 to 22 versions each *(2026-11-21 13:2
 | `Inline` | 0.86, 0.87 |
 | `inline` | 0.3.20, 0.3.21 |
 | `insight` | 0.20.5, 1.4.2 |
-| `installer` | 0.7.0 |
+| `installer` | 0.7.0, 1.0.1 |
 | `intel` | 2021a, 2021b, 2022a, 2022b, 2023a, 2025b |
 | `intel-compilers` | 2021.2.0, 2021.4.0, 2022.1.0, 2022.1.0-GCC-11.2.0, 2022.2.1, 2023.1.0, 2025.2.0 |
 | `InteractionSet` | 1.34.0, 1.38.0 |
@@ -1863,7 +1867,7 @@ Total number of applications: 3641, with 1 to 22 versions each *(2026-11-21 13:2
 | `LWP::MediaTypes` | 6.04 |
 | `LWP::Protocol::https` | 6.14, 6.15 |
 | `LWP::Simple` | 6.77, 6.79, 6.83 |
-| `lxml` | 4.9.1, 4.9.2, 4.9.3, 5.3.0, 6.0.0 |
+| `lxml` | 4.9.1, 4.9.2, 4.9.3, 5.3.0, 6.0.0, 6.1.1 |
 | `lz4` | 1.10.0, 1.9.2, 1.9.3, 1.9.4, 4.3.2, 4.3.3 |
 | `LZO` | 2.10 |
 
@@ -2189,8 +2193,8 @@ Total number of applications: 3641, with 1 to 22 versions each *(2026-11-21 13:2
 | `nf-core` | 2.13.1, 2.13.1, 2.14.1, 2.14.1 |
 | `NFFT` | 3.5.3 |
 | `ngspatial` | 1.2-2 |
-| `NiBabel` | 3.2.1, 5.3.2 |
-| `nibabel` | 5.3.2 |
+| `NiBabel` | 3.2.1, 5.3.2, 5.5.0 |
+| `nibabel` | 5.3.2, 5.5.0 |
 | `Nilearn` | 0.12.1 |
 | `nilearn` | 0.12.1 |
 | `Nim` | 1.6.6 |
@@ -2315,7 +2319,7 @@ Total number of applications: 3641, with 1 to 22 versions each *(2026-11-21 13:2
 
 ## P
 
-**[340 modules]**
+**[342 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
@@ -2388,8 +2392,10 @@ Total number of applications: 3641, with 1 to 22 versions each *(2026-11-21 13:2
 | `PDBFixer` | 1.9 |
 | `PDF::API2` | 2.047, 2.048 |
 | `pdiff` | 1.1.4 |
-| `PDM` | 2.18.2 |
-| `pdm` | 2.18.2 |
+| `PDM` | 2.18.2, 2.28.0 |
+| `pdm` | 2.18.2, 2.28.0 |
+| `pdm-backend` | 2.4.9 |
+| `pdm-build-locked` | 0.3.7 |
 | `pdm_backend` | 2.3.3 |
 | `pdp` | 0.8.2 |
 | `PDT` | 3.25.1, 3.25.2 |
@@ -2588,7 +2594,7 @@ Total number of applications: 3641, with 1 to 22 versions each *(2026-11-21 13:2
 | `pydantic` | 2.5.3, 2.5.3, 2.6.4, 2.6.4, 2.9.1, 2.9.1 |
 | `pydantic_core` | 2.14.6, 2.16.3, 2.23.3 |
 | `pydevtool` | 0.3.0 |
-| `pydicom` | 2.2.2, 3.0.1 |
+| `pydicom` | 2.2.2, 3.0.1, 3.0.2 |
 | `PyEVTK` | 2.0.0 |
 | `pyevtk` | 1.6.0 |
 | `pyFAI` | 0.21.3 |
@@ -2643,7 +2649,7 @@ Total number of applications: 3641, with 1 to 22 versions each *(2026-11-21 13:2
 | `python-dateutil` | 2.9.0.post0 |
 | `Python-Deprecated` | 1.1.0 |
 | `python-discovery` | 1.2.2 |
-| `python-dotenv` | 1.0.1 |
+| `python-dotenv` | 1.0.1, 1.2.2 |
 | `python-isal` | 1.1.0, 1.6.1, 1.7.0 |
 | `python-json-logger` | 2.0.7 |
 | `python-lsp-server` | 1.12.0 |
@@ -2826,7 +2832,7 @@ Total number of applications: 3641, with 1 to 22 versions each *(2026-11-21 13:2
 | `reshape` | 0.8.10, 0.8.9 |
 | `reshape2` | 1.4.4 |
 | `ResidualMatrix` | 1.16.0, 1.20.0 |
-| `resolvelib` | 1.0.1 |
+| `resolvelib` | 1.0.1, 1.2.1 |
 | `restfulr` | 0.0.15, 0.0.16 |
 | `reticulate` | 1.40.0, 1.44.0 |
 | `rex` | 1.2.1 |
@@ -2967,7 +2973,7 @@ Total number of applications: 3641, with 1 to 22 versions each *(2026-11-21 13:2
 
 ## S
 
-**[369 modules]**
+**[370 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
@@ -3164,6 +3170,7 @@ Total number of applications: 3641, with 1 to 22 versions each *(2026-11-21 13:2
 | `SOAR` | 0.99-11 |
 | `SOCI` | 4.0.3, 4.0.3-Boost-1.83.0, 4.1.2 |
 | `Socket` | 2.038, 2.040, 2.041 |
+| `socksio` | 1.0.0 |
 | `Software::License` | 0.104006, 0.104007 |
 | `SoftwareTree` | Milan |
 | `solrium` | 1.2.0 |
@@ -3528,7 +3535,7 @@ Total number of applications: 3641, with 1 to 22 versions each *(2026-11-21 13:2
 | `TruncatedNormal` | 2.3 |
 | `truncnorm` | 1.0-9 |
 | `trust` | 0.1-8 |
-| `truststore` | 0.9.2 |
+| `truststore` | 0.10.4, 0.9.2 |
 | `Try::Tiny` | 0.32 |
 | `tseries` | 0.10-58 |
 | `tseriesChaos` | 0.1-13.1 |
@@ -3572,7 +3579,7 @@ Total number of applications: 3641, with 1 to 22 versions each *(2026-11-21 13:2
 | `umap` | 0.2.10.0 |
 | `umap-learn` | 0.5.5, 0.5.5 |
 | `unbalanced` | 2.0 |
-| `unearth` | 0.17.2 |
+| `unearth` | 0.17.2, 0.18.2 |
 | `Unicode::EastAsianWidth` | 12.0 |
 | `Unicode::LineBreak` | 2019.001 |
 | `Unidecode` | 1.3.6 |
@@ -3824,4 +3831,4 @@ Total number of applications: 3641, with 1 to 22 versions each *(2026-11-21 13:2
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-11-21 13:23
+**Last updated:** 2026-11-25 10:23
