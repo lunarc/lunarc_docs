@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3648, with 1 to 22 versions each *(2026-11-25 10:23)*
+Total number of applications: 3649, with 1 to 22 versions each *(2026-11-26 11:23)*
 ## A
 
 **[170 modules]**
@@ -322,8 +322,8 @@ Total number of applications: 3648, with 1 to 22 versions each *(2026-11-25 10:2
 | `boot` | 1.3-31, 1.3-32 |
 | `bootstrap` | 2019.6 |
 | `Boruta` | 8.0.0, 9.0.0 |
-| `boto3` | 1.26.163, 1.26.37, 1.35.36, 1.35.36 |
-| `botocore` | 1.35.36 |
+| `boto3` | 1.26.163, 1.26.37, 1.35.36, 1.35.36, 1.43.34, 1.43.34 |
+| `botocore` | 1.35.36, 1.43.34 |
 | `bottleneck` | 1.5.0, 1.6.0 |
 | `Bowtie` | 1.3.0, 1.3.1 |
 | `Bowtie2` | 2.4.5, 2.5.1, 2.5.4 |
@@ -1591,7 +1591,7 @@ Total number of applications: 3648, with 1 to 22 versions each *(2026-11-25 10:2
 | `jiebaRD` | 0.1 |
 | `Jinja2` | 3.1.6 |
 | `jinja2` | 3.1.6 |
-| `jmespath` | 1.0.1 |
+| `jmespath` | 1.0.1, 1.1.0 |
 | `jmp` | 0.0.4 |
 | `joblib` | 1.3.2, 1.4.2, 1.5.1, 1.5.3 |
 | `jomo` | 2.7-6 |
@@ -2319,7 +2319,7 @@ Total number of applications: 3648, with 1 to 22 versions each *(2026-11-25 10:2
 
 ## P
 
-**[342 modules]**
+**[343 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
@@ -2620,6 +2620,7 @@ Total number of applications: 3648, with 1 to 22 versions each *(2026-11-25 10:2
 | `pyOpenSSL` | 23.2.0 |
 | `pypardiso` | 0.4.0, 0.4.2 |
 | `pyparsing` | 3.2.3, 3.3.2 |
+| `pypet2bids` | 1.6.0 |
 | `pyproj` | 3.6.0 |
 | `pyproject-hooks` | 1.1.0, 1.2.0 |
 | `pyproject-metadata` | 0.11.0, 0.7.1, 0.8.0, 0.9.1 |
@@ -2979,7 +2980,7 @@ Total number of applications: 3648, with 1 to 22 versions each *(2026-11-25 10:2
 | :--- | :--- |
 | `s2` | 1.1.7, 1.1.9 |
 | `s3fs` | 2024.9.0, 2024.9.0 |
-| `s3transfer` | 0.10.3 |
+| `s3transfer` | 0.10.3, 0.19.0 |
 | `S4Arrays` | 1.10.0, 1.6.0 |
 | `S4Vectors` | 0.44.0, 0.48.0 |
 | `S7` | 0.2.0 |
@@ -3831,4 +3832,4 @@ Total number of applications: 3648, with 1 to 22 versions each *(2026-11-25 10:2
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-11-25 10:23
+**Last updated:** 2026-11-26 11:23
