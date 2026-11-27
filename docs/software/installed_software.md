@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3649, with 1 to 22 versions each *(2026-11-26 11:23)*
+Total number of applications: 3651, with 1 to 22 versions each *(2026-11-27 12:23)*
 ## A
 
 **[170 modules]**
@@ -587,7 +587,7 @@ Total number of applications: 3649, with 1 to 22 versions each *(2026-11-26 11:2
 | `csSAM` | 1.2.4 |
 | `ctmle` | 0.1.2 |
 | `cubature` | 2.1.1, 2.1.4 |
-| `CubeGUI` | 4.8, 4.8.2 |
+| `CubeGUI` | 4.8, 4.8.2, 4.9.1 |
 | `CubeLib` | 4.6, 4.8, 4.8.1, 4.8.2, 4.9, 4.9.1 |
 | `cubelyr` | 1.0.2 |
 | `CubeWriter` | 4.6, 4.8, 4.8.1, 4.8.2, 4.9, 4.9.1 |
@@ -1222,7 +1222,7 @@ Total number of applications: 3649, with 1 to 22 versions each *(2026-11-26 11:2
 | `GLIMPSE` | 2.0.0 |
 | `glimpse` | v2.0.0 |
 | `gllvm` | 1.4.3, 2.0.5 |
-| `GLM` | 0.9.9.8 |
+| `GLM` | 0.9.9.8, 1.0.1 |
 | `glmmML` | 1.1.7 |
 | `glmmTMB` | 1.1.10, 1.1.13 |
 | `glmnet` | 4.1-10, 4.1-8 |
@@ -1323,7 +1323,7 @@ Total number of applications: 3649, with 1 to 22 versions each *(2026-11-26 11:2
 | `gtable` | 0.3.6 |
 | `GTK+` | 3.24.23 |
 | `GTK2` | 2.24.33 |
-| `GTK3` | 3.24.33, 3.24.37, 3.24.39, 3.24.42, 3.24.52 |
+| `GTK3` | 3.24.33, 3.24.37, 3.24.39, 3.24.42, 3.24.43, 3.24.52 |
 | `GTK4` | 4.7.0 |
 | `gtools` | 3.9.5 |
 | `GTS` | 0.7.6 |
@@ -1348,7 +1348,7 @@ Total number of applications: 3649, with 1 to 22 versions each *(2026-11-26 11:2
 | `h11` | 0.14.0, 0.16.0 |
 | `h2o` | 3.44.0.3 |
 | `h5mread` | 1.2.0 |
-| `h5py` | 3.1.0, 3.11.0, 3.12.1, 3.2.1, 3.6.0, 3.7.0, 3.8.0, 3.9.0 |
+| `h5py` | 3.1.0, 3.11.0, 3.12.1, 3.14.0, 3.2.1, 3.6.0, 3.7.0, 3.8.0, 3.9.0 |
 | `hahmmr` | 1.0.0 |
 | `hal9001` | 0.4.6 |
 | `haldensify` | 0.2.3, 0.2.8 |
@@ -2319,7 +2319,7 @@ Total number of applications: 3649, with 1 to 22 versions each *(2026-11-26 11:2
 
 ## P
 
-**[343 modules]**
+**[345 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
@@ -2343,7 +2343,7 @@ Total number of applications: 3649, with 1 to 22 versions each *(2026-11-26 11:2
 | `Pandoc` | 3.1.2 |
 | `pandocfilters` | 1.5.1 |
 | `Pango` | 1.47.0, 1.48.5, 1.48.8, 1.50.12, 1.50.14, 1.50.7, 1.51.0, 1.54.0, 1.56.3, 1.57.0, 1.57.1 |
-| `PAPI` | 7.0.0, 7.0.1, 7.1.0 |
+| `PAPI` | 7.0.0, 7.0.1, 7.1.0, 7.2.0 |
 | `parallel` | 20210322, 20220722, 20230722 |
 | `Parallel::ForkManager` | 2.03, 2.04 |
 | `parallelDist` | 0.2.6, 0.2.7 |
@@ -2626,8 +2626,10 @@ Total number of applications: 3649, with 1 to 22 versions each *(2026-11-26 11:2
 | `pyproject-metadata` | 0.11.0, 0.7.1, 0.8.0, 0.9.1 |
 | `pyproject_hooks` | 1.0.0, 1.1.0, 1.2.0 |
 | `pyproject_metadata` | 0.8.0 |
-| `PyQt-builder` | 1.15.4, 1.16.4, 1.18.1 |
+| `PyQt-builder` | 1.15.4, 1.16.4, 1.18.1, 1.19.0 |
+| `pyqt-builder` | 1.19.0 |
 | `PyQt5` | 5.15.10, 5.15.11, 5.15.4, 5.15.5, 5.15.7 |
+| `PyQt6` | 6.9.1 |
 | `pyqt_builder` | 1.18.1 |
 | `PyQtGraph` | 0.13.3 |
 | `PyRosetta` | 4.release-387, 4.release-387 |
@@ -3020,7 +3022,7 @@ Total number of applications: 3649, with 1 to 22 versions each *(2026-11-26 11:2
 | `scikit-build` | 0.11.1, 0.15.0, 0.17.6, 0.18.1, 0.18.1 |
 | `scikit-build-core` | 0.10.6, 0.11.1, 0.11.5, 0.12.2, 0.12.2, 0.5.0, 0.9.3 |
 | `scikit-image` | 0.18.1, 0.19.1, 0.19.3, 0.21.0, 0.22.0, 0.22.0 |
-| `scikit-learn` | 1.0.1, 1.0.2, 1.1.2, 1.2.1, 1.3.1, 1.4.0, 1.4.2, 1.5.2, 1.5.2, 1.7.1, 1.7.1 |
+| `scikit-learn` | 1.0.1, 1.0.2, 1.1.2, 1.2.1, 1.3.1, 1.4.0, 1.4.2, 1.5.2, 1.5.2, 1.7.1, 1.7.1, 1.8.0, 1.8.0 |
 | `scikit-misc` | 0.1.4 |
 | `scikit_build_core` | 0.10.6, 0.11.1, 0.11.5, 0.5.0 |
 | `scipy` | 1.16.0, 1.16.1, 1.17.1 |
@@ -3028,7 +3030,7 @@ Total number of applications: 3649, with 1 to 22 versions each *(2026-11-26 11:2
 | `scistreer` | 1.2.0 |
 | `SCons` | 4.1.0.post1, 4.2.0, 4.4.0 |
 | `Scope::Guard` | 0.21 |
-| `Score-P` | 8.0, 8.1, 8.4, 9.0 |
+| `Score-P` | 8.0, 8.1, 8.4, 9.0, 9.4 |
 | `SCOTCH` | 6.1.0, 6.1.2, 7.0.1, 7.0.10, 7.0.11, 7.0.3, 7.0.6, 7.0.8 |
 | `scran` | 1.34.0, 1.38.0 |
 | `scrime` | 1.3.5 |
@@ -3126,7 +3128,7 @@ Total number of applications: 3649, with 1 to 22 versions each *(2026-11-26 11:2
 | `SingleCellExperiment` | 1.28.1, 1.32.0 |
 | `SingleR` | 2.12.0, 2.8.0 |
 | `SIONlib` | 1.7.6-tools, 1.7.7-tools |
-| `SIP` | 6.10.0, 6.8.1, 6.8.3 |
+| `SIP` | 6.10.0, 6.13.1, 6.8.1, 6.8.3 |
 | `sitmo` | 2.0.2 |
 | `six` | 1.16.0, 1.17.0 |
 | `SKAT` | 2.2.5 |
@@ -3510,7 +3512,7 @@ Total number of applications: 3649, with 1 to 22 versions each *(2026-11-26 11:2
 | `toposort` | 1.10 |
 | `torchvision` | 0.16.0, 0.21.0, 0.21.0 |
 | `tornado` | 6.3.2, 6.4, 6.4.1 |
-| `tqdm` | 4.61.2, 4.62.3, 4.64.0, 4.66.1, 4.66.2, 4.66.5, 4.67.1 |
+| `tqdm` | 4.61.2, 4.62.3, 4.64.0, 4.66.1, 4.66.2, 4.66.5, 4.67.1, 4.67.3 |
 | `traitlets` | 5.13.0 |
 | `TrajectoryUtils` | 1.14.0, 1.18.0 |
 | `TraMineR` | 2.2-10, 2.2-12 |
@@ -3658,7 +3660,7 @@ Total number of applications: 3649, with 1 to 22 versions each *(2026-11-26 11:2
 | `vsn` | 3.74.0, 3.78.0 |
 | `VSURF` | 1.2.0, 1.2.1 |
 | `VTK` | 9.0.1, 9.1.0, 9.2.2, 9.2.6, 9.3.0 |
-| `Vulkan` | 1.4.352 |
+| `Vulkan` | 1.4.328, 1.4.352 |
 
 ## W
 
@@ -3711,7 +3713,7 @@ Total number of applications: 3649, with 1 to 22 versions each *(2026-11-26 11:2
 | `word2vec` | 0.4.0 |
 | `wordcloud` | 2.6 |
 | `worrms` | 0.4.3 |
-| `wrapt` | 1.15.0, 1.15.0, 1.16.0, 1.16.0 |
+| `wrapt` | 1.15.0, 1.15.0, 1.16.0, 1.16.0, 2.2.1 |
 | `Wrench` | 1.24.0, 1.28.0 |
 | `writexl` | 1.5.1, 1.5.4 |
 | `WriteXLS` | 6.7.0, 6.8.0 |
@@ -3832,4 +3834,4 @@ Total number of applications: 3649, with 1 to 22 versions each *(2026-11-26 11:2
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-11-26 11:23
+**Last updated:** 2026-11-27 12:23
