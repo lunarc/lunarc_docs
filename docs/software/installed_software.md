@@ -1,5 +1,5 @@
 # Applications installed as modules
-Total number of applications: 3651, with 1 to 22 versions each *(2026-11-27 12:23)*
+Total number of applications: 3653, with 1 to 22 versions each *(2026-11-28 13:23)*
 ## A
 
 **[170 modules]**
@@ -2319,7 +2319,7 @@ Total number of applications: 3651, with 1 to 22 versions each *(2026-11-27 12:2
 
 ## P
 
-**[345 modules]**
+**[347 modules]**
 
 | Modulename | Versions |
 | :--- | :--- |
@@ -2473,6 +2473,7 @@ Total number of applications: 3651, with 1 to 22 versions each *(2026-11-27 12:2
 | `PMA` | 1.2-4 |
 | `PMIx` | 3.1.5, 3.2.3, 4.1.0, 4.1.2, 4.2.2, 4.2.4, 4.2.6, 5.0.2, 5.0.6, 5.0.8, 6.1.0 |
 | `pmp` | 1.18.0, 1.21.0 |
+| `pmw` | 2.1.1 |
 | `PnetCDF` | 1.12.2, 1.12.3, 1.13.0 |
 | `png` | 0.1-8 |
 | `pocl` | 1.8 |
@@ -2610,7 +2611,8 @@ Total number of applications: 3651, with 1 to 22 versions each *(2026-11-27 12:2
 | `Pylint` | 3.2.5 |
 | `pyls` | pyls |
 | `pyminimap2` | 2.30.3 |
-| `PyMOL` | 2.5.0 |
+| `PyMOL` | 2.5.0, 3.1.0 |
+| `pymol` | 3.1.0 |
 | `PyNaCl` | 1.5.0 |
 | `pynacl` | 1.6.2 |
 | `pynndescent` | 0.5.11 |
@@ -3834,4 +3836,4 @@ Total number of applications: 3651, with 1 to 22 versions each *(2026-11-27 12:2
 | `zUMIs` | 2.9.7-R-4.3.2 |
 
 ---
-**Last updated:** 2026-11-27 12:23
+**Last updated:** 2026-11-28 13:23
